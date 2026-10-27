@@ -1,3 +1,5 @@
+"use client";
+
 import type { ComponentType, ReactNode } from "react";
 import Image from "next/image";
 import {
@@ -19,6 +21,7 @@ import {
   FaFacebookF,
 } from "react-icons/fa";
 import siteData from "@/data/site.json";
+import { Stagger, StaggerItem } from "./Reveal";
 
 function NewBadge() {
   return (
@@ -101,9 +104,12 @@ export default function Footer() {
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-[1400px] px-3 pt-14 pb-8 sm:px-4 lg:pr-8 lg:pl-3 xl:pl-4">
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-12 lg:gap-6">
+        <Stagger
+          className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-12 lg:gap-6"
+          stagger={0.08}
+        >
           {/* Col 1 — Brand + contact */}
-          <div className="lg:col-span-3">
+          <StaggerItem className="lg:col-span-3">
             <div className="flex items-center gap-3">
               <span className="flex size-11 items-center justify-center rounded-full bg-[#e83e74]/15 text-[#f48fb1] ring-1 ring-[#e83e74]/35">
                 <svg viewBox="0 0 24 24" className="size-6" fill="currentColor" aria-hidden>
@@ -163,10 +169,10 @@ export default function Footer() {
                 );
               })}
             </div>
-          </div>
+          </StaggerItem>
 
           {/* Col 2 — Noida */}
-          <div className="border-white/10 lg:col-span-2 lg:border-l lg:pl-5">
+          <StaggerItem className="border-white/10 lg:col-span-2 lg:border-l lg:pl-5">
             <SectionTitle icon={FaMapMarkerAlt}>
               {data.noidaClinic.title}
             </SectionTitle>
@@ -189,10 +195,10 @@ export default function Footer() {
                 ))}
               </ul>
             </div>
-          </div>
+          </StaggerItem>
 
           {/* Col 3 — Delhi / Ghaziabad */}
-          <div className="border-white/10 lg:col-span-3 lg:border-l lg:pl-5">
+          <StaggerItem className="border-white/10 lg:col-span-3 lg:border-l lg:pl-5">
             <SectionTitle icon={FaBuilding}>
               {data.delhiGhaziabad.title}
             </SectionTitle>
@@ -229,10 +235,10 @@ export default function Footer() {
                 {data.clinicHours}
               </p>
             </div>
-          </div>
+          </StaggerItem>
 
           {/* Col 4 — Guides */}
-          <div className="border-white/10 lg:col-span-2 lg:border-l lg:pl-5">
+          <StaggerItem className="border-white/10 lg:col-span-2 lg:border-l lg:pl-5">
             <SectionTitle icon={FaBookOpen}>
               Patient Guides & Articles
             </SectionTitle>
@@ -248,10 +254,10 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </StaggerItem>
 
           {/* Col 5 — Trust (Book Consultation CTA intentionally omitted) */}
-          <div className="border-white/10 lg:col-span-2 lg:border-l lg:pl-5">
+          <StaggerItem className="border-white/10 lg:col-span-2 lg:border-l lg:pl-5">
             <SectionTitle icon={FaShieldAlt}>Trust & Compliance</SectionTitle>
             <ul className="space-y-2.5">
               {data.trust.map((item) => (
@@ -265,8 +271,8 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
-        </div>
+          </StaggerItem>
+        </Stagger>
 
         {/* Bottom bar */}
         <div className="relative mt-12 border-t border-white/15 pt-6">

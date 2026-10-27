@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import {
   FaFileAlt,
@@ -10,6 +12,7 @@ import {
   FaPlane,
 } from "react-icons/fa";
 import siteData from "@/data/site.json";
+import { Reveal, Stagger, StaggerItem } from "./Reveal";
 
 const colorMap = {
   pink: "bg-[#e83e74]",
@@ -104,7 +107,10 @@ export default function InternationalPatients() {
             className="pointer-events-none absolute top-7 right-10 z-[2] hidden size-5 rotate-[18deg] text-white/55 lg:block"
           />
 
-          <div className="relative z-10 px-6 py-10 sm:px-9 sm:py-12 lg:max-w-[58%] lg:px-11 lg:py-14 xl:px-12">
+          <Reveal
+            variant="slideLeft"
+            className="relative z-10 px-6 py-10 sm:px-9 sm:py-12 lg:max-w-[58%] lg:px-11 lg:py-14 xl:px-12"
+          >
             <div className="mb-4 flex items-center gap-2">
               <span className="size-1.5 rounded-full bg-[#e83e74]" />
               <span className="text-[11px] font-bold tracking-[0.2em] text-[#e83e74] uppercase sm:text-xs">
@@ -125,61 +131,65 @@ export default function InternationalPatients() {
             </p>
 
             {/* Feature pills — one row on desktop */}
-            <div className="mt-7 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:gap-3">
+            <Stagger
+              className="mt-7 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:gap-3"
+              stagger={0.08}
+            >
               {data.features.map((feature) => {
                 const Icon =
                   featureIconMap[feature.icon as keyof typeof featureIconMap];
                 const color = colorMap[feature.color as ColorKey];
                 return (
-                  <div
-                    key={feature.id}
-                    className="inline-flex w-fit items-center gap-2.5 rounded-full border border-white/25 bg-white/[0.06] px-3 py-2"
-                  >
-                    <span
-                      className={`flex size-[30px] shrink-0 items-center justify-center rounded-full text-white ${color}`}
-                    >
-                      <Icon className="size-3.5" />
-                    </span>
-                    <span className="pr-1.5 text-[12px] font-medium whitespace-nowrap text-white sm:text-[13px]">
-                      {feature.label}
-                    </span>
-                  </div>
+                  <StaggerItem key={feature.id} variant="scaleIn">
+                    <div className="inline-flex w-fit items-center gap-2.5 rounded-full border border-white/25 bg-white/[0.06] px-3 py-2">
+                      <span
+                        className={`flex size-[30px] shrink-0 items-center justify-center rounded-full text-white ${color}`}
+                      >
+                        <Icon className="size-3.5" />
+                      </span>
+                      <span className="pr-1.5 text-[12px] font-medium whitespace-nowrap text-white sm:text-[13px]">
+                        {feature.label}
+                      </span>
+                    </div>
+                  </StaggerItem>
                 );
               })}
-            </div>
+            </Stagger>
 
             {/* Contact row */}
-            <div className="mt-8 grid grid-cols-1 gap-5 border-t border-white/10 pt-7 sm:grid-cols-3 sm:gap-4">
+            <Stagger
+              className="mt-8 grid grid-cols-1 gap-5 border-t border-white/10 pt-7 sm:grid-cols-3 sm:gap-4"
+              stagger={0.1}
+              delay={0.15}
+            >
               {data.contacts.map((contact) => {
                 const Icon =
                   contactIconMap[contact.icon as keyof typeof contactIconMap];
                 const color = colorMap[contact.color as ColorKey];
                 return (
-                  <a
-                    key={contact.id}
-                    href={contact.href}
-                    className="group flex items-start gap-3"
-                  >
-                    <span
-                      className={`mt-0.5 flex size-9 shrink-0 items-center justify-center rounded-full text-white ${color}`}
-                    >
-                      <Icon className="size-3.5" />
-                    </span>
-                    <span className="min-w-0">
-                      <span className="block text-[12px] font-semibold text-white">
-                        {contact.label}:
+                  <StaggerItem key={contact.id}>
+                    <a href={contact.href} className="group flex items-start gap-3">
+                      <span
+                        className={`mt-0.5 flex size-9 shrink-0 items-center justify-center rounded-full text-white ${color}`}
+                      >
+                        <Icon className="size-3.5" />
                       </span>
-                      <span className="mt-0.5 block text-[12.5px] leading-snug text-white/80 group-hover:text-[#f9a8c0]">
-                        {contact.value}
+                      <span className="min-w-0">
+                        <span className="block text-[12px] font-semibold text-white">
+                          {contact.label}:
+                        </span>
+                        <span className="mt-0.5 block text-[12.5px] leading-snug text-white/80 group-hover:text-[#f9a8c0]">
+                          {contact.value}
+                        </span>
                       </span>
-                    </span>
-                  </a>
+                    </a>
+                  </StaggerItem>
                 );
               })}
-            </div>
+            </Stagger>
 
             {/* CTA + dotted flight path */}
-            <div className="relative mt-9">
+            <Reveal delay={0.25} className="relative mt-9">
               <a
                 href={data.cta.href}
                 className="relative z-10 inline-flex items-center gap-2.5 rounded-full bg-[#e83e74] px-6 py-3.5 text-[14px] font-semibold text-white shadow-[0_12px_30px_rgba(232,62,116,0.4)] transition hover:bg-[#d13266]"
@@ -206,8 +216,8 @@ export default function InternationalPatients() {
                 </svg>
                 <FaPlane className="absolute top-0 right-0 size-3.5 rotate-[-8deg] text-white/70" />
               </div>
-            </div>
-          </div>
+            </Reveal>
+          </Reveal>
         </div>
       </div>
     </section>

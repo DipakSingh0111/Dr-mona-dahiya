@@ -36,7 +36,7 @@ export default function TopBar() {
   const Phone = iconMap.phone;
 
   return (
-    <div className="relative z-50 border-b border-white/10 bg-[#06152d]/40 text-[11.5px] text-white/80 backdrop-blur-[2px]">
+    <div className="relative z-50 bg-transparent text-[11.5px] text-white/80">
       <div className="mx-auto flex h-9 max-w-[1440px] items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-4 sm:gap-5">
           {locations.map((location) => (

@@ -5,6 +5,7 @@ import Image from "next/image";
 import { FaArrowRight, FaRibbon } from "react-icons/fa";
 import { GiEmbryo } from "react-icons/gi";
 import siteData from "@/data/site.json";
+import { Reveal } from "./Reveal";
 
 type CardIcon = "egg" | "sperm" | "embryo" | "ribbon";
 
@@ -112,29 +113,34 @@ export default function FertilityPreservation() {
     <section className="relative overflow-hidden bg-[#0c241f] px-3 py-14 sm:px-4 sm:py-20 lg:pr-8 lg:pl-3 xl:pl-4">
       <div className="mx-auto w-full max-w-[1400px]">
         {/* Header */}
-        <header className="mx-auto mb-10 max-w-3xl text-center sm:mb-12">
-          <div className="mb-4 flex items-center justify-center gap-3">
-            <span className="h-px w-10 bg-[#f0518e] sm:w-14" />
-            <span className="text-[11px] font-semibold tracking-[0.22em] text-[#f0518e] uppercase sm:text-xs">
-              {data.eyebrow}
-            </span>
-            <span className="h-px w-10 bg-[#f0518e] sm:w-14" />
-          </div>
+        <Reveal>
+          <header className="mx-auto mb-10 max-w-3xl text-center sm:mb-12">
+            <div className="mb-4 flex items-center justify-center gap-3">
+              <span className="h-px w-10 bg-[#f0518e] sm:w-14" />
+              <span className="text-[11px] font-semibold tracking-[0.22em] text-[#f0518e] uppercase sm:text-xs">
+                {data.eyebrow}
+              </span>
+              <span className="h-px w-10 bg-[#f0518e] sm:w-14" />
+            </div>
 
-          <h2 className="font-display text-[1.85rem] leading-tight font-bold text-white sm:text-[2.4rem] lg:text-[2.75rem]">
-            {data.title}{" "}
-            <span className="text-[#f0518e] italic">{data.titleAccent}</span>{" "}
-            {data.titleEnd}
-          </h2>
+            <h2 className="font-display text-[1.85rem] leading-tight font-bold text-white sm:text-[2.4rem] lg:text-[2.75rem]">
+              {data.title}{" "}
+              <span className="text-[#f0518e] italic">{data.titleAccent}</span>{" "}
+              {data.titleEnd}
+            </h2>
 
-          <p className="mx-auto mt-3 max-w-2xl text-[13px] leading-relaxed text-white/70 sm:text-[14.5px]">
-            {data.subtitle}
-          </p>
-        </header>
+            <p className="mx-auto mt-3 max-w-2xl text-[13px] leading-relaxed text-white/70 sm:text-[14.5px]">
+              {data.subtitle}
+            </p>
+          </header>
+        </Reveal>
 
         <div className="grid grid-cols-1 items-stretch gap-5 lg:grid-cols-[minmax(280px,0.95fr)_minmax(0,1.35fr)] lg:gap-6">
           {/* Left image */}
-          <div className="relative min-h-[320px] overflow-hidden rounded-[22px] sm:min-h-[420px] lg:min-h-[480px]">
+          <Reveal
+            variant="slideLeft"
+            className="relative min-h-[320px] overflow-hidden rounded-[22px] sm:min-h-[420px] lg:min-h-[480px]"
+          >
             <Image
               src={data.image}
               alt="Dr. Mona Dahiya — fertility preservation"
@@ -143,13 +149,14 @@ export default function FertilityPreservation() {
               sizes="(max-width: 1024px) 100vw, 45vw"
               priority
             />
-          </div>
+          </Reveal>
 
           {/* Accordion cards — first open by default; hover expands */}
-          <div
-            className="flex h-auto min-h-[420px] flex-col gap-3 sm:min-h-[480px] lg:flex-row lg:gap-3"
-            onMouseLeave={() => setActive(0)}
-          >
+          <Reveal variant="slideRight">
+            <div
+              className="flex h-auto min-h-[420px] flex-col gap-3 sm:min-h-[480px] lg:flex-row lg:gap-3"
+              onMouseLeave={() => setActive(0)}
+            >
             {data.cards.map((card, index) => {
               const isOpen = active === index;
               const accent = (card.accent in accentMap
@@ -233,7 +240,8 @@ export default function FertilityPreservation() {
                 </div>
               );
             })}
-          </div>
+            </div>
+          </Reveal>
         </div>
       </div>
     </section>

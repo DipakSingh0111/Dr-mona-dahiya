@@ -14,6 +14,7 @@ import {
   FaVideo,
 } from "react-icons/fa";
 import siteData from "@/data/site.json";
+import { Reveal, Stagger, StaggerItem } from "./Reveal";
 
 export default function BookAppointment() {
   const data = siteData.bookAppointment;
@@ -52,7 +53,7 @@ export default function BookAppointment() {
 
         <div className="relative z-10 grid grid-cols-1 items-center gap-8 px-5 py-10 sm:px-8 sm:py-12 lg:grid-cols-[minmax(0,1.12fr)_minmax(340px,0.88fr)] lg:gap-8 lg:px-10 lg:py-14 xl:gap-10 xl:px-12">
           {/* Left */}
-          <div className="max-w-2xl">
+          <Reveal variant="slideLeft" className="max-w-2xl">
             <div className="mb-4 flex items-center gap-3">
               <span className="h-px w-8 bg-[#ff4d8d]" />
               <span className="text-[11px] font-bold tracking-[0.18em] text-[#ff4d8d] uppercase sm:text-xs">
@@ -89,12 +90,10 @@ export default function BookAppointment() {
               </a>
             </div>
 
-            <div className="mt-7 grid grid-cols-1 gap-3 sm:grid-cols-2">
+            <Stagger className="mt-7 grid grid-cols-1 gap-3 sm:grid-cols-2" stagger={0.1}>
               {data.pricing.map((plan) => (
-                <div
-                  key={plan.id}
-                  className="rounded-2xl bg-[#f3f4f6]/95 p-4 shadow-sm backdrop-blur-sm"
-                >
+                <StaggerItem key={plan.id} variant="scaleIn">
+                <div className="rounded-2xl bg-[#f3f4f6]/95 p-4 shadow-sm backdrop-blur-sm">
                   <div className="flex items-start gap-3">
                     <span
                       className={`mt-0.5 flex size-10 shrink-0 items-center justify-center rounded-full ${
@@ -122,10 +121,15 @@ export default function BookAppointment() {
                     </div>
                   </div>
                 </div>
+                </StaggerItem>
               ))}
-            </div>
+            </Stagger>
 
-            <div className="mt-8 grid grid-cols-1 gap-4 border-t border-white/20 pt-6 sm:grid-cols-3 sm:gap-3">
+            <Stagger
+              className="mt-8 grid grid-cols-1 gap-4 border-t border-white/20 pt-6 sm:grid-cols-3 sm:gap-3"
+              stagger={0.08}
+              delay={0.1}
+            >
               {data.contacts.map((item) => {
                 const Icon =
                   item.icon === "mail"
@@ -149,19 +153,26 @@ export default function BookAppointment() {
                   </div>
                 );
 
-                return item.href ? (
-                  <a key={item.id} href={item.href} className="hover:opacity-90">
-                    {content}
-                  </a>
-                ) : (
-                  <div key={item.id}>{content}</div>
+                return (
+                  <StaggerItem key={item.id}>
+                    {item.href ? (
+                      <a href={item.href} className="hover:opacity-90">
+                        {content}
+                      </a>
+                    ) : (
+                      <div>{content}</div>
+                    )}
+                  </StaggerItem>
                 );
               })}
-            </div>
-          </div>
+            </Stagger>
+          </Reveal>
 
           {/* Right form — 2-column fields like reference */}
-          <div className="w-full max-w-[460px] justify-self-center lg:justify-self-end">
+          <Reveal
+            variant="slideRight"
+            className="w-full max-w-[460px] justify-self-center lg:justify-self-end"
+          >
             <div className="rounded-[24px] bg-white p-5 shadow-[0_24px_55px_rgba(6,20,40,0.3)] sm:p-7">
               <div className="mb-5 flex items-start gap-3">
                 <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-[#ffe4ee] text-[#ff4d8d]">
@@ -273,7 +284,7 @@ export default function BookAppointment() {
                 </form>
               )}
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

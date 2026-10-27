@@ -10,6 +10,7 @@ import {
   FaVideo,
 } from "react-icons/fa";
 import siteData from "@/data/site.json";
+import { Stagger, StaggerItem, Reveal } from "./Reveal";
 
 const iconMap = {
   stethoscope: FaStethoscope,
@@ -176,14 +177,19 @@ export default function WhyChooseUs() {
         </header>
 
         <div className="grid grid-cols-1 items-center gap-6 lg:grid-cols-[1fr_minmax(360px,460px)_1fr] xl:gap-8">
-          <div className="flex flex-col gap-4 sm:gap-5">
+          <Stagger className="flex flex-col gap-4 sm:gap-5" stagger={0.1}>
             {leftCards.map((item) => (
-              <FeatureCard key={item.number} item={item} />
+              <StaggerItem key={item.number} variant="slideLeft">
+                <FeatureCard item={item} />
+              </StaggerItem>
             ))}
-          </div>
+          </Stagger>
 
           {/* Center doctor + pink halo + orbit icons */}
-          <div className="relative order-first mx-auto flex h-[500px] w-full max-w-[460px] items-end justify-center overflow-visible sm:h-[560px] lg:order-none lg:h-[600px]">
+          <Reveal
+            variant="scaleIn"
+            className="relative order-first mx-auto flex h-[500px] w-full max-w-[460px] items-end justify-center overflow-visible sm:h-[560px] lg:order-none lg:h-[600px]"
+          >
             {/* Soft pink circle aura */}
             <div
               aria-hidden
@@ -235,13 +241,15 @@ export default function WhyChooseUs() {
               aria-hidden
               className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-14 bg-gradient-to-t from-white via-white/80 to-transparent"
             />
-          </div>
+          </Reveal>
 
-          <div className="flex flex-col gap-4 sm:gap-5">
+          <Stagger className="flex flex-col gap-4 sm:gap-5" stagger={0.1}>
             {rightCards.map((item) => (
-              <FeatureCard key={item.number} item={item} />
+              <StaggerItem key={item.number} variant="slideRight">
+                <FeatureCard item={item} />
+              </StaggerItem>
             ))}
-          </div>
+          </Stagger>
         </div>
       </div>
     </section>

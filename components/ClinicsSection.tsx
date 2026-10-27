@@ -1,7 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import { FaArrowRight, FaMapMarkerAlt } from "react-icons/fa";
 import { MdOutlineCalendarMonth } from "react-icons/md";
 import siteData from "@/data/site.json";
+import { Stagger, StaggerItem } from "./Reveal";
 
 export default function ClinicsSection() {
   const { eyebrow, titlePrefix, titleAccent, hoursBadge, clinics } =
@@ -74,10 +77,10 @@ export default function ClinicsSection() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:gap-7">
+        <Stagger className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:gap-7" stagger={0.1}>
           {clinics.map((clinic) => (
+            <StaggerItem key={clinic.id} variant="scaleIn">
             <article
-              key={clinic.id}
               className="group relative z-0 flex flex-col overflow-visible rounded-[26px] border border-[#fde8ef] bg-white p-4 shadow-[0_8px_28px_rgba(232,62,116,0.06)] transition-all duration-300 hover:z-10 hover:-translate-y-1 hover:border-[#fbcfe0] hover:shadow-[0_18px_40px_rgba(232,62,116,0.12)] sm:p-5"
             >
               {/* Image only — overflow hidden for rounded crop */}
@@ -122,8 +125,9 @@ export default function ClinicsSection() {
                 </a>
               </div>
             </article>
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
       </div>
     </section>
   );

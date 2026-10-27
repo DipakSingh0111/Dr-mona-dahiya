@@ -4,6 +4,7 @@ import React from "react";
 import siteData from "@/data/site.json";
 import { FaDna } from "react-icons/fa";
 import { FaUserLarge } from "react-icons/fa6";
+import { Reveal, Stagger, StaggerItem } from "./Reveal";
 
 // Exact Fertility Testing (twin swimming sperms)
 function SpermIcon() {
@@ -114,31 +115,34 @@ export default function AdvancedServices() {
     >
       <div style={{ maxWidth: "1400px", margin: "0 auto", width: "100%" }}>
         {/* Header Label: ADVANCED SERVICES */}
-        <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "24px" }}>
-          <span
-            style={{
-              fontSize: "13px",
-              fontWeight: 800,
-              letterSpacing: "0.14em",
-              color: "#e11d48",
-              textTransform: "uppercase",
-            }}
-          >
-            {eyebrow}
-          </span>
-          <span
-            style={{
-              width: "44px",
-              height: "2.5px",
-              backgroundColor: "#e11d48",
-              borderRadius: "9999px",
-            }}
-          />
-        </div>
+        <Reveal>
+          <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "24px" }}>
+            <span
+              style={{
+                fontSize: "13px",
+                fontWeight: 800,
+                letterSpacing: "0.14em",
+                color: "#e11d48",
+                textTransform: "uppercase",
+              }}
+            >
+              {eyebrow}
+            </span>
+            <span
+              style={{
+                width: "44px",
+                height: "2.5px",
+                backgroundColor: "#e11d48",
+                borderRadius: "9999px",
+              }}
+            />
+          </div>
+        </Reveal>
 
         {/* Top 3 Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6 mb-6">
+        <Stagger className="mb-6 grid grid-cols-1 gap-5 md:grid-cols-3 lg:gap-6" stagger={0.1}>
           {/* Card 1: Fertility Testing */}
+          <StaggerItem variant="scaleIn">
           <div
             style={{
               background: "linear-gradient(135deg, #fff5f8 0%, #ffffff 55%, #fff0f5 100%)",
@@ -190,8 +194,10 @@ export default function AdvancedServices() {
               </p>
             </div>
           </div>
+          </StaggerItem>
 
           {/* Card 2: Genetic Testing */}
+          <StaggerItem variant="scaleIn">
           <div
             style={{
               background: "linear-gradient(135deg, #f0f9ff 0%, #ffffff 55%, #e0f2fe 100%)",
@@ -243,8 +249,10 @@ export default function AdvancedServices() {
               </p>
             </div>
           </div>
+          </StaggerItem>
 
           {/* Card 3: Fertility Preservation */}
+          <StaggerItem variant="scaleIn">
           <div
             style={{
               background: "linear-gradient(135deg, #f0fdf4 0%, #ffffff 55%, #dcfce7 100%)",
@@ -300,11 +308,13 @@ export default function AdvancedServices() {
               </p>
             </div>
           </div>
-        </div>
+          </StaggerItem>
+        </Stagger>
 
         {/* Bottom 2 Large Condition Cards (Side by side on desktop) */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-6">
+        <Stagger className="grid grid-cols-1 gap-5 lg:grid-cols-2 lg:gap-6" stagger={0.12}>
           {/* Women Card */}
+          <StaggerItem variant="slideLeft">
           <div
             style={{
               background: "linear-gradient(135deg, #fff5f8 0%, #ffffff 40%, #ffeef3 100%)",
@@ -352,8 +362,10 @@ export default function AdvancedServices() {
               ))}
             </div>
           </div>
+          </StaggerItem>
 
           {/* Men Card */}
+          <StaggerItem variant="slideRight">
           <div
             style={{
               background: "linear-gradient(135deg, #f0f9ff 0%, #ffffff 40%, #e0f2fe 100%)",
@@ -401,7 +413,8 @@ export default function AdvancedServices() {
               ))}
             </div>
           </div>
-        </div>
+          </StaggerItem>
+        </Stagger>
       </div>
     </section>
   );

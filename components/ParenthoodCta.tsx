@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import {
   FaWhatsapp,
@@ -6,6 +8,7 @@ import {
   FaCalendarAlt,
 } from "react-icons/fa";
 import siteData from "@/data/site.json";
+import { Reveal } from "./Reveal";
 
 export default function ParenthoodCta() {
   const data = siteData.parenthoodCta;
@@ -43,7 +46,7 @@ export default function ParenthoodCta() {
       />
 
       <div className="relative z-10 mx-auto flex min-h-[340px] w-full max-w-[1400px] items-center px-4 py-12 sm:min-h-[380px] sm:px-6 sm:py-14 lg:min-h-[420px] lg:px-8 lg:py-16 xl:px-10">
-        <div className="w-full max-w-[720px]">
+        <Reveal variant="slideLeft" className="w-full max-w-[720px]">
           <span className="mb-5 block h-[3px] w-11 rounded-full bg-[#c24663]" />
 
           <h2 className="font-display text-[1.75rem] leading-[1.28] font-bold tracking-tight text-[#1a2b4b] sm:text-[2.2rem] lg:text-[2.55rem]">
@@ -80,7 +83,7 @@ export default function ParenthoodCta() {
               {data.phone.label}
             </a>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

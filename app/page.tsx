@@ -17,6 +17,7 @@ import BookAppointment from "@/components/BookAppointment";
 import FAQSection from "@/components/FAQSection";
 import ParenthoodCta from "@/components/ParenthoodCta";
 import Footer from "@/components/Footer";
+import { Reveal } from "@/components/Reveal";
 
 export default function Home() {
   return (
@@ -29,53 +30,69 @@ export default function Home() {
         <HeroSection />
       </div>
 
-      {/* 3. Medical Registration (DMC, MCI, UPMC) */}
-      <MedicalRegistration />
+      <Reveal>
+        <MedicalRegistration />
+      </Reveal>
 
-      {/* 4. Why couples choose Dr. Mona Dahiya */}
-      <WhyChooseUs />
+      <Reveal delay={0.05}>
+        <WhyChooseUs />
+      </Reveal>
 
-      {/* 5. Fertility treatment in Noida | Delhi | Ghaziabad (Our Services Grid) */}
-      <OurServices />
+      <Reveal delay={0.05}>
+        <OurServices />
+      </Reveal>
 
-      {/* 6. Advanced Services (Fertility Testing, Genetic, Preservation & Conditions) */}
-      <AdvancedServices />
+      <Reveal>
+        <AdvancedServices />
+      </Reveal>
 
-      {/* 7. How It Works (We guide you through every stage with transparency) */}
-      <HowItWorks />
+      <Reveal>
+        <HowItWorks />
+      </Reveal>
 
-      {/* 8. Meet Your Doctor (Overseeing fertility care from first visit to positive pregnancy) */}
-      <MeetYourDoctor />
+      <Reveal>
+        <MeetYourDoctor />
+      </Reveal>
 
-      {/* 9. Fertility Preservation (Keep the option of parenthood open) */}
-      <FertilityPreservation />
+      <Reveal>
+        <FertilityPreservation />
+      </Reveal>
 
-      {/* 10. Affiliations (Present & Past Affiliations) */}
-      <Affiliations />
+      <Reveal>
+        <Affiliations />
+      </Reveal>
 
-      {/* 11. Three clinics across Delhi NCR (Noida, Ghaziabad, Delhi) */}
-      <ClinicsSection />
+      <Reveal>
+        <ClinicsSection />
+      </Reveal>
 
-      {/* 12. Patient Testimonials (Our success stories slider) */}
-      <SuccessStories />
+      <Reveal>
+        <SuccessStories />
+      </Reveal>
 
-      {/* 13. Travelling to India for IVF? (International Patients) */}
-      <InternationalPatients />
+      <Reveal>
+        <InternationalPatients />
+      </Reveal>
 
-      {/* 14. Latest Blog (Guides from the clinic) */}
-      <LatestBlog />
+      <Reveal>
+        <LatestBlog />
+      </Reveal>
 
-      {/* 15. Consult the Best IVF Specialist in India (Book Consultation / Appointment) */}
-      <BookAppointment />
+      <Reveal>
+        <BookAppointment />
+      </Reveal>
 
-      {/* 16. Frequently asked questions (FAQ Accordion) */}
-      <FAQSection />
+      <Reveal>
+        <FAQSection />
+      </Reveal>
 
-      {/* 17. Take your first step towards parenthood with Dr. Mona Dahiya (Bottom CTA) */}
-      <ParenthoodCta />
+      <Reveal variant="scaleIn">
+        <ParenthoodCta />
+      </Reveal>
 
-      {/* 18. Footer */}
-      <Footer />
+      <Reveal variant="fadeIn">
+        <Footer />
+      </Reveal>
     </main>
   );
 }

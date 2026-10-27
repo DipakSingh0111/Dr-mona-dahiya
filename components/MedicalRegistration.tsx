@@ -1,5 +1,8 @@
+"use client";
+
 import { MdAccountBalance } from "react-icons/md";
 import siteData from "@/data/site.json";
+import { Stagger, StaggerItem } from "./Reveal";
 
 const colorSchemes = {
   teal: {
@@ -144,18 +147,19 @@ export default function MedicalRegistration() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-3 lg:gap-6">
+        <Stagger className="grid grid-cols-1 gap-5 md:grid-cols-3 lg:gap-6" stagger={0.1}>
           {items.map((item) => (
-            <RegistrationCard
-              key={item.code}
-              code={item.code}
-              councilName={item.councilName}
-              regNumber={item.regNumber}
-              regLabel={item.regLabel}
-              colorScheme={item.colorScheme as ColorKey}
-            />
+            <StaggerItem key={item.code}>
+              <RegistrationCard
+                code={item.code}
+                councilName={item.councilName}
+                regNumber={item.regNumber}
+                regLabel={item.regLabel}
+                colorScheme={item.colorScheme as ColorKey}
+              />
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
       </div>
     </section>
   );

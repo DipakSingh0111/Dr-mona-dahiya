@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import { FaHospital, FaClock, FaBuilding } from "react-icons/fa";
 import siteData from "@/data/site.json";
+import { Reveal, Stagger, StaggerItem } from "./Reveal";
 
 const toneMap = {
   pink: {
@@ -19,27 +22,30 @@ export default function Affiliations() {
   return (
     <section className="relative overflow-hidden bg-white px-3 py-14 sm:px-4 sm:py-20 lg:pr-8 lg:pl-3 xl:pl-4">
       <div className="mx-auto w-full max-w-[1400px]">
-        <div className="mb-8 flex flex-col gap-4 sm:mb-10 lg:flex-row lg:items-end lg:justify-between">
-          <div>
-            <div className="mb-3 flex items-center gap-3">
-              <span className="h-px w-8 bg-[#e83e74]" />
-              <span className="text-[12px] font-semibold tracking-wide text-[#e83e74]">
-                {data.eyebrow}
-              </span>
-              <span className="h-px w-8 bg-[#e83e74]" />
+        <Reveal>
+          <div className="mb-8 flex flex-col gap-4 sm:mb-10 lg:flex-row lg:items-end lg:justify-between">
+            <div>
+              <div className="mb-3 flex items-center gap-3">
+                <span className="h-px w-8 bg-[#e83e74]" />
+                <span className="text-[12px] font-semibold tracking-wide text-[#e83e74]">
+                  {data.eyebrow}
+                </span>
+                <span className="h-px w-8 bg-[#e83e74]" />
+              </div>
+              <h2 className="font-display text-[1.9rem] leading-tight font-bold tracking-tight text-[#0f2438] sm:text-[2.35rem] lg:text-[2.6rem]">
+                {data.title}{" "}
+                <span className="text-[#e83e74]">{data.titleAccent}</span>
+              </h2>
             </div>
-            <h2 className="font-display text-[1.9rem] leading-tight font-bold tracking-tight text-[#0f2438] sm:text-[2.35rem] lg:text-[2.6rem]">
-              {data.title}{" "}
-              <span className="text-[#e83e74]">{data.titleAccent}</span>
-            </h2>
+            <p className="max-w-xs text-[13px] leading-relaxed text-zinc-500 sm:text-[14px] lg:text-right">
+              {data.subtitle}
+            </p>
           </div>
-          <p className="max-w-xs text-[13px] leading-relaxed text-zinc-500 sm:text-[14px] lg:text-right">
-            {data.subtitle}
-          </p>
-        </div>
+        </Reveal>
 
-        <div className="grid grid-cols-1 gap-5 lg:grid-cols-[1.35fr_1fr] lg:gap-6">
+        <Stagger className="grid grid-cols-1 gap-5 lg:grid-cols-[1.35fr_1fr] lg:gap-6" stagger={0.12}>
           {/* Present */}
+          <StaggerItem variant="slideLeft">
           <article className="relative overflow-hidden rounded-[24px] border border-[#f8d5e0]/80 bg-[#fff5f8] p-5 sm:p-7">
             <FaBuilding
               aria-hidden
@@ -109,8 +115,10 @@ export default function Affiliations() {
               })}
             </ul>
           </article>
+          </StaggerItem>
 
           {/* Past */}
+          <StaggerItem variant="slideRight">
           <article className="relative overflow-hidden rounded-[24px] border border-[#ddd6f5]/80 bg-[#f4f2ff] p-5 sm:p-7">
             <FaBuilding
               aria-hidden
@@ -148,7 +156,8 @@ export default function Affiliations() {
               ))}
             </ul>
           </article>
-        </div>
+          </StaggerItem>
+        </Stagger>
       </div>
     </section>
   );

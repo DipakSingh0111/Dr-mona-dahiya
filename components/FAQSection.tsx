@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import siteData from "@/data/site.json";
+import { Reveal, Stagger, StaggerItem } from "./Reveal";
 
 interface FaqItem {
   id: string;
@@ -109,38 +110,46 @@ export default function FAQSection() {
       />
 
       <div className="mx-auto w-full max-w-[1400px]">
-        <header className="mb-12 text-center sm:mb-16">
-          <h2 className="font-serif text-3xl font-bold tracking-tight text-[#0f2438] sm:text-4xl md:text-5xl lg:text-[52px]">
-            <span>{titlePrefix} </span>
-            <span className="text-[#e11d68]">{titleHighlight}</span>
-          </h2>
-          <p className="mx-auto mt-3.5 max-w-xl text-sm font-normal text-gray-500 sm:text-base">
-            {subtitle}
-          </p>
-        </header>
+        <Reveal>
+          <header className="mb-12 text-center sm:mb-16">
+            <h2 className="font-serif text-3xl font-bold tracking-tight text-[#0f2438] sm:text-4xl md:text-5xl lg:text-[52px]">
+              <span>{titlePrefix} </span>
+              <span className="text-[#e11d68]">{titleHighlight}</span>
+            </h2>
+            <p className="mx-auto mt-3.5 max-w-xl text-sm font-normal text-gray-500 sm:text-base">
+              {subtitle}
+            </p>
+          </header>
+        </Reveal>
 
         <div className="grid grid-cols-1 items-start gap-4 lg:grid-cols-2 lg:gap-6">
-          <div className="flex flex-col gap-3.5 sm:gap-4">
+          <Stagger className="flex flex-col gap-3.5 sm:gap-4" stagger={0.08}>
             {leftFaqs.map((item) => (
-              <FaqCard
-                key={item.id}
-                item={item}
-                isOpen={openIds.includes(item.id)}
-                onToggle={() => toggleFaq(item.id)}
-              />
+              <StaggerItem key={item.id} variant="slideLeft">
+                <FaqCard
+                  item={item}
+                  isOpen={openIds.includes(item.id)}
+                  onToggle={() => toggleFaq(item.id)}
+                />
+              </StaggerItem>
             ))}
-          </div>
+          </Stagger>
 
-          <div className="flex flex-col gap-3.5 sm:gap-4">
+          <Stagger
+            className="flex flex-col gap-3.5 sm:gap-4"
+            stagger={0.08}
+            delay={0.05}
+          >
             {rightFaqs.map((item) => (
-              <FaqCard
-                key={item.id}
-                item={item}
-                isOpen={openIds.includes(item.id)}
-                onToggle={() => toggleFaq(item.id)}
-              />
+              <StaggerItem key={item.id} variant="slideRight">
+                <FaqCard
+                  item={item}
+                  isOpen={openIds.includes(item.id)}
+                  onToggle={() => toggleFaq(item.id)}
+                />
+              </StaggerItem>
             ))}
-          </div>
+          </Stagger>
         </div>
       </div>
     </section>

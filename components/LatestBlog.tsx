@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa";
 import siteData from "@/data/site.json";
+import { Stagger, StaggerItem } from "./Reveal";
 
 export default function LatestBlog() {
   const { eyebrow, titlePrefix, titleHighlight, cta, articles } =
@@ -53,11 +56,10 @@ export default function LatestBlog() {
           </a>
         </div>
 
-        {/* Cards */}
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:gap-7">
+        <Stagger className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:gap-7" stagger={0.1}>
           {articles.map((item) => (
+            <StaggerItem key={item.id} variant="scaleIn">
             <article
-              key={item.id}
               className="group flex flex-col overflow-visible rounded-[24px] bg-white p-3 shadow-[0_12px_36px_rgba(232,62,116,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_44px_rgba(232,62,116,0.14)] sm:p-4"
             >
               <div className="relative">
@@ -66,6 +68,7 @@ export default function LatestBlog() {
                     src={item.image}
                     alt={item.title}
                     fill
+                    unoptimized
                     sizes="(max-width: 768px) 100vw, 400px"
                     className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.04]"
                   />
@@ -97,8 +100,9 @@ export default function LatestBlog() {
                 </a>
               </div>
             </article>
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
       </div>
     </section>
   );
