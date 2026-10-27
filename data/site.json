@@ -1,0 +1,1182 @@
+{
+  "topBar": {
+    "locations": [
+      {
+        "label": "Noida",
+        "href": "#noida"
+      },
+      {
+        "label": "Delhi",
+        "href": "#delhi"
+      },
+      {
+        "label": "Ghaziabad",
+        "href": "#ghaziabad"
+      }
+    ],
+    "links": [
+      {
+        "type": "text",
+        "icon": "globe",
+        "label": "International Desk",
+        "href": "#international"
+      },
+      {
+        "type": "email",
+        "icon": "mail",
+        "label": "info@drmonadahiya.com",
+        "href": "mailto:info@drmonadahiya.com"
+      },
+      {
+        "type": "phone",
+        "icon": "phone",
+        "label": "+91 92679 82924",
+        "href": "tel:+919267982924"
+      },
+      {
+        "type": "hours",
+        "icon": "clock",
+        "label": "8 AM – 8 PM",
+        "href": null
+      }
+    ]
+  },
+  "navbar": {
+    "brand": {
+      "name": "Dr. Mona Dahiya",
+      "tagline": "Fertility & IVF Specialist • 25+ years",
+      "href": "/"
+    },
+    "menu": [
+      {
+        "label": "Treatments",
+        "href": "#treatments",
+        "hasDropdown": true
+      },
+      {
+        "label": "Conditions Treated",
+        "href": "#conditions",
+        "hasDropdown": true
+      },
+      {
+        "label": "Success Stories",
+        "href": "#success-stories",
+        "hasDropdown": true
+      },
+      {
+        "label": "About Dr. Mona",
+        "href": "#about",
+        "hasDropdown": true
+      },
+      {
+        "label": "Patient Resources",
+        "href": "#resources",
+        "hasDropdown": true
+      }
+    ],
+    "cta": {
+      "label": "Book Consultation",
+      "href": "#book-appointment",
+      "icon": "calendar"
+    }
+  },
+  "hero": {
+    "backgroundImage": "/images/BlueStage.png",
+    "eyebrow": "Top Rated Fertility Specialist in India",
+    "title": "Dr. Mona Dahiya",
+    "subtitle": "Pioneering IVF centre of India since 1993",
+    "description": "Providing a full range of advanced infertility solutions to patients from over 66 countries. Dr. Mona Gupta leads the pioneering IVF centres of India, with locations in New Delhi, Lajpat Nagar and Rohini.",
+    "primaryCta": {
+      "label": "Book Appointment",
+      "href": "#book-appointment",
+      "icon": "calendar"
+    },
+    "secondaryCta": {
+      "label": "Watch Video",
+      "href": "https://www.youtube.com/@drmonadahiya",
+      "icon": "play"
+    },
+    "stats": [
+      {
+        "icon": "chart",
+        "value": "90%+",
+        "target": 90,
+        "suffix": "%+",
+        "label": "Success Rate"
+      },
+      {
+        "icon": "award",
+        "value": "25+",
+        "target": 25,
+        "suffix": "+",
+        "label": "Years Expertise"
+      },
+      {
+        "icon": "users",
+        "value": "25K+",
+        "target": 25,
+        "suffix": "K+",
+        "label": "Happy Parents"
+      },
+      {
+        "icon": "globe",
+        "value": "15K+",
+        "target": 15,
+        "suffix": "K+",
+        "label": "IVF Cycles"
+      }
+    ],
+    "form": {
+      "title": "Book Your Consultation",
+      "subtitle": "Take the first step towards your parenthood journey.",
+      "fields": {
+        "firstName": {
+          "placeholder": "First name*",
+          "required": true
+        },
+        "lastName": {
+          "placeholder": "Last name*",
+          "required": true
+        },
+        "whatsapp": {
+          "placeholder": "WhatsApp number*",
+          "required": true,
+          "countryCode": "+91",
+          "flag": "🇮🇳"
+        },
+        "country": {
+          "placeholder": "Country",
+          "defaultValue": "India",
+          "options": [
+            "India",
+            "USA",
+            "UK",
+            "UAE",
+            "Canada",
+            "Australia",
+            "Other"
+          ]
+        },
+        "state": {
+          "placeholder": "Select State",
+          "options": [
+            "Delhi",
+            "Uttar Pradesh",
+            "Haryana",
+            "Rajasthan",
+            "Maharashtra",
+            "Other"
+          ]
+        },
+        "city": {
+          "placeholder": "Select City",
+          "options": [
+            "New Delhi",
+            "Noida",
+            "Ghaziabad",
+            "Gurugram",
+            "Rohini",
+            "Lajpat Nagar",
+            "Other"
+          ]
+        },
+        "message": {
+          "placeholder": "Tell us how we can help (optional)",
+          "required": false
+        }
+      },
+      "submitLabel": "Request a Callback",
+      "trustSignals": [
+        "100% Confidential | No Obligation",
+        "We call within 2 hours"
+      ]
+    }
+  },
+  "medicalRegistration": {
+    "eyebrow": "Registered Medical Practitioner",
+    "title": "Medical",
+    "titleAccent": "Registration",
+    "subtitle": "Dr. Mona Dahiya is registered with the following medical councils.",
+    "items": [
+      {
+        "code": "DMC",
+        "councilName": "Delhi Medical Council",
+        "regNumber": "DMC-7795",
+        "regLabel": "DMC registration number",
+        "colorScheme": "teal"
+      },
+      {
+        "code": "MCI",
+        "councilName": "Medical Council of India",
+        "regNumber": "MCI-09/6820",
+        "regLabel": "MCI registration number",
+        "colorScheme": "crimson"
+      },
+      {
+        "code": "UPMC",
+        "councilName": "Uttar Pradesh Medical Council",
+        "regNumber": "UPMC-110541",
+        "regLabel": "UPMC registration number",
+        "colorScheme": "blue"
+      }
+    ]
+  },
+  "whyChoose": {
+    "badge": "Why Choose Us",
+    "title": "Why couples choose",
+    "titleAccent": "Dr. Mona Dahiya",
+    "subtitle": "One well-qualified doctor to lead the care, and all the options are just around the corner.",
+    "image": "/images/why-choose/doctor-cutout.png",
+    "leftCards": [
+      {
+        "number": "01",
+        "icon": "stethoscope",
+        "title": "Doctor-led, start to finish",
+        "description": "Dr. Mona sees you at every visit and plans each cycle herself.",
+        "color": "pink"
+      },
+      {
+        "number": "02",
+        "icon": "chart",
+        "title": "90%+ success rate",
+        "description": "25K+ happy parents and 15K+ IVF cycles, rated 4.9 by patients on Google.",
+        "color": "teal"
+      },
+      {
+        "number": "03",
+        "icon": "document",
+        "title": "Customised treatment protocols",
+        "description": "Every IVF, IUI or ICSI plan is built around your age, reports and earlier cycles.",
+        "color": "purple"
+      }
+    ],
+    "rightCards": [
+      {
+        "number": "04",
+        "icon": "graduation",
+        "title": "25+ years of experience",
+        "description": "Gold medalist MBBS and MD, DNB, and an IVF fellowship at Singapore General Hospital.",
+        "color": "orange"
+      },
+      {
+        "number": "05",
+        "icon": "heartHands",
+        "title": "Care for complex cases",
+        "description": "Low AMH, PCOS, recurrent miscarriage and couples with failed IVF cycles.",
+        "color": "blue"
+      },
+      {
+        "number": "06",
+        "icon": "video",
+        "title": "Three clinics & online consults",
+        "description": "Noida, Ghaziabad and Delhi, plus video consultations for outstation and international couples.",
+        "color": "rose"
+      }
+    ]
+  },
+  "ourServices": {
+    "eyebrow": "OUR SERVICES",
+    "titlePrefix": "For infertility treatment in",
+    "titleLocations": [
+      "Noida",
+      "Delhi",
+      "Ghaziabad"
+    ],
+    "description": "Comprehensive fertility care under one roof — from diagnosis and IVF to advanced genetic testing, guided personally by Dr. Mona Dahiya.",
+    "cta": {
+      "label": "View all services",
+      "href": "#our-services"
+    },
+    "items": [
+      {
+        "id": "ivf",
+        "title": "In vitro Fertilization (IVF)",
+        "description": "Lab fertilisation of eggs and sperm with carefully timed embryo transfer for the best chance of pregnancy.",
+        "icon": "uterus",
+        "image": "/images/services/service-ivf-soft.png",
+        "videoHref": "https://www.youtube.com/@drmonadahiya"
+      },
+      {
+        "id": "iui",
+        "title": "Intrauterine Insemination (IUI)",
+        "description": "Prepared sperm placed directly into the uterus around ovulation — a simple first-line fertility option.",
+        "icon": "uterus",
+        "image": "/images/services/service-iui-soft.png",
+        "videoHref": "https://www.youtube.com/@drmonadahiya"
+      },
+      {
+        "id": "follicular-ultrasound",
+        "title": "Follicular Ultrasound",
+        "description": "Cycle monitoring to track follicle growth and pinpoint the ideal window for IUI, IVF or timed intercourse.",
+        "icon": "monitor",
+        "image": "/images/services/service-ultrasound-soft.png",
+        "videoHref": "https://www.youtube.com/@drmonadahiya"
+      },
+      {
+        "id": "infertility-tests",
+        "title": "Tests for Infertility",
+        "description": "Complete female fertility work-up including hormones, ultrasound and tubes assessment under one plan.",
+        "icon": "clipboard",
+        "image": "/images/services/service-infertility-tests-soft.png",
+        "videoHref": "https://www.youtube.com/@drmonadahiya"
+      },
+      {
+        "id": "male-infertility",
+        "title": "Male Infertility Tests",
+        "description": "Semen analysis, DNA fragmentation and advanced male factor evaluation with clear next-step guidance.",
+        "icon": "male",
+        "image": "/images/services/service-male-infertility-soft.png",
+        "videoHref": "https://www.youtube.com/@drmonadahiya"
+      },
+      {
+        "id": "mini-ivf",
+        "title": "Mini IVF",
+        "description": "Gentle, lower-stimulation IVF designed for selected patients who need a softer, more affordable approach.",
+        "icon": "cells",
+        "image": "/images/services/service-mini-ivf-soft.png",
+        "videoHref": "https://www.youtube.com/@drmonadahiya"
+      },
+      {
+        "id": "laparoscopy",
+        "title": "Laparoscopy & Hysteroscopy",
+        "description": "Keyhole surgery to treat endometriosis, fibroids, polyps and blocked tubes that affect fertility.",
+        "icon": "uterus",
+        "image": "/images/services/service-laparoscopy-soft.png",
+        "videoHref": "https://www.youtube.com/@drmonadahiya"
+      },
+      {
+        "id": "low-amh",
+        "title": "Low AMH Treatment",
+        "description": "Personalised protocols for diminished ovarian reserve to maximise egg quality and pregnancy chances.",
+        "icon": "drop",
+        "image": "/images/services/service-low-amh-soft.png",
+        "videoHref": "https://www.youtube.com/@drmonadahiya"
+      },
+      {
+        "id": "cryopreservation",
+        "title": "Embryo Cryopreservation",
+        "description": "Safe freezing of embryos for future FET cycles, fertility preservation or family planning later.",
+        "icon": "snowflake",
+        "image": "/images/services/service-cryopreservation-soft.png",
+        "videoHref": "https://www.youtube.com/@drmonadahiya"
+      },
+      {
+        "id": "era",
+        "title": "Endometrial Receptivity Array",
+        "description": "ERA testing to find your personal implantation window after failed transfers or thin lining concerns.",
+        "icon": "uterus",
+        "image": "/images/services/service-era-soft.png",
+        "videoHref": "https://www.youtube.com/@drmonadahiya"
+      },
+      {
+        "id": "donor-gametes",
+        "title": "Donor Gametes",
+        "description": "Carefully screened donor egg or sperm programmes when own gametes are not an option for parenthood.",
+        "icon": "dna",
+        "image": "/images/services/service-donor-gametes-soft.png",
+        "videoHref": "https://www.youtube.com/@drmonadahiya"
+      },
+      {
+        "id": "pgt",
+        "title": "Preimplantation Genetic Testing",
+        "description": "PGT screening of embryos for chromosomal or genetic conditions before transfer for safer IVF outcomes.",
+        "icon": "dna",
+        "image": "/images/services/service-pgt-soft.png",
+        "videoHref": "https://www.youtube.com/@drmonadahiya"
+      }
+    ]
+  },
+  "advancedServices": {
+    "eyebrow": "ADVANCED SERVICES",
+    "topCards": [
+      {
+        "id": "fertility-testing",
+        "title": "Fertility Testing",
+        "description": "Fertility tests to assess reproductive health and prevent any successful conception.",
+        "icon": "sperm",
+        "theme": "rose"
+      },
+      {
+        "id": "genetic-testing",
+        "title": "Genetic Testing",
+        "description": "Vital video facilities for DNA genetic testing for hereditary issues.",
+        "icon": "dna",
+        "theme": "blue"
+      },
+      {
+        "id": "fertility-preservation",
+        "title": "Fertility Preservation",
+        "description": "Diverse options to preserve fertility for future dreams under life's uncertainties.",
+        "icon": "uterus",
+        "theme": "green"
+      }
+    ],
+    "womenConditions": {
+      "title": "Conditions we treat in women",
+      "tags": [
+        "Low AMH",
+        "PCOS / PCOD",
+        "Endometriosis",
+        "Blocked tubes",
+        "Recurrent miscarriage",
+        "Failed IVF (PIF)",
+        "All female infertility"
+      ]
+    },
+    "menConditions": {
+      "title": "Conditions we treat in men",
+      "tags": [
+        "Azoospermia",
+        "Low sperm count",
+        "Sperm DNA test",
+        "TESA / PESA",
+        "All male infertility"
+      ]
+    }
+  },
+  "howItWorks": {
+    "badge": "How It Work",
+    "title": "We guide you\nthrough every\nstage with\ntransparency",
+    "steps": [
+      {
+        "id": "step-1",
+        "title": "Book a consultation",
+        "description": "Meet Dr. Mona at the Noida, Ghaziabad or Delhi clinic, or on a video call from anywhere.",
+        "image": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=900&q=85"
+      },
+      {
+        "id": "step-2",
+        "title": "Get tested & get a plan",
+        "description": "Both partners are tested, and Dr. Mona explains the right treatment for your reports.",
+        "image": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=900&q=85"
+      },
+      {
+        "id": "step-3",
+        "title": "Begin your treatment",
+        "description": "Start IUI, IVF or another treatment with her personal follow-up at every stage.",
+        "image": "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=900&q=85"
+      }
+    ]
+  },
+  "meetYourDoctor": {
+    "badge": "Meet your doctor",
+    "titleLine1": "Doctor-led fertility",
+    "titleLine2": "care, from first",
+    "titleAccent": "scan to positive test",
+    "description": "Dr. Mona Dahiya is a gold medalist fertility specialist with 25+ years of experience, trained at leading centres in India and Singapore. She personally plans every cycle and stays with you from the first scan to a positive test.",
+    "features": [
+      "Personal protocol for every cycle",
+      "Laparoscopy & hysteroscopy in-house",
+      "Expertise in low AMH and failed IVF",
+      "Clinics in Noida, Ghaziabad & Delhi"
+    ],
+    "primaryCta": {
+      "label": "Read full profile",
+      "href": "#profile"
+    },
+    "secondaryCta": {
+      "label": "Watch Dr. Mona Dahiya",
+      "href": "https://www.youtube.com/@drmonadahiya"
+    },
+    "image": "/images/meet/doctor-portrait.jpg",
+    "card": {
+      "eyebrow": "Consult Best IVF Specialist in India",
+      "namePrefix": "Dr",
+      "name": "Mona Dahiya",
+      "sectionLabel": "World Class Qualifications",
+      "qualifications": [
+        {
+          "title": "MBBS (Gold Medalist)",
+          "subtitle": "Lady Hardinge Medical College, New Delhi",
+          "color": "pink"
+        },
+        {
+          "title": "MD (Gold Medalist)",
+          "subtitle": "Maulana Azad Medical College, New Delhi",
+          "color": "purple"
+        },
+        {
+          "title": "Senior Residency",
+          "subtitle": "Maulana Azad Medical College, New Delhi",
+          "color": "green"
+        },
+        {
+          "title": "DNB (Obs & Gynae)",
+          "subtitle": "Diplomate of National Board",
+          "color": "orange"
+        },
+        {
+          "title": "Fellowship in IVF & Reproductive Medicine",
+          "subtitle": "Singapore General Hospital, Singapore",
+          "color": "blue"
+        }
+      ]
+    }
+  },
+  "fertilityPreservation": {
+    "eyebrow": "Fertility Preservation",
+    "title": "Keep the option of",
+    "titleAccent": "parenthood",
+    "titleEnd": "open",
+    "subtitle": "For women delaying pregnancy, men before surgery or travel, couples banking embryos across cycles, and patients starting cancer treatment.",
+    "image": "/images/Accolades.png",
+    "cta": {
+      "label": "Contact Us",
+      "href": "#contact"
+    },
+    "cards": [
+      {
+        "id": "egg",
+        "number": "01",
+        "title": "Egg freezing",
+        "subtitle": "Social and elective oocyte freezing",
+        "description": "Freeze your eggs when you are ready to pause the biological clock. We guide you through stimulation, retrieval and long-term storage with clear counselling at every step.",
+        "icon": "egg",
+        "accent": "pink"
+      },
+      {
+        "id": "sperm",
+        "number": "02",
+        "title": "Sperm freezing",
+        "subtitle": "Secure male fertility for later",
+        "description": "Preserve sperm before surgery, travel, medical treatment or when timing is uncertain. Samples are processed and stored under controlled laboratory conditions.",
+        "icon": "sperm",
+        "accent": "pink"
+      },
+      {
+        "id": "embryo",
+        "number": "03",
+        "title": "Embryo freezing",
+        "subtitle": "Bank embryos across cycles",
+        "description": "Create and freeze embryos for future transfer. Ideal for couples planning treatment across multiple cycles or needing to pause between stages of care.",
+        "icon": "embryo",
+        "accent": "purple"
+      },
+      {
+        "id": "onco",
+        "number": "04",
+        "title": "Oncofertility",
+        "subtitle": "Fertility care before cancer treatment",
+        "description": "Urgent fertility preservation for patients starting chemotherapy or radiation. We coordinate quickly with your oncology team so options stay open.",
+        "icon": "ribbon",
+        "accent": "teal"
+      }
+    ]
+  },
+  "faq": {
+    "titlePrefix": "Frequently",
+    "titleHighlight": "asked questions",
+    "subtitle": "Find answers to the most common questions about IVF treatment, process, safety, success rates and more.",
+    "leftFaqs": [
+      {
+        "id": "faq-01",
+        "number": "01",
+        "question": "Who offers the best IVF treatment in India?",
+        "answer": "Dr. Mona Dahiya is a leading choice for couples in India and from abroad who want affordable IVF with high success rates. With personalized care, advanced technology, and a patient-first approach, she has helped many couples achieve their dream of parenthood."
+      },
+      {
+        "id": "faq-03",
+        "number": "03",
+        "question": "What is the success rate of IVF in India?",
+        "answer": "The success rate of IVF varies depending on maternal age, diagnosis, and medical history, generally ranging between 50% to 80% with advanced blastocyst culture and individualized protocols under Dr. Mona Dahiya."
+      },
+      {
+        "id": "faq-05",
+        "number": "05",
+        "question": "Is IVF safe after 35?",
+        "answer": "Yes, IVF is safe after 35. Comprehensive pre-treatment assessments, genetic screening, and tailored stimulation protocols ensure both mother and baby receive optimal medical care."
+      },
+      {
+        "id": "faq-07",
+        "number": "07",
+        "question": "Which month is best for IVF?",
+        "answer": "There is no medically specific best month for IVF; success is determined by ovarian reserve, hormonal balance, and personalized preparation rather than seasonal factors."
+      },
+      {
+        "id": "faq-09",
+        "number": "09",
+        "question": "How many IVF cycles are needed to get pregnant?",
+        "answer": "Many couples conceive in their first cycle, while others may require 2 to 3 cycles. Dr. Mona optimizes each protocol based on previous responses to achieve pregnancy in minimal attempts."
+      }
+    ],
+    "rightFaqs": [
+      {
+        "id": "faq-02",
+        "number": "02",
+        "question": "Is IVF harmful or beneficial?",
+        "answer": "IVF is a clinically proven, safe medical procedure that has enabled millions of families worldwide to experience parenthood when natural conception is challenging."
+      },
+      {
+        "id": "faq-04",
+        "number": "04",
+        "question": "How safe is IVF pregnancy in India?",
+        "answer": "IVF pregnancies in certified fertility centres are closely monitored by expert obstetricians and fertility specialists with international safety standards."
+      },
+      {
+        "id": "faq-06",
+        "number": "06",
+        "question": "How can I share my medical records?",
+        "answer": "You can securely share your test reports and medical history via WhatsApp (+91 92679 82924) or email directly to info@drmonadahiya.com before your consultation."
+      },
+      {
+        "id": "faq-08",
+        "number": "08",
+        "question": "What if I don't have previous medical records?",
+        "answer": "You don't need prior records. Dr. Mona will conduct a fresh, complete diagnostic assessment for both partners to determine the best treatment path."
+      },
+      {
+        "id": "faq-10",
+        "number": "10",
+        "question": "Which documents should I carry for treatment?",
+        "answer": "Please carry valid government photo IDs (Aadhaar/Passport/Voter ID), marriage proof (for ART compliance), and any prior ultrasound or blood reports if available."
+      },
+      {
+        "id": "faq-11",
+        "number": "11",
+        "question": "What is the Indian country code?",
+        "answer": "The international dialling code for India is +91."
+      }
+    ]
+  },
+  "affiliations": {
+    "eyebrow": "Affiliations",
+    "title": "Dr. Mona Dahiya's",
+    "titleAccent": "affiliations",
+    "subtitle": "Dr. Mona's current and previous hospitals/fertility clinics she has worked in.",
+    "present": {
+      "badge": "Present",
+      "title": "Present affiliations",
+      "items": [
+        {
+          "id": "nayra",
+          "name": "Nayra Fertility",
+          "address": "3rd Floor, K-06, above FirstCry, Baraula, Sector 49, Noida, Uttar Pradesh 201301",
+          "icon": "/images/affiliations/icon-hospital-pink.jpg",
+          "tone": "pink"
+        },
+        {
+          "id": "pravi",
+          "name": "Pravi Fertility",
+          "address": "Building Number 41, First Floor, Ring Road, Block Q, Lajpat Nagar IV, Lajpat Nagar, New Delhi 110024",
+          "icon": "/images/affiliations/icon-hospital-purple.jpg",
+          "tone": "purple"
+        },
+        {
+          "id": "little-angel",
+          "name": "Little Angel IVF",
+          "icon": "/images/affiliations/icon-baby-heart.jpg",
+          "tone": "pink",
+          "tags": [
+            "Noida",
+            "Delhi",
+            "Ghaziabad"
+          ]
+        }
+      ]
+    },
+    "past": {
+      "badge": "Past",
+      "title": "Past affiliations",
+      "items": [
+        {
+          "id": "apollo",
+          "name": "Apollo Fertility",
+          "logo": "/images/affiliations/logo-apollo-fertility.jpg"
+        },
+        {
+          "id": "birla",
+          "name": "Birla Fertility & IVF",
+          "logo": "/images/affiliations/logo-birla-fertility.jpg"
+        },
+        {
+          "id": "max",
+          "name": "Max Healthcare",
+          "logo": "/images/affiliations/logo-max-healthcare.jpg"
+        }
+      ]
+    }
+  },
+  "clinicsSection": {
+    "eyebrow": "OUR FERTILITY CENTRES",
+    "titlePrefix": "Three clinics across",
+    "titleAccent": "Delhi NCR",
+    "hoursBadge": {
+      "title": "Open Monday to Saturday, 10:00 AM to 5:00 PM.",
+      "subtitle": "Book a slot at the clinic closest to you."
+    },
+    "clinics": [
+      {
+        "id": "noida",
+        "city": "Noida",
+        "address": "3rd Floor, K-06, above FirstCry, Baraula, Sector 49, Noida, Uttar Pradesh 201301",
+        "image": "/images/clinics/noida.jpg",
+        "href": "#noida"
+      },
+      {
+        "id": "ghaziabad",
+        "city": "Ghaziabad",
+        "address": "2nd Floor, RDC, C-53A, near Bikanerwala, Sector 15, Sector 10, Raj Nagar, Ghaziabad, Uttar Pradesh 201002",
+        "image": "/images/clinics/ghaziabad.jpg",
+        "href": "#ghaziabad"
+      },
+      {
+        "id": "delhi",
+        "city": "Delhi",
+        "address": "Building Number 41, First Floor, Ring Road, Block Q, Lajpat Nagar IV, Lajpat Nagar, New Delhi 110024",
+        "image": "/images/clinics/delhi.jpg",
+        "href": "#delhi"
+      }
+    ]
+  },
+  "successStories": {
+    "eyebrow": "PATIENT TESTIMONIALS",
+    "titlePrefix": "Our",
+    "titleHighlight": "success stories",
+    "subtitle": "Messages from couples treated by Dr. Mona, shared with permission.",
+    "categories": [
+      {
+        "id": "ivf",
+        "label": "IVF Success Stories",
+        "icon": "ivf",
+        "color": "pink"
+      },
+      {
+        "id": "low-amh",
+        "label": "Low AMH Success Stories",
+        "icon": "egg",
+        "color": "teal"
+      },
+      {
+        "id": "pcos",
+        "label": "PCOS Success Stories",
+        "icon": "pcos",
+        "color": "purple"
+      },
+      {
+        "id": "iui",
+        "label": "IUI Success Stories",
+        "icon": "drop",
+        "color": "blue"
+      },
+      {
+        "id": "video",
+        "label": "Patient Video Reviews",
+        "icon": "star",
+        "color": "yellow"
+      },
+      {
+        "id": "all",
+        "label": "All Success Stories",
+        "icon": "heart",
+        "color": "peach"
+      }
+    ],
+    "testimonials": [
+      {
+        "id": "story-1",
+        "quote": "Dr. Mona has made our dream come true and we are very Grateful.",
+        "initials": "PR",
+        "author": "Priya & Rohit",
+        "type": "Patient testimonial",
+        "image": "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=700&q=85"
+      },
+      {
+        "id": "story-2",
+        "quote": "We have been blessed with twin boys and have all praises for Dr Mona.",
+        "initials": "AS",
+        "author": "Anjali & Shivam",
+        "type": "Patient testimonial",
+        "image": "https://images.unsplash.com/photo-1476703993599-0035a21b17a9?auto=format&fit=crop&w=700&q=85"
+      },
+      {
+        "id": "story-3",
+        "quote": "Thank You Dr. Mona for giving us a little one after 8 years.",
+        "initials": "MG",
+        "author": "Meena & Ganesh",
+        "type": "Patient testimonial",
+        "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=700&q=85"
+      },
+      {
+        "id": "story-4",
+        "quote": "After 6 failed cycles elsewhere, Dr. Mona's personalized protocol gave us our miracle baby girl.",
+        "initials": "SK",
+        "author": "Sunita & Karan",
+        "type": "Patient testimonial",
+        "image": "https://images.unsplash.com/photo-1492725764893-90b379c2b6e7?auto=format&fit=crop&w=700&q=85"
+      }
+    ]
+  },
+  "internationalPatients": {
+    "badge": "International Patients",
+    "titleLine1": "Travelling to India for IVF?",
+    "titleLine2": "We're Here",
+    "titleAccent": "for You",
+    "subtitle": "Send your records by email or WhatsApp, speak to Dr. Mona online, and plan your stay around the cycle dates.",
+    "image": "/images/international-patients-banner.jpg",
+    "cta": {
+      "label": "Join Us Today",
+      "href": "#contact"
+    },
+    "features": [
+      {
+        "id": "records",
+        "label": "Record review before travel",
+        "icon": "file",
+        "color": "pink"
+      },
+      {
+        "id": "video",
+        "label": "Video consultation",
+        "icon": "video",
+        "color": "blue"
+      },
+      {
+        "id": "travel",
+        "label": "Travel & stay guidance",
+        "icon": "bed",
+        "color": "green"
+      }
+    ],
+    "contacts": [
+      {
+        "id": "call",
+        "label": "Call Us",
+        "value": "+91 92679 82924",
+        "href": "tel:+919267982924",
+        "icon": "phone",
+        "color": "pink"
+      },
+      {
+        "id": "email",
+        "label": "E-mail Us",
+        "value": "info@drmonadahiya.com",
+        "href": "mailto:info@drmonadahiya.com",
+        "icon": "mail",
+        "color": "blue"
+      },
+      {
+        "id": "visit",
+        "label": "Visit Us",
+        "value": "Noida · Delhi · Ghaziabad",
+        "href": "#clinics",
+        "icon": "pin",
+        "color": "green"
+      }
+    ]
+  },
+  "latestBlog": {
+    "eyebrow": "LATEST BLOG",
+    "titlePrefix": "Guides",
+    "titleHighlight": "from the clinic",
+    "cta": {
+      "label": "View all articles",
+      "href": "#blog"
+    },
+    "articles": [
+      {
+        "id": "article-1",
+        "category": "Fertility",
+        "date": "2 Oct 2026",
+        "title": "Can You Work During IVF? A Practical Guide to Treatment-Day Planning",
+        "image": "https://images.unsplash.com/photo-1576091160550-2173dba07efd?auto=format&fit=crop&w=900&q=85",
+        "href": "#article-1"
+      },
+      {
+        "id": "article-2",
+        "category": "IUI",
+        "date": "2 Aug 2026",
+        "title": "IUI Specialist in Noida: Complete Guide to Intrauterine Insemination",
+        "image": "https://images.unsplash.com/photo-1579165466991-467135ad3110?auto=format&fit=crop&w=900&q=85",
+        "href": "#article-2"
+      },
+      {
+        "id": "article-3",
+        "category": "Infertility",
+        "date": "31 Jul 2026",
+        "title": "Know what secondary infertility is",
+        "image": "https://images.unsplash.com/photo-1666214280557-f1b5022eb634?auto=format&fit=crop&w=900&q=85",
+        "href": "#article-3"
+      }
+    ]
+  },
+  "bookAppointment": {
+    "eyebrow": "Book Your Appointment",
+    "titleLine1": "Consult the best IVF",
+    "titleAccent": "specialist in India",
+    "subtitle": "Leave your number and the clinic team will call to confirm a time with Dr. Mona.",
+    "image": "/images/book-appointment-bg.jpg",
+    "primaryCta": {
+      "label": "Book In-Clinic Consultation",
+      "href": "#book-appointment"
+    },
+    "secondaryCta": {
+      "label": "Schedule Online Consultation",
+      "href": "#book-appointment"
+    },
+    "pricing": [
+      {
+        "id": "indian",
+        "label": "Indian Nationals",
+        "price": "₹1,000",
+        "note": "Online consultation 30 minutes",
+        "icon": "users",
+        "tone": "pink"
+      },
+      {
+        "id": "foreign",
+        "label": "Foreign Patients",
+        "price": "US$25",
+        "note": "Online consultation 30 minutes",
+        "icon": "plane",
+        "tone": "blue"
+      }
+    ],
+    "contacts": [
+      {
+        "id": "phone",
+        "label": "Helpline",
+        "value": "+91 92679 82924",
+        "href": "tel:+919267982924",
+        "icon": "phone"
+      },
+      {
+        "id": "email",
+        "label": "Email",
+        "value": "info@drmonadahiya.com",
+        "href": "mailto:info@drmonadahiya.com",
+        "icon": "mail"
+      },
+      {
+        "id": "hours",
+        "label": "Hours",
+        "value": "Mon - Sat, 10:00 AM to 5:00 PM",
+        "href": null,
+        "icon": "clock"
+      }
+    ],
+    "form": {
+      "title": "Request an Appointment",
+      "subtitle": "Fill in your details and we will get back to you shortly.",
+      "submitLabel": "Request appointment",
+      "disclaimer": "Demo form. In production this posts to the booking system.",
+      "clinics": [
+        "Noida",
+        "Ghaziabad",
+        "Delhi"
+      ]
+    }
+  },
+  "footer": {
+    "brand": {
+      "name": "Dr. Mona Dahiya",
+      "tagline": "Fertility & IVF Specialist",
+      "description": "25+ years in reproductive medicine. Gold medalist fertility specialist helping couples across India and abroad with personalised IVF, IUI and advanced fertility care."
+    },
+    "image": "/images/footer-mother-baby.jpg",
+    "social": [
+      {
+        "id": "instagram",
+        "label": "Instagram",
+        "href": "#"
+      },
+      {
+        "id": "youtube",
+        "label": "YouTube",
+        "href": "#"
+      },
+      {
+        "id": "linkedin",
+        "label": "LinkedIn",
+        "href": "#"
+      },
+      {
+        "id": "facebook",
+        "label": "Facebook",
+        "href": "#"
+      }
+    ],
+    "contactBox": [
+      {
+        "id": "helpline",
+        "label": "Fertility Helpline",
+        "value": "+91 92679 82924 (8 AM – 8 PM)",
+        "href": "tel:+919267982924",
+        "icon": "phone"
+      },
+      {
+        "id": "email",
+        "label": "Official Inquiry",
+        "value": "info@drmonadahiya.com",
+        "href": "mailto:info@drmonadahiya.com",
+        "icon": "mail"
+      },
+      {
+        "id": "whatsapp",
+        "label": "WhatsApp",
+        "value": "WhatsApp Instant Assistance",
+        "href": "https://wa.me/919267982924",
+        "icon": "whatsapp"
+      },
+      {
+        "id": "about",
+        "label": "Profile",
+        "value": "About Dr. Mona Dahiya (Director)",
+        "href": "#profile",
+        "icon": "user"
+      },
+      {
+        "id": "compliance",
+        "label": "Compliance",
+        "value": "ICMR & ART Regulation Compliance",
+        "href": "#compliance",
+        "icon": "badge",
+        "isNew": true
+      }
+    ],
+    "noidaClinic": {
+      "title": "Noida Clinic",
+      "hub": "Noida Sector 49 Clinic Hub",
+      "address": "3rd Floor, K-06, above FirstCry, Baraula, Sector 49, Noida, Uttar Pradesh 201301"
+    },
+    "noidaTreatments": [
+      {
+        "label": "Best IUI Doctor in Noida",
+        "href": "#"
+      },
+      {
+        "label": "Best IVF Doctor in Noida",
+        "href": "#"
+      },
+      {
+        "label": "Female Infertility Specialist Noida",
+        "href": "#"
+      },
+      {
+        "label": "Male Infertility Specialist Noida",
+        "href": "#"
+      },
+      {
+        "label": "PCOS & PCOD Clinic Noida",
+        "href": "#"
+      },
+      {
+        "label": "Low AMH Treatment Noida",
+        "href": "#"
+      },
+      {
+        "label": "Egg Freezing in Noida",
+        "href": "#"
+      },
+      {
+        "label": "ICSI Treatment Noida",
+        "href": "#"
+      },
+      {
+        "label": "Blastocyst Transfer Noida",
+        "href": "#"
+      },
+      {
+        "label": "Fertility Preservation Noida",
+        "href": "#"
+      }
+    ],
+    "delhiGhaziabad": {
+      "title": "Delhi & Ghaziabad Clinics",
+      "centers": [
+        {
+          "name": "Lajpat Nagar (South Delhi) Center",
+          "address": "Building Number 41, First Floor, Ring Road, Block Q, Lajpat Nagar IV, New Delhi 110024",
+          "linkLabel": "Best IUI Doctor in Delhi",
+          "href": "#"
+        },
+        {
+          "name": "Rajnagar Ext. (Ghaziabad) Center",
+          "address": "2nd Floor, RDC, C-53A, near Bikanerwala, Sector 15, Raj Nagar, Ghaziabad, Uttar Pradesh 201002",
+          "linkLabel": "Best IUI Doctor in Ghaziabad",
+          "href": "#"
+        }
+      ]
+    },
+    "directory": [
+      {
+        "label": "All Locations",
+        "href": "#clinics"
+      }
+    ],
+    "clinicHours": "Clinics: Mon–Sat | 10:00 AM to 5:00 PM",
+    "guides": [
+      {
+        "label": "Fertility Blog",
+        "href": "#blog"
+      },
+      {
+        "label": "IVF Cost Breakdown",
+        "href": "#",
+        "isNew": true
+      },
+      {
+        "label": "Egg Freezing Guide",
+        "href": "#"
+      },
+      {
+        "label": "What to Do After Failed IVF",
+        "href": "#",
+        "isNew": true
+      },
+      {
+        "label": "Preparing for IUI",
+        "href": "#"
+      },
+      {
+        "label": "PCOS Fertility Tips",
+        "href": "#"
+      },
+      {
+        "label": "International Patient Guide",
+        "href": "#"
+      }
+    ],
+    "trust": [
+      {
+        "label": "Educational Hub",
+        "href": "#"
+      },
+      {
+        "label": "Legal & Accreditation",
+        "href": "#"
+      },
+      {
+        "label": "Privacy Policy",
+        "href": "#"
+      },
+      {
+        "label": "Terms of Medical Consultation",
+        "href": "#",
+        "isNew": true
+      },
+      {
+        "label": "Doctor Registration",
+        "href": "#"
+      }
+    ],
+    "copyright": "© 2026 Dr. Mona Dahiya. All Rights Reserved.",
+    "disclaimer": "Medical disclaimer: Information on this website is for educational purposes only and does not replace personalised medical advice from a qualified fertility specialist."
+  },
+  "parenthoodCta": {
+    "title": "Take your first step towards parenthood with",
+    "titleAccent": "Dr. Mona Dahiya",
+    "image": "/images/parenthood-cta-belly.jpg",
+    "book": {
+      "label": "Book Consultation",
+      "href": "#book-appointment"
+    },
+    "whatsapp": {
+      "label": "WhatsApp Us",
+      "href": "https://wa.me/919267982924"
+    },
+    "phone": {
+      "label": "+91 92679 82924",
+      "href": "tel:+919267982924"
+    }
+  }
+}

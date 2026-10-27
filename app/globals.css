@@ -1,26 +1,207 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-navy: #0a1d37;
+  --color-navy-deep: #061324;
+  --color-rose: #c53658;
+  --color-rose-dark: #a82e4a;
+  --color-rose-soft: #e8a0b4;
+  --color-teal: #006d6d;
+  --color-teal-dark: #005858;
+  --color-ink: #142033;
+  --color-muted: #64748b;
+  --font-sans: var(--font-manrope), "Segoe UI", sans-serif;
+  --font-display: var(--font-playfair), Georgia, serif;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-manrope), "Segoe UI", sans-serif;
+  --font-display: var(--font-playfair), Georgia, serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Dark left for copy, clear center so Hero-banner people + Times Network show */
+.hero-overlay {
+  background:
+    linear-gradient(
+      95deg,
+      rgba(4, 12, 28, 0.86) 0%,
+      rgba(5, 16, 36, 0.65) 26%,
+      rgba(6, 28, 58, 0.18) 48%,
+      transparent 60%,
+      transparent 74%,
+      rgba(5, 18, 40, 0.25) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(4, 12, 28, 0.22) 0%,
+      transparent 16%,
+      transparent 78%,
+      rgba(4, 12, 28, 0.4) 100%
+    );
+}
+
+.btn-rose {
+  background: #c44569;
+  color: #fff;
+  box-shadow: none;
+  transition: background 0.2s ease;
+}
+
+.btn-rose:hover {
+  background: #ad3a5a;
+}
+
+.btn-outline {
+  border: 1.5px solid #ffffff;
+  background: transparent;
+  color: #fff;
+  box-shadow: none;
+  transition: background 0.2s ease;
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.btn-teal {
+  background: var(--color-teal);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0, 109, 109, 0.28);
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn-teal:hover {
+  background: var(--color-teal-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(0, 109, 109, 0.35);
+}
+
+.field {
+  width: 100%;
+  border: 1px solid #d7dee8;
+  border-radius: 10px;
+  background: #fff;
+  padding: 0.72rem 0.85rem;
+  font-size: 13px;
+  color: var(--color-ink);
+  outline: none;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.field::placeholder {
+  color: #94a3b8;
+}
+
+.field:focus {
+  border-color: #7eb8b8;
+  box-shadow: 0 0 0 3px rgba(0, 109, 109, 0.12);
+}
+
+.field-group {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  width: 100%;
+  border: 1px solid #d7dee8;
+  border-radius: 10px;
+  background: #fff;
+  padding: 0.72rem 0.85rem;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.field-group:focus-within {
+  border-color: #7eb8b8;
+  box-shadow: 0 0 0 3px rgba(0, 109, 109, 0.12);
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-width: 0;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 14px;
+  background: rgba(8, 24, 48, 0.45);
+  padding: 1.05rem 0.9rem;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14);
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  background: rgba(8, 24, 48, 0.58);
+  border-color: rgba(255, 255, 255, 0.48);
+}
+
+.hero-fade-up {
+  animation: hero-fade-up 0.7s ease both;
+}
+
+.hero-copy > .hero-fade-up:nth-child(1) {
+  animation-delay: 0.05s;
+}
+.hero-copy > .hero-fade-up:nth-child(2) {
+  animation-delay: 0.12s;
+}
+.hero-copy > .hero-fade-up:nth-child(3) {
+  animation-delay: 0.18s;
+}
+.hero-copy > .hero-fade-up:nth-child(4) {
+  animation-delay: 0.24s;
+}
+.hero-copy > .hero-fade-up:nth-child(5) {
+  animation-delay: 0.3s;
+}
+.hero-copy > .hero-fade-up:nth-child(6) {
+  animation-delay: 0.4s;
+}
+
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-fade-up,
+  .btn-rose,
+  .btn-outline,
+  .btn-teal,
+  .stat-card {
+    animation: none !important;
+    transition: none !important;
+  }
 }
