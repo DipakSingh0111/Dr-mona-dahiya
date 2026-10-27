@@ -209,13 +209,43 @@ export default function MeetYourDoctor() {
   return (
     <section
       id="about"
-      className="relative overflow-visible bg-white px-3 pt-12 pb-16 sm:px-4 sm:pt-14 sm:pb-20 lg:pr-8 lg:pl-3 xl:pl-4"
+      className="relative overflow-hidden px-3 pt-12 pb-16 sm:px-4 sm:pt-14 sm:pb-20 lg:pr-8 lg:pl-3 xl:pl-4"
+      style={{
+        background:
+          "linear-gradient(165deg, #ffffff 0%, #fff8fb 28%, #fff5f9 55%, #ffffff 100%)",
+      }}
     >
-      <div className="mx-auto w-full max-w-[1400px]">
+      {/* Soft ambient fades */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -top-24 left-[-8%] h-[420px] w-[420px] rounded-full opacity-70 blur-3xl"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(255,210,228,0.55) 0%, rgba(255,232,240,0.2) 45%, transparent 70%)",
+        }}
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute top-[20%] right-[-6%] h-[380px] w-[380px] rounded-full opacity-60 blur-3xl"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(253,196,216,0.45) 0%, rgba(255,240,246,0.15) 50%, transparent 72%)",
+        }}
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute bottom-[-10%] left-[30%] h-[300px] w-[520px] rounded-full opacity-50 blur-3xl"
+        style={{
+          background:
+            "radial-gradient(ellipse, rgba(255,220,234,0.4) 0%, transparent 70%)",
+        }}
+      />
+
+      <div className="relative mx-auto w-full max-w-[1400px]">
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,1.08fr)_minmax(300px,0.95fr)_minmax(300px,1fr)] lg:gap-5 xl:gap-8">
           <Reveal variant="slideLeft" className="relative z-10 max-w-xl lg:max-w-none">
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#ffe8f0] px-3.5 py-1.5 text-[12px] font-semibold text-[#e83e74]">
-              <span className="size-1.5 rounded-full bg-[#e83e74]" />
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#f9c5d4]/60 bg-gradient-to-r from-[#ffe8f0] to-[#fff5f8] px-3.5 py-1.5 text-[12px] font-semibold text-[#e83e74] shadow-[0_4px_14px_rgba(232,62,116,0.08)]">
+              <span className="size-1.5 rounded-full bg-gradient-to-br from-[#f4729a] to-[#e83e74]" />
               {data.badge}
             </span>
 
@@ -224,7 +254,9 @@ export default function MeetYourDoctor() {
               <br />
               {data.titleLine2}
               <br />
-              <span className="text-[#e83e74]">{data.titleAccent}</span>
+              <span className="bg-gradient-to-r from-[#e83e74] via-[#f0518e] to-[#c53658] bg-clip-text text-transparent">
+                {data.titleAccent}
+              </span>
             </h2>
 
             <p className="mt-4 max-w-[470px] text-[13.5px] leading-relaxed text-[#64748b] sm:text-[14.5px]">
@@ -247,7 +279,7 @@ export default function MeetYourDoctor() {
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
               <a
                 href={data.primaryCta.href}
-                className="inline-flex items-center justify-center gap-2.5 rounded-full bg-[#e83e74] px-5 py-3 text-[13.5px] font-semibold text-white shadow-[0_10px_24px_rgba(232,62,116,0.25)] transition hover:bg-[#d13266]"
+                className="inline-flex items-center justify-center gap-2.5 rounded-full bg-gradient-to-r from-[#e83e74] via-[#f0518e] to-[#d13266] px-5 py-3 text-[13.5px] font-semibold text-white shadow-[0_10px_28px_rgba(232,62,116,0.32)] transition hover:brightness-105"
               >
                 {data.primaryCta.label}
                 <span className="flex size-6 items-center justify-center rounded-full bg-white text-[#e83e74]">
@@ -259,7 +291,7 @@ export default function MeetYourDoctor() {
                 href={data.secondaryCta.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2.5 rounded-full border border-[#e83e74] bg-white px-5 py-3 text-[13.5px] font-semibold text-[#e83e74] transition hover:bg-[#fff5f8]"
+                className="inline-flex items-center justify-center gap-2.5 rounded-full border border-[#f5a3bd] bg-gradient-to-r from-white to-[#fff5f8] px-5 py-3 text-[13.5px] font-semibold text-[#e83e74] shadow-[0_6px_18px_rgba(232,62,116,0.08)] transition hover:from-[#fff5f8] hover:to-[#ffe8f0]"
               >
                 <FaYoutube className="size-5 text-[#ff0033]" />
                 {data.secondaryCta.label}
@@ -269,26 +301,37 @@ export default function MeetYourDoctor() {
 
           <Reveal
             variant="scaleIn"
-            className="relative mx-auto flex h-[420px] w-full max-w-[380px] items-end justify-center sm:h-[480px] lg:h-[540px] lg:max-w-none"
+            className="relative mx-auto flex h-[420px] w-full max-w-[380px] items-end justify-center overflow-visible sm:h-[480px] lg:h-[540px] lg:max-w-none"
           >
+            {/* Solid soft pink circle — clearly visible behind cutout */}
             <div
               aria-hidden
-              className="pointer-events-none absolute top-[6%] left-1/2 z-0 aspect-square w-[94%] -translate-x-1/2 rounded-full"
+              className="pointer-events-none absolute top-[2%] left-1/2 z-0 aspect-square w-[96%] -translate-x-1/2 rounded-full"
               style={{
                 background:
-                  "radial-gradient(circle at 50% 45%, #f9c5d8 0%, #fbd5e5 40%, #feeaf2 65%, rgba(255,255,255,0) 76%)",
+                  "radial-gradient(circle at 50% 46%, #f7b7cd 0%, #f9c5d8 28%, #fbd5e5 52%, #feeaf2 70%, rgba(255,245,249,0.35) 82%, transparent 90%)",
               }}
             />
-
+            {/* Outer soft bloom */}
             <div
               aria-hidden
-              className="pointer-events-none absolute top-[8%] right-[4%] z-[1] size-[48%] rounded-full border-[2.5px] border-dashed border-[#f18aaa]/75"
+              className="pointer-events-none absolute top-[-2%] left-1/2 z-0 aspect-square w-[110%] -translate-x-1/2 rounded-full blur-2xl"
               style={{
-                clipPath: "polygon(20% 0%, 100% 0%, 100% 65%, 45% 50%)",
+                background:
+                  "radial-gradient(circle at 50% 48%, rgba(249,180,205,0.55) 0%, rgba(251,205,222,0.28) 40%, transparent 68%)",
               }}
             />
 
-            <div className="absolute top-[16%] right-[8%] z-[5] flex size-14 items-center justify-center rounded-full bg-white text-[#e83e74] shadow-[0_10px_26px_rgba(232,62,116,0.2)] ring-1 ring-[#fde2ec] sm:size-16">
+            {/* Dashed accent arc */}
+            <div
+              aria-hidden
+              className="pointer-events-none absolute top-[6%] right-[2%] z-[1] size-[52%] rounded-full border-[2.5px] border-dashed border-[#f18aaa]/80"
+              style={{
+                clipPath: "polygon(18% 0%, 100% 0%, 100% 62%, 42% 48%)",
+              }}
+            />
+
+            <div className="absolute top-[14%] right-[6%] z-[5] flex size-14 items-center justify-center rounded-full bg-white text-[#e83e74] shadow-[0_10px_28px_rgba(232,62,116,0.22)] ring-1 ring-[#fde2ec] sm:size-16">
               <FaStethoscope className="size-6 sm:size-7" />
             </div>
 
@@ -305,7 +348,11 @@ export default function MeetYourDoctor() {
 
             <div
               aria-hidden
-              className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-14 bg-gradient-to-t from-white via-white/80 to-transparent"
+              className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-16"
+              style={{
+                background:
+                  "linear-gradient(to top, #fff5f9 0%, rgba(255,248,251,0.75) 40%, transparent 100%)",
+              }}
             />
           </Reveal>
 
@@ -313,20 +360,28 @@ export default function MeetYourDoctor() {
             variant="slideRight"
             className="relative z-10 mx-auto w-full max-w-[440px] lg:mx-0 lg:max-w-none"
           >
-            <article className="rounded-[28px] border border-[#f7c9d8]/70 bg-[#fff5f8] p-6 shadow-[0_20px_48px_rgba(232,62,116,0.1)] sm:p-7 lg:p-8">
+            <article
+              className="rounded-[28px] border border-[#f7c9d8]/80 p-6 shadow-[0_20px_48px_rgba(232,62,116,0.12)] sm:p-7 lg:p-8"
+              style={{
+                background:
+                  "linear-gradient(160deg, #fff8fb 0%, #fff0f5 42%, #ffe8f0 100%)",
+              }}
+            >
               <p className="text-[13px] font-bold tracking-wide text-[#e11d60] sm:text-[14px]">
                 {card.eyebrow}
               </p>
               <h3 className="font-display mt-2 text-[2.2rem] leading-none font-bold sm:text-[2.45rem]">
                 <span className="text-[#0f2438]">{card.namePrefix}</span>{" "}
-                <span className="text-[#e11d60]">{card.name}</span>
+                <span className="bg-gradient-to-r from-[#e11d60] to-[#f0518e] bg-clip-text text-transparent">
+                  {card.name}
+                </span>
               </h3>
 
               <div className="mt-6 mb-1 flex items-center gap-3">
                 <span className="shrink-0 text-[11px] font-bold tracking-[0.14em] text-[#e11d60] uppercase sm:text-[12px]">
                   {card.sectionLabel}
                 </span>
-                <span className="h-px flex-1 bg-[#f0a8bc]/80" />
+                <span className="h-px flex-1 bg-gradient-to-r from-[#f0a8bc] to-transparent" />
               </div>
 
               <ul className="flex flex-col">

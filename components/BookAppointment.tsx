@@ -12,7 +12,9 @@ import {
   FaCalendarAlt,
   FaChevronDown,
   FaVideo,
+  FaDollarSign,
 } from "react-icons/fa";
+import { FaIndianRupeeSign } from "react-icons/fa6";
 import siteData from "@/data/site.json";
 import { Reveal, Stagger, StaggerItem } from "./Reveal";
 
@@ -112,8 +114,21 @@ export default function BookAppointment() {
                       <p className="text-[11px] font-bold tracking-[0.12em] text-zinc-500 uppercase">
                         {plan.label}
                       </p>
-                      <p className="mt-1 font-display text-[1.7rem] leading-none font-bold text-[#0f2438]">
-                        {plan.price}
+                      <p className="mt-1 inline-flex items-center gap-1 font-display text-[2.05rem] leading-none font-bold text-[#0f2438] sm:text-[2.2rem]">
+                        {plan.id === "foreign" ? (
+                          <>
+                            <span className="text-[1.05rem] font-bold tracking-wide sm:text-[1.15rem]">
+                              US
+                            </span>
+                            <FaDollarSign className="size-[0.82em] shrink-0" />
+                            <span>25</span>
+                          </>
+                        ) : (
+                          <>
+                            <FaIndianRupeeSign className="size-[0.82em] shrink-0" />
+                            <span>1,000</span>
+                          </>
+                        )}
                       </p>
                       <p className="mt-1.5 text-[12px] text-zinc-500">
                         {plan.note}

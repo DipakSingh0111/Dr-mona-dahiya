@@ -15,18 +15,21 @@ const accentMap = {
     ring: "ring-[#f0518e]/40",
     icon: "text-[#f0518e]",
     iconBg: "bg-[#f0518e]/15",
+    bloom: "rgba(240,81,142,0.55)",
   },
   purple: {
     glow: "from-[#2a1a3a]/80 via-[#1a2e28] to-[#0c241f]",
     ring: "ring-[#b57edc]/40",
     icon: "text-[#c9a0e8]",
     iconBg: "bg-[#b57edc]/15",
+    bloom: "rgba(200,140,230,0.5)",
   },
   teal: {
     glow: "from-[#12353a]/80 via-[#1a2e28] to-[#0c241f]",
     ring: "ring-[#3db8a8]/40",
     icon: "text-[#3db8a8]",
     iconBg: "bg-[#3db8a8]/15",
+    bloom: "rgba(61,184,168,0.48)",
   },
 } as const;
 
@@ -78,28 +81,62 @@ function NumberBadge({ value }: { value: string }) {
   );
 }
 
-function CircleArt({ accent }: { accent: keyof typeof accentMap }) {
-  const colors =
-    accent === "teal"
-      ? ["#3db8a8", "#1a6b62"]
-      : accent === "purple"
-        ? ["#c9a0e8", "#6b4fa8"]
-        : ["#f0518e", "#c53658"];
-
+/** Right-side art — matches reference: soft pink orb + feathered circular image */
+function CardArt({
+  src,
+  alt,
+  bloom,
+}: {
+  src: string;
+  alt: string;
+  bloom: string;
+}) {
   return (
-    <div className="relative size-[150px] shrink-0 sm:size-[170px]">
+    <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[56%] sm:block">
+      {/* Soft pink fade glow across right half */}
       <div
-        className="absolute inset-0 rounded-full opacity-80 blur-2xl"
-        style={{ background: colors[0] }}
-      />
-      <div
-        className="relative flex size-full items-center justify-center overflow-hidden rounded-full border border-white/10"
+        aria-hidden
+        className="absolute inset-0"
         style={{
-          background: `radial-gradient(circle at 35% 30%, ${colors[0]} 0%, ${colors[1]} 55%, #0c241f 100%)`,
+          background: `radial-gradient(ellipse 95% 85% at 92% 50%, ${bloom} 0%, rgba(240,81,142,0.22) 35%, rgba(240,81,142,0.06) 58%, transparent 75%)`,
+        }}
+      />
+
+      {/* Large soft translucent sphere behind art */}
+      <div
+        aria-hidden
+        className="absolute top-1/2 right-[-28%] aspect-square w-[130%] -translate-y-1/2 rounded-full"
+        style={{
+          background:
+            "radial-gradient(circle at 36% 48%, rgba(255,160,195,0.2) 0%, rgba(240,81,142,0.1) 40%, rgba(255,255,255,0.03) 58%, transparent 70%)",
+          boxShadow: "inset 0 0 0 1px rgba(255,200,220,0.16)",
+        }}
+      />
+
+      {/* Mid pink bloom */}
+      <div
+        aria-hidden
+        className="absolute top-1/2 right-[-6%] size-[78%] -translate-y-1/2 rounded-full blur-[40px]"
+        style={{ background: "rgba(240,81,142,0.55)" }}
+      />
+
+      {/* Feathered circular image — soft mask, no hard box */}
+      <div
+        className="absolute top-1/2 right-[-16%] aspect-square w-[95%] max-w-[340px] -translate-y-1/2"
+        style={{
+          WebkitMaskImage:
+            "radial-gradient(circle at 50% 50%, #000 42%, rgba(0,0,0,0.85) 58%, rgba(0,0,0,0.35) 72%, transparent 82%)",
+          maskImage:
+            "radial-gradient(circle at 50% 50%, #000 42%, rgba(0,0,0,0.85) 58%, rgba(0,0,0,0.35) 72%, transparent 82%)",
         }}
       >
-        <div className="size-[46%] rounded-full bg-white/15 ring-2 ring-white/25" />
-        <div className="absolute size-[22%] rounded-full bg-white/70 shadow-[0_0_24px_rgba(255,255,255,0.45)]" />
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          sizes="340px"
+          className="object-cover object-center"
+        />
       </div>
     </div>
   );
@@ -112,7 +149,6 @@ export default function FertilityPreservation() {
   return (
     <section className="relative overflow-hidden bg-[#0c241f] px-3 py-14 sm:px-4 sm:py-20 lg:pr-8 lg:pl-3 xl:pl-4">
       <div className="mx-auto w-full max-w-[1400px]">
-        {/* Header */}
         <Reveal>
           <header className="mx-auto mb-10 max-w-3xl text-center sm:mb-12">
             <div className="mb-4 flex items-center justify-center gap-3">
@@ -136,7 +172,6 @@ export default function FertilityPreservation() {
         </Reveal>
 
         <div className="grid grid-cols-1 items-stretch gap-5 lg:grid-cols-[minmax(280px,0.95fr)_minmax(0,1.35fr)] lg:gap-6">
-          {/* Left image */}
           <Reveal
             variant="slideLeft"
             className="relative min-h-[320px] overflow-hidden rounded-[22px] sm:min-h-[420px] lg:min-h-[480px]"
@@ -151,42 +186,49 @@ export default function FertilityPreservation() {
             />
           </Reveal>
 
-          {/* Accordion cards — first open by default; hover expands */}
           <Reveal variant="slideRight">
             <div
               className="flex h-auto min-h-[420px] flex-col gap-3 sm:min-h-[480px] lg:flex-row lg:gap-3"
               onMouseLeave={() => setActive(0)}
             >
-            {data.cards.map((card, index) => {
-              const isOpen = active === index;
-              const accent = (card.accent in accentMap
-                ? card.accent
-                : "pink") as keyof typeof accentMap;
-              const theme = accentMap[accent];
+              {data.cards.map((card, index) => {
+                const isOpen = active === index;
+                const accent = (card.accent in accentMap
+                  ? card.accent
+                  : "pink") as keyof typeof accentMap;
+                const theme = accentMap[accent];
+                const art = "art" in card ? String(card.art) : "";
 
-              return (
-                <div
-                  key={card.id}
-                  onMouseEnter={() => setActive(index)}
-                  onFocus={() => setActive(index)}
-                  onClick={() => setActive(index)}
-                  tabIndex={0}
-                  className={`group relative cursor-pointer overflow-hidden rounded-[20px] border border-white/10 bg-gradient-to-br transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] outline-none ${theme.glow} ${
-                    isOpen
-                      ? "min-h-[280px] flex-[1.15] lg:min-h-0 lg:flex-[3.4]"
-                      : "min-h-[72px] flex-none lg:min-w-[78px] lg:flex-[0.55]"
-                  }`}
-                >
-                  {/* Expanded */}
+                return (
                   <div
-                    className={`absolute inset-0 flex flex-col justify-between p-5 sm:p-6 ${
+                    key={card.id}
+                    onMouseEnter={() => setActive(index)}
+                    onFocus={() => setActive(index)}
+                    onClick={() => setActive(index)}
+                    tabIndex={0}
+                    className={`group relative cursor-pointer overflow-hidden rounded-[20px] border border-white/10 bg-gradient-to-br transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] outline-none ${theme.glow} ${
                       isOpen
-                        ? "pointer-events-auto opacity-100 delay-75"
-                        : "pointer-events-none opacity-0"
-                    } transition-opacity duration-300`}
+                        ? "min-h-[280px] flex-[1.15] lg:min-h-0 lg:flex-[3.6]"
+                        : "min-h-[72px] flex-none lg:min-w-[78px] lg:flex-[0.5]"
+                    }`}
                   >
-                    <div className="flex h-full gap-3">
-                      <div className="flex min-w-0 flex-1 flex-col">
+                    {/* Expanded */}
+                    <div
+                      className={`absolute inset-0 ${
+                        isOpen
+                          ? "pointer-events-auto opacity-100 delay-75"
+                          : "pointer-events-none opacity-0"
+                      } transition-opacity duration-300`}
+                    >
+                      {art ? (
+                        <CardArt
+                          src={art}
+                          alt={card.title}
+                          bloom={theme.bloom}
+                        />
+                      ) : null}
+
+                      <div className="relative z-10 flex h-full max-w-[54%] flex-col p-5 sm:max-w-[50%] sm:p-6 lg:max-w-[48%]">
                         <NumberBadge value={card.number} />
                         <h3 className="font-display mt-4 text-[1.55rem] leading-tight font-bold text-white sm:text-[1.75rem]">
                           {card.title}
@@ -194,7 +236,7 @@ export default function FertilityPreservation() {
                         <p className="mt-1.5 text-[12.5px] text-white/55 sm:text-[13px]">
                           {card.subtitle}
                         </p>
-                        <div className="my-4 h-px w-16 bg-[#f0518e]/70" />
+                        <div className="my-4 h-px w-[72%] max-w-[200px] bg-gradient-to-r from-[#f0518e] to-transparent" />
                         <p className="text-[12.5px] leading-relaxed text-white/75 sm:text-[13.5px]">
                           {card.description}
                         </p>
@@ -208,38 +250,34 @@ export default function FertilityPreservation() {
                           </span>
                         </a>
                       </div>
-                      <div className="hidden items-center self-center sm:flex">
-                        <CircleArt accent={accent} />
-                      </div>
+                    </div>
+
+                    {/* Collapsed — vertical strip on desktop */}
+                    <div
+                      className={`absolute inset-0 flex items-center justify-between px-5 py-4 lg:flex-col lg:px-3 lg:py-5 ${
+                        isOpen
+                          ? "pointer-events-none opacity-0"
+                          : "opacity-100 delay-75"
+                      } transition-opacity duration-300`}
+                    >
+                      <span
+                        className={`flex size-11 items-center justify-center rounded-full ring-1 ${theme.iconBg} ${theme.icon} ${theme.ring}`}
+                      >
+                        <CardGlyph
+                          icon={card.icon as CardIcon}
+                          className="size-5"
+                        />
+                      </span>
+
+                      <span className="font-display text-[15px] font-semibold whitespace-nowrap text-white lg:origin-center lg:rotate-180 lg:[writing-mode:vertical-rl]">
+                        {card.title}
+                      </span>
+
+                      <NumberBadge value={card.number} />
                     </div>
                   </div>
-
-                  {/* Collapsed — vertical strip on desktop */}
-                  <div
-                    className={`absolute inset-0 flex items-center justify-between px-5 py-4 lg:flex-col lg:px-3 lg:py-5 ${
-                      isOpen
-                        ? "pointer-events-none opacity-0"
-                        : "opacity-100 delay-75"
-                    } transition-opacity duration-300`}
-                  >
-                    <span
-                      className={`flex size-11 items-center justify-center rounded-full ring-1 ${theme.iconBg} ${theme.icon} ${theme.ring}`}
-                    >
-                      <CardGlyph
-                        icon={card.icon as CardIcon}
-                        className="size-5"
-                      />
-                    </span>
-
-                    <span className="font-display text-[15px] font-semibold whitespace-nowrap text-white lg:origin-center lg:rotate-180 lg:[writing-mode:vertical-rl]">
-                      {card.title}
-                    </span>
-
-                    <NumberBadge value={card.number} />
-                  </div>
-                </div>
-              );
-            })}
+                );
+              })}
             </div>
           </Reveal>
         </div>

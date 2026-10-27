@@ -81,7 +81,7 @@
     }
   },
   "hero": {
-    "backgroundImage": "/images/BlueStage.png",
+    "backgroundImage": "/images/HeroBanner.jpeg",
     "eyebrow": "Top Rated Fertility Specialist in India",
     "title": "Dr. Mona Dahiya",
     "subtitle": "Pioneering IVF centre of India since 1993",
@@ -478,7 +478,7 @@
       "label": "Watch Dr. Mona Dahiya",
       "href": "https://www.youtube.com/@drmonadahiya"
     },
-    "image": "/images/meet/doctor-portrait.jpg",
+    "image": "/images/meet/doctor-cutout.png",
     "card": {
       "eyebrow": "Consult Best IVF Specialist in India",
       "namePrefix": "Dr",
@@ -530,9 +530,10 @@
         "number": "01",
         "title": "Egg freezing",
         "subtitle": "Social and elective oocyte freezing",
-        "description": "Freeze your eggs when you are ready to pause the biological clock. We guide you through stimulation, retrieval and long-term storage with clear counselling at every step.",
+        "description": "Egg freezing helps preserve a woman's fertility by freezing and storing healthy eggs for future use. It is an option for women who wish to delay pregnancy due to personal, medical or professional reasons.",
         "icon": "egg",
-        "accent": "pink"
+        "accent": "pink",
+        "art": "/images/fertility/egg.jpg"
       },
       {
         "id": "sperm",
@@ -541,7 +542,8 @@
         "subtitle": "Secure male fertility for later",
         "description": "Preserve sperm before surgery, travel, medical treatment or when timing is uncertain. Samples are processed and stored under controlled laboratory conditions.",
         "icon": "sperm",
-        "accent": "pink"
+        "accent": "pink",
+        "art": "/images/fertility/sperm.jpg"
       },
       {
         "id": "embryo",
@@ -550,7 +552,8 @@
         "subtitle": "Bank embryos across cycles",
         "description": "Create and freeze embryos for future transfer. Ideal for couples planning treatment across multiple cycles or needing to pause between stages of care.",
         "icon": "embryo",
-        "accent": "purple"
+        "accent": "purple",
+        "art": "/images/fertility/embryo.jpg"
       },
       {
         "id": "onco",
@@ -559,7 +562,8 @@
         "subtitle": "Fertility care before cancer treatment",
         "description": "Urgent fertility preservation for patients starting chemotherapy or radiation. We coordinate quickly with your oncology team so options stay open.",
         "icon": "ribbon",
-        "accent": "teal"
+        "accent": "teal",
+        "art": "/images/fertility/onco.jpg"
       }
     ]
   },

@@ -1,74 +1,60 @@
 "use client";
 
-import React from "react";
 import siteData from "@/data/site.json";
 import { FaDna } from "react-icons/fa";
 import { FaUserLarge } from "react-icons/fa6";
 import { Reveal, Stagger, StaggerItem } from "./Reveal";
 
-// Exact Fertility Testing (twin swimming sperms)
-function SpermIcon() {
+function SpermIcon({ className }: { className?: string }) {
   return (
     <svg
       viewBox="0 0 64 64"
       fill="none"
-      stroke="#e83e74"
+      stroke="currentColor"
       strokeWidth="2.5"
       strokeLinecap="round"
       strokeLinejoin="round"
-      style={{ width: "34px", height: "34px" }}
+      className={className}
+      aria-hidden
     >
-      <circle cx="44" cy="20" r="6.5" stroke="#e83e74" strokeWidth="2.5" />
+      <circle cx="44" cy="20" r="6.5" />
       <path d="M38 23 C 30 28, 22 25, 14 36" />
-      <circle cx="28" cy="38" r="5.5" stroke="#e83e74" strokeWidth="2.5" />
+      <circle cx="28" cy="38" r="5.5" />
       <path d="M23 41 C 18 45, 12 43, 6 52" />
     </svg>
   );
 }
 
-// Exact Uterus / Reproductive preservation icon
-function UterusIcon() {
+function UterusIcon({ className }: { className?: string }) {
   return (
     <svg
       viewBox="0 0 64 64"
       fill="none"
-      stroke="#059669"
+      stroke="currentColor"
       strokeWidth="2.5"
       strokeLinecap="round"
       strokeLinejoin="round"
-      style={{ width: "34px", height: "34px" }}
+      className={className}
+      aria-hidden
     >
       <path d="M32 54 L32 36" />
       <path d="M24 32 C24 44, 40 44, 40 32 C40 23, 24 23, 24 32 Z" />
       <path d="M24 27 C17 19, 9 23, 13 34 C15 39, 20 37, 20 34" />
       <path d="M40 27 C47 19, 55 23, 51 34 C49 39, 44 37, 44 34" />
-      <circle cx="17" cy="35" r="3" fill="#059669" stroke="none" />
-      <circle cx="47" cy="35" r="3" fill="#059669" stroke="none" />
+      <circle cx="17" cy="35" r="3" fill="currentColor" stroke="none" />
+      <circle cx="47" cy="35" r="3" fill="currentColor" stroke="none" />
     </svg>
   );
 }
 
-// Female Avatar
 function FemaleAvatar() {
   return (
-    <div
-      style={{
-        width: "54px",
-        height: "54px",
-        borderRadius: "9999px",
-        background: "linear-gradient(145deg, #e11d48 0%, #be123c 100%)",
-        boxShadow: "0 6px 14px rgba(225,29,72,0.28)",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        flexShrink: 0,
-      }}
-    >
-      <svg viewBox="0 0 40 40" fill="#ffffff" style={{ width: "30px", height: "30px" }}>
+    <div className="flex size-[50px] shrink-0 items-center justify-center rounded-full bg-[#e83e74] shadow-[0_6px_14px_rgba(232,62,116,0.28)] sm:size-[54px]">
+      <svg viewBox="0 0 40 40" fill="#fff" className="size-7 sm:size-[30px]" aria-hidden>
         <circle cx="20" cy="13" r="5" />
         <path
           d="M14 11 C13 17, 15 21, 15 23 M26 11 C27 17, 25 21, 25 23"
-          stroke="#ffffff"
+          stroke="#fff"
           strokeWidth="1.8"
           strokeLinecap="round"
           fill="none"
@@ -79,340 +65,132 @@ function FemaleAvatar() {
   );
 }
 
-// Male Avatar using FaUserLarge
 function MaleAvatar() {
   return (
-    <div
-      style={{
-        width: "54px",
-        height: "54px",
-        borderRadius: "9999px",
-        background: "linear-gradient(145deg, #0284c7 0%, #0369a1 100%)",
-        boxShadow: "0 6px 14px rgba(2,132,199,0.28)",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        flexShrink: 0,
-      }}
-    >
-      <FaUserLarge style={{ width: "24px", height: "24px", color: "#ffffff" }} />
+    <div className="flex size-[50px] shrink-0 items-center justify-center rounded-full bg-[#0284c7] shadow-[0_6px_14px_rgba(2,132,199,0.28)] sm:size-[54px]">
+      <FaUserLarge className="size-5 text-white sm:size-6" />
     </div>
   );
 }
+
+const topThemes = {
+  rose: {
+    card: "border-[#f9c5d4] bg-[#fff5f7]",
+    iconBg: "bg-[#ffe4ec] text-[#e83e74]",
+  },
+  blue: {
+    card: "border-[#b8dbf8] bg-[#f0f7ff]",
+    iconBg: "bg-[#dbeafe] text-[#0284c7]",
+  },
+  green: {
+    card: "border-[#b7ebc8] bg-[#f1f9f5]",
+    iconBg: "bg-[#dcfce7] text-[#059669]",
+  },
+} as const;
 
 export default function AdvancedServices() {
   const { eyebrow, topCards, womenConditions, menConditions } =
     siteData.advancedServices;
 
+  const icons = {
+    sperm: <SpermIcon className="size-[30px] sm:size-[34px]" />,
+    dna: <FaDna className="size-6 sm:size-[26px]" />,
+    uterus: <UterusIcon className="size-[30px] sm:size-[34px]" />,
+  } as const;
+
   return (
-    <section
-      style={{
-        backgroundColor: "#fcfdfe",
-        paddingTop: "50px",
-        paddingBottom: "76px",
-      }}
-      className="px-3 sm:px-4 lg:pr-8 lg:pl-3 xl:pl-4"
-    >
-      <div style={{ maxWidth: "1400px", margin: "0 auto", width: "100%" }}>
-        {/* Header Label: ADVANCED SERVICES */}
+    <section className="bg-white px-3 py-12 sm:px-4 sm:py-14 lg:pr-8 lg:pl-3 xl:pl-4">
+      <div className="mx-auto w-full max-w-[1400px]">
         <Reveal>
-          <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "24px" }}>
-            <span
-              style={{
-                fontSize: "13px",
-                fontWeight: 800,
-                letterSpacing: "0.14em",
-                color: "#e11d48",
-                textTransform: "uppercase",
-              }}
-            >
+          <div className="mb-6 flex items-center gap-2.5">
+            <span className="text-[12px] font-extrabold tracking-[0.14em] text-[#e11d48] uppercase sm:text-[13px]">
               {eyebrow}
             </span>
-            <span
-              style={{
-                width: "44px",
-                height: "2.5px",
-                backgroundColor: "#e11d48",
-                borderRadius: "9999px",
-              }}
-            />
+            <span className="h-[2.5px] w-10 rounded-full bg-[#e11d48] sm:w-11" />
           </div>
         </Reveal>
 
-        {/* Top 3 Cards Grid */}
-        <Stagger className="mb-6 grid grid-cols-1 gap-5 md:grid-cols-3 lg:gap-6" stagger={0.1}>
-          {/* Card 1: Fertility Testing */}
-          <StaggerItem variant="scaleIn">
-          <div
-            style={{
-              background: "linear-gradient(135deg, #fff5f8 0%, #ffffff 55%, #fff0f5 100%)",
-              border: "1.5px solid #fecdd3",
-              borderRadius: "24px",
-              padding: "20px 22px",
-              display: "flex",
-              alignItems: "center",
-              gap: "16px",
-              boxShadow: "0 4px 16px rgba(225,29,72,0.05)",
-            }}
-          >
-            <div
-              style={{
-                width: "58px",
-                height: "58px",
-                borderRadius: "9999px",
-                backgroundColor: "#ffe4e6",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                flexShrink: 0,
-              }}
-            >
-              <SpermIcon />
-            </div>
-            <div>
-              <h3
-                style={{
-                  fontFamily: "var(--font-playfair), Georgia, serif",
-                  fontSize: "19px",
-                  fontWeight: 700,
-                  color: "#0f2038",
-                  margin: 0,
-                  lineHeight: 1.25,
-                }}
-              >
-                {topCards[0].title}
-              </h3>
-              <p
-                style={{
-                  fontSize: "13px",
-                  lineHeight: 1.5,
-                  color: "#64748b",
-                  margin: "6px 0 0 0",
-                }}
-              >
-                {topCards[0].description}
-              </p>
-            </div>
-          </div>
-          </StaggerItem>
+        {/* Top 3 service cards */}
+        <Stagger
+          className="mb-5 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-5"
+          stagger={0.1}
+        >
+          {topCards.map((card) => {
+            const theme =
+              topThemes[card.theme as keyof typeof topThemes] ?? topThemes.rose;
+            const icon = icons[card.icon as keyof typeof icons];
 
-          {/* Card 2: Genetic Testing */}
-          <StaggerItem variant="scaleIn">
-          <div
-            style={{
-              background: "linear-gradient(135deg, #f0f9ff 0%, #ffffff 55%, #e0f2fe 100%)",
-              border: "1.5px solid #bae6fd",
-              borderRadius: "24px",
-              padding: "20px 22px",
-              display: "flex",
-              alignItems: "center",
-              gap: "16px",
-              boxShadow: "0 4px 16px rgba(2,132,199,0.05)",
-            }}
-          >
-            <div
-              style={{
-                width: "58px",
-                height: "58px",
-                borderRadius: "9999px",
-                backgroundColor: "#e0f2fe",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                flexShrink: 0,
-              }}
-            >
-              <FaDna style={{ width: "26px", height: "26px", color: "#0284c7" }} />
-            </div>
-            <div>
-              <h3
-                style={{
-                  fontFamily: "var(--font-playfair), Georgia, serif",
-                  fontSize: "19px",
-                  fontWeight: 700,
-                  color: "#0f2038",
-                  margin: 0,
-                  lineHeight: 1.25,
-                }}
-              >
-                {topCards[1].title}
-              </h3>
-              <p
-                style={{
-                  fontSize: "13px",
-                  lineHeight: 1.5,
-                  color: "#64748b",
-                  margin: "6px 0 0 0",
-                }}
-              >
-                {topCards[1].description}
-              </p>
-            </div>
-          </div>
-          </StaggerItem>
-
-          {/* Card 3: Fertility Preservation */}
-          <StaggerItem variant="scaleIn">
-          <div
-            style={{
-              background: "linear-gradient(135deg, #f0fdf4 0%, #ffffff 55%, #dcfce7 100%)",
-              border: "1.5px solid #bbf7d0",
-              borderRadius: "24px",
-              padding: "20px 22px",
-              display: "flex",
-              alignItems: "center",
-              gap: "16px",
-              boxShadow: "0 4px 16px rgba(5,150,105,0.05)",
-            }}
-          >
-            <div
-              style={{
-                width: "58px",
-                height: "58px",
-                borderRadius: "9999px",
-                backgroundColor: "#dcfce7",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                flexShrink: 0,
-              }}
-            >
-              <UterusIcon />
-            </div>
-            <div>
-              <h3
-                style={{
-                  fontFamily: "var(--font-playfair), Georgia, serif",
-                  fontSize: "19px",
-                  fontWeight: 700,
-                  color: "#0f2038",
-                  margin: 0,
-                  lineHeight: 1.25,
-                }}
-              >
-                {topCards[2].title}
-              </h3>
-              <p
-                style={{
-                  fontSize: "13px",
-                  lineHeight: 1.5,
-                  color: "#64748b",
-                  margin: "6px 0 0 0",
-                }}
-              >
-                Diverse options to preserve fertility{" "}
-                <span style={{ textDecoration: "underline", textUnderlineOffset: "3px" }}>
-                  for future dreams
-                </span>{" "}
-                under life&apos;s uncertainties.
-              </p>
-            </div>
-          </div>
-          </StaggerItem>
+            return (
+              <StaggerItem key={card.id} variant="scaleIn">
+                <article
+                  className={`flex h-full items-center gap-4 rounded-[18px] border px-5 py-5 sm:gap-[18px] sm:rounded-[20px] sm:px-6 sm:py-[22px] ${theme.card}`}
+                >
+                  <div
+                    className={`flex size-[54px] shrink-0 items-center justify-center rounded-full sm:size-[58px] ${theme.iconBg}`}
+                  >
+                    {icon}
+                  </div>
+                  <div className="min-w-0">
+                    <h3 className="font-display text-[17px] leading-snug font-bold tracking-tight text-[#0f2038] sm:text-[19px]">
+                      {card.title}
+                    </h3>
+                    <p className="mt-1.5 text-[12.5px] leading-relaxed text-[#64748b] sm:text-[13px]">
+                      {card.description}
+                    </p>
+                  </div>
+                </article>
+              </StaggerItem>
+            );
+          })}
         </Stagger>
 
-        {/* Bottom 2 Large Condition Cards (Side by side on desktop) */}
-        <Stagger className="grid grid-cols-1 gap-5 lg:grid-cols-2 lg:gap-6" stagger={0.12}>
-          {/* Women Card */}
+        {/* Bottom conditions — women slightly wider like reference */}
+        <Stagger
+          className="grid grid-cols-1 gap-4 lg:grid-cols-[1.18fr_0.82fr] lg:gap-5"
+          stagger={0.12}
+        >
           <StaggerItem variant="slideLeft">
-          <div
-            style={{
-              background: "linear-gradient(135deg, #fff5f8 0%, #ffffff 40%, #ffeef3 100%)",
-              border: "1.5px solid #fecdd3",
-              borderRadius: "26px",
-              padding: "26px 30px",
-              boxShadow: "0 6px 20px rgba(225,29,72,0.05)",
-            }}
-          >
-            <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "20px" }}>
-              <FemaleAvatar />
-              <h3
-                style={{
-                  fontFamily: "var(--font-playfair), Georgia, serif",
-                  fontSize: "22px",
-                  fontWeight: 700,
-                  color: "#0f2038",
-                  margin: 0,
-                  letterSpacing: "-0.01em",
-                }}
-              >
-                {womenConditions.title}
-              </h3>
-            </div>
+            <article className="h-full rounded-[20px] border border-[#f9c5d4] bg-[#fff8fa] px-5 py-6 sm:rounded-[22px] sm:px-7 sm:py-7">
+              <div className="mb-5 flex items-center gap-3.5 sm:gap-4">
+                <FemaleAvatar />
+                <h3 className="font-display text-[1.15rem] leading-snug font-bold tracking-tight text-[#0f2038] sm:text-[1.35rem]">
+                  {womenConditions.title}
+                </h3>
+              </div>
 
-            {/* Pill Tags */}
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
-              {womenConditions.tags.map((tag) => (
-                <span
-                  key={tag}
-                  style={{
-                    backgroundColor: "#ffffff",
-                    border: "1.5px solid #fecdd3",
-                    color: "#1e293b",
-                    padding: "8px 18px",
-                    borderRadius: "9999px",
-                    fontSize: "13.5px",
-                    fontWeight: 600,
-                    boxShadow: "0 2px 6px rgba(225,29,72,0.05)",
-                    display: "inline-block",
-                  }}
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </div>
+              <div className="flex flex-wrap gap-2.5 sm:gap-3">
+                {womenConditions.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="inline-flex rounded-full border border-[#f5b8cb] bg-[#fff0f4] px-3.5 py-2 text-[12.5px] font-semibold text-[#0f2038] sm:px-4 sm:py-2.5 sm:text-[13.5px]"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </article>
           </StaggerItem>
 
-          {/* Men Card */}
           <StaggerItem variant="slideRight">
-          <div
-            style={{
-              background: "linear-gradient(135deg, #f0f9ff 0%, #ffffff 40%, #e0f2fe 100%)",
-              border: "1.5px solid #bae6fd",
-              borderRadius: "26px",
-              padding: "26px 30px",
-              boxShadow: "0 6px 20px rgba(2,132,199,0.05)",
-            }}
-          >
-            <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "20px" }}>
-              <MaleAvatar />
-              <h3
-                style={{
-                  fontFamily: "var(--font-playfair), Georgia, serif",
-                  fontSize: "22px",
-                  fontWeight: 700,
-                  color: "#0f2038",
-                  margin: 0,
-                  letterSpacing: "-0.01em",
-                }}
-              >
-                {menConditions.title}
-              </h3>
-            </div>
+            <article className="h-full rounded-[20px] border border-[#b8dbf8] bg-[#f5faff] px-5 py-6 sm:rounded-[22px] sm:px-7 sm:py-7">
+              <div className="mb-5 flex items-center gap-3.5 sm:gap-4">
+                <MaleAvatar />
+                <h3 className="font-display text-[1.15rem] leading-snug font-bold tracking-tight text-[#0f2038] sm:text-[1.35rem]">
+                  {menConditions.title}
+                </h3>
+              </div>
 
-            {/* Pill Tags */}
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
-              {menConditions.tags.map((tag) => (
-                <span
-                  key={tag}
-                  style={{
-                    backgroundColor: "#ffffff",
-                    border: "1.5px solid #bae6fd",
-                    color: "#1e293b",
-                    padding: "8px 18px",
-                    borderRadius: "9999px",
-                    fontSize: "13.5px",
-                    fontWeight: 600,
-                    boxShadow: "0 2px 6px rgba(2,132,199,0.05)",
-                    display: "inline-block",
-                  }}
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </div>
+              <div className="flex flex-wrap gap-2.5 sm:gap-3">
+                {menConditions.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="inline-flex rounded-full border border-[#a8d4f5] bg-[#eef6ff] px-3.5 py-2 text-[12.5px] font-semibold text-[#0f2038] sm:px-4 sm:py-2.5 sm:text-[13.5px]"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </article>
           </StaggerItem>
         </Stagger>
       </div>
