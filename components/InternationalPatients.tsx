@@ -66,7 +66,7 @@ export default function InternationalPatients() {
   const data = siteData.internationalPatients;
 
   return (
-    <section className="relative overflow-hidden bg-white px-3 py-12 sm:px-4 sm:py-16 lg:pr-8 lg:pl-3 xl:pl-4">
+    <section className="relative overflow-hidden bg-white px-3 py-6 sm:px-4 sm:py-7 lg:pr-8 lg:pl-3 lg:py-8 xl:pl-4">
       <div className="mx-auto w-full max-w-[1400px]">
         <div className="relative isolate overflow-hidden rounded-[26px] bg-[#0c1833] sm:rounded-[32px] shadow-xl">
           {/* Full Card Width Background Image */}

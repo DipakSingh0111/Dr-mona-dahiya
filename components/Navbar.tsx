@@ -72,7 +72,7 @@ export default function Navbar() {
       {open ? (
         <div
           id="mobile-menu"
-          className="border-t border-white/10 bg-[rgba(8,33,73,0.96)] px-4 py-4 backdrop-blur-md xl:hidden"
+          className="border-t border-white/10 bg-[rgba(8,33,73,0.96)] px-4 py-4 backdrop-blur-md lg:hidden"
         >
           <nav className="flex flex-col gap-0.5" aria-label="Mobile">
             {menu.map((item) => (

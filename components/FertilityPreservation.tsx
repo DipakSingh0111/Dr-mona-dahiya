@@ -147,10 +147,10 @@ export default function FertilityPreservation() {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="relative overflow-hidden bg-[#0c241f] px-3 py-14 sm:px-4 sm:py-20 lg:pr-8 lg:pl-3 xl:pl-4">
+    <section className="relative overflow-hidden bg-[#0c241f] px-3 py-6 sm:px-4 sm:py-7 lg:pr-8 lg:pl-3 lg:py-8 xl:pl-4">
       <div className="mx-auto w-full max-w-[1400px]">
         <Reveal>
-          <header className="mx-auto mb-10 max-w-3xl text-center sm:mb-12">
+          <header className="mx-auto mb-6 max-w-3xl text-center sm:mb-8">
             <div className="mb-4 flex items-center justify-center gap-3">
               <span className="h-px w-10 bg-[#f0518e] sm:w-14" />
               <span className="text-[11px] font-semibold tracking-[0.22em] text-[#f0518e] uppercase sm:text-xs">
@@ -174,7 +174,7 @@ export default function FertilityPreservation() {
         <div className="grid grid-cols-1 items-stretch gap-5 lg:grid-cols-[minmax(280px,0.95fr)_minmax(0,1.35fr)] lg:gap-6">
           <Reveal
             variant="slideLeft"
-            className="relative min-h-[320px] overflow-hidden rounded-[22px] sm:min-h-[420px] lg:min-h-[480px]"
+            className="relative min-h-[260px] overflow-hidden rounded-[22px] sm:min-h-[380px] lg:min-h-[480px]"
           >
             <Image
               src={data.image}
@@ -188,7 +188,7 @@ export default function FertilityPreservation() {
 
           <Reveal variant="slideRight">
             <div
-              className="flex h-auto min-h-[420px] flex-col gap-3 sm:min-h-[480px] lg:flex-row lg:gap-3"
+              className="flex h-auto min-h-[360px] flex-col gap-3 sm:min-h-[440px] lg:min-h-[480px] lg:flex-row lg:gap-3"
               onMouseLeave={() => setActive(0)}
             >
               {data.cards.map((card, index) => {

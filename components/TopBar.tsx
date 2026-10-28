@@ -36,16 +36,18 @@ export default function TopBar() {
   const Phone = iconMap.phone;
 
   return (
-    <div className="relative z-50 bg-transparent text-[13px] text-white/85 sm:text-[13.5px]">
-      <div className="mx-auto flex h-10 max-w-[1440px] items-center justify-between gap-4 px-4 sm:h-11 sm:px-6 lg:px-8">
-        <div className="flex items-center gap-4 sm:gap-5">
-          {locations.map((location) => (
+    <div className="relative z-50 bg-transparent text-[12px] text-white/85 sm:text-[13.5px]">
+      <div className="mx-auto flex h-9 max-w-[1440px] items-center justify-between gap-2 px-3 sm:h-11 sm:gap-4 sm:px-6 lg:px-8">
+        <div className="flex min-w-0 items-center gap-2.5 sm:gap-5">
+          {locations.map((location, index) => (
             <a
               key={location.label}
               href={location.href}
-              className="inline-flex items-center gap-1.5 transition-colors hover:text-white"
+              className={`inline-flex shrink-0 items-center gap-1 transition-colors hover:text-white sm:gap-1.5 ${
+                index === 2 ? "max-[390px]:hidden" : ""
+              }`}
             >
-              <Pin className="size-3.5 opacity-80 sm:size-4" />
+              <Pin className="size-3 opacity-80 sm:size-4" />
               <span>{location.label}</span>
             </a>
           ))}
@@ -59,10 +61,10 @@ export default function TopBar() {
 
         <a
           href="tel:+919267982924"
-          className="inline-flex items-center gap-1.5 font-medium text-white/90 md:hidden"
+          className="inline-flex shrink-0 items-center gap-1 whitespace-nowrap font-medium text-white/90 sm:gap-1.5 md:hidden"
         >
-          <Phone className="size-3.5 opacity-80" />
-          <span>+91 92679 82924</span>
+          <Phone className="size-3 opacity-80 sm:size-3.5" />
+          <span className="tabular-nums">+91 92679 82924</span>
         </a>
       </div>
     </div>

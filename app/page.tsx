@@ -21,7 +21,7 @@ import { Reveal } from "@/components/Reveal";
 
 export default function Home() {
   return (
-    <main className="flex min-h-full flex-col">
+    <main className="flex min-h-screen flex-col">
       <div className="relative isolate overflow-hidden bg-[#0047ca]">
         <div className="absolute inset-x-0 top-0 z-50">
           <TopBar />
@@ -46,9 +46,8 @@ export default function Home() {
         <AdvancedServices />
       </Reveal>
 
-      <Reveal>
-        <HowItWorks />
-      </Reveal>
+      {/* No Reveal transform wrapper — sticky card stack needs it */}
+      <HowItWorks />
 
       <Reveal>
         <MeetYourDoctor />

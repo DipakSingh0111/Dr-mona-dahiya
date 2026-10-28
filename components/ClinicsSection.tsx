@@ -11,7 +11,7 @@ export default function ClinicsSection() {
     siteData.clinicsSection;
 
   return (
-    <section className="relative overflow-hidden bg-white px-3 pt-14 pb-20 sm:px-4 sm:pt-16 sm:pb-24 lg:pr-8 lg:pl-3 xl:pl-4">
+    <section className="relative overflow-hidden bg-white px-3 py-6 sm:px-4 sm:py-7 lg:pr-8 lg:pl-3 lg:py-8 xl:pl-4">
       <div
         aria-hidden
         className="pointer-events-none absolute -top-16 right-0 -z-10 h-[440px] w-[520px] rounded-full"
@@ -22,7 +22,7 @@ export default function ClinicsSection() {
       />
 
       <div className="mx-auto w-full max-w-[1400px]">
-        <div className="mb-10 flex flex-col justify-between gap-6 md:mb-12 md:flex-row md:items-end">
+        <div className="mb-6 flex flex-col justify-between gap-5 md:mb-8 md:flex-row md:items-end">
           <div>
             <div className="mb-3 flex items-center gap-3">
               <span className="h-[2px] w-8 rounded-full bg-[#e83e74]" />

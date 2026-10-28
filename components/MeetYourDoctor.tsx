@@ -209,7 +209,7 @@ export default function MeetYourDoctor() {
   return (
     <section
       id="about"
-      className="relative overflow-hidden px-3 pt-12 pb-16 sm:px-4 sm:pt-14 sm:pb-20 lg:pr-8 lg:pl-3 xl:pl-4"
+      className="relative overflow-hidden px-3 py-6 sm:px-4 sm:py-7 lg:pr-8 lg:pl-3 lg:py-8 xl:pl-4"
       style={{
         background:
           "linear-gradient(165deg, #ffffff 0%, #fff8fb 28%, #fff5f9 55%, #ffffff 100%)",

@@ -129,9 +129,9 @@ export default function MedicalRegistration() {
     siteData.medicalRegistration;
 
   return (
-    <section className="bg-white px-3 py-12 sm:px-4 sm:py-14 lg:pr-8 lg:pl-3 xl:pl-4">
+    <section className="bg-white px-3 py-6 sm:px-4 sm:py-7 lg:pr-8 lg:pl-3 lg:py-8 xl:pl-4">
       <div className="mx-auto w-full max-w-[1400px]">
-        <div className="mb-8 text-center md:mb-10">
+        <div className="mb-6 text-center md:mb-7">
           <div className="mb-3 inline-flex items-center justify-center gap-3">
             <span className="inline-block h-[2px] w-7 rounded-full bg-[#d93864]" />
             <span className="text-xs font-medium tracking-wide text-[#d93864] sm:text-sm">
@@ -140,7 +140,7 @@ export default function MedicalRegistration() {
             <span className="inline-block h-[2px] w-7 rounded-full bg-[#d93864]" />
           </div>
 
-          <h2 className="font-display text-3xl font-bold tracking-tight text-[#0f2438] sm:text-4xl md:text-5xl">
+          <h2 className="font-display text-2xl font-bold tracking-tight text-[#0f2438] sm:text-3xl md:text-4xl lg:text-5xl">
             <span>{title} </span>
             <span className="text-[#0e746e]">{titleAccent}</span>
           </h2>

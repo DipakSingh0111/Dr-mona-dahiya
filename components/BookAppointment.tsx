@@ -30,7 +30,7 @@ export default function BookAppointment() {
   return (
     <section
       id="book-appointment"
-      className="relative overflow-hidden px-3 py-10 sm:px-4 sm:py-14 lg:pr-8 lg:pl-3 xl:pl-4"
+      className="relative overflow-hidden px-3 py-6 sm:px-4 sm:py-7 lg:pr-8 lg:pl-3 lg:py-8 xl:pl-4"
     >
       <div className="relative mx-auto w-full max-w-[1400px] overflow-hidden rounded-[28px] min-h-[640px] sm:min-h-[680px]">
         {/* Background couple photo — visible on right like reference */}

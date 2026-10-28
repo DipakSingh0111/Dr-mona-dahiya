@@ -145,7 +145,7 @@ export default function WhyChooseUs() {
   return (
     <section
       id="why-choose"
-      className="relative isolate overflow-hidden bg-white px-3 pt-12 pb-20 sm:px-4 sm:pt-16 sm:pb-24 lg:pr-8 lg:pl-3 xl:pl-4"
+      className="relative isolate overflow-hidden bg-white px-3 py-6 sm:px-4 sm:py-7 lg:pr-8 lg:pl-3 lg:py-8 xl:pl-4"
     >
       <div
         aria-hidden
@@ -157,7 +157,7 @@ export default function WhyChooseUs() {
       />
 
       <div className="mx-auto w-full max-w-[1400px]">
-        <header className="mb-12 text-center sm:mb-14">
+        <header className="mb-7 text-center sm:mb-9">
           <div className="mb-3.5 inline-flex items-center justify-center gap-3">
             <span className="h-[2px] w-8 rounded-full bg-[#e83e74]" />
             <span className="inline-flex items-center gap-2 rounded-full bg-[#fff0f5] px-4 py-1.5 text-xs font-semibold text-[#e83e74] sm:text-sm">
@@ -188,7 +188,7 @@ export default function WhyChooseUs() {
           {/* Center doctor + pink halo + orbit icons */}
           <Reveal
             variant="scaleIn"
-            className="relative order-first mx-auto flex h-[500px] w-full max-w-[460px] items-end justify-center overflow-visible sm:h-[560px] lg:order-none lg:h-[600px]"
+            className="relative order-first mx-auto flex h-[420px] w-full max-w-[460px] items-end justify-center overflow-visible sm:h-[520px] lg:order-none lg:h-[600px]"
           >
             {/* Soft pink circle aura */}
             <div
@@ -210,7 +210,7 @@ export default function WhyChooseUs() {
             {ORBIT_ICONS.map((icon) => (
               <div
                 key={icon.src}
-                className={`absolute z-20 size-[72px] sm:size-[84px] ${icon.className}`}
+                className={`absolute z-20 size-[58px] sm:size-[72px] lg:size-[84px] ${icon.className}`}
               >
                 <div className="relative size-full overflow-hidden rounded-full bg-white shadow-[0_10px_28px_rgba(232,62,116,0.22)] ring-2 ring-white">
                   <Image

@@ -99,7 +99,7 @@ export default function AdvancedServices() {
   } as const;
 
   return (
-    <section className="bg-white px-3 py-12 sm:px-4 sm:py-14 lg:pr-8 lg:pl-3 xl:pl-4">
+    <section className="bg-white px-3 py-6 sm:px-4 sm:py-7 lg:pr-8 lg:pl-3 lg:py-8 xl:pl-4">
       <div className="mx-auto w-full max-w-[1400px]">
         <Reveal>
           <div className="mb-6 flex items-center gap-2.5">

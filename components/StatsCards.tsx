@@ -100,11 +100,11 @@ export default function StatsCards({ stats }: { stats: StatItem[] }) {
       <Stagger className="grid w-full grid-cols-2 gap-3 sm:gap-4" stagger={0.1}>
         {stats.map((stat) => (
           <StaggerItem key={stat.label} variant="scaleIn">
-            <div className="stat-tile rounded-2xl border border-white/20 bg-white/[0.04] px-5 py-4 backdrop-blur-[3px] transition-colors hover:border-white/35 sm:px-6 sm:py-5">
-              <p className="stat-value text-[2rem] leading-none font-bold tracking-tight text-white tabular-nums sm:text-[2.25rem]">
+            <div className="stat-tile rounded-2xl border border-white/20 bg-white/[0.04] px-3.5 py-3.5 backdrop-blur-[3px] transition-colors hover:border-white/35 sm:px-5 sm:py-4 lg:px-6 lg:py-5">
+              <p className="stat-value text-[1.7rem] leading-none font-bold tracking-tight text-white tabular-nums sm:text-[2rem] lg:text-[2.25rem]">
                 <StatValue stat={stat} active={active} />
               </p>
-              <p className="stat-label mt-2.5 text-[13px] leading-snug font-medium text-white/85 sm:text-[14px]">
+              <p className="stat-label mt-2 text-[12px] leading-snug font-medium text-white/85 sm:mt-2.5 sm:text-[13.5px]">
                 {stat.label}
               </p>
             </div>

@@ -10,7 +10,7 @@ export default function LatestBlog() {
     siteData.latestBlog;
 
   return (
-    <section className="relative overflow-hidden bg-white px-3 pt-14 pb-20 sm:px-4 sm:pt-16 sm:pb-24 lg:pr-8 lg:pl-3 xl:pl-4">
+    <section className="relative overflow-hidden bg-white px-3 py-6 sm:px-4 sm:py-7 lg:pr-8 lg:pl-3 lg:py-8 xl:pl-4">
       {/* Soft pink organic blobs — reference style */}
       <div
         aria-hidden
@@ -31,7 +31,7 @@ export default function LatestBlog() {
 
       <div className="mx-auto w-full max-w-[1400px]">
         {/* Header */}
-        <div className="mb-10 flex flex-col items-start justify-between gap-6 sm:mb-12 sm:flex-row sm:items-end">
+        <div className="mb-6 flex flex-col items-start justify-between gap-5 sm:mb-8 sm:flex-row sm:items-end">
           <div className="w-full text-center sm:max-w-xl sm:text-left">
             <div className="mb-3.5 flex items-center justify-center gap-3 sm:justify-start">
               <span className="h-px w-10 bg-[#e83e74] sm:w-12" />

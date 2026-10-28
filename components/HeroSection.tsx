@@ -64,7 +64,7 @@ export default function HeroSection() {
             <div className="hero-ctas flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-3.5">
               <a
                 href={primaryCta.href}
-                className="hero-cta inline-flex items-center justify-center gap-2.5 rounded-full bg-[#c54866] px-7 text-[13.5px] font-bold text-white whitespace-nowrap shadow-[0_10px_24px_rgba(197,72,102,0.35)] transition-all hover:bg-[#b03a55]"
+                className="hero-cta inline-flex items-center justify-center gap-2.5 rounded-full bg-[#c54866] px-5 text-[13px] font-bold text-white whitespace-nowrap shadow-[0_10px_24px_rgba(197,72,102,0.35)] transition-all hover:bg-[#b03a55] sm:px-7 sm:text-[13.5px]"
               >
                 <CalendarIcon className="size-4 shrink-0" />
                 {primaryCta.label}
@@ -73,7 +73,7 @@ export default function HeroSection() {
                 href={secondaryCta.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hero-cta inline-flex items-center justify-center gap-2.5 rounded-full border border-white/55 bg-transparent px-7 text-[13.5px] font-bold text-white whitespace-nowrap transition-all hover:bg-white/10"
+                className="hero-cta inline-flex items-center justify-center gap-2.5 rounded-full border border-white/55 bg-transparent px-5 text-[13px] font-bold text-white whitespace-nowrap transition-all hover:bg-white/10 sm:px-7 sm:text-[13.5px]"
               >
                 <span className="inline-flex size-5 items-center justify-center rounded-[3px] bg-[#e50914] text-white">
                   <PlayIcon className="size-2.5 fill-white text-white" />

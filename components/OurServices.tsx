@@ -112,10 +112,10 @@ export default function OurServices() {
   return (
     <section
       id="our-services"
-      className="relative overflow-hidden bg-[#f5f6f8] px-3 py-14 sm:px-4 sm:py-16 lg:pr-8 lg:pl-3 lg:py-20 xl:pl-4"
+      className="relative overflow-hidden bg-[#f5f6f8] px-3 py-6 sm:px-4 sm:py-7 lg:pr-8 lg:pl-3 lg:py-8 xl:pl-4"
     >
       <div className="mx-auto w-full max-w-[1400px]">
-        <div className="mb-10 max-w-3xl sm:mb-12">
+        <div className="mb-6 max-w-3xl sm:mb-8">
           <div className="mb-4 flex items-center gap-3">
             <span className="text-[12px] font-bold tracking-[0.16em] text-[#e83e74] uppercase sm:text-[13px]">
               {eyebrow}
@@ -157,7 +157,7 @@ export default function OurServices() {
               <article
                 className="group relative flex min-h-[260px] flex-col overflow-hidden rounded-[20px] bg-white p-5 shadow-[0_10px_30px_rgba(15,32,56,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(15,32,56,0.1)] sm:min-h-[280px] sm:p-6"
               >
-                <div className="relative z-10 flex flex-1 flex-col pr-[8.5rem] sm:pr-36">
+                <div className="relative z-10 flex flex-1 flex-col pr-28 sm:pr-32 md:pr-36">
                   <div
                     className="mb-4 inline-flex size-14 items-center justify-center rounded-full sm:size-[60px]"
                     style={{ backgroundColor: theme.bg, color: theme.color }}
@@ -199,7 +199,7 @@ export default function OurServices() {
 
                 {/* Clear illustration with light edge fade only */}
                 <div
-                  className="pointer-events-none absolute right-0 bottom-0 h-[175px] w-[175px] sm:h-[200px] sm:w-[200px]"
+                  className="pointer-events-none absolute right-0 bottom-0 h-[150px] w-[150px] sm:h-[180px] sm:w-[180px] lg:h-[200px] lg:w-[200px]"
                   style={{
                     WebkitMaskImage:
                       "radial-gradient(ellipse 80% 80% at 70% 70%, #000 45%, rgba(0,0,0,0.85) 62%, rgba(0,0,0,0.35) 78%, transparent 92%)",

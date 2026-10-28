@@ -20,10 +20,10 @@ export default function Affiliations() {
   const data = siteData.affiliations;
 
   return (
-    <section className="relative overflow-hidden bg-white px-3 py-14 sm:px-4 sm:py-20 lg:pr-8 lg:pl-3 xl:pl-4">
+    <section className="relative overflow-hidden bg-white px-3 py-6 sm:px-4 sm:py-7 lg:pr-8 lg:pl-3 lg:py-8 xl:pl-4">
       <div className="mx-auto w-full max-w-[1400px]">
         <Reveal>
-          <div className="mb-8 flex flex-col gap-4 sm:mb-10 lg:mb-12 lg:flex-row lg:items-end lg:justify-between">
+          <div className="mb-6 flex flex-col gap-3 sm:mb-7 lg:mb-8 lg:flex-row lg:items-end lg:justify-between">
             <div>
               <div className="mb-3.5 flex items-center gap-3">
                 <span className="h-px w-8 bg-[#e83e74] sm:w-10" />

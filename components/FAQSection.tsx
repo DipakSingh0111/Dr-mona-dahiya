@@ -78,7 +78,7 @@ function FaqCard({
               isOpen ? "opacity-100" : "opacity-0"
             }`}
           >
-            <p className="max-w-[540px] pl-[46px]">{item.answer}</p>
+            <p className="max-w-[540px] pl-0 sm:pl-[46px]">{item.answer}</p>
           </div>
         </div>
       </div>
@@ -99,7 +99,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="relative isolate overflow-hidden bg-white px-3 pt-14 pb-24 sm:px-4 sm:pt-16 sm:pb-28 lg:pr-8 lg:pl-3 xl:pl-4">
+    <section className="relative isolate overflow-hidden bg-white px-3 py-6 sm:px-4 sm:py-7 lg:pr-8 lg:pl-3 lg:py-8 xl:pl-4">
       <div
         aria-hidden
         className="pointer-events-none absolute -top-24 left-1/2 -z-10 h-[420px] w-[120%] -translate-x-1/2 rounded-full"
@@ -111,7 +111,7 @@ export default function FAQSection() {
 
       <div className="mx-auto w-full max-w-[1400px]">
         <Reveal>
-          <header className="mb-12 text-center sm:mb-16">
+          <header className="mb-7 text-center sm:mb-9">
             <h2 className="font-serif text-3xl font-bold tracking-tight text-[#0f2438] sm:text-4xl md:text-5xl lg:text-[52px]">
               <span>{titlePrefix} </span>
               <span className="text-[#e11d68]">{titleHighlight}</span>

@@ -223,10 +223,10 @@ export default function SuccessStories() {
   return (
     <section
       id="success-stories"
-      className="relative overflow-hidden bg-white px-3 pt-14 pb-20 sm:px-4 sm:pt-16 sm:pb-24 lg:pr-8 lg:pl-3 xl:pl-4"
+      className="relative overflow-hidden bg-white px-3 py-6 sm:px-4 sm:py-7 lg:pr-8 lg:pl-3 lg:py-8 xl:pl-4"
     >
       <div className="mx-auto w-full max-w-[1400px]">
-        <div className="mb-10 flex flex-col justify-between gap-8 lg:mb-12 lg:flex-row lg:items-start">
+        <div className="mb-6 flex flex-col justify-between gap-6 lg:mb-8 lg:flex-row lg:items-start">
           <Reveal variant="slideLeft" className="max-w-xl">
             <div className="mb-4 inline-flex items-center gap-3">
               <span className="h-px w-8 bg-[#e83e74] sm:w-10" />
@@ -297,7 +297,7 @@ export default function SuccessStories() {
 
         <Reveal variant="fadeUp" delay={0.1}>
         <div
-          className="relative mt-2 px-10 sm:px-12 lg:px-14"
+          className="relative mt-2 px-7 sm:px-10 lg:px-14"
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
         >
@@ -305,7 +305,7 @@ export default function SuccessStories() {
             type="button"
             onClick={handlePrev}
             aria-label="Previous testimonials"
-            className="absolute top-1/2 left-0 z-20 flex size-[44px] -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-[#e83e74] text-white shadow-[0_8px_22px_rgba(232,62,116,0.35)] transition-all duration-300 hover:scale-110 hover:bg-[#d13266] active:scale-95 sm:size-[48px]"
+            className="absolute top-1/2 left-0 z-20 flex size-[36px] -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-[#e83e74] text-white shadow-[0_8px_22px_rgba(232,62,116,0.35)] transition-all duration-300 hover:scale-110 hover:bg-[#d13266] active:scale-95 sm:size-[44px] lg:size-[48px]"
           >
             <FaChevronLeft className="size-3.5" />
           </button>
@@ -342,7 +342,7 @@ export default function SuccessStories() {
             type="button"
             onClick={handleNext}
             aria-label="Next testimonials"
-            className="absolute top-1/2 right-0 z-20 flex size-[44px] -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-[#e83e74] text-white shadow-[0_8px_22px_rgba(232,62,116,0.35)] transition-all duration-300 hover:scale-110 hover:bg-[#d13266] active:scale-95 sm:size-[48px]"
+            className="absolute top-1/2 right-0 z-20 flex size-[36px] -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-[#e83e74] text-white shadow-[0_8px_22px_rgba(232,62,116,0.35)] transition-all duration-300 hover:scale-110 hover:bg-[#d13266] active:scale-95 sm:size-[44px] lg:size-[48px]"
           >
             <FaChevronRight className="size-3.5" />
           </button>
