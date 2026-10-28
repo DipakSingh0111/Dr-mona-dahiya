@@ -13,7 +13,7 @@ import {
   FaDesktop,
 } from "react-icons/fa";
 import siteData from "@/data/site.json";
-import { Stagger, StaggerItem } from "./Reveal";
+import { Reveal, Stagger, StaggerItem } from "./Reveal";
 
 function UterusIcon({ className }: { className?: string }) {
   return (
@@ -115,35 +115,37 @@ export default function OurServices() {
       className="relative overflow-hidden bg-[#f5f6f8] px-3 py-6 sm:px-4 sm:py-7 lg:pr-8 lg:pl-3 lg:py-8 xl:pl-4"
     >
       <div className="mx-auto w-full max-w-[1400px]">
-        <div className="mb-6 max-w-3xl sm:mb-8">
-          <div className="mb-4 flex items-center gap-3">
-            <span className="text-[12px] font-bold tracking-[0.16em] text-[#e83e74] uppercase sm:text-[13px]">
-              {eyebrow}
-            </span>
-            <span className="h-[2px] w-10 rounded-full bg-[#e83e74]" />
+        <Reveal>
+          <div className="mb-6 max-w-3xl sm:mb-8">
+            <div className="mb-4 flex items-center gap-3">
+              <span className="text-[12px] font-bold tracking-[0.16em] text-[#e83e74] uppercase sm:text-[13px]">
+                {eyebrow}
+              </span>
+              <span className="h-[2px] w-10 rounded-full bg-[#e83e74]" />
+            </div>
+
+            <h2 className="font-display text-[1.85rem] leading-[1.2] font-bold tracking-tight text-[#0f2038] sm:text-[2.35rem] lg:text-[2.7rem]">
+              {titlePrefix}{" "}
+              <span className="text-[#e83e74]">
+                {titleLocations.join(" | ")}
+              </span>
+            </h2>
+
+            <p className="mt-4 max-w-2xl text-[14.5px] leading-relaxed text-[#64748b] sm:text-[15.5px]">
+              {description}
+            </p>
+
+            <a
+              href={cta.href}
+              className="mt-7 inline-flex items-center gap-2.5 rounded-full bg-[#e83e74] px-5 py-3 text-[13.5px] font-semibold text-white shadow-[0_10px_24px_rgba(232,62,116,0.28)] transition hover:bg-[#d12f63]"
+            >
+              {cta.label}
+              <span className="inline-flex size-6 items-center justify-center rounded-full bg-white/20">
+                <FaArrowRight className="size-2.5" />
+              </span>
+            </a>
           </div>
-
-          <h2 className="font-display text-[1.85rem] leading-[1.2] font-bold tracking-tight text-[#0f2038] sm:text-[2.35rem] lg:text-[2.7rem]">
-            {titlePrefix}{" "}
-            <span className="text-[#e83e74]">
-              {titleLocations.join(" | ")}
-            </span>
-          </h2>
-
-          <p className="mt-4 max-w-2xl text-[14.5px] leading-relaxed text-[#64748b] sm:text-[15.5px]">
-            {description}
-          </p>
-
-          <a
-            href={cta.href}
-            className="mt-7 inline-flex items-center gap-2.5 rounded-full bg-[#e83e74] px-5 py-3 text-[13.5px] font-semibold text-white shadow-[0_10px_24px_rgba(232,62,116,0.28)] transition hover:bg-[#d12f63]"
-          >
-            {cta.label}
-            <span className="inline-flex size-6 items-center justify-center rounded-full bg-white/20">
-              <FaArrowRight className="size-2.5" />
-            </span>
-          </a>
-        </div>
+        </Reveal>
 
         <Stagger
           className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6"
@@ -153,7 +155,7 @@ export default function OurServices() {
             const theme = THEMES[item.id] ?? THEMES.ivf;
 
             return (
-              <StaggerItem key={item.id} variant="scaleIn">
+              <StaggerItem key={item.id} variant="fadeUp">
               <article
                 className="group relative flex min-h-[260px] flex-col overflow-hidden rounded-[20px] bg-white p-5 shadow-[0_10px_30px_rgba(15,32,56,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(15,32,56,0.1)] sm:min-h-[280px] sm:p-6"
               >

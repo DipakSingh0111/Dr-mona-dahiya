@@ -30,68 +30,22 @@ export default function Home() {
         <HeroSection />
       </div>
 
-      <Reveal>
-        <MedicalRegistration />
-      </Reveal>
-
-      <Reveal delay={0.05}>
-        <WhyChooseUs />
-      </Reveal>
-
-      <Reveal delay={0.05}>
-        <OurServices />
-      </Reveal>
-
-      <Reveal>
-        <AdvancedServices />
-      </Reveal>
-
-      {/* No Reveal transform wrapper — sticky card stack needs it */}
+      <MedicalRegistration />
+      <WhyChooseUs />
+      <OurServices />
+      <AdvancedServices />
       <HowItWorks />
-
-      <Reveal>
-        <MeetYourDoctor />
-      </Reveal>
-
-      <Reveal>
-        <FertilityPreservation />
-      </Reveal>
-
-      <Reveal>
-        <Affiliations />
-      </Reveal>
-
-      <Reveal>
-        <ClinicsSection />
-      </Reveal>
-
-      <Reveal>
-        <SuccessStories />
-      </Reveal>
-
-      <Reveal>
-        <InternationalPatients />
-      </Reveal>
-
-      <Reveal>
-        <LatestBlog />
-      </Reveal>
-
-      <Reveal>
-        <BookAppointment />
-      </Reveal>
-
-      <Reveal>
-        <FAQSection />
-      </Reveal>
-
-      <Reveal variant="scaleIn">
-        <ParenthoodCta />
-      </Reveal>
-
-      <Reveal variant="fadeIn">
-        <Footer />
-      </Reveal>
+      <MeetYourDoctor />
+      <FertilityPreservation />
+      <Affiliations />
+      <ClinicsSection />
+      <SuccessStories />
+      <InternationalPatients />
+      <LatestBlog />
+      <BookAppointment />
+      <FAQSection />
+      <ParenthoodCta />
+      <Footer />
     </main>
   );
 }

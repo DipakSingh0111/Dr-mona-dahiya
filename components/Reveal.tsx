@@ -54,7 +54,7 @@ type RevealProps = {
   className?: string;
   delay?: number;
   variant?: "fadeUp" | "fadeIn" | "scaleIn" | "slideLeft" | "slideRight";
-  amount?: number;
+  amount?: number | "some" | "all";
   once?: boolean;
 };
 
@@ -71,7 +71,7 @@ export function Reveal({
   className,
   delay = 0,
   variant = "fadeUp",
-  amount = 0.18,
+  amount = "some",
   once = true,
 }: RevealProps) {
   return (
@@ -93,7 +93,7 @@ type StaggerProps = {
   className?: string;
   delay?: number;
   stagger?: number;
-  amount?: number;
+  amount?: number | "some" | "all";
 };
 
 export function Stagger({
@@ -101,7 +101,7 @@ export function Stagger({
   className,
   delay = 0,
   stagger = 0.08,
-  amount = 0.12,
+  amount = "some",
 }: StaggerProps) {
   return (
     <motion.div
