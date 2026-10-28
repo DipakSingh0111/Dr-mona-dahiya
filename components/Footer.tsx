@@ -139,6 +139,8 @@ export default function Footer() {
                     key={item.id}
                     href={item.href}
                     aria-label={item.label}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex size-9 items-center justify-center rounded-full border border-white/25 text-white/80 transition hover:border-[#f48fb1] hover:text-[#f48fb1]"
                   >
                     <Icon className="size-3.5" />

@@ -79,9 +79,9 @@ export default function ClinicsSection() {
 
         <Stagger className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:gap-7" stagger={0.1}>
           {clinics.map((clinic) => (
-            <StaggerItem key={clinic.id} variant="scaleIn">
+            <StaggerItem key={clinic.id} variant="scaleIn" className="h-full">
             <article
-              className="group relative z-0 flex flex-col overflow-visible rounded-[26px] border border-[#fde8ef] bg-white p-4 shadow-[0_8px_28px_rgba(232,62,116,0.06)] transition-all duration-300 hover:z-10 hover:-translate-y-1 hover:border-[#fbcfe0] hover:shadow-[0_18px_40px_rgba(232,62,116,0.12)] sm:p-5"
+              className="group relative z-0 flex h-full flex-col overflow-visible rounded-[26px] border border-[#fde8ef] bg-white p-4 shadow-[0_8px_28px_rgba(232,62,116,0.06)] transition-all duration-300 hover:z-10 hover:-translate-y-1 hover:border-[#fbcfe0] hover:shadow-[0_18px_40px_rgba(232,62,116,0.12)] sm:p-5"
             >
               {/* Image only — overflow hidden for rounded crop */}
               <div className="relative z-0 h-[210px] w-full overflow-hidden rounded-[20px] bg-[#fff0f5] sm:h-[230px]">
@@ -106,12 +106,12 @@ export default function ClinicsSection() {
                 </div>
               </div>
 
-              <div className="relative z-10 mt-9 flex items-end justify-between gap-3">
-                <div className="min-w-0 flex-1 pr-2 pl-1">
+              <div className="relative z-10 mt-9 flex flex-1 items-end justify-between gap-3">
+                <div className="flex min-w-0 flex-1 flex-col justify-between self-stretch pr-2 pl-1">
                   <h3 className="font-display text-[22px] font-bold tracking-tight text-[#0f2438] sm:text-[24px]">
                     {clinic.city}
                   </h3>
-                  <p className="mt-2 line-clamp-3 text-[12.5px] leading-relaxed text-gray-500 sm:text-[13px]">
+                  <p className="mt-2 min-h-[58px] text-[12.5px] leading-relaxed text-gray-500 sm:min-h-[62px] sm:text-[13px]">
                     {clinic.address}
                   </p>
                 </div>

@@ -155,9 +155,9 @@ export default function OurServices() {
             const theme = THEMES[item.id] ?? THEMES.ivf;
 
             return (
-              <StaggerItem key={item.id} variant="fadeUp">
+              <StaggerItem key={item.id} variant="fadeUp" className="h-full">
               <article
-                className="group relative flex min-h-[260px] flex-col overflow-hidden rounded-[20px] bg-white p-5 shadow-[0_10px_30px_rgba(15,32,56,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(15,32,56,0.1)] sm:min-h-[280px] sm:p-6"
+                className="group relative flex h-full min-h-[260px] flex-col overflow-hidden rounded-[20px] bg-white p-5 shadow-[0_10px_30px_rgba(15,32,56,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(15,32,56,0.1)] sm:min-h-[280px] sm:p-6"
               >
                 <div className="relative z-10 flex flex-1 flex-col pr-28 sm:pr-32 md:pr-36">
                   <div

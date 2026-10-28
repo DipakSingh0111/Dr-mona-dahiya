@@ -58,9 +58,9 @@ export default function LatestBlog() {
 
         <Stagger className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:gap-7" stagger={0.1}>
           {articles.map((item) => (
-            <StaggerItem key={item.id} variant="scaleIn">
+            <StaggerItem key={item.id} variant="scaleIn" className="h-full">
             <article
-              className="group flex flex-col overflow-visible rounded-[24px] bg-white p-3 shadow-[0_12px_36px_rgba(232,62,116,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_44px_rgba(232,62,116,0.14)] sm:p-4"
+              className="group flex h-full flex-col overflow-visible rounded-[24px] bg-white p-3 shadow-[0_12px_36px_rgba(232,62,116,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_44px_rgba(232,62,116,0.14)] sm:p-4"
             >
               <div className="relative">
                 <div className="relative h-[210px] w-full overflow-hidden rounded-[18px] bg-[#fff0f5] sm:h-[230px] sm:rounded-[20px]">
@@ -86,8 +86,8 @@ export default function LatestBlog() {
                 </div>
               </div>
 
-              <div className="flex flex-1 flex-col px-1 pt-5 pb-2">
-                <h3 className="font-display text-[17px] leading-snug font-bold tracking-tight text-[#0f2438] transition-colors group-hover:text-[#e83e74] sm:text-[18.5px]">
+              <div className="flex flex-1 flex-col justify-between px-1 pt-5 pb-2">
+                <h3 className="font-display min-h-[48px] text-[17px] leading-snug font-bold tracking-tight text-[#0f2438] transition-colors group-hover:text-[#e83e74] sm:min-h-[54px] sm:text-[18.5px]">
                   <a href={item.href}>{item.title}</a>
                 </h3>
 

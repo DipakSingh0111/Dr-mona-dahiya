@@ -121,7 +121,7 @@ export default function AdvancedServices() {
             const icon = icons[card.icon as keyof typeof icons];
 
             return (
-              <StaggerItem key={card.id} variant="scaleIn">
+              <StaggerItem key={card.id} variant="scaleIn" className="h-full">
                 <article
                   className={`flex h-full items-center gap-4 rounded-[18px] border px-5 py-5 sm:gap-[18px] sm:rounded-[20px] sm:px-6 sm:py-[22px] ${theme.card}`}
                 >

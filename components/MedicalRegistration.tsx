@@ -80,7 +80,7 @@ function RegistrationCard({
 
   return (
     <article
-      className={`relative flex min-h-[132px] items-center overflow-hidden rounded-[16px] border bg-white px-4 py-5 sm:min-h-[140px] sm:px-5 sm:py-5 ${scheme.cardBorder} ${scheme.cardShadow}`}
+      className={`relative flex h-full min-h-[132px] items-center overflow-hidden rounded-[16px] border bg-white px-4 py-5 sm:min-h-[140px] sm:px-5 sm:py-5 ${scheme.cardBorder} ${scheme.cardShadow}`}
     >
       <WaveGraphic color={scheme.wave} />
 
@@ -155,7 +155,7 @@ export default function MedicalRegistration() {
           stagger={0.1}
         >
           {items.map((item) => (
-            <StaggerItem key={item.code}>
+            <StaggerItem key={item.code} className="h-full">
               <RegistrationCard
                 code={item.code}
                 councilName={item.councilName}
