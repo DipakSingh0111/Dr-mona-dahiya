@@ -17,7 +17,7 @@ import BookAppointment from "@/components/BookAppointment";
 import FAQSection from "@/components/FAQSection";
 import ParenthoodCta from "@/components/ParenthoodCta";
 import Footer from "@/components/Footer";
-import { Reveal } from "@/components/Reveal";
+import { SectionReveal } from "@/components/Reveal";
 
 export default function Home() {
   return (
@@ -30,22 +30,67 @@ export default function Home() {
         <HeroSection />
       </div>
 
-      <MedicalRegistration />
-      <WhyChooseUs />
-      <OurServices />
-      <AdvancedServices />
+      <SectionReveal>
+        <MedicalRegistration />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <WhyChooseUs />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <OurServices />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <AdvancedServices />
+      </SectionReveal>
+
       <HowItWorks />
-      <MeetYourDoctor />
-      <FertilityPreservation />
-      <Affiliations />
-      <ClinicsSection />
-      <SuccessStories />
-      <InternationalPatients />
-      <LatestBlog />
-      <BookAppointment />
-      <FAQSection />
-      <ParenthoodCta />
-      <Footer />
+
+      <SectionReveal delay={0.04}>
+        <MeetYourDoctor />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <FertilityPreservation />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <Affiliations />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <ClinicsSection />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <SuccessStories />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <InternationalPatients />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <LatestBlog />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <BookAppointment />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <FAQSection />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <ParenthoodCta />
+      </SectionReveal>
+
+      <SectionReveal>
+        <Footer />
+      </SectionReveal>
     </main>
   );
 }

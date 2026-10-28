@@ -8,10 +8,10 @@ import { Reveal, Stagger, StaggerItem } from "./Reveal";
 function SpermIcon({ className }: { className?: string }) {
   return (
     <svg
-      viewBox="0 0 64 64"
+      viewBox="4 12 48 42"
       fill="none"
       stroke="currentColor"
-      strokeWidth="2.5"
+      strokeWidth="3"
       strokeLinecap="round"
       strokeLinejoin="round"
       className={className}
@@ -28,10 +28,10 @@ function SpermIcon({ className }: { className?: string }) {
 function UterusIcon({ className }: { className?: string }) {
   return (
     <svg
-      viewBox="0 0 64 64"
+      viewBox="8 18 48 38"
       fill="none"
       stroke="currentColor"
-      strokeWidth="2.5"
+      strokeWidth="3"
       strokeLinecap="round"
       strokeLinejoin="round"
       className={className}
@@ -41,8 +41,8 @@ function UterusIcon({ className }: { className?: string }) {
       <path d="M24 32 C24 44, 40 44, 40 32 C40 23, 24 23, 24 32 Z" />
       <path d="M24 27 C17 19, 9 23, 13 34 C15 39, 20 37, 20 34" />
       <path d="M40 27 C47 19, 55 23, 51 34 C49 39, 44 37, 44 34" />
-      <circle cx="17" cy="35" r="3" fill="currentColor" stroke="none" />
-      <circle cx="47" cy="35" r="3" fill="currentColor" stroke="none" />
+      <circle cx="17" cy="35" r="3.2" fill="currentColor" stroke="none" />
+      <circle cx="47" cy="35" r="3.2" fill="currentColor" stroke="none" />
     </svg>
   );
 }
@@ -93,9 +93,9 @@ export default function AdvancedServices() {
     siteData.advancedServices;
 
   const icons = {
-    sperm: <SpermIcon className="size-[30px] sm:size-[34px]" />,
-    dna: <FaDna className="size-6 sm:size-[26px]" />,
-    uterus: <UterusIcon className="size-[30px] sm:size-[34px]" />,
+    sperm: <SpermIcon className="size-[34px] sm:size-[40px]" />,
+    dna: <FaDna className="size-[30px] sm:size-[36px]" />,
+    uterus: <UterusIcon className="size-[34px] sm:size-[40px]" />,
   } as const;
 
   return (
@@ -126,7 +126,7 @@ export default function AdvancedServices() {
                   className={`flex h-full items-center gap-4 rounded-[18px] border px-5 py-5 sm:gap-[18px] sm:rounded-[20px] sm:px-6 sm:py-[22px] ${theme.card}`}
                 >
                   <div
-                    className={`flex size-[54px] shrink-0 items-center justify-center rounded-full sm:size-[58px] ${theme.iconBg}`}
+                    className={`flex size-[60px] shrink-0 items-center justify-center rounded-full sm:size-[68px] ${theme.iconBg}`}
                   >
                     {icon}
                   </div>

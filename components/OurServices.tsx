@@ -21,7 +21,7 @@ function UterusIcon({ className }: { className?: string }) {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      strokeWidth="1.7"
+      strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
       className={className}
@@ -41,7 +41,7 @@ function CellsIcon({ className }: { className?: string }) {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      strokeWidth="1.7"
+      strokeWidth="2"
       strokeLinecap="round"
       className={className}
       aria-hidden
@@ -54,14 +54,14 @@ function CellsIcon({ className }: { className?: string }) {
 }
 
 const ICONS: Record<string, ReactNode> = {
-  uterus: <UterusIcon className="size-[26px]" />,
-  monitor: <FaDesktop className="size-[22px]" />,
-  clipboard: <FaClipboardList className="size-[22px]" />,
-  male: <FaMars className="size-[23px]" />,
-  cells: <CellsIcon className="size-[26px]" />,
-  drop: <FaTint className="size-[22px]" />,
-  snowflake: <FaSnowflake className="size-[22px]" />,
-  dna: <FaDna className="size-[22px]" />,
+  uterus: <UterusIcon className="size-[32px] sm:size-[36px]" />,
+  monitor: <FaDesktop className="size-[28px] sm:size-[32px]" />,
+  clipboard: <FaClipboardList className="size-[28px] sm:size-[32px]" />,
+  male: <FaMars className="size-[30px] sm:size-[34px]" />,
+  cells: <CellsIcon className="size-[32px] sm:size-[36px]" />,
+  drop: <FaTint className="size-[28px] sm:size-[32px]" />,
+  snowflake: <FaSnowflake className="size-[28px] sm:size-[32px]" />,
+  dna: <FaDna className="size-[28px] sm:size-[32px]" />,
 };
 
 type Theme = { bg: string; color: string; glow: string };
@@ -161,11 +161,11 @@ export default function OurServices() {
               >
                 <div className="relative z-10 flex flex-1 flex-col pr-28 sm:pr-32 md:pr-36">
                   <div
-                    className="mb-4 inline-flex size-14 items-center justify-center rounded-full sm:size-[60px]"
+                    className="mb-4 inline-flex size-[58px] items-center justify-center rounded-full sm:size-[66px]"
                     style={{ backgroundColor: theme.bg, color: theme.color }}
                   >
                     {ICONS[item.icon] ?? (
-                      <UterusIcon className="size-[26px]" />
+                      <UterusIcon className="size-[32px] sm:size-[36px]" />
                     )}
                   </div>
 
