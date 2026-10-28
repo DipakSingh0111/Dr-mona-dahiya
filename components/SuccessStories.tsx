@@ -8,105 +8,76 @@ import { Reveal, Stagger, StaggerItem } from "./Reveal";
 
 const categoryStyles = {
   pink: {
-    bg: "bg-[#fff0f5]",
-    border: "border-[#f9c5d4]",
-    icon: "text-[#e83e74]",
-    text: "text-[#c2185b]",
-    activeBg: "bg-[#e83e74]",
+    circle: "bg-[#e83e74]",
+    glow: "shadow-[0_0_22px_rgba(232,62,116,0.55)]",
   },
   teal: {
-    bg: "bg-[#eefbf3]",
-    border: "border-[#b7ebc8]",
-    icon: "text-[#1b9e55]",
-    text: "text-[#1b7a45]",
-    activeBg: "bg-[#1b9e55]",
+    circle: "bg-[#0d9488]",
+    glow: "shadow-[0_0_22px_rgba(13,148,136,0.55)]",
   },
   purple: {
-    bg: "bg-[#f6f0ff]",
-    border: "border-[#ddc9f8]",
-    icon: "text-[#7c3aed]",
-    text: "text-[#6d28d9]",
-    activeBg: "bg-[#7c3aed]",
+    circle: "bg-[#8b5cf6]",
+    glow: "shadow-[0_0_22px_rgba(139,92,246,0.55)]",
   },
   blue: {
-    bg: "bg-[#eef7ff]",
-    border: "border-[#b8dbf8]",
-    icon: "text-[#0284c7]",
-    text: "text-[#0369a1]",
-    activeBg: "bg-[#0284c7]",
+    circle: "bg-[#3b82f6]",
+    glow: "shadow-[0_0_22px_rgba(59,130,246,0.55)]",
   },
   yellow: {
-    bg: "bg-[#fffbeb]",
-    border: "border-[#fde68a]",
-    icon: "text-[#ca8a04]",
-    text: "text-[#a16207]",
-    activeBg: "bg-[#ca8a04]",
+    circle: "bg-[#eab308]",
+    glow: "shadow-[0_0_22px_rgba(234,179,8,0.55)]",
   },
   peach: {
-    bg: "bg-[#fff4f0]",
-    border: "border-[#fdc9b5]",
-    icon: "text-[#e85d04]",
-    text: "text-[#c2410c]",
-    activeBg: "bg-[#e85d04]",
+    circle: "bg-[#f97316]",
+    glow: "shadow-[0_0_22px_rgba(249,115,22,0.55)]",
   },
 } as const;
 
+/** Embryo / cell — oval with inner nucleus */
 function IvfIcon({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" className={className} fill="none" aria-hidden>
-      <circle cx="10" cy="10" r="5.2" stroke="currentColor" strokeWidth="1.8" />
-      <path
-        d="M12.2 8.2c.9-.9 2.2-.7 2.6.4-.4 1.1-1.7 1.8-2.6.9-.9.9-2.2.2-2.6-.9.4-1.1 1.7-1.3 2.6-.4Z"
-        fill="currentColor"
-      />
-      <path
-        d="M14.2 14.2 19.2 19.2"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-}
-
-function LeafIcon({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" className={className} fill="none" aria-hidden>
-      <path
-        d="M12 20.5S5.5 16.2 5.5 10.2C5.5 6.8 8.2 4 12 4s6.5 2.8 6.5 6.2c0 6-6.5 10.3-6.5 10.3Z"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M12 20V9.5"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-      />
-      <path
-        d="M12 12.5c1.8-.8 3.2-2.2 3.8-4"
-        stroke="currentColor"
-        strokeWidth="1.6"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-}
-
-function SparkleIcon({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" className={className} fill="none" aria-hidden>
-      <path
-        d="M12 3.5 13.6 9l5.4 1.6-5.4 1.6L12 17.8l-1.6-5.6L5 10.6 10.4 9 12 3.5Z"
+      <ellipse
+        cx="12"
+        cy="12"
+        rx="7.2"
+        ry="8.2"
         stroke="currentColor"
         strokeWidth="1.7"
-        strokeLinejoin="round"
       />
-      <path
-        d="M18.5 15.2 19.2 17.5 21.5 18.2 19.2 18.9 18.5 21.2 17.8 18.9 15.5 18.2 17.8 17.5 18.5 15.2Z"
-        fill="currentColor"
+      <circle cx="12" cy="11.5" r="3.1" stroke="currentColor" strokeWidth="1.7" />
+    </svg>
+  );
+}
+
+/** Egg / ovum with small polar-body bumps */
+function EggIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="none" aria-hidden>
+      <ellipse
+        cx="12"
+        cy="13"
+        rx="6.4"
+        ry="7.4"
+        stroke="currentColor"
+        strokeWidth="1.7"
       />
+      <circle cx="12" cy="5.2" r="1.15" stroke="currentColor" strokeWidth="1.5" />
+      <circle cx="16.6" cy="7.2" r="1" stroke="currentColor" strokeWidth="1.5" />
+      <circle cx="7.4" cy="7.2" r="1" stroke="currentColor" strokeWidth="1.5" />
+    </svg>
+  );
+}
+
+/** PCOS — follicle ring with four dots */
+function PcosIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="none" aria-hidden>
+      <circle cx="12" cy="12" r="7.2" stroke="currentColor" strokeWidth="1.7" />
+      <circle cx="12" cy="8.2" r="1.35" fill="currentColor" />
+      <circle cx="15.6" cy="13.8" r="1.35" fill="currentColor" />
+      <circle cx="8.4" cy="13.8" r="1.35" fill="currentColor" />
+      <circle cx="12" cy="12.2" r="1.1" fill="currentColor" />
     </svg>
   );
 }
@@ -115,16 +86,10 @@ function DropIcon({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" className={className} fill="none" aria-hidden>
       <path
-        d="M12 3.5C12 3.5 6.5 10.2 6.5 14.2a5.5 5.5 0 0 0 11 0C17.5 10.2 12 3.5 12 3.5Z"
+        d="M12 3.8C12 3.8 6.8 10.2 6.8 14.4a5.2 5.2 0 0 0 10.4 0C17.2 10.2 12 3.8 12 3.8Z"
         stroke="currentColor"
-        strokeWidth="1.8"
+        strokeWidth="1.7"
         strokeLinejoin="round"
-      />
-      <path
-        d="M10 15.2c.6 1.2 1.8 1.8 3.2 1.4"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
       />
     </svg>
   );
@@ -134,7 +99,7 @@ function StarIcon({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" className={className} fill="none" aria-hidden>
       <path
-        d="M12 3.5 14.4 9.2 20.5 9.8 15.9 13.8 17.3 19.8 12 16.7 6.7 19.8 8.1 13.8 3.5 9.8 9.6 9.2 12 3.5Z"
+        d="M12 3.6 14.2 9.1 20.2 9.7 15.7 13.5 17.1 19.4 12 16.4 6.9 19.4 8.3 13.5 3.8 9.7 9.8 9.1 12 3.6Z"
         stroke="currentColor"
         strokeWidth="1.7"
         strokeLinejoin="round"
@@ -147,9 +112,9 @@ function HeartIcon({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" className={className} fill="none" aria-hidden>
       <path
-        d="M12 20s-6.8-4.2-8.6-8.2C2.2 9.2 3.4 6.2 6.2 5.4c1.6-.5 3.3.1 4.3 1.4C11.5 5.5 13.2 4.9 14.8 5.4c2.8.8 4 3.8 2.8 6.4C16.8 15.8 12 20 12 20Z"
+        d="M12 19.6S5.4 15.5 3.8 11.6C2.6 8.8 4 5.9 6.9 5.2c1.6-.4 3.3.2 4.2 1.5.9-1.3 2.6-1.9 4.2-1.5 2.9.7 4.3 3.6 3.1 6.4-1.6 3.9-8.4 8-8.4 8Z"
         stroke="currentColor"
-        strokeWidth="1.8"
+        strokeWidth="1.7"
         strokeLinejoin="round"
       />
     </svg>
@@ -167,9 +132,9 @@ function CategoryIcon({
     case "ivf":
       return <IvfIcon className={className} />;
     case "egg":
-      return <LeafIcon className={className} />;
+      return <EggIcon className={className} />;
     case "pcos":
-      return <SparkleIcon className={className} />;
+      return <PcosIcon className={className} />;
     case "drop":
       return <DropIcon className={className} />;
     case "star":
@@ -248,7 +213,7 @@ export default function SuccessStories() {
 
           <Reveal
             variant="slideRight"
-            className="w-full rounded-[22px] bg-[#fff7fa] p-4 sm:p-5 lg:max-w-[720px] xl:max-w-[760px]"
+            className="w-full p-0 lg:max-w-[720px] xl:max-w-[760px]"
           >
             <h3 className="font-display mb-3.5 text-[17px] font-bold text-[#0f2438] sm:text-[18px]">
               Browse stories by treatment
@@ -267,24 +232,18 @@ export default function SuccessStories() {
                     <button
                       type="button"
                       onClick={() => setActiveCategory(cat.id)}
-                      className={`flex h-[108px] w-[100px] shrink-0 cursor-pointer flex-col items-center justify-center gap-2 rounded-[16px] border px-2 py-2.5 text-center transition-all duration-300 ease-out hover:-translate-y-0.5 sm:h-[112px] sm:w-[106px] ${
+                      className={`flex h-[112px] w-[104px] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 rounded-[16px] border bg-white px-2 py-2.5 text-center transition-all duration-300 ease-out hover:-translate-y-0.5 sm:h-[116px] sm:w-[110px] ${
                         isActive
-                          ? `${style.activeBg} border-transparent text-white shadow-[0_8px_20px_rgba(232,62,116,0.25)]`
-                          : `${style.bg} ${style.border} bg-white shadow-sm`
+                          ? "border-[#e83e74]/40 shadow-[0_8px_20px_rgba(232,62,116,0.12)] ring-1 ring-[#e83e74]/20"
+                          : "border-slate-200 shadow-sm hover:border-slate-300"
                       }`}
                     >
                       <span
-                        className={`flex size-9 items-center justify-center transition-colors duration-300 ${
-                          isActive ? "text-white" : style.icon
-                        }`}
+                        className={`flex size-11 items-center justify-center rounded-full text-white ${style.circle} ${style.glow}`}
                       >
-                        <CategoryIcon type={cat.icon} className="size-6" />
+                        <CategoryIcon type={cat.icon} className="size-[22px]" />
                       </span>
-                      <span
-                        className={`line-clamp-2 text-[10.5px] leading-tight font-bold transition-colors duration-300 sm:text-[11px] ${
-                          isActive ? "text-white" : style.text
-                        }`}
-                      >
+                      <span className="line-clamp-2 text-[10.5px] leading-tight font-bold text-[#0f2438] sm:text-[11px]">
                         {cat.label}
                       </span>
                     </button>

@@ -570,75 +570,84 @@
   "faq": {
     "titlePrefix": "Frequently",
     "titleHighlight": "asked questions",
-    "subtitle": "Find answers to the most common questions about IVF treatment, process, safety, success rates and more.",
+    "cta": {
+      "label": "All IVF FAQs",
+      "href": "#faq"
+    },
     "leftFaqs": [
       {
         "id": "faq-01",
         "number": "01",
         "question": "Who offers the best IVF treatment in India?",
-        "answer": "Dr. Mona Dahiya is a leading choice for couples in India and from abroad who want affordable IVF with high success rates. With personalized care, advanced technology, and a patient-first approach, she has helped many couples achieve their dream of parenthood."
+        "answer": "Dr. Mona Dahiya is a leading choice for couples in India and from abroad who want affordable IVF with high success rates."
+      },
+      {
+        "id": "faq-02",
+        "number": "02",
+        "question": "What is the success rate of IVF in India?",
+        "answer": "On average, IVF success rates in India range from about 40% to 60%. They are higher for younger women and depend on age, the cause of infertility and the clinic's expertise."
       },
       {
         "id": "faq-03",
         "number": "03",
-        "question": "What is the success rate of IVF in India?",
-        "answer": "The success rate of IVF varies depending on maternal age, diagnosis, and medical history, generally ranging between 50% to 80% with advanced blastocyst culture and individualized protocols under Dr. Mona Dahiya."
-      },
-      {
-        "id": "faq-05",
-        "number": "05",
-        "question": "Is IVF safe after 35?",
-        "answer": "Yes, IVF is safe after 35. Comprehensive pre-treatment assessments, genetic screening, and tailored stimulation protocols ensure both mother and baby receive optimal medical care."
-      },
-      {
-        "id": "faq-07",
-        "number": "07",
-        "question": "Which month is best for IVF?",
-        "answer": "There is no medically specific best month for IVF; success is determined by ovarian reserve, hormonal balance, and personalized preparation rather than seasonal factors."
-      },
-      {
-        "id": "faq-09",
-        "number": "09",
-        "question": "How many IVF cycles are needed to get pregnant?",
-        "answer": "Many couples conceive in their first cycle, while others may require 2 to 3 cycles. Dr. Mona optimizes each protocol based on previous responses to achieve pregnancy in minimal attempts."
-      }
-    ],
-    "rightFaqs": [
-      {
-        "id": "faq-02",
-        "number": "02",
-        "question": "Is IVF harmful or beneficial?",
-        "answer": "IVF is a clinically proven, safe medical procedure that has enabled millions of families worldwide to experience parenthood when natural conception is challenging."
+        "question": "What age is good for IVF?",
+        "answer": "It varies from person to person. Women in their 20s and early 30s usually respond best, and chances fall with age, especially after 35."
       },
       {
         "id": "faq-04",
         "number": "04",
-        "question": "How safe is IVF pregnancy in India?",
-        "answer": "IVF pregnancies in certified fertility centres are closely monitored by expert obstetricians and fertility specialists with international safety standards."
+        "question": "Is IVF safe after 35?",
+        "answer": "Yes, it can be a safe and effective option after 35, though success rates decline with age. Steps such as preimplantation genetic testing may help."
+      },
+      {
+        "id": "faq-05",
+        "number": "05",
+        "question": "How many IVF cycles are needed to get pregnant?",
+        "answer": "It depends on age, the cause of infertility and how the body responds. Some couples conceive in the first cycle and others need more than one."
       },
       {
         "id": "faq-06",
         "number": "06",
-        "question": "How can I share my medical records?",
-        "answer": "You can securely share your test reports and medical history via WhatsApp (+91 92679 82924) or email directly to info@drmonadahiya.com before your consultation."
+        "question": "Which month is best for IVF?",
+        "answer": "No single month is best. IVF can be done year-round and is planned around your own menstrual cycle."
+      }
+    ],
+    "rightFaqs": [
+      {
+        "id": "faq-07",
+        "number": "07",
+        "question": "Is IVF harmful or beneficial?",
+        "answer": "IVF helps many couples conceive. Like any treatment it has risks, such as multiple pregnancy, ovarian hyperstimulation and emotional stress, which your doctor will discuss with you."
       },
       {
         "id": "faq-08",
         "number": "08",
-        "question": "What if I don't have previous medical records?",
-        "answer": "You don't need prior records. Dr. Mona will conduct a fresh, complete diagnostic assessment for both partners to determine the best treatment path."
+        "question": "How safe is IVF pregnancy in India?",
+        "answer": "IVF pregnancy is generally safe when strict clinical protocols are followed. Choose an experienced, reputable centre such as Little Angel IVF."
+      },
+      {
+        "id": "faq-09",
+        "number": "09",
+        "question": "How can I share my medical records?",
+        "answer": "You can send them by email, WhatsApp or courier before your first consultation."
       },
       {
         "id": "faq-10",
         "number": "10",
-        "question": "Which documents should I carry for treatment?",
-        "answer": "Please carry valid government photo IDs (Aadhaar/Passport/Voter ID), marriage proof (for ART compliance), and any prior ultrasound or blood reports if available."
+        "question": "What if I don't have previous medical records?",
+        "answer": "Dr. Mona will order the preliminary tests needed to plan your treatment."
       },
       {
         "id": "faq-11",
         "number": "11",
+        "question": "Which documents should I carry for treatment?",
+        "answer": "International patients should carry their original passport, passport-size photographs and any previous medical records."
+      },
+      {
+        "id": "faq-12",
+        "number": "12",
         "question": "What is the Indian country code?",
-        "answer": "The international dialling code for India is +91."
+        "answer": "The country code for India is +91. Dial +91 92679 82924 to reach the clinic from abroad."
       }
     ]
   },
@@ -811,62 +820,32 @@
     ]
   },
   "internationalPatients": {
-    "badge": "International Patients",
-    "titleLine1": "Travelling to India for IVF?",
-    "titleLine2": "We're Here",
-    "titleAccent": "for You",
+    "badge": "International patients",
+    "title": "Travelling to India for IVF?",
     "subtitle": "Send your records by email or WhatsApp, speak to Dr. Mona online, and plan your stay around the cycle dates.",
     "image": "/images/international-patients-banner.jpg",
-    "cta": {
-      "label": "Join Us Today",
-      "href": "#contact"
-    },
     "features": [
       {
         "id": "records",
-        "label": "Record review before travel",
-        "icon": "file",
-        "color": "pink"
+        "label": "Record review before travel"
       },
       {
         "id": "video",
-        "label": "Video consultation",
-        "icon": "video",
-        "color": "blue"
+        "label": "Video consultation"
       },
       {
         "id": "travel",
-        "label": "Travel & stay guidance",
-        "icon": "bed",
-        "color": "green"
+        "label": "Travel & stay guidance"
       }
     ],
-    "contacts": [
-      {
-        "id": "call",
-        "label": "Call Us",
-        "value": "+91 92679 82924",
-        "href": "tel:+919267982924",
-        "icon": "phone",
-        "color": "pink"
-      },
-      {
-        "id": "email",
-        "label": "E-mail Us",
-        "value": "info@drmonadahiya.com",
-        "href": "mailto:info@drmonadahiya.com",
-        "icon": "mail",
-        "color": "blue"
-      },
-      {
-        "id": "visit",
-        "label": "Visit Us",
-        "value": "Noida · Delhi · Ghaziabad",
-        "href": "#clinics",
-        "icon": "pin",
-        "color": "green"
-      }
-    ]
+    "primaryCta": {
+      "label": "International patient desk",
+      "href": "#international"
+    },
+    "secondaryCta": {
+      "label": "Schedule Online Consultation",
+      "href": "#book-appointment"
+    }
   },
   "latestBlog": {
     "eyebrow": "LATEST BLOG",
@@ -974,7 +953,7 @@
     "brand": {
       "name": "Dr. Mona Dahiya",
       "tagline": "Fertility & IVF Specialist",
-      "description": "25+ years in reproductive medicine. Gold medalist fertility specialist helping couples across India and abroad with personalised IVF, IUI and advanced fertility care."
+      "description": "25+ years in reproductive medicine. Gold medalist MBBS & MD, IVF fellowship at Singapore General Hospital, founder of Little Angel IVF."
     },
     "image": "/images/footer-mother-baby.jpg",
     "social": [
@@ -992,46 +971,42 @@
         "id": "linkedin",
         "label": "LinkedIn",
         "href": "https://www.linkedin.com/company/littleangelivf/"
-      },
-      {
-        "id": "facebook",
-        "label": "Facebook",
-        "href": "https://www.facebook.com/LittleAngelIVF/"
       }
     ],
+    "helplineTitle": "Helpline & Contact",
     "contactBox": [
       {
         "id": "helpline",
         "label": "Fertility Helpline",
-        "value": "+91 92679 82924 (8 AM – 8 PM)",
+        "value": "+91 92679 82924 · 8 AM – 8 PM",
         "href": "tel:+919267982924",
         "icon": "phone"
       },
       {
         "id": "email",
-        "label": "Official Inquiry",
+        "label": "Official Inquiry Desk",
         "value": "info@drmonadahiya.com",
         "href": "mailto:info@drmonadahiya.com",
         "icon": "mail"
       },
       {
         "id": "whatsapp",
-        "label": "WhatsApp",
-        "value": "WhatsApp Instant Assistance",
+        "label": "WhatsApp Instant Assistance",
+        "value": "",
         "href": "https://wa.me/919267982924",
         "icon": "whatsapp"
       },
       {
         "id": "about",
-        "label": "Profile",
-        "value": "About Dr. Mona Dahiya (Director)",
+        "label": "About Dr. Mona Dahiya (Director)",
+        "value": "",
         "href": "#profile",
         "icon": "user"
       },
       {
         "id": "compliance",
-        "label": "Compliance",
-        "value": "ICMR & ART Regulation Compliance",
+        "label": "ICMR & ART Regulation Compliance",
+        "value": "",
         "href": "#compliance",
         "icon": "badge",
         "isNew": true
@@ -1039,132 +1014,78 @@
     ],
     "noidaClinic": {
       "title": "Noida Clinic",
+      "subtitle": "Noida Clinical Center",
       "hub": "Noida Sector 49 Clinic Hub",
       "address": "3rd Floor, K-06, above FirstCry, Baraula, Sector 49, Noida, Uttar Pradesh 201301"
     },
+    "noidaTreatmentsTitle": "Noida Specific Treatments",
     "noidaTreatments": [
-      {
-        "label": "Best IUI Doctor in Noida",
-        "href": "#"
-      },
-      {
-        "label": "Best IVF Doctor in Noida",
-        "href": "#"
-      },
-      {
-        "label": "Female Infertility Specialist Noida",
-        "href": "#"
-      },
-      {
-        "label": "Male Infertility Specialist Noida",
-        "href": "#"
-      },
-      {
-        "label": "PCOS & PCOD Clinic Noida",
-        "href": "#"
-      },
-      {
-        "label": "Low AMH Treatment Noida",
-        "href": "#"
-      },
-      {
-        "label": "Egg Freezing in Noida",
-        "href": "#"
-      },
-      {
-        "label": "ICSI Treatment Noida",
-        "href": "#"
-      },
-      {
-        "label": "Blastocyst Transfer Noida",
-        "href": "#"
-      },
-      {
-        "label": "Fertility Preservation Noida",
-        "href": "#"
-      }
+      { "label": "Best IUI Doctor in Noida", "href": "#" },
+      { "label": "Female Infertility Specialist Noida", "href": "#" },
+      { "label": "Male Infertility Specialist Noida", "href": "#" },
+      { "label": "Egg Freezing Clinic in Noida", "href": "#" },
+      { "label": "PGT Testing Center in Noida", "href": "#" },
+      { "label": "PRP Fertility Therapy in Noida", "href": "#" },
+      { "label": "Laparoscopic Surgeon in Noida", "href": "#" },
+      { "label": "PCOS & PCOD Clinic Noida", "href": "#" },
+      { "label": "Low AMH Treatment in Noida", "href": "#" },
+      { "label": "Miscarriage Specialist in Noida", "href": "#" }
     ],
     "delhiGhaziabad": {
       "title": "Delhi & Ghaziabad Clinics",
+      "subtitle": "Delhi NCR Centers",
       "centers": [
         {
           "name": "Lajpat Nagar (South Delhi) Center",
-          "address": "Building Number 41, First Floor, Ring Road, Block Q, Lajpat Nagar IV, New Delhi 110024",
+          "address": "Building Number 41, First Floor, Ring Road, Block Q, Lajpat Nagar IV, Lajpat Nagar, New Delhi 110024",
           "linkLabel": "Best IUI Doctor in Delhi",
           "href": "#"
         },
         {
           "name": "Rajnagar Ext. (Ghaziabad) Center",
-          "address": "2nd Floor, RDC, C-53A, near Bikanerwala, Sector 15, Raj Nagar, Ghaziabad, Uttar Pradesh 201002",
+          "address": "2nd Floor, RDC, C-53A, near Bikanerwala, Sector 15, Sector 10, Raj Nagar, Ghaziabad, Uttar Pradesh 201002",
           "linkLabel": "Best IUI Doctor in Ghaziabad",
           "href": "#"
         }
       ]
     },
+    "directoryTitle": "Directory",
     "directory": [
-      {
-        "label": "All Locations",
-        "href": "#clinics"
-      }
+      { "label": "All Locations", "href": "#clinics" }
     ],
-    "clinicHours": "Clinics: Mon–Sat | 10:00 AM to 5:00 PM",
-    "guides": [
-      {
-        "label": "Fertility Blog",
-        "href": "#blog"
-      },
-      {
-        "label": "IVF Cost Breakdown",
-        "href": "#",
-        "isNew": true
-      },
-      {
-        "label": "Egg Freezing Guide",
-        "href": "#"
-      },
-      {
-        "label": "What to Do After Failed IVF",
-        "href": "#",
-        "isNew": true
-      },
-      {
-        "label": "Preparing for IUI",
-        "href": "#"
-      },
-      {
-        "label": "PCOS Fertility Tips",
-        "href": "#"
-      },
-      {
-        "label": "International Patient Guide",
-        "href": "#"
-      }
+    "clinicHours": "Clinics: Mon–Sat · 10:00 AM to 5:00 PM",
+    "guidesTitle": "Patient Guides & Articles",
+    "educationalHub": {
+      "title": "Educational Hub",
+      "items": [
+        { "label": "Fertility Blog & Knowledge Center", "href": "#blog" }
+      ]
+    },
+    "highIntentGuides": {
+      "title": "High-Intent Guides",
+      "items": [
+        { "label": "IVF Cost Breakdown & Packages", "href": "#", "isNew": true },
+        { "label": "What to Do After Failed IVF", "href": "#", "isNew": true },
+        { "label": "Diet & Protocol for Low AMH", "href": "#" },
+        { "label": "Egg Freezing: Ideal Age & Costs", "href": "#" },
+        { "label": "Comprehensive IVF FAQs", "href": "#faq" }
+      ]
+    },
+    "trustTitle": "Trust & Compliance",
+    "trust": {
+      "subtitle": "Legal & Accreditation",
+      "items": [
+        { "label": "Privacy Policy & Patient Data Security", "href": "#" },
+        { "label": "Terms of Medical Consultation", "href": "#", "isNew": true },
+        { "label": "Doctor Registration & Medical Council", "href": "#" }
+      ]
+    },
+    "bottomLinks": [
+      { "label": "Contact Us", "href": "#book-appointment" },
+      { "label": "XML Sitemap", "href": "#" }
     ],
-    "trust": [
-      {
-        "label": "Educational Hub",
-        "href": "#"
-      },
-      {
-        "label": "Legal & Accreditation",
-        "href": "#"
-      },
-      {
-        "label": "Privacy Policy",
-        "href": "#"
-      },
-      {
-        "label": "Terms of Medical Consultation",
-        "href": "#",
-        "isNew": true
-      },
-      {
-        "label": "Doctor Registration",
-        "href": "#"
-      }
-    ],
-    "copyright": "© 2026 Dr. Mona Dahiya. All Rights Reserved.",
-    "disclaimer": "Medical disclaimer: Information on this website is for educational purposes only and does not replace personalised medical advice from a qualified fertility specialist."
+    "copyright": "© 2026 Dr. Mona Dahiya. All rights reserved.",
+    "disclaimer": "Medical disclaimer: Information on this website is for educational purposes and does not replace professional medical advice. Please consult a qualified specialist about your own case."
   },
   "parenthoodCta": {
     "title": "Take your first step towards parenthood with",

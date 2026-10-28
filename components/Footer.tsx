@@ -18,7 +18,7 @@ import {
   FaInstagram,
   FaYoutube,
   FaLinkedin,
-  FaFacebookF,
+  FaInfoCircle,
 } from "react-icons/fa";
 import siteData from "@/data/site.json";
 import { Stagger, StaggerItem } from "./Reveal";
@@ -71,6 +71,14 @@ function SectionTitle({
   );
 }
 
+function SubLabel({ children }: { children: ReactNode }) {
+  return (
+    <p className="mb-2 text-[10px] font-semibold tracking-[0.12em] text-white/45 uppercase">
+      {children}
+    </p>
+  );
+}
+
 const contactIconMap = {
   phone: FaPhoneAlt,
   mail: FaEnvelope,
@@ -83,7 +91,6 @@ const socialIconMap = {
   instagram: FaInstagram,
   youtube: FaYoutube,
   linkedin: FaLinkedin,
-  facebook: FaFacebookF,
 } as const;
 
 export default function Footer() {
@@ -91,7 +98,6 @@ export default function Footer() {
 
   return (
     <footer className="relative overflow-hidden bg-[#0c241f] text-white">
-      {/* Soft mother-baby image on right — no Book Consultation CTA */}
       <div className="pointer-events-none absolute inset-y-0 right-0 w-[42%] opacity-[0.22]">
         <Image
           src={data.image}
@@ -108,21 +114,14 @@ export default function Footer() {
           className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-12 lg:gap-6"
           stagger={0.08}
         >
-          {/* Col 1 — Brand + contact */}
           <StaggerItem className="lg:col-span-3">
-            <div className="flex items-center gap-3">
-              <span className="flex size-11 items-center justify-center rounded-full bg-[#e83e74]/15 text-[#f48fb1] ring-1 ring-[#e83e74]/35">
-                <svg viewBox="0 0 24 24" className="size-6" fill="currentColor" aria-hidden>
-                  <path d="M12 21c-4.2-3.3-7-6.2-7-9.4A4.1 4.1 0 0 1 12 8a4.1 4.1 0 0 1 7 3.6c0 3.2-2.8 6.1-7 9.4Z" opacity="0.9" />
-                  <circle cx="12" cy="11.2" r="2.1" fill="#0c241f" />
-                </svg>
-              </span>
-              <div>
-                <p className="font-display text-[1.15rem] font-bold text-white">
-                  {data.brand.name}
-                </p>
-                <p className="text-[11.5px] text-white/65">{data.brand.tagline}</p>
-              </div>
+            <div>
+              <p className="font-serif text-[1.25rem] font-bold text-white">
+                {data.brand.name}
+              </p>
+              <p className="mt-0.5 text-[12px] text-white/70">
+                {data.brand.tagline}
+              </p>
             </div>
 
             <p className="mt-4 text-[12.5px] leading-relaxed text-white/70">
@@ -149,35 +148,43 @@ export default function Footer() {
               })}
             </div>
 
-            <div className="mt-5 space-y-3 rounded-2xl border border-white/15 bg-white/[0.03] p-3.5">
-              {data.contactBox.map((item) => {
-                const Icon =
-                  contactIconMap[item.icon as keyof typeof contactIconMap] ||
-                  FaPhoneAlt;
-                return (
-                  <a
-                    key={item.id}
-                    href={item.href}
-                    className="flex items-start gap-2.5 transition hover:opacity-90"
-                  >
-                    <span className="mt-0.5 flex size-7 shrink-0 items-center justify-center rounded-full bg-[#e83e74]/15 text-[#f48fb1]">
-                      <Icon className="size-3" />
-                    </span>
-                    <span className="min-w-0 text-[12px] leading-snug text-white/85">
-                      {item.value}
-                      {"isNew" in item && item.isNew ? <NewBadge /> : null}
-                    </span>
-                  </a>
-                );
-              })}
+            <div className="mt-6">
+              <SectionTitle icon={FaPhoneAlt}>
+                {data.helplineTitle}
+              </SectionTitle>
+              <div className="space-y-3">
+                {data.contactBox.map((item) => {
+                  const Icon =
+                    contactIconMap[item.icon as keyof typeof contactIconMap] ||
+                    FaPhoneAlt;
+                  const text = item.value
+                    ? `${item.label}: ${item.value}`
+                    : item.label;
+                  return (
+                    <a
+                      key={item.id}
+                      href={item.href}
+                      className="flex items-start gap-2.5 transition hover:opacity-90"
+                    >
+                      <span className="mt-0.5 flex size-7 shrink-0 items-center justify-center rounded-full bg-[#e83e74]/15 text-[#f48fb1]">
+                        <Icon className="size-3" />
+                      </span>
+                      <span className="min-w-0 text-[12px] leading-snug text-white/85">
+                        {text}
+                        {"isNew" in item && item.isNew ? <NewBadge /> : null}
+                      </span>
+                    </a>
+                  );
+                })}
+              </div>
             </div>
           </StaggerItem>
 
-          {/* Col 2 — Noida */}
           <StaggerItem className="border-white/10 lg:col-span-2 lg:border-l lg:pl-5">
             <SectionTitle icon={FaMapMarkerAlt}>
               {data.noidaClinic.title}
             </SectionTitle>
+            <SubLabel>{data.noidaClinic.subtitle}</SubLabel>
             <p className="text-[13px] font-semibold text-white">
               {data.noidaClinic.hub}
             </p>
@@ -187,7 +194,7 @@ export default function Footer() {
 
             <div className="mt-6">
               <SectionTitle icon={FaStethoscope}>
-                Noida Specific Treatments
+                {data.noidaTreatmentsTitle}
               </SectionTitle>
               <ul className="space-y-2">
                 {data.noidaTreatments.map((item) => (
@@ -199,11 +206,11 @@ export default function Footer() {
             </div>
           </StaggerItem>
 
-          {/* Col 3 — Delhi / Ghaziabad */}
           <StaggerItem className="border-white/10 lg:col-span-3 lg:border-l lg:pl-5">
             <SectionTitle icon={FaBuilding}>
               {data.delhiGhaziabad.title}
             </SectionTitle>
+            <SubLabel>{data.delhiGhaziabad.subtitle}</SubLabel>
             <div className="space-y-4">
               {data.delhiGhaziabad.centers.map((center) => (
                 <div key={center.name}>
@@ -221,7 +228,7 @@ export default function Footer() {
             </div>
 
             <div className="mt-6">
-              <SectionTitle icon={FaBuilding}>Directory</SectionTitle>
+              <SectionTitle icon={FaBuilding}>{data.directoryTitle}</SectionTitle>
               <ul className="space-y-2">
                 {data.directory.map((item) => (
                   <li key={item.label}>
@@ -239,13 +246,19 @@ export default function Footer() {
             </div>
           </StaggerItem>
 
-          {/* Col 4 — Guides */}
           <StaggerItem className="border-white/10 lg:col-span-2 lg:border-l lg:pl-5">
-            <SectionTitle icon={FaBookOpen}>
-              Patient Guides & Articles
-            </SectionTitle>
+            <SectionTitle icon={FaBookOpen}>{data.guidesTitle}</SectionTitle>
+            <SubLabel>{data.educationalHub.title}</SubLabel>
+            <ul className="mb-5 space-y-2.5">
+              {data.educationalHub.items.map((item) => (
+                <li key={item.label}>
+                  <FooterLink href={item.href}>{item.label}</FooterLink>
+                </li>
+              ))}
+            </ul>
+            <SubLabel>{data.highIntentGuides.title}</SubLabel>
             <ul className="space-y-2.5">
-              {data.guides.map((item) => (
+              {data.highIntentGuides.items.map((item) => (
                 <li key={item.label}>
                   <FooterLink
                     href={item.href}
@@ -258,11 +271,11 @@ export default function Footer() {
             </ul>
           </StaggerItem>
 
-          {/* Col 5 — Trust (Book Consultation CTA intentionally omitted) */}
           <StaggerItem className="border-white/10 lg:col-span-2 lg:border-l lg:pl-5">
-            <SectionTitle icon={FaShieldAlt}>Trust & Compliance</SectionTitle>
+            <SectionTitle icon={FaShieldAlt}>{data.trustTitle}</SectionTitle>
+            <SubLabel>{data.trust.subtitle}</SubLabel>
             <ul className="space-y-2.5">
-              {data.trust.map((item) => (
+              {data.trust.items.map((item) => (
                 <li key={item.label}>
                   <FooterLink
                     href={item.href}
@@ -276,22 +289,28 @@ export default function Footer() {
           </StaggerItem>
         </Stagger>
 
-        {/* Bottom bar */}
-        <div className="relative mt-12 border-t border-white/15 pt-6">
-          <span
-            aria-hidden
-            className="absolute -top-2.5 left-1/2 flex size-5 -translate-x-1/2 items-center justify-center rounded-full bg-[#0c241f] text-[#f48fb1]"
-          >
-            <svg viewBox="0 0 16 16" className="size-3.5" fill="currentColor">
-              <path d="M8 2.2c.6 1.2 1.6 2 2.8 2.2-1.2.2-2.2 1-2.8 2.2-.6-1.2-1.6-2-2.8-2.2C6.4 4.2 7.4 3.4 8 2.2Zm0 5.2c.5 1 1.3 1.7 2.3 1.9-1 .2-1.8.9-2.3 1.9-.5-1-1.3-1.7-2.3-1.9 1-.2 1.8-.9 2.3-1.9Z" />
-            </svg>
-          </span>
+        <div className="relative mt-10 space-y-4 border-t border-white/15 pt-5">
+          <p className="flex items-start gap-2 text-[11.5px] leading-relaxed text-white/60">
+            <FaInfoCircle className="mt-0.5 size-3.5 shrink-0 text-[#f48fb1]" />
+            <span>{data.disclaimer}</span>
+          </p>
 
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+          <div className="flex flex-col gap-3 border-t border-white/10 pt-4 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex items-center gap-4 text-[12px] text-white/75">
+              {data.bottomLinks.map((item, index) => (
+                <span key={item.label} className="inline-flex items-center gap-4">
+                  {index > 0 ? (
+                    <span className="text-white/30" aria-hidden>
+                      |
+                    </span>
+                  ) : null}
+                  <a href={item.href} className="transition hover:text-[#f9a8c0]">
+                    {item.label}
+                  </a>
+                </span>
+              ))}
+            </div>
             <p className="text-[12px] text-white/70">{data.copyright}</p>
-            <p className="max-w-xl text-[11.5px] leading-relaxed text-white/55 sm:text-right">
-              {data.disclaimer}
-            </p>
           </div>
         </div>
       </div>

@@ -87,7 +87,7 @@ function FaqCard({
 }
 
 export default function FAQSection() {
-  const { titlePrefix, titleHighlight, subtitle, leftFaqs, rightFaqs } =
+  const { titlePrefix, titleHighlight, cta, leftFaqs, rightFaqs } =
     siteData.faq;
 
   const [openIds, setOpenIds] = useState<string[]>(["faq-01"]);
@@ -111,14 +111,19 @@ export default function FAQSection() {
 
       <div className="mx-auto w-full max-w-[1400px]">
         <Reveal>
-          <header className="mb-7 text-center sm:mb-9">
+          <header className="mb-7 flex flex-col items-start justify-between gap-4 sm:mb-9 sm:flex-row sm:items-center">
             <h2 className="font-serif text-3xl font-bold tracking-tight text-[#0f2438] sm:text-4xl md:text-5xl lg:text-[52px]">
               <span>{titlePrefix} </span>
               <span className="text-[#e11d68]">{titleHighlight}</span>
             </h2>
-            <p className="mx-auto mt-3.5 max-w-xl text-sm font-normal text-gray-500 sm:text-base">
-              {subtitle}
-            </p>
+            {cta ? (
+              <a
+                href={cta.href}
+                className="inline-flex shrink-0 items-center rounded-full border border-[#0f2438]/25 px-5 py-2.5 text-sm font-medium text-[#0f2438] transition-colors hover:border-[#e11d68] hover:text-[#e11d68]"
+              >
+                {cta.label}
+              </a>
+            ) : null}
           </header>
         </Reveal>
 
