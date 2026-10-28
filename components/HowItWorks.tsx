@@ -78,6 +78,11 @@ export default function HowItWorks() {
               >
                 <article className="flex flex-col overflow-hidden rounded-[28px] border border-zinc-100 bg-[#f6f7f9] shadow-[0_12px_36px_rgba(15,23,42,0.08)] sm:flex-row sm:items-stretch">
                   <div className="flex flex-1 flex-col justify-center px-5 py-6 sm:px-9 sm:py-10 lg:px-11 lg:py-12">
+                    {"stepLabel" in step && step.stepLabel ? (
+                      <span className="mb-2 text-[11.5px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:text-[12px]">
+                        {step.stepLabel}
+                      </span>
+                    ) : null}
                     <h3 className="font-display text-[1.35rem] leading-snug font-bold tracking-tight text-zinc-900 sm:text-[1.5rem]">
                       {step.title}
                     </h3>

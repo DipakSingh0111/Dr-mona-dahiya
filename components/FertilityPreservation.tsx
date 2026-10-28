@@ -237,9 +237,6 @@ export default function FertilityPreservation() {
                           {card.subtitle}
                         </p>
                         <div className="my-4 h-px w-[72%] max-w-[200px] bg-gradient-to-r from-[#f0518e] to-transparent" />
-                        <p className="text-[12.5px] leading-relaxed text-white/75 sm:text-[13.5px]">
-                          {card.description}
-                        </p>
                         <a
                           href={data.cta.href}
                           className="mt-auto inline-flex w-fit items-center gap-2.5 rounded-full bg-[#f0518e] px-4 py-2.5 text-[13px] font-semibold text-white transition hover:bg-[#e0437f]"

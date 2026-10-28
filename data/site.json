@@ -222,7 +222,7 @@
     ]
   },
   "whyChoose": {
-    "badge": "Why Choose Us",
+    "badge": "Why choose us?",
     "title": "Why couples choose",
     "titleAccent": "Dr. Mona Dahiya",
     "subtitle": "One well-qualified doctor to lead the care, and all the options are just around the corner.",
@@ -237,52 +237,52 @@
       },
       {
         "number": "02",
-        "icon": "chart",
-        "title": "90%+ success rate",
-        "description": "25K+ happy parents and 15K+ IVF cycles, rated 4.9 by patients on Google.",
-        "color": "teal"
-      },
-      {
-        "number": "03",
-        "icon": "document",
-        "title": "Customised treatment protocols",
-        "description": "Every IVF, IUI or ICSI plan is built around your age, reports and earlier cycles.",
-        "color": "purple"
-      }
-    ],
-    "rightCards": [
-      {
-        "number": "04",
         "icon": "graduation",
         "title": "25+ years of experience",
         "description": "Gold medalist MBBS and MD, DNB, and an IVF fellowship at Singapore General Hospital.",
         "color": "orange"
       },
       {
-        "number": "05",
+        "number": "03",
+        "icon": "chart",
+        "title": "90%+ success rate",
+        "description": "25K+ happy parents and 15K+ IVF cycles, rated 4.9 by patients on Google.",
+        "color": "rose"
+      }
+    ],
+    "rightCards": [
+      {
+        "number": "04",
         "icon": "heartHands",
         "title": "Care for complex cases",
         "description": "Low AMH, PCOS, recurrent miscarriage and couples with failed IVF cycles.",
         "color": "blue"
       },
       {
+        "number": "05",
+        "icon": "document",
+        "title": "Customised treatment protocols",
+        "description": "Every IVF, IUI or ICSI plan is built around your age, reports and earlier cycles.",
+        "color": "teal"
+      },
+      {
         "number": "06",
         "icon": "video",
         "title": "Three clinics & online consults",
         "description": "Noida, Ghaziabad and Delhi, plus video consultations for outstation and international couples.",
-        "color": "rose"
+        "color": "purple"
       }
     ]
   },
   "ourServices": {
-    "eyebrow": "OUR SERVICES",
+    "eyebrow": "Our services",
     "titlePrefix": "For infertility treatment in",
     "titleLocations": [
       "Noida",
       "Delhi",
       "Ghaziabad"
     ],
-    "description": "From a first IUI to advanced IVF work, each treatment is chosen after testing both partners.",
+    "description": "From a first IUI to advanced lab work, each treatment is chosen after testing both partners.",
     "cta": {
       "label": "View all services",
       "href": "#our-services"
@@ -290,8 +290,8 @@
     "items": [
       {
         "id": "ivf",
-        "title": "In vitro Fertilization (IVF)",
-        "description": "Lab fertilisation of eggs and sperm with carefully timed embryo transfer for the best chance of pregnancy.",
+        "title": "In vitro fertilization (IVF)",
+        "description": "IVF is an ART in which egg and sperm are combined in a laboratory dish.",
         "icon": "uterus",
         "image": "/images/services/service-ivf-soft.png",
         "videoHref": "https://www.youtube.com/@drmonadahiya"
@@ -299,7 +299,7 @@
       {
         "id": "iui",
         "title": "Intrauterine Insemination (IUI)",
-        "description": "Prepared sperm placed directly into the uterus around ovulation — a simple first-line fertility option.",
+        "description": "IUI is a fertility procedure in which the doctor injects prepared sperm into the uterus.",
         "icon": "uterus",
         "image": "/images/services/service-iui-soft.png",
         "videoHref": "https://www.youtube.com/@drmonadahiya"
@@ -307,15 +307,15 @@
       {
         "id": "follicular-ultrasound",
         "title": "Follicular Ultrasound",
-        "description": "Cycle monitoring to track follicle growth and pinpoint the ideal window for IUI, IVF or timed intercourse.",
+        "description": "Ovulation induction is a procedure used to induce the growth of follicles by the use of medication.",
         "icon": "monitor",
         "image": "/images/services/service-ultrasound-soft.png",
         "videoHref": "https://www.youtube.com/@drmonadahiya"
       },
       {
         "id": "infertility-tests",
-        "title": "Tests for Infertility",
-        "description": "Complete female fertility work-up including hormones, ultrasound and tubes assessment under one plan.",
+        "title": "Female Infertility Tests",
+        "description": "These tests are useful for a diagnosis of female fertility problems. They involve hormone testing to assess.",
         "icon": "clipboard",
         "image": "/images/services/service-infertility-tests-soft.png",
         "videoHref": "https://www.youtube.com/@drmonadahiya"
@@ -323,7 +323,7 @@
       {
         "id": "male-infertility",
         "title": "Male Infertility Tests",
-        "description": "Semen analysis, DNA fragmentation and advanced male factor evaluation with clear next-step guidance.",
+        "description": "The tests are carried out to evaluate male fertility problems. The most usual test is semen analysis.",
         "icon": "male",
         "image": "/images/services/service-male-infertility-soft.png",
         "videoHref": "https://www.youtube.com/@drmonadahiya"
@@ -331,7 +331,7 @@
       {
         "id": "mini-ivf",
         "title": "Mini IVF",
-        "description": "Gentle, lower-stimulation IVF designed for selected patients who need a softer, more affordable approach.",
+        "description": "Mini IVF (also called micro IVF) is an adapted IVF treatment. It uses smaller amounts of fertility drugs.",
         "icon": "cells",
         "image": "/images/services/service-mini-ivf-soft.png",
         "videoHref": "https://www.youtube.com/@drmonadahiya"
@@ -339,7 +339,7 @@
       {
         "id": "laparoscopy",
         "title": "Laparoscopy & Hysteroscopy",
-        "description": "Keyhole surgery to treat endometriosis, fibroids, polyps and blocked tubes that affect fertility.",
+        "description": "Laparoscopy is a medical procedure that is performed to diagnose and treat endometriosis, blocked fallopian tubes and more.",
         "icon": "uterus",
         "image": "/images/services/service-laparoscopy-soft.png",
         "videoHref": "https://www.youtube.com/@drmonadahiya"
@@ -347,7 +347,7 @@
       {
         "id": "low-amh",
         "title": "Low AMH Treatment",
-        "description": "Personalised protocols for diminished ovarian reserve to maximise egg quality and pregnancy chances.",
+        "description": "Ovarian reserve is the indicator of Anti-Mullerian Hormone (AMH). Low AMH IVF is a treatment for women who have low egg reserve.",
         "icon": "drop",
         "image": "/images/services/service-low-amh-soft.png",
         "videoHref": "https://www.youtube.com/@drmonadahiya"
@@ -355,7 +355,7 @@
       {
         "id": "cryopreservation",
         "title": "Embryo Cryopreservation",
-        "description": "Safe freezing of embryos for future FET cycles, fertility preservation or family planning later.",
+        "description": "Embryo Cryopreservation is the procedure of freezing and preserving IVF (in-vitro-fertilization) embryos for future use.",
         "icon": "snowflake",
         "image": "/images/services/service-cryopreservation-soft.png",
         "videoHref": "https://www.youtube.com/@drmonadahiya"
@@ -363,7 +363,7 @@
       {
         "id": "era",
         "title": "Endometrial Receptivity Array",
-        "description": "ERA testing to find your personal implantation window after failed transfers or thin lining concerns.",
+        "description": "Endometrial Receptivity Array is a test that evaluates the receptivity of the uterine lining (endometrium) for embryo implantation.",
         "icon": "uterus",
         "image": "/images/services/service-era-soft.png",
         "videoHref": "https://www.youtube.com/@drmonadahiya"
@@ -371,7 +371,7 @@
       {
         "id": "donor-gametes",
         "title": "Donor Gametes",
-        "description": "Carefully screened donor egg or sperm programmes when own gametes are not an option for parenthood.",
+        "description": "Donor Gametes are gametes, or reproductive cells, that are contributed by individuals who wish to help other couples.",
         "icon": "dna",
         "image": "/images/services/service-donor-gametes-soft.png",
         "videoHref": "https://www.youtube.com/@drmonadahiya"
@@ -379,7 +379,7 @@
       {
         "id": "pgt",
         "title": "Preimplantation Genetic Testing",
-        "description": "PGT screening of embryos for chromosomal or genetic conditions before transfer for safer IVF outcomes.",
+        "description": "Preimplantation Genetic Testing (PGT) is a cutting-edge fertility treatment in which embryos formed via IVF are screened for genetic disorders.",
         "icon": "dna",
         "image": "/images/services/service-pgt-soft.png",
         "videoHref": "https://www.youtube.com/@drmonadahiya"
@@ -387,26 +387,26 @@
     ]
   },
   "advancedServices": {
-    "eyebrow": "ADVANCED SERVICES",
+    "eyebrow": "Advanced care · Infertility treatment options",
     "topCards": [
       {
         "id": "fertility-testing",
         "title": "Fertility Testing",
-        "description": "Fertility tests to assess reproductive health and prevent any successful conception.",
+        "description": "Fertility tests to assess reproductive health and potential for successful conception.",
         "icon": "sperm",
         "theme": "rose"
       },
       {
         "id": "genetic-testing",
         "title": "Genetic Testing",
-        "description": "Vital video facilities for DNA genetic testing for hereditary issues.",
+        "description": "World-class facilities for DNA genetic testing for hereditary issues.",
         "icon": "dna",
         "theme": "blue"
       },
       {
         "id": "fertility-preservation",
         "title": "Fertility Preservation",
-        "description": "Diverse options to preserve fertility for future dreams under life's uncertainties.",
+        "description": "Diverse options to preserve fertility for future dreams amidst life's uncertainties.",
         "icon": "uterus",
         "theme": "green"
       }
@@ -419,7 +419,7 @@
         "Endometriosis",
         "Blocked tubes",
         "Recurrent miscarriage",
-        "Failed IVF (PIF)",
+        "Failed IVF (RIF)",
         "All female infertility"
       ]
     },
@@ -435,23 +435,26 @@
     }
   },
   "howItWorks": {
-    "badge": "How It Work",
-    "title": "We guide you\nthrough every\nstage with\ntransparency",
+    "badge": "How it works",
+    "title": "Start your\ntreatment in 3\nsimple steps",
     "steps": [
       {
         "id": "step-1",
+        "stepLabel": "STEP 1",
         "title": "Book a consultation",
         "description": "Meet Dr. Mona at the Noida, Ghaziabad or Delhi clinic, or on a video call from anywhere.",
         "image": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=900&q=85"
       },
       {
         "id": "step-2",
+        "stepLabel": "STEP 2",
         "title": "Get tested & get a plan",
         "description": "Both partners are tested, and Dr. Mona explains the right treatment for your reports.",
         "image": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=900&q=85"
       },
       {
         "id": "step-3",
+        "stepLabel": "STEP 3",
         "title": "Begin your treatment",
         "description": "Start IUI, IVF or another treatment with her personal follow-up at every stage.",
         "image": "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=900&q=85"
@@ -463,11 +466,11 @@
     "titleLine1": "Doctor-led fertility",
     "titleLine2": "care, from first",
     "titleAccent": "scan to positive test",
-    "description": "Dr. Mona Dahiya is a gold medalist fertility specialist with 25+ years of experience, trained at leading centres in India and Singapore. She personally plans every cycle and stays with you from the first scan to a positive test.",
+    "description": "Dr. Mona Dahiya received her training from Lady Hardinge and Maulana Azad Medical Colleges in New Delhi and did her IVF fellowship at Singapore General Hospital, and she is an associate professor by training. She always meets couples herself on every visit.",
     "features": [
       "Personal protocol for every cycle",
-      "Laparoscopy & hysteroscopy in-house",
       "Expertise in low AMH and failed IVF",
+      "Laparoscopy & hysteroscopy in-house",
       "Clinics in Noida, Ghaziabad & Delhi"
     ],
     "primaryCta": {
@@ -514,7 +517,7 @@
     }
   },
   "fertilityPreservation": {
-    "eyebrow": "Fertility Preservation",
+    "eyebrow": "Fertility preservation",
     "title": "Keep the option of",
     "titleAccent": "parenthood",
     "titleEnd": "open",
@@ -539,7 +542,7 @@
         "id": "sperm",
         "number": "02",
         "title": "Sperm freezing",
-        "subtitle": "Secure male fertility for later",
+        "subtitle": "Semen banking for men",
         "description": "Preserve sperm before surgery, travel, medical treatment or when timing is uncertain. Samples are processed and stored under controlled laboratory conditions.",
         "icon": "sperm",
         "accent": "pink",
@@ -549,7 +552,7 @@
         "id": "embryo",
         "number": "03",
         "title": "Embryo freezing",
-        "subtitle": "Bank embryos across cycles",
+        "subtitle": "Vitrification and embryo banking",
         "description": "Create and freeze embryos for future transfer. Ideal for couples planning treatment across multiple cycles or needing to pause between stages of care.",
         "icon": "embryo",
         "accent": "purple",
@@ -559,7 +562,7 @@
         "id": "onco",
         "number": "04",
         "title": "Oncofertility",
-        "subtitle": "Fertility care before cancer treatment",
+        "subtitle": "Preservation before cancer treatment",
         "description": "Urgent fertility preservation for patients starting chemotherapy or radiation. We coordinate quickly with your oncology team so options stay open.",
         "icon": "ribbon",
         "accent": "teal",
@@ -811,11 +814,99 @@
       },
       {
         "id": "story-4",
-        "quote": "After 6 failed cycles elsewhere, Dr. Mona's personalized protocol gave us our miracle baby girl.",
-        "initials": "SK",
-        "author": "Sunita & Karan",
+        "quote": "Dr. Dahiya's guidance and support has given us precious twins.",
+        "initials": "NV",
+        "author": "Neha & Vikram",
         "type": "Patient testimonial",
         "image": "https://images.unsplash.com/photo-1492725764893-90b379c2b6e7?auto=format&fit=crop&w=700&q=85"
+      },
+      {
+        "id": "story-5",
+        "quote": "We are now a complete family.",
+        "initials": "SM",
+        "author": "Sunita & Madhav",
+        "type": "Patient testimonial",
+        "image": "https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=700&q=85"
+      },
+      {
+        "id": "story-6",
+        "quote": "Our family is complete because of her Magical Treatment.",
+        "initials": "SA",
+        "author": "Shikha & Amit",
+        "type": "Patient testimonial",
+        "image": "https://images.unsplash.com/photo-1536640712-4d4c36ff0e4e?auto=format&fit=crop&w=700&q=85"
+      },
+      {
+        "id": "story-7",
+        "quote": "After multiple failures, we finally have our baby boy.",
+        "initials": "KP",
+        "author": "Kavita & Purnav",
+        "type": "Patient testimonial",
+        "image": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=700&q=85"
+      },
+      {
+        "id": "story-8",
+        "quote": "We have got Two little miracles!",
+        "initials": "PR",
+        "author": "Pooja & Rajiv",
+        "type": "Patient testimonial",
+        "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&w=700&q=85"
+      },
+      {
+        "id": "story-9",
+        "quote": "Her support and medical brilliance are exceptional.",
+        "initials": "DP",
+        "author": "Divya & Pratyaksh",
+        "type": "Patient testimonial",
+        "image": "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=700&q=85"
+      },
+      {
+        "id": "story-10",
+        "quote": "Thanks to Dr. Mona, we have got the Child that we dreamt about.",
+        "initials": "AA",
+        "author": "Ameena & Ahmad",
+        "type": "Patient testimonial",
+        "image": "https://images.unsplash.com/photo-1476703993599-0035a21b17a9?auto=format&fit=crop&w=700&q=85"
+      },
+      {
+        "id": "story-11",
+        "quote": "Dr. Mona's IUI treatment brought us our baby after years of heartbreak.",
+        "initials": "SR",
+        "author": "Sonal & Raghav",
+        "type": "Patient testimonial",
+        "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=700&q=85"
+      },
+      {
+        "id": "story-12",
+        "quote": "We have got Twins after one attempt!",
+        "initials": "NA",
+        "author": "Nidhi & Aman",
+        "type": "Patient testimonial",
+        "image": "https://images.unsplash.com/photo-1492725764893-90b379c2b6e7?auto=format&fit=crop&w=700&q=85"
+      },
+      {
+        "id": "story-13",
+        "quote": "After 5 years, we have our baby girl.",
+        "initials": "AP",
+        "author": "Arushi & Pratham",
+        "type": "Patient testimonial",
+        "image": "https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=700&q=85"
+      },
+      {
+        "id": "story-14",
+        "quote": "We have got our little Angel and we are elated.",
+        "initials": "RS",
+        "author": "Ritu & Sanjay",
+        "type": "Patient testimonial",
+        "image": "https://images.unsplash.com/photo-1536640712-4d4c36ff0e4e?auto=format&fit=crop&w=700&q=85"
+      },
+      {
+        "id": "story-15",
+        "quote": "After a lot of struggles, we hold our baby boy.",
+        "initials": "AA",
+        "author": "Akansha & Ashish",
+        "type": "Patient testimonial",
+        "image": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=700&q=85"
       }
     ]
   },

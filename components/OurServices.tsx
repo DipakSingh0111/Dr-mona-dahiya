@@ -116,7 +116,7 @@ export default function OurServices() {
     >
       <div className="mx-auto w-full max-w-[1400px]">
         <Reveal>
-          <div className="mb-6 max-w-3xl sm:mb-8">
+          <div className="mb-6 sm:mb-8">
             <div className="mb-4 flex items-center gap-3">
               <span className="text-[12px] font-bold tracking-[0.16em] text-[#e83e74] uppercase sm:text-[13px]">
                 {eyebrow}
@@ -124,7 +124,7 @@ export default function OurServices() {
               <span className="h-[2px] w-10 rounded-full bg-[#e83e74]" />
             </div>
 
-            <h2 className="font-display text-[1.85rem] leading-[1.2] font-bold tracking-tight text-[#0f2038] sm:text-[2.35rem] lg:text-[2.7rem]">
+            <h2 className="font-display text-[1.6rem] leading-[1.2] font-bold tracking-tight text-[#0f2038] sm:text-[2.1rem] lg:whitespace-nowrap lg:text-[2.55rem] xl:text-[2.7rem]">
               {titlePrefix}{" "}
               <span className="text-[#e83e74]">
                 {titleLocations.join(" | ")}
