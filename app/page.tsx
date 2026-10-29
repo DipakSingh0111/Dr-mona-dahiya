@@ -19,6 +19,7 @@ import BookAppointment from "@/components/BookAppointment";
 import FAQSection from "@/components/FAQSection";
 import ParenthoodCta from "@/components/ParenthoodCta";
 import Footer from "@/components/Footer";
+import FloatingActions from "@/components/FloatingActions";
 import { SectionReveal } from "@/components/Reveal";
 
 export default function Home() {
@@ -102,6 +103,8 @@ export default function Home() {
       <SectionReveal>
         <Footer />
       </SectionReveal>
+
+      <FloatingActions />
     </main>
   );
 }
