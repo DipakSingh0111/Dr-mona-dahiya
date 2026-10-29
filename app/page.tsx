@@ -24,12 +24,14 @@ import { SectionReveal } from "@/components/Reveal";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
-      {/* Header + Hero in normal flow so hero banner starts flush right below the menu */}
+      {/* Sticky TopBar + Navbar — stays fixed at top while scrolling */}
+      <div className="sticky top-0 z-50 w-full shrink-0 shadow-[0_4px_20px_rgba(0,25,90,0.22)]">
+        <TopBar />
+        <Navbar />
+      </div>
+
+      {/* Hero starts flush right below the sticky header */}
       <div className="relative isolate flex flex-col overflow-hidden bg-[#0047ca]">
-        <div className="relative z-50 shrink-0">
-          <TopBar />
-          <Navbar />
-        </div>
         <HeroSection />
       </div>
 
@@ -37,6 +39,10 @@ export default function Home() {
 
       <SectionReveal>
         <MedicalRegistration />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <MeetYourDoctor />
       </SectionReveal>
 
       <SectionReveal delay={0.04}>
@@ -54,15 +60,11 @@ export default function Home() {
       <HowItWorks />
 
       <SectionReveal delay={0.04}>
-        <MeetYourDoctor />
+        <FertilityPreservation />
       </SectionReveal>
 
       <SectionReveal delay={0.04}>
         <Publications />
-      </SectionReveal>
-
-      <SectionReveal delay={0.04}>
-        <FertilityPreservation />
       </SectionReveal>
 
       <SectionReveal delay={0.04}>

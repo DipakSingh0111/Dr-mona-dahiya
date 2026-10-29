@@ -53,7 +53,7 @@ export default function HowItWorks() {
       <div className="relative mx-auto w-full max-w-[1440px]">
         <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-12 lg:gap-10 xl:gap-16">
           {/* Left sticky heading */}
-          <div className="relative lg:sticky lg:top-28 lg:col-span-4 lg:self-start">
+          <div className="relative lg:sticky lg:top-44 lg:col-span-4 lg:self-start">
             <WaveBackdrop />
 
             <div className="relative z-10">
@@ -73,7 +73,7 @@ export default function HowItWorks() {
             {steps.map((step, index) => (
               <div
                 key={step.id}
-                className="sticky top-24 mb-8 sm:top-28 sm:mb-10 lg:mb-12"
+                className="sticky top-28 mb-8 sm:top-36 sm:mb-10 lg:top-44 lg:mb-12"
                 style={{ zIndex: index + 1 }}
               >
                 <article className="flex flex-col overflow-hidden rounded-[28px] border border-zinc-100 bg-[#f6f7f9] shadow-[0_12px_36px_rgba(15,23,42,0.08)] sm:flex-row sm:items-stretch">
