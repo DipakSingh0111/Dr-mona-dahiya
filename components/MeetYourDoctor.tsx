@@ -209,7 +209,7 @@ export default function MeetYourDoctor() {
   return (
     <section
       id="about"
-      className="relative overflow-hidden px-3 py-6 sm:px-4 sm:py-7 lg:pr-8 lg:pl-3 lg:py-8 xl:pl-4"
+      className="relative overflow-hidden px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8"
       style={{
         background:
           "linear-gradient(165deg, #ffffff 0%, #fff8fb 28%, #fff5f9 55%, #ffffff 100%)",
@@ -241,20 +241,20 @@ export default function MeetYourDoctor() {
         }}
       />
 
-      <div className="relative mx-auto w-full max-w-[1400px]">
-        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[1fr_auto_1fr] lg:gap-6 xl:gap-8">
-          <Reveal variant="slideLeft" className="relative z-10 w-full">
-            <span className="inline-flex items-center gap-2 rounded-full border border-[#f9c5d4]/60 bg-gradient-to-r from-[#ffe8f0] to-[#fff5f8] px-3.5 py-1.5 text-[12px] font-semibold text-[#e83e74] shadow-[0_4px_14px_rgba(232,62,116,0.08)]">
+      <div className="relative mx-auto w-full max-w-[1440px]">
+        <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[minmax(0,1fr)_310px_minmax(0,1fr)] lg:gap-5 xl:grid-cols-[minmax(0,1fr)_380px_minmax(0,1fr)] xl:gap-8">
+          <Reveal variant="slideLeft" className="relative z-10 w-full min-w-0">
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#f9c5d4]/60 bg-gradient-to-r from-[#ffe8f0] to-[#fff5f8] px-3.5 py-1.5 text-[12px] font-semibold whitespace-nowrap text-[#e83e74] shadow-[0_4px_14px_rgba(232,62,116,0.08)]">
               <span className="size-1.5 rounded-full bg-gradient-to-br from-[#f4729a] to-[#e83e74]" />
               {data.badge}
             </span>
 
-            <h2 className="font-display mt-5 text-[2.1rem] leading-[1.18] font-bold tracking-[-0.02em] text-[#0f2038] sm:text-[2.5rem] lg:text-[2.75rem]">
-              {data.titleLine1}
+            <h2 className="font-display mt-5 text-[1.85rem] leading-[1.18] font-bold tracking-[-0.02em] text-[#0f2038] sm:text-[2.35rem] lg:text-[2.25rem] xl:text-[2.75rem]">
+              <span className="sm:whitespace-nowrap">{data.titleLine1}</span>
               <br />
-              {data.titleLine2}
+              <span className="sm:whitespace-nowrap">{data.titleLine2}</span>
               <br />
-              <span className="bg-gradient-to-r from-[#e83e74] via-[#f0518e] to-[#c53658] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#e83e74] via-[#f0518e] to-[#c53658] bg-clip-text text-transparent sm:whitespace-nowrap">
                 {data.titleAccent}
               </span>
             </h2>
@@ -263,26 +263,26 @@ export default function MeetYourDoctor() {
               {data.description}
             </p>
 
-            <ul className="mt-7 grid grid-cols-1 gap-x-6 gap-y-3.5 sm:grid-cols-2">
+            <ul className="mt-6 grid grid-cols-1 gap-x-4 gap-y-3 sm:grid-cols-2 xl:mt-7 xl:gap-x-6 xl:gap-y-3.5">
               {data.features.map((feature) => (
-                <li key={feature} className="flex items-start gap-2.5">
+                <li key={feature} className="flex items-start gap-2">
                   <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-[#ffe8f0] text-[#e83e74]">
                     <FaCheck className="size-2.5" />
                   </span>
-                  <span className="text-[13px] leading-snug font-semibold text-[#1e293b] sm:text-[13.5px]">
+                  <span className="text-[12.5px] leading-snug font-semibold text-[#1e293b] xl:text-[13.5px]">
                     {feature}
                   </span>
                 </li>
               ))}
             </ul>
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <div className="mt-7 flex flex-col gap-2.5 sm:flex-row sm:flex-nowrap sm:items-center xl:mt-8 xl:gap-3">
               <a
                 href={data.primaryCta.href}
-                className="inline-flex items-center justify-center gap-2.5 rounded-full bg-gradient-to-r from-[#e83e74] via-[#f0518e] to-[#d13266] px-4.5 py-2.5 text-[12.5px] font-semibold text-white whitespace-nowrap shadow-[0_10px_28px_rgba(232,62,116,0.32)] transition hover:brightness-105 xl:px-5 xl:py-3 xl:text-[13.5px]"
+                className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#e83e74] via-[#f0518e] to-[#d13266] px-3.5 py-2.5 text-[11.5px] font-semibold text-white whitespace-nowrap shadow-[0_10px_28px_rgba(232,62,116,0.32)] transition hover:brightness-105 xl:gap-2.5 xl:px-5 xl:py-3 xl:text-[13.5px]"
               >
                 <span>{data.primaryCta.label}</span>
-                <span className="flex size-5.5 items-center justify-center rounded-full bg-white text-[#e83e74] xl:size-6">
+                <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-white text-[#e83e74] xl:size-6">
                   <FaArrowRight className="size-2.5" />
                 </span>
               </a>
@@ -291,9 +291,9 @@ export default function MeetYourDoctor() {
                 href={data.secondaryCta.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-[#f5a3bd] bg-gradient-to-r from-white to-[#fff5f8] px-4 py-2.5 text-[12.5px] font-semibold text-[#e83e74] whitespace-nowrap shadow-[0_6px_18px_rgba(232,62,116,0.08)] transition hover:from-[#fff5f8] hover:to-[#ffe8f0] xl:gap-2.5 xl:px-5 xl:py-3 xl:text-[13.5px]"
+                className="inline-flex shrink-0 items-center justify-center gap-1.5 rounded-full border border-[#f5a3bd] bg-gradient-to-r from-white to-[#fff5f8] px-3.5 py-2.5 text-[11.5px] font-semibold text-[#e83e74] whitespace-nowrap shadow-[0_6px_18px_rgba(232,62,116,0.08)] transition hover:from-[#fff5f8] hover:to-[#ffe8f0] xl:gap-2.5 xl:px-5 xl:py-3 xl:text-[13.5px]"
               >
-                <FaYoutube className="size-4.5 shrink-0 text-[#ff0033] xl:size-5" />
+                <FaYoutube className="size-4 shrink-0 text-[#ff0033] xl:size-5" />
                 <span>{data.secondaryCta.label}</span>
               </a>
             </div>
@@ -301,7 +301,7 @@ export default function MeetYourDoctor() {
 
           <Reveal
             variant="scaleIn"
-            className="relative mx-auto flex h-[420px] w-[340px] shrink-0 items-end justify-center overflow-visible sm:h-[480px] sm:w-[380px] lg:h-[540px] lg:w-[380px] xl:w-[400px]"
+            className="relative mx-auto flex h-[400px] w-[300px] shrink-0 items-end justify-center overflow-visible sm:h-[460px] sm:w-[350px] lg:h-[480px] lg:w-[310px] xl:h-[540px] xl:w-[380px]"
           >
             {/* Solid soft pink circle — clearly visible behind cutout */}
             <div
@@ -349,19 +349,19 @@ export default function MeetYourDoctor() {
 
           <Reveal
             variant="slideRight"
-            className="relative z-10 w-full"
+            className="relative z-10 w-full min-w-0"
           >
             <article
-              className="mx-auto w-full max-w-[460px] rounded-[28px] border border-[#f7c9d8]/80 p-6 shadow-[0_20px_48px_rgba(232,62,116,0.12)] sm:p-7 lg:mx-0 lg:p-7 xl:p-8"
+              className="mx-auto w-full max-w-[460px] rounded-[28px] border border-[#f7c9d8]/80 p-5 shadow-[0_20px_48px_rgba(232,62,116,0.12)] sm:p-7 lg:mx-0 lg:p-6 xl:p-8"
               style={{
                 background:
                   "linear-gradient(160deg, #fff8fb 0%, #fff0f5 42%, #ffe8f0 100%)",
               }}
             >
-              <p className="text-[13px] font-bold tracking-wide text-[#e11d60] sm:text-[14px]">
+              <p className="text-[12.5px] font-bold tracking-wide text-[#e11d60] sm:whitespace-nowrap sm:text-[13.5px]">
                 {card.eyebrow}
               </p>
-              <h3 className="font-display mt-2 text-[2.2rem] leading-none font-bold sm:text-[2.45rem]">
+              <h3 className="font-display mt-2 text-[1.85rem] leading-none font-bold sm:whitespace-nowrap sm:text-[2.25rem] xl:text-[2.45rem]">
                 <span className="text-[#0f2438]">{card.namePrefix}</span>{" "}
                 <span className="bg-gradient-to-r from-[#e11d60] to-[#f0518e] bg-clip-text text-transparent">
                   {card.name}

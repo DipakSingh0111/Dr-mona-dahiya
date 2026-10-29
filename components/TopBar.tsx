@@ -8,7 +8,7 @@ function TopBarItem({ item }: { item: TopBarLink }) {
   const content = (
     <>
       {Icon ? <Icon className="size-3.5 shrink-0 opacity-90 sm:size-4" /> : null}
-      <span>{item.label}</span>
+      <span className="whitespace-nowrap">{item.label}</span>
     </>
   );
 
@@ -16,7 +16,7 @@ function TopBarItem({ item }: { item: TopBarLink }) {
     return (
       <a
         href={item.href}
-        className="inline-flex items-center gap-1.5 text-[13px] font-medium text-white/90 transition-colors hover:text-white sm:text-[13.5px]"
+        className="inline-flex shrink-0 items-center gap-1.5 text-[11.5px] font-medium whitespace-nowrap text-white/90 transition-colors hover:text-white lg:text-[11.5px] xl:text-[13px]"
       >
         {content}
       </a>
@@ -24,7 +24,7 @@ function TopBarItem({ item }: { item: TopBarLink }) {
   }
 
   return (
-    <span className="inline-flex items-center gap-1.5 text-[13px] font-medium text-white/90 sm:text-[13.5px]">
+    <span className="inline-flex shrink-0 items-center gap-1.5 text-[11.5px] font-medium whitespace-nowrap text-white/90 lg:text-[11.5px] xl:text-[13px]">
       {content}
     </span>
   );
@@ -41,31 +41,31 @@ export default function TopBar() {
 
   return (
     <div
-      className="relative z-50 text-[12px] text-white/90 sm:text-[13px]"
+      className="relative z-50 text-[11.5px] text-white/90 xl:text-[13px]"
       style={{
         background:
           "linear-gradient(105deg, #0039b8 0%, #0047ca 42%, #1a5fd4 72%, #2b7de8 100%)",
       }}
     >
-      <div className="mx-auto flex h-9 max-w-[1440px] items-center justify-between gap-2 px-4 sm:h-10 sm:gap-4 sm:px-6 lg:px-8">
-        <div className="flex min-w-0 items-center gap-3 sm:gap-5">
+      <div className="mx-auto flex h-8 max-w-[1440px] items-center justify-between gap-2 px-4 sm:h-9 sm:gap-4 sm:px-6 lg:px-8 xl:h-10">
+        <div className="flex min-w-0 items-center gap-3 sm:gap-4 lg:gap-5">
           {locations.map((location, index) => (
             <a
               key={location.label}
               href={location.href}
-              className={`inline-flex shrink-0 items-center gap-1.5 transition-colors hover:text-white ${
+              className={`inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap transition-colors hover:text-white ${
                 index === 2 ? "max-[390px]:hidden" : ""
               }`}
             >
-              <Pin className="size-3.5 opacity-80" />
+              <Pin className="size-3.5 shrink-0 opacity-80" />
               <span>{location.label}</span>
             </a>
           ))}
         </div>
 
-        <div className="hidden items-center gap-3.5 md:flex lg:gap-5 xl:gap-6">
+        <div className="hidden items-center gap-3 md:flex lg:gap-3.5 xl:gap-6">
           {topLinks.map((item, idx) => (
-            <div key={item.label} className="flex items-center gap-3.5 lg:gap-5 xl:gap-6">
+            <div key={item.label} className="flex shrink-0 items-center gap-3 lg:gap-3.5 xl:gap-6">
               {idx > 0 && item.type === "hours" ? (
                 <span className="text-white/30">|</span>
               ) : null}

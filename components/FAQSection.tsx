@@ -97,7 +97,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="relative isolate overflow-hidden bg-white px-3 py-6 sm:px-4 sm:py-7 lg:pr-8 lg:pl-3 lg:py-8 xl:pl-4">
+    <section className="relative isolate overflow-hidden bg-white px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
       <div
         aria-hidden
         className="pointer-events-none absolute -top-24 left-1/2 -z-10 h-[420px] w-[120%] -translate-x-1/2 rounded-full"
@@ -107,17 +107,17 @@ export default function FAQSection() {
         }}
       />
 
-      <div className="mx-auto w-full max-w-[1400px]">
+      <div className="mx-auto w-full max-w-[1440px]">
         <Reveal>
           <header className="mb-7 flex flex-col items-start justify-between gap-4 sm:mb-9 sm:flex-row sm:items-center">
-            <h2 className="font-serif text-3xl font-bold tracking-tight text-[#0f2438] sm:text-4xl md:text-5xl lg:text-[52px]">
+            <h2 className="font-serif text-2xl font-bold tracking-tight text-[#0f2438] sm:whitespace-nowrap sm:text-3xl lg:text-[2.2rem] xl:text-[2.75rem]">
               <span>{titlePrefix} </span>
               <span className="text-[#e11d68]">{titleHighlight}</span>
             </h2>
             {cta ? (
               <a
                 href={cta.href}
-                className="inline-flex shrink-0 items-center rounded-full border border-[#0f2438]/25 px-5 py-2.5 text-sm font-medium text-[#0f2438] transition-colors hover:border-[#e11d68] hover:text-[#e11d68]"
+                className="inline-flex shrink-0 items-center rounded-full border border-[#0f2438]/25 px-5 py-2.5 text-sm font-medium whitespace-nowrap text-[#0f2438] transition-colors hover:border-[#e11d68] hover:text-[#e11d68]"
               >
                 {cta.label}
               </a>

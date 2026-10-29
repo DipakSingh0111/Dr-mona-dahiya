@@ -9,24 +9,24 @@ export default function Affiliations() {
   const data = siteData.affiliations;
 
   return (
-    <section className="relative overflow-hidden bg-white px-3 py-6 sm:px-4 sm:py-7 lg:pr-8 lg:pl-3 lg:py-8 xl:pl-4">
-      <div className="mx-auto w-full max-w-[1400px]">
+    <section className="relative overflow-hidden bg-white px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
+      <div className="mx-auto w-full max-w-[1440px]">
         <Reveal>
-          <div className="mb-6 flex flex-col gap-3 sm:mb-7 lg:mb-8 lg:flex-row lg:items-end lg:justify-between">
-            <div>
-              <div className="mb-3.5 flex items-center gap-3">
-                <span className="h-px w-8 bg-[#e83e74] sm:w-10" />
-                <span className="text-[12px] font-semibold tracking-wide text-[#e83e74] sm:text-[13px]">
+          <div className="mb-6 flex flex-col gap-3 sm:mb-7 lg:mb-8 lg:flex-row lg:items-end lg:justify-between lg:gap-6">
+            <div className="shrink-0">
+              <div className="mb-3.5 flex items-center gap-2.5 sm:gap-3">
+                <span className="h-px w-6 shrink-0 bg-[#e83e74] sm:w-10" />
+                <span className="text-[11.5px] font-semibold tracking-wide text-[#e83e74] sm:whitespace-nowrap sm:text-[13px]">
                   {data.eyebrow}
                 </span>
-                <span className="h-px w-8 bg-[#e83e74] sm:w-10" />
+                <span className="h-px w-6 shrink-0 bg-[#e83e74] sm:w-10" />
               </div>
-              <h2 className="font-display text-[1.9rem] leading-tight font-bold tracking-tight text-[#0f2438] sm:text-[2.35rem] lg:text-[2.65rem]">
+              <h2 className="font-display text-[1.65rem] leading-tight font-bold tracking-tight text-[#0f2438] sm:whitespace-nowrap sm:text-[2rem] lg:text-[2.1rem] xl:text-[2.55rem]">
                 {data.title}{" "}
                 <span className="text-[#e83e74]">{data.titleAccent}</span>
               </h2>
             </div>
-            <p className="max-w-xl text-[13.5px] leading-relaxed text-[#64748b] sm:text-[14.5px] lg:whitespace-nowrap lg:text-right">
+            <p className="max-w-none text-[12px] leading-relaxed text-[#64748b] sm:text-[13px] lg:whitespace-nowrap lg:text-right xl:text-[14.5px]">
               {data.subtitle}
             </p>
           </div>

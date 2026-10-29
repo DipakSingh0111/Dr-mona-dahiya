@@ -9,7 +9,7 @@ export default function LatestBlog() {
     siteData.latestBlog;
 
   return (
-    <section className="relative overflow-hidden bg-white px-3 py-6 sm:px-4 sm:py-7 lg:pr-8 lg:pl-3 lg:py-8 xl:pl-4">
+    <section className="relative overflow-hidden bg-white px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
       {/* Soft pink organic blobs — reference style */}
       <div
         aria-hidden
@@ -28,19 +28,19 @@ export default function LatestBlog() {
         }}
       />
 
-      <div className="mx-auto w-full max-w-[1400px]">
+      <div className="mx-auto w-full max-w-[1440px]">
         {/* Header */}
         <div className="mb-6 flex flex-col items-start justify-between gap-5 sm:mb-8 sm:flex-row sm:items-end">
           <div className="w-full text-center sm:max-w-xl sm:text-left">
-            <div className="mb-3.5 flex items-center justify-center gap-3 sm:justify-start">
-              <span className="h-px w-10 bg-[#e83e74] sm:w-12" />
-              <span className="text-[12px] font-bold tracking-[0.16em] text-[#e83e74] uppercase sm:text-[13px]">
+            <div className="mb-3.5 flex items-center justify-center gap-2.5 sm:justify-start sm:gap-3">
+              <span className="h-px w-7 shrink-0 bg-[#e83e74] sm:w-12" />
+              <span className="text-[11px] font-bold tracking-[0.13em] text-[#e83e74] uppercase sm:whitespace-nowrap sm:text-[13px] sm:tracking-[0.16em]">
                 {eyebrow}
               </span>
-              <span className="h-px w-10 bg-[#e83e74] sm:w-12" />
+              <span className="h-px w-7 shrink-0 bg-[#e83e74] sm:w-12" />
             </div>
 
-            <h2 className="font-display text-3xl leading-[1.14] font-bold tracking-tight text-[#0f2438] sm:text-4xl md:text-[46px] lg:text-[50px]">
+            <h2 className="font-display text-2xl leading-[1.14] font-bold tracking-tight text-[#0f2438] sm:whitespace-nowrap sm:text-3xl lg:text-[2.2rem] xl:text-[2.75rem]">
               {titlePrefix}{" "}
               <span className="text-[#e83e74]">{titleHighlight}</span>
             </h2>
@@ -48,7 +48,7 @@ export default function LatestBlog() {
 
           <a
             href={cta.href}
-            className="inline-flex shrink-0 items-center gap-2 self-center rounded-full border border-[#f0a8bc] bg-white px-5 py-2.5 text-[13px] font-semibold text-[#e83e74] transition hover:bg-[#fff5f8] sm:self-auto"
+            className="inline-flex shrink-0 items-center gap-2 self-center rounded-full border border-[#f0a8bc] bg-white px-5 py-2.5 text-[13px] font-semibold whitespace-nowrap text-[#e83e74] transition hover:bg-[#fff5f8] sm:self-auto"
           >
             {cta.label}
             <FaArrowRight className="size-3" />

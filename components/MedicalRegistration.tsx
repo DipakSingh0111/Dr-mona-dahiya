@@ -109,16 +109,16 @@ function RegistrationCard({
 
         <div className="h-12 w-px shrink-0 bg-[#e5e7eb] sm:h-14" />
 
-        <div className="min-w-0 flex-1 pr-8">
-          <h4 className="text-[12.5px] leading-snug font-bold tracking-tight text-[#1e293b] sm:text-[13.5px]">
+        <div className="min-w-0 flex-1 pr-4 sm:pr-6 xl:pr-8">
+          <h4 className="text-[12px] leading-snug font-bold tracking-tight text-[#1e293b] sm:text-[13px] lg:whitespace-nowrap xl:text-[13.5px]">
             {councilName}
           </h4>
           <p
-            className={`font-display mt-1 text-[1.35rem] leading-none font-bold tracking-tight sm:text-[1.55rem] ${scheme.num}`}
+            className={`font-display mt-1 text-[1.25rem] leading-none font-bold tracking-tight whitespace-nowrap sm:text-[1.45rem] xl:text-[1.55rem] ${scheme.num}`}
           >
             {regNumber}
           </p>
-          <p className="mt-1.5 text-[11px] leading-snug text-[#94a3b8] sm:text-[11.5px]">
+          <p className="mt-1.5 text-[11px] leading-snug text-[#94a3b8] sm:text-[11.5px] lg:whitespace-nowrap">
             {regLabel}
           </p>
         </div>
@@ -132,8 +132,8 @@ export default function MedicalRegistration() {
     siteData.medicalRegistration;
 
   return (
-    <section className="bg-white px-3 py-6 sm:px-4 sm:py-7 lg:pr-8 lg:pl-3 lg:py-8 xl:pl-4">
-      <div className="mx-auto w-full max-w-[1400px]">
+    <section className="bg-white px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
+      <div className="mx-auto w-full max-w-[1440px]">
         <div className="mb-6 text-center md:mb-7">
           <div className="mb-3 inline-flex items-center justify-center gap-3">
             <span className="inline-block h-[2px] w-7 rounded-full bg-[#d93864]" />
@@ -143,12 +143,12 @@ export default function MedicalRegistration() {
             <span className="inline-block h-[2px] w-7 rounded-full bg-[#d93864]" />
           </div>
 
-          <h2 className="font-display text-2xl font-bold tracking-tight text-[#0f2438] sm:text-3xl md:text-4xl lg:text-5xl">
+          <h2 className="font-display text-2xl font-bold tracking-tight text-[#0f2438] sm:whitespace-nowrap sm:text-3xl lg:text-[2.2rem] xl:text-[2.75rem]">
             <span>{title} </span>
             <span className="text-[#0e746e]">{titleAccent}</span>
           </h2>
 
-          <p className="mx-auto mt-3 max-w-none text-sm text-gray-500 sm:whitespace-nowrap sm:text-base">
+          <p className="mx-auto mt-2.5 max-w-none text-xs text-gray-500 sm:text-sm lg:whitespace-nowrap xl:text-base">
             {subtitle}
           </p>
         </div>

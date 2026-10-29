@@ -97,7 +97,7 @@ export default function Footer() {
         <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#0c241f]/40 to-[#0c241f]" />
       </div>
 
-      <div className="relative z-10 mx-auto w-full max-w-[1400px] px-3 pt-7 pb-7 sm:px-4 sm:pt-8 lg:pr-8 lg:pl-3 lg:pt-9 xl:pl-4">
+      <div className="relative z-10 mx-auto w-full max-w-[1440px] px-4 pt-7 pb-7 sm:px-6 sm:pt-8 lg:px-8 lg:pt-9">
         <Stagger
           className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-12 lg:gap-6"
           stagger={0.08}

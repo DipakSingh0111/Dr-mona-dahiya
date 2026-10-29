@@ -24,9 +24,9 @@ import { SectionReveal } from "@/components/Reveal";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
-      {/* Navbar sits on the top space of the hero banner image */}
-      <div className="relative isolate overflow-hidden bg-[#0047ca]">
-        <div className="absolute inset-x-0 top-0 z-50">
+      {/* Header + Hero in normal flow so hero banner starts flush right below the menu */}
+      <div className="relative isolate flex flex-col overflow-hidden bg-[#0047ca]">
+        <div className="relative z-50 shrink-0">
           <TopBar />
           <Navbar />
         </div>

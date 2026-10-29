@@ -104,14 +104,14 @@ export default function AdvancedServices() {
   } as const;
 
   return (
-    <section className="bg-white px-3 py-6 sm:px-4 sm:py-7 lg:pr-8 lg:pl-3 lg:py-8 xl:pl-4">
-      <div className="mx-auto w-full max-w-[1400px]">
+    <section className="bg-white px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
+      <div className="mx-auto w-full max-w-[1440px]">
         <Reveal>
-          <div className="mb-6 flex items-center gap-2.5">
-            <span className="text-[12px] font-extrabold tracking-[0.14em] text-[#e11d48] uppercase sm:text-[13px]">
+          <div className="mb-6 flex flex-wrap items-center gap-2.5 sm:flex-nowrap">
+            <span className="text-[11px] font-extrabold tracking-[0.11em] text-[#e11d48] uppercase sm:whitespace-nowrap sm:text-[13px] sm:tracking-[0.14em]">
               {eyebrow}
             </span>
-            <span className="h-[2.5px] w-10 rounded-full bg-[#e11d48] sm:w-11" />
+            <span className="hidden h-[2.5px] w-10 shrink-0 rounded-full bg-[#e11d48] sm:inline-block sm:w-11" />
           </div>
         </Reveal>
 
@@ -158,7 +158,7 @@ export default function AdvancedServices() {
             <article className="h-full rounded-[20px] border border-[#f9c5d4] bg-[#fff8fa] px-5 py-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#e83e74]/50 hover:shadow-[0_14px_32px_rgba(232,62,116,0.12)] sm:rounded-[22px] sm:px-7 sm:py-7">
               <div className="mb-5 flex items-center gap-3.5 sm:gap-4">
                 <FemaleAvatar />
-                <h3 className="font-display text-[1.15rem] leading-snug font-bold tracking-tight text-[#0f2038] sm:text-[1.35rem]">
+                <h3 className="font-display text-[1.15rem] leading-snug font-bold tracking-tight text-[#0f2038] sm:text-[1.35rem] lg:whitespace-nowrap">
                   {womenConditions.title}
                 </h3>
               </div>
@@ -167,7 +167,7 @@ export default function AdvancedServices() {
                 {womenConditions.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="inline-flex cursor-pointer rounded-full border border-[#f5b8cb] bg-[#fff0f4] px-3.5 py-2 text-[12.5px] font-semibold text-[#0f2038] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#e83e74] hover:bg-[#e83e74] hover:text-white hover:shadow-[0_6px_16px_rgba(232,62,116,0.28)] sm:px-4 sm:py-2.5 sm:text-[13.5px]"
+                    className="inline-flex cursor-pointer whitespace-nowrap rounded-full border border-[#f5b8cb] bg-[#fff0f4] px-3.5 py-2 text-[12.5px] font-semibold text-[#0f2038] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#e83e74] hover:bg-[#e83e74] hover:text-white hover:shadow-[0_6px_16px_rgba(232,62,116,0.28)] sm:px-4 sm:py-2.5 sm:text-[13.5px]"
                   >
                     {tag}
                   </span>
@@ -180,7 +180,7 @@ export default function AdvancedServices() {
             <article className="h-full rounded-[20px] border border-[#b8dbf8] bg-[#f5faff] px-5 py-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#0284c7]/50 hover:shadow-[0_14px_32px_rgba(2,132,199,0.12)] sm:rounded-[22px] sm:px-7 sm:py-7">
               <div className="mb-5 flex items-center gap-3.5 sm:gap-4">
                 <MaleAvatar />
-                <h3 className="font-display text-[1.15rem] leading-snug font-bold tracking-tight text-[#0f2038] sm:text-[1.35px] sm:text-[1.35rem]">
+                <h3 className="font-display text-[1.15rem] leading-snug font-bold tracking-tight text-[#0f2038] sm:text-[1.35rem] lg:whitespace-nowrap">
                   {menConditions.title}
                 </h3>
               </div>

@@ -111,17 +111,17 @@ export default function Publications() {
   const [activeTab, setActiveTab] = useState<TabId>("publications");
 
   return (
-    <section className="relative overflow-hidden bg-[#0b1211] px-3 py-8 sm:px-4 sm:py-10 lg:pr-8 lg:pl-3 lg:py-12 xl:pl-4">
-      <div className="mx-auto w-full max-w-[1400px]">
+    <section className="relative overflow-hidden bg-[#0b1211] px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
+      <div className="mx-auto w-full max-w-[1440px]">
         <Reveal>
-          <header className="mb-7 max-w-3xl sm:mb-8">
+          <header className="mb-7 max-w-none sm:mb-8">
             <p className="text-[13px] font-semibold text-[#e8838f] sm:text-[14px]">
               {data.eyebrow}
             </p>
-            <h2 className="mt-2 font-serif text-[clamp(1.15rem,3.8vw,2.75rem)] leading-tight font-bold tracking-tight whitespace-nowrap text-white">
+            <h2 className="mt-2 font-serif text-[1.65rem] leading-tight font-bold tracking-tight text-white sm:text-[2.1rem] lg:whitespace-nowrap lg:text-[2.25rem] xl:text-[2.75rem]">
               {data.title}
             </h2>
-            <p className="mt-3 max-w-2xl text-[14px] leading-relaxed text-white/65 sm:text-[15.5px]">
+            <p className="mt-3 max-w-none text-[13.5px] leading-relaxed text-white/65 sm:text-[14.5px] lg:whitespace-nowrap xl:text-[15px]">
               {data.subtitle}
             </p>
           </header>
@@ -136,7 +136,7 @@ export default function Publications() {
                   key={tab.id}
                   type="button"
                   onClick={() => setActiveTab(tab.id as TabId)}
-                  className={`rounded-full px-5 py-2.5 text-[13px] font-semibold transition-colors sm:text-[14px] ${
+                  className={`whitespace-nowrap rounded-full px-5 py-2.5 text-[13px] font-semibold transition-colors sm:text-[14px] ${
                     isActive
                       ? "bg-[#1a4a42] text-white"
                       : "border border-white/25 bg-transparent text-white/85 hover:border-white/45 hover:text-white"

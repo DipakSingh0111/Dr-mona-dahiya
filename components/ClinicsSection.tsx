@@ -11,7 +11,7 @@ export default function ClinicsSection() {
     siteData.clinicsSection;
 
   return (
-    <section className="relative overflow-hidden bg-white px-3 py-6 sm:px-4 sm:py-7 lg:pr-8 lg:pl-3 lg:py-8 xl:pl-4">
+    <section className="relative overflow-hidden bg-white px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
       <div
         aria-hidden
         className="pointer-events-none absolute -top-16 right-0 -z-10 h-[440px] w-[520px] rounded-full"
@@ -21,29 +21,29 @@ export default function ClinicsSection() {
         }}
       />
 
-      <div className="mx-auto w-full max-w-[1400px]">
+      <div className="mx-auto w-full max-w-[1440px]">
         <div className="mb-6 flex flex-col justify-between gap-5 md:mb-8 md:flex-row md:items-end">
-          <div>
-            <div className="mb-3 flex items-center gap-3">
-              <span className="h-[2px] w-8 rounded-full bg-[#e83e74]" />
-              <span className="text-[12px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:text-[13px]">
+          <div className="shrink-0">
+            <div className="mb-3 flex items-center gap-2.5 sm:gap-3">
+              <span className="h-[2px] w-7 shrink-0 rounded-full bg-[#e83e74] sm:w-8" />
+              <span className="text-[11.5px] font-bold tracking-[0.12em] text-[#e83e74] uppercase sm:whitespace-nowrap sm:text-[13px] sm:tracking-[0.14em]">
                 {eyebrow}
               </span>
             </div>
 
-            <h2 className="font-display text-3xl leading-[1.15] font-bold tracking-tight text-[#0f2438] sm:text-4xl md:text-[44px] lg:text-[48px]">
+            <h2 className="font-display text-2xl leading-[1.15] font-bold tracking-tight text-[#0f2438] sm:whitespace-nowrap sm:text-3xl lg:text-[2.2rem] xl:text-[2.75rem]">
               <span>{titlePrefix} </span>
               <span className="text-[#e83e74]">{titleAccent}</span>
             </h2>
           </div>
 
-          <div className="flex w-fit items-center gap-4 rounded-[22px] border border-[#fde2ec] bg-gradient-to-r from-[#fff7fa] to-[#fff0f5] p-4 shadow-sm sm:px-5 sm:py-4">
-            <div className="relative flex size-[50px] shrink-0 items-center justify-center rounded-2xl bg-[#fee7ef] text-[#e83e74] shadow-sm sm:size-[54px]">
-              <MdOutlineCalendarMonth className="size-7 sm:size-8" />
-              <span className="absolute -right-0.5 -bottom-0.5 flex size-5 items-center justify-center rounded-full bg-white text-[#e83e74] shadow-sm ring-1 ring-[#fde2ec]">
+          <div className="flex w-fit shrink-0 items-center gap-3.5 rounded-[20px] border border-[#fde2ec] bg-gradient-to-r from-[#fff7fa] to-[#fff0f5] px-4 py-3 shadow-sm xl:gap-4 xl:rounded-[22px] xl:px-5 xl:py-4">
+            <div className="relative flex size-[44px] shrink-0 items-center justify-center rounded-2xl bg-[#fee7ef] text-[#e83e74] shadow-sm xl:size-[54px]">
+              <MdOutlineCalendarMonth className="size-6 xl:size-8" />
+              <span className="absolute -right-0.5 -bottom-0.5 flex size-4.5 items-center justify-center rounded-full bg-white text-[#e83e74] shadow-sm ring-1 ring-[#fde2ec] xl:size-5">
                 <svg
                   viewBox="0 0 16 16"
-                  className="size-3"
+                  className="size-2.5 xl:size-3"
                   fill="currentColor"
                   aria-hidden
                 >
@@ -67,10 +67,10 @@ export default function ClinicsSection() {
             </div>
 
             <div className="min-w-0 flex-1">
-              <p className="text-[13.5px] leading-snug font-bold text-[#0f2438] sm:whitespace-nowrap sm:text-[14.5px]">
+              <p className="text-[12.5px] leading-snug font-bold text-[#0f2438] sm:whitespace-nowrap xl:text-[14.5px]">
                 {hoursBadge.title}
               </p>
-              <p className="mt-0.5 text-[12px] font-normal text-gray-500 sm:whitespace-nowrap sm:text-[12.5px]">
+              <p className="mt-0.5 text-[11.5px] font-normal text-gray-500 sm:whitespace-nowrap xl:text-[12.5px]">
                 {hoursBadge.subtitle}
               </p>
             </div>

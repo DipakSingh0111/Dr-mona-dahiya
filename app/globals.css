@@ -224,15 +224,16 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 /*
   Hero — full-bleed HeroBanner.jpeg
+  Starts flush right below TopBar + Navbar (zero gap / zero extra blue strip)
   Tuned for laptop zoom: 90% / 100% / 110% / 125%
 */
 .hero-section {
-  min-height: 620px;
+  min-height: auto;
 }
 
-/* Start fully below header so TIMES / titles sit clean under the menu */
+/* Banner fills the entire HeroSection flush from the top */
 .hero-banner-frame {
-  top: 11.25rem;
+  top: 0;
 }
 
 /* object-fit / object-position set per-slide in HeroSection */
@@ -249,13 +250,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .hero-content {
-  padding-top: 10.5rem;
-  padding-bottom: 2rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.75rem;
 }
 
 .hero-title {
-  margin-top: 0.45rem;
-  font-size: clamp(2.55rem, 6.2vw, 3.35rem);
+  margin-top: 0.35rem;
+  font-size: clamp(2rem, 7vw, 2.5rem);
   line-height: 1.08;
 }
 
@@ -264,175 +265,94 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   margin-top: 0;
 }
 
-.hero-cta {
-  height: 2.9rem;
-}
-
 @media (min-width: 640px) {
   .hero-section {
-    min-height: 560px;
+    min-height: 480px;
   }
 
   .hero-content {
-    padding-top: 11rem;
+    padding-top: 2.25rem;
     padding-bottom: 2rem;
   }
 
   .hero-title {
-    font-size: clamp(3.2rem, 5.5vw, 3.85rem);
+    font-size: clamp(2.25rem, 3.8vw, 2.85rem);
   }
 }
 
-/* 100% laptop */
+/* 125% & 110% laptop zoom (width 1024px–1279px) */
 @media (min-width: 1024px) {
   .hero-section {
-    min-height: 100svh;
+    min-height: calc(100svh - 8.75rem);
   }
 
   .hero-banner-frame {
-    top: 11.25rem;
+    top: 0;
   }
 
   .hero-content {
-    padding-top: 11.5rem;
+    padding-top: 2rem;
+    padding-bottom: 1.75rem;
+  }
+
+  .hero-title {
+    margin-top: 0.3rem;
+    font-size: clamp(2.1rem, 3.4vw, 2.6rem);
+  }
+}
+
+/* 100% & 90% laptop zoom (width >= 1280px) */
+@media (min-width: 1280px) {
+  .hero-section {
+    min-height: calc(100svh - 10rem);
+  }
+
+  .hero-banner-frame {
+    top: 0;
+  }
+
+  .hero-content {
+    padding-top: 2.5rem;
     padding-bottom: 2.5rem;
   }
 
   .hero-title {
     margin-top: 0.45rem;
-    font-size: clamp(3.05rem, 5.2svh, 3.75rem);
-  }
-
-  .hero-actions {
-    margin-top: 1.4rem;
-    gap: 1.15rem;
-    max-width: 440px;
-  }
-
-  .hero-actions .stat-tile {
-    min-height: 88px;
+    font-size: clamp(2.85rem, 4.6svh, 3.65rem);
   }
 }
 
-@media (min-width: 1400px) {
-  .hero-title {
-    font-size: clamp(3rem, 4.8svh, 3.75rem);
-  }
-}
-
-/* 110% ≈ 982px height */
-@media (min-width: 1024px) and (max-height: 1000px) {
-  .hero-banner-frame {
-    top: 11rem;
-  }
-
-  .hero-content {
-    padding-top: 11rem;
-    padding-bottom: 1.5rem;
-  }
-
-  .hero-title {
-    font-size: clamp(2.45rem, 4.6svh, 3.15rem);
-  }
-
-  .hero-actions {
-    margin-top: 1.1rem !important;
-    gap: 0.95rem !important;
-  }
-
-  .hero-actions .stat-tile {
-    min-height: 76px;
-    padding-block: 0.75rem;
-  }
-
-  .hero-actions .stat-value {
-    font-size: 1.8rem !important;
-  }
-
-  .hero-actions .stat-label {
-    font-size: 14px;
-  }
-
-  .hero-actions a {
-    height: 2.75rem !important;
-    font-size: 14px !important;
-  }
-}
-
-/* 125% ≈ 864px height */
-@media (min-width: 1024px) and (max-height: 900px) {
-  .hero-banner-frame {
-    top: 10.75rem;
-  }
-
-  .hero-content {
-    padding-top: 10.75rem;
-    padding-bottom: 1.1rem;
-  }
-
-  .hero-title {
-    font-size: clamp(2.4rem, 4.6svh, 3.05rem);
-  }
-
-  .hero-eyebrow {
-    font-size: 12px;
-  }
-
-  .hero-actions {
-    margin-top: 0.9rem !important;
-    gap: 0.8rem !important;
-    max-width: 430px;
-  }
-
-  .hero-actions .stat-tile {
-    min-height: 74px;
-    padding-block: 0.65rem;
-  }
-
-  .hero-actions .stat-value {
-    font-size: 1.6rem !important;
-  }
-
-  .hero-actions .stat-label {
-    font-size: 13.5px;
-  }
-
-  .hero-actions a {
-    height: 2.6rem !important;
-    font-size: 13.5px !important;
-  }
-}
-
+/* Extra compact height protection for 125% laptop screens (height <= 760px) */
 @media (min-width: 1024px) and (max-height: 760px) {
-  .hero-banner-frame {
-    top: 10.5rem;
-  }
-
   .hero-content {
-    padding-top: 10.5rem;
-    padding-bottom: 0.85rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.15rem;
   }
 
-  .hero-title {
-    font-size: clamp(2.2rem, 4.4svh, 2.75rem);
-  }
-
-  .hero-actions {
-    margin-top: 0.75rem !important;
+  .hero-copy {
     gap: 0.65rem !important;
   }
 
-  .hero-actions .stat-tile {
-    min-height: 66px;
+  .hero-title {
+    font-size: clamp(1.95rem, 3.8svh, 2.35rem);
   }
 
-  .hero-actions .stat-value {
-    font-size: 1.45rem !important;
+  .hero-stats .stat-tile {
+    padding-block: 0.5rem;
   }
 
-  .hero-actions a {
-    height: 2.45rem !important;
-    font-size: 13px !important;
+  .hero-stats .stat-value {
+    font-size: 1.35rem !important;
+  }
+
+  .hero-cta {
+    height: 2.35rem !important;
+    font-size: 12px !important;
+  }
+
+  .hero-review-badge {
+    padding-top: 0.3rem !important;
+    padding-bottom: 0.3rem !important;
   }
 }
 

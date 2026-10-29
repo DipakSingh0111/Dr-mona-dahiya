@@ -112,25 +112,25 @@ function FeatureCard({ item }: { item: FeatureCardData }) {
 
   return (
     <article
-      className={`group relative flex items-center gap-4 overflow-hidden rounded-[24px] border ${theme.border} ${theme.cardBg} p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 sm:gap-5 sm:p-6 ${theme.hoverGlow}`}
+      className={`group relative flex items-center gap-3.5 overflow-hidden rounded-[22px] border ${theme.border} ${theme.cardBg} p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 xl:gap-5 xl:rounded-[24px] xl:p-6 ${theme.hoverGlow}`}
     >
       <div
-        className={`relative z-10 flex size-[60px] shrink-0 items-center justify-center rounded-[18px] text-white sm:size-[68px] ${theme.iconBg} ${theme.iconShadow} transition-transform duration-300 group-hover:scale-105`}
+        className={`relative z-10 flex size-[52px] shrink-0 items-center justify-center rounded-[16px] text-white xl:size-[68px] xl:rounded-[18px] ${theme.iconBg} ${theme.iconShadow} transition-transform duration-300 group-hover:scale-105`}
       >
-        {Icon ? <Icon className="size-[26px] sm:size-[30px]" /> : null}
+        {Icon ? <Icon className="size-[22px] xl:size-[30px]" /> : null}
       </div>
 
-      <div className="relative z-10 min-w-0 flex-1 pr-8">
-        <h3 className="font-display text-[17px] leading-snug font-bold tracking-tight text-[#0f2038] sm:text-[18.5px]">
+      <div className="relative z-10 min-w-0 flex-1 pr-6 xl:pr-8">
+        <h3 className="font-display text-[15.5px] leading-snug font-bold tracking-tight text-[#0f2038] xl:text-[18.5px]">
           {item.title}
         </h3>
-        <p className="mt-1.5 text-[13px] leading-relaxed text-[#64748b] sm:text-[14px]">
+        <p className="mt-1 text-[12px] leading-relaxed text-[#64748b] xl:mt-1.5 xl:text-[14px]">
           {item.description}
         </p>
       </div>
 
       <span
-        className={`absolute top-3.5 right-5 font-display text-[22px] leading-none font-bold sm:text-[25px] ${theme.numColor}`}
+        className={`absolute top-3 right-4 font-display text-[19px] leading-none font-bold xl:top-3.5 xl:right-5 xl:text-[25px] ${theme.numColor}`}
       >
         {item.number}
       </span>
@@ -145,7 +145,7 @@ export default function WhyChooseUs() {
   return (
     <section
       id="why-choose"
-      className="relative isolate overflow-hidden bg-white px-3 py-6 sm:px-4 sm:py-7 lg:pr-8 lg:pl-3 lg:py-8 xl:pl-4"
+      className="relative isolate overflow-hidden bg-white px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8"
     >
       <div
         aria-hidden
@@ -156,27 +156,27 @@ export default function WhyChooseUs() {
         }}
       />
 
-      <div className="mx-auto w-full max-w-[1400px]">
+      <div className="mx-auto w-full max-w-[1440px]">
         <header className="mb-7 text-center sm:mb-9">
-          <div className="mb-3.5 inline-flex items-center justify-center gap-3">
-            <span className="h-[2px] w-8 rounded-full bg-[#e83e74]" />
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#fff0f5] px-4 py-1.5 text-xs font-semibold text-[#e83e74] sm:text-sm">
-              <span className="size-2 rounded-full bg-[#e83e74]" />
+          <div className="mb-3.5 inline-flex max-w-full items-center justify-center gap-2 sm:gap-3">
+            <span className="hidden h-[2px] w-8 shrink-0 rounded-full bg-[#e83e74] sm:inline-block" />
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#fff0f5] px-3.5 py-1.5 text-center text-[11.5px] font-semibold text-[#e83e74] sm:whitespace-nowrap sm:px-4 sm:text-sm">
+              <span className="size-2 shrink-0 rounded-full bg-[#e83e74]" />
               {badge}
             </span>
-            <span className="h-[2px] w-8 rounded-full bg-[#e83e74]" />
+            <span className="hidden h-[2px] w-8 shrink-0 rounded-full bg-[#e83e74] sm:inline-block" />
           </div>
 
-          <h2 className="font-display text-3xl font-bold tracking-tight text-[#0f2438] sm:text-4xl md:text-5xl lg:text-[52px]">
+          <h2 className="font-display text-2xl font-bold tracking-tight text-[#0f2438] sm:text-3xl lg:whitespace-nowrap lg:text-[2.35rem] xl:text-[3rem]">
             {title} <span className="text-[#e83e74]">{titleAccent}</span>
           </h2>
 
-          <p className="mx-auto mt-3.5 max-w-none text-sm text-[#64748b] sm:whitespace-nowrap sm:text-base">
+          <p className="mx-auto mt-3 max-w-none text-xs text-[#64748b] sm:text-sm lg:whitespace-nowrap xl:text-base">
             {subtitle}
           </p>
         </header>
 
-        <div className="grid grid-cols-1 items-center gap-6 lg:grid-cols-[1fr_minmax(360px,460px)_1fr] xl:gap-8">
+        <div className="grid grid-cols-1 items-center gap-4 lg:grid-cols-[1fr_minmax(280px,360px)_1fr] xl:grid-cols-[1fr_minmax(360px,460px)_1fr] xl:gap-8">
           <Stagger className="flex flex-col gap-4 sm:gap-5" stagger={0.1}>
             {leftCards.map((item) => (
               <StaggerItem key={item.number} variant="slideLeft">

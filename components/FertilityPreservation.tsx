@@ -7,9 +7,9 @@ export default function FertilityPreservation() {
   const data = siteData.fertilityPreservation;
 
   return (
-    <section className="relative overflow-hidden bg-[#13221f] px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
-      <div className="mx-auto w-full max-w-[1320px]">
-        <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1fr_1.15fr] lg:gap-14">
+    <section className="relative overflow-hidden bg-[#13221f] px-4 py-12 sm:px-6 sm:py-14 lg:px-8 lg:py-16">
+      <div className="mx-auto w-full max-w-[1440px]">
+        <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1fr_1.15fr] lg:gap-12 xl:gap-14">
           {/* Left column: Eyebrow, Heading, Subtitle */}
           <Reveal variant="slideLeft">
             <div className="max-w-[540px]">

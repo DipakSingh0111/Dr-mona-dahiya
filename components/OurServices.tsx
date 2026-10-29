@@ -165,32 +165,32 @@ export default function OurServices() {
   return (
     <section
       id="our-services"
-      className="relative overflow-hidden bg-[#f5f6f8] px-3 py-6 sm:px-4 sm:py-7 lg:pr-8 lg:pl-3 lg:py-8 xl:pl-4"
+      className="relative overflow-hidden bg-[#f5f6f8] px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8"
     >
-      <div className="mx-auto w-full max-w-[1400px]">
+      <div className="mx-auto w-full max-w-[1440px]">
         <Reveal>
           <div className="mb-6 sm:mb-8">
-            <div className="mb-4 flex items-center gap-3">
-              <span className="text-[12px] font-bold tracking-[0.16em] text-[#e83e74] uppercase sm:text-[13px]">
+            <div className="mb-4 flex flex-wrap items-center gap-2.5 sm:flex-nowrap sm:gap-3">
+              <span className="text-[11.5px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:whitespace-nowrap sm:text-[13px] sm:tracking-[0.16em]">
                 {eyebrow}
               </span>
-              <span className="h-[2px] w-10 rounded-full bg-[#e83e74]" />
+              <span className="h-[2px] w-8 shrink-0 rounded-full bg-[#e83e74] sm:w-10" />
             </div>
 
-            <h2 className="font-display text-[1.6rem] leading-[1.2] font-bold tracking-tight text-[#0f2038] sm:text-[2.1rem] lg:whitespace-nowrap lg:text-[2.55rem] xl:text-[2.7rem]">
+            <h2 className="font-display text-[1.5rem] leading-[1.2] font-bold tracking-tight text-[#0f2038] sm:text-[1.85rem] lg:whitespace-nowrap lg:text-[2.1rem] xl:text-[2.6rem]">
               {titlePrefix}{" "}
               <span className="text-[#e83e74]">
                 {titleLocations.join(" | ")}
               </span>
             </h2>
 
-            <p className="mt-4 max-w-none text-[14.5px] leading-relaxed text-[#64748b] sm:whitespace-nowrap sm:text-[15.5px]">
+            <p className="mt-3 max-w-none text-[13px] leading-relaxed text-[#64748b] sm:text-[14px] lg:whitespace-nowrap xl:text-[15.5px]">
               {description}
             </p>
 
             <a
               href={cta.href}
-              className="mt-7 inline-flex items-center gap-2.5 rounded-full bg-[#e83e74] px-5 py-3 text-[13.5px] font-semibold text-white shadow-[0_10px_24px_rgba(232,62,116,0.28)] transition hover:bg-[#d12f63]"
+              className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#e83e74] px-4.5 py-2.5 text-[12.5px] font-semibold whitespace-nowrap text-white shadow-[0_10px_24px_rgba(232,62,116,0.28)] transition hover:bg-[#d12f63] xl:mt-6 xl:px-5 xl:py-3 xl:text-[13.5px]"
             >
               {cta.label}
               <span className="inline-flex size-6 items-center justify-center rounded-full bg-white/20">

@@ -49,20 +49,20 @@ export default function HowItWorks() {
   const { badge, title, steps } = siteData.howItWorks;
 
   return (
-    <section className="relative bg-white px-3 py-6 sm:px-4 sm:py-7 lg:pr-8 lg:pl-3 lg:py-8 xl:pl-4">
-      <div className="relative mx-auto w-full max-w-[1400px]">
-        <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-12 lg:gap-12 xl:gap-16">
+    <section className="relative bg-white px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
+      <div className="relative mx-auto w-full max-w-[1440px]">
+        <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-12 lg:gap-10 xl:gap-16">
           {/* Left sticky heading */}
           <div className="relative lg:sticky lg:top-28 lg:col-span-4 lg:self-start">
             <WaveBackdrop />
 
             <div className="relative z-10">
-              <span className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-zinc-100/90 px-3.5 py-1.5 text-[12px] font-semibold text-zinc-600">
+              <span className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-zinc-100/90 px-3.5 py-1.5 text-[12px] font-semibold whitespace-nowrap text-zinc-600">
                 <span className="size-1.5 rounded-full bg-[#0d7d74]" />
                 {badge}
               </span>
 
-              <h2 className="font-display mt-5 whitespace-pre-line text-[2.35rem] leading-[1.12] font-bold tracking-[-0.02em] text-zinc-900 sm:text-[2.75rem] lg:text-[3.15rem]">
+              <h2 className="font-display mt-5 whitespace-pre-line text-[2.2rem] leading-[1.12] font-bold tracking-[-0.02em] text-zinc-900 sm:text-[2.65rem] lg:text-[2.75rem] xl:text-[3.15rem]">
                 {title}
               </h2>
             </div>

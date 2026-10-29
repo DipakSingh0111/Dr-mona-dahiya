@@ -187,38 +187,38 @@ export default function SuccessStories() {
   return (
     <section
       id="success-stories"
-      className="relative overflow-hidden bg-white px-3 py-6 sm:px-4 sm:py-7 lg:pr-8 lg:pl-3 lg:py-8 xl:pl-4"
+      className="relative overflow-hidden bg-white px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8"
     >
-      <div className="mx-auto w-full max-w-[1400px]">
-        <div className="mb-6 flex flex-col justify-between gap-6 lg:mb-8 lg:flex-row lg:items-start">
-          <Reveal variant="slideLeft" className="max-w-xl">
-            <div className="mb-4 inline-flex items-center gap-3">
-              <span className="h-px w-8 bg-[#e83e74] sm:w-10" />
-              <span className="rounded-full border border-[#e83e74]/50 px-3.5 py-1 text-[11px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:text-[12px]">
+      <div className="mx-auto w-full max-w-[1440px]">
+        <div className="mb-6 flex flex-col justify-between gap-6 lg:mb-8 lg:flex-row lg:items-start lg:gap-8">
+          <Reveal variant="slideLeft" className="min-w-0 shrink-0 lg:max-w-[440px] xl:max-w-[500px]">
+            <div className="mb-4 inline-flex max-w-full items-center gap-2.5 sm:gap-3">
+              <span className="h-px w-6 shrink-0 bg-[#e83e74] sm:w-10" />
+              <span className="rounded-full border border-[#e83e74]/50 px-3 py-1 text-[10.5px] font-bold tracking-[0.12em] text-[#e83e74] uppercase sm:whitespace-nowrap sm:px-3.5 sm:text-[12px] sm:tracking-[0.14em]">
                 {eyebrow}
               </span>
-              <span className="h-px w-8 bg-[#e83e74] sm:w-10" />
+              <span className="h-px w-6 shrink-0 bg-[#e83e74] sm:w-10" />
             </div>
 
-            <h2 className="font-display text-3xl leading-[1.14] font-bold tracking-tight text-[#0f2438] sm:text-4xl md:text-[46px] lg:text-[50px]">
+            <h2 className="font-display text-2xl leading-[1.14] font-bold tracking-tight text-[#0f2438] sm:text-3xl lg:text-[2.15rem] xl:text-[2.75rem]">
               {titlePrefix}{" "}
               <span className="text-[#e83e74]">{titleHighlight}</span>
             </h2>
 
-            <p className="mt-3.5 max-w-md text-sm text-[#64748b] sm:text-base">
+            <p className="mt-3 max-w-md text-xs text-[#64748b] sm:text-sm xl:text-base">
               {subtitle}
             </p>
           </Reveal>
 
           <Reveal
             variant="slideRight"
-            className="w-full p-0 lg:max-w-[780px] lg:pr-14 xl:max-w-[840px]"
+            className="w-full min-w-0 flex-1 p-0 lg:max-w-[780px] lg:pr-14 xl:max-w-[840px]"
           >
-            <h3 className="font-display mb-3.5 text-[17px] font-bold text-[#0f2438] sm:text-[18px]">
+            <h3 className="font-display mb-3.5 text-[17px] font-bold whitespace-nowrap text-[#0f2438] sm:text-[18px]">
               Browse stories by treatment
             </h3>
             <Stagger
-              className="grid grid-cols-3 gap-2.5 pb-1 sm:grid-cols-6 sm:gap-3"
+              className="grid grid-cols-3 gap-2.5 pb-1 sm:grid-cols-6 sm:gap-2.5 xl:gap-3"
               stagger={0.05}
             >
               {categories.map((cat) => {
@@ -231,18 +231,18 @@ export default function SuccessStories() {
                     <button
                       type="button"
                       onClick={() => setActiveCategory(cat.id)}
-                      className={`flex h-[116px] w-full cursor-pointer flex-col items-center justify-center gap-2.5 rounded-[16px] border bg-white px-2.5 py-2.5 text-center transition-all duration-300 ease-out hover:-translate-y-0.5 sm:h-[120px] ${
+                      className={`flex h-[112px] w-full cursor-pointer flex-col items-center justify-center gap-2 rounded-[16px] border bg-white px-2 py-2.5 text-center transition-all duration-300 ease-out hover:-translate-y-0.5 sm:h-[118px] xl:px-2.5 ${
                         isActive
                           ? "border-[#e83e74]/40 shadow-[0_8px_20px_rgba(232,62,116,0.12)] ring-1 ring-[#e83e74]/20"
                           : "border-slate-200 shadow-sm hover:border-slate-300"
                       }`}
                     >
                       <span
-                        className={`flex size-11 items-center justify-center rounded-full text-white ${style.circle} ${style.glow}`}
+                        className={`flex size-10 shrink-0 items-center justify-center rounded-full text-white xl:size-11 ${style.circle} ${style.glow}`}
                       >
-                        <CategoryIcon type={cat.icon} className="size-[22px]" />
+                        <CategoryIcon type={cat.icon} className="size-[20px] xl:size-[22px]" />
                       </span>
-                      <span className="line-clamp-2 text-[10.5px] leading-tight font-bold text-[#0f2438] sm:text-[11px]">
+                      <span className="line-clamp-2 text-[10px] leading-tight font-bold text-[#0f2438] xl:text-[11px]">
                         {cat.label}
                       </span>
                     </button>

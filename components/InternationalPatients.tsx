@@ -37,9 +37,9 @@ export default function InternationalPatients() {
   return (
     <section
       id="international"
-      className="relative overflow-hidden bg-white px-3 py-6 sm:px-4 sm:py-7 lg:pr-8 lg:pl-3 lg:py-8 xl:pl-4"
+      className="relative overflow-hidden bg-white px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8"
     >
-      <div className="mx-auto w-full max-w-[1400px]">
+      <div className="mx-auto w-full max-w-[1440px]">
         <div className="relative isolate overflow-hidden rounded-[26px] bg-[#0c241f] shadow-xl sm:rounded-[32px]">
           <div className="absolute inset-0">
             <Image
@@ -101,8 +101,8 @@ export default function InternationalPatients() {
             >
               {data.features.map((feature) => (
                 <StaggerItem key={feature.id} variant="scaleIn">
-                  <div className="inline-flex w-fit items-center rounded-full border border-white/40 bg-transparent px-4 py-2">
-                    <span className="text-[12px] font-medium whitespace-nowrap text-white sm:text-[13px]">
+                  <div className="inline-flex max-w-full w-fit items-center rounded-full border border-white/40 bg-transparent px-3.5 py-2 sm:px-4">
+                    <span className="text-[11.5px] font-medium text-white sm:whitespace-nowrap sm:text-[13px]">
                       {feature.label}
                     </span>
                   </div>
@@ -110,18 +110,18 @@ export default function InternationalPatients() {
               ))}
             </Stagger>
 
-            <Reveal delay={0.2} className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+            <Reveal delay={0.2} className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-nowrap sm:items-center">
               <a
                 href={data.primaryCta.href}
-                className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3.5 text-[14px] font-semibold text-[#0c241f] transition hover:bg-white/90"
+                className="inline-flex shrink-0 items-center justify-center rounded-full bg-white px-6 py-3.5 text-[13.5px] font-semibold whitespace-nowrap text-[#0c241f] transition hover:bg-white/90 sm:text-[14px]"
               >
                 {data.primaryCta.label}
               </a>
               <a
                 href={data.secondaryCta.href}
-                className="inline-flex items-center justify-center gap-2.5 rounded-full bg-[#2563eb] px-6 py-3.5 text-[14px] font-semibold text-white transition hover:bg-[#1d4ed8]"
+                className="inline-flex shrink-0 items-center justify-center gap-2.5 rounded-full bg-[#2563eb] px-6 py-3.5 text-[13.5px] font-semibold whitespace-nowrap text-white transition hover:bg-[#1d4ed8] sm:text-[14px]"
               >
-                <FaVideo className="size-3.5" />
+                <FaVideo className="size-3.5 shrink-0" />
                 {data.secondaryCta.label}
               </a>
             </Reveal>

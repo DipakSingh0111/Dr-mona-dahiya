@@ -30,9 +30,9 @@ export default function BookAppointment() {
   return (
     <section
       id="book-appointment"
-      className="relative overflow-hidden px-3 py-6 sm:px-4 sm:py-7 lg:pr-8 lg:pl-3 lg:py-8 xl:pl-4"
+      className="relative overflow-hidden px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8"
     >
-      <div className="relative mx-auto w-full max-w-[1400px] overflow-hidden rounded-[28px] min-h-[640px] sm:min-h-[680px]">
+      <div className="relative mx-auto w-full max-w-[1440px] overflow-hidden rounded-[28px] min-h-[640px] sm:min-h-[680px]">
         {/* Background couple photo — visible on right like reference */}
         <div className="absolute inset-0">
           <Image
@@ -55,40 +55,40 @@ export default function BookAppointment() {
 
         <div className="relative z-10 grid grid-cols-1 items-center gap-8 px-5 py-10 sm:px-8 sm:py-12 lg:grid-cols-[minmax(0,1.24fr)_minmax(330px,0.76fr)] lg:gap-8 lg:px-10 lg:py-14 xl:gap-10 xl:px-12">
           {/* Left */}
-          <Reveal variant="slideLeft" className="w-full max-w-none">
-            <div className="mb-4 flex items-center gap-3">
-              <span className="h-px w-8 bg-[#ff4d8d]" />
-              <span className="text-[11px] font-bold tracking-[0.18em] text-[#ff4d8d] uppercase sm:text-xs">
+          <Reveal variant="slideLeft" className="w-full min-w-0 max-w-none">
+            <div className="mb-4 flex items-center gap-2.5 sm:gap-3">
+              <span className="h-px w-6 shrink-0 bg-[#ff4d8d] sm:w-8" />
+              <span className="text-[10.5px] font-bold tracking-[0.14em] text-[#ff4d8d] uppercase sm:whitespace-nowrap sm:text-xs sm:tracking-[0.18em]">
                 {data.eyebrow}
               </span>
-              <span className="h-px w-8 bg-[#ff4d8d]" />
+              <span className="h-px w-6 shrink-0 bg-[#ff4d8d] sm:w-8" />
             </div>
 
-            <h2 className="font-display text-[1.9rem] leading-[1.15] font-bold text-white sm:text-[2.45rem] lg:text-[2.85rem]">
-              <span className="block">{data.titleLine1}</span>
-              <span className="text-[#ff4d8d]">{data.titleAccent}</span>
+            <h2 className="font-display text-[1.9rem] leading-[1.15] font-bold text-white sm:text-[2.45rem] lg:text-[2.65rem] xl:text-[2.85rem]">
+              <span className="block sm:whitespace-nowrap">{data.titleLine1}</span>
+              <span className="text-[#ff4d8d] sm:whitespace-nowrap">{data.titleAccent}</span>
             </h2>
 
             <p className="mt-3.5 max-w-md text-[13.5px] leading-relaxed text-white/85 sm:text-[15px]">
               {data.subtitle}
             </p>
 
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-nowrap">
               <a
                 href={data.primaryCta.href}
-                className="inline-flex items-center justify-center gap-2.5 rounded-full bg-[#ff4d8d] px-5 py-3.5 text-[13.5px] font-semibold text-white shadow-[0_10px_28px_rgba(255,77,141,0.35)] transition hover:bg-[#e83e74]"
+                className="inline-flex shrink-0 items-center justify-center gap-2.5 rounded-full bg-[#ff4d8d] px-5 py-3.5 text-[13px] font-semibold whitespace-nowrap text-white shadow-[0_10px_28px_rgba(255,77,141,0.35)] transition hover:bg-[#e83e74] xl:text-[13.5px]"
               >
-                <FaCalendarAlt className="size-3.5" />
+                <FaCalendarAlt className="size-3.5 shrink-0" />
                 {data.primaryCta.label}
-                <FaArrowRight className="size-3.5" />
+                <FaArrowRight className="size-3.5 shrink-0" />
               </a>
               <a
                 href={data.secondaryCta.href}
-                className="inline-flex items-center justify-center gap-2.5 rounded-full border border-[#1f2a44]/25 bg-white px-5 py-3.5 text-[13.5px] font-semibold text-[#0f2438] transition hover:bg-[#fff5f8]"
+                className="inline-flex shrink-0 items-center justify-center gap-2.5 rounded-full border border-[#1f2a44]/25 bg-white px-5 py-3.5 text-[13px] font-semibold whitespace-nowrap text-[#0f2438] transition hover:bg-[#fff5f8] xl:text-[13.5px]"
               >
-                <FaVideo className="size-3.5 text-[#ff4d8d]" />
+                <FaVideo className="size-3.5 shrink-0 text-[#ff4d8d]" />
                 {data.secondaryCta.label}
-                <FaArrowRight className="size-3.5 text-[#ff4d8d]" />
+                <FaArrowRight className="size-3.5 shrink-0 text-[#ff4d8d]" />
               </a>
             </div>
 
@@ -110,11 +110,11 @@ export default function BookAppointment() {
                         <FaUsers className="size-4" />
                       )}
                     </span>
-                    <div>
-                      <p className="text-[11px] font-bold tracking-[0.12em] text-zinc-500 uppercase">
+                    <div className="min-w-0">
+                      <p className="text-[11px] font-bold tracking-[0.12em] whitespace-nowrap text-zinc-500 uppercase">
                         {plan.label}
                       </p>
-                      <p className="mt-1 inline-flex items-center gap-1 font-display text-[1.65rem] leading-none font-bold text-[#0f2438] sm:text-[1.8rem]">
+                      <p className="mt-1 inline-flex items-center gap-1 font-display text-[1.6rem] leading-none font-bold whitespace-nowrap text-[#0f2438] sm:text-[1.75rem]">
                         {plan.id === "foreign" ? (
                           <>
                             <span>US</span>
@@ -128,7 +128,7 @@ export default function BookAppointment() {
                           </>
                         )}
                       </p>
-                      <p className="mt-1.5 text-[12px] text-zinc-500">
+                      <p className="mt-1.5 text-[11.5px] whitespace-nowrap text-zinc-500 xl:text-[12px]">
                         {plan.note}
                       </p>
                     </div>
@@ -139,7 +139,7 @@ export default function BookAppointment() {
             </Stagger>
 
             <Stagger
-              className="mt-8 flex flex-col gap-4 border-t border-white/20 pt-6 sm:flex-row sm:items-center sm:gap-4 lg:gap-5 xl:gap-7"
+              className="mt-8 flex flex-col gap-4 border-t border-white/20 pt-6 sm:flex-row sm:flex-nowrap sm:items-center sm:gap-3 lg:gap-4 xl:gap-7"
               stagger={0.08}
               delay={0.1}
             >
@@ -151,7 +151,7 @@ export default function BookAppointment() {
                       ? FaClock
                       : FaPhoneAlt;
                 const content = (
-                  <div className="flex shrink-0 items-start gap-2 lg:gap-2.5">
+                  <div className="flex items-start gap-2.5 sm:shrink-0 lg:gap-2.5">
                     <span className="mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-full bg-[#ff4d8d] text-white lg:size-9">
                       <Icon className="size-3 lg:size-3.5" />
                     </span>
@@ -159,7 +159,7 @@ export default function BookAppointment() {
                       <span className="block text-[10.5px] font-semibold tracking-wide text-white/55 uppercase lg:text-[11px]">
                         {item.label}
                       </span>
-                      <span className="mt-0.5 block text-[11.5px] leading-snug font-semibold whitespace-nowrap text-white lg:text-[12.5px]">
+                      <span className="mt-0.5 block text-[12px] leading-snug font-semibold text-white sm:whitespace-nowrap sm:text-[11.5px] lg:text-[12.5px]">
                         {item.value}
                       </span>
                     </span>

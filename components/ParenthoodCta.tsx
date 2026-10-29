@@ -45,16 +45,16 @@ export default function ParenthoodCta() {
         }}
       />
 
-      <div className="relative z-10 mx-auto flex min-h-[240px] w-full max-w-[1400px] items-center px-4 py-6 sm:min-h-[280px] sm:px-6 sm:py-8 lg:min-h-[300px] lg:px-8 lg:py-9 xl:px-10">
-        <Reveal variant="slideLeft" className="w-full max-w-[720px]">
+      <div className="relative z-10 mx-auto flex min-h-[240px] w-full max-w-[1440px] items-center px-4 py-6 sm:min-h-[280px] sm:px-6 sm:py-8 lg:min-h-[300px] lg:px-8 lg:py-9">
+        <Reveal variant="slideLeft" className="w-full max-w-[740px]">
           <span className="mb-5 block h-[3px] w-11 rounded-full bg-[#c24663]" />
 
-          <h2 className="font-display text-[1.75rem] leading-[1.28] font-bold tracking-tight text-[#1a2b4b] sm:text-[2.2rem] lg:text-[2.55rem]">
+          <h2 className="font-display text-[1.75rem] leading-[1.28] font-bold tracking-tight text-[#1a2b4b] sm:text-[2.2rem] lg:text-[2.45rem] xl:text-[2.55rem]">
             {data.title}{" "}
             <span className="italic text-[#c24663]">{data.titleAccent}</span>
           </h2>
 
-          <div className="mt-8 flex flex-wrap items-center gap-2.5 sm:gap-3">
+          <div className="mt-8 flex flex-wrap items-center gap-2.5 sm:flex-nowrap sm:gap-3">
             <a
               href={data.book.href}
               className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-[#c24663] px-3.5 py-2.5 text-[12px] font-semibold whitespace-nowrap text-white shadow-[0_10px_24px_rgba(194,70,99,0.28)] transition hover:bg-[#a83b55] sm:gap-2.5 sm:px-5 sm:py-3.5 sm:text-[13.5px]"
