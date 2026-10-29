@@ -96,15 +96,15 @@ export default function StatsCards({ stats }: { stats: StatItem[] }) {
   }, []);
 
   return (
-    <div ref={ref}>
-      <Stagger className="grid w-full grid-cols-2 gap-3 sm:gap-4" stagger={0.1}>
+    <div ref={ref} className="w-full">
+      <Stagger className="grid grid-cols-2 gap-3.5" stagger={0.08}>
         {stats.map((stat) => (
-          <StaggerItem key={stat.label} variant="scaleIn">
-            <div className="stat-tile rounded-2xl border border-white/20 bg-white/[0.04] px-3.5 py-3.5 backdrop-blur-[3px] transition-colors hover:border-white/35 sm:px-5 sm:py-4 lg:px-6 lg:py-5">
-              <p className="stat-value text-[1.7rem] leading-none font-bold tracking-tight text-white tabular-nums sm:text-[2rem] lg:text-[2.25rem]">
+          <StaggerItem key={stat.label} variant="scaleIn" className="min-w-0">
+            <div className="stat-tile flex h-full flex-col justify-center rounded-2xl border border-white/25 bg-[rgba(255,255,255,0.08)] px-5 py-3.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.12)] backdrop-blur-[2px]">
+              <p className="stat-value font-display text-[1.75rem] leading-none font-bold tracking-tight text-white tabular-nums sm:text-[2rem]">
                 <StatValue stat={stat} active={active} />
               </p>
-              <p className="stat-label mt-2 text-[12px] leading-snug font-medium text-white/85 sm:mt-2.5 sm:text-[13.5px]">
+              <p className="stat-label mt-1.5 text-[12.5px] leading-snug font-medium text-white/85 sm:text-[13px]">
                 {stat.label}
               </p>
             </div>

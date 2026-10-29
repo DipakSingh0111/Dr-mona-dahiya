@@ -37,7 +37,7 @@ export default function ClinicsSection() {
             </h2>
           </div>
 
-          <div className="flex max-w-md items-center gap-4 rounded-[22px] border border-[#fde2ec] bg-gradient-to-r from-[#fff7fa] to-[#fff0f5] p-4 shadow-sm sm:px-5 sm:py-4">
+          <div className="flex w-fit items-center gap-4 rounded-[22px] border border-[#fde2ec] bg-gradient-to-r from-[#fff7fa] to-[#fff0f5] p-4 shadow-sm sm:px-5 sm:py-4">
             <div className="relative flex size-[50px] shrink-0 items-center justify-center rounded-2xl bg-[#fee7ef] text-[#e83e74] shadow-sm sm:size-[54px]">
               <MdOutlineCalendarMonth className="size-7 sm:size-8" />
               <span className="absolute -right-0.5 -bottom-0.5 flex size-5 items-center justify-center rounded-full bg-white text-[#e83e74] shadow-sm ring-1 ring-[#fde2ec]">
@@ -67,10 +67,10 @@ export default function ClinicsSection() {
             </div>
 
             <div className="min-w-0 flex-1">
-              <p className="text-[13.5px] leading-snug font-bold text-[#0f2438] sm:text-[14.5px]">
+              <p className="text-[13.5px] leading-snug font-bold text-[#0f2438] sm:whitespace-nowrap sm:text-[14.5px]">
                 {hoursBadge.title}
               </p>
-              <p className="mt-0.5 text-[12px] font-normal text-gray-500 sm:text-[12.5px]">
+              <p className="mt-0.5 text-[12px] font-normal text-gray-500 sm:whitespace-nowrap sm:text-[12.5px]">
                 {hoursBadge.subtitle}
               </p>
             </div>

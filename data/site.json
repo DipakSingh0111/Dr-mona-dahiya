@@ -82,7 +82,24 @@
   },
   "hero": {
     "backgroundImage": "/images/HeroBanner.jpeg",
-    "eyebrow": "Top Rated Fertility Specialist in India",
+    "slides": [
+      {
+        "image": "/images/HeroBanner.jpeg",
+        "eyebrow": "TOP FERTILITY DOCTOR IN INDIA",
+        "title": "Dr. Mona Dahiya"
+      },
+      {
+        "image": "/images/HeroBanner_02.png",
+        "eyebrow": "INDIA'S BEST IVF DOCTOR",
+        "title": "Dr. Mona Dahiya"
+      },
+      {
+        "image": "/images/HeroBanner_03.png",
+        "eyebrow": "TOP RATED FERTILITY SPECIALIST IN INDIA",
+        "title": "Dr. Mona Dahiya"
+      }
+    ],
+    "eyebrow": "TOP FERTILITY DOCTOR IN INDIA",
     "title": "Dr. Mona Dahiya",
     "subtitle": "Pioneering IVF centre of India since 1993",
     "description": "Providing a full range of advanced infertility solutions to patients from over 66 countries. Dr. Mona Gupta leads the pioneering IVF centres of India, with locations in New Delhi, Lajpat Nagar and Rohini.",
@@ -277,11 +294,7 @@
   "ourServices": {
     "eyebrow": "Our services",
     "titlePrefix": "For infertility treatment in",
-    "titleLocations": [
-      "Noida",
-      "Delhi",
-      "Ghaziabad"
-    ],
+    "titleLocations": ["Noida", "Delhi", "Ghaziabad"],
     "description": "From a first IUI to advanced lab work, each treatment is chosen after testing both partners.",
     "cta": {
       "label": "View all services",
@@ -654,6 +667,182 @@
       }
     ]
   },
+  "publications": {
+    "eyebrow": "Globally acclaimed fertility doctor in India",
+    "title": "Publications, memberships & recognition",
+    "subtitle": "Two decades of research, teaching and conference work in reproductive medicine.",
+    "tabs": [
+      {
+        "id": "publications",
+        "label": "Publications"
+      },
+      {
+        "id": "member",
+        "label": "Member"
+      },
+      {
+        "id": "speaker",
+        "label": "Speaker"
+      },
+      {
+        "id": "awards",
+        "label": "Awards & events"
+      }
+    ],
+    "publications": {
+      "stat": {
+        "value": "100+",
+        "label": "Publications",
+        "description": "Research papers in national and international journals on infertility treatment."
+      },
+      "items": [
+        {
+          "id": "ejog",
+          "logo": "/images/publications/ejog.jpg",
+          "caption": "European Journal of Obstetrics & Gynecology and Reproductive Biology"
+        },
+        {
+          "id": "figo",
+          "logo": "/images/publications/figo.jpg",
+          "caption": "FIGO, International Federation of Gynecology and Obstetrics"
+        },
+        {
+          "id": "eshre",
+          "logo": "/images/publications/eshre.jpg",
+          "caption": "ESHRE, European Society of Human Reproduction and Embryology"
+        }
+      ]
+    },
+    "member": {
+      "stat": {
+        "value": "Member",
+        "label": "Professional bodies",
+        "description": "Member of India's leading societies for fertility, obstetrics and gynaecology, and of the Indian Council of Medical Research."
+      },
+      "items": [
+        {
+          "id": "isar",
+          "logo": "/images/publications/isar.jpg",
+          "caption": "Indian Society for Assisted Reproduction (ISAR)"
+        },
+        {
+          "id": "fogsi",
+          "logo": "/images/publications/fogsi.jpg",
+          "caption": "Federation of Obstetric & Gynaecological Societies of India (FOGSI)"
+        },
+        {
+          "id": "ifs",
+          "logo": "/images/publications/ifs.jpg",
+          "caption": "Indian Fertility Society (IFS)"
+        },
+        {
+          "id": "nmc",
+          "logo": "/images/publications/nmc.jpg",
+          "caption": "National Medical Commission (NMC)"
+        },
+        {
+          "id": "narchi",
+          "logo": "/images/publications/narchi.jpg",
+          "caption": "National Association for Reproductive & Child Health of India (NARCHI)"
+        },
+        {
+          "id": "aogd",
+          "logo": "/images/publications/aogd.jpg",
+          "caption": "Association of Obstetricians & Gynaecologists of Delhi (AOGD)"
+        },
+        {
+          "id": "icmr",
+          "logo": "/images/publications/icmr.svg",
+          "caption": "Indian Council of Medical Research (ICMR)"
+        }
+      ]
+    },
+    "speaker": {
+      "stat": {
+        "value": "Speaker",
+        "label": "National & international events",
+        "description": "Expert speaker on infertility at prominent national and international events."
+      },
+      "items": [
+        {
+          "id": "eshre-speaker",
+          "logo": "/images/publications/eshre.jpg",
+          "caption": "ESHRE, European Society of Human Reproduction and Embryology"
+        },
+        {
+          "id": "aspire",
+          "logo": "/images/publications/aspire.jpg",
+          "caption": "ASPIRE, Asia Pacific Initiative on Reproduction"
+        },
+        {
+          "id": "iffs",
+          "logo": "/images/publications/iffs.jpg",
+          "caption": "IFFS, International Federation of Fertility Societies"
+        }
+      ]
+    },
+    "awards": {
+      "stat": {
+        "value": "50+",
+        "label": "Awards & recognition",
+        "description": "National and international awards, plus regular CME and community events."
+      },
+      "cta": {
+        "label": "See news, media & events →",
+        "href": "#blog"
+      },
+      "items": [
+        {
+          "id": "ivf-summit-speaker",
+          "image": "/images/publications/awards/ivf-summit-speaker.jpg",
+          "title": "India IVF Summit & Awards, New Delhi",
+          "subtitle": "Speaker, World IVF Day 2026"
+        },
+        {
+          "id": "ivf-summit-certificate",
+          "image": "/images/publications/awards/ivf-summit-certificate.jpg",
+          "title": "India IVF Summit & Awards",
+          "subtitle": "Certificate of Gratitude as speaker"
+        },
+        {
+          "id": "ivf-summit-panel",
+          "image": "/images/publications/awards/ivf-summit-panel.jpg",
+          "title": "India IVF Summit & Awards",
+          "subtitle": "Panel discussion"
+        },
+        {
+          "id": "times-health-stage",
+          "image": "/images/publications/awards/times-health-stage.jpg",
+          "title": "Times Network India Health Summit & Awards 2025",
+          "subtitle": "Award presentation on stage"
+        },
+        {
+          "id": "times-health-award",
+          "image": "/images/publications/awards/times-health-award.jpg",
+          "title": "Times Network India Health Summit & Awards 2025",
+          "subtitle": "With the award"
+        },
+        {
+          "id": "asia-food-influential",
+          "image": "/images/publications/awards/asia-food-influential.jpg",
+          "title": "Asia Food Congress & Awards, Mumbai",
+          "subtitle": "Most Influential Food Industry Professionals"
+        },
+        {
+          "id": "asia-food-felicitation",
+          "image": "/images/publications/awards/asia-food-felicitation.jpg",
+          "title": "Asia Food Congress & Awards, Mumbai",
+          "subtitle": "Felicitation"
+        },
+        {
+          "id": "asia-food-group",
+          "image": "/images/publications/awards/asia-food-group.jpg",
+          "title": "Asia Food Congress & Awards, Mumbai",
+          "subtitle": "With fellow awardees"
+        }
+      ]
+    }
+  },
   "affiliations": {
     "eyebrow": "Affiliations",
     "title": "Dr. Mona Dahiya's",
@@ -682,11 +871,7 @@
           "name": "Little Angel IVF",
           "icon": "/images/affiliations/icon-baby-heart.jpg",
           "tone": "pink",
-          "tags": [
-            "Noida",
-            "Delhi",
-            "Ghaziabad"
-          ]
+          "tags": ["Noida", "Delhi", "Ghaziabad"]
         }
       ]
     },
@@ -697,17 +882,17 @@
         {
           "id": "apollo",
           "name": "Apollo Fertility",
-          "logo": "/images/affiliations/logo-apollo-fertility.jpg"
+          "logo": "/images/affiliations/logo-apollo-fertility.png"
         },
         {
           "id": "birla",
           "name": "Birla Fertility & IVF",
-          "logo": "/images/affiliations/logo-birla-fertility.jpg"
+          "logo": "/images/affiliations/logo-birla-fertility.png"
         },
         {
           "id": "max",
           "name": "Max Healthcare",
-          "logo": "/images/affiliations/logo-max-healthcare.jpg"
+          "logo": "/images/affiliations/logo-max-healthcare.svg"
         }
       ]
     }
@@ -922,7 +1107,7 @@
       },
       {
         "id": "video",
-        "label": "Video consultation"
+        "label": "online consultation"
       },
       {
         "id": "travel",
@@ -1033,11 +1218,7 @@
       "subtitle": "Fill in your details and we will get back to you shortly.",
       "submitLabel": "Request appointment",
       "disclaimer": "Demo form. In production this posts to the booking system.",
-      "clinics": [
-        "Noida",
-        "Ghaziabad",
-        "Delhi"
-      ]
+      "clinics": ["Noida", "Ghaziabad", "Delhi"]
     }
   },
   "footer": {
@@ -1141,9 +1322,7 @@
       ]
     },
     "directoryTitle": "Directory",
-    "directory": [
-      { "label": "All Locations", "href": "#clinics" }
-    ],
+    "directory": [{ "label": "All Locations", "href": "#clinics" }],
     "clinicHours": "Clinics: Mon–Sat · 10:00 AM to 5:00 PM",
     "guidesTitle": "Patient Guides & Articles",
     "educationalHub": {
@@ -1155,7 +1334,11 @@
     "highIntentGuides": {
       "title": "High-Intent Guides",
       "items": [
-        { "label": "IVF Cost Breakdown & Packages", "href": "#", "isNew": true },
+        {
+          "label": "IVF Cost Breakdown & Packages",
+          "href": "#",
+          "isNew": true
+        },
         { "label": "What to Do After Failed IVF", "href": "#", "isNew": true },
         { "label": "Diet & Protocol for Low AMH", "href": "#" },
         { "label": "Egg Freezing: Ideal Age & Costs", "href": "#" },
@@ -1167,7 +1350,11 @@
       "subtitle": "Legal & Accreditation",
       "items": [
         { "label": "Privacy Policy & Patient Data Security", "href": "#" },
-        { "label": "Terms of Medical Consultation", "href": "#", "isNew": true },
+        {
+          "label": "Terms of Medical Consultation",
+          "href": "#",
+          "isNew": true
+        },
         { "label": "Doctor Registration & Medical Council", "href": "#" }
       ]
     },

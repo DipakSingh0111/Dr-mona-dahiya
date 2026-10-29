@@ -90,12 +90,10 @@ export default function FAQSection() {
   const { titlePrefix, titleHighlight, cta, leftFaqs, rightFaqs } =
     siteData.faq;
 
-  const [openIds, setOpenIds] = useState<string[]>(["faq-01"]);
+  const [openId, setOpenId] = useState<string | null>("faq-01");
 
   const toggleFaq = (id: string) => {
-    setOpenIds((prev) =>
-      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
-    );
+    setOpenId((prev) => (prev === id ? null : id));
   };
 
   return (
@@ -133,7 +131,7 @@ export default function FAQSection() {
               <StaggerItem key={item.id} variant="slideLeft">
                 <FaqCard
                   item={item}
-                  isOpen={openIds.includes(item.id)}
+                  isOpen={openId === item.id}
                   onToggle={() => toggleFaq(item.id)}
                 />
               </StaggerItem>
@@ -149,7 +147,7 @@ export default function FAQSection() {
               <StaggerItem key={item.id} variant="slideRight">
                 <FaqCard
                   item={item}
-                  isOpen={openIds.includes(item.id)}
+                  isOpen={openId === item.id}
                   onToggle={() => toggleFaq(item.id)}
                 />
               </StaggerItem>

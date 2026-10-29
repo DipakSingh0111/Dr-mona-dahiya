@@ -7,7 +7,9 @@ import {
   ChevronDownIcon,
   CloseIcon,
   MenuIcon,
+  PhoneIcon,
 } from "./Icons";
+import { FaStar, FaWhatsapp } from "react-icons/fa";
 
 export default function Navbar() {
   const { brand, menu, cta } = siteData.navbar;
@@ -15,60 +17,135 @@ export default function Navbar() {
 
   return (
     <header className="relative z-40 bg-transparent">
-      <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-4 px-4 py-3.5 sm:px-6 lg:px-8">
-        <a href={brand.href} className="min-w-0 shrink-0">
-          <span className="font-display block text-[1.85rem] leading-none font-bold tracking-tight text-white sm:text-[2.1rem]">
-            {brand.name}
-          </span>
-          <span className="mt-1 block text-[11px] font-medium text-white/80 tracking-wide">
-            {brand.tagline}
-          </span>
-        </a>
-
-        <nav
-          className="hidden items-center gap-0.5 lg:flex xl:gap-1.5"
-          aria-label="Primary"
-        >
-          {menu.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              className="inline-flex items-center gap-1 px-2.5 py-1.5 text-[11px] font-semibold tracking-[0.08em] text-white/95 uppercase transition-colors hover:text-white xl:px-3 xl:text-[11.5px]"
-            >
-              {item.label}
-              {item.hasDropdown ? (
-                <ChevronDownIcon className="size-3 opacity-70" />
-              ) : null}
-            </a>
-          ))}
-        </nav>
-
-        <div className="flex items-center gap-3">
-          <a
-            href={cta.href}
-            className="hidden items-center gap-2 rounded-xl bg-[#c54866] px-4 py-2.5 text-[11px] font-bold tracking-[0.08em] text-white uppercase shadow-sm transition-all hover:bg-[#b03a55] sm:inline-flex xl:px-5"
-          >
-            <CalendarIcon className="size-3.5" />
-            {cta.label}
+      {/* Brand row — light gradient, minimal glow (no heavy blur) */}
+      <div
+        className="relative overflow-hidden"
+        style={{
+          background:
+            "linear-gradient(105deg, #003db8 0%, #0047ca 50%, #0d55d0 100%)",
+        }}
+      >
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-y-0 right-0 w-[40%] opacity-25"
+          style={{
+            background:
+              "radial-gradient(ellipse 70% 100% at 90% 50%, rgba(140,200,255,0.35) 0%, transparent 65%)",
+          }}
+        />
+        <div className="relative z-10 mx-auto flex max-w-[1440px] items-center justify-between gap-4 px-4 py-2.5 sm:px-6 sm:py-3 lg:px-8">
+          <a href={brand.href} className="min-w-0 shrink-0">
+            <span className="font-display block text-[1.65rem] leading-none font-bold tracking-tight text-white sm:text-[1.85rem] xl:text-[2.1rem]">
+              {brand.name}
+            </span>
+            <span className="mt-1 block text-[10.5px] font-medium tracking-wide text-white/85 xl:text-[11px]">
+              {brand.tagline}
+            </span>
           </a>
 
-          <button
-            type="button"
-            className="inline-flex size-9 items-center justify-center rounded-lg border border-white/20 text-white lg:hidden"
-            aria-expanded={open}
-            aria-controls="mobile-menu"
-            aria-label={open ? "Close menu" : "Open menu"}
-            onClick={() => setOpen((v) => !v)}
-          >
-            {open ? (
-              <CloseIcon className="size-5" />
-            ) : (
-              <MenuIcon className="size-5" />
-            )}
-          </button>
+          <div className="hidden items-center gap-4 md:flex lg:gap-5">
+            <a
+              href="tel:+919267982924"
+              className="flex items-center gap-2 text-[14px] font-semibold text-white transition-opacity hover:opacity-90 xl:text-[15px]"
+            >
+              <PhoneIcon className="size-4 rotate-[-10deg] text-white/90" />
+              <span className="tracking-wide tabular-nums">+91 92679 82924</span>
+            </a>
+
+            <a
+              href="https://wa.me/919267982924"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Chat on WhatsApp"
+              className="flex size-9 items-center justify-center rounded-full bg-[#25d366] text-white shadow-[0_0_16px_rgba(37,211,102,0.55)] transition-transform hover:scale-105 active:scale-95"
+            >
+              <FaWhatsapp className="size-5" />
+            </a>
+
+            <div
+              className="flex items-center gap-2 rounded-xl border border-white/35 px-3.5 py-1.5 shadow-sm"
+              style={{
+                background:
+                  "linear-gradient(135deg, rgba(0,30,100,0.55) 0%, rgba(0,50,140,0.35) 100%)",
+              }}
+            >
+              <div className="flex items-center gap-0.5 text-[#f5a524]">
+                <FaStar className="size-3 fill-current" />
+                <FaStar className="size-3 fill-current" />
+                <FaStar className="size-3 fill-current" />
+                <FaStar className="size-3 fill-current" />
+                <FaStar className="size-3 fill-current" />
+              </div>
+              <span className="text-[12.5px] font-bold text-white">4.9</span>
+              <span className="text-[11px] font-medium text-white/85">
+                Google patient reviews
+              </span>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-2 md:hidden">
+            <a
+              href="https://wa.me/919267982924"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Chat on WhatsApp"
+              className="flex size-8 items-center justify-center rounded-full bg-[#25d366] text-white shadow-sm"
+            >
+              <FaWhatsapp className="size-4" />
+            </a>
+            <button
+              type="button"
+              className="inline-flex size-9 items-center justify-center rounded-lg border border-white/20 text-white"
+              aria-expanded={open}
+              aria-controls="mobile-menu"
+              aria-label={open ? "Close menu" : "Open menu"}
+              onClick={() => setOpen((v) => !v)}
+            >
+              {open ? <CloseIcon className="size-5" /> : <MenuIcon className="size-5" />}
+            </button>
+          </div>
         </div>
       </div>
 
+      {/* Menu row — crisp, barely-there gradient */}
+      <div
+        className="relative z-10"
+        style={{
+          background: "linear-gradient(90deg, #0047ca 0%, #0050d4 100%)",
+        }}
+      >
+        <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-4 px-4 py-1 sm:px-6 sm:py-1.5 lg:px-8">
+          <nav
+            className="hidden items-center gap-2 lg:flex xl:gap-3"
+            aria-label="Primary"
+          >
+            {menu.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                className="inline-flex items-center gap-1.5 px-2.5 py-2 text-[13px] font-semibold tracking-[0.06em] text-white uppercase whitespace-nowrap transition-colors hover:text-white/90 xl:px-3.5 xl:text-[14px] xl:tracking-[0.07em]"
+              >
+                <span>{item.label}</span>
+                {item.hasDropdown ? (
+                  <ChevronDownIcon className="size-3.5 shrink-0 opacity-70" />
+                ) : null}
+              </a>
+            ))}
+          </nav>
+
+          <div className="hidden py-1 lg:block">
+            <a
+              href={cta.href}
+              className="inline-flex items-center gap-2 rounded-xl bg-[#c54866] px-5 py-2.5 text-[13px] font-bold tracking-[0.08em] text-white uppercase whitespace-nowrap shadow-sm transition-all hover:bg-[#b03a55] xl:px-6 xl:text-[14px]"
+            >
+              <CalendarIcon className="size-4 shrink-0" />
+              {cta.label}
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Drawer */}
       {open ? (
         <div
           id="mobile-menu"
@@ -90,7 +167,7 @@ export default function Navbar() {
             ))}
             <a
               href={cta.href}
-              className="mt-2 inline-flex items-center justify-center gap-2 rounded-lg bg-[#b34562] px-5 py-3 text-[12px] font-bold tracking-[0.08em] text-white uppercase sm:hidden"
+              className="mt-2 inline-flex items-center justify-center gap-2 rounded-lg bg-[#b34562] px-5 py-3 text-[12px] font-bold tracking-[0.08em] text-white uppercase"
               onClick={() => setOpen(false)}
             >
               <CalendarIcon className="size-3.5" />

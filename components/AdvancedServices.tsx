@@ -50,7 +50,12 @@ function UterusIcon({ className }: { className?: string }) {
 function FemaleAvatar() {
   return (
     <div className="flex size-[50px] shrink-0 items-center justify-center rounded-full bg-[#e83e74] shadow-[0_6px_14px_rgba(232,62,116,0.28)] sm:size-[54px]">
-      <svg viewBox="0 0 40 40" fill="#fff" className="size-7 sm:size-[30px]" aria-hidden>
+      <svg
+        viewBox="0 0 40 40"
+        fill="#fff"
+        className="size-7 sm:size-[30px]"
+        aria-hidden
+      >
         <circle cx="20" cy="13" r="5" />
         <path
           d="M14 11 C13 17, 15 21, 15 23 M26 11 C27 17, 25 21, 25 23"
@@ -144,13 +149,13 @@ export default function AdvancedServices() {
           })}
         </Stagger>
 
-        {/* Bottom conditions — women slightly wider like reference */}
+        {/* Bottom conditions — balanced widths */}
         <Stagger
-          className="grid grid-cols-1 gap-4 lg:grid-cols-[1.18fr_0.82fr] lg:gap-5"
+          className="grid grid-cols-1 gap-4 lg:grid-cols-[1.1fr_0.9fr] lg:gap-5 xl:grid-cols-[1.08fr_0.92fr]"
           stagger={0.12}
         >
           <StaggerItem variant="slideLeft">
-            <article className="h-full rounded-[20px] border border-[#f9c5d4] bg-[#fff8fa] px-5 py-6 sm:rounded-[22px] sm:px-7 sm:py-7">
+            <article className="h-full rounded-[20px] border border-[#f9c5d4] bg-[#fff8fa] px-5 py-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#e83e74]/50 hover:shadow-[0_14px_32px_rgba(232,62,116,0.12)] sm:rounded-[22px] sm:px-7 sm:py-7">
               <div className="mb-5 flex items-center gap-3.5 sm:gap-4">
                 <FemaleAvatar />
                 <h3 className="font-display text-[1.15rem] leading-snug font-bold tracking-tight text-[#0f2038] sm:text-[1.35rem]">
@@ -162,7 +167,7 @@ export default function AdvancedServices() {
                 {womenConditions.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="inline-flex rounded-full border border-[#f5b8cb] bg-[#fff0f4] px-3.5 py-2 text-[12.5px] font-semibold text-[#0f2038] sm:px-4 sm:py-2.5 sm:text-[13.5px]"
+                    className="inline-flex cursor-pointer rounded-full border border-[#f5b8cb] bg-[#fff0f4] px-3.5 py-2 text-[12.5px] font-semibold text-[#0f2038] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#e83e74] hover:bg-[#e83e74] hover:text-white hover:shadow-[0_6px_16px_rgba(232,62,116,0.28)] sm:px-4 sm:py-2.5 sm:text-[13.5px]"
                   >
                     {tag}
                   </span>
@@ -172,10 +177,10 @@ export default function AdvancedServices() {
           </StaggerItem>
 
           <StaggerItem variant="slideRight">
-            <article className="h-full rounded-[20px] border border-[#b8dbf8] bg-[#f5faff] px-5 py-6 sm:rounded-[22px] sm:px-7 sm:py-7">
+            <article className="h-full rounded-[20px] border border-[#b8dbf8] bg-[#f5faff] px-5 py-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#0284c7]/50 hover:shadow-[0_14px_32px_rgba(2,132,199,0.12)] sm:rounded-[22px] sm:px-7 sm:py-7">
               <div className="mb-5 flex items-center gap-3.5 sm:gap-4">
                 <MaleAvatar />
-                <h3 className="font-display text-[1.15rem] leading-snug font-bold tracking-tight text-[#0f2038] sm:text-[1.35rem]">
+                <h3 className="font-display text-[1.15rem] leading-snug font-bold tracking-tight text-[#0f2038] sm:text-[1.35px] sm:text-[1.35rem]">
                   {menConditions.title}
                 </h3>
               </div>
@@ -184,7 +189,7 @@ export default function AdvancedServices() {
                 {menConditions.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="inline-flex rounded-full border border-[#a8d4f5] bg-[#eef6ff] px-3.5 py-2 text-[12.5px] font-semibold text-[#0f2038] sm:px-4 sm:py-2.5 sm:text-[13.5px]"
+                    className="inline-flex cursor-pointer whitespace-nowrap rounded-full border border-[#a8d4f5] bg-[#eef6ff] px-3.5 py-2 text-[12.5px] font-semibold text-[#0f2038] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#0284c7] hover:bg-[#0284c7] hover:text-white hover:shadow-[0_6px_16px_rgba(2,132,199,0.28)] sm:px-4 sm:py-2.5 sm:text-[13.5px]"
                   >
                     {tag}
                   </span>

@@ -1,7 +1,6 @@
 "use client";
 
 import type { ReactNode } from "react";
-import Image from "next/image";
 import {
   FaArrowRight,
   FaYoutube,
@@ -64,45 +63,99 @@ const ICONS: Record<string, ReactNode> = {
   dna: <FaDna className="size-[28px] sm:size-[32px]" />,
 };
 
-type Theme = { bg: string; color: string; glow: string };
+type Theme = {
+  bg: string;
+  color: string;
+  glow: string;
+  border: string;
+  badgeBg: string;
+};
 
 const THEMES: Record<string, Theme> = {
-  ivf: { bg: "#ffe4ec", color: "#e83e74", glow: "rgba(232,62,116,0.32)" },
-  iui: { bg: "#e8f1ff", color: "#3b82f6", glow: "rgba(59,130,246,0.28)" },
+  ivf: {
+    bg: "#fff5f8",
+    color: "#e83e74",
+    glow: "rgba(232,62,116,0.18)",
+    border: "#fcd5e2",
+    badgeBg: "#ffe4ee",
+  },
+  iui: {
+    bg: "#f4f8ff",
+    color: "#2563eb",
+    glow: "rgba(37,99,235,0.16)",
+    border: "#d0e1fd",
+    badgeBg: "#e3efff",
+  },
   "follicular-ultrasound": {
-    bg: "#e7f8ef",
-    color: "#10b981",
-    glow: "rgba(16,185,129,0.28)",
+    bg: "#f2fbf6",
+    color: "#059669",
+    glow: "rgba(5,150,105,0.16)",
+    border: "#c6f2dd",
+    badgeBg: "#dcfce7",
   },
   "infertility-tests": {
-    bg: "#fff1e6",
-    color: "#f97316",
-    glow: "rgba(249,115,22,0.28)",
+    bg: "#fff7ed",
+    color: "#ea580c",
+    glow: "rgba(234,88,12,0.16)",
+    border: "#fed7aa",
+    badgeBg: "#ffedd5",
   },
   "male-infertility": {
-    bg: "#e7f8ef",
-    color: "#059669",
-    glow: "rgba(5,150,105,0.28)",
+    bg: "#f0fdf4",
+    color: "#0d9488",
+    glow: "rgba(13,148,136,0.16)",
+    border: "#bbf7d0",
+    badgeBg: "#ccfbf1",
   },
-  "mini-ivf": { bg: "#ffe4ec", color: "#e83e74", glow: "rgba(232,62,116,0.28)" },
-  laparoscopy: {
-    bg: "#f3e8ff",
-    color: "#8b5cf6",
-    glow: "rgba(139,92,246,0.28)",
-  },
-  "low-amh": { bg: "#e8f1ff", color: "#3b82f6", glow: "rgba(59,130,246,0.26)" },
-  cryopreservation: {
-    bg: "#ffe4ec",
+  "mini-ivf": {
+    bg: "#fff5f8",
     color: "#e83e74",
-    glow: "rgba(96,165,250,0.3)",
+    glow: "rgba(232,62,116,0.16)",
+    border: "#fcd5e2",
+    badgeBg: "#ffe4ee",
   },
-  era: { bg: "#e7f8ef", color: "#14b8a6", glow: "rgba(20,184,166,0.28)" },
+  laparoscopy: {
+    bg: "#faf5ff",
+    color: "#7c3aed",
+    glow: "rgba(124,58,237,0.16)",
+    border: "#e9d5ff",
+    badgeBg: "#f3e8ff",
+  },
+  "low-amh": {
+    bg: "#f0f9ff",
+    color: "#0284c7",
+    glow: "rgba(2,132,199,0.16)",
+    border: "#bae6fd",
+    badgeBg: "#e0f2fe",
+  },
+  cryopreservation: {
+    bg: "#fff5f8",
+    color: "#e83e74",
+    glow: "rgba(232,62,116,0.16)",
+    border: "#fcd5e2",
+    badgeBg: "#ffe4ee",
+  },
+  era: {
+    bg: "#f0fdfa",
+    color: "#0d9488",
+    glow: "rgba(13,148,136,0.16)",
+    border: "#99f6e4",
+    badgeBg: "#ccfbf1",
+  },
   "donor-gametes": {
-    bg: "#fff1e6",
-    color: "#f97316",
-    glow: "rgba(249,115,22,0.26)",
+    bg: "#fff7ed",
+    color: "#ea580c",
+    glow: "rgba(234,88,12,0.16)",
+    border: "#fed7aa",
+    badgeBg: "#ffedd5",
   },
-  pgt: { bg: "#f3e8ff", color: "#8b5cf6", glow: "rgba(139,92,246,0.3)" },
+  pgt: {
+    bg: "#faf5ff",
+    color: "#7c3aed",
+    glow: "rgba(124,58,237,0.16)",
+    border: "#e9d5ff",
+    badgeBg: "#f3e8ff",
+  },
 };
 
 export default function OurServices() {
@@ -131,7 +184,7 @@ export default function OurServices() {
               </span>
             </h2>
 
-            <p className="mt-4 max-w-2xl text-[14.5px] leading-relaxed text-[#64748b] sm:text-[15.5px]">
+            <p className="mt-4 max-w-none text-[14.5px] leading-relaxed text-[#64748b] sm:whitespace-nowrap sm:text-[15.5px]">
               {description}
             </p>
 
@@ -156,68 +209,69 @@ export default function OurServices() {
 
             return (
               <StaggerItem key={item.id} variant="fadeUp" className="h-full">
-              <article
-                className="group relative flex h-full min-h-[260px] flex-col overflow-hidden rounded-[20px] bg-white p-5 shadow-[0_10px_30px_rgba(15,32,56,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(15,32,56,0.1)] sm:min-h-[280px] sm:p-6"
-              >
-                <div className="relative z-10 flex flex-1 flex-col pr-28 sm:pr-32 md:pr-36">
-                  <div
-                    className="mb-4 inline-flex size-[58px] items-center justify-center rounded-full sm:size-[66px]"
-                    style={{ backgroundColor: theme.bg, color: theme.color }}
-                  >
-                    {ICONS[item.icon] ?? (
-                      <UterusIcon className="size-[32px] sm:size-[36px]" />
-                    )}
-                  </div>
-
-                  <h3 className="font-display text-[17px] leading-snug font-bold tracking-tight text-[#0f2038] sm:text-[18.5px]">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-2.5 max-w-[220px] text-[13px] leading-relaxed text-[#64748b] sm:text-[13.5px]">
-                    {item.description}
-                  </p>
-
-                  <a
-                    href={item.videoHref}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-auto inline-flex w-fit items-center gap-2 pt-6 text-[13px] font-semibold text-[#0f2038] transition hover:text-[#e83e74]"
-                  >
-                    <span className="inline-flex size-6 items-center justify-center rounded-full bg-[#ff0000] text-white shadow-sm">
-                      <FaYoutube className="size-3" />
-                    </span>
-                    Watch video
-                  </a>
-                </div>
-
-                {/* Soft colored glow */}
-                <div
-                  aria-hidden
-                  className="pointer-events-none absolute right-0 bottom-0 h-[200px] w-[200px] rounded-full blur-3xl"
+                <article
+                  className="group relative flex h-full min-h-[250px] flex-col justify-between overflow-hidden rounded-[24px] border p-6 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl sm:p-7"
                   style={{
-                    background: `radial-gradient(circle, ${theme.glow} 0%, transparent 68%)`,
-                  }}
-                />
-
-                {/* Clear illustration with light edge fade only */}
-                <div
-                  className="pointer-events-none absolute right-0 bottom-0 h-[150px] w-[150px] sm:h-[180px] sm:w-[180px] lg:h-[200px] lg:w-[200px]"
-                  style={{
-                    WebkitMaskImage:
-                      "radial-gradient(ellipse 80% 80% at 70% 70%, #000 45%, rgba(0,0,0,0.85) 62%, rgba(0,0,0,0.35) 78%, transparent 92%)",
-                    maskImage:
-                      "radial-gradient(ellipse 80% 80% at 70% 70%, #000 45%, rgba(0,0,0,0.85) 62%, rgba(0,0,0,0.35) 78%, transparent 92%)",
+                    backgroundColor: theme.bg,
+                    borderColor: theme.border,
+                    boxShadow: `0 10px 30px ${theme.glow}`,
                   }}
                 >
-                  <Image
-                    src={item.image}
-                    alt=""
-                    fill
-                    sizes="200px"
-                    className="object-contain object-right-bottom transition-transform duration-500 group-hover:scale-[1.04]"
+                  {/* Subtle decorative gradient top bar */}
+                  <div
+                    aria-hidden
+                    className="absolute top-0 inset-x-0 h-1.5 opacity-80"
+                    style={{ backgroundColor: theme.color }}
                   />
-                </div>
-              </article>
+
+                  <div>
+                    <div className="mb-5 flex items-center justify-between">
+                      <div
+                        className="inline-flex size-[56px] items-center justify-center rounded-2xl shadow-sm transition-transform duration-300 group-hover:scale-105 sm:size-[62px]"
+                        style={{
+                          backgroundColor: theme.badgeBg,
+                          color: theme.color,
+                        }}
+                      >
+                        {ICONS[item.icon] ?? (
+                          <UterusIcon className="size-[30px] sm:size-[34px]" />
+                        )}
+                      </div>
+
+                      <span
+                        className="flex size-8 items-center justify-center rounded-full opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                        style={{
+                          backgroundColor: theme.badgeBg,
+                          color: theme.color,
+                        }}
+                      >
+                        <FaArrowRight className="size-3" />
+                      </span>
+                    </div>
+
+                    <h3 className="font-display text-[18px] leading-snug font-bold tracking-tight text-[#0f2038] sm:text-[20px]">
+                      {item.title}
+                    </h3>
+
+                    <p className="mt-2.5 text-[13.5px] leading-relaxed text-[#516174] sm:text-[14px]">
+                      {item.description}
+                    </p>
+                  </div>
+
+                  <div className="mt-6 pt-2">
+                    <a
+                      href={item.videoHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2.5 text-[13.5px] font-semibold text-[#0f2038] transition-colors hover:text-[#ff0000]"
+                    >
+                      <span className="inline-flex size-6 items-center justify-center rounded-full bg-[#ff0000] text-white shadow-sm">
+                        <FaYoutube className="size-3.5" />
+                      </span>
+                      <span>Watch video</span>
+                    </a>
+                  </div>
+                </article>
               </StaggerItem>
             );
           })}

@@ -1,282 +1,50 @@
 "use client";
 
-import { useState } from "react";
-import Image from "next/image";
-import { FaArrowRight, FaRibbon } from "react-icons/fa";
-import { GiEmbryo } from "react-icons/gi";
 import siteData from "@/data/site.json";
-import { Reveal } from "./Reveal";
-
-type CardIcon = "egg" | "sperm" | "embryo" | "ribbon";
-
-const accentMap = {
-  pink: {
-    glow: "from-[#3a1a2e]/80 via-[#1a2e28] to-[#0c241f]",
-    ring: "ring-[#f0518e]/40",
-    icon: "text-[#f0518e]",
-    iconBg: "bg-[#f0518e]/15",
-    bloom: "rgba(240,81,142,0.55)",
-  },
-  purple: {
-    glow: "from-[#2a1a3a]/80 via-[#1a2e28] to-[#0c241f]",
-    ring: "ring-[#b57edc]/40",
-    icon: "text-[#c9a0e8]",
-    iconBg: "bg-[#b57edc]/15",
-    bloom: "rgba(200,140,230,0.5)",
-  },
-  teal: {
-    glow: "from-[#12353a]/80 via-[#1a2e28] to-[#0c241f]",
-    ring: "ring-[#3db8a8]/40",
-    icon: "text-[#3db8a8]",
-    iconBg: "bg-[#3db8a8]/15",
-    bloom: "rgba(61,184,168,0.48)",
-  },
-} as const;
-
-function EggIcon({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-hidden>
-      <ellipse cx="12" cy="13" rx="6.5" ry="8" opacity="0.9" />
-      <circle cx="12" cy="12" r="2.2" fill="#0c241f" opacity="0.35" />
-    </svg>
-  );
-}
-
-function SpermIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      className={className}
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      aria-hidden
-    >
-      <circle cx="8" cy="8" r="3.2" fill="currentColor" stroke="none" />
-      <path d="M10.5 10.5c2 2.2 4.2 5.5 4.8 8.2" />
-      <path d="M13.2 14.2c1.4-.2 2.8.4 3.6 1.4" />
-    </svg>
-  );
-}
-
-function CardGlyph({
-  icon,
-  className,
-}: {
-  icon: CardIcon;
-  className?: string;
-}) {
-  if (icon === "egg") return <EggIcon className={className} />;
-  if (icon === "sperm") return <SpermIcon className={className} />;
-  if (icon === "embryo") return <GiEmbryo className={className} />;
-  return <FaRibbon className={className} />;
-}
-
-function NumberBadge({ value }: { value: string }) {
-  return (
-    <span className="inline-flex size-9 items-center justify-center rounded-md border border-dashed border-[#f0518e] text-[12px] font-semibold tracking-wide text-[#f0518e]">
-      {value}
-    </span>
-  );
-}
-
-/** Right-side art — matches reference: soft pink orb + feathered circular image */
-function CardArt({
-  src,
-  alt,
-  bloom,
-}: {
-  src: string;
-  alt: string;
-  bloom: string;
-}) {
-  return (
-    <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[56%] sm:block">
-      {/* Soft pink fade glow across right half */}
-      <div
-        aria-hidden
-        className="absolute inset-0"
-        style={{
-          background: `radial-gradient(ellipse 95% 85% at 92% 50%, ${bloom} 0%, rgba(240,81,142,0.22) 35%, rgba(240,81,142,0.06) 58%, transparent 75%)`,
-        }}
-      />
-
-      {/* Large soft translucent sphere behind art */}
-      <div
-        aria-hidden
-        className="absolute top-1/2 right-[-28%] aspect-square w-[130%] -translate-y-1/2 rounded-full"
-        style={{
-          background:
-            "radial-gradient(circle at 36% 48%, rgba(255,160,195,0.2) 0%, rgba(240,81,142,0.1) 40%, rgba(255,255,255,0.03) 58%, transparent 70%)",
-          boxShadow: "inset 0 0 0 1px rgba(255,200,220,0.16)",
-        }}
-      />
-
-      {/* Mid pink bloom */}
-      <div
-        aria-hidden
-        className="absolute top-1/2 right-[-6%] size-[78%] -translate-y-1/2 rounded-full blur-[40px]"
-        style={{ background: "rgba(240,81,142,0.55)" }}
-      />
-
-      {/* Feathered circular image — soft mask, no hard box */}
-      <div
-        className="absolute top-1/2 right-[-16%] aspect-square w-[95%] max-w-[340px] -translate-y-1/2"
-        style={{
-          WebkitMaskImage:
-            "radial-gradient(circle at 50% 50%, #000 42%, rgba(0,0,0,0.85) 58%, rgba(0,0,0,0.35) 72%, transparent 82%)",
-          maskImage:
-            "radial-gradient(circle at 50% 50%, #000 42%, rgba(0,0,0,0.85) 58%, rgba(0,0,0,0.35) 72%, transparent 82%)",
-        }}
-      >
-        <Image
-          src={src}
-          alt={alt}
-          fill
-          sizes="340px"
-          className="object-cover object-center"
-        />
-      </div>
-    </div>
-  );
-}
+import { Reveal, Stagger, StaggerItem } from "./Reveal";
 
 export default function FertilityPreservation() {
   const data = siteData.fertilityPreservation;
-  const [active, setActive] = useState(0);
 
   return (
-    <section className="relative overflow-hidden bg-[#0c241f] px-3 py-6 sm:px-4 sm:py-7 lg:pr-8 lg:pl-3 lg:py-8 xl:pl-4">
-      <div className="mx-auto w-full max-w-[1400px]">
-        <Reveal>
-          <header className="mx-auto mb-6 max-w-3xl text-center sm:mb-8">
-            <div className="mb-4 flex items-center justify-center gap-3">
-              <span className="h-px w-10 bg-[#f0518e] sm:w-14" />
-              <span className="text-[11px] font-semibold tracking-[0.22em] text-[#f0518e] uppercase sm:text-xs">
+    <section className="relative overflow-hidden bg-[#13221f] px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+      <div className="mx-auto w-full max-w-[1320px]">
+        <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1fr_1.15fr] lg:gap-14">
+          {/* Left column: Eyebrow, Heading, Subtitle */}
+          <Reveal variant="slideLeft">
+            <div className="max-w-[540px]">
+              <p className="text-[13px] font-semibold tracking-wide text-[#e0486c] sm:text-[14px]">
                 {data.eyebrow}
-              </span>
-              <span className="h-px w-10 bg-[#f0518e] sm:w-14" />
+              </p>
+
+              <h2 className="mt-3 font-display text-[2.1rem] leading-[1.12] font-bold tracking-tight text-white sm:text-[2.75rem] lg:text-[3.1rem]">
+                {data.title} {data.titleAccent} {data.titleEnd}
+              </h2>
+
+              <p className="mt-4 text-[14.5px] leading-relaxed text-white/65 sm:text-[15.5px]">
+                {data.subtitle}
+              </p>
             </div>
+          </Reveal>
 
-            <h2 className="font-display text-[1.85rem] leading-tight font-bold text-white sm:text-[2.4rem] lg:text-[2.75rem]">
-              {data.title}{" "}
-              <span className="text-[#f0518e] italic">{data.titleAccent}</span>{" "}
-              {data.titleEnd}
-            </h2>
-
-            <p className="mx-auto mt-3 max-w-2xl text-[13px] leading-relaxed text-white/70 sm:text-[14.5px]">
-              {data.subtitle}
-            </p>
-          </header>
-        </Reveal>
-
-        <div className="grid grid-cols-1 items-stretch gap-5 lg:grid-cols-[minmax(280px,0.95fr)_minmax(0,1.35fr)] lg:gap-6">
-          <Reveal
-            variant="slideLeft"
-            className="relative min-h-[260px] overflow-hidden rounded-[22px] sm:min-h-[380px] lg:min-h-[480px]"
+          {/* Right column: 2x2 Cards Grid with Hover Effect */}
+          <Stagger
+            className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-4"
+            stagger={0.08}
           >
-            <Image
-              src={data.image}
-              alt="Dr. Mona Dahiya — fertility preservation"
-              fill
-              className="object-cover object-[center_20%]"
-              sizes="(max-width: 1024px) 100vw, 45vw"
-              priority
-            />
-          </Reveal>
-
-          <Reveal variant="slideRight">
-            <div
-              className="flex h-auto min-h-[360px] flex-col gap-3 sm:min-h-[440px] lg:min-h-[480px] lg:flex-row lg:gap-3"
-              onMouseLeave={() => setActive(0)}
-            >
-              {data.cards.map((card, index) => {
-                const isOpen = active === index;
-                const accent = (card.accent in accentMap
-                  ? card.accent
-                  : "pink") as keyof typeof accentMap;
-                const theme = accentMap[accent];
-                const art = "art" in card ? String(card.art) : "";
-
-                return (
-                  <div
-                    key={card.id}
-                    onMouseEnter={() => setActive(index)}
-                    onFocus={() => setActive(index)}
-                    onClick={() => setActive(index)}
-                    tabIndex={0}
-                    className={`group relative cursor-pointer overflow-hidden rounded-[20px] border border-white/10 bg-gradient-to-br transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] outline-none ${theme.glow} ${
-                      isOpen
-                        ? "min-h-[280px] flex-[1.15] lg:min-h-0 lg:flex-[3.6]"
-                        : "min-h-[72px] flex-none lg:min-w-[78px] lg:flex-[0.5]"
-                    }`}
-                  >
-                    {/* Expanded */}
-                    <div
-                      className={`absolute inset-0 ${
-                        isOpen
-                          ? "pointer-events-auto opacity-100 delay-75"
-                          : "pointer-events-none opacity-0"
-                      } transition-opacity duration-300`}
-                    >
-                      {art ? (
-                        <CardArt
-                          src={art}
-                          alt={card.title}
-                          bloom={theme.bloom}
-                        />
-                      ) : null}
-
-                      <div className="relative z-10 flex h-full max-w-[54%] flex-col p-5 sm:max-w-[50%] sm:p-6 lg:max-w-[48%]">
-                        <NumberBadge value={card.number} />
-                        <h3 className="font-display mt-4 text-[1.55rem] leading-tight font-bold text-white sm:text-[1.75rem]">
-                          {card.title}
-                        </h3>
-                        <p className="mt-1.5 text-[12.5px] text-white/55 sm:text-[13px]">
-                          {card.subtitle}
-                        </p>
-                        <div className="my-4 h-px w-[72%] max-w-[200px] bg-gradient-to-r from-[#f0518e] to-transparent" />
-                        <a
-                          href={data.cta.href}
-                          className="mt-auto inline-flex w-fit items-center gap-2.5 rounded-full bg-[#f0518e] px-4 py-2.5 text-[13px] font-semibold text-white transition hover:bg-[#e0437f]"
-                        >
-                          {data.cta.label}
-                          <span className="flex size-6 items-center justify-center rounded-full bg-white text-[#f0518e]">
-                            <FaArrowRight className="size-2.5" />
-                          </span>
-                        </a>
-                      </div>
-                    </div>
-
-                    {/* Collapsed — vertical strip on desktop */}
-                    <div
-                      className={`absolute inset-0 flex items-center justify-between px-5 py-4 lg:flex-col lg:px-3 lg:py-5 ${
-                        isOpen
-                          ? "pointer-events-none opacity-0"
-                          : "opacity-100 delay-75"
-                      } transition-opacity duration-300`}
-                    >
-                      <span
-                        className={`flex size-11 items-center justify-center rounded-full ring-1 ${theme.iconBg} ${theme.icon} ${theme.ring}`}
-                      >
-                        <CardGlyph
-                          icon={card.icon as CardIcon}
-                          className="size-5"
-                        />
-                      </span>
-
-                      <span className="font-display text-[15px] font-semibold whitespace-nowrap text-white lg:origin-center lg:rotate-180 lg:[writing-mode:vertical-rl]">
-                        {card.title}
-                      </span>
-
-                      <NumberBadge value={card.number} />
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </Reveal>
+            {data.cards.map((card) => (
+              <StaggerItem key={card.id} variant="fadeUp" className="h-full">
+                <div className="group flex h-full flex-col justify-center rounded-2xl border border-white/10 bg-[#172824]/90 px-6 py-5 transition-all duration-300 hover:-translate-y-1 hover:border-[#e0486c]/55 hover:bg-[#1c312c] hover:shadow-[0_12px_30px_rgba(0,0,0,0.28)]">
+                  <h3 className="text-[16px] font-bold tracking-tight text-white transition-colors duration-300 group-hover:text-[#f46486] sm:text-[17px]">
+                    {card.title}
+                  </h3>
+                  <p className="mt-1.5 text-[13.5px] leading-snug text-white/60 transition-colors duration-300 group-hover:text-white/80 sm:text-[14px]">
+                    {card.subtitle}
+                  </p>
+                </div>
+              </StaggerItem>
+            ))}
+          </Stagger>
         </div>
       </div>
     </section>

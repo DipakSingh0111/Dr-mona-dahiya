@@ -1,12 +1,14 @@
 import TopBar from "@/components/TopBar";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import ServicesTicker from "@/components/ServicesTicker";
 import MedicalRegistration from "@/components/MedicalRegistration";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import OurServices from "@/components/OurServices";
 import AdvancedServices from "@/components/AdvancedServices";
 import HowItWorks from "@/components/HowItWorks";
 import MeetYourDoctor from "@/components/MeetYourDoctor";
+import Publications from "@/components/Publications";
 import FertilityPreservation from "@/components/FertilityPreservation";
 import Affiliations from "@/components/Affiliations";
 import ClinicsSection from "@/components/ClinicsSection";
@@ -22,6 +24,7 @@ import { SectionReveal } from "@/components/Reveal";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
+      {/* Navbar sits on the top space of the hero banner image */}
       <div className="relative isolate overflow-hidden bg-[#0047ca]">
         <div className="absolute inset-x-0 top-0 z-50">
           <TopBar />
@@ -29,6 +32,8 @@ export default function Home() {
         </div>
         <HeroSection />
       </div>
+
+      <ServicesTicker />
 
       <SectionReveal>
         <MedicalRegistration />
@@ -50,6 +55,10 @@ export default function Home() {
 
       <SectionReveal delay={0.04}>
         <MeetYourDoctor />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <Publications />
       </SectionReveal>
 
       <SectionReveal delay={0.04}>

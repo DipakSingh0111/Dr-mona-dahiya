@@ -242,8 +242,8 @@ export default function MeetYourDoctor() {
       />
 
       <div className="relative mx-auto w-full max-w-[1400px]">
-        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,1.08fr)_minmax(300px,0.95fr)_minmax(300px,1fr)] lg:gap-5 xl:gap-8">
-          <Reveal variant="slideLeft" className="relative z-10 max-w-xl lg:max-w-none">
+        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[1fr_auto_1fr] lg:gap-6 xl:gap-8">
+          <Reveal variant="slideLeft" className="relative z-10 w-full">
             <span className="inline-flex items-center gap-2 rounded-full border border-[#f9c5d4]/60 bg-gradient-to-r from-[#ffe8f0] to-[#fff5f8] px-3.5 py-1.5 text-[12px] font-semibold text-[#e83e74] shadow-[0_4px_14px_rgba(232,62,116,0.08)]">
               <span className="size-1.5 rounded-full bg-gradient-to-br from-[#f4729a] to-[#e83e74]" />
               {data.badge}
@@ -279,10 +279,10 @@ export default function MeetYourDoctor() {
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
               <a
                 href={data.primaryCta.href}
-                className="inline-flex items-center justify-center gap-2.5 rounded-full bg-gradient-to-r from-[#e83e74] via-[#f0518e] to-[#d13266] px-5 py-3 text-[13.5px] font-semibold text-white shadow-[0_10px_28px_rgba(232,62,116,0.32)] transition hover:brightness-105"
+                className="inline-flex items-center justify-center gap-2.5 rounded-full bg-gradient-to-r from-[#e83e74] via-[#f0518e] to-[#d13266] px-4.5 py-2.5 text-[12.5px] font-semibold text-white whitespace-nowrap shadow-[0_10px_28px_rgba(232,62,116,0.32)] transition hover:brightness-105 xl:px-5 xl:py-3 xl:text-[13.5px]"
               >
-                {data.primaryCta.label}
-                <span className="flex size-6 items-center justify-center rounded-full bg-white text-[#e83e74]">
+                <span>{data.primaryCta.label}</span>
+                <span className="flex size-5.5 items-center justify-center rounded-full bg-white text-[#e83e74] xl:size-6">
                   <FaArrowRight className="size-2.5" />
                 </span>
               </a>
@@ -291,17 +291,17 @@ export default function MeetYourDoctor() {
                 href={data.secondaryCta.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2.5 rounded-full border border-[#f5a3bd] bg-gradient-to-r from-white to-[#fff5f8] px-5 py-3 text-[13.5px] font-semibold text-[#e83e74] shadow-[0_6px_18px_rgba(232,62,116,0.08)] transition hover:from-[#fff5f8] hover:to-[#ffe8f0]"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-[#f5a3bd] bg-gradient-to-r from-white to-[#fff5f8] px-4 py-2.5 text-[12.5px] font-semibold text-[#e83e74] whitespace-nowrap shadow-[0_6px_18px_rgba(232,62,116,0.08)] transition hover:from-[#fff5f8] hover:to-[#ffe8f0] xl:gap-2.5 xl:px-5 xl:py-3 xl:text-[13.5px]"
               >
-                <FaYoutube className="size-5 text-[#ff0033]" />
-                {data.secondaryCta.label}
+                <FaYoutube className="size-4.5 shrink-0 text-[#ff0033] xl:size-5" />
+                <span>{data.secondaryCta.label}</span>
               </a>
             </div>
           </Reveal>
 
           <Reveal
             variant="scaleIn"
-            className="relative mx-auto flex h-[420px] w-full max-w-[380px] items-end justify-center overflow-visible sm:h-[480px] lg:h-[540px] lg:max-w-none"
+            className="relative mx-auto flex h-[420px] w-[340px] shrink-0 items-end justify-center overflow-visible sm:h-[480px] sm:w-[380px] lg:h-[540px] lg:w-[380px] xl:w-[400px]"
           >
             {/* Solid soft pink circle — clearly visible behind cutout */}
             <div
@@ -319,15 +319,6 @@ export default function MeetYourDoctor() {
               style={{
                 background:
                   "radial-gradient(circle at 50% 48%, rgba(249,180,205,0.55) 0%, rgba(251,205,222,0.28) 40%, transparent 68%)",
-              }}
-            />
-
-            {/* Dashed accent arc */}
-            <div
-              aria-hidden
-              className="pointer-events-none absolute top-[6%] right-[2%] z-[1] size-[52%] rounded-full border-[2.5px] border-dashed border-[#f18aaa]/80"
-              style={{
-                clipPath: "polygon(18% 0%, 100% 0%, 100% 62%, 42% 48%)",
               }}
             />
 
@@ -358,10 +349,10 @@ export default function MeetYourDoctor() {
 
           <Reveal
             variant="slideRight"
-            className="relative z-10 mx-auto w-full max-w-[440px] lg:mx-0 lg:max-w-none"
+            className="relative z-10 w-full"
           >
             <article
-              className="rounded-[28px] border border-[#f7c9d8]/80 p-6 shadow-[0_20px_48px_rgba(232,62,116,0.12)] sm:p-7 lg:p-8"
+              className="mx-auto w-full max-w-[460px] rounded-[28px] border border-[#f7c9d8]/80 p-6 shadow-[0_20px_48px_rgba(232,62,116,0.12)] sm:p-7 lg:mx-0 lg:p-7 xl:p-8"
               style={{
                 background:
                   "linear-gradient(160deg, #fff8fb 0%, #fff0f5 42%, #ffe8f0 100%)",

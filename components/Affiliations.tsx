@@ -26,7 +26,7 @@ export default function Affiliations() {
                 <span className="text-[#e83e74]">{data.titleAccent}</span>
               </h2>
             </div>
-            <p className="max-w-md text-[13.5px] leading-relaxed text-[#64748b] sm:text-[14.5px] lg:text-right">
+            <p className="max-w-xl text-[13.5px] leading-relaxed text-[#64748b] sm:text-[14.5px] lg:whitespace-nowrap lg:text-right">
               {data.subtitle}
             </p>
           </div>
@@ -36,29 +36,29 @@ export default function Affiliations() {
           className="grid grid-cols-1 gap-5 lg:grid-cols-[1.35fr_1fr] lg:gap-6"
           stagger={0.12}
         >
-          {/* Present */}
+          {/* Present — Highlighted */}
           <StaggerItem variant="slideLeft">
-            <article className="relative h-full overflow-hidden rounded-[22px] border border-[#f8d5e0] bg-[#fff8fa] p-5 shadow-[0_10px_32px_rgba(232,62,116,0.06)] sm:rounded-[24px] sm:p-7">
+            <article className="relative h-full overflow-hidden rounded-[22px] border border-[#f5a3bd] bg-gradient-to-br from-[#fff5f8] via-[#fff0f5] to-[#ffe4ee] p-5 shadow-[0_14px_36px_rgba(232,62,116,0.12)] sm:rounded-[24px] sm:p-7">
               {/* Soft pink blob top-right */}
               <div
                 aria-hidden
-                className="pointer-events-none absolute -top-10 -right-8 size-44 rounded-full opacity-80 blur-2xl"
+                className="pointer-events-none absolute -top-10 -right-8 size-44 rounded-full opacity-90 blur-2xl"
                 style={{
                   background:
-                    "radial-gradient(circle, rgba(249,168,196,0.55) 0%, rgba(255,228,236,0.25) 55%, transparent 75%)",
+                    "radial-gradient(circle, rgba(244,114,160,0.45) 0%, rgba(255,214,228,0.25) 55%, transparent 75%)",
                 }}
               />
               <FaBuilding
                 aria-hidden
-                className="pointer-events-none absolute top-5 right-5 size-[68px] text-[#e83e74]/[0.12] sm:size-20"
+                className="pointer-events-none absolute top-5 right-5 size-[68px] text-[#e83e74]/[0.14] sm:size-20"
               />
 
-              <div className="relative mb-2 flex flex-wrap items-center gap-3 border-b border-[#f3d0dc]/90 pb-4">
-                <span className="inline-flex items-center gap-2 rounded-full border border-[#f9c5d4] bg-white/90 px-3 py-1.5 shadow-sm">
+              <div className="relative mb-2 flex flex-wrap items-center gap-3 border-b border-[#f5b8cb]/80 pb-4">
+                <span className="inline-flex items-center gap-2 rounded-full border border-[#f5a3bd] bg-[#ffdce8] px-3.5 py-1.5 shadow-sm">
                   <span className="flex size-5 items-center justify-center rounded-full bg-[#e83e74] text-white">
                     <FaHospital className="size-2.5" />
                   </span>
-                  <span className="text-[11px] font-bold tracking-[0.12em] text-[#e83e74] uppercase">
+                  <span className="text-[11px] font-bold tracking-[0.12em] text-[#b02252] uppercase">
                     {data.present.badge}
                   </span>
                 </span>
@@ -75,7 +75,7 @@ export default function Affiliations() {
                     <li
                       key={item.id}
                       className={`py-4 sm:py-5 ${
-                        isLast ? "pb-1" : "border-b border-[#f3d0dc]/90"
+                        isLast ? "pb-1" : "border-b border-[#f5b8cb]/70"
                       }`}
                     >
                       <p className="text-[16px] font-bold text-[#0f2438] sm:text-[17.5px]">
@@ -83,7 +83,7 @@ export default function Affiliations() {
                       </p>
 
                       {"address" in item && item.address ? (
-                        <p className="mt-1.5 text-[13px] leading-relaxed text-[#64748b] sm:text-[14px]">
+                        <p className="mt-1.5 text-[13px] leading-relaxed text-[#475569] sm:text-[14px]">
                           {item.address}
                         </p>
                       ) : null}
@@ -93,7 +93,7 @@ export default function Affiliations() {
                           {item.tags.map((tag) => (
                             <span
                               key={tag}
-                              className="rounded-full border border-[#f5a3bd] bg-white px-3.5 py-1 text-[12.5px] font-semibold text-[#e83e74]"
+                              className="rounded-full border border-[#f08cae] bg-white px-3.5 py-1 text-[12.5px] font-semibold text-[#d62f64] shadow-xs"
                             >
                               {tag}
                             </span>
@@ -107,33 +107,24 @@ export default function Affiliations() {
             </article>
           </StaggerItem>
 
-          {/* Past */}
+          {/* Past — Darker / Muted */}
           <StaggerItem variant="slideRight">
-            <article className="relative h-full overflow-hidden rounded-[22px] border border-[#ddd6fe] bg-[#f7f5ff] p-5 shadow-[0_10px_32px_rgba(107,91,184,0.06)] sm:rounded-[24px] sm:p-7">
-              {/* Soft purple blob top-right */}
-              <div
-                aria-hidden
-                className="pointer-events-none absolute -top-10 -right-8 size-44 rounded-full opacity-80 blur-2xl"
-                style={{
-                  background:
-                    "radial-gradient(circle, rgba(167,139,250,0.45) 0%, rgba(237,233,254,0.3) 55%, transparent 75%)",
-                }}
-              />
+            <article className="relative h-full overflow-hidden rounded-[22px] border border-white/10 bg-[#0d1c19] p-5 text-white shadow-[0_12px_32px_rgba(13,28,25,0.18)] sm:rounded-[24px] sm:p-7">
               <FaBuilding
                 aria-hidden
-                className="pointer-events-none absolute top-5 right-5 size-[68px] text-[#6b5bb8]/[0.14] sm:size-20"
+                className="pointer-events-none absolute top-5 right-5 size-[68px] text-white/[0.04] sm:size-20"
               />
 
-              <div className="relative mb-2 flex flex-wrap items-center gap-3 border-b border-[#ddd6fe]/90 pb-4">
-                <span className="inline-flex items-center gap-2 rounded-full border border-[#ddd6fe] bg-white/90 px-3 py-1.5 shadow-sm">
-                  <span className="flex size-5 items-center justify-center rounded-full bg-[#6b5bb8] text-white">
+              <div className="relative mb-2 flex flex-wrap items-center gap-3 border-b border-white/10 pb-4">
+                <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3.5 py-1.5">
+                  <span className="flex size-5 items-center justify-center rounded-full bg-white/15 text-white/80">
                     <FaClock className="size-2.5" />
                   </span>
-                  <span className="text-[11px] font-bold tracking-[0.12em] text-[#6b5bb8] uppercase">
+                  <span className="text-[11px] font-bold tracking-[0.12em] text-white/75 uppercase">
                     {data.past.badge}
                   </span>
                 </span>
-                <h3 className="font-display text-[1.35rem] font-bold text-[#0f2438] sm:text-[1.55rem]">
+                <h3 className="font-display text-[1.35rem] font-bold text-white sm:text-[1.55rem]">
                   {data.past.title}
                 </h3>
               </div>
@@ -145,19 +136,20 @@ export default function Affiliations() {
                     <li
                       key={item.id}
                       className={`flex items-center gap-4 py-4 sm:py-5 ${
-                        isLast ? "pb-1" : "border-b border-[#ddd6fe]/90"
+                        isLast ? "pb-1" : "border-b border-white/10"
                       }`}
                     >
-                      <span className="relative flex h-12 w-28 shrink-0 items-center justify-center overflow-hidden rounded-[12px] border border-[#e9e5ff] bg-white px-2.5 py-1.5 shadow-sm sm:h-14 sm:w-32">
+                      <span className="relative flex h-12 w-28 shrink-0 items-center justify-center overflow-hidden rounded-[12px] bg-white px-2 py-1 shadow-sm sm:h-14 sm:w-32">
                         <Image
                           src={item.logo}
                           alt={`${item.name} logo`}
-                          width={120}
-                          height={48}
-                          className="size-full object-contain"
+                          width={140}
+                          height={54}
+                          unoptimized
+                          className="size-full object-contain p-0.5"
                         />
                       </span>
-                      <p className="text-[15.5px] font-bold text-[#0f2438] sm:text-[17px]">
+                      <p className="text-[15.5px] font-bold text-white sm:text-[17px]">
                         {item.name}
                       </p>
                     </li>

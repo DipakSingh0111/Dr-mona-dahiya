@@ -23,18 +23,9 @@ import {
 import siteData from "@/data/site.json";
 import { Stagger, StaggerItem } from "./Reveal";
 
-function NewBadge() {
-  return (
-    <span className="ml-1.5 inline-flex rounded bg-[#f5c542] px-1.5 py-[1px] text-[9px] font-bold tracking-wide text-[#3b2f00] uppercase">
-      New
-    </span>
-  );
-}
-
 function FooterLink({
   href,
   children,
-  isNew,
 }: {
   href: string;
   children: ReactNode;
@@ -45,10 +36,7 @@ function FooterLink({
       href={href}
       className="group flex items-start gap-1 text-[12.5px] leading-snug text-white/80 transition hover:text-[#f9a8c0]"
     >
-      <span className="min-w-0 flex-1">
-        {children}
-        {isNew ? <NewBadge /> : null}
-      </span>
+      <span className="min-w-0 flex-1">{children}</span>
       <FaChevronRight className="mt-1 size-2.5 shrink-0 text-white/35 transition group-hover:text-[#f9a8c0]" />
     </a>
   );
@@ -171,7 +159,6 @@ export default function Footer() {
                       </span>
                       <span className="min-w-0 text-[12px] leading-snug text-white/85">
                         {text}
-                        {"isNew" in item && item.isNew ? <NewBadge /> : null}
                       </span>
                     </a>
                   );

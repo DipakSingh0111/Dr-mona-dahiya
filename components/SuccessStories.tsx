@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState, useEffectEvent } from "react";
-import Image from "next/image";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import siteData from "@/data/site.json";
 import { Reveal, Stagger, StaggerItem } from "./Reveal";
@@ -179,8 +178,8 @@ export default function SuccessStories() {
     return () => window.clearInterval(id);
   }, [onAutoNext]);
 
-  // Build a window of 3 cards starting at currentIndex (wrapping)
-  const visible = Array.from({ length: 3 }, (_, i) => {
+  // Build a window of 4 cards starting at currentIndex (wrapping)
+  const visible = Array.from({ length: 4 }, (_, i) => {
     const item = testimonials[(currentIndex + i) % total];
     return { ...item, key: `${item.id}-${currentIndex}-${i}` };
   });
@@ -213,13 +212,13 @@ export default function SuccessStories() {
 
           <Reveal
             variant="slideRight"
-            className="w-full p-0 lg:max-w-[720px] xl:max-w-[760px]"
+            className="w-full p-0 lg:max-w-[780px] lg:pr-14 xl:max-w-[840px]"
           >
             <h3 className="font-display mb-3.5 text-[17px] font-bold text-[#0f2438] sm:text-[18px]">
               Browse stories by treatment
             </h3>
             <Stagger
-              className="flex flex-nowrap items-stretch gap-2.5 overflow-x-auto pb-1 scrollbar-none sm:gap-3"
+              className="grid grid-cols-3 gap-2.5 pb-1 sm:grid-cols-6 sm:gap-3"
               stagger={0.05}
             >
               {categories.map((cat) => {
@@ -232,7 +231,7 @@ export default function SuccessStories() {
                     <button
                       type="button"
                       onClick={() => setActiveCategory(cat.id)}
-                      className={`flex h-[112px] w-[104px] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 rounded-[16px] border bg-white px-2 py-2.5 text-center transition-all duration-300 ease-out hover:-translate-y-0.5 sm:h-[116px] sm:w-[110px] ${
+                      className={`flex h-[116px] w-full cursor-pointer flex-col items-center justify-center gap-2.5 rounded-[16px] border bg-white px-2.5 py-2.5 text-center transition-all duration-300 ease-out hover:-translate-y-0.5 sm:h-[120px] ${
                         isActive
                           ? "border-[#e83e74]/40 shadow-[0_8px_20px_rgba(232,62,116,0.12)] ring-1 ring-[#e83e74]/20"
                           : "border-slate-200 shadow-sm hover:border-slate-300"
@@ -281,10 +280,10 @@ export default function SuccessStories() {
               else handleNext();
             }}
           >
-            {/* Desktop 3-card grid with fade/slide */}
+            {/* Desktop 4-card grid with fade/slide */}
             <div
               key={currentIndex}
-              className="story-slide hidden gap-5 md:grid md:grid-cols-2 lg:grid-cols-3 lg:gap-6"
+              className="story-slide hidden gap-4 md:grid md:grid-cols-2 lg:grid-cols-4 lg:gap-5"
             >
               {visible.map((item) => (
                 <TestimonialCard key={item.key} item={item} />
@@ -330,42 +329,32 @@ export default function SuccessStories() {
 
 function TestimonialCard({ item }: { item: Testimonial }) {
   return (
-    <article className="flex h-full overflow-hidden rounded-[22px] border border-[#fde2ec] bg-white p-3.5 shadow-[0_12px_32px_rgba(232,62,116,0.07)] transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(232,62,116,0.14)] sm:p-4">
-      <div className="flex w-full items-stretch gap-3.5 sm:gap-4">
-        <div className="relative aspect-[3/4] w-[40%] min-w-[112px] max-w-[140px] shrink-0 overflow-hidden rounded-[16px] bg-[#fff0f5] sm:rounded-[18px]">
-          <Image
-            src={item.image}
-            alt={item.author}
-            fill
-            sizes="140px"
-            className="object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105"
-          />
-        </div>
+    <article className="flex h-full flex-col justify-between overflow-hidden rounded-[22px] border border-[#fde2ec] bg-white p-5 shadow-[0_12px_32px_rgba(232,62,116,0.07)] transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(232,62,116,0.14)] sm:p-6">
+      <div>
+        <span
+          aria-hidden
+          className="font-display block text-[42px] leading-none font-bold text-[#f48fb1] select-none"
+        >
+          “
+        </span>
 
-        <div className="flex min-w-0 flex-1 flex-col py-1">
-          <span
-            aria-hidden
-            className="font-display text-[42px] leading-none font-bold text-[#f48fb1] select-none"
-          >
-            “
-          </span>
+        <p className="font-display -mt-1 line-clamp-4 text-[15px] leading-snug font-bold tracking-tight text-[#0f2438] sm:text-[16px]">
+          {item.quote.replace(/"$/, "")}
+        </p>
+      </div>
 
-          <p className="font-display -mt-1 line-clamp-4 text-[15px] leading-snug font-bold tracking-tight text-[#0f2438] sm:text-[16px]">
-            {item.quote.replace(/"$/, "")}
-          </p>
+      <div>
+        <div className="my-4 h-px w-full bg-[#f8d7e2]" />
 
-          <div className="my-3.5 h-px w-full bg-[#f8d7e2]" />
-
-          <div className="mt-auto flex items-center gap-2.5">
-            <div className="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#ffe4ee] text-[11px] font-bold text-[#e83e74]">
-              {item.initials}
-            </div>
-            <div className="min-w-0">
-              <h4 className="truncate text-[13.5px] font-bold text-[#0f2438] sm:text-[14px]">
-                {item.author}
-              </h4>
-              <p className="text-[11.5px] text-[#94a3b8]">{item.type}</p>
-            </div>
+        <div className="flex items-center gap-3">
+          <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-[#ffe4ee] text-[12px] font-bold text-[#e83e74]">
+            {item.initials}
+          </div>
+          <div className="min-w-0">
+            <h4 className="truncate text-[14px] font-bold text-[#0f2438] sm:text-[14.5px]">
+              {item.author}
+            </h4>
+            <p className="text-[12px] text-[#94a3b8]">{item.type}</p>
           </div>
         </div>
       </div>

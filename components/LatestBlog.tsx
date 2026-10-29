@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa";
 import siteData from "@/data/site.json";
 import { Stagger, StaggerItem } from "./Reveal";
@@ -56,50 +55,28 @@ export default function LatestBlog() {
           </a>
         </div>
 
-        <Stagger className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:gap-7" stagger={0.1}>
+        <Stagger className="grid grid-cols-1 gap-5 md:grid-cols-3 lg:gap-6" stagger={0.1}>
           {articles.map((item) => (
             <StaggerItem key={item.id} variant="scaleIn" className="h-full">
-            <article
-              className="group flex h-full flex-col overflow-visible rounded-[24px] bg-white p-3 shadow-[0_12px_36px_rgba(232,62,116,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_44px_rgba(232,62,116,0.14)] sm:p-4"
-            >
-              <div className="relative">
-                <div className="relative h-[210px] w-full overflow-hidden rounded-[18px] bg-[#fff0f5] sm:h-[230px] sm:rounded-[20px]">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    unoptimized
-                    sizes="(max-width: 768px) 100vw, 400px"
-                    className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.04]"
-                  />
-                </div>
+              <article className="group flex h-full min-h-[210px] flex-col justify-between rounded-[22px] border border-[#fde2ec] bg-white p-6 shadow-[0_10px_30px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-[#f8b4cb] hover:shadow-[0_18px_40px_rgba(232,62,116,0.12)] sm:p-7">
+                <div>
+                  <p className="text-[13px] font-bold tracking-wide text-[#e83e74]">
+                    {item.category} • {item.date}
+                  </p>
 
-                {/* Category + date badge overlapping image bottom */}
-                <div className="absolute bottom-3 left-3 z-10 inline-flex max-w-[calc(100%-24px)] items-center gap-1.5 rounded-full bg-gradient-to-r from-[#fff5f8] to-[#ffe8f0] px-3.5 py-1.5 shadow-[0_4px_14px_rgba(232,62,116,0.15)] ring-1 ring-[#fde2ec]">
-                  <span className="text-[12px] font-bold text-[#e83e74]">
-                    {item.category}
-                  </span>
-                  <span className="text-[#e83e74]/40">•</span>
-                  <span className="text-[12px] font-medium text-[#4b5563]">
-                    {item.date}
-                  </span>
+                  <h3 className="font-display mt-3 text-[19px] leading-snug font-bold tracking-tight text-[#0f2438] transition-colors group-hover:text-[#e83e74] sm:text-[21px]">
+                    <a href={item.href}>{item.title}</a>
+                  </h3>
                 </div>
-              </div>
-
-              <div className="flex flex-1 flex-col justify-between px-1 pt-5 pb-2">
-                <h3 className="font-display min-h-[48px] text-[17px] leading-snug font-bold tracking-tight text-[#0f2438] transition-colors group-hover:text-[#e83e74] sm:min-h-[54px] sm:text-[18.5px]">
-                  <a href={item.href}>{item.title}</a>
-                </h3>
 
                 <a
                   href={item.href}
-                  className="mt-5 inline-flex w-fit items-center gap-1.5 border-b border-[#e83e74] pb-0.5 text-[13px] font-semibold text-[#e83e74] transition-all group-hover:gap-2.5"
+                  className="mt-6 inline-flex w-fit items-center gap-1.5 border-b border-[#e83e74] pb-0.5 text-[13.5px] font-semibold text-[#e83e74] transition-all group-hover:gap-2.5"
                 >
-                  Read article
-                  <FaArrowRight className="size-3" />
+                  <span>Read article</span>
+                  <span>→</span>
                 </a>
-              </div>
-            </article>
+              </article>
             </StaggerItem>
           ))}
         </Stagger>

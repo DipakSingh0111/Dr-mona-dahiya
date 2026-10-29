@@ -53,9 +53,9 @@ export default function BookAppointment() {
           />
         </div>
 
-        <div className="relative z-10 grid grid-cols-1 items-center gap-8 px-5 py-10 sm:px-8 sm:py-12 lg:grid-cols-[minmax(0,1.12fr)_minmax(340px,0.88fr)] lg:gap-8 lg:px-10 lg:py-14 xl:gap-10 xl:px-12">
+        <div className="relative z-10 grid grid-cols-1 items-center gap-8 px-5 py-10 sm:px-8 sm:py-12 lg:grid-cols-[minmax(0,1.24fr)_minmax(330px,0.76fr)] lg:gap-8 lg:px-10 lg:py-14 xl:gap-10 xl:px-12">
           {/* Left */}
-          <Reveal variant="slideLeft" className="max-w-2xl">
+          <Reveal variant="slideLeft" className="w-full max-w-none">
             <div className="mb-4 flex items-center gap-3">
               <span className="h-px w-8 bg-[#ff4d8d]" />
               <span className="text-[11px] font-bold tracking-[0.18em] text-[#ff4d8d] uppercase sm:text-xs">
@@ -114,12 +114,10 @@ export default function BookAppointment() {
                       <p className="text-[11px] font-bold tracking-[0.12em] text-zinc-500 uppercase">
                         {plan.label}
                       </p>
-                      <p className="mt-1 inline-flex items-center gap-1 font-display text-[2.05rem] leading-none font-bold text-[#0f2438] sm:text-[2.2rem]">
+                      <p className="mt-1 inline-flex items-center gap-1 font-display text-[1.65rem] leading-none font-bold text-[#0f2438] sm:text-[1.8rem]">
                         {plan.id === "foreign" ? (
                           <>
-                            <span className="text-[1.05rem] font-bold tracking-wide sm:text-[1.15rem]">
-                              US
-                            </span>
+                            <span>US</span>
                             <FaDollarSign className="size-[0.82em] shrink-0" />
                             <span>25</span>
                           </>
@@ -141,7 +139,7 @@ export default function BookAppointment() {
             </Stagger>
 
             <Stagger
-              className="mt-8 grid grid-cols-1 gap-4 border-t border-white/20 pt-6 sm:grid-cols-3 sm:gap-3"
+              className="mt-8 flex flex-col gap-4 border-t border-white/20 pt-6 sm:flex-row sm:items-center sm:gap-4 lg:gap-5 xl:gap-7"
               stagger={0.08}
               delay={0.1}
             >
@@ -153,15 +151,15 @@ export default function BookAppointment() {
                       ? FaClock
                       : FaPhoneAlt;
                 const content = (
-                  <div className="flex items-start gap-2.5">
-                    <span className="mt-0.5 flex size-9 shrink-0 items-center justify-center rounded-full bg-[#ff4d8d] text-white">
-                      <Icon className="size-3.5" />
+                  <div className="flex shrink-0 items-start gap-2 lg:gap-2.5">
+                    <span className="mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-full bg-[#ff4d8d] text-white lg:size-9">
+                      <Icon className="size-3 lg:size-3.5" />
                     </span>
                     <span className="min-w-0">
-                      <span className="block text-[11px] font-semibold tracking-wide text-white/55 uppercase">
+                      <span className="block text-[10.5px] font-semibold tracking-wide text-white/55 uppercase lg:text-[11px]">
                         {item.label}
                       </span>
-                      <span className="mt-0.5 block text-[12.5px] leading-snug font-semibold text-white">
+                      <span className="mt-0.5 block text-[11.5px] leading-snug font-semibold whitespace-nowrap text-white lg:text-[12.5px]">
                         {item.value}
                       </span>
                     </span>
@@ -249,7 +247,7 @@ export default function BookAppointment() {
                       </div>
                     </label>
 
-                    <label className="block">
+                    <label className="block sm:col-span-2">
                       <span className="mb-1.5 block text-[12.5px] font-semibold text-[#0f2438]">
                         Preferred clinic
                       </span>
@@ -266,21 +264,6 @@ export default function BookAppointment() {
                           ))}
                         </select>
                         <FaChevronDown className="pointer-events-none absolute top-1/2 right-3 size-3 -translate-y-1/2 text-slate-400" />
-                      </div>
-                    </label>
-
-                    <label className="block">
-                      <span className="mb-1.5 block text-[12.5px] font-semibold text-[#0f2438]">
-                        Preferred date
-                      </span>
-                      <div className="relative">
-                        <input
-                          type="date"
-                          name="date"
-                          required
-                          className="field pr-10"
-                        />
-                        <FaCalendarAlt className="pointer-events-none absolute top-1/2 right-3 size-3.5 -translate-y-1/2 text-[#ff4d8d]" />
                       </div>
                     </label>
                   </div>

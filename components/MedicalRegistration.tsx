@@ -8,8 +8,9 @@ const colorSchemes = {
   teal: {
     badge: "from-[#0a7a6e] to-[#066057]",
     ring: "ring-[#7ec9bf]/70",
-    cardBorder: "border-[#b7e4de]",
-    cardShadow: "shadow-[0_6px_22px_rgba(10,122,110,0.08)]",
+    cardBorder: "border-[#b7e4de] hover:border-[#0a7a6e]/60",
+    cardShadow:
+      "shadow-[0_6px_22px_rgba(10,122,110,0.08)] hover:shadow-[0_16px_36px_rgba(10,122,110,0.18)]",
     num: "text-[#0a6b60]",
     wave: "#0a7a6e",
     watermark: "text-[#0a7a6e]",
@@ -17,8 +18,9 @@ const colorSchemes = {
   crimson: {
     badge: "from-[#c43a66] to-[#a12b52]",
     ring: "ring-[#f0a8bf]/75",
-    cardBorder: "border-[#f3c4d2]",
-    cardShadow: "shadow-[0_6px_22px_rgba(196,58,102,0.08)]",
+    cardBorder: "border-[#f3c4d2] hover:border-[#c43a66]/60",
+    cardShadow:
+      "shadow-[0_6px_22px_rgba(196,58,102,0.08)] hover:shadow-[0_16px_36px_rgba(196,58,102,0.18)]",
     num: "text-[#b02e56]",
     wave: "#c43a66",
     watermark: "text-[#c43a66]",
@@ -26,8 +28,9 @@ const colorSchemes = {
   blue: {
     badge: "from-[#1a7fc0] to-[#14669c]",
     ring: "ring-[#9dccf0]/75",
-    cardBorder: "border-[#b7daf5]",
-    cardShadow: "shadow-[0_6px_22px_rgba(26,127,192,0.08)]",
+    cardBorder: "border-[#b7daf5] hover:border-[#1a7fc0]/60",
+    cardShadow:
+      "shadow-[0_6px_22px_rgba(26,127,192,0.08)] hover:shadow-[0_16px_36px_rgba(26,127,192,0.18)]",
     num: "text-[#1a74b0]",
     wave: "#1a7fc0",
     watermark: "text-[#1a7fc0]",
@@ -80,20 +83,20 @@ function RegistrationCard({
 
   return (
     <article
-      className={`relative flex h-full min-h-[132px] items-center overflow-hidden rounded-[16px] border bg-white px-4 py-5 sm:min-h-[140px] sm:px-5 sm:py-5 ${scheme.cardBorder} ${scheme.cardShadow}`}
+      className={`group relative flex h-full min-h-[132px] items-center overflow-hidden rounded-[16px] border bg-white px-4 py-5 transition-all duration-300 ease-out hover:-translate-y-1.5 sm:min-h-[140px] sm:px-5 sm:py-5 ${scheme.cardBorder} ${scheme.cardShadow}`}
     >
       <WaveGraphic color={scheme.wave} />
 
       {/* Building watermark — top right */}
       <MdAccountBalance
         aria-hidden
-        className={`pointer-events-none absolute top-3 right-3 size-11 sm:size-12 ${scheme.watermark} opacity-[0.12]`}
+        className={`pointer-events-none absolute top-3 right-3 size-11 transition-transform duration-300 group-hover:scale-110 sm:size-12 ${scheme.watermark} opacity-[0.12] group-hover:opacity-20`}
       />
 
       <div className="relative z-10 flex w-full items-center gap-3.5 sm:gap-4">
         {/* Circular code badge */}
         <div
-          className={`flex size-[68px] shrink-0 items-center justify-center rounded-full bg-white p-[3px] ring-1 sm:size-[74px] ${scheme.ring} shadow-[0_6px_16px_rgba(15,35,60,0.08)]`}
+          className={`flex size-[68px] shrink-0 items-center justify-center rounded-full bg-white p-[3px] ring-1 transition-transform duration-300 group-hover:scale-105 sm:size-[74px] ${scheme.ring} shadow-[0_6px_16px_rgba(15,35,60,0.08)]`}
         >
           <div
             className={`flex size-full items-center justify-center rounded-full border-[2.5px] border-white bg-gradient-to-br ${scheme.badge}`}
@@ -145,7 +148,7 @@ export default function MedicalRegistration() {
             <span className="text-[#0e746e]">{titleAccent}</span>
           </h2>
 
-          <p className="mx-auto mt-3 max-w-lg text-sm text-gray-500 sm:text-base">
+          <p className="mx-auto mt-3 max-w-none text-sm text-gray-500 sm:whitespace-nowrap sm:text-base">
             {subtitle}
           </p>
         </div>

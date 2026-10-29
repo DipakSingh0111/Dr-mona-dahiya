@@ -171,7 +171,7 @@ export default function WhyChooseUs() {
             {title} <span className="text-[#e83e74]">{titleAccent}</span>
           </h2>
 
-          <p className="mx-auto mt-3.5 max-w-2xl text-sm text-[#64748b] sm:text-base">
+          <p className="mx-auto mt-3.5 max-w-none text-sm text-[#64748b] sm:whitespace-nowrap sm:text-base">
             {subtitle}
           </p>
         </header>
