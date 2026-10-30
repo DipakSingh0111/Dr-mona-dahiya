@@ -8,17 +8,10 @@ import {
   FaWhatsapp,
   FaUser,
   FaIdBadge,
-  FaMapMarkerAlt,
-  FaStethoscope,
-  FaBuilding,
-  FaBookOpen,
-  FaShieldAlt,
   FaClock,
-  FaChevronRight,
   FaInstagram,
   FaYoutube,
   FaLinkedin,
-  FaInfoCircle,
 } from "react-icons/fa";
 import siteData from "@/data/site.json";
 import { Stagger, StaggerItem } from "./Reveal";
@@ -37,7 +30,6 @@ function FooterLink({
       className="group flex items-start gap-1 text-[12.5px] leading-snug text-white/80 transition hover:text-[#f9a8c0]"
     >
       <span className="min-w-0 flex-1">{children}</span>
-      <FaChevronRight className="mt-1 size-2.5 shrink-0 text-white/35 transition group-hover:text-[#f9a8c0]" />
     </a>
   );
 }
@@ -46,12 +38,12 @@ function SectionTitle({
   icon: Icon,
   children,
 }: {
-  icon: ComponentType<{ className?: string }>;
+  icon?: ComponentType<{ className?: string }>;
   children: ReactNode;
 }) {
   return (
     <div className="mb-3 flex items-center gap-2">
-      <Icon className="size-3.5 text-[#f48fb1]" />
+      {Icon ? <Icon className="size-3.5 text-[#f48fb1]" /> : null}
       <h3 className="text-[11px] font-bold tracking-[0.14em] text-[#f48fb1] uppercase">
         {children}
       </h3>
@@ -168,7 +160,7 @@ export default function Footer() {
           </StaggerItem>
 
           <StaggerItem className="border-white/10 lg:col-span-2 lg:border-l lg:pl-5">
-            <SectionTitle icon={FaMapMarkerAlt}>
+            <SectionTitle>
               {data.noidaClinic.title}
             </SectionTitle>
             <SubLabel>{data.noidaClinic.subtitle}</SubLabel>
@@ -180,7 +172,7 @@ export default function Footer() {
             </p>
 
             <div className="mt-6">
-              <SectionTitle icon={FaStethoscope}>
+              <SectionTitle>
                 {data.noidaTreatmentsTitle}
               </SectionTitle>
               <ul className="space-y-2">
@@ -194,7 +186,7 @@ export default function Footer() {
           </StaggerItem>
 
           <StaggerItem className="border-white/10 lg:col-span-3 lg:border-l lg:pl-5">
-            <SectionTitle icon={FaBuilding}>
+            <SectionTitle>
               {data.delhiGhaziabad.title}
             </SectionTitle>
             <SubLabel>{data.delhiGhaziabad.subtitle}</SubLabel>
@@ -215,7 +207,7 @@ export default function Footer() {
             </div>
 
             <div className="mt-6">
-              <SectionTitle icon={FaBuilding}>{data.directoryTitle}</SectionTitle>
+              <SectionTitle>{data.directoryTitle}</SectionTitle>
               <ul className="space-y-2">
                 {data.directory.map((item) => (
                   <li key={item.label}>
@@ -234,7 +226,7 @@ export default function Footer() {
           </StaggerItem>
 
           <StaggerItem className="border-white/10 lg:col-span-2 lg:border-l lg:pl-5">
-            <SectionTitle icon={FaBookOpen}>{data.guidesTitle}</SectionTitle>
+            <SectionTitle>{data.guidesTitle}</SectionTitle>
             <SubLabel>{data.educationalHub.title}</SubLabel>
             <ul className="mb-5 space-y-2.5">
               {data.educationalHub.items.map((item) => (
@@ -259,7 +251,7 @@ export default function Footer() {
           </StaggerItem>
 
           <StaggerItem className="border-white/10 lg:col-span-2 lg:border-l lg:pl-5">
-            <SectionTitle icon={FaShieldAlt}>{data.trustTitle}</SectionTitle>
+            <SectionTitle>{data.trustTitle}</SectionTitle>
             <SubLabel>{data.trust.subtitle}</SubLabel>
             <ul className="space-y-2.5">
               {data.trust.items.map((item) => (
@@ -277,9 +269,17 @@ export default function Footer() {
         </Stagger>
 
         <div className="relative mt-10 space-y-4 border-t border-white/15 pt-5">
-          <p className="flex items-start gap-2 text-[11.5px] leading-relaxed text-white/60">
-            <FaInfoCircle className="mt-0.5 size-3.5 shrink-0 text-[#f48fb1]" />
-            <span>{data.disclaimer}</span>
+          <p className="text-[11.5px] leading-relaxed text-white/60">
+            {data.disclaimer.startsWith("Medical disclaimer:") ? (
+              <>
+                <strong className="font-bold text-white/95">
+                  Medical disclaimer:
+                </strong>
+                {data.disclaimer.replace("Medical disclaimer:", "")}
+              </>
+            ) : (
+              <span>{data.disclaimer}</span>
+            )}
           </p>
 
           <div className="flex flex-col gap-3 border-t border-white/10 pt-4 sm:flex-row sm:items-center sm:justify-between">

@@ -107,11 +107,12 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Menu row — crisp, barely-there gradient */}
+      {/* Menu row — Deep Royal Navy bar with subtle border & rose hover accent */}
       <div
-        className="relative z-10"
+        className="relative z-10 border-y border-white/12 shadow-[0_4px_14px_rgba(4,18,48,0.25)]"
         style={{
-          background: "linear-gradient(90deg, #0047ca 0%, #0050d4 100%)",
+          background:
+            "linear-gradient(90deg, #061e52 0%, #09296e 50%, #061e52 100%)",
         }}
       >
         <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-2 px-4 py-1 sm:px-6 sm:py-1 lg:gap-4 lg:px-8 xl:py-1.5">
@@ -123,11 +124,11 @@ export default function Navbar() {
               <a
                 key={item.label}
                 href={item.href}
-                className="inline-flex shrink-0 items-center gap-1.5 px-2 py-1.5 text-[11.5px] font-semibold tracking-[0.05em] text-white uppercase whitespace-nowrap transition-colors hover:text-white/90 xl:px-3.5 xl:py-2 xl:text-[13.5px] xl:tracking-[0.07em]"
+                className="group inline-flex shrink-0 items-center gap-1.5 rounded-lg px-2 py-1.5 text-[11.5px] font-semibold tracking-[0.05em] text-white/95 uppercase whitespace-nowrap transition-all hover:bg-white/8 hover:text-[#f9b4c4] xl:px-3.5 xl:py-2 xl:text-[13.5px] xl:tracking-[0.07em]"
               >
                 <span>{item.label}</span>
                 {item.hasDropdown ? (
-                  <ChevronDownIcon className="size-3 shrink-0 opacity-70 xl:size-3.5" />
+                  <ChevronDownIcon className="size-3 shrink-0 opacity-70 transition-transform duration-200 group-hover:translate-y-0.5 group-hover:text-[#f9b4c4] group-hover:opacity-100 xl:size-3.5" />
                 ) : null}
               </a>
             ))}
@@ -136,7 +137,7 @@ export default function Navbar() {
           <div className="hidden shrink-0 py-0.5 lg:block xl:py-1">
             <a
               href={cta.href}
-              className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-[#c54866] px-4 py-2 text-[11.5px] font-bold tracking-[0.07em] text-white uppercase whitespace-nowrap shadow-sm transition-all hover:bg-[#b03a55] xl:px-6 xl:py-2.5 xl:text-[13.5px] xl:tracking-[0.08em]"
+              className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-[#c54866] px-4 py-2 text-[11.5px] font-bold tracking-[0.07em] text-white uppercase whitespace-nowrap shadow-[0_4px_14px_rgba(197,72,102,0.4)] transition-all hover:bg-[#b03a55] xl:px-6 xl:py-2.5 xl:text-[13.5px] xl:tracking-[0.08em]"
             >
               <CalendarIcon className="size-3.5 shrink-0 xl:size-4" />
               {cta.label}

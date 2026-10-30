@@ -16,14 +16,14 @@ export default function ServicesTicker() {
   const repeatedItems = [...tickerItems, ...tickerItems, ...tickerItems, ...tickerItems];
 
   return (
-    <div className="relative w-full overflow-hidden bg-[#1f191b] py-3 border-y border-white/5 select-none z-20">
-      <div className="flex w-max animate-ticker items-center whitespace-nowrap">
+    <div className="relative z-20 w-full select-none overflow-hidden border-y border-white/5 bg-[#2e2427] py-3">
+      <div className="animate-ticker flex w-max items-center whitespace-nowrap">
         {repeatedItems.map((item, index) => (
           <div key={index} className="flex items-center">
-            <span className="font-serif italic text-[14.5px] sm:text-[15.5px] md:text-[16px] text-white/90 tracking-wide px-3 sm:px-4 font-normal">
+            <span className="px-3 font-serif text-[14.5px] font-normal italic tracking-wide text-[#e5d1d4] sm:px-4 sm:text-[15.5px] md:text-[16px]">
               {item}
             </span>
-            <span className="text-[#a8a29e] text-[10px] leading-none px-1 select-none">
+            <span className="select-none px-1 text-[10px] leading-none text-[#e5d1d4]/75">
               •
             </span>
           </div>
