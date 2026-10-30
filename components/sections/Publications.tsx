@@ -16,7 +16,7 @@ function LogoCard({
 }) {
   return (
     <article className="flex h-full flex-col gap-3">
-      <div className="flex min-h-[112px] items-center justify-center rounded-2xl bg-white px-5 py-4 sm:min-h-[128px]">
+      <div className="flex min-h-[112px] items-center justify-center rounded-2xl border border-[#f5c9d6]/60 bg-white px-5 py-4 shadow-[0_8px_24px_rgba(232,62,116,0.06)] sm:min-h-[128px]">
         <div className="relative h-14 w-full sm:h-16">
           <Image
             src={logo}
@@ -27,7 +27,7 @@ function LogoCard({
           />
         </div>
       </div>
-      <p className="text-[12.5px] leading-snug text-white/70 sm:text-[13.5px]">
+      <p className="text-[12.5px] leading-snug text-[#5a3a45]/75 sm:text-[13.5px]">
         {caption}
       </p>
     </article>
@@ -45,7 +45,7 @@ function AwardCard({
 }) {
   return (
     <article className="flex h-full flex-col gap-2.5">
-      <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-white/5">
+      <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-[#f5c9d6]/50 bg-white/60">
         <Image
           src={image}
           alt={title}
@@ -55,10 +55,10 @@ function AwardCard({
         />
       </div>
       <div>
-        <p className="text-[13px] leading-snug font-bold text-white sm:text-[13.5px]">
+        <p className="text-[13px] leading-snug font-bold text-[#0f2438] sm:text-[13.5px]">
           {title}
         </p>
-        <p className="mt-1 text-[12px] leading-snug text-white/60 sm:text-[12.5px]">
+        <p className="mt-1 text-[12px] leading-snug text-[#5a3a45]/70 sm:text-[12.5px]">
           {subtitle}
         </p>
       </div>
@@ -111,17 +111,33 @@ export default function Publications() {
   const [activeTab, setActiveTab] = useState<TabId>("publications");
 
   return (
-    <section className="relative overflow-hidden bg-[#0b1211] px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
-      <div className="mx-auto w-full max-w-[1440px]">
+    <section
+      className="relative overflow-hidden px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12"
+      style={{
+        background:
+          "linear-gradient(90deg, #fff8fb 0%, #fff0f5 42%, #ffe4ee 78%, #ffdce8 100%)",
+      }}
+    >
+      {/* Soft pink depth on the right — matches reference wash */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-y-0 right-0 w-[55%] max-w-[720px]"
+        style={{
+          background:
+            "radial-gradient(ellipse 80% 70% at 85% 45%, rgba(255,180,210,0.35) 0%, rgba(255,214,230,0.18) 45%, transparent 75%)",
+        }}
+      />
+
+      <div className="relative z-10 mx-auto w-full max-w-[1440px]">
         <Reveal>
           <header className="mb-7 max-w-none sm:mb-8">
-            <p className="text-[13px] font-semibold text-[#e8838f] sm:text-[14px]">
+            <p className="text-[13px] font-semibold text-[#e83e74] sm:text-[14px]">
               {data.eyebrow}
             </p>
-            <h2 className="mt-2 font-serif text-[1.65rem] leading-tight font-bold tracking-tight text-white sm:text-[2.1rem] lg:whitespace-nowrap lg:text-[2.25rem] xl:text-[2.75rem]">
+            <h2 className="mt-2 font-serif text-[1.65rem] leading-tight font-bold tracking-tight text-[#0f2438] sm:text-[2.1rem] lg:whitespace-nowrap lg:text-[2.25rem] xl:text-[2.75rem]">
               {data.title}
             </h2>
-            <p className="mt-3 max-w-none text-[13.5px] leading-relaxed text-white/65 sm:text-[14.5px] lg:whitespace-nowrap xl:text-[15px]">
+            <p className="mt-3 max-w-none text-[13.5px] leading-relaxed text-[#5a3a45]/75 sm:text-[14.5px] lg:whitespace-nowrap xl:text-[15px]">
               {data.subtitle}
             </p>
           </header>
@@ -138,8 +154,8 @@ export default function Publications() {
                   onClick={() => setActiveTab(tab.id as TabId)}
                   className={`whitespace-nowrap rounded-full px-5 py-2.5 text-[13px] font-semibold transition-colors sm:text-[14px] ${
                     isActive
-                      ? "bg-[#1a4a42] text-white"
-                      : "border border-white/25 bg-transparent text-white/85 hover:border-white/45 hover:text-white"
+                      ? "bg-[#e83e74] text-white shadow-[0_8px_20px_rgba(232,62,116,0.28)]"
+                      : "border border-[#e83e74]/30 bg-white/70 text-[#0f2438] hover:border-[#e83e74]/55 hover:bg-white"
                   }`}
                 >
                   {tab.label}
@@ -217,16 +233,16 @@ export default function Publications() {
         ) : null}
 
         {activeTab === "awards" ? (
-          <div className="space-y-6">
-            <div className="grid grid-cols-1 items-start gap-4 lg:grid-cols-[0.85fr_3.15fr] lg:gap-5">
-              <Reveal variant="slideLeft" className="self-start">
-                <StatCard
-                  compact
-                  value={data.awards.stat.value}
-                  label={data.awards.stat.label}
-                  description={data.awards.stat.description}
-                />
-              </Reveal>
+          <div className="grid grid-cols-1 items-start gap-4 lg:grid-cols-[0.85fr_3.15fr] lg:gap-5">
+            <Reveal variant="slideLeft" className="self-start">
+              <StatCard
+                compact
+                value={data.awards.stat.value}
+                label={data.awards.stat.label}
+                description={data.awards.stat.description}
+              />
+            </Reveal>
+            <div className="space-y-5">
               <Stagger
                 key="awards"
                 className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4"
@@ -242,21 +258,20 @@ export default function Publications() {
                   </StaggerItem>
                 ))}
               </Stagger>
+              {data.awards.cta ? (
+                <Reveal delay={0.1}>
+                  <a
+                    href={data.awards.cta.href}
+                    className="inline-flex text-[14px] font-semibold text-[#e83e74] underline decoration-[#e83e74]/45 underline-offset-4 transition hover:text-[#c54866] hover:decoration-[#c54866]"
+                  >
+                    {data.awards.cta.label}
+                  </a>
+                </Reveal>
+              ) : null}
             </div>
-            {data.awards.cta ? (
-              <Reveal delay={0.1}>
-                <a
-                  href={data.awards.cta.href}
-                  className="inline-flex text-[14px] font-semibold text-[#5eead4] underline decoration-[#5eead4]/50 underline-offset-4 transition hover:text-white hover:decoration-white"
-                >
-                  {data.awards.cta.label}
-                </a>
-              </Reveal>
-            ) : null}
           </div>
         ) : null}
       </div>
     </section>
   );
 }
-

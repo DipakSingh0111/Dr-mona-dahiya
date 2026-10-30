@@ -7,7 +7,13 @@ export default function FertilityPreservation() {
   const data = siteData.fertilityPreservation;
 
   return (
-    <section className="relative overflow-hidden bg-[#13221f] px-4 py-12 sm:px-6 sm:py-14 lg:px-8 lg:py-16">
+    <section
+      className="relative overflow-hidden px-4 py-12 sm:px-6 sm:py-14 lg:px-8 lg:py-16"
+      style={{
+        background:
+          "linear-gradient(90deg, #061e52 0%, #09296e 50%, #061e52 100%)",
+      }}
+    >
       <div className="mx-auto w-full max-w-[1440px]">
         <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1fr_1.15fr] lg:gap-12 xl:gap-14">
           <Reveal variant="slideLeft">
@@ -32,7 +38,7 @@ export default function FertilityPreservation() {
           >
             {data.cards.map((card) => (
               <StaggerItem key={card.id} variant="fadeUp" className="h-full">
-                <div className="group flex h-full flex-col justify-center rounded-2xl border border-white/10 bg-[#172824]/90 px-6 py-5 transition-all duration-300 hover:-translate-y-1 hover:border-[#e0486c]/55 hover:bg-[#1c312c] hover:shadow-[0_12px_30px_rgba(0,0,0,0.28)]">
+                <div className="group flex h-full flex-col justify-center rounded-2xl border border-white/10 bg-white/[0.06] px-6 py-5 transition-all duration-300 hover:-translate-y-1 hover:border-[#e0486c]/55 hover:bg-white/[0.1] hover:shadow-[0_12px_30px_rgba(0,10,40,0.35)]">
                   <h3 className="text-[16px] font-bold tracking-tight text-white transition-colors duration-300 group-hover:text-[#f46486] sm:text-[17px]">
                     {card.title}
                   </h3>

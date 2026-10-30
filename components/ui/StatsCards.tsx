@@ -21,10 +21,7 @@ function useCountUp(target: number, active: boolean, duration = 1600) {
   const [value, setValue] = useState(0);
 
   useEffect(() => {
-    if (!active) {
-      setValue(0);
-      return;
-    }
+    if (!active) return;
 
     let frame = 0;
     const start = performance.now();

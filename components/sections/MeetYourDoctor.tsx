@@ -86,7 +86,11 @@ export default function MeetYourDoctor() {
 
       <div className="relative mx-auto w-full max-w-[1440px]">
         <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[minmax(0,1fr)_310px_minmax(0,1fr)] lg:gap-5 xl:grid-cols-[minmax(0,1fr)_380px_minmax(0,1fr)] xl:gap-8">
-          <Reveal variant="slideLeft" className="relative z-10 w-full min-w-0">
+          {/* Mobile: image first, then this content. Desktop: left column. */}
+          <Reveal
+            variant="slideLeft"
+            className="relative z-10 order-2 w-full min-w-0 lg:order-none"
+          >
             <span className="inline-flex items-center gap-2 rounded-full border border-[#f9c5d4]/60 bg-gradient-to-r from-[#ffe8f0] to-[#fff5f8] px-3.5 py-1.5 text-[12px] font-semibold whitespace-nowrap text-[#e83e74] shadow-[0_4px_14px_rgba(232,62,116,0.08)]">
               <span className="size-1.5 rounded-full bg-gradient-to-br from-[#f4729a] to-[#e83e74]" />
               {data.badge}
@@ -146,7 +150,7 @@ export default function MeetYourDoctor() {
 
           <Reveal
             variant="scaleIn"
-            className="relative mx-auto flex h-[400px] w-[300px] shrink-0 items-end justify-center overflow-visible sm:h-[460px] sm:w-[350px] lg:h-[480px] lg:w-[310px] xl:h-[540px] xl:w-[380px]"
+            className="relative order-first mx-auto flex h-[400px] w-[300px] shrink-0 items-end justify-center overflow-visible sm:h-[460px] sm:w-[350px] lg:order-none lg:h-[480px] lg:w-[310px] xl:h-[540px] xl:w-[380px]"
           >
             {/* Solid soft pink circle */}
             <div
@@ -194,7 +198,7 @@ export default function MeetYourDoctor() {
 
           <Reveal
             variant="slideRight"
-            className="relative z-10 w-full min-w-0"
+            className="relative z-10 order-3 w-full min-w-0 lg:order-none"
           >
             <article
               className="mx-auto w-full max-w-[460px] rounded-[28px] border border-[#f7c9d8]/80 p-5 shadow-[0_20px_48px_rgba(232,62,116,0.12)] sm:p-7 lg:mx-0 lg:p-6 xl:p-8"

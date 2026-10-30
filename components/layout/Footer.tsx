@@ -77,7 +77,13 @@ export default function Footer() {
   const data = siteData.footer;
 
   return (
-    <footer className="relative overflow-hidden bg-[#0c241f] text-white">
+    <footer
+      className="relative overflow-hidden text-white"
+      style={{
+        background:
+          "linear-gradient(90deg, #061e52 0%, #09296e 50%, #061e52 100%)",
+      }}
+    >
       <div className="pointer-events-none absolute inset-y-0 right-0 w-[42%] opacity-[0.22]">
         <Image
           src={data.image}
@@ -86,7 +92,13 @@ export default function Footer() {
           sizes="40vw"
           className="object-cover object-[60%_center]"
         />
-        <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#0c241f]/40 to-[#0c241f]" />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to left, transparent, rgba(6,30,82,0.4), #061e52)",
+          }}
+        />
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-[1440px] px-4 pt-7 pb-7 sm:px-6 sm:pt-8 lg:px-8 lg:pt-9">

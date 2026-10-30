@@ -86,22 +86,22 @@ type FeatureCardData = {
 const ORBIT_ICONS = [
   {
     src: "/images/why-choose/why-icon-mother-baby.png",
-    className: "top-[10%] left-[4%] sm:top-[8%] sm:left-[3%]",
+    className: "top-[12%] left-[2%] sm:left-0",
     alt: "Mother and baby",
   },
   {
     src: "/images/why-choose/why-icon-heart.png",
-    className: "top-[10%] right-[4%] sm:top-[8%] sm:right-[3%]",
+    className: "top-[12%] right-[2%] sm:right-0",
     alt: "Heart care",
   },
   {
     src: "/images/why-choose/why-icon-pregnant.png",
-    className: "bottom-[42%] left-[5%] sm:bottom-[44%] sm:left-[4%]",
+    className: "bottom-[28%] left-[0%] sm:bottom-[30%]",
     alt: "Pregnancy care",
   },
   {
     src: "/images/why-choose/why-icon-uterus.png",
-    className: "bottom-[42%] right-[5%] sm:bottom-[44%] sm:right-[4%]",
+    className: "bottom-[28%] right-[0%] sm:bottom-[30%]",
     alt: "Fertility care",
   },
 ] as const;
@@ -139,7 +139,7 @@ function FeatureCard({ item }: { item: FeatureCardData }) {
 }
 
 export default function WhyChooseUs() {
-  const { badge, title, titleAccent, subtitle, leftCards, rightCards } =
+  const { badge, title, titleAccent, subtitle, image, leftCards, rightCards } =
     siteData.whyChoose;
 
   return (
@@ -176,7 +176,7 @@ export default function WhyChooseUs() {
           </p>
         </header>
 
-        <div className="grid grid-cols-1 items-center gap-4 lg:grid-cols-[1fr_minmax(280px,360px)_1fr] xl:grid-cols-[1fr_minmax(360px,460px)_1fr] xl:gap-8">
+        <div className="grid grid-cols-1 items-center gap-5 lg:grid-cols-[1fr_minmax(300px,380px)_1fr] lg:gap-6 xl:grid-cols-[1fr_minmax(360px,420px)_1fr] xl:gap-10">
           <Stagger className="flex flex-col gap-4 sm:gap-5" stagger={0.1}>
             {leftCards.map((item) => (
               <StaggerItem key={item.number} variant="slideLeft">
@@ -185,55 +185,65 @@ export default function WhyChooseUs() {
             ))}
           </Stagger>
 
-          {/* Center doctor + pink halo + orbit icons */}
+          {/* Center doctor — Meet Your Doctor style halo + cutout blend */}
           <Reveal
             variant="scaleIn"
-            className="relative order-first mx-auto flex h-[420px] w-full max-w-[460px] items-end justify-center overflow-visible sm:h-[520px] lg:order-none lg:h-[600px]"
+            className="relative order-first mx-auto flex h-[420px] w-[300px] shrink-0 items-end justify-center overflow-visible sm:h-[500px] sm:w-[360px] lg:order-none lg:h-[540px] lg:w-[360px] xl:h-[580px] xl:w-[400px]"
           >
-            {/* Soft pink circle aura */}
+            {/* Soft pink circle */}
             <div
               aria-hidden
-              className="pointer-events-none absolute top-[2%] left-1/2 z-0 aspect-square w-[92%] -translate-x-1/2 rounded-full"
+              className="pointer-events-none absolute top-[2%] left-1/2 z-0 aspect-square w-[96%] -translate-x-1/2 rounded-full"
               style={{
                 background:
-                  "radial-gradient(circle at 50% 48%, #f9c5d8 0%, #fbd0e0 38%, #feeaf2 66%, rgba(255,255,255,0) 74%)",
+                  "radial-gradient(circle at 50% 46%, #f7b7cd 0%, #f9c5d8 28%, #fbd5e5 52%, #feeaf2 70%, rgba(255,245,249,0.35) 82%, transparent 90%)",
+              }}
+            />
+            {/* Outer soft bloom */}
+            <div
+              aria-hidden
+              className="pointer-events-none absolute top-[-2%] left-1/2 z-0 aspect-square w-[110%] -translate-x-1/2 rounded-full blur-2xl"
+              style={{
+                background:
+                  "radial-gradient(circle at 50% 48%, rgba(249,180,205,0.55) 0%, rgba(251,205,222,0.28) 40%, transparent 68%)",
               }}
             />
 
-            {/* Generated orbit icons */}
             {ORBIT_ICONS.map((icon) => (
               <div
                 key={icon.src}
-                className={`absolute z-20 size-[58px] sm:size-[72px] lg:size-[84px] ${icon.className}`}
+                className={`absolute z-20 size-[56px] sm:size-[68px] xl:size-[76px] ${icon.className}`}
               >
                 <div className="relative size-full overflow-hidden rounded-full bg-white shadow-[0_10px_28px_rgba(232,62,116,0.22)] ring-2 ring-white">
                   <Image
                     src={icon.src}
                     alt={icon.alt}
                     fill
-                    sizes="84px"
+                    sizes="76px"
                     className="object-cover"
                   />
                 </div>
               </div>
             ))}
 
-            {/* Doctor cutout */}
-            <div className="relative z-10 flex h-[92%] w-full items-end justify-center">
+            <div className="relative z-10 h-[108%] w-full -translate-y-16 sm:-translate-y-20 lg:-translate-y-24">
               <Image
-                src="/images/why-choose/doctor-cutout.png"
+                src={image}
                 alt="Dr. Mona Dahiya - Fertility & IVF Specialist"
-                width={520}
-                height={650}
+                fill
                 priority
-                className="h-full w-auto max-w-none object-contain object-bottom select-none"
-                sizes="(max-width: 768px) 90vw, 460px"
+                className="object-contain object-[center_5%] select-none [mix-blend-mode:screen]"
+                sizes="(max-width: 1024px) 380px, 420px"
               />
             </div>
 
             <div
               aria-hidden
-              className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-14 bg-gradient-to-t from-white via-white/80 to-transparent"
+              className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-20"
+              style={{
+                background:
+                  "linear-gradient(to top, #ffffff 0%, rgba(255,248,251,0.9) 45%, transparent 100%)",
+              }}
             />
           </Reveal>
 

@@ -91,13 +91,13 @@ export default function HowItWorks() {
                     </p>
                   </div>
 
-                  <div className="relative mx-3 mb-3 aspect-[5/4] shrink-0 overflow-hidden rounded-[22px] bg-zinc-200 sm:mx-2.5 sm:my-2.5 sm:aspect-auto sm:w-[42%] sm:min-w-[240px] sm:max-w-[300px] sm:min-h-[210px]">
+                  <div className="relative mx-3 mb-3 aspect-[4/3] shrink-0 overflow-hidden rounded-[22px] bg-zinc-100 sm:mx-2.5 sm:my-2.5 sm:aspect-auto sm:h-auto sm:w-[44%] sm:min-w-[260px] sm:max-w-[320px] sm:min-h-[250px] sm:self-stretch">
                     <Image
                       src={step.image}
                       alt={step.title}
                       fill
-                      sizes="(max-width: 640px) 100vw, 300px"
-                      className="object-cover object-center"
+                      sizes="(max-width: 640px) 100vw, 320px"
+                      className="object-contain object-center p-1 sm:p-1.5"
                     />
                   </div>
                 </article>

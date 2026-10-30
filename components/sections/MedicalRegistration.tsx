@@ -1,171 +1,118 @@
 "use client";
 
-import { MdAccountBalance } from "react-icons/md";
-import siteData from "@/data/site.json";
-import { Stagger, StaggerItem } from "@/components/ui/Reveal";
-
-const colorSchemes = {
-  teal: {
-    badge: "from-[#0a7a6e] to-[#066057]",
-    ring: "ring-[#7ec9bf]/70",
-    cardBorder: "border-[#b7e4de] hover:border-[#0a7a6e]/60",
-    cardShadow:
-      "shadow-[0_6px_22px_rgba(10,122,110,0.08)] hover:shadow-[0_16px_36px_rgba(10,122,110,0.18)]",
-    num: "text-[#0a6b60]",
-    wave: "#0a7a6e",
-    watermark: "text-[#0a7a6e]",
-  },
-  crimson: {
-    badge: "from-[#c43a66] to-[#a12b52]",
-    ring: "ring-[#f0a8bf]/75",
-    cardBorder: "border-[#f3c4d2] hover:border-[#c43a66]/60",
-    cardShadow:
-      "shadow-[0_6px_22px_rgba(196,58,102,0.08)] hover:shadow-[0_16px_36px_rgba(196,58,102,0.18)]",
-    num: "text-[#b02e56]",
-    wave: "#c43a66",
-    watermark: "text-[#c43a66]",
-  },
-  blue: {
-    badge: "from-[#1a7fc0] to-[#14669c]",
-    ring: "ring-[#9dccf0]/75",
-    cardBorder: "border-[#b7daf5] hover:border-[#1a7fc0]/60",
-    cardShadow:
-      "shadow-[0_6px_22px_rgba(26,127,192,0.08)] hover:shadow-[0_16px_36px_rgba(26,127,192,0.18)]",
-    num: "text-[#1a74b0]",
-    wave: "#1a7fc0",
-    watermark: "text-[#1a7fc0]",
-  },
-} as const;
-
-type ColorKey = keyof typeof colorSchemes;
-
-function WaveGraphic({ color }: { color: string }) {
-  return (
-    <svg
-      aria-hidden
-      viewBox="0 0 200 120"
-      className="pointer-events-none absolute right-0 bottom-0 h-[78%] w-[58%]"
-      preserveAspectRatio="none"
-    >
-      <path
-        d="M0 120 C45 88 78 52 118 68 C148 80 172 52 200 40 L200 120 Z"
-        fill={color}
-        opacity="0.07"
-      />
-      <path
-        d="M30 120 C70 96 100 70 136 82 C162 92 182 72 200 64 L200 120 Z"
-        fill={color}
-        opacity="0.06"
-      />
-      <path
-        d="M70 120 C105 102 130 88 158 96 C178 102 190 90 200 86 L200 120 Z"
-        fill={color}
-        opacity="0.05"
-      />
-    </svg>
-  );
-}
-
-function RegistrationCard({
-  code,
-  councilName,
-  regNumber,
-  regLabel,
-  colorScheme,
-}: {
-  code: string;
-  councilName: string;
-  regNumber: string;
-  regLabel: string;
-  colorScheme: ColorKey;
-}) {
-  const scheme = colorSchemes[colorScheme];
-
-  return (
-    <article
-      className={`group relative flex h-full min-h-[132px] items-center overflow-hidden rounded-[16px] border bg-white px-4 py-5 transition-all duration-300 ease-out hover:-translate-y-1.5 sm:min-h-[140px] sm:px-5 sm:py-5 ${scheme.cardBorder} ${scheme.cardShadow}`}
-    >
-      <WaveGraphic color={scheme.wave} />
-
-      {/* Building watermark — top right */}
-      <MdAccountBalance
-        aria-hidden
-        className={`pointer-events-none absolute top-3 right-3 size-11 transition-transform duration-300 group-hover:scale-110 sm:size-12 ${scheme.watermark} opacity-[0.12] group-hover:opacity-20`}
-      />
-
-      <div className="relative z-10 flex w-full items-center gap-3.5 sm:gap-4">
-        {/* Circular code badge */}
-        <div
-          className={`flex size-[68px] shrink-0 items-center justify-center rounded-full bg-white p-[3px] ring-1 transition-transform duration-300 group-hover:scale-105 sm:size-[74px] ${scheme.ring} shadow-[0_6px_16px_rgba(15,35,60,0.08)]`}
-        >
-          <div
-            className={`flex size-full items-center justify-center rounded-full border-[2.5px] border-white bg-gradient-to-br ${scheme.badge}`}
-          >
-            <span className="text-[14px] font-bold tracking-wide text-white sm:text-[15px]">
-              {code}
-            </span>
-          </div>
-        </div>
-
-        <div className="h-12 w-px shrink-0 bg-[#e5e7eb] sm:h-14" />
-
-        <div className="min-w-0 flex-1 pr-4 sm:pr-6 xl:pr-8">
-          <h4 className="text-[12px] leading-snug font-bold tracking-tight text-[#1e293b] sm:text-[13px] lg:whitespace-nowrap xl:text-[13.5px]">
-            {councilName}
-          </h4>
-          <p
-            className={`font-display mt-1 text-[1.25rem] leading-none font-bold tracking-tight whitespace-nowrap sm:text-[1.45rem] xl:text-[1.55rem] ${scheme.num}`}
-          >
-            {regNumber}
-          </p>
-          <p className="mt-1.5 text-[11px] leading-snug text-[#94a3b8] sm:text-[11.5px] lg:whitespace-nowrap">
-            {regLabel}
-          </p>
-        </div>
-      </div>
-    </article>
-  );
-}
+import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
 export default function MedicalRegistration() {
-  const { eyebrow, title, titleAccent, subtitle, items } =
-    siteData.medicalRegistration;
+  const registrations = [
+    {
+      code: "DMC",
+      councilName: "Delhi Medical Council",
+      regNumber: "DMC-7795",
+      regLabel: "DMC registration number",
+      badgeBg: "bg-gradient-to-br from-[#0284c7] to-[#0369a1]",
+      numColor: "text-[#0284c7]",
+      borderColor: "border-[#bae6fd] hover:border-[#0284c7]/70",
+      cardBg: "bg-gradient-to-br from-[#f0f9ff] via-[#f8fafc] to-white",
+      glowShadow:
+        "shadow-[0_4px_20px_rgba(2,132,199,0.08)] hover:shadow-[0_14px_36px_rgba(2,132,199,0.18)]",
+      ringColor: "ring-[#bae6fd]",
+    },
+    {
+      code: "MCI",
+      councilName: "Medical Council of India",
+      regNumber: "MCI-09/6820",
+      regLabel: "MCI registration number",
+      badgeBg: "bg-gradient-to-br from-[#e83e74] to-[#c53658]",
+      numColor: "text-[#c53658]",
+      borderColor: "border-[#fbcfe8] hover:border-[#e83e74]/70",
+      cardBg: "bg-gradient-to-br from-[#fff0f5] via-[#fdf2f8] to-white",
+      glowShadow:
+        "shadow-[0_4px_20px_rgba(232,62,116,0.08)] hover:shadow-[0_14px_36px_rgba(232,62,116,0.18)]",
+      ringColor: "ring-[#fbcfe8]",
+    },
+    {
+      code: "UPMC",
+      councilName: "Uttar Pradesh Medical Council",
+      regNumber: "UPMC-110541",
+      regLabel: "UPMC registration number",
+      badgeBg: "bg-gradient-to-br from-[#0047ca] to-[#0037a3]",
+      numColor: "text-[#0047ca]",
+      borderColor: "border-[#bfdbfe] hover:border-[#0047ca]/70",
+      cardBg: "bg-gradient-to-br from-[#eff6ff] via-[#f8fafc] to-white",
+      glowShadow:
+        "shadow-[0_4px_20px_rgba(0,71,202,0.08)] hover:shadow-[0_14px_36px_rgba(0,71,202,0.18)]",
+      ringColor: "ring-[#bfdbfe]",
+    },
+  ];
 
   return (
-    <section className="bg-white px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
-      <div className="mx-auto w-full max-w-[1440px]">
-        <div className="mb-6 text-center md:mb-7">
-          <div className="mb-3 inline-flex items-center justify-center gap-3">
-            <span className="inline-block h-[2px] w-7 rounded-full bg-[#d93864]" />
-            <span className="text-xs font-medium tracking-wide text-[#d93864] sm:text-sm">
-              {eyebrow}
-            </span>
-            <span className="inline-block h-[2px] w-7 rounded-full bg-[#d93864]" />
-          </div>
+    <section className="relative overflow-hidden bg-white px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
+      {/* Subtle ambient light glow */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -top-24 right-1/4 h-[340px] w-[460px] rounded-full opacity-40 blur-3xl"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(232,62,116,0.12) 0%, rgba(0,71,202,0.08) 50%, transparent 70%)",
+        }}
+      />
 
-          <h2 className="font-display text-2xl font-bold tracking-tight text-[#0f2438] sm:whitespace-nowrap sm:text-3xl lg:text-[2.2rem] xl:text-[2.75rem]">
-            <span>{title} </span>
-            <span className="text-[#0e746e]">{titleAccent}</span>
+      <div className="relative mx-auto w-full max-w-[1440px]">
+        {/* Left-Aligned Header matching Screenshot */}
+        <Reveal className="mb-7 sm:mb-9">
+          <p className="text-[12px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:text-[13px]">
+            Registered medical practitioner
+          </p>
+
+          <h2 className="font-serif mt-2 text-[2rem] leading-tight font-bold tracking-tight text-[#0f2438] sm:text-[2.6rem] lg:text-[2.85rem]">
+            Medical Registration
           </h2>
 
-          <p className="mx-auto mt-2.5 max-w-none text-xs text-gray-500 sm:text-sm lg:whitespace-nowrap xl:text-base">
-            {subtitle}
+          <p className="mt-2 text-[13.5px] leading-relaxed text-[#64748b] sm:text-[14.5px]">
+            Dr. Mona Dahiya is registered with the following medical councils.
           </p>
-        </div>
+        </Reveal>
 
+        {/* 3 Medical Councils Cards Grid matching Screenshot with Theme Colors */}
         <Stagger
           className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-5 lg:gap-6"
-          stagger={0.1}
+          stagger={0.08}
         >
-          {items.map((item) => (
-            <StaggerItem key={item.code} className="h-full">
-              <RegistrationCard
-                code={item.code}
-                councilName={item.councilName}
-                regNumber={item.regNumber}
-                regLabel={item.regLabel}
-                colorScheme={item.colorScheme as ColorKey}
-              />
+          {registrations.map((item) => (
+            <StaggerItem key={item.code} variant="scaleIn" className="h-full">
+              <article
+                className={`group relative flex h-full min-h-[120px] items-center overflow-hidden rounded-[22px] border p-5 transition-all duration-300 hover:-translate-y-1 sm:p-6 ${item.cardBg} ${item.borderColor} ${item.glowShadow}`}
+              >
+                <div className="relative z-10 flex w-full items-center gap-4 sm:gap-5">
+                  {/* Circular Code Badge with thick outer ring */}
+                  <div
+                    className={`flex size-[62px] shrink-0 items-center justify-center rounded-full bg-white p-[3px] ring-4 ${item.ringColor} shadow-sm transition-transform duration-300 group-hover:scale-105 sm:size-[68px]`}
+                  >
+                    <div
+                      className={`flex size-full items-center justify-center rounded-full ${item.badgeBg}`}
+                    >
+                      <span className="text-[13.5px] font-bold tracking-wide text-white sm:text-[14.5px]">
+                        {item.code}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Council Info & Registration Number */}
+                  <div className="min-w-0 flex-1">
+                    <h3 className="text-[12.5px] font-semibold text-[#475569] sm:text-[13px]">
+                      {item.councilName}
+                    </h3>
+                    <p
+                      className={`font-serif mt-0.5 text-[21px] font-bold tracking-tight sm:text-[23px] ${item.numColor}`}
+                    >
+                      {item.regNumber}
+                    </p>
+                    <p className="mt-0.5 text-[11px] text-[#94a3b8] sm:text-[11.5px]">
+                      {item.regLabel}
+                    </p>
+                  </div>
+                </div>
+              </article>
             </StaggerItem>
           ))}
         </Stagger>
@@ -173,4 +120,3 @@ export default function MedicalRegistration() {
     </section>
   );
 }
-

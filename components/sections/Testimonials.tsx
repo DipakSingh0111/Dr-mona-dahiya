@@ -90,7 +90,7 @@ export default function Testimonials() {
   useEffect(() => {
     const id = window.setInterval(() => onAutoNext(), 4200);
     return () => window.clearInterval(id);
-  }, [onAutoNext]);
+  }, []);
 
   // Build a window of 4 cards starting at currentIndex (wrapping)
   const visible = Array.from({ length: 4 }, (_, i) => {

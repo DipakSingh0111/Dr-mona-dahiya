@@ -106,20 +106,26 @@ export default function Affiliations() {
             </article>
           </StaggerItem>
 
-          {/* Past — Darker / Muted */}
+          {/* Past — Darker / Muted Theme Card */}
           <StaggerItem variant="slideRight">
-            <article className="relative h-full overflow-hidden rounded-[22px] border border-white/10 bg-[#0d1c19] p-5 text-white shadow-[0_12px_32px_rgba(13,28,25,0.18)] sm:rounded-[24px] sm:p-7">
+            <article
+              className="relative h-full overflow-hidden rounded-[22px] border border-white/15 p-5 text-white shadow-[0_16px_40px_rgba(0,35,110,0.22)] sm:rounded-[24px] sm:p-7"
+              style={{
+                background:
+                  "linear-gradient(145deg, #061e52 0%, #08296f 60%, #0047ca 100%)",
+              }}
+            >
               <FaBuilding
                 aria-hidden
-                className="pointer-events-none absolute top-5 right-5 size-[68px] text-white/[0.04] sm:size-20"
+                className="pointer-events-none absolute top-5 right-5 size-[68px] text-white/[0.08] sm:size-20"
               />
 
-              <div className="relative mb-2 flex flex-wrap items-center gap-3 border-b border-white/10 pb-4">
-                <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3.5 py-1.5">
-                  <span className="flex size-5 items-center justify-center rounded-full bg-white/15 text-white/80">
+              <div className="relative mb-2 flex flex-wrap items-center gap-3 border-b border-white/15 pb-4">
+                <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3.5 py-1.5 shadow-xs">
+                  <span className="flex size-5 items-center justify-center rounded-full bg-[#e83e74] text-white">
                     <FaClock className="size-2.5" />
                   </span>
-                  <span className="text-[11px] font-bold tracking-[0.12em] text-white/75 uppercase">
+                  <span className="text-[11px] font-bold tracking-[0.12em] text-[#ffb3c7] uppercase">
                     {data.past.badge}
                   </span>
                 </span>

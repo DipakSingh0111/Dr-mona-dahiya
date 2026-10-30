@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type MouseEvent } from "react";
 import siteData from "@/data/site.json";
 import {
   CalendarIcon,
@@ -10,6 +10,24 @@ import {
   PhoneIcon,
 } from "@/components/ui/Icons";
 import { FaStar, FaWhatsapp } from "react-icons/fa";
+
+function handlePlainNavClick(
+  e: MouseEvent<HTMLAnchorElement>,
+  href: string,
+) {
+  if (typeof window === "undefined") return;
+  if (href.includes("#")) return;
+
+  const path = href.split("?")[0] || "/";
+  if (window.location.pathname !== path) return;
+
+  // Same page (e.g. /about#credentials → About): clear hash & go to top
+  e.preventDefault();
+  if (window.location.hash) {
+    history.replaceState(null, "", path);
+  }
+  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+}
 
 export default function Navbar() {
   const { brand, menu, cta } = siteData.navbar;
@@ -33,17 +51,17 @@ export default function Navbar() {
               "radial-gradient(ellipse 70% 100% at 90% 50%, rgba(140,200,255,0.35) 0%, transparent 65%)",
           }}
         />
-        <div className="relative z-10 mx-auto flex max-w-[1440px] items-center justify-between gap-4 px-4 py-2 sm:px-6 sm:py-2 lg:px-8 xl:py-3">
-          <a href={brand.href} className="min-w-0 shrink-0">
-            <span className="font-display block text-[1.45rem] leading-none font-bold tracking-tight whitespace-nowrap text-white sm:text-[1.6rem] lg:text-[1.65rem] xl:text-[2.1rem]">
+        <div className="relative z-10 mx-auto flex max-w-[1440px] items-center gap-4 px-4 py-2 sm:px-6 sm:py-2 lg:px-8 xl:py-3">
+          <a href={brand.href} className="min-w-0 shrink-0 text-left">
+            <span className="font-display block text-left text-[1.45rem] leading-none font-bold tracking-tight whitespace-nowrap text-white sm:text-[1.6rem] lg:text-[1.65rem] xl:text-[2.1rem]">
               {brand.name}
             </span>
-            <span className="mt-1 block text-[10px] font-medium tracking-wide whitespace-nowrap text-white/85 xl:text-[11px]">
+            <span className="mt-1 block text-left text-[10px] font-medium tracking-wide whitespace-nowrap text-white/85 xl:text-[11px]">
               {brand.tagline}
             </span>
           </a>
 
-          <div className="hidden shrink-0 items-center gap-3.5 md:flex lg:gap-4 xl:gap-5">
+          <div className="ml-auto hidden shrink-0 items-center gap-3.5 md:flex lg:gap-4 xl:gap-5">
             <a
               href="tel:+919267982924"
               className="flex shrink-0 items-center gap-2 text-[13px] font-semibold whitespace-nowrap text-white transition-opacity hover:opacity-90 xl:text-[15px]"
@@ -83,7 +101,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          <div className="flex items-center gap-2 md:hidden">
+          <div className="ml-auto flex items-center gap-2 md:hidden">
             <a
               href="https://wa.me/919267982924"
               target="_blank"
@@ -115,9 +133,9 @@ export default function Navbar() {
             "linear-gradient(90deg, #061e52 0%, #09296e 50%, #061e52 100%)",
         }}
       >
-        <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-2 px-4 py-1 sm:px-6 sm:py-1 lg:gap-4 lg:px-8 xl:py-1.5">
+        <div className="mx-auto flex max-w-[1440px] items-center gap-2 px-4 py-1 sm:px-6 sm:py-1 lg:gap-4 lg:px-8 xl:py-1.5">
           <nav
-            className="hidden items-center gap-1 lg:flex xl:gap-2.5"
+            className="hidden items-center justify-start gap-1 lg:flex xl:gap-2.5"
             aria-label="Primary"
           >
             {menu.map((item) => {
@@ -127,6 +145,7 @@ export default function Navbar() {
                 <div key={item.label} className="group/nav relative py-1">
                   <a
                     href={item.href}
+                    onClick={(e) => handlePlainNavClick(e, item.href)}
                     className="group inline-flex shrink-0 items-center gap-1.5 rounded-lg px-2 py-1.5 text-[11.5px] font-semibold tracking-[0.05em] text-white/95 uppercase whitespace-nowrap transition-all hover:bg-white/10 hover:text-[#f9b4c4] xl:px-3.5 xl:py-2 xl:text-[13.5px] xl:tracking-[0.07em]"
                   >
                     <span>{item.label}</span>
@@ -161,7 +180,7 @@ export default function Navbar() {
             })}
           </nav>
 
-          <div className="hidden shrink-0 py-0.5 lg:block xl:py-1">
+          <div className="ml-auto hidden shrink-0 py-0.5 lg:block xl:py-1">
             <a
               href={cta.href}
               className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-[#c54866] px-4 py-2 text-[11.5px] font-bold tracking-[0.07em] text-white uppercase whitespace-nowrap shadow-[0_4px_14px_rgba(197,72,102,0.4)] transition-all hover:bg-[#b03a55] xl:px-6 xl:py-2.5 xl:text-[13.5px] xl:tracking-[0.08em]"
@@ -188,7 +207,10 @@ export default function Navbar() {
                   <a
                     href={item.href}
                     className="flex items-center justify-between rounded-lg px-3 py-2.5 text-sm font-semibold tracking-wide text-white uppercase hover:bg-white/5"
-                    onClick={() => setOpen(false)}
+                    onClick={(e) => {
+                      handlePlainNavClick(e, item.href);
+                      setOpen(false);
+                    }}
                   >
                     <span>{item.label}</span>
                     {item.hasDropdown ? (

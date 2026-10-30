@@ -1,8 +1,3 @@
-import TopBar from "@/components/layout/TopBar";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-import FloatingActions from "@/components/layout/FloatingActions";
-
 import Hero from "@/components/sections/Hero";
 import ServicesTicker from "@/components/sections/ServicesTicker";
 import MedicalRegistration from "@/components/sections/MedicalRegistration";
@@ -27,12 +22,6 @@ import { SectionReveal } from "@/components/ui/Reveal";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
-      {/* Sticky TopBar + Navbar — stays fixed at top while scrolling */}
-      <div className="sticky top-0 z-50 w-full shrink-0 shadow-[0_4px_20px_rgba(0,25,90,0.22)]">
-        <TopBar />
-        <Navbar />
-      </div>
-
       {/* Hero starts flush right below the sticky header */}
       <div className="relative isolate flex flex-col overflow-hidden bg-[#0047ca]">
         <Hero />
@@ -101,12 +90,6 @@ export default function Home() {
       <SectionReveal delay={0.04}>
         <ParenthoodCta />
       </SectionReveal>
-
-      <SectionReveal>
-        <Footer />
-      </SectionReveal>
-
-      <FloatingActions />
     </main>
   );
 }

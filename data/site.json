@@ -65,13 +65,17 @@
       },
       {
         "label": "About Dr. Mona",
-        "href": "#",
+        "href": "/about",
         "hasDropdown": true,
         "dropdown": [
-          { "label": "Credentials & Bio", "href": "#about" },
-          { "label": "Gallery", "href": "#about" },
-          { "label": "News & Media", "href": "#publications" },
-          { "label": "ART Ethics & Compliance", "href": "#medical-registration", "badge": "NEW" }
+          { "label": "Credentials & Bio", "href": "/about" },
+          { "label": "Gallery", "href": "/gallery" },
+          { "label": "News & Media", "href": "/news-media" },
+          {
+            "label": "ART Ethics & Compliance",
+            "href": "/about#ethics",
+            "badge": "NEW"
+          }
         ]
       },
       {
@@ -249,7 +253,7 @@
     "title": "Why couples choose",
     "titleAccent": "Dr. Mona Dahiya",
     "subtitle": "One well-qualified doctor to lead the care, and all the options are just around the corner.",
-    "image": "/images/why-choose/doctor-cutout.png",
+    "image": "/images/why-choose-us.png",
     "leftCards": [
       {
         "number": "01",
@@ -292,7 +296,7 @@
         "number": "06",
         "icon": "video",
         "title": "Three clinics & online consults",
-        "description": "Noida, Ghaziabad and Delhi, plus video consultations for outstation and international couples.",
+        "description": "Noida, Ghaziabad and Delhi, plus online consultations for outstation and international couples.",
         "color": "purple"
       }
     ]
@@ -461,15 +465,15 @@
         "id": "step-1",
         "stepLabel": "STEP 1",
         "title": "Book a consultation",
-        "description": "Meet Dr. Mona at the Noida, Ghaziabad or Delhi clinic, or on a video call from anywhere.",
-        "image": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=900&q=85"
+        "description": "Meet Dr. Mona at the Noida, Ghaziabad or Delhi clinic, or on a online consultation from anywhere.",
+        "image": "/images/Book-a-consultation.jpg"
       },
       {
         "id": "step-2",
         "stepLabel": "STEP 2",
         "title": "Get tested & get a plan",
         "description": "Both partners are tested, and Dr. Mona explains the right treatment for your reports.",
-        "image": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=900&q=85"
+        "image": "/images/Get-tested.jpg"
       },
       {
         "id": "step-3",
@@ -967,7 +971,7 @@
       },
       {
         "id": "video",
-        "label": "Patient Video Reviews",
+        "label": "Patient online consultation",
         "icon": "star",
         "color": "yellow"
       },

@@ -45,8 +45,8 @@ export default function TopBar() {
           "linear-gradient(105deg, #0039b8 0%, #0047ca 42%, #1a5fd4 72%, #2b7de8 100%)",
       }}
     >
-      <div className="mx-auto flex h-8 max-w-[1440px] items-center justify-between gap-2 px-4 sm:h-9 sm:gap-4 sm:px-6 lg:px-8 xl:h-10">
-        <div className="flex min-w-0 items-center gap-3 sm:gap-4 lg:gap-5">
+      <div className="mx-auto flex h-8 max-w-[1440px] items-center gap-2 px-4 sm:h-9 sm:gap-4 sm:px-6 lg:px-8 xl:h-10">
+        <div className="flex min-w-0 items-center justify-start gap-3 sm:gap-4 lg:gap-5">
           {locations.map((location, index) => (
             <a
               key={location.label}
@@ -61,7 +61,7 @@ export default function TopBar() {
           ))}
         </div>
 
-        <div className="hidden items-center gap-3 md:flex lg:gap-3.5 xl:gap-6">
+        <div className="ml-auto hidden items-center gap-3 md:flex lg:gap-3.5 xl:gap-6">
           {topLinks.map((item, idx) => (
             <div key={item.label} className="flex shrink-0 items-center gap-3 lg:gap-3.5 xl:gap-6">
               {idx > 0 && item.type === "hours" ? (
@@ -74,7 +74,7 @@ export default function TopBar() {
 
         <a
           href="tel:+919267982924"
-          className="inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap font-medium text-white/90 sm:gap-2 md:hidden"
+          className="ml-auto inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap font-medium text-white/90 sm:gap-2 md:hidden"
         >
           <Phone className="size-3.5 opacity-80" />
           <span className="tabular-nums">+91 92679 82924</span>

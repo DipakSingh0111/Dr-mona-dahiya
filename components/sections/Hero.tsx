@@ -28,7 +28,7 @@ export default function Hero() {
   // On desktop (sm+): full banner framing (object-[55%_0%])
   const slidePositions = [
     "object-[74%_0%] sm:object-[55%_0%] lg:object-[55%_0%]", // HeroBanner.jpeg (Award stage)
-    "object-[58%_0%] sm:object-[60%_0%] lg:object-[55%_0%]", // HeroBanner_02.png (Royal blue portrait)
+    "object-[68%_0%] sm:object-[60%_0%] lg:object-[55%_0%]", // HeroBanner_02.png (Royal blue portrait)
     "object-[76%_0%] sm:object-[60%_0%] lg:object-[55%_0%]", // HeroBanner_03.png (IVF Summit Award stage)
   ];
 
@@ -60,7 +60,7 @@ export default function Hero() {
                   : "opacity-0 z-0 pointer-events-none"
               }`}
             >
-              {/* Desktop & regular slides */}
+              {/* Slide Image */}
               <Image
                 src={src}
                 alt={`Dr. Mona Dahiya banner slide ${index + 1}`}
@@ -68,38 +68,12 @@ export default function Hero() {
                 priority={index === 0}
                 quality={100}
                 unoptimized
-                className={`hero-banner-img object-cover ${
-                  index === 1 ? "hidden sm:block" : ""
-                } ${slidePositions[index % slidePositions.length]}`}
+                className={`hero-banner-img object-cover ${slidePositions[index % slidePositions.length]}`}
                 style={{
                   objectFit: "cover",
                 }}
                 sizes="100vw"
               />
-
-              {/* Mobile-centered composition for Slide 2 (Royal blue waves + Dr. Mona centered) */}
-              {index === 1 && (
-                <div className="relative flex size-full items-end justify-center overflow-hidden bg-gradient-to-b from-[#002f96] via-[#003db8] to-[#0047ca] sm:hidden">
-                  <Image
-                    src={src}
-                    alt=""
-                    fill
-                    unoptimized
-                    className="object-cover object-[12%_100%] opacity-95"
-                    sizes="100vw"
-                  />
-                  <div className="relative z-10 flex h-[94%] w-full items-end justify-center">
-                    <Image
-                      src="/images/why-choose/doctor-cutout.png"
-                      alt="Dr. Mona Dahiya"
-                      width={260}
-                      height={320}
-                      unoptimized
-                      className="h-full w-auto object-contain object-bottom"
-                    />
-                  </div>
-                </div>
-              )}
             </div>
           );
         })}
@@ -179,7 +153,7 @@ export default function Hero() {
 
           {/* Google Review Badge */}
           <HeroReveal delay={0.4}>
-            <div className="hero-review-badge flex w-fit items-center gap-2 rounded-xl border border-[#fed7aa] bg-[#fffbf2] px-3.5 py-1.5 whitespace-nowrap shadow-sm backdrop-blur-md xl:px-4 xl:py-2">
+            <div className="hero-review-badge mt-8 flex w-fit items-center gap-2 rounded-xl border border-[#fed7aa] bg-[#fffbf2] px-3.5 py-1.5 whitespace-nowrap shadow-sm backdrop-blur-md sm:mt-9 xl:mt-10 xl:px-4 xl:py-2">
               <div className="flex items-center gap-0.5 text-[#f59e0b]">
                 <FaStar className="size-3 fill-current xl:size-3.5" />
                 <FaStar className="size-3 fill-current xl:size-3.5" />
