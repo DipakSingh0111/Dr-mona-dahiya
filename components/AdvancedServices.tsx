@@ -2,7 +2,6 @@
 
 import siteData from "@/data/site.json";
 import { FaDna } from "react-icons/fa";
-import { FaUserLarge } from "react-icons/fa6";
 import { Reveal, Stagger, StaggerItem } from "./Reveal";
 
 function SpermIcon({ className }: { className?: string }) {
@@ -49,22 +48,47 @@ function UterusIcon({ className }: { className?: string }) {
 
 function FemaleAvatar() {
   return (
-    <div className="flex size-[50px] shrink-0 items-center justify-center rounded-full bg-[#e83e74] shadow-[0_6px_14px_rgba(232,62,116,0.28)] sm:size-[54px]">
+    <div className="relative flex size-[52px] shrink-0 items-center justify-center rounded-full shadow-[0_6px_18px_rgba(218,88,120,0.38)] sm:size-[56px]">
       <svg
-        viewBox="0 0 40 40"
-        fill="#fff"
-        className="size-7 sm:size-[30px]"
-        aria-hidden
+        viewBox="0 0 64 64"
+        className="size-full overflow-hidden rounded-full"
+        aria-hidden="true"
       >
-        <circle cx="20" cy="13" r="5" />
-        <path
-          d="M14 11 C13 17, 15 21, 15 23 M26 11 C27 17, 25 21, 25 23"
-          stroke="#fff"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-          fill="none"
-        />
-        <path d="M20 20 c-5.5 0 -10 3 -11 8 c0 1 1 2 2.5 2 h17 c1.5 0 2.5 -1 2.5 -2 c-1 -5 -5.5 -8 -11 -8 z" />
+        <defs>
+          <linearGradient id="female-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#e56d8c" />
+            <stop offset="100%" stopColor="#c44767" />
+          </linearGradient>
+          <clipPath id="female-avatar-clip">
+            <circle cx="32" cy="32" r="32" />
+          </clipPath>
+        </defs>
+
+        {/* Circular gradient background */}
+        <circle cx="32" cy="32" r="32" fill="url(#female-bg)" />
+
+        <g clipPath="url(#female-avatar-clip)">
+          {/* Maroon bob haircut */}
+          <path
+            d="M17.5 34 C17.5 20.5 22.5 13 32 13 C41.5 13 46.5 20.5 46.5 34 C46.5 41 44.5 45.5 41 46 L23 46 C19.5 45.5 17.5 41 17.5 34 Z"
+            fill="#7a253b"
+          />
+
+          {/* White face with side-parted bangs cutout */}
+          <path
+            d="M27.5 20 C29.5 23.5 34.5 25 38.5 25.5 C39 27.5 39 30.5 38 33.5 C36.8 37.2 34.5 39.5 32 39.5 C29.5 39.5 27.2 37.2 26 33.5 C24.8 29.8 25.2 25 27.5 20 Z"
+            fill="#ffffff"
+          />
+
+          {/* Slender white neck */}
+          <rect x="29.4" y="37" width="5.2" height="12" rx="2" fill="#ffffff" />
+
+          {/* White curved shoulders */}
+          <path
+            d="M13 64 C14.5 51.5 22 47.5 32 47.5 C42 47.5 49.5 51.5 51 64 Z"
+            fill="#ffffff"
+          />
+        </g>
       </svg>
     </div>
   );
@@ -72,8 +96,51 @@ function FemaleAvatar() {
 
 function MaleAvatar() {
   return (
-    <div className="flex size-[50px] shrink-0 items-center justify-center rounded-full bg-[#0284c7] shadow-[0_6px_14px_rgba(2,132,199,0.28)] sm:size-[54px]">
-      <FaUserLarge className="size-5 text-white sm:size-6" />
+    <div className="relative flex size-[52px] shrink-0 items-center justify-center rounded-full shadow-[0_6px_18px_rgba(61,154,207,0.38)] sm:size-[56px]">
+      <svg
+        viewBox="0 0 64 64"
+        className="size-full overflow-hidden rounded-full"
+        aria-hidden="true"
+      >
+        <defs>
+          <linearGradient id="male-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#52ace0" />
+            <stop offset="100%" stopColor="#3182b3" />
+          </linearGradient>
+          <clipPath id="male-avatar-clip">
+            <circle cx="32" cy="32" r="32" />
+          </clipPath>
+        </defs>
+
+        {/* Circular gradient background */}
+        <circle cx="32" cy="32" r="32" fill="url(#male-bg)" />
+
+        <g clipPath="url(#male-avatar-clip)">
+          {/* Dark navy short crop hair */}
+          <path
+            d="M23.5 27 C23 19.5 26 15.5 32 15.5 C38 15.5 41 19.5 40.5 27 Z"
+            fill="#153c57"
+          />
+
+          {/* White face */}
+          <path
+            d="M24.8 25 C26.2 22.8 28.8 23.6 32 23.6 C35.2 23.6 37.8 22.8 39.2 25 C39.8 29 38.8 34 36.6 37.2 C35.3 39 33.7 40 32 40 C30.3 40 28.7 39 27.4 37.2 C25.2 34 24.2 29 24.8 25 Z"
+            fill="#ffffff"
+          />
+
+          {/* Slender white neck */}
+          <rect x="29.3" y="37.5" width="5.4" height="12" rx="2" fill="#ffffff" />
+
+          {/* White curved shoulders */}
+          <path
+            d="M14 64 C15.5 51.5 22.5 47.5 32 47.5 C41.5 47.5 48.5 51.5 50 64 Z"
+            fill="#ffffff"
+          />
+
+          {/* Soft light-blue V-neck collar triangle */}
+          <polygon points="28.2,47.5 35.8,47.5 32,53.5" fill="#9fd2ee" />
+        </g>
+      </svg>
     </div>
   );
 }
