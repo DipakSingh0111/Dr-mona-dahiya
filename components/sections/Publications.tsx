@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import siteData from "@/data/site.json";
-import { Reveal, Stagger, StaggerItem } from "./Reveal";
+import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
 type TabId = "publications" | "member" | "speaker" | "awards";
 
@@ -259,3 +259,4 @@ export default function Publications() {
     </section>
   );
 }
+

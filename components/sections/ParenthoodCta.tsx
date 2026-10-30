@@ -8,7 +8,7 @@ import {
   FaCalendarAlt,
 } from "react-icons/fa";
 import siteData from "@/data/site.json";
-import { Reveal } from "./Reveal";
+import { Reveal } from "@/components/ui/Reveal";
 
 export default function ParenthoodCta() {
   const data = siteData.parenthoodCta;
@@ -88,3 +88,4 @@ export default function ParenthoodCta() {
     </section>
   );
 }
+

@@ -11,53 +11,17 @@ import {
   FaClipboardList,
   FaDesktop,
 } from "react-icons/fa";
+import { GiEmbryo } from "react-icons/gi";
+import { MdPregnantWoman } from "react-icons/md";
 import siteData from "@/data/site.json";
-import { Reveal, Stagger, StaggerItem } from "./Reveal";
-
-function UterusIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-      aria-hidden
-    >
-      <path d="M12 21v-7" />
-      <path d="M9 10c0 4 6 4 6 0 0-2.8-6-2.8-6 0Z" />
-      <path d="M9 8.5C6.2 5.2 3 6.5 4.2 10.2c.6 1.8 2.2 1.2 2.2.2" />
-      <path d="M15 8.5c2.8-3.3 6-2 4.8 1.7-.6 1.8-2.2 1.2-2.2.2" />
-    </svg>
-  );
-}
-
-function CellsIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      className={className}
-      aria-hidden
-    >
-      <circle cx="10" cy="11" r="4.5" />
-      <circle cx="15.5" cy="8.5" r="3.2" />
-      <circle cx="15" cy="14.5" r="2.6" />
-    </svg>
-  );
-}
+import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
 const ICONS: Record<string, ReactNode> = {
-  uterus: <UterusIcon className="size-[32px] sm:size-[36px]" />,
+  uterus: <MdPregnantWoman className="size-[32px] sm:size-[36px]" />,
   monitor: <FaDesktop className="size-[28px] sm:size-[32px]" />,
   clipboard: <FaClipboardList className="size-[28px] sm:size-[32px]" />,
   male: <FaMars className="size-[30px] sm:size-[34px]" />,
-  cells: <CellsIcon className="size-[32px] sm:size-[36px]" />,
+  cells: <GiEmbryo className="size-[32px] sm:size-[36px]" />,
   drop: <FaTint className="size-[28px] sm:size-[32px]" />,
   snowflake: <FaSnowflake className="size-[28px] sm:size-[32px]" />,
   dna: <FaDna className="size-[28px] sm:size-[32px]" />,
@@ -234,7 +198,7 @@ export default function OurServices() {
                         }}
                       >
                         {ICONS[item.icon] ?? (
-                          <UterusIcon className="size-[30px] sm:size-[34px]" />
+                          <MdPregnantWoman className="size-[30px] sm:size-[34px]" />
                         )}
                       </div>
 
@@ -280,3 +244,4 @@ export default function OurServices() {
     </section>
   );
 }
+

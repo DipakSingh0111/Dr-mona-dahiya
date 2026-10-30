@@ -16,7 +16,7 @@ import {
 } from "react-icons/fa";
 import { FaIndianRupeeSign } from "react-icons/fa6";
 import siteData from "@/data/site.json";
-import { Reveal, Stagger, StaggerItem } from "./Reveal";
+import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
 export default function BookAppointment() {
   const data = siteData.bookAppointment;
@@ -288,3 +288,4 @@ export default function BookAppointment() {
     </section>
   );
 }
+

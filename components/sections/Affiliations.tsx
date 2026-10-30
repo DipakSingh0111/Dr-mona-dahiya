@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { FaHospital, FaClock, FaBuilding } from "react-icons/fa";
 import siteData from "@/data/site.json";
-import { Reveal, Stagger, StaggerItem } from "./Reveal";
+import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
 export default function Affiliations() {
   const data = siteData.affiliations;
@@ -39,7 +39,6 @@ export default function Affiliations() {
           {/* Present — Highlighted */}
           <StaggerItem variant="slideLeft">
             <article className="relative h-full overflow-hidden rounded-[22px] border border-[#f5a3bd] bg-gradient-to-br from-[#fff5f8] via-[#fff0f5] to-[#ffe4ee] p-5 shadow-[0_14px_36px_rgba(232,62,116,0.12)] sm:rounded-[24px] sm:p-7">
-              {/* Soft pink blob top-right */}
               <div
                 aria-hidden
                 className="pointer-events-none absolute -top-10 -right-8 size-44 rounded-full opacity-90 blur-2xl"
@@ -163,3 +162,4 @@ export default function Affiliations() {
     </section>
   );
 }
+

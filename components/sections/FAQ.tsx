@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import siteData from "@/data/site.json";
-import { Reveal, Stagger, StaggerItem } from "./Reveal";
+import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
 interface FaqItem {
   id: string;
@@ -86,7 +86,7 @@ function FaqCard({
   );
 }
 
-export default function FAQSection() {
+export default function FAQ() {
   const { titlePrefix, titleHighlight, cta, leftFaqs, rightFaqs } =
     siteData.faq;
 
@@ -158,3 +158,6 @@ export default function FAQSection() {
     </section>
   );
 }
+
+export { FAQ as FAQSection };
+

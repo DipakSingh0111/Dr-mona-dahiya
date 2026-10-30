@@ -1,9 +1,11 @@
 "use client";
 
 import { useEffect, useRef, useState, useEffectEvent } from "react";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaChevronLeft, FaChevronRight, FaTint, FaStar, FaHeart } from "react-icons/fa";
+import { GiEmbryo } from "react-icons/gi";
+import { LuEgg, LuCircleDot } from "react-icons/lu";
 import siteData from "@/data/site.json";
-import { Reveal, Stagger, StaggerItem } from "./Reveal";
+import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
 const categoryStyles = {
   pink: {
@@ -32,94 +34,6 @@ const categoryStyles = {
   },
 } as const;
 
-/** Embryo / cell — oval with inner nucleus */
-function IvfIcon({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" className={className} fill="none" aria-hidden>
-      <ellipse
-        cx="12"
-        cy="12"
-        rx="7.2"
-        ry="8.2"
-        stroke="currentColor"
-        strokeWidth="1.7"
-      />
-      <circle cx="12" cy="11.5" r="3.1" stroke="currentColor" strokeWidth="1.7" />
-    </svg>
-  );
-}
-
-/** Egg / ovum with small polar-body bumps */
-function EggIcon({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" className={className} fill="none" aria-hidden>
-      <ellipse
-        cx="12"
-        cy="13"
-        rx="6.4"
-        ry="7.4"
-        stroke="currentColor"
-        strokeWidth="1.7"
-      />
-      <circle cx="12" cy="5.2" r="1.15" stroke="currentColor" strokeWidth="1.5" />
-      <circle cx="16.6" cy="7.2" r="1" stroke="currentColor" strokeWidth="1.5" />
-      <circle cx="7.4" cy="7.2" r="1" stroke="currentColor" strokeWidth="1.5" />
-    </svg>
-  );
-}
-
-/** PCOS — follicle ring with four dots */
-function PcosIcon({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" className={className} fill="none" aria-hidden>
-      <circle cx="12" cy="12" r="7.2" stroke="currentColor" strokeWidth="1.7" />
-      <circle cx="12" cy="8.2" r="1.35" fill="currentColor" />
-      <circle cx="15.6" cy="13.8" r="1.35" fill="currentColor" />
-      <circle cx="8.4" cy="13.8" r="1.35" fill="currentColor" />
-      <circle cx="12" cy="12.2" r="1.1" fill="currentColor" />
-    </svg>
-  );
-}
-
-function DropIcon({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" className={className} fill="none" aria-hidden>
-      <path
-        d="M12 3.8C12 3.8 6.8 10.2 6.8 14.4a5.2 5.2 0 0 0 10.4 0C17.2 10.2 12 3.8 12 3.8Z"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-function StarIcon({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" className={className} fill="none" aria-hidden>
-      <path
-        d="M12 3.6 14.2 9.1 20.2 9.7 15.7 13.5 17.1 19.4 12 16.4 6.9 19.4 8.3 13.5 3.8 9.7 9.8 9.1 12 3.6Z"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-function HeartIcon({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" className={className} fill="none" aria-hidden>
-      <path
-        d="M12 19.6S5.4 15.5 3.8 11.6C2.6 8.8 4 5.9 6.9 5.2c1.6-.4 3.3.2 4.2 1.5.9-1.3 2.6-1.9 4.2-1.5 2.9.7 4.3 3.6 3.1 6.4-1.6 3.9-8.4 8-8.4 8Z"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
 function CategoryIcon({
   type,
   className = "size-6",
@@ -129,24 +43,24 @@ function CategoryIcon({
 }) {
   switch (type) {
     case "ivf":
-      return <IvfIcon className={className} />;
+      return <GiEmbryo className={className} />;
     case "egg":
-      return <EggIcon className={className} />;
+      return <LuEgg className={className} />;
     case "pcos":
-      return <PcosIcon className={className} />;
+      return <LuCircleDot className={className} />;
     case "drop":
-      return <DropIcon className={className} />;
+      return <FaTint className={className} />;
     case "star":
-      return <StarIcon className={className} />;
+      return <FaStar className={className} />;
     case "heart":
     default:
-      return <HeartIcon className={className} />;
+      return <FaHeart className={className} />;
   }
 }
 
 type Testimonial = (typeof siteData.successStories.testimonials)[number];
 
-export default function SuccessStories() {
+export default function Testimonials() {
   const {
     eyebrow,
     titlePrefix,
@@ -361,3 +275,7 @@ function TestimonialCard({ item }: { item: Testimonial }) {
     </article>
   );
 }
+
+// Named export for compatibility
+export { Testimonials as SuccessStories };
+

@@ -3,12 +3,12 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import siteData from "@/data/site.json";
-import StatsCards from "./StatsCards";
-import { CalendarIcon, PlayIcon } from "./Icons";
-import { FaChevronLeft, FaChevronRight, FaStar } from "react-icons/fa";
-import { HeroReveal } from "./Reveal";
+import StatsCards from "@/components/ui/StatsCards";
+import { CalendarIcon, PlayIcon } from "@/components/ui/Icons";
+import { FaStar } from "react-icons/fa";
+import { HeroReveal } from "@/components/ui/Reveal";
 
-export default function HeroSection() {
+export default function Hero() {
   const {
     slides: heroSlides,
     backgroundImage,
@@ -28,7 +28,7 @@ export default function HeroSection() {
   // On desktop (sm+): full banner framing (object-[55%_0%])
   const slidePositions = [
     "object-[74%_0%] sm:object-[55%_0%] lg:object-[55%_0%]", // HeroBanner.jpeg (Award stage)
-    "object-[98%_0%] sm:object-[60%_0%] lg:object-[55%_0%]", // HeroBanner_02.png (Royal blue portrait centered on mobile)
+    "object-[58%_0%] sm:object-[60%_0%] lg:object-[55%_0%]", // HeroBanner_02.png (Royal blue portrait)
     "object-[76%_0%] sm:object-[60%_0%] lg:object-[55%_0%]", // HeroBanner_03.png (IVF Summit Award stage)
   ];
 
@@ -60,6 +60,7 @@ export default function HeroSection() {
                   : "opacity-0 z-0 pointer-events-none"
               }`}
             >
+              {/* Desktop & regular slides */}
               <Image
                 src={src}
                 alt={`Dr. Mona Dahiya banner slide ${index + 1}`}
@@ -67,17 +68,43 @@ export default function HeroSection() {
                 priority={index === 0}
                 quality={100}
                 unoptimized
-                className={`hero-banner-img object-cover ${slidePositions[index % slidePositions.length]}`}
+                className={`hero-banner-img object-cover ${
+                  index === 1 ? "hidden sm:block" : ""
+                } ${slidePositions[index % slidePositions.length]}`}
                 style={{
                   objectFit: "cover",
                 }}
                 sizes="100vw"
               />
+
+              {/* Mobile-centered composition for Slide 2 (Royal blue waves + Dr. Mona centered) */}
+              {index === 1 && (
+                <div className="relative flex size-full items-end justify-center overflow-hidden bg-gradient-to-b from-[#002f96] via-[#003db8] to-[#0047ca] sm:hidden">
+                  <Image
+                    src={src}
+                    alt=""
+                    fill
+                    unoptimized
+                    className="object-cover object-[12%_100%] opacity-95"
+                    sizes="100vw"
+                  />
+                  <div className="relative z-10 flex h-[94%] w-full items-end justify-center">
+                    <Image
+                      src="/images/why-choose/doctor-cutout.png"
+                      alt="Dr. Mona Dahiya"
+                      width={260}
+                      height={320}
+                      unoptimized
+                      className="h-full w-auto object-contain object-bottom"
+                    />
+                  </div>
+                </div>
+              )}
             </div>
           );
         })}
 
-        {/* Subtle bottom fade on mobile so the slider image blends smoothly into the text/counter block below */}
+        {/* Subtle bottom fade on mobile */}
         <div
           aria-hidden
           className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-10 bg-gradient-to-t from-[#003db8] to-transparent sm:hidden"
@@ -150,7 +177,7 @@ export default function HeroSection() {
             </div>
           </HeroReveal>
 
-          {/* Google Review Badge (matches slide design) */}
+          {/* Google Review Badge */}
           <HeroReveal delay={0.4}>
             <div className="hero-review-badge flex w-fit items-center gap-2 rounded-xl border border-[#fed7aa] bg-[#fffbf2] px-3.5 py-1.5 whitespace-nowrap shadow-sm backdrop-blur-md xl:px-4 xl:py-2">
               <div className="flex items-center gap-0.5 text-[#f59e0b]">
@@ -169,9 +196,9 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Slide Navigation Dots (desktop/tablet bottom-right, no background pill) */}
+      {/* Slide Navigation Dots (desktop/tablet bottom-right) */}
       {slides.length > 1 && (
-        <div className=" absolute right-5 bottom-5 z-30 hidden items-center gap-2 sm:right-8 sm:bottom-6 sm:flex">
+        <div className="absolute right-6 bottom-3.5 z-30 hidden items-center gap-2 sm:right-7 sm:bottom-4 sm:flex">
           {slides.map((_, idx) => (
             <button
               key={idx}
@@ -190,3 +217,4 @@ export default function HeroSection() {
     </section>
   );
 }
+

@@ -1,26 +1,28 @@
-import TopBar from "@/components/TopBar";
-import Navbar from "@/components/Navbar";
-import HeroSection from "@/components/HeroSection";
-import ServicesTicker from "@/components/ServicesTicker";
-import MedicalRegistration from "@/components/MedicalRegistration";
-import WhyChooseUs from "@/components/WhyChooseUs";
-import OurServices from "@/components/OurServices";
-import AdvancedServices from "@/components/AdvancedServices";
-import HowItWorks from "@/components/HowItWorks";
-import MeetYourDoctor from "@/components/MeetYourDoctor";
-import Publications from "@/components/Publications";
-import FertilityPreservation from "@/components/FertilityPreservation";
-import Affiliations from "@/components/Affiliations";
-import ClinicsSection from "@/components/ClinicsSection";
-import SuccessStories from "@/components/SuccessStories";
-import InternationalPatients from "@/components/InternationalPatients";
-import LatestBlog from "@/components/LatestBlog";
-import BookAppointment from "@/components/BookAppointment";
-import FAQSection from "@/components/FAQSection";
-import ParenthoodCta from "@/components/ParenthoodCta";
-import Footer from "@/components/Footer";
-import FloatingActions from "@/components/FloatingActions";
-import { SectionReveal } from "@/components/Reveal";
+import TopBar from "@/components/layout/TopBar";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import FloatingActions from "@/components/layout/FloatingActions";
+
+import Hero from "@/components/sections/Hero";
+import ServicesTicker from "@/components/sections/ServicesTicker";
+import MedicalRegistration from "@/components/sections/MedicalRegistration";
+import MeetYourDoctor from "@/components/sections/MeetYourDoctor";
+import WhyChooseUs from "@/components/sections/WhyChooseUs";
+import OurServices from "@/components/sections/OurServices";
+import AdvancedCare from "@/components/sections/AdvancedCare";
+import HowItWorks from "@/components/sections/HowItWorks";
+import FertilityPreservation from "@/components/sections/FertilityPreservation";
+import Publications from "@/components/sections/Publications";
+import Affiliations from "@/components/sections/Affiliations";
+import Clinics from "@/components/sections/Clinics";
+import Testimonials from "@/components/sections/Testimonials";
+import InternationalPatients from "@/components/sections/InternationalPatients";
+import LatestBlog from "@/components/sections/LatestBlog";
+import BookAppointment from "@/components/sections/BookAppointment";
+import FAQ from "@/components/sections/FAQ";
+import ParenthoodCta from "@/components/sections/ParenthoodCta";
+
+import { SectionReveal } from "@/components/ui/Reveal";
 
 export default function Home() {
   return (
@@ -33,7 +35,7 @@ export default function Home() {
 
       {/* Hero starts flush right below the sticky header */}
       <div className="relative isolate flex flex-col overflow-hidden bg-[#0047ca]">
-        <HeroSection />
+        <Hero />
       </div>
 
       <ServicesTicker />
@@ -55,7 +57,7 @@ export default function Home() {
       </SectionReveal>
 
       <SectionReveal delay={0.04}>
-        <AdvancedServices />
+        <AdvancedCare />
       </SectionReveal>
 
       <HowItWorks />
@@ -73,11 +75,11 @@ export default function Home() {
       </SectionReveal>
 
       <SectionReveal delay={0.04}>
-        <ClinicsSection />
+        <Clinics />
       </SectionReveal>
 
       <SectionReveal delay={0.04}>
-        <SuccessStories />
+        <Testimonials />
       </SectionReveal>
 
       <SectionReveal delay={0.04}>
@@ -93,7 +95,7 @@ export default function Home() {
       </SectionReveal>
 
       <SectionReveal delay={0.04}>
-        <FAQSection />
+        <FAQ />
       </SectionReveal>
 
       <SectionReveal delay={0.04}>

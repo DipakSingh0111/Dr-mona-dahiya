@@ -114,3 +114,4 @@ export default function StatsCards({ stats }: { stats: StatItem[] }) {
     </div>
   );
 }
+

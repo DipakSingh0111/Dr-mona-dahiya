@@ -1,50 +1,9 @@
 "use client";
 
 import siteData from "@/data/site.json";
-import { FaDna } from "react-icons/fa";
-import { Reveal, Stagger, StaggerItem } from "./Reveal";
-
-function SpermIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      viewBox="4 12 48 42"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="3"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-      aria-hidden
-    >
-      <circle cx="44" cy="20" r="6.5" />
-      <path d="M38 23 C 30 28, 22 25, 14 36" />
-      <circle cx="28" cy="38" r="5.5" />
-      <path d="M23 41 C 18 45, 12 43, 6 52" />
-    </svg>
-  );
-}
-
-function UterusIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      viewBox="8 18 48 38"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="3"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-      aria-hidden
-    >
-      <path d="M32 54 L32 36" />
-      <path d="M24 32 C24 44, 40 44, 40 32 C40 23, 24 23, 24 32 Z" />
-      <path d="M24 27 C17 19, 9 23, 13 34 C15 39, 20 37, 20 34" />
-      <path d="M40 27 C47 19, 55 23, 51 34 C49 39, 44 37, 44 34" />
-      <circle cx="17" cy="35" r="3.2" fill="currentColor" stroke="none" />
-      <circle cx="47" cy="35" r="3.2" fill="currentColor" stroke="none" />
-    </svg>
-  );
-}
+import { FaDna, FaMars } from "react-icons/fa";
+import { MdPregnantWoman } from "react-icons/md";
+import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
 function FemaleAvatar() {
   return (
@@ -64,26 +23,21 @@ function FemaleAvatar() {
           </clipPath>
         </defs>
 
-        {/* Circular gradient background */}
         <circle cx="32" cy="32" r="32" fill="url(#female-bg)" />
 
         <g clipPath="url(#female-avatar-clip)">
-          {/* Maroon bob haircut */}
           <path
             d="M17.5 34 C17.5 20.5 22.5 13 32 13 C41.5 13 46.5 20.5 46.5 34 C46.5 41 44.5 45.5 41 46 L23 46 C19.5 45.5 17.5 41 17.5 34 Z"
             fill="#7a253b"
           />
 
-          {/* White face with side-parted bangs cutout */}
           <path
             d="M27.5 20 C29.5 23.5 34.5 25 38.5 25.5 C39 27.5 39 30.5 38 33.5 C36.8 37.2 34.5 39.5 32 39.5 C29.5 39.5 27.2 37.2 26 33.5 C24.8 29.8 25.2 25 27.5 20 Z"
             fill="#ffffff"
           />
 
-          {/* Slender white neck */}
           <rect x="29.4" y="37" width="5.2" height="12" rx="2" fill="#ffffff" />
 
-          {/* White curved shoulders */}
           <path
             d="M13 64 C14.5 51.5 22 47.5 32 47.5 C42 47.5 49.5 51.5 51 64 Z"
             fill="#ffffff"
@@ -112,32 +66,26 @@ function MaleAvatar() {
           </clipPath>
         </defs>
 
-        {/* Circular gradient background */}
         <circle cx="32" cy="32" r="32" fill="url(#male-bg)" />
 
         <g clipPath="url(#male-avatar-clip)">
-          {/* Dark navy short crop hair */}
           <path
             d="M23.5 27 C23 19.5 26 15.5 32 15.5 C38 15.5 41 19.5 40.5 27 Z"
             fill="#153c57"
           />
 
-          {/* White face */}
           <path
             d="M24.8 25 C26.2 22.8 28.8 23.6 32 23.6 C35.2 23.6 37.8 22.8 39.2 25 C39.8 29 38.8 34 36.6 37.2 C35.3 39 33.7 40 32 40 C30.3 40 28.7 39 27.4 37.2 C25.2 34 24.2 29 24.8 25 Z"
             fill="#ffffff"
           />
 
-          {/* Slender white neck */}
           <rect x="29.3" y="37.5" width="5.4" height="12" rx="2" fill="#ffffff" />
 
-          {/* White curved shoulders */}
           <path
             d="M14 64 C15.5 51.5 22.5 47.5 32 47.5 C41.5 47.5 48.5 51.5 50 64 Z"
             fill="#ffffff"
           />
 
-          {/* Soft light-blue V-neck collar triangle */}
           <polygon points="28.2,47.5 35.8,47.5 32,53.5" fill="#9fd2ee" />
         </g>
       </svg>
@@ -160,14 +108,14 @@ const topThemes = {
   },
 } as const;
 
-export default function AdvancedServices() {
+export default function AdvancedCare() {
   const { eyebrow, topCards, womenConditions, menConditions } =
     siteData.advancedServices;
 
   const icons = {
-    sperm: <SpermIcon className="size-[34px] sm:size-[40px]" />,
+    sperm: <FaMars className="size-[30px] sm:size-[36px]" />,
     dna: <FaDna className="size-[30px] sm:size-[36px]" />,
-    uterus: <UterusIcon className="size-[34px] sm:size-[40px]" />,
+    uterus: <MdPregnantWoman className="size-[34px] sm:size-[40px]" />,
   } as const;
 
   return (
@@ -269,3 +217,4 @@ export default function AdvancedServices() {
     </section>
   );
 }
+

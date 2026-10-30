@@ -1,5 +1,5 @@
 import siteData from "@/data/site.json";
-import { iconMap } from "./Icons";
+import { iconMap } from "@/components/ui/Icons";
 
 type TopBarLink = (typeof siteData.topBar.links)[number];
 
@@ -35,8 +35,6 @@ export default function TopBar() {
   const Pin = iconMap.pin;
   const Phone = iconMap.phone;
 
-  // Filter links for desktop top bar: exclude phone and hours (phone is shown in middle header)
-  // Or show International desk, email, phone, hours
   const topLinks = links;
 
   return (
@@ -85,3 +83,4 @@ export default function TopBar() {
     </div>
   );
 }
+

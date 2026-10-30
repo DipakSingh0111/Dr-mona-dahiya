@@ -12,7 +12,6 @@ const tickerItems = [
 ];
 
 export default function ServicesTicker() {
-  // Duplicate items 4 times to ensure perfectly seamless, infinite marquee scrolling
   const repeatedItems = [...tickerItems, ...tickerItems, ...tickerItems, ...tickerItems];
 
   return (

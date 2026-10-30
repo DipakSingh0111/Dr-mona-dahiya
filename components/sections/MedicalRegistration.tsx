@@ -2,7 +2,7 @@
 
 import { MdAccountBalance } from "react-icons/md";
 import siteData from "@/data/site.json";
-import { Stagger, StaggerItem } from "./Reveal";
+import { Stagger, StaggerItem } from "@/components/ui/Reveal";
 
 const colorSchemes = {
   teal: {
@@ -173,3 +173,4 @@ export default function MedicalRegistration() {
     </section>
   );
 }
+

@@ -1,7 +1,7 @@
 "use client";
 
 import siteData from "@/data/site.json";
-import { Reveal, Stagger, StaggerItem } from "./Reveal";
+import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
 export default function FertilityPreservation() {
   const data = siteData.fertilityPreservation;
@@ -10,7 +10,6 @@ export default function FertilityPreservation() {
     <section className="relative overflow-hidden bg-[#13221f] px-4 py-12 sm:px-6 sm:py-14 lg:px-8 lg:py-16">
       <div className="mx-auto w-full max-w-[1440px]">
         <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1fr_1.15fr] lg:gap-12 xl:gap-14">
-          {/* Left column: Eyebrow, Heading, Subtitle */}
           <Reveal variant="slideLeft">
             <div className="max-w-[540px]">
               <p className="text-[13px] font-semibold tracking-wide text-[#e0486c] sm:text-[14px]">
@@ -27,7 +26,6 @@ export default function FertilityPreservation() {
             </div>
           </Reveal>
 
-          {/* Right column: 2x2 Cards Grid with Hover Effect */}
           <Stagger
             className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-4"
             stagger={0.08}
@@ -50,3 +48,4 @@ export default function FertilityPreservation() {
     </section>
   );
 }
+

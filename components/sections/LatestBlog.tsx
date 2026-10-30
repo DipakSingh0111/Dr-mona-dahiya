@@ -2,7 +2,7 @@
 
 import { FaArrowRight } from "react-icons/fa";
 import siteData from "@/data/site.json";
-import { Stagger, StaggerItem } from "./Reveal";
+import { Stagger, StaggerItem } from "@/components/ui/Reveal";
 
 export default function LatestBlog() {
   const { eyebrow, titlePrefix, titleHighlight, cta, articles } =
@@ -84,3 +84,4 @@ export default function LatestBlog() {
     </section>
   );
 }
+

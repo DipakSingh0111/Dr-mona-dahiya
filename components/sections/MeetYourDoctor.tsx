@@ -6,195 +6,38 @@ import {
   FaArrowRight,
   FaYoutube,
   FaStethoscope,
+  FaGraduationCap,
+  FaUserMd,
+  FaHospital,
+  FaCertificate,
+  FaMedal,
 } from "react-icons/fa";
 import siteData from "@/data/site.json";
-import { Reveal } from "./Reveal";
-
-function GraduationCapIcon({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
-      <path
-        d="M2.5 9.5 12 4.5l9.5 5L12 14.5 2.5 9.5Z"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M6.5 12v4.2c0 .9 2.5 2.6 5.5 2.6s5.5-1.7 5.5-2.6V12"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinecap="round"
-      />
-      <path
-        d="M19.2 10.2v5.4c0 .7.5 1.5 1.6 1.8"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-}
-
-function DoctorCapIcon({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
-      <circle
-        cx="12"
-        cy="9"
-        r="3.2"
-        stroke="currentColor"
-        strokeWidth="1.7"
-      />
-      <path
-        d="M5.5 20.2c.8-3.4 3.2-5.2 6.5-5.2s5.7 1.8 6.5 5.2"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinecap="round"
-      />
-      <path
-        d="M8.2 6.2c.6-1.6 2-2.6 3.8-2.6s3.2 1 3.8 2.6"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinecap="round"
-      />
-      <path
-        d="M7.5 6.8h9"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-}
-
-function HospitalIcon({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
-      <path
-        d="M5 20.5V7.5a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v13"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M3.5 20.5h17"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinecap="round"
-      />
-      <path
-        d="M12 6.5V3.8"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinecap="round"
-      />
-      <path
-        d="M10 5h4"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinecap="round"
-      />
-      <path
-        d="M9 11h2.2M10.1 9.9v2.2M14.2 11h2.2M15.3 9.9v2.2"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-      />
-      <path
-        d="M9.5 20.5v-3.2h5v3.2"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-function CertificateIcon({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
-      <rect
-        x="4.5"
-        y="3.5"
-        width="15"
-        height="17"
-        rx="1.5"
-        stroke="currentColor"
-        strokeWidth="1.7"
-      />
-      <path
-        d="M8 8h8M8 11.5h8M8 15h4.5"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinecap="round"
-      />
-      <circle
-        cx="15.8"
-        cy="16.2"
-        r="2.3"
-        stroke="currentColor"
-        strokeWidth="1.6"
-      />
-      <path
-        d="M14.7 18.1 14.2 20.4l1.6-.8 1.6.8-.5-2.3"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-function AwardRibbonIcon({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
-      <circle
-        cx="12"
-        cy="9.2"
-        r="4.4"
-        stroke="currentColor"
-        strokeWidth="1.7"
-      />
-      <circle
-        cx="12"
-        cy="9.2"
-        r="1.7"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      />
-      <path
-        d="M9.3 13.2 8 20.2l4-2.1 4 2.1-1.3-7"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
+import { Reveal } from "@/components/ui/Reveal";
 
 const qualIconMap = {
   pink: {
-    Icon: GraduationCapIcon,
+    Icon: FaGraduationCap,
     bg: "bg-[#fde8ef]",
     text: "text-[#e11d60]",
   },
   purple: {
-    Icon: DoctorCapIcon,
+    Icon: FaUserMd,
     bg: "bg-[#efe8ff]",
     text: "text-[#7b5bb8]",
   },
   green: {
-    Icon: HospitalIcon,
+    Icon: FaHospital,
     bg: "bg-[#e4f7f1]",
     text: "text-[#1a9b7a]",
   },
   orange: {
-    Icon: CertificateIcon,
+    Icon: FaCertificate,
     bg: "bg-[#fff0e4]",
     text: "text-[#e8893a]",
   },
   blue: {
-    Icon: AwardRibbonIcon,
+    Icon: FaMedal,
     bg: "bg-[#e8f2ff]",
     text: "text-[#4a90d9]",
   },
@@ -305,7 +148,7 @@ export default function MeetYourDoctor() {
             variant="scaleIn"
             className="relative mx-auto flex h-[400px] w-[300px] shrink-0 items-end justify-center overflow-visible sm:h-[460px] sm:w-[350px] lg:h-[480px] lg:w-[310px] xl:h-[540px] xl:w-[380px]"
           >
-            {/* Solid soft pink circle — clearly visible behind cutout */}
+            {/* Solid soft pink circle */}
             <div
               aria-hidden
               className="pointer-events-none absolute top-[2%] left-1/2 z-0 aspect-square w-[96%] -translate-x-1/2 rounded-full"
@@ -413,3 +256,4 @@ export default function MeetYourDoctor() {
     </section>
   );
 }
+

@@ -8,7 +8,7 @@ import {
   CloseIcon,
   MenuIcon,
   PhoneIcon,
-} from "./Icons";
+} from "@/components/ui/Icons";
 import { FaStar, FaWhatsapp } from "react-icons/fa";
 
 export default function Navbar() {
@@ -180,3 +180,4 @@ export default function Navbar() {
     </header>
   );
 }
+

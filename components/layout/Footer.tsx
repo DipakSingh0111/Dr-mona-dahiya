@@ -14,7 +14,7 @@ import {
   FaLinkedin,
 } from "react-icons/fa";
 import siteData from "@/data/site.json";
-import { Stagger, StaggerItem } from "./Reveal";
+import { Stagger, StaggerItem } from "@/components/ui/Reveal";
 
 function FooterLink({
   href,
@@ -304,3 +304,4 @@ export default function Footer() {
     </footer>
   );
 }
+

@@ -10,7 +10,7 @@ import {
   FaVideo,
 } from "react-icons/fa";
 import siteData from "@/data/site.json";
-import { Stagger, StaggerItem, Reveal } from "./Reveal";
+import { Stagger, StaggerItem, Reveal } from "@/components/ui/Reveal";
 
 const iconMap = {
   stethoscope: FaStethoscope,
@@ -200,12 +200,6 @@ export default function WhyChooseUs() {
               }}
             />
 
-            {/* Dotted orbit ring */}
-            <div
-              aria-hidden
-              className="pointer-events-none absolute top-[-1%] left-1/2 z-[1] aspect-square w-[100%] -translate-x-1/2 rounded-full border-[2.5px] border-dotted border-[#f18aaa]/90"
-            />
-
             {/* Generated orbit icons */}
             {ORBIT_ICONS.map((icon) => (
               <div
@@ -255,3 +249,4 @@ export default function WhyChooseUs() {
     </section>
   );
 }
+

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { FaVideo, FaPlane } from "react-icons/fa";
 import siteData from "@/data/site.json";
-import { Reveal, Stagger, StaggerItem } from "./Reveal";
+import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
 function WorldMapArt() {
   return (
@@ -131,3 +131,4 @@ export default function InternationalPatients() {
     </section>
   );
 }
+
