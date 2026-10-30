@@ -291,9 +291,11 @@ export default function MeetYourDoctor() {
                 href={data.secondaryCta.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex shrink-0 items-center justify-center gap-1.5 rounded-full border border-[#f5a3bd] bg-gradient-to-r from-white to-[#fff5f8] px-3.5 py-2.5 text-[11.5px] font-semibold text-[#e83e74] whitespace-nowrap shadow-[0_6px_18px_rgba(232,62,116,0.08)] transition hover:from-[#fff5f8] hover:to-[#ffe8f0] xl:gap-2.5 xl:px-5 xl:py-3 xl:text-[13.5px]"
+                className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full border border-[#f5a3bd] bg-gradient-to-r from-white to-[#fff5f8] px-3.5 py-2 text-[11.5px] font-semibold text-[#0f2438] whitespace-nowrap shadow-[0_6px_18px_rgba(232,62,116,0.08)] transition hover:from-[#fff5f8] hover:to-[#ffe8f0] xl:gap-2.5 xl:px-5 xl:py-2.5 xl:text-[13.5px]"
               >
-                <FaYoutube className="size-4 shrink-0 text-[#ff0033] xl:size-5" />
+                <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-[#ff0033] text-white shadow-[0_3px_10px_rgba(255,0,51,0.3)] xl:size-8">
+                  <FaYoutube className="size-4 xl:size-[18px]" />
+                </span>
                 <span>{data.secondaryCta.label}</span>
               </a>
             </div>

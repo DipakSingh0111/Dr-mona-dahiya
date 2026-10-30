@@ -86,22 +86,22 @@ type FeatureCardData = {
 const ORBIT_ICONS = [
   {
     src: "/images/why-choose/why-icon-mother-baby.png",
-    className: "top-[4%] left-[2%] sm:left-[0%]",
+    className: "top-[10%] left-[4%] sm:top-[8%] sm:left-[3%]",
     alt: "Mother and baby",
   },
   {
     src: "/images/why-choose/why-icon-heart.png",
-    className: "top-[4%] right-[2%] sm:right-[0%]",
+    className: "top-[10%] right-[4%] sm:top-[8%] sm:right-[3%]",
     alt: "Heart care",
   },
   {
     src: "/images/why-choose/why-icon-pregnant.png",
-    className: "bottom-[34%] -left-[2%] sm:-left-[4%]",
+    className: "bottom-[42%] left-[5%] sm:bottom-[44%] sm:left-[4%]",
     alt: "Pregnancy care",
   },
   {
     src: "/images/why-choose/why-icon-uterus.png",
-    className: "bottom-[34%] -right-[2%] sm:-right-[4%]",
+    className: "bottom-[42%] right-[5%] sm:bottom-[44%] sm:right-[4%]",
     alt: "Fertility care",
   },
 ] as const;
