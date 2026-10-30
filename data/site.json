@@ -50,28 +50,34 @@
     "menu": [
       {
         "label": "Treatments",
-        "href": "#treatments",
-        "hasDropdown": true
+        "href": "#",
+        "hasDropdown": false
       },
       {
         "label": "Conditions Treated",
-        "href": "#conditions",
-        "hasDropdown": true
+        "href": "#",
+        "hasDropdown": false
       },
       {
         "label": "Success Stories",
-        "href": "#success-stories",
-        "hasDropdown": true
+        "href": "#",
+        "hasDropdown": false
       },
       {
         "label": "About Dr. Mona",
-        "href": "#about",
-        "hasDropdown": true
+        "href": "#",
+        "hasDropdown": true,
+        "dropdown": [
+          { "label": "Credentials & Bio", "href": "#about" },
+          { "label": "Gallery", "href": "#about" },
+          { "label": "News & Media", "href": "#publications" },
+          { "label": "ART Ethics & Compliance", "href": "#medical-registration", "badge": "NEW" }
+        ]
       },
       {
         "label": "Patient Resources",
-        "href": "#resources",
-        "hasDropdown": true
+        "href": "#",
+        "hasDropdown": false
       }
     ],
     "cta": {

@@ -117,21 +117,48 @@ export default function Navbar() {
       >
         <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-2 px-4 py-1 sm:px-6 sm:py-1 lg:gap-4 lg:px-8 xl:py-1.5">
           <nav
-            className="hidden items-center gap-1 lg:flex xl:gap-3"
+            className="hidden items-center gap-1 lg:flex xl:gap-2.5"
             aria-label="Primary"
           >
-            {menu.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="group inline-flex shrink-0 items-center gap-1.5 rounded-lg px-2 py-1.5 text-[11.5px] font-semibold tracking-[0.05em] text-white/95 uppercase whitespace-nowrap transition-all hover:bg-white/8 hover:text-[#f9b4c4] xl:px-3.5 xl:py-2 xl:text-[13.5px] xl:tracking-[0.07em]"
-              >
-                <span>{item.label}</span>
-                {item.hasDropdown ? (
-                  <ChevronDownIcon className="size-3 shrink-0 opacity-70 transition-transform duration-200 group-hover:translate-y-0.5 group-hover:text-[#f9b4c4] group-hover:opacity-100 xl:size-3.5" />
-                ) : null}
-              </a>
-            ))}
+            {menu.map((item) => {
+              const hasItems = "dropdown" in item && Array.isArray(item.dropdown) && item.dropdown.length > 0;
+
+              return (
+                <div key={item.label} className="group/nav relative py-1">
+                  <a
+                    href={item.href}
+                    className="group inline-flex shrink-0 items-center gap-1.5 rounded-lg px-2 py-1.5 text-[11.5px] font-semibold tracking-[0.05em] text-white/95 uppercase whitespace-nowrap transition-all hover:bg-white/10 hover:text-[#f9b4c4] xl:px-3.5 xl:py-2 xl:text-[13.5px] xl:tracking-[0.07em]"
+                  >
+                    <span>{item.label}</span>
+                    {item.hasDropdown ? (
+                      <ChevronDownIcon className="size-3 shrink-0 opacity-70 transition-transform duration-200 group-hover/nav:rotate-180 group-hover/nav:text-[#f9b4c4] group-hover/nav:opacity-100 xl:size-3.5" />
+                    ) : null}
+                  </a>
+
+                  {/* Dropdown Menu on Smooth Hover */}
+                  {hasItems ? (
+                    <div className="invisible absolute top-full left-0 z-50 pt-1 opacity-0 pointer-events-none translate-y-2 transition-all duration-250 ease-out group-hover/nav:visible group-hover/nav:pointer-events-auto group-hover/nav:translate-y-0 group-hover/nav:opacity-100">
+                      <div className="w-[275px] overflow-hidden rounded-b-2xl border-t-2 border-[#e83e74] bg-[#071e4d] p-2 shadow-[0_22px_45px_rgba(0,10,30,0.7)] ring-1 ring-white/10">
+                        {item.dropdown!.map((sub) => (
+                          <a
+                            key={sub.label}
+                            href={sub.href}
+                            className="flex items-center justify-between rounded-xl px-4 py-2.5 text-[14px] font-medium text-slate-100 normal-case transition-all duration-200 hover:bg-white/10 hover:text-[#5eead4]"
+                          >
+                            <span>{sub.label}</span>
+                            {"badge" in sub && sub.badge ? (
+                              <span className="ml-2 inline-flex items-center rounded-full bg-[#f59e0b] px-2 py-0.5 text-[10px] font-extrabold tracking-wide text-black uppercase shadow-sm">
+                                {sub.badge}
+                              </span>
+                            ) : null}
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  ) : null}
+                </div>
+              );
+            })}
           </nav>
 
           <div className="hidden shrink-0 py-0.5 lg:block xl:py-1">
@@ -152,20 +179,45 @@ export default function Navbar() {
           id="mobile-menu"
           className="border-t border-white/10 bg-[rgba(8,33,73,0.96)] px-4 py-4 backdrop-blur-md lg:hidden"
         >
-          <nav className="flex flex-col gap-0.5" aria-label="Mobile">
-            {menu.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="flex items-center justify-between rounded-lg px-3 py-3 text-sm font-semibold tracking-wide text-white uppercase"
-                onClick={() => setOpen(false)}
-              >
-                {item.label}
-                {item.hasDropdown ? (
-                  <ChevronDownIcon className="size-4 opacity-70" />
-                ) : null}
-              </a>
-            ))}
+          <nav className="flex flex-col gap-1" aria-label="Mobile">
+            {menu.map((item) => {
+              const hasItems = "dropdown" in item && Array.isArray(item.dropdown) && item.dropdown.length > 0;
+
+              return (
+                <div key={item.label} className="flex flex-col">
+                  <a
+                    href={item.href}
+                    className="flex items-center justify-between rounded-lg px-3 py-2.5 text-sm font-semibold tracking-wide text-white uppercase hover:bg-white/5"
+                    onClick={() => setOpen(false)}
+                  >
+                    <span>{item.label}</span>
+                    {item.hasDropdown ? (
+                      <ChevronDownIcon className="size-4 opacity-70" />
+                    ) : null}
+                  </a>
+
+                  {hasItems ? (
+                    <div className="ml-4 mb-2 flex flex-col gap-1 border-l-2 border-[#e83e74]/60 pl-3">
+                      {item.dropdown!.map((sub) => (
+                        <a
+                          key={sub.label}
+                          href={sub.href}
+                          className="flex items-center justify-between px-2 py-1.5 text-[13px] font-normal text-white/80 normal-case hover:text-[#5eead4]"
+                          onClick={() => setOpen(false)}
+                        >
+                          <span>{sub.label}</span>
+                          {"badge" in sub && sub.badge ? (
+                            <span className="ml-2 rounded-full bg-[#f59e0b] px-2 py-0.5 text-[9.5px] font-extrabold text-black uppercase">
+                              {sub.badge}
+                            </span>
+                          ) : null}
+                        </a>
+                      ))}
+                    </div>
+                  ) : null}
+                </div>
+              );
+            })}
             <a
               href={cta.href}
               className="mt-2 inline-flex items-center justify-center gap-2 rounded-lg bg-[#b34562] px-5 py-3 text-[12px] font-bold tracking-[0.08em] text-white uppercase"
