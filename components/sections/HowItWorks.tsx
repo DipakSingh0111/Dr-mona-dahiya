@@ -70,39 +70,53 @@ export default function HowItWorks() {
 
           {/* Sticky stacking cards — later cards slide over earlier ones */}
           <div className="relative lg:col-span-8">
-            {steps.map((step, index) => (
-              <div
-                key={step.id}
-                className="sticky top-28 mb-8 sm:top-36 sm:mb-10 lg:top-44 lg:mb-12"
-                style={{ zIndex: index + 1 }}
-              >
-                <article className="flex flex-col overflow-hidden rounded-[28px] border border-zinc-100 bg-[#f6f7f9] shadow-[0_12px_36px_rgba(15,23,42,0.08)] sm:flex-row sm:items-stretch">
-                  <div className="flex flex-1 flex-col justify-center px-5 py-6 sm:px-9 sm:py-10 lg:px-11 lg:py-12">
-                    {"stepLabel" in step && step.stepLabel ? (
-                      <span className="mb-2 text-[11.5px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:text-[12px]">
-                        {step.stepLabel}
-                      </span>
-                    ) : null}
-                    <h3 className="font-display text-[1.35rem] leading-snug font-bold tracking-tight text-zinc-900 sm:text-[1.5rem]">
-                      {step.title}
-                    </h3>
-                    <p className="mt-3 max-w-[340px] text-[13.5px] leading-relaxed text-zinc-500 sm:text-[14px]">
-                      {step.description}
-                    </p>
-                  </div>
+            {steps.map((step, index) => {
+              const hasImage = Boolean(step.image);
+              const highlight =
+                "highlight" in step && Boolean(step.highlight);
 
-                  <div className="relative mx-3 mb-3 aspect-[4/3] shrink-0 overflow-hidden rounded-[22px] bg-zinc-100 sm:mx-2.5 sm:my-2.5 sm:aspect-auto sm:h-auto sm:w-[44%] sm:min-w-[260px] sm:max-w-[320px] sm:min-h-[250px] sm:self-stretch">
-                    <Image
-                      src={step.image}
-                      alt={step.title}
-                      fill
-                      sizes="(max-width: 640px) 100vw, 320px"
-                      className="object-contain object-center p-1 sm:p-1.5"
-                    />
-                  </div>
-                </article>
-              </div>
-            ))}
+              return (
+                <div
+                  key={step.id}
+                  className="sticky top-28 mb-8 sm:top-36 sm:mb-10 lg:top-44 lg:mb-12"
+                  style={{ zIndex: index + 1 }}
+                >
+                  <article
+                    className={`flex flex-col overflow-hidden rounded-[28px] bg-[#f6f7f9] shadow-[0_12px_36px_rgba(15,23,42,0.08)] sm:flex-row sm:items-stretch ${
+                      highlight
+                        ? "border-2 border-[#e83e74]/55 ring-1 ring-[#e83e74]/20"
+                        : "border border-zinc-100"
+                    }`}
+                  >
+                    <div className="flex flex-1 flex-col justify-center px-5 py-6 sm:px-9 sm:py-10 lg:px-11 lg:py-12">
+                      {"stepLabel" in step && step.stepLabel ? (
+                        <span className="mb-2 text-[11.5px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:text-[12px]">
+                          {step.stepLabel}
+                        </span>
+                      ) : null}
+                      <h3 className="font-display text-[1.35rem] leading-snug font-bold tracking-tight text-zinc-900 sm:text-[1.5rem]">
+                        {step.title}
+                      </h3>
+                      <p className="mt-3 max-w-[340px] text-[13.5px] leading-relaxed text-zinc-500 sm:text-[14px]">
+                        {step.description}
+                      </p>
+                    </div>
+
+                    {hasImage ? (
+                      <div className="relative mx-3 mb-3 aspect-[4/3] shrink-0 overflow-hidden rounded-[22px] bg-zinc-100 sm:mx-2.5 sm:my-2.5 sm:aspect-auto sm:h-auto sm:w-[44%] sm:min-w-[260px] sm:max-w-[320px] sm:min-h-[250px] sm:self-stretch">
+                        <Image
+                          src={step.image}
+                          alt={step.title}
+                          fill
+                          sizes="(max-width: 640px) 100vw, 320px"
+                          className="object-contain object-center p-1 sm:p-1.5"
+                        />
+                      </div>
+                    ) : null}
+                  </article>
+                </div>
+              );
+            })}
             {/* Extra scroll room so last card can fully stick before section ends */}
             <div className="h-16 sm:h-24" aria-hidden />
           </div>

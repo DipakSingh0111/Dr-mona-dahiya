@@ -73,7 +73,7 @@
           { "label": "News & Media", "href": "/news-media" },
           {
             "label": "ART Ethics & Compliance",
-            "href": "/about#ethics",
+            "href": "/404",
             "badge": "NEW"
           }
         ]
@@ -466,21 +466,24 @@
         "stepLabel": "STEP 1",
         "title": "Book a consultation",
         "description": "Meet Dr. Mona at the Noida, Ghaziabad or Delhi clinic, or on a online consultation from anywhere.",
-        "image": "/images/Book-a-consultation.jpg"
+        "image": "",
+        "highlight": true
       },
       {
         "id": "step-2",
         "stepLabel": "STEP 2",
         "title": "Get tested & get a plan",
         "description": "Both partners are tested, and Dr. Mona explains the right treatment for your reports.",
-        "image": "/images/Get-tested.jpg"
+        "image": "",
+        "highlight": true
       },
       {
         "id": "step-3",
         "stepLabel": "STEP 3",
         "title": "Begin your treatment",
         "description": "Start IUI, IVF or another treatment with her personal follow-up at every stage.",
-        "image": "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=900&q=85"
+        "image": "",
+        "highlight": true
       }
     ]
   },
