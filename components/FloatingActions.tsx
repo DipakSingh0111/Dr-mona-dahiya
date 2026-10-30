@@ -2,7 +2,7 @@ import { FaCheck, FaWhatsapp } from "react-icons/fa";
 
 export default function FloatingActions() {
   return (
-    <div className="pointer-events-none fixed inset-x-0 bottom-0 z-50 flex items-end justify-between p-4 sm:p-6">
+    <div className="pointer-events-none fixed inset-x-0 bottom-0 z-50 flex items-end justify-between px-4 py-3 sm:px-6 sm:py-4">
       {/* Left: Fertility Assessment Pill */}
       <a
         href="#book-appointment"

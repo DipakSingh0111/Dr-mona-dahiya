@@ -291,8 +291,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 
   .hero-content {
-    padding-top: 2rem;
-    padding-bottom: 1.75rem;
+    padding-top: 1.75rem;
+    padding-bottom: 4.5rem;
   }
 
   .hero-title {
@@ -312,8 +312,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 
   .hero-content {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
   }
 
   .hero-title {
@@ -325,8 +325,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 /* Extra compact height protection for 125% laptop screens (height <= 760px) */
 @media (min-width: 1024px) and (max-height: 760px) {
   .hero-content {
-    padding-top: 1.25rem;
-    padding-bottom: 1.15rem;
+    padding-top: 1rem;
+    padding-bottom: 4.25rem;
   }
 
   .hero-copy {
