@@ -24,12 +24,12 @@ export default function HeroSection() {
       ? heroSlides
       : [{ image: backgroundImage, eyebrow, title }];
 
-  // On mobile: center on the people/subject on the right side of the wide banner (object-[80%_0%] / object-[75%_0%])
+  // On mobile: center the subjects in the top banner frame
   // On desktop (sm+): full banner framing (object-[55%_0%])
   const slidePositions = [
-    "object-[80%_0%] sm:object-[55%_0%] lg:object-[55%_0%]", // HeroBanner.jpeg (Award stage)
-    "object-[82%_0%] sm:object-[60%_0%] lg:object-[55%_0%]", // HeroBanner_02.png (Royal blue portrait matching slide 1)
-    "object-[78%_0%] sm:object-[60%_0%] lg:object-[55%_0%]", // HeroBanner_03.png (IVF Summit Award stage)
+    "object-[74%_0%] sm:object-[55%_0%] lg:object-[55%_0%]", // HeroBanner.jpeg (Award stage)
+    "object-[98%_0%] sm:object-[60%_0%] lg:object-[55%_0%]", // HeroBanner_02.png (Royal blue portrait centered on mobile)
+    "object-[76%_0%] sm:object-[60%_0%] lg:object-[55%_0%]", // HeroBanner_03.png (IVF Summit Award stage)
   ];
 
   const [activeSlide, setActiveSlide] = useState(0);

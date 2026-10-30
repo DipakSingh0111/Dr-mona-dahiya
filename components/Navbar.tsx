@@ -107,9 +107,9 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Menu row — Deep Royal Navy bar with subtle border & rose hover accent */}
+      {/* Menu row — Deep Royal Navy bar with subtle border & rose hover accent (desktop only) */}
       <div
-        className="relative z-10 border-y border-white/12 shadow-[0_4px_14px_rgba(4,18,48,0.25)]"
+        className="relative z-10 hidden border-y border-white/12 shadow-[0_4px_14px_rgba(4,18,48,0.25)] lg:block"
         style={{
           background:
             "linear-gradient(90deg, #061e52 0%, #09296e 50%, #061e52 100%)",
