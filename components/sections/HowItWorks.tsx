@@ -49,11 +49,11 @@ export default function HowItWorks() {
   const { badge, title, steps } = siteData.howItWorks;
 
   return (
-    <section className="relative bg-white px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
+    <section className="relative bg-white px-4 pt-10 pb-6 sm:px-6 sm:pt-12 sm:pb-7 lg:px-8 lg:pt-14 lg:pb-8">
       <div className="relative mx-auto w-full max-w-[1440px]">
         <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-12 lg:gap-10 xl:gap-16">
           {/* Left sticky heading */}
-          <div className="relative lg:sticky lg:top-44 lg:col-span-4 lg:self-start">
+          <div className="relative lg:sticky lg:top-52 lg:col-span-4 lg:self-start">
             <WaveBackdrop />
 
             <div className="relative z-10">
@@ -79,36 +79,36 @@ export default function HowItWorks() {
               return (
                 <div
                   key={step.id}
-                  className="sticky top-28 mb-8 sm:top-36 sm:mb-10 lg:top-44 lg:mb-12"
+                  className="sticky top-36 mb-8 sm:top-44 sm:mb-10 lg:top-52 lg:mb-12"
                   style={{ zIndex: index + 1 }}
                 >
                   <article
                     className={`flex w-full flex-col overflow-hidden rounded-[28px] bg-[#f6f7f9] shadow-[0_12px_36px_rgba(15,23,42,0.08)] sm:flex-row sm:items-stretch ${
                       isLast
-                        ? "min-h-[228px] sm:min-h-[252px] lg:min-h-[268px]"
-                        : "min-h-[220px] sm:min-h-[245px] lg:min-h-[260px]"
+                        ? "min-h-[180px] sm:min-h-[200px] lg:min-h-[210px]"
+                        : "min-h-[175px] sm:min-h-[195px] lg:min-h-[205px]"
                     } ${
                       highlight
                         ? "border-2 border-[#e83e74]/55 ring-1 ring-[#e83e74]/20"
                         : "border border-zinc-100"
                     }`}
                   >
-                    <div className="flex flex-1 flex-col justify-center px-5 py-6 sm:px-9 sm:py-9 lg:px-11 lg:py-10">
+                    <div className="flex flex-1 flex-col justify-center px-5 py-5 sm:px-9 sm:py-6 lg:px-11 lg:py-7">
                       {"stepLabel" in step && step.stepLabel ? (
-                        <span className="mb-2 text-[11.5px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:text-[12px]">
+                        <span className="mb-1.5 text-[11.5px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:text-[12px]">
                           {step.stepLabel}
                         </span>
                       ) : null}
                       <h3 className="font-display text-[1.35rem] leading-snug font-bold tracking-tight text-zinc-900 sm:text-[1.5rem]">
                         {step.title}
                       </h3>
-                      <p className="mt-3 max-w-xl text-[13.5px] leading-relaxed text-zinc-500 sm:text-[14px]">
+                      <p className="mt-2 max-w-xl text-[13.5px] leading-relaxed text-zinc-500 sm:text-[14px]">
                         {step.description}
                       </p>
                     </div>
 
                     {hasImage ? (
-                      <div className="relative mx-3 mb-3 aspect-[4/3] shrink-0 overflow-hidden rounded-[22px] bg-zinc-100 sm:mx-2.5 sm:my-2.5 sm:aspect-auto sm:h-auto sm:w-[44%] sm:min-w-[260px] sm:max-w-[320px] sm:min-h-[250px] sm:self-stretch">
+                      <div className="relative mx-3 mb-3 aspect-[4/3] shrink-0 overflow-hidden rounded-[22px] bg-zinc-100 sm:mx-2.5 sm:my-2.5 sm:aspect-auto sm:h-auto sm:w-[44%] sm:min-w-[260px] sm:max-w-[320px] sm:min-h-[195px] sm:self-stretch">
                         <Image
                           src={step.image}
                           alt={step.title}
