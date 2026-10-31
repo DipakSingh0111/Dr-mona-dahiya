@@ -15,7 +15,7 @@ export default function ServicesTicker() {
   const repeatedItems = [...tickerItems, ...tickerItems, ...tickerItems, ...tickerItems];
 
   return (
-    <div className="services-ticker relative z-20 w-full shrink-0 select-none overflow-hidden border-t border-white/10 border-b-2 border-white bg-[#2a1f22] py-2.5 sm:py-3">
+    <div className="services-ticker relative z-20 w-full shrink-0 select-none overflow-hidden border-t border-white/10 border-b border-white/25 bg-[#2a1f22] py-2.5 sm:py-3">
       <div className="animate-ticker flex w-max items-center whitespace-nowrap">
         {repeatedItems.map((item, index) => (
           <div key={index} className="flex items-center">

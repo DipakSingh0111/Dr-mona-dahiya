@@ -281,9 +281,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 @media (min-width: 1024px) {
   .home-first-screen {
-    /* ~10px white strip of next section peeks below ticker */
-    height: calc(100svh - 12.9rem);
-    max-height: calc(100svh - 12.9rem);
+    height: calc(100svh - 11.85rem);
+    max-height: calc(100svh - 11.85rem);
     overflow: hidden;
   }
 
@@ -317,8 +316,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 @media (min-width: 1280px) {
   .home-first-screen {
-    height: calc(100svh - 13.65rem);
-    max-height: calc(100svh - 13.65rem);
+    height: calc(100svh - 12.55rem);
+    max-height: calc(100svh - 12.55rem);
   }
 
   .hero-content {
@@ -342,8 +341,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 @media (min-width: 1024px) and (max-height: 760px) {
   .home-first-screen {
-    height: calc(100svh - 12.15rem);
-    max-height: calc(100svh - 12.15rem);
+    height: calc(100svh - 11rem);
+    max-height: calc(100svh - 11rem);
   }
 
   .hero-content {
