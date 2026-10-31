@@ -73,15 +73,20 @@
           { "label": "News & Media", "href": "/news-media" },
           {
             "label": "ART Ethics & Compliance",
-            "href": "/404",
-            "badge": "NEW"
+            "href": "/404"
           }
         ]
       },
       {
         "label": "Patient Resources",
         "href": "#",
-        "hasDropdown": false
+        "hasDropdown": true,
+        "dropdown": [
+          { "label": "Blogs", "href": "/404" },
+          { "label": "IVF FAQs", "href": "/about#faqs" },
+          { "label": "Online IVF Consultation", "href": "/about#book-consultation" },
+          { "label": "Contact Us", "href": "/locations" }
+        ]
       }
     ],
     "cta": {
@@ -1377,6 +1382,184 @@
     ],
     "copyright": "© 2026 Dr. Mona Dahiya. All rights reserved.",
     "disclaimer": "Medical disclaimer: Information on this website is for educational purposes and does not replace professional medical advice. Please consult a qualified specialist about your own case."
+  },
+  "locationsPage": {
+    "breadcrumb": "Locations",
+    "title": "Find Dr. Mona Dahiya near you",
+    "subtitle": "Choose your city, then your area. Each area opens its own page.",
+    "searchPlaceholder": "Search your area, e.g. Sector 62 or Indirapuram",
+    "phone": {
+      "label": "+91 92679 82924",
+      "href": "tel:+919267982924"
+    },
+    "supportText": "Can't find your area?",
+    "supportBookLabel": "book an appointment online",
+    "supportBookHref": "/about#book-consultation",
+    "cities": [
+      {
+        "id": "noida",
+        "name": "Noida",
+        "address": "3rd Floor, K-06, above FirstCry, Baraula, Sector 49, Noida, Uttar Pradesh 201301",
+        "areaCount": 34,
+        "clinicHref": "#noida",
+        "groups": [
+          {
+            "label": "Noida Sectors",
+            "areas": [
+              "Sector 18",
+              "Sector 22",
+              "Sector 37",
+              "Sector 44",
+              "Sector 49",
+              "Sector 50",
+              "Sector 51",
+              "Sector 52",
+              "Sector 61",
+              "Sector 62",
+              "Sector 63",
+              "Sector 75",
+              "Sector 76",
+              "Sector 78",
+              "Sector 100",
+              "Sector 104",
+              "Sector 107",
+              "Sector 119",
+              "Sector 120",
+              "Sector 128",
+              "Sector 137",
+              "Sector 142",
+              "Sector 143",
+              "Sector 150",
+              "Sector 151",
+              "Sector 168"
+            ]
+          },
+          {
+            "label": "Greater Noida & Noida Extension",
+            "areas": [
+              "Pari Chowk",
+              "Techzone 4",
+              "Knowledge Park",
+              "Alpha 1",
+              "Noida Extension",
+              "Greater Noida West",
+              "Omega 1",
+              "Chi Phi"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ghaziabad",
+        "name": "Ghaziabad",
+        "address": "2nd Floor, RDC, C-53A, near Bikanervala, Sector 15, Sector 10, Raj Nagar, Ghaziabad, Uttar Pradesh 201002",
+        "areaCount": 7,
+        "clinicHref": "#ghaziabad",
+        "groups": [
+          {
+            "label": "Ghaziabad Areas",
+            "areas": [
+              "Indirapuram",
+              "Vaishali",
+              "Vasundhara",
+              "Kaushambi",
+              "Raj Nagar Extension",
+              "Crossings Republik",
+              "Sahibabad"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "delhi",
+        "name": "Delhi",
+        "address": "Building Number 41, First Floor, Ring Road, Block Q, Lajpat Nagar IV, Lajpat Nagar, New Delhi 110024",
+        "areaCount": 55,
+        "clinicHref": "#delhi",
+        "groups": [
+          {
+            "label": "South Delhi",
+            "areas": [
+              "CR Park",
+              "Chittaranjan Park",
+              "Defence Colony",
+              "GK 1",
+              "GK 2",
+              "Greater Kailash",
+              "Green Park",
+              "Hauz Khas",
+              "Kalkaji",
+              "Lajpat Nagar",
+              "Malviya Nagar",
+              "Nehru Place",
+              "New Friends Colony",
+              "Saket",
+              "Sarita Vihar",
+              "South Extension",
+              "Vasant Kunj (Best IVF Doctor)",
+              "Vasant Kunj (Fertility Specialist)"
+            ]
+          },
+          {
+            "label": "East Delhi",
+            "areas": [
+              "Anand Vihar",
+              "Dilshad Garden",
+              "Geeta Colony",
+              "Krishna Nagar",
+              "Laxmi Nagar",
+              "Mayur Vihar (Best IVF Doctor)",
+              "Mayur Vihar (IVF Doctor)",
+              "Pandav Nagar",
+              "Patparganj",
+              "Preet Vihar",
+              "Shahdara",
+              "Vivek Vihar"
+            ]
+          },
+          {
+            "label": "West Delhi",
+            "areas": [
+              "Dwarka",
+              "Janakpuri",
+              "Kirti Nagar",
+              "Moti Nagar",
+              "Paschim Vihar",
+              "Punjabi Bagh",
+              "Rajouri Garden",
+              "Tagore Garden",
+              "Tilak Nagar",
+              "Uttam Nagar",
+              "Vikaspuri"
+            ]
+          },
+          {
+            "label": "North Delhi",
+            "areas": [
+              "Ashok Vihar",
+              "Civil Lines",
+              "Model Town",
+              "Mukherjee Nagar",
+              "Pitampura",
+              "Rohini (Best IVF Doctor)",
+              "Rohini (Fertility Specialist)",
+              "Shalimar Bagh"
+            ]
+          },
+          {
+            "label": "Central Delhi",
+            "areas": [
+              "Connaught Place",
+              "Jhandewalan",
+              "Karol Bagh (Best IVF Doctor)",
+              "Karol Bagh (IVF Specialist)",
+              "Paharganj",
+              "Patel Nagar"
+            ]
+          }
+        ]
+      }
+    ]
   },
   "parenthoodCta": {
     "title": "Take your first step towards parenthood with",

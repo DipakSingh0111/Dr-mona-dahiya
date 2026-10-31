@@ -165,7 +165,7 @@ export default function Navbar() {
                             className="flex items-center justify-between rounded-xl px-4 py-2.5 text-[14px] font-medium text-slate-100 normal-case transition-all duration-200 hover:bg-white/10 hover:text-[#5eead4]"
                           >
                             <span>{sub.label}</span>
-                            {"badge" in sub && sub.badge ? (
+                            {"badge" in sub && typeof sub.badge === "string" ? (
                               <span className="ml-2 inline-flex items-center rounded-full bg-[#f59e0b] px-2 py-0.5 text-[10px] font-extrabold tracking-wide text-black uppercase shadow-sm">
                                 {sub.badge}
                               </span>
@@ -228,7 +228,7 @@ export default function Navbar() {
                           onClick={() => setOpen(false)}
                         >
                           <span>{sub.label}</span>
-                          {"badge" in sub && sub.badge ? (
+                          {"badge" in sub && typeof sub.badge === "string" ? (
                             <span className="ml-2 rounded-full bg-[#f59e0b] px-2 py-0.5 text-[9.5px] font-extrabold text-black uppercase">
                               {sub.badge}
                             </span>
