@@ -83,14 +83,14 @@ export default function HowItWorks() {
                   style={{ zIndex: index + 1 }}
                 >
                   <article
-                    className={`flex w-full flex-col overflow-hidden rounded-[28px] bg-[#f6f7f9] shadow-[0_12px_36px_rgba(15,23,42,0.08)] sm:flex-row sm:items-stretch ${
+                    className={`flex w-full flex-col overflow-hidden rounded-[28px] bg-white transition-all duration-300 sm:flex-row sm:items-stretch ${
                       isLast
                         ? "min-h-[180px] sm:min-h-[200px] lg:min-h-[210px]"
                         : "min-h-[175px] sm:min-h-[195px] lg:min-h-[205px]"
                     } ${
                       highlight
-                        ? "border-2 border-[#e83e74]/55 ring-1 ring-[#e83e74]/20"
-                        : "border border-zinc-100"
+                        ? "border border-[#e83e74]/35 shadow-[0_10px_25px_rgba(0,0,0,0.05)] hover:border-[#e83e74] hover:shadow-[0_20px_45px_rgba(232,62,116,0.22)]"
+                        : "border border-zinc-200/80 shadow-[0_10px_25px_rgba(0,0,0,0.05)] hover:border-[#e83e74]/50 hover:shadow-[0_20px_45px_rgba(232,62,116,0.18)]"
                     }`}
                   >
                     <div className="flex flex-1 flex-col justify-center px-5 py-5 sm:px-9 sm:py-6 lg:px-11 lg:py-7">

@@ -38,7 +38,7 @@ export default function AboutReviews() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-slate-50/70 px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
+    <section id="reviews" className="relative overflow-hidden bg-slate-50/70 px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
       {/* Soft ambient theme glow */}
       <div
         aria-hidden

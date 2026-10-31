@@ -157,7 +157,7 @@ export default function Navbar() {
                   {/* Dropdown Menu on Smooth Hover */}
                   {hasItems ? (
                     <div className="invisible absolute top-full left-0 z-50 pt-1 opacity-0 pointer-events-none translate-y-2 transition-all duration-250 ease-out group-hover/nav:visible group-hover/nav:pointer-events-auto group-hover/nav:translate-y-0 group-hover/nav:opacity-100">
-                      <div className="w-[275px] overflow-hidden rounded-b-2xl border-t-2 border-[#e83e74] bg-[#071e4d] p-2 shadow-[0_22px_45px_rgba(0,10,30,0.7)] ring-1 ring-white/10">
+                      <div className="w-[290px] overflow-hidden rounded-b-2xl border-t-2 border-[#e83e74] bg-[#071e4d] p-2 shadow-[0_22px_45px_rgba(0,10,30,0.7)] ring-1 ring-white/10">
                         {item.dropdown!.map((sub) => (
                           <a
                             key={sub.label}
