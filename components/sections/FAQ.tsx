@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import siteData from "@/data/site.json";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
@@ -50,7 +50,6 @@ function FaqCard({
           </h3>
         </div>
 
-        {/* Plus → minus via smooth rotation of the vertical bar */}
         <span
           className={`relative flex size-7 shrink-0 items-center justify-center transition-colors duration-300 ${
             isOpen ? "text-[#e11d68]" : "text-[#0f2038] group-hover:text-[#e11d68]"
@@ -66,7 +65,6 @@ function FaqCard({
         </span>
       </button>
 
-      {/* Smooth height accordion */}
       <div
         className={`grid transition-[grid-template-rows] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
           isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
@@ -91,10 +89,26 @@ export default function FAQ() {
     siteData.faq;
 
   const [openId, setOpenId] = useState<string | null>("faq-01");
+  const listRef = useRef<HTMLDivElement>(null);
+  const [listMinHeight, setListMinHeight] = useState<number | undefined>();
 
   const toggleFaq = (id: string) => {
     setOpenId((prev) => (prev === id ? null : id));
   };
+
+  useEffect(() => {
+    const node = listRef.current;
+    if (!node) return;
+
+    const lockHeight = () => {
+      const next = Math.ceil(node.getBoundingClientRect().height);
+      setListMinHeight((prev) => Math.max(prev ?? 0, next));
+    };
+
+    lockHeight();
+    const timer = window.setTimeout(lockHeight, 520);
+    return () => window.clearTimeout(timer);
+  }, [openId]);
 
   return (
     <section className="relative isolate overflow-hidden bg-white px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
@@ -125,7 +139,11 @@ export default function FAQ() {
           </header>
         </Reveal>
 
-        <div className="grid grid-cols-1 items-start gap-4 lg:grid-cols-2 lg:gap-6">
+        <div
+          ref={listRef}
+          className="grid grid-cols-1 items-start gap-4 lg:grid-cols-2 lg:gap-6"
+          style={listMinHeight ? { minHeight: listMinHeight } : undefined}
+        >
           <Stagger className="flex flex-col gap-3.5 sm:gap-4" stagger={0.08}>
             {leftFaqs.map((item) => (
               <StaggerItem key={item.id} variant="slideLeft">

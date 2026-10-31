@@ -32,6 +32,12 @@ function handlePlainNavClick(
 export default function Navbar() {
   const { brand, menu, cta } = siteData.navbar;
   const [open, setOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+
+  const closeMobileMenu = () => {
+    setOpen(false);
+    setOpenDropdown(null);
+  };
 
   return (
     <header className="relative z-40 bg-transparent">
@@ -117,7 +123,12 @@ export default function Navbar() {
               aria-expanded={open}
               aria-controls="mobile-menu"
               aria-label={open ? "Close menu" : "Open menu"}
-              onClick={() => setOpen((v) => !v)}
+              onClick={() => {
+                setOpen((v) => {
+                  if (v) setOpenDropdown(null);
+                  return !v;
+                });
+              }}
             >
               {open ? <CloseIcon className="size-5" /> : <MenuIcon className="size-5" />}
             </button>
@@ -200,41 +211,74 @@ export default function Navbar() {
         >
           <nav className="flex flex-col gap-1" aria-label="Mobile">
             {menu.map((item) => {
-              const hasItems = "dropdown" in item && Array.isArray(item.dropdown) && item.dropdown.length > 0;
+              const hasItems =
+                "dropdown" in item &&
+                Array.isArray(item.dropdown) &&
+                item.dropdown.length > 0;
+              const isExpanded = openDropdown === item.label;
 
               return (
                 <div key={item.label} className="flex flex-col">
-                  <a
-                    href={item.href}
-                    className="flex items-center justify-between rounded-lg px-3 py-2.5 text-sm font-semibold tracking-wide text-white uppercase hover:bg-white/5"
-                    onClick={(e) => {
-                      handlePlainNavClick(e, item.href);
-                      setOpen(false);
-                    }}
-                  >
-                    <span>{item.label}</span>
-                    {item.hasDropdown ? (
-                      <ChevronDownIcon className="size-4 opacity-70" />
-                    ) : null}
-                  </a>
+                  {hasItems ? (
+                    <button
+                      type="button"
+                      className="flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-left text-sm font-semibold tracking-wide text-white uppercase hover:bg-white/5"
+                      aria-expanded={isExpanded}
+                      onClick={() =>
+                        setOpenDropdown((prev) =>
+                          prev === item.label ? null : item.label,
+                        )
+                      }
+                    >
+                      <span>{item.label}</span>
+                      <ChevronDownIcon
+                        className={`size-4 opacity-70 transition-transform duration-300 ease-in-out ${
+                          isExpanded ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+                  ) : (
+                    <a
+                      href={item.href}
+                      className="flex items-center justify-between rounded-lg px-3 py-2.5 text-sm font-semibold tracking-wide text-white uppercase hover:bg-white/5"
+                      onClick={(e) => {
+                        handlePlainNavClick(e, item.href);
+                        closeMobileMenu();
+                      }}
+                    >
+                      <span>{item.label}</span>
+                    </a>
+                  )}
 
                   {hasItems ? (
-                    <div className="ml-4 mb-2 flex flex-col gap-1 border-l-2 border-[#e83e74]/60 pl-3">
-                      {item.dropdown!.map((sub) => (
-                        <a
-                          key={sub.label}
-                          href={sub.href}
-                          className="flex items-center justify-between px-2 py-1.5 text-[13px] font-normal text-white/80 normal-case hover:text-[#5eead4]"
-                          onClick={() => setOpen(false)}
-                        >
-                          <span>{sub.label}</span>
-                          {"badge" in sub && typeof sub.badge === "string" ? (
-                            <span className="ml-2 rounded-full bg-[#f59e0b] px-2 py-0.5 text-[9.5px] font-extrabold text-black uppercase">
-                              {sub.badge}
-                            </span>
-                          ) : null}
-                        </a>
-                      ))}
+                    <div
+                      className={`grid transition-[grid-template-rows,opacity] duration-300 ease-in-out ${
+                        isExpanded
+                          ? "grid-rows-[1fr] opacity-100"
+                          : "grid-rows-[0fr] opacity-0"
+                      }`}
+                    >
+                      <div className="overflow-hidden">
+                        <div className="ml-4 mb-2 flex flex-col gap-1 border-l-2 border-[#e83e74]/60 pl-3">
+                          {item.dropdown!.map((sub) => (
+                            <a
+                              key={sub.label}
+                              href={sub.href}
+                              className="flex items-center justify-between px-2 py-1.5 text-[13px] font-normal text-white/80 normal-case hover:text-[#5eead4]"
+                              onClick={closeMobileMenu}
+                              tabIndex={isExpanded ? 0 : -1}
+                            >
+                              <span>{sub.label}</span>
+                              {"badge" in sub &&
+                              typeof sub.badge === "string" ? (
+                                <span className="ml-2 rounded-full bg-[#f59e0b] px-2 py-0.5 text-[9.5px] font-extrabold text-black uppercase">
+                                  {sub.badge}
+                                </span>
+                              ) : null}
+                            </a>
+                          ))}
+                        </div>
+                      </div>
                     </div>
                   ) : null}
                 </div>
@@ -243,7 +287,7 @@ export default function Navbar() {
             <a
               href={cta.href}
               className="mt-2 inline-flex items-center justify-center gap-2 rounded-lg bg-[#b34562] px-5 py-3 text-[12px] font-bold tracking-[0.08em] text-white uppercase"
-              onClick={() => setOpen(false)}
+              onClick={closeMobileMenu}
             >
               <CalendarIcon className="size-3.5" />
               {cta.label}
