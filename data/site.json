@@ -60,12 +60,12 @@
       },
       {
         "label": "Success Stories",
-        "href": "/#success-stories",
+        "href": "/success-stories",
         "hasDropdown": true,
         "dropdown": [
           {
             "label": "All Success Stories",
-            "href": "/#success-stories"
+            "href": "/success-stories"
           },
           {
             "label": "IVF Success Stories",
@@ -73,15 +73,15 @@
           },
           {
             "label": "Low AMH Success Stories",
-            "href": "/#success-stories"
+            "href": "/success-stories#low-amh"
           },
           {
             "label": "PCOS Success Stories",
-            "href": "/#success-stories"
+            "href": "/success-stories#pcos"
           },
           {
             "label": "IUI Success Stories",
-            "href": "/#success-stories"
+            "href": "/success-stories#iui"
           },
           {
             "label": "Google Verified Patient Reviews",

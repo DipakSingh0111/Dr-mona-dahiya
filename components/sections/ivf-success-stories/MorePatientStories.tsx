@@ -8,22 +8,22 @@ const stories = [
   {
     title: "Low AMH Success Stories",
     subtitle: "Own-egg pregnancies with low ovarian reserve",
-    href: "/#success-stories",
+    href: "/success-stories#low-amh",
   },
   {
     title: "PCOS & PCOD Success Stories",
     subtitle: "Safe ovulation and OHSS-free IVF",
-    href: "/#success-stories",
+    href: "/success-stories#pcos",
   },
   {
     title: "IUI Success Stories",
     subtitle: "Gentle, first-line treatment within 2 to 3 cycles",
-    href: "/#success-stories",
+    href: "/success-stories#iui",
   },
   {
     title: "All Success Stories",
     subtitle: "The full overview",
-    href: "/#success-stories",
+    href: "/success-stories",
   },
 ];
 
