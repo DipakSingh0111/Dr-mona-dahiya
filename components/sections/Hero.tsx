@@ -112,7 +112,7 @@ export default function Hero() {
 
       {/* Below image slider on mobile, overlaid on left on sm+ */}
       <div className="hero-content relative z-20 mx-auto flex w-full max-w-[1440px] flex-1 items-center bg-gradient-to-b from-[#003db8] via-[#0044c4] to-[#003399] px-4 pt-5 pb-7 sm:bg-none sm:px-6 sm:py-8 lg:px-8 lg:py-8 xl:py-12">
-        <div className="hero-copy flex w-full max-w-[460px] flex-col gap-3 lg:gap-3.5 xl:max-w-[560px] xl:gap-5">
+        <div className="hero-copy flex w-full max-w-[460px] flex-col gap-4 sm:gap-4.5 lg:gap-5 xl:max-w-[560px] xl:gap-6">
           <HeroReveal key={`eyebrow-${activeSlide}`} delay={0.05}>
             <p className="hero-eyebrow text-[10.5px] font-semibold tracking-[0.14em] text-white/90 uppercase sm:whitespace-nowrap sm:tracking-[0.16em] lg:text-[11px] xl:text-[12px] xl:tracking-[0.18em] transition-all duration-500">
               {currentSlide.eyebrow || eyebrow}
@@ -129,7 +129,7 @@ export default function Hero() {
           </HeroReveal>
 
           <HeroReveal delay={0.32}>
-            <div className="hero-ctas flex flex-col gap-2.5 sm:flex-row sm:flex-nowrap sm:items-center sm:gap-3 xl:gap-3.5">
+            <div className="hero-ctas mt-1 flex flex-col gap-3 sm:flex-row sm:flex-nowrap sm:items-center sm:gap-3.5 xl:mt-1.5 xl:gap-4">
               <a
                 href={primaryCta.href}
                 className="hero-cta inline-flex h-10 shrink-0 items-center justify-center gap-2 rounded-full bg-[#c54866] px-5 text-[12px] font-bold text-white whitespace-nowrap shadow-[0_10px_24px_rgba(197,72,102,0.35)] transition-all hover:bg-[#b03a55] xl:h-12 xl:gap-2.5 xl:px-8 xl:text-[13.5px]"
@@ -153,7 +153,7 @@ export default function Hero() {
 
           {/* Google Review Badge */}
           <HeroReveal delay={0.4}>
-            <div className="hero-review-badge mt-8 flex w-fit items-center gap-2 rounded-xl border border-[#fed7aa] bg-[#fffbf2] px-3.5 py-1.5 whitespace-nowrap shadow-sm backdrop-blur-md sm:mt-9 xl:mt-10 xl:px-4 xl:py-2">
+            <div className="hero-review-badge mt-6 flex w-fit items-center gap-2 rounded-full border border-[#fed7aa] bg-[#fffbf2] px-4 py-2 whitespace-nowrap shadow-sm backdrop-blur-md sm:mt-7 xl:mt-8 xl:px-4.5 xl:py-2.5">
               <div className="flex items-center gap-0.5 text-[#f59e0b]">
                 <FaStar className="size-3 fill-current xl:size-3.5" />
                 <FaStar className="size-3 fill-current xl:size-3.5" />
