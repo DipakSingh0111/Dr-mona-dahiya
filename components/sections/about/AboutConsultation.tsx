@@ -9,7 +9,9 @@ type Props = {
   sectionId?: string;
   eyebrow?: string;
   title?: ReactNode;
-  subtitle?: string;
+  subtitle?: ReactNode;
+  /** When false, phone/email are not appended after subtitle (use when subtitle already includes them). */
+  appendContacts?: boolean;
 };
 
 export default function AboutConsultation({
@@ -23,6 +25,7 @@ export default function AboutConsultation({
     </>
   ),
   subtitle = "Book an in-clinic consultation or an online record review. Appointment line:",
+  appendContacts = true,
 }: Props) {
   const [formData, setFormData] = useState({
     name: "",
@@ -56,21 +59,26 @@ export default function AboutConsultation({
               </h2>
 
               <p className="mt-3 text-[14px] leading-relaxed text-white/65 sm:text-[15px]">
-                {subtitle}{" "}
-                <a
-                  href="tel:+919267982924"
-                  className="text-white/85 hover:text-white"
-                >
-                  +91 92679 82924
-                </a>{" "}
-                &middot;{" "}
-                <a
-                  href="mailto:info@drmonadahiya.com"
-                  className="text-white/85 hover:text-white"
-                >
-                  info@drmonadahiya.com
-                </a>
-                .
+                {subtitle}
+                {appendContacts ? (
+                  <>
+                    {" "}
+                    <a
+                      href="tel:+919267982924"
+                      className="text-white/85 hover:text-white"
+                    >
+                      +91 92679 82924
+                    </a>{" "}
+                    &middot;{" "}
+                    <a
+                      href="mailto:info@drmonadahiya.com"
+                      className="text-white/85 hover:text-white"
+                    >
+                      info@drmonadahiya.com
+                    </a>
+                    .
+                  </>
+                ) : null}
               </p>
 
               <div className="mt-6 flex flex-wrap items-center gap-3.5 sm:mt-7">

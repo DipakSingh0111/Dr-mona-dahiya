@@ -68,9 +68,18 @@
         "href": "/about",
         "hasDropdown": true,
         "dropdown": [
-          { "label": "Credentials & Bio", "href": "/about" },
-          { "label": "Gallery", "href": "/gallery" },
-          { "label": "News & Media", "href": "/news-media" },
+          {
+            "label": "Credentials & Bio",
+            "href": "/about"
+          },
+          {
+            "label": "Gallery",
+            "href": "/gallery"
+          },
+          {
+            "label": "News & Media",
+            "href": "/news-media"
+          },
           {
             "label": "ART Ethics & Compliance",
             "href": "/404"
@@ -82,10 +91,22 @@
         "href": "#",
         "hasDropdown": true,
         "dropdown": [
-          { "label": "Blogs", "href": "/404" },
-          { "label": "IVF FAQs", "href": "/about#faqs" },
-          { "label": "Online IVF Consultation", "href": "/online-consultation" },
-          { "label": "Contact Us", "href": "/locations" }
+          {
+            "label": "Blogs",
+            "href": "/404"
+          },
+          {
+            "label": "IVF FAQs",
+            "href": "/ivf-faqs"
+          },
+          {
+            "label": "Online IVF Consultation",
+            "href": "/online-consultation"
+          },
+          {
+            "label": "Contact Us",
+            "href": "/locations"
+          }
         ]
       }
     ],
@@ -309,7 +330,11 @@
   "ourServices": {
     "eyebrow": "Our services",
     "titlePrefix": "For infertility treatment in",
-    "titleLocations": ["Noida", "Delhi", "Ghaziabad"],
+    "titleLocations": [
+      "Noida",
+      "Delhi",
+      "Ghaziabad"
+    ],
     "description": "From a first IUI to advanced lab work, each treatment is chosen after testing both partners.",
     "cta": {
       "label": "View all services",
@@ -889,7 +914,11 @@
           "name": "Little Angel IVF",
           "icon": "/images/affiliations/icon-baby-heart.jpg",
           "tone": "pink",
-          "tags": ["Noida", "Delhi", "Ghaziabad"]
+          "tags": [
+            "Noida",
+            "Delhi",
+            "Ghaziabad"
+          ]
         }
       ]
     },
@@ -1236,7 +1265,11 @@
       "subtitle": "Fill in your details and we will get back to you shortly.",
       "submitLabel": "Request appointment",
       "disclaimer": "Demo form. In production this posts to the booking system.",
-      "clinics": ["Noida", "Ghaziabad", "Delhi"]
+      "clinics": [
+        "Noida",
+        "Ghaziabad",
+        "Delhi"
+      ]
     }
   },
   "footer": {
@@ -1310,16 +1343,46 @@
     },
     "noidaTreatmentsTitle": "Noida Specific Treatments",
     "noidaTreatments": [
-      { "label": "Best IUI Doctor in Noida", "href": "#" },
-      { "label": "Female Infertility Specialist Noida", "href": "#" },
-      { "label": "Male Infertility Specialist Noida", "href": "#" },
-      { "label": "Egg Freezing Clinic in Noida", "href": "#" },
-      { "label": "PGT Testing Center in Noida", "href": "#" },
-      { "label": "PRP Fertility Therapy in Noida", "href": "#" },
-      { "label": "Laparoscopic Surgeon in Noida", "href": "#" },
-      { "label": "PCOS & PCOD Clinic Noida", "href": "#" },
-      { "label": "Low AMH Treatment in Noida", "href": "#" },
-      { "label": "Miscarriage Specialist in Noida", "href": "#" }
+      {
+        "label": "Best IUI Doctor in Noida",
+        "href": "#"
+      },
+      {
+        "label": "Female Infertility Specialist Noida",
+        "href": "#"
+      },
+      {
+        "label": "Male Infertility Specialist Noida",
+        "href": "#"
+      },
+      {
+        "label": "Egg Freezing Clinic in Noida",
+        "href": "#"
+      },
+      {
+        "label": "PGT Testing Center in Noida",
+        "href": "#"
+      },
+      {
+        "label": "PRP Fertility Therapy in Noida",
+        "href": "#"
+      },
+      {
+        "label": "Laparoscopic Surgeon in Noida",
+        "href": "#"
+      },
+      {
+        "label": "PCOS & PCOD Clinic Noida",
+        "href": "#"
+      },
+      {
+        "label": "Low AMH Treatment in Noida",
+        "href": "#"
+      },
+      {
+        "label": "Miscarriage Specialist in Noida",
+        "href": "#"
+      }
     ],
     "delhiGhaziabad": {
       "title": "Delhi & Ghaziabad Clinics",
@@ -1340,13 +1403,21 @@
       ]
     },
     "directoryTitle": "Directory",
-    "directory": [{ "label": "All Locations", "href": "#clinics" }],
+    "directory": [
+      {
+        "label": "All Locations",
+        "href": "#clinics"
+      }
+    ],
     "clinicHours": "Clinics: Mon–Sat · 10:00 AM to 5:00 PM",
     "guidesTitle": "Patient Guides & Articles",
     "educationalHub": {
       "title": "Educational Hub",
       "items": [
-        { "label": "Fertility Blog & Knowledge Center", "href": "#blog" }
+        {
+          "label": "Fertility Blog & Knowledge Center",
+          "href": "#blog"
+        }
       ]
     },
     "highIntentGuides": {
@@ -1357,28 +1428,53 @@
           "href": "#",
           "isNew": true
         },
-        { "label": "What to Do After Failed IVF", "href": "#", "isNew": true },
-        { "label": "Diet & Protocol for Low AMH", "href": "#" },
-        { "label": "Egg Freezing: Ideal Age & Costs", "href": "#" },
-        { "label": "Comprehensive IVF FAQs", "href": "#faq" }
+        {
+          "label": "What to Do After Failed IVF",
+          "href": "#",
+          "isNew": true
+        },
+        {
+          "label": "Diet & Protocol for Low AMH",
+          "href": "#"
+        },
+        {
+          "label": "Egg Freezing: Ideal Age & Costs",
+          "href": "#"
+        },
+        {
+          "label": "Comprehensive IVF FAQs",
+          "href": "#faq"
+        }
       ]
     },
     "trustTitle": "Trust & Compliance",
     "trust": {
       "subtitle": "Legal & Accreditation",
       "items": [
-        { "label": "Privacy Policy & Patient Data Security", "href": "#" },
+        {
+          "label": "Privacy Policy & Patient Data Security",
+          "href": "#"
+        },
         {
           "label": "Terms of Medical Consultation",
           "href": "#",
           "isNew": true
         },
-        { "label": "Doctor Registration & Medical Council", "href": "#" }
+        {
+          "label": "Doctor Registration & Medical Council",
+          "href": "#"
+        }
       ]
     },
     "bottomLinks": [
-      { "label": "Contact Us", "href": "#book-appointment" },
-      { "label": "XML Sitemap", "href": "#" }
+      {
+        "label": "Contact Us",
+        "href": "#book-appointment"
+      },
+      {
+        "label": "XML Sitemap",
+        "href": "#"
+      }
     ],
     "copyright": "© 2026 Dr. Mona Dahiya. All rights reserved.",
     "disclaimer": "Medical disclaimer: Information on this website is for educational purposes and does not replace professional medical advice. Please consult a qualified specialist about your own case."
@@ -1778,5 +1874,248 @@
         }
       ]
     }
+  },
+  "ivfFaqsPage": {
+    "breadcrumb": "IVF FAQs",
+    "eyebrow": "IVF FAQs",
+    "title": "IVF Frequently Asked Questions, Answered by Dr. Mona Dahiya",
+    "image": "/images/about/IVF-FAq.jpg",
+    "primaryCta": {
+      "label": "Book In-Clinic Consultation",
+      "href": "/about#book-consultation"
+    },
+    "secondaryCta": {
+      "label": "Schedule Online Consultation",
+      "href": "/online-consultation"
+    },
+    "reviewsLink": {
+      "label": "Read Dr. Mona's Google reviews",
+      "href": "/about#reviews"
+    },
+    "badges": [
+      "Reviewed by Dr. Mona Dahiya",
+      "In line with the Indian ART Act"
+    ],
+    "clinics": {
+      "eyebrow": "Visit Dr. Mona",
+      "title": "Book a Consultation at Our Clinics",
+      "subtitle": "Dr. Mona sees patients in Noida, Ghaziabad and Delhi, and offers online consultations.",
+      "bookHref": "#book-consultation",
+      "items": [
+        {
+          "area": "SECTOR 49",
+          "city": "Noida",
+          "address": "3rd Floor, K-06, above FirstCry, Baraula, Sector 49, Noida, Uttar Pradesh 201301",
+          "clinicPageUrl": "/locations#noida",
+          "directionsUrl": "https://www.google.com/maps/search/?api=1&query=3rd+Floor+K-06+above+FirstCry+Baraula+Sector+49+Noida"
+        },
+        {
+          "area": "RAJ NAGAR",
+          "city": "Ghaziabad",
+          "address": "2nd Floor, RDC, C-53A, near Bikanerwala, Sector 15, Sector 10, Raj Nagar, Ghaziabad, Uttar Pradesh 201002",
+          "clinicPageUrl": "/locations#ghaziabad",
+          "directionsUrl": "https://www.google.com/maps/search/?api=1&query=2nd+Floor+RDC+C-53A+near+Bikanerwala+Raj+Nagar+Ghaziabad"
+        },
+        {
+          "area": "LAJPAT NAGAR",
+          "city": "Delhi",
+          "address": "Building Number 41, First Floor, Ring Road, Block Q, Lajpat Nagar IV, Lajpat Nagar, New Delhi 110024",
+          "clinicPageUrl": "/locations#delhi",
+          "directionsUrl": "https://www.google.com/maps/search/?api=1&query=Building+Number+41+First+Floor+Ring+Road+Block+Q+Lajpat+Nagar+IV+New+Delhi"
+        }
+      ]
+    },
+    "reviews": {
+      "eyebrow": "Patient reviews",
+      "title": "What Patients Say About Dr. Mona",
+      "subtitle": "Individual experiences in patients' own words.",
+      "cta": {
+        "label": "Read All Patient Reviews",
+        "href": "/about#reviews"
+      },
+      "items": [
+        {
+          "title": "Compassion & Dedication",
+          "body": "I had a fantastic experience with Dr. Mona Dahiya. From the moment we entered their IVF centre, I felt welcome and at ease. Dr. Mona was attentive, listened to my concerns, and explained my condition and treatment options clearly. Her professionalism and expertise shone through. I highly recommend Dr. Mona for her compassionate approach and dedication to patient care.",
+          "initial": "R",
+          "name": "Rajesh Shakya",
+          "source": "Google patient review"
+        },
+        {
+          "title": "Compassion & Care",
+          "body": "Dr. Mona Dahiya's expertise and compassionate care made our IVF journey a truly positive one. Her guidance throughout ovarian stimulation was exceptional. She clearly explained each step, addressed our concerns with patience, and her constant encouragement made all the difference. Thank you, Dr. Dahiya, for helping make our dream of parenthood a reality.",
+          "initial": "F",
+          "name": "Firoj khan",
+          "source": "Google patient review"
+        },
+        {
+          "title": "Top IVF Doctor",
+          "body": "Dr. Mona Dahiya's reputation as a top IVF doctor is so well-deserved. Her clear guidance, ethical approach and genuine care gave us confidence throughout treatment. We are deeply grateful for her support.",
+          "initial": "M",
+          "name": "Manjesh Rajput",
+          "source": "Google patient review"
+        }
+      ]
+    },
+    "categories": [
+      {
+        "id": "clinical",
+        "label": "Clinical Process & Expectations",
+        "meta": "7 questions - IVF vs ICSI, timelines, pain, injections"
+      },
+      {
+        "id": "transfer",
+        "label": "Embryo Transfer, Bed Rest & Safety",
+        "meta": "7 questions - bed rest, single transfer, frozen cycles, OHSS"
+      },
+      {
+        "id": "complex",
+        "label": "Complex Conditions, Success Rates & Costs",
+        "meta": "7 questions - low AMH, implantation failure, age, cost"
+      },
+      {
+        "id": "legal",
+        "label": "Legal Rules, Consultations & Clinics",
+        "meta": "6 questions - age limits, sex selection, insurance, clinics"
+      }
+    ],
+    "sections": [
+      {
+        "id": "clinical",
+        "categoryLabel": "Category 1",
+        "title": "Clinical Process & Expectations",
+        "items": [
+          {
+            "q": "What is the difference between conventional IVF and ICSI?",
+            "a": "In IVF, eggs and thousands of prepared sperm are placed together in a dish. In ICSI, an embryologist injects one selected sperm into each egg, which overcomes severe male factor and past fertilisation failure."
+          },
+          {
+            "q": "How long does one complete IVF cycle take?",
+            "a": "About 12 to 14 days of stimulation from Day 2 of the period to egg retrieval. A frozen transfer adds 2 to 3 weeks of lining preparation, then a blood test 14 days later."
+          },
+          {
+            "q": "Is egg retrieval painful?",
+            "a": "No. It takes 15 to 20 minutes under light IV sedation, so you sleep through it. Mild cramping afterwards settles with simple painkillers."
+          },
+          {
+            "q": "How many hormone injections are needed?",
+            "a": "Small injections under the skin once a day for 8 to 11 days, using ultra-fine needles like insulin pens."
+          },
+          {
+            "q": "Do I need to stay in hospital?",
+            "a": "No. Egg retrieval and embryo transfer are day-care procedures, and most women go home within 2 to 3 hours."
+          },
+          {
+            "q": "Which tests are needed before IVF?",
+            "a": "AMH with an antral follicle scan, semen analysis, a uterine scan, hormone tests (TSH, prolactin) and infection screening for both partners."
+          },
+          {
+            "q": "When will I know if IVF worked?",
+            "a": "A blood Beta-hCG test 14 days after transfer (or 12 to 14 days after a blastocyst transfer)."
+          }
+        ]
+      },
+      {
+        "id": "transfer",
+        "categoryLabel": "Category 2",
+        "title": "Embryo Transfer, Bed Rest & Safety",
+        "items": [
+          {
+            "q": "Is strict bed rest needed after embryo transfer?",
+            "a": "No. Studies show bed rest does not improve implantation, and embryos cannot fall out. Rest 15 to 20 minutes at the clinic, then resume normal, non-strenuous activity."
+          },
+          {
+            "q": "How many embryos should be transferred?",
+            "a": "Usually 1. Dr. Dahiya prefers elective single blastocyst transfer, which keeps pregnancy rates high while reducing risks of preterm birth and twins."
+          },
+          {
+            "q": "Are frozen transfers as effective as fresh transfers?",
+            "a": "Yes. Vitrified embryos survive warming over 95% of the time, and frozen transfers often do as well or better because the lining is prepared without high stimulation hormones."
+          },
+          {
+            "q": "Does IVF increase the risk of birth defects?",
+            "a": "The large majority of IVF babies are healthy. Some studies show a small increase in risk, mostly linked to the underlying infertility rather than IVF itself, and Dr. Dahiya discusses this at consultation."
+          },
+          {
+            "q": "What is OHSS and how is it prevented?",
+            "a": "Ovarian hyperstimulation syndrome is an over-response to stimulation. It is prevented with antagonist protocols, careful dosing, an agonist trigger and freeze-all cycles when needed."
+          },
+          {
+            "q": "Can I work during IVF?",
+            "a": "Yes. Most women keep working through stimulation and take 1 to 2 days off around egg retrieval."
+          },
+          {
+            "q": "What should I avoid after transfer?",
+            "a": "Heavy lifting, intense exercise, smoking, alcohol and hot tubs until the pregnancy test."
+          }
+        ]
+      },
+      {
+        "id": "complex",
+        "categoryLabel": "Category 3",
+        "title": "Complex Conditions, Success Rates & Costs",
+        "items": [
+          {
+            "q": "Can I have IVF with my own eggs if my AMH is below 0.5 ng/mL?",
+            "a": "Yes. AMH reflects egg numbers, not quality. Tailored protocols such as DuoStim or Mini IVF help many women with low AMH conceive with their own eggs."
+          },
+          {
+            "q": "What causes recurrent implantation failure?",
+            "a": "Mainly chromosomal errors in embryos, hidden chronic endometritis (CD138 biopsy), uterine defects or a displaced implantation window (detected by the ERA Test)."
+          },
+          {
+            "q": "What is the success rate of IVF with Dr. Mona Dahiya?",
+            "a": "The clinic achieves an overall IVF success rate above 90%, peaking at over 90% for women under 30. For patients under 35, frozen blastocyst transfers yield a 65% to 80% clinical pregnancy rate per transfer. Even in complex scenarios—such as low AMH levels or recurrent implantation failures—cumulative success rates stay above 65%."
+          },
+          {
+            "q": "How much does IVF cost?",
+            "a": "₹1.5 lakh to ₹2.5 lakh for a complete cycle in most cases, with EMI options available."
+          },
+          {
+            "q": "Does age affect IVF success?",
+            "a": "Yes. Success is highest under 35 and falls after 38 to 40 as egg quality declines, so early evaluation helps."
+          },
+          {
+            "q": "How many IVF cycles might I need?",
+            "a": "Many couples conceive in 1 or 2 cycles; cumulative chances rise with each cycle, especially when spare embryos are frozen."
+          },
+          {
+            "q": "Can PCOS or endometriosis affect IVF?",
+            "a": "Both can be managed well: OHSS-safe protocols for PCOS, and egg-sparing plans or surgery first for endometriosis."
+          }
+        ]
+      },
+      {
+        "id": "legal",
+        "categoryLabel": "Category 4",
+        "title": "Legal Rules, Consultations & Clinics",
+        "items": [
+          {
+            "q": "Is sex selection allowed with IVF in India?",
+            "a": "No. It is prohibited by the ART Act and the PC-PNDT Act and is never offered."
+          },
+          {
+            "q": "What are the age limits for IVF in India?",
+            "a": "Under the ART (Regulation) Act, 2021, women must be 21 to 50 and men 21 to 55 when treatment starts."
+          },
+          {
+            "q": "Can I consult Dr. Dahiya online first?",
+            "a": "Yes. An online consultation costs ₹1,000 in India or US$25 internationally."
+          },
+          {
+            "q": "Where can I consult Dr. Mona Dahiya?",
+            "a": "At 3 clinics: Noida (3rd Floor, K-06, above FirstCry, Baraula, Sector 49, Noida, Uttar Pradesh 201301), Ghaziabad (2nd Floor, RDC, C-53A, near Bikanerwala, Sector 15, Sector 10, Raj Nagar, Ghaziabad, Uttar Pradesh 201002) and Delhi (Building Number 41, First Floor, Ring Road, Block Q, Lajpat Nagar IV, Lajpat Nagar, New Delhi 110024)."
+          },
+          {
+            "q": "Can single women have IVF in India?",
+            "a": "Yes. Single women aged 21 to 50 can have treatment with their own eggs and donor sperm from a registered ART bank."
+          },
+          {
+            "q": "Does insurance cover IVF?",
+            "a": "Standard plans usually do not; some corporate and women-centric policies do, with sub-limits and waiting periods."
+          }
+        ]
+      }
+    ]
   }
 }
