@@ -1,11 +1,29 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import Link from "next/link";
 import { FaChevronDown, FaCheckCircle } from "react-icons/fa";
 import { Reveal } from "@/components/ui/Reveal";
 
-export default function AboutConsultation() {
+type Props = {
+  sectionId?: string;
+  eyebrow?: string;
+  title?: ReactNode;
+  subtitle?: string;
+};
+
+export default function AboutConsultation({
+  sectionId = "book-consultation",
+  eyebrow = "Next step",
+  title = (
+    <>
+      Book a Consultation
+      <br />
+      with Dr. Mona Dahiya
+    </>
+  ),
+  subtitle = "Book an in-clinic consultation or an online record review. Appointment line:",
+}: Props) {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -22,104 +40,91 @@ export default function AboutConsultation() {
 
   return (
     <section
-      id="book-consultation"
-      className="relative overflow-hidden bg-[#101e23] px-4 py-12 text-white sm:px-6 sm:py-16 lg:px-8 lg:py-20"
+      id={sectionId}
+      className="relative overflow-hidden bg-[#061532] px-4 py-6 text-white sm:px-6 sm:py-7 lg:px-8 lg:py-8"
     >
       <div className="mx-auto w-full max-w-[1440px]">
         <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-14">
-          {/* Left Column: Details, CTAs, Pricing & Addresses */}
           <div className="lg:col-span-7">
             <Reveal>
-              {/* Eyebrow */}
-              <span className="text-[13px] font-semibold tracking-wide text-[#f26a80]">
-                Next step
+              <span className="text-[13px] font-semibold tracking-wide text-[#e83e74]">
+                {eyebrow}
               </span>
 
-              {/* Title */}
               <h2 className="font-serif mt-2 text-[2.2rem] leading-[1.18] font-normal tracking-tight text-[#f1f5f9] sm:text-[2.75rem] lg:text-[3.1rem]">
-                Book a Consultation
-                <br />
-                with Dr. Mona Dahiya
+                {title}
               </h2>
 
-              {/* Subtitle */}
-              <p className="mt-3 text-[14px] leading-relaxed text-[#94a3b8] sm:text-[15px]">
-                Book an in-clinic consultation or an online record review.
-                <br />
-                Appointment line:{" "}
+              <p className="mt-3 text-[14px] leading-relaxed text-white/65 sm:text-[15px]">
+                {subtitle}{" "}
                 <a
                   href="tel:+919267982924"
-                  className="text-[#cbd5e1] hover:text-white"
+                  className="text-white/85 hover:text-white"
                 >
                   +91 92679 82924
                 </a>{" "}
                 &middot;{" "}
                 <a
                   href="mailto:info@drmonadahiya.com"
-                  className="text-[#cbd5e1] hover:text-white"
+                  className="text-white/85 hover:text-white"
                 >
                   info@drmonadahiya.com
                 </a>
                 .
               </p>
 
-              {/* Two CTA Buttons */}
               <div className="mt-6 flex flex-wrap items-center gap-3.5 sm:mt-7">
                 <a
                   href="#request-appointment-form"
-                  className="inline-flex items-center justify-center rounded-full bg-[#ba3d5d] px-6 py-3 text-[14px] font-medium text-white shadow-md transition-all duration-200 hover:bg-[#a62b48] active:scale-98"
+                  className="inline-flex items-center justify-center rounded-full bg-[#c53658] px-6 py-3 text-[14px] font-medium text-white shadow-md transition-all duration-200 hover:bg-[#a82946] active:scale-95"
                 >
                   Book In-Clinic Consultation
                 </a>
                 <Link
                   href="/online-consultation"
-                  className="inline-flex items-center justify-center rounded-full bg-[#1d64b4] px-6 py-3 text-[14px] font-medium text-white shadow-md transition-all duration-200 hover:bg-[#185396] active:scale-98"
+                  className="inline-flex items-center justify-center rounded-full bg-[#0047ca] px-6 py-3 text-[14px] font-medium text-white shadow-md transition-all duration-200 hover:bg-[#0037a3] active:scale-95"
                 >
                   Schedule Online Consultation
                 </Link>
               </div>
 
-              {/* 2 Pricing Tiles */}
               <div className="mt-7 flex flex-wrap gap-4">
-                {/* Indian Nationals */}
-                <div className="w-[168px] rounded-[18px] border border-[#155e75] bg-[#0c232c]/85 p-4 shadow-sm">
-                  <span className="text-[10.5px] font-bold tracking-wider text-[#38bdf8] uppercase">
+                <div className="w-[168px] rounded-[18px] border border-[#0047ca]/45 bg-[#0a1f45]/85 p-4 shadow-sm">
+                  <span className="text-[10.5px] font-bold tracking-wider text-[#93c5fd] uppercase">
                     Indian Nationals
                   </span>
-                  <div className="mt-1 text-[23px] font-bold tracking-tight text-[#38bdf8]">
+                  <div className="mt-1 text-[23px] font-bold tracking-tight text-[#93c5fd]">
                     &#8377;1,000
                   </div>
-                  <p className="mt-1 text-[11.5px] text-[#94a3b8]">
+                  <p className="mt-1 text-[11.5px] text-white/55">
                     Online consultation
                   </p>
-                  <p className="text-[11.5px] text-[#94a3b8]">30 minutes</p>
+                  <p className="text-[11.5px] text-white/55">30 minutes</p>
                 </div>
 
-                {/* Foreign Patients */}
-                <div className="w-[168px] rounded-[18px] border border-[#155e75] bg-[#0c232c]/85 p-4 shadow-sm">
-                  <span className="text-[10.5px] font-bold tracking-wider text-[#38bdf8] uppercase">
+                <div className="w-[168px] rounded-[18px] border border-[#e83e74]/40 bg-[#0a1f45]/85 p-4 shadow-sm">
+                  <span className="text-[10.5px] font-bold tracking-wider text-[#f9a8d4] uppercase">
                     Foreign Patients
                   </span>
-                  <div className="mt-1 text-[23px] font-bold tracking-tight text-[#38bdf8]">
+                  <div className="mt-1 text-[23px] font-bold tracking-tight text-[#f9a8d4]">
                     US$25
                   </div>
-                  <p className="mt-1 text-[11.5px] text-[#94a3b8]">
+                  <p className="mt-1 text-[11.5px] text-white/55">
                     Online consultation
                   </p>
-                  <p className="text-[11.5px] text-[#94a3b8]">30 minutes</p>
+                  <p className="text-[11.5px] text-white/55">30 minutes</p>
                 </div>
               </div>
 
-              {/* Phone & Email Details */}
               <div className="mt-7 flex flex-wrap items-center gap-10">
                 <div>
-                  <span className="text-[12px] font-medium text-[#f26a80]">
+                  <span className="text-[12px] font-medium text-[#e83e74]">
                     Phone
                   </span>
                   <div className="mt-0.5">
                     <a
                       href="tel:+919267982924"
-                      className="text-[15px] font-bold text-white hover:text-[#38bdf8]"
+                      className="text-[15px] font-bold text-white hover:text-[#93c5fd]"
                     >
                       +91 92679 82924
                     </a>
@@ -127,13 +132,13 @@ export default function AboutConsultation() {
                 </div>
 
                 <div>
-                  <span className="text-[12px] font-medium text-[#f26a80]">
+                  <span className="text-[12px] font-medium text-[#e83e74]">
                     Email
                   </span>
                   <div className="mt-0.5">
                     <a
                       href="mailto:info@drmonadahiya.com"
-                      className="text-[15px] font-bold text-white hover:text-[#38bdf8]"
+                      className="text-[15px] font-bold text-white hover:text-[#93c5fd]"
                     >
                       info@drmonadahiya.com
                     </a>
@@ -141,8 +146,7 @@ export default function AboutConsultation() {
                 </div>
               </div>
 
-              {/* 3 Clinics addresses */}
-              <div className="mt-7 space-y-3 text-[13px] leading-relaxed text-[#94a3b8]">
+              <div className="mt-7 space-y-3 text-[13px] leading-relaxed text-white/60">
                 <div>
                   <strong className="font-bold text-white">Delhi</strong>{" "}
                   Building Number 41, First Floor, Ring Road, Block Q, Lajpat
@@ -162,35 +166,33 @@ export default function AboutConsultation() {
             </Reveal>
           </div>
 
-          {/* Right Column: Request an appointment Form Card */}
           <div className="lg:col-span-5" id="request-appointment-form">
-            <div className="rounded-[26px] border border-white/10 bg-[#16272e] p-6 shadow-2xl sm:p-8">
+            <div className="rounded-[26px] border border-white/10 bg-[#0a1f45] p-6 shadow-2xl sm:p-8">
               <h3 className="font-serif text-[22px] font-normal tracking-tight text-white sm:text-[24px]">
                 Request an appointment
               </h3>
 
               {submitted ? (
-                <div className="mt-6 flex flex-col items-center justify-center rounded-2xl bg-[#0c181d] border border-emerald-500/30 p-6 text-center text-emerald-300">
-                  <FaCheckCircle className="size-12 text-emerald-400" />
+                <div className="mt-6 flex flex-col items-center justify-center rounded-2xl border border-[#0047ca]/40 bg-[#061532] p-6 text-center text-[#93c5fd]">
+                  <FaCheckCircle className="size-12 text-[#0047ca]" />
                   <h4 className="mt-3 text-lg font-bold text-white">
                     Request Received!
                   </h4>
-                  <p className="mt-1 text-sm text-slate-300">
+                  <p className="mt-1 text-sm text-white/70">
                     Our team will call you shortly at {formData.phone} to
                     confirm your slot at {formData.clinic} clinic.
                   </p>
                   <button
+                    type="button"
                     onClick={() => setSubmitted(false)}
-                    className="mt-4 text-xs font-semibold text-[#38bdf8] underline underline-offset-2"
+                    className="mt-4 text-xs font-semibold text-[#f9a8d4] underline underline-offset-2"
                   >
                     Submit another request
                   </button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="mt-5 space-y-4">
-                  {/* Your name & Phone number row */}
                   <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-2">
-                    {/* Your name */}
                     <div>
                       <label className="block text-[12.5px] font-semibold text-white">
                         Your name
@@ -203,20 +205,20 @@ export default function AboutConsultation() {
                         onChange={(e) =>
                           setFormData({ ...formData, name: e.target.value })
                         }
-                        className="mt-1.5 w-full rounded-xl border border-white/15 bg-[#0c181d] px-3.5 py-2.5 text-[14px] text-white outline-none transition-all placeholder:text-slate-500 focus:border-[#38bdf8]"
+                        className="mt-1.5 w-full rounded-xl border border-white/15 bg-[#061532] px-3.5 py-2.5 text-[14px] text-white outline-none transition-all placeholder:text-slate-500 focus:border-[#e83e74]/60"
                       />
                     </div>
 
-                    {/* Phone number */}
                     <div>
                       <label className="block text-[12.5px] font-semibold text-white">
                         Phone number
                       </label>
-                      <div className="mt-1.5 flex rounded-xl border border-white/15 bg-[#0c181d] focus-within:border-[#38bdf8]">
+                      <div className="mt-1.5 flex rounded-xl border border-white/15 bg-[#061532] focus-within:border-[#e83e74]/60">
                         <div className="flex items-center gap-1.5 border-r border-white/15 px-3 text-[13px] text-slate-300">
-                          <span className="font-semibold text-slate-400">IN</span>
+                          <span className="font-semibold text-slate-400">
+                            IN
+                          </span>
                           <span>+91</span>
-                          <span className="text-[10px] text-slate-400">▾</span>
                         </div>
                         <input
                           type="tel"
@@ -232,7 +234,6 @@ export default function AboutConsultation() {
                     </div>
                   </div>
 
-                  {/* Preferred clinic */}
                   <div>
                     <label className="block text-[12.5px] font-semibold text-white">
                       Preferred clinic
@@ -243,15 +244,15 @@ export default function AboutConsultation() {
                         onChange={(e) =>
                           setFormData({ ...formData, clinic: e.target.value })
                         }
-                        className="w-full appearance-none rounded-xl border border-white/15 bg-[#0c181d] px-3.5 py-2.5 text-[14px] text-white outline-none transition-all focus:border-[#38bdf8]"
+                        className="w-full appearance-none rounded-xl border border-white/15 bg-[#061532] px-3.5 py-2.5 text-[14px] text-white outline-none transition-all focus:border-[#e83e74]/60"
                       >
-                        <option value="Noida" className="bg-[#101e23]">
+                        <option value="Noida" className="bg-[#061532]">
                           Noida
                         </option>
-                        <option value="Ghaziabad" className="bg-[#101e23]">
+                        <option value="Ghaziabad" className="bg-[#061532]">
                           Ghaziabad
                         </option>
-                        <option value="Delhi" className="bg-[#101e23]">
+                        <option value="Delhi" className="bg-[#061532]">
                           Delhi
                         </option>
                       </select>
@@ -259,7 +260,6 @@ export default function AboutConsultation() {
                     </div>
                   </div>
 
-                  {/* Anything you want us to know (optional) */}
                   <div>
                     <label className="block text-[12.5px] font-semibold text-white">
                       Anything you want us to know (optional)
@@ -271,14 +271,13 @@ export default function AboutConsultation() {
                         setFormData({ ...formData, notes: e.target.value })
                       }
                       placeholder="Anything you want us to know..."
-                      className="mt-1.5 w-full resize-none rounded-xl border border-white/15 bg-[#0c181d] px-3.5 py-2.5 text-[14px] text-white outline-none transition-all placeholder:text-slate-500 focus:border-[#38bdf8]"
+                      className="mt-1.5 w-full resize-none rounded-xl border border-white/15 bg-[#061532] px-3.5 py-2.5 text-[14px] text-white outline-none transition-all placeholder:text-slate-500 focus:border-[#e83e74]/60"
                     />
                   </div>
 
-                  {/* Submit Button */}
                   <button
                     type="submit"
-                    className="mt-2 w-full rounded-[18px] bg-[#ba3d5d] py-3.5 text-[14.5px] font-semibold text-white shadow-md transition-all duration-200 hover:bg-[#a62b48] active:scale-[0.99]"
+                    className="mt-2 w-full rounded-[18px] bg-[#c53658] py-3.5 text-[14.5px] font-semibold text-white shadow-md transition-all duration-200 hover:bg-[#a82946] active:scale-[0.99]"
                   >
                     Request an appointment
                   </button>

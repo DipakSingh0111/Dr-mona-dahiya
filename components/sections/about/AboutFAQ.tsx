@@ -193,7 +193,7 @@ export default function AboutFAQ() {
   ];
 
   return (
-    <section id="faqs" className="relative overflow-hidden bg-slate-50/70 px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
+    <section id="faqs" className="relative overflow-hidden bg-slate-50/70 px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
       <div className="mx-auto w-full max-w-[1440px]">
         {/* Header matching Screenshot */}
         <Reveal className="mb-10 sm:mb-12">

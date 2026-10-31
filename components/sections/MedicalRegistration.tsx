@@ -46,7 +46,7 @@ export default function MedicalRegistration() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-white px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
+    <section className="relative overflow-hidden bg-white px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
       {/* Subtle ambient light glow */}
       <div
         aria-hidden

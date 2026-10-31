@@ -49,7 +49,7 @@ const accentStyles = {
 
 export default function LocationsRegistration() {
   return (
-    <section className="relative overflow-hidden bg-[#061532] px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
+    <section className="relative overflow-hidden bg-[#061532] px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
       <div
         aria-hidden
         className="pointer-events-none absolute -top-20 right-1/4 h-[300px] w-[400px] rounded-full opacity-40 blur-3xl"

@@ -33,7 +33,7 @@ const clinics = [
 
 export default function AboutClinics() {
   return (
-    <section id="clinics" className="relative overflow-hidden bg-gradient-to-b from-[#fff8fb] via-white to-[#fff5f8] px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
+    <section id="clinics" className="relative overflow-hidden bg-gradient-to-b from-[#fff8fb] via-white to-[#fff5f8] px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
       <div
         aria-hidden
         className="pointer-events-none absolute top-[-10%] right-[-5%] h-[320px] w-[320px] rounded-full opacity-70 blur-3xl"

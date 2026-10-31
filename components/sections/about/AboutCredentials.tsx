@@ -212,7 +212,7 @@ export default function AboutCredentials() {
   return (
     <section
       id="credentials"
-      className="relative overflow-hidden px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-14"
+      className="relative overflow-hidden px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8"
       style={{
         background:
           "linear-gradient(165deg, #061e52 0%, #0a2a6e 42%, #082458 72%, #051a45 100%)",

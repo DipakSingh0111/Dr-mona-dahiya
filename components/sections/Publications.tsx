@@ -7,13 +7,7 @@ import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
 type TabId = "publications" | "member" | "speaker" | "awards";
 
-function LogoCard({
-  logo,
-  caption,
-}: {
-  logo: string;
-  caption: string;
-}) {
+function LogoCard({ logo, caption }: { logo: string; caption: string }) {
   return (
     <article className="flex h-full flex-col gap-3">
       <div className="flex min-h-[112px] items-center justify-center rounded-2xl border border-[#f5c9d6]/60 bg-white px-5 py-4 shadow-[0_8px_24px_rgba(232,62,116,0.06)] sm:min-h-[128px]">
@@ -94,7 +88,9 @@ function StatCard({
       </p>
       <p
         className={`mt-3.5 font-serif font-bold text-white ${
-          compact ? "text-[1.2rem] sm:text-[1.35rem]" : "text-[1.25rem] sm:text-[1.45rem]"
+          compact
+            ? "text-[1.2rem] sm:text-[1.35rem]"
+            : "text-[1.25rem] sm:text-[1.45rem]"
         }`}
       >
         {label}
@@ -112,7 +108,7 @@ export default function Publications() {
 
   return (
     <section
-      className="relative overflow-hidden px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12"
+      className="relative overflow-hidden px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8"
       style={{
         background:
           "linear-gradient(90deg, #fff8fb 0%, #fff0f5 42%, #ffe4ee 78%, #ffdce8 100%)",

@@ -84,7 +84,7 @@
         "dropdown": [
           { "label": "Blogs", "href": "/404" },
           { "label": "IVF FAQs", "href": "/about#faqs" },
-          { "label": "Online IVF Consultation", "href": "/about#book-consultation" },
+          { "label": "Online IVF Consultation", "href": "/online-consultation" },
           { "label": "Contact Us", "href": "/locations" }
         ]
       }
@@ -1576,6 +1576,207 @@
     "phone": {
       "label": "+91 92679 82924",
       "href": "tel:+919267982924"
+    }
+  },
+  "onlineConsultationPage": {
+    "breadcrumb": "Online IVF Consultation",
+    "eyebrow": "Online fertility consultation",
+    "title": "Online IVF Consultation with Dr. Mona Dahiya",
+    "image": "/images/about/online-ivf-consultation.jpg",
+    "primaryCta": {
+      "label": "Book In-Clinic Consultation",
+      "href": "#schedule-consultation"
+    },
+    "secondaryCta": {
+      "label": "Schedule Online Consultation",
+      "href": "#schedule-consultation"
+    },
+    "reviewsLink": {
+      "label": "Read Dr. Mona's Google reviews",
+      "href": "/about#reviews"
+    },
+    "badges": [
+      "30-minute slots",
+      "₹1,000 in India · US$25 abroad",
+      "Written plan after the call"
+    ],
+    "benefits": {
+      "eyebrow": "Who it helps",
+      "title": "Who Benefits from an Online Fertility Consultation?",
+      "items": [
+        {
+          "title": "Couples seeking a second opinion",
+          "description": "After failed IUI or IVF cycles elsewhere — get a clear Second Opinion before the next attempt."
+        },
+        {
+          "title": "International patients",
+          "description": "Plan travel, protocols and timelines with Dr. Mona before you fly — ideal for International Patients."
+        },
+        {
+          "title": "Outstation couples",
+          "description": "Live outside Delhi NCR and cannot visit weekly — start with records review online."
+        },
+        {
+          "title": "Busy professionals",
+          "description": "Need flexible timing without taking a full day off for a clinic visit."
+        },
+        {
+          "title": "Couples starting fertility care",
+          "description": "Want an honest plan and next tests before committing to treatment."
+        }
+      ]
+    },
+    "prepare": {
+      "eyebrow": "Before your call",
+      "title": "What to Prepare Before Your Online Consultation",
+      "subtitle": "Sharing these in advance means the full 30 minutes is spent on your plan.",
+      "items": [
+        "Past treatment charts and discharge summaries",
+        "Recent hormone tests (AMH, FSH, LH, TSH, prolactin)",
+        "Ultrasound reports and semen analysis",
+        "List of medicines and protocols already tried"
+      ]
+    },
+    "steps": {
+      "title": "Step-by-Step Online Consultation Process",
+      "items": [
+        {
+          "title": "Request a slot",
+          "description": "Choose a convenient time via WhatsApp or the online form on this page."
+        },
+        {
+          "title": "Send your records",
+          "description": "Email reports to info@drmonadahiya.com so Dr. Mona can review them before the call."
+        },
+        {
+          "title": "Pay securely",
+          "description": "India: ₹1,000 via UPI or net banking. International: US$25 online transfer."
+        },
+        {
+          "title": "30-minute online consultation",
+          "description": "Review history, understand previous failures, and receive a personal treatment plan."
+        },
+        {
+          "title": "Receive your written plan",
+          "description": "Medical summary, digital prescription and test roadmap by email or WhatsApp within 2 hours."
+        }
+      ]
+    },
+    "why": {
+      "eyebrow": "Expertise & authority",
+      "title": "Why Book an Online Consultation with Dr. Mona Dahiya?",
+      "items": [
+        {
+          "title": "Direct doctor access",
+          "description": "You speak with Dr. Mona herself — not a coordinator reading a script."
+        },
+        {
+          "title": "Honest, evidence-based advice",
+          "description": "Candid views that are medically justified, including when not to rush into IVF."
+        },
+        {
+          "title": "Smooth move to in-clinic care",
+          "description": "When you are ready, continue at Noida, Delhi or Ghaziabad with the same plan."
+        }
+      ]
+    },
+    "fees": {
+      "eyebrow": "Transparency",
+      "title": "Online Consultation Fees",
+      "items": [
+        {
+          "title": "Indian patients",
+          "price": "₹1,000",
+          "note": "30-min call + written summary"
+        },
+        {
+          "title": "International patients",
+          "price": "US$25",
+          "note": "Records review, 30-min call & medical visa letters when needed"
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "Patient questions",
+      "title": "Frequently Asked Questions: Online IVF Consultation",
+      "items": [
+        {
+          "q": "Is the online consultation with Dr. Mona personally?",
+          "a": "Yes. The video call is conducted by Dr. Mona Dahiya herself after she has reviewed your records."
+        },
+        {
+          "q": "How long is the online consultation?",
+          "a": "Each slot is 30 minutes, focused on history, reports and a clear next-step plan."
+        },
+        {
+          "q": "What do I need before the call?",
+          "a": "Past treatment charts, recent hormone tests, ultrasound or semen reports, and a list of medicines already tried."
+        },
+        {
+          "q": "How do I send my medical reports?",
+          "a": "Email them to info@drmonadahiya.com or share clearly labelled PDFs / photos on WhatsApp."
+        },
+        {
+          "q": "What is the fee for Indian patients?",
+          "a": "₹1,000 for a 30-minute consultation including a written summary after the call."
+        },
+        {
+          "q": "What is the fee for international patients?",
+          "a": "US$25 covering records review, the call, and support letters when required for travel."
+        },
+        {
+          "q": "Will I get a written plan after the consultation?",
+          "a": "Yes. A medical summary, digital prescription and test roadmap are shared by email or WhatsApp within about 2 hours."
+        },
+        {
+          "q": "Can online consultation replace an in-clinic visit?",
+          "a": "It is ideal for second opinions and planning. Physical exams, scans and procedures still need a clinic visit."
+        },
+        {
+          "q": "Which platforms are used for the video call?",
+          "a": "You receive a secure video link (commonly WhatsApp or a standard teleconsult link) after your slot is confirmed."
+        },
+        {
+          "q": "Can we book for both partners together?",
+          "a": "Yes. Couples are encouraged to join the same call so the plan covers both partners."
+        },
+        {
+          "q": "How soon can we start treatment after the online consult?",
+          "a": "Many couples schedule an in-clinic visit within days; timelines depend on tests and your cycle."
+        }
+      ]
+    },
+    "reviews": {
+      "eyebrow": "Patient reviews",
+      "title": "What Patients Say About Dr. Mona",
+      "subtitle": "Individual experiences in patients' own words.",
+      "cta": {
+        "label": "Read All Patient Reviews",
+        "href": "/about#reviews"
+      },
+      "items": [
+        {
+          "title": "Compassion & Dedication",
+          "body": "Dr. Mona listens patiently and explains every option. Our online consult gave us clarity before we travelled for IVF.",
+          "initial": "A",
+          "name": "Ananya",
+          "source": "Patient review"
+        },
+        {
+          "title": "Clear second opinion",
+          "body": "After two failed cycles elsewhere, her honest online review changed our protocol. We finally understood what was missing.",
+          "initial": "R",
+          "name": "Rohan & Meera",
+          "source": "Patient review"
+        },
+        {
+          "title": "Worth every minute",
+          "body": "From WhatsApp booking to the written plan in our inbox — organised, ethical and genuinely personal care.",
+          "initial": "S",
+          "name": "Sneha",
+          "source": "Patient review"
+        }
+      ]
     }
   }
 }

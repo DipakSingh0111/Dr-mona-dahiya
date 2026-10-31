@@ -13,7 +13,7 @@ export default function LocationsCityCards() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#071a3a] px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
+    <section className="relative overflow-hidden bg-[#071a3a] px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
       <div className="relative mx-auto w-full max-w-[1440px]">
         <Reveal>
           <Stagger

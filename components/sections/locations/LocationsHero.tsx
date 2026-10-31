@@ -16,7 +16,7 @@ export default function LocationsHero({ query, onQueryChange }: Props) {
 
   return (
     <section
-      className="relative overflow-hidden pt-6 pb-10 sm:pt-8 sm:pb-12 lg:pt-10 lg:pb-14"
+      className="relative overflow-hidden pt-6 pb-7 sm:pt-7 sm:pb-8 lg:pt-8 lg:pb-9"
       style={{
         background:
           "linear-gradient(115deg, #05193d 0%, #00369e 35%, #0047ca 70%, #08286a 100%)",

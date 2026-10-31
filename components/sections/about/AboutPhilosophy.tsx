@@ -68,7 +68,7 @@ export default function AboutPhilosophy() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-white px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
+    <section className="relative overflow-hidden bg-white px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
       <div className="mx-auto w-full max-w-[1440px]">
         {/* Header matching Screenshot */}
         <Reveal className="mb-8 sm:mb-10">

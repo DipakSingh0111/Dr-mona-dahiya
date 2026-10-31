@@ -6,7 +6,7 @@ import { Reveal } from "@/components/ui/Reveal";
 
 export default function NotFoundHero() {
   return (
-    <section className="relative flex flex-1 items-center justify-center overflow-hidden bg-gradient-to-b from-[#f8fafc] via-white to-slate-50/60 py-16 sm:py-24 lg:py-32">
+    <section className="relative flex flex-1 items-center justify-center overflow-hidden bg-gradient-to-b from-[#f8fafc] via-white to-slate-50/60 py-10 sm:py-12 lg:py-16">
       {/* Ambient background glows */}
       <div
         aria-hidden

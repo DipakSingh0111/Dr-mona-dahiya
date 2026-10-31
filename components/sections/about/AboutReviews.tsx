@@ -38,7 +38,7 @@ export default function AboutReviews() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-slate-50/70 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+    <section className="relative overflow-hidden bg-slate-50/70 px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
       {/* Soft ambient theme glow */}
       <div
         aria-hidden
@@ -112,7 +112,7 @@ export default function AboutReviews() {
         <div className="mt-10 sm:mt-12">
           <Link
             href="/patient-reviews"
-            className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-7 py-3 text-[13.5px] font-semibold text-slate-800 shadow-sm transition-all duration-200 hover:border-[#0047ca] hover:bg-[#0047ca] hover:text-white hover:shadow-md active:scale-98"
+            className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-7 py-3 text-[13.5px] font-semibold text-slate-800 shadow-sm transition-all duration-200 hover:border-[#e83e74] hover:bg-[#e83e74] hover:text-white hover:shadow-lg hover:shadow-[#e83e74]/25 active:scale-98"
           >
             Read All Patient Reviews
           </Link>

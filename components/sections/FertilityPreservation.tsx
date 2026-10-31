@@ -8,7 +8,7 @@ export default function FertilityPreservation() {
 
   return (
     <section
-      className="relative overflow-hidden px-4 py-12 sm:px-6 sm:py-14 lg:px-8 lg:py-16"
+      className="relative overflow-hidden px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8"
       style={{
         background:
           "linear-gradient(90deg, #061e52 0%, #09296e 50%, #061e52 100%)",

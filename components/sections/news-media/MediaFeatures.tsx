@@ -246,7 +246,7 @@ const mediaArticles: MediaArticle[] = [
 
 export default function MediaFeatures() {
   return (
-    <section className="relative overflow-hidden bg-slate-50/70 px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+    <section className="relative overflow-hidden bg-slate-50/70 px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
       <div className="mx-auto w-full max-w-[1440px]">
         {/* Section Header matching Screenshot */}
         <Reveal className="mb-10 sm:mb-12">
