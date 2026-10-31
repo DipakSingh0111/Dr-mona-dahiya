@@ -51,12 +51,181 @@
       {
         "label": "Treatments",
         "href": "#",
-        "hasDropdown": false
+        "hasDropdown": true,
+        "isTreatmentsMega": true,
+        "treatmentsMega": {
+          "columns": [
+            {
+              "category": "ADVANCED ART & EMBRYOLOGY",
+              "items": [
+                {
+                  "label": "In Vitro Fertilisation (IVF)",
+                  "href": "/treatments"
+                },
+                {
+                  "label": "ICSI Treatment",
+                  "href": "/treatments"
+                },
+                {
+                  "label": "IUI Treatment (Clinical Guide)",
+                  "href": "/iui-success-stories"
+                },
+                {
+                  "label": "Blastocyst Culture & Transfer",
+                  "href": "/treatments"
+                },
+                {
+                  "label": "Frozen Embryo Transfer (FET)",
+                  "href": "/treatments"
+                },
+                {
+                  "label": "Natural Cycle / Mini-IVF",
+                  "href": "/treatments"
+                },
+                {
+                  "label": "Laser-Assisted Hatching (LAH)",
+                  "href": "/treatments"
+                }
+              ]
+            },
+            {
+              "category": "PRESERVATION & DIAGNOSTICS",
+              "items": [
+                {
+                  "label": "Egg Freezing / Social Freezing",
+                  "href": "/treatments"
+                },
+                {
+                  "label": "Semen / Sperm Freezing",
+                  "href": "/treatments"
+                },
+                {
+                  "label": "Embryo Freezing & Banking",
+                  "href": "/treatments"
+                },
+                {
+                  "label": "Oncofertility (Cancer Preservation)",
+                  "href": "/treatments"
+                },
+                {
+                  "label": "Preimplantation Genetic Testing (PGT)",
+                  "href": "/treatments"
+                },
+                {
+                  "label": "Ovarian & Endometrial PRP Therapy",
+                  "href": "/treatments"
+                },
+                {
+                  "label": "Endometrial Receptivity Analysis (ERA)",
+                  "href": "/treatments"
+                },
+                {
+                  "label": "Follicular Ultrasound Monitoring",
+                  "href": "/treatments"
+                }
+              ]
+            },
+            {
+              "category": "SURGERIES & THIRD-PARTY ART",
+              "items": [
+                {
+                  "label": "Laparoscopic Fertility Surgery",
+                  "href": "/treatments"
+                },
+                {
+                  "label": "Diagnostic & Operative Hysteroscopy",
+                  "href": "/treatments"
+                },
+                {
+                  "label": "Donor Gamete Programs",
+                  "href": "/treatments"
+                },
+                {
+                  "label": "Surgical Sperm Retrieval (TESA/PESA)",
+                  "href": "/treatments"
+                },
+                {
+                  "label": "All Services Hub",
+                  "href": "/treatments",
+                  "highlight": true
+                }
+              ]
+            }
+          ],
+          "promoCard": {
+            "title": "Had a failed IVF cycle elsewhere?",
+            "subtitle": "Share your previous reports and get Dr. Mona's second opinion.",
+            "ctaLabel": "Second Opinion / Failed IVF Desk",
+            "ctaHref": "/online-consultation"
+          },
+          "bottomBanner": {
+            "title": "Not sure where to start?",
+            "linkText": "Take the 4-question fertility assessment →",
+            "linkHref": "#book-appointment"
+          }
+        }
       },
       {
         "label": "Conditions Treated",
         "href": "#",
-        "hasDropdown": false
+        "hasDropdown": true,
+        "isMegaMenu": true,
+        "megaMenu": [
+          {
+            "category": "FEMALE INFERTILITY FACTORS",
+            "items": [
+              {
+                "label": "Female Infertility Overview",
+                "href": "/treatments"
+              },
+              {
+                "label": "Low AMH / Diminished Ovarian Reserve",
+                "href": "/low-amh-success-stories"
+              },
+              {
+                "label": "PCOS & PCOD Management",
+                "href": "/404"
+              },
+              {
+                "label": "Endometriosis & Adenomyosis",
+                "href": "/404"
+              },
+              {
+                "label": "Fallopian Tube Blockage",
+                "href": "/404"
+              },
+              {
+                "label": "Recurrent Miscarriages (RPL)",
+                "href": "/404"
+              },
+              {
+                "label": "Recurrent Implantation Failure (RIF)",
+                "href": "/404"
+              }
+            ]
+          },
+          {
+            "category": "MALE INFERTILITY FACTORS",
+            "items": [
+              {
+                "label": "Male Infertility Overview",
+                "href": "/treatments"
+              },
+              {
+                "label": "Azoospermia (Zero Sperm Count)",
+                "href": "/404"
+              },
+              {
+                "label": "Low Sperm Count & Motility (Oligospermia)",
+                "href": "/404"
+              },
+              {
+                "label": "Sperm DNA Fragmentation Index (DFI)",
+                "href": "/404"
+              }
+            ]
+          }
+        ]
       },
       {
         "label": "Success Stories",

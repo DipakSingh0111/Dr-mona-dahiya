@@ -150,7 +150,9 @@ export default function Navbar() {
             aria-label="Primary"
           >
             {menu.map((item) => {
-              const hasItems = "dropdown" in item && Array.isArray(item.dropdown) && item.dropdown.length > 0;
+              const hasDropdown = "dropdown" in item && Array.isArray(item.dropdown) && item.dropdown.length > 0;
+              const isMegaMenu = "isMegaMenu" in item && Boolean(item.isMegaMenu) && "megaMenu" in item && Array.isArray(item.megaMenu);
+              const isTreatmentsMega = "isTreatmentsMega" in item && Boolean(item.isTreatmentsMega) && "treatmentsMega" in item;
 
               return (
                 <div key={item.label} className="group/nav relative py-0.5">
@@ -165,8 +167,108 @@ export default function Navbar() {
                     ) : null}
                   </a>
 
-                  {/* Dropdown Menu on Smooth Hover */}
-                  {hasItems ? (
+                  {/* Treatments Mega Menu Dropdown (3 Columns + Promo Card + Bottom Assessment Banner) */}
+                  {isTreatmentsMega ? (
+                    <div className="invisible absolute top-full left-0 z-50 pt-1 opacity-0 pointer-events-none translate-y-2 transition-all duration-250 ease-out group-hover/nav:visible group-hover/nav:pointer-events-auto group-hover/nav:translate-y-0 group-hover/nav:opacity-100">
+                      <div className="w-[1180px] max-w-[92vw] overflow-hidden rounded-b-2xl border-t-2 border-[#e83e74] bg-[#071e4d] shadow-[0_25px_50px_rgba(0,10,30,0.8)] ring-1 ring-white/10">
+                        {/* Top Columns + Promo Card Grid */}
+                        <div className="grid grid-cols-12 gap-8 px-8 pt-7 pb-6">
+                          {/* 3 Categories Columns */}
+                          <div className="col-span-9 grid grid-cols-3 gap-8">
+                            {item.treatmentsMega!.columns.map((col) => (
+                              <div key={col.category} className="flex flex-col">
+                                <span className="mb-4 text-[11px] font-bold tracking-[0.12em] text-[#e83e74] uppercase">
+                                  {col.category}
+                                </span>
+                                <div className="flex flex-col space-y-3">
+                                  {col.items.map((sub) => (
+                                    <a
+                                      key={sub.label}
+                                      href={sub.href}
+                                      className={`text-[13.5px] leading-snug normal-case transition-colors duration-150 ${
+                                        "highlight" in sub && sub.highlight
+                                          ? "font-semibold text-[#5eead4] hover:underline"
+                                          : "font-normal text-white/90 hover:text-[#5eead4]"
+                                      }`}
+                                    >
+                                      {sub.label}
+                                    </a>
+                                  ))}
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+
+                          {/* Right Promo Card */}
+                          <div className="col-span-3 flex flex-col justify-between rounded-2xl border border-white/10 bg-[#0c285e]/80 p-6 shadow-md backdrop-blur-sm">
+                            <div>
+                              <h4 className="font-serif text-[19px] leading-[1.3] font-normal text-white">
+                                {item.treatmentsMega!.promoCard.title}
+                              </h4>
+                              <p className="mt-3 text-[13px] leading-relaxed text-white/75">
+                                {item.treatmentsMega!.promoCard.subtitle}
+                              </p>
+                            </div>
+
+                            <div className="mt-6">
+                              <a
+                                href={item.treatmentsMega!.promoCard.ctaHref}
+                                className="inline-flex w-full items-center justify-center rounded-full bg-white px-5 py-2.5 text-[12.5px] font-bold text-[#0f2438] shadow-sm transition-all hover:bg-slate-100 hover:text-[#0047ca] active:scale-95"
+                              >
+                                {item.treatmentsMega!.promoCard.ctaLabel}
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Bottom Banner Bar */}
+                        <div className="mx-8 mb-6 overflow-hidden rounded-xl bg-[#03112c]/90 px-6 py-3.5 border border-white/10">
+                          <div className="flex items-center gap-2 text-[13px] text-white/85">
+                            <span className="font-bold text-white">
+                              {item.treatmentsMega!.bottomBanner.title}
+                            </span>
+                            <a
+                              href={item.treatmentsMega!.bottomBanner.linkHref}
+                              className="font-medium text-white/90 transition-colors hover:text-[#e83e74]"
+                            >
+                              {item.treatmentsMega!.bottomBanner.linkText}
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ) : null}
+
+                  {/* Mega Menu Dropdown (2-Column Layout matching Screenshot) */}
+                  {isMegaMenu ? (
+                    <div className="invisible absolute top-full left-0 z-50 pt-1 opacity-0 pointer-events-none translate-y-2 transition-all duration-250 ease-out group-hover/nav:visible group-hover/nav:pointer-events-auto group-hover/nav:translate-y-0 group-hover/nav:opacity-100">
+                      <div className="w-[660px] overflow-hidden rounded-b-2xl border-t-2 border-[#e83e74] bg-[#071e4d] p-5 shadow-[0_22px_45px_rgba(0,10,30,0.7)] ring-1 ring-white/10">
+                        <div className="grid grid-cols-2 gap-7">
+                          {item.megaMenu!.map((col) => (
+                            <div key={col.category} className="flex flex-col">
+                              <span className="mb-3 text-[11px] font-bold tracking-[0.12em] text-[#e83e74] uppercase">
+                                {col.category}
+                              </span>
+                              <div className="flex flex-col space-y-1">
+                                {col.items.map((sub) => (
+                                  <a
+                                    key={sub.label}
+                                    href={sub.href}
+                                    className="rounded-lg px-2.5 py-1.5 text-[13.5px] font-medium text-slate-100 normal-case transition-all duration-150 hover:bg-white/10 hover:text-[#5eead4]"
+                                  >
+                                    {sub.label}
+                                  </a>
+                                ))}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  ) : null}
+
+                  {/* Standard Single Column Dropdown */}
+                  {!isMegaMenu && hasDropdown ? (
                     <div className="invisible absolute top-full left-0 z-50 pt-1 opacity-0 pointer-events-none translate-y-2 transition-all duration-250 ease-out group-hover/nav:visible group-hover/nav:pointer-events-auto group-hover/nav:translate-y-0 group-hover/nav:opacity-100">
                       <div className="w-[290px] overflow-hidden rounded-b-2xl border-t-2 border-[#e83e74] bg-[#071e4d] p-2 shadow-[0_22px_45px_rgba(0,10,30,0.7)] ring-1 ring-white/10">
                         {item.dropdown!.map((sub) => (
@@ -211,15 +313,25 @@ export default function Navbar() {
         >
           <nav className="flex flex-col gap-1" aria-label="Mobile">
             {menu.map((item) => {
-              const hasItems =
+              const hasDropdown =
                 "dropdown" in item &&
                 Array.isArray(item.dropdown) &&
                 item.dropdown.length > 0;
+              const isMegaMenu =
+                "isMegaMenu" in item &&
+                Boolean(item.isMegaMenu) &&
+                "megaMenu" in item &&
+                Array.isArray(item.megaMenu);
+              const isTreatmentsMega =
+                "isTreatmentsMega" in item &&
+                Boolean(item.isTreatmentsMega) &&
+                "treatmentsMega" in item;
+              const hasAnyChildren = hasDropdown || isMegaMenu || isTreatmentsMega;
               const isExpanded = openDropdown === item.label;
 
               return (
                 <div key={item.label} className="flex flex-col">
-                  {hasItems ? (
+                  {hasAnyChildren ? (
                     <button
                       type="button"
                       className="flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-left text-sm font-semibold tracking-wide text-white uppercase hover:bg-white/5"
@@ -250,7 +362,55 @@ export default function Navbar() {
                     </a>
                   )}
 
-                  {hasItems ? (
+                  {isTreatmentsMega && isExpanded ? (
+                    <div className="ml-4 mb-2 flex flex-col gap-3 border-l-2 border-[#e83e74]/60 pl-3 pt-1">
+                      {item.treatmentsMega!.columns.map((col) => (
+                        <div key={col.category} className="flex flex-col gap-1">
+                          <span className="text-[10.5px] font-bold tracking-wider text-[#e83e74] uppercase">
+                            {col.category}
+                          </span>
+                          {col.items.map((sub) => (
+                            <a
+                              key={sub.label}
+                              href={sub.href}
+                              className={`px-2 py-1 text-[13px] font-normal normal-case ${
+                                "highlight" in sub && sub.highlight
+                                  ? "font-bold text-[#5eead4]"
+                                  : "text-white/80 hover:text-[#5eead4]"
+                              }`}
+                              onClick={closeMobileMenu}
+                            >
+                              {sub.label}
+                            </a>
+                          ))}
+                        </div>
+                      ))}
+                    </div>
+                  ) : null}
+
+                  {isMegaMenu && isExpanded ? (
+                    <div className="ml-4 mb-2 flex flex-col gap-3 border-l-2 border-[#e83e74]/60 pl-3 pt-1">
+                      {item.megaMenu!.map((col) => (
+                        <div key={col.category} className="flex flex-col gap-1">
+                          <span className="text-[10.5px] font-bold tracking-wider text-[#e83e74] uppercase">
+                            {col.category}
+                          </span>
+                          {col.items.map((sub) => (
+                            <a
+                              key={sub.label}
+                              href={sub.href}
+                              className="px-2 py-1 text-[13px] font-normal text-white/80 normal-case hover:text-[#5eead4]"
+                              onClick={closeMobileMenu}
+                            >
+                              {sub.label}
+                            </a>
+                          ))}
+                        </div>
+                      ))}
+                    </div>
+                  ) : null}
+
+                  {!isMegaMenu && hasDropdown ? (
                     <div
                       className={`grid transition-[grid-template-rows,opacity] duration-300 ease-in-out ${
                         isExpanded
