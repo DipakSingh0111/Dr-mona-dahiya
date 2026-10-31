@@ -22,7 +22,6 @@ export default function WhyTrustComplexIVF() {
   return (
     <section className="relative overflow-hidden bg-[#061532] px-4 py-8 text-white sm:px-6 sm:py-10 lg:px-8 lg:py-12">
       <div className="relative mx-auto w-full max-w-[1440px]">
-        {/* Section Header */}
         <Reveal className="mb-6 sm:mb-8">
           <span className="text-[12px] font-bold tracking-[0.14em] text-[#ff7fa9] uppercase sm:text-[13px]">
             Expertise &amp; authority
@@ -33,12 +32,10 @@ export default function WhyTrustComplexIVF() {
           </h2>
         </Reveal>
 
-        {/* 3 Horizontal Checklist Cards matching Screenshot */}
         <Stagger className="flex flex-col gap-3.5 sm:gap-4" stagger={0.06}>
           {reasons.map((item) => (
             <StaggerItem key={item.title} variant="fadeUp">
               <div className="group flex flex-col gap-3 rounded-[22px] border border-white/12 bg-gradient-to-r from-[#0a2048]/85 to-[#071838]/85 p-5 shadow-[0_10px_28px_rgba(0,10,35,0.35)] backdrop-blur-md transition-all duration-300 hover:border-[#e83e74]/50 hover:bg-[#0c2452]/90 hover:shadow-[0_14px_36px_rgba(232,62,116,0.15)] sm:flex-row sm:items-center sm:gap-4.5 sm:p-5.5">
-                {/* Pink checkmark badge matching screenshot */}
                 <div className="flex size-10 shrink-0 items-center justify-center rounded-[14px] bg-gradient-to-br from-[#ff6b9d] via-[#e83e74] to-[#c53658] text-white shadow-[0_4px_14px_rgba(232,62,116,0.35)] ring-1 ring-white/20">
                   <FaCheck className="size-4" />
                 </div>

@@ -47,7 +47,6 @@ export default function MedicalRegistration() {
 
   return (
     <section className="relative overflow-hidden bg-white px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
-      {/* Subtle ambient light glow */}
       <div
         aria-hidden
         className="pointer-events-none absolute -top-24 right-1/4 h-[340px] w-[460px] rounded-full opacity-40 blur-3xl"
@@ -58,7 +57,6 @@ export default function MedicalRegistration() {
       />
 
       <div className="relative mx-auto w-full max-w-[1440px]">
-        {/* Left-Aligned Header matching Screenshot */}
         <Reveal className="mb-7 sm:mb-9">
           <p className="text-[12px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:text-[13px]">
             Registered medical practitioner
@@ -73,7 +71,6 @@ export default function MedicalRegistration() {
           </p>
         </Reveal>
 
-        {/* 3 Medical Councils Cards Grid matching Screenshot with Theme Colors */}
         <Stagger
           className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-5 lg:gap-6"
           stagger={0.08}
@@ -84,7 +81,6 @@ export default function MedicalRegistration() {
                 className={`group relative flex h-full min-h-[120px] items-center overflow-hidden rounded-[22px] border p-5 transition-all duration-300 hover:-translate-y-1 sm:p-6 ${item.cardBg} ${item.borderColor} ${item.glowShadow}`}
               >
                 <div className="relative z-10 flex w-full items-center gap-4 sm:gap-5">
-                  {/* Circular Code Badge with thick outer ring */}
                   <div
                     className={`flex size-[62px] shrink-0 items-center justify-center rounded-full bg-white p-[3px] ring-4 ${item.ringColor} shadow-sm transition-transform duration-300 group-hover:scale-105 sm:size-[68px]`}
                   >
@@ -97,7 +93,6 @@ export default function MedicalRegistration() {
                     </div>
                   </div>
 
-                  {/* Council Info & Registration Number */}
                   <div className="min-w-0 flex-1">
                     <h3 className="text-[12.5px] font-semibold text-[#475569] sm:text-[13px]">
                       {item.councilName}

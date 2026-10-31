@@ -8,7 +8,7 @@ const stories = [
   {
     title: "Low AMH Success Stories",
     subtitle: "Own-egg pregnancies with low ovarian reserve",
-    href: "/success-stories#low-amh",
+    href: "/low-amh-success-stories",
   },
   {
     title: "PCOS & PCOD Success Stories",
@@ -18,7 +18,7 @@ const stories = [
   {
     title: "IUI Success Stories",
     subtitle: "Gentle, first-line treatment within 2 to 3 cycles",
-    href: "/success-stories#iui",
+    href: "/iui-success-stories",
   },
   {
     title: "All Success Stories",
@@ -31,7 +31,6 @@ export default function MorePatientStories() {
   return (
     <section className="relative overflow-hidden bg-slate-50/70 px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
       <div className="relative mx-auto w-full max-w-[1440px]">
-        {/* Section Header */}
         <Reveal className="mb-6 sm:mb-8">
           <span className="text-[12px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:text-[13px]">
             Browse by diagnosis
@@ -42,7 +41,6 @@ export default function MorePatientStories() {
           </h2>
         </Reveal>
 
-        {/* 4 Cards Row */}
         <Stagger
           className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5"
           stagger={0.06}
@@ -73,4 +71,3 @@ export default function MorePatientStories() {
     </section>
   );
 }
-

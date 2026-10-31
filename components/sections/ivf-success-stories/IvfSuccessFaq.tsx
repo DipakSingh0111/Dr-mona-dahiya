@@ -88,14 +88,13 @@ const faqList: FaqItem[] = [
 ];
 
 export default function IvfSuccessFaq() {
-  // Only one open at a time globally
+
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const toggleIndex = (index: number) => {
     setOpenIndex((prev) => (prev === index ? null : index));
   };
 
-  // Split into left and right columns so each column stacks tightly without empty row gaps
   const leftCol = faqList.slice(0, 5);
   const rightCol = faqList.slice(5, 10);
 
@@ -153,14 +152,12 @@ export default function IvfSuccessFaq() {
 
   return (
     <section className="relative overflow-hidden bg-[#061532] px-4 py-6 text-white sm:px-6 sm:py-7 lg:px-8 lg:py-8">
-      {/* Subtle background glow */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -bottom-20 right-0 h-80 w-80 rounded-full bg-[#0047ca]/15 blur-[120px]"
       />
 
       <div className="relative mx-auto w-full max-w-[1440px]">
-        {/* Section Header */}
         <div className="max-w-3xl">
           <span className="text-[12px] font-semibold tracking-wider text-[#e83e74] uppercase">
             Patient questions
@@ -172,14 +169,11 @@ export default function IvfSuccessFaq() {
           </h2>
         </div>
 
-        {/* 2 Independent Columns - Eliminates CSS grid row height stretching gap */}
         <div className="mt-7 grid grid-cols-1 items-start gap-4 md:grid-cols-2">
-          {/* Left Column */}
           <div className="flex flex-col gap-4">
             {leftCol.map((item, idx) => renderFaqCard(item, idx))}
           </div>
 
-          {/* Right Column */}
           <div className="flex flex-col gap-4">
             {rightCol.map((item, idx) => renderFaqCard(item, idx + 5))}
           </div>

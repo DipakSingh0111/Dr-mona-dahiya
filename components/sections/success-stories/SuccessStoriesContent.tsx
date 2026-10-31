@@ -24,18 +24,17 @@ export default function SuccessStoriesContent() {
   const { diagnosis, stories, trust, journey } = siteData.successStoriesPage;
 
   return (
-    <div className="bg-[#061532] text-white">
-      {/* Browse by diagnosis */}
+    <>
       <section
         id="stories-by-diagnosis"
-        className="px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8"
+        className="relative overflow-hidden bg-gradient-to-b from-[#fff8fb] via-white to-[#fff5f8] px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8"
       >
-        <div className="mx-auto w-full max-w-[1440px]">
+        <div className="relative mx-auto w-full max-w-[1440px]">
           <Reveal className="mb-7 sm:mb-9">
             <p className="text-[12px] font-semibold tracking-wide text-[#e83e74] sm:text-[13px]">
               {diagnosis.eyebrow}
             </p>
-            <h2 className="font-serif mt-2 text-[1.75rem] leading-tight font-normal tracking-tight sm:text-[2.2rem] lg:text-[2.45rem]">
+            <h2 className="font-serif mt-2 text-[1.75rem] leading-tight font-normal tracking-tight text-[#0f2438] sm:text-[2.2rem] lg:text-[2.45rem]">
               {diagnosis.title}
             </h2>
           </Reveal>
@@ -47,11 +46,16 @@ export default function SuccessStoriesContent() {
             {diagnosis.items.map((item) => {
               const accent =
                 diagnosisAccent[item.accent as keyof typeof diagnosisAccent];
+              const href =
+                "href" in item && typeof item.href === "string"
+                  ? item.href
+                  : `#${item.id}`;
               return (
                 <StaggerItem key={item.id}>
-                  <a
-                    href={`#${item.id}`}
-                    className={`group flex h-full flex-col justify-between rounded-[20px] border p-5 text-white shadow-[0_10px_28px_rgba(0,10,40,0.3)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_36px_rgba(232,62,116,0.2)] sm:p-6 ${accent.card}`}
+                  <Link
+                    href={href}
+                    id={item.id === "pcos" ? "pcos" : undefined}
+                    className={`group flex h-full flex-col justify-between rounded-[20px] border p-5 text-white shadow-[0_10px_28px_rgba(0,10,40,0.18)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_36px_rgba(232,62,116,0.2)] sm:p-6 ${accent.card}`}
                   >
                     <div>
                       <h3 className="text-[16px] font-bold leading-snug sm:text-[17px]">
@@ -64,7 +68,7 @@ export default function SuccessStoriesContent() {
                     <span className="mt-5 inline-flex size-8 items-center justify-center rounded-full bg-white/20 text-white transition group-hover:bg-white/30">
                       <FaArrowRight className="size-3" />
                     </span>
-                  </a>
+                  </Link>
                 </StaggerItem>
               );
             })}
@@ -72,20 +76,19 @@ export default function SuccessStoriesContent() {
         </div>
       </section>
 
-      {/* Patient stories — screenshot content + masonry columns, navy/rose */}
       <section
         id="patient-stories"
-        className="px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8"
+        className="relative overflow-hidden bg-[#f8fafc] px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8"
       >
-        <div className="mx-auto w-full max-w-[1440px]">
-          <Reveal className="mb-7 sm:mb-9">
+        <div className="relative mx-auto w-full max-w-[1440px]">
+          <Reveal className="mb-7 max-w-3xl sm:mb-9">
             <p className="text-[12px] font-semibold tracking-wide text-[#e83e74] sm:text-[13px]">
               {stories.eyebrow}
             </p>
-            <h2 className="font-serif mt-2 max-w-3xl text-[1.75rem] leading-tight font-normal tracking-tight sm:text-[2.2rem] lg:text-[2.45rem]">
+            <h2 className="font-serif mt-2 text-[1.75rem] leading-tight font-normal tracking-tight text-[#0f2438] sm:text-[2.2rem] lg:text-[2.45rem]">
               {stories.title}
             </h2>
-            <p className="mt-2 max-w-2xl text-[13.5px] text-white/60 sm:text-[14.5px]">
+            <p className="mt-2 max-w-2xl text-[13.5px] text-[#64748b] sm:text-[14.5px]">
               {stories.subtitle}
             </p>
           </Reveal>
@@ -96,27 +99,29 @@ export default function SuccessStoriesContent() {
                 {column.map((item) => (
                   <article
                     key={`${item.name}-${item.body.slice(0, 24)}`}
-                    className="flex flex-col rounded-[22px] border border-white/10 bg-[#0a1f45]/70 p-5 shadow-[0_10px_28px_rgba(0,10,40,0.3)] sm:p-6"
+                    className="flex flex-col rounded-[22px] border border-slate-200/90 bg-white p-5 shadow-[0_8px_28px_rgba(15,36,56,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-[#e83e74]/35 hover:shadow-[0_14px_36px_rgba(232,62,116,0.1)] sm:p-6"
                   >
                     {item.title ? (
-                      <h3 className="text-[15.5px] font-bold tracking-tight text-white sm:text-[16px]">
+                      <h3 className="text-[15.5px] font-bold tracking-tight text-[#0f2438] sm:text-[16px]">
                         {item.title}
                       </h3>
                     ) : null}
                     <p
-                      className={`flex-1 text-[13.5px] leading-relaxed text-white/70 ${
+                      className={`flex-1 text-[13.5px] leading-relaxed text-[#475569] ${
                         item.title ? "mt-3" : ""
                       }`}
                     >
                       {item.body}
                     </p>
-                    <div className="mt-5 flex items-center gap-3 border-t border-white/10 pt-4">
+                    <div className="mt-5 flex items-center gap-3 border-t border-[#fde2ec] pt-4">
                       <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#e83e74] text-[13px] font-bold text-white">
                         {item.initial}
                       </span>
                       <div>
-                        <p className="text-[13.5px] font-bold">{item.name}</p>
-                        <p className="text-[12px] text-white/50">{item.source}</p>
+                        <p className="text-[13.5px] font-bold text-[#0f2438]">
+                          {item.name}
+                        </p>
+                        <p className="text-[12px] text-[#94a3b8]">{item.source}</p>
                       </div>
                     </div>
                   </article>
@@ -128,7 +133,7 @@ export default function SuccessStoriesContent() {
           <Reveal className="mt-8">
             <Link
               href={stories.cta.href}
-              className="inline-flex items-center rounded-full border border-white/35 px-6 py-2.5 text-[13.5px] font-semibold text-white transition-all duration-200 hover:border-[#e83e74] hover:bg-[#e83e74] hover:shadow-lg hover:shadow-[#e83e74]/30 active:scale-98"
+              className="inline-flex items-center rounded-full border border-[#e83e74]/40 bg-white px-6 py-2.5 text-[13.5px] font-semibold text-[#0f2438] transition-all duration-200 hover:border-[#e83e74] hover:bg-[#e83e74] hover:text-white hover:shadow-lg hover:shadow-[#e83e74]/25 active:scale-98"
             >
               {stories.cta.label}
             </Link>
@@ -136,9 +141,8 @@ export default function SuccessStoriesContent() {
         </div>
       </section>
 
-      {/* Why trust — full-width stacked rows, navy/rose (no green) */}
-      <section className="px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
-        <div className="mx-auto w-full max-w-[1440px]">
+      <section className="relative overflow-hidden bg-[#061532] px-4 py-6 text-white sm:px-6 sm:py-7 lg:px-8 lg:py-8">
+        <div className="relative mx-auto w-full max-w-[1440px]">
           <Reveal className="mb-7 sm:mb-9">
             <p className="text-[12px] font-semibold tracking-wide text-[#e83e74] sm:text-[13px]">
               {trust.eyebrow}
@@ -170,17 +174,16 @@ export default function SuccessStoriesContent() {
         </div>
       </section>
 
-      {/* How journey begins */}
-      <section className="px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
-        <div className="mx-auto w-full max-w-[1440px]">
+      <section className="relative overflow-hidden bg-gradient-to-b from-[#fff8fb] via-white to-[#fff5f8] px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
+        <div className="relative mx-auto w-full max-w-[1440px]">
           <Reveal className="mb-7 sm:mb-9">
             <p className="text-[12px] font-semibold tracking-wide text-[#e83e74] sm:text-[13px]">
               {journey.eyebrow}
             </p>
-            <h2 className="font-serif mt-2 text-[1.75rem] leading-tight font-normal tracking-tight sm:text-[2.2rem] lg:text-[2.45rem]">
+            <h2 className="font-serif mt-2 text-[1.75rem] leading-tight font-normal tracking-tight text-[#0f2438] sm:text-[2.2rem] lg:text-[2.45rem]">
               {journey.title}
             </h2>
-            <p className="mt-2 max-w-2xl text-[13.5px] text-white/60 sm:text-[14.5px]">
+            <p className="mt-2 max-w-2xl text-[13.5px] text-[#64748b] sm:text-[14.5px]">
               {journey.subtitle}
             </p>
           </Reveal>
@@ -188,11 +191,11 @@ export default function SuccessStoriesContent() {
           <div className="space-y-3">
             {journey.items.map((item) => (
               <Reveal key={item}>
-                <div className="flex items-start gap-3.5 rounded-[18px] border border-white/12 bg-[#0a1f45]/55 px-4 py-3.5 sm:px-5 sm:py-4">
-                  <span className="mt-0.5 flex size-7 shrink-0 items-center justify-center rounded-full bg-[#0047ca] text-white ring-1 ring-white/20">
+                <div className="flex items-start gap-3.5 rounded-[18px] border border-slate-200/90 bg-white px-4 py-3.5 shadow-sm sm:px-5 sm:py-4">
+                  <span className="mt-0.5 flex size-7 shrink-0 items-center justify-center rounded-full bg-[#0047ca] text-white ring-1 ring-[#0047ca]/20">
                     <FaCheck className="size-3" />
                   </span>
-                  <p className="text-[14px] leading-relaxed text-white/90 sm:text-[15px]">
+                  <p className="text-[14px] leading-relaxed text-[#0f2438] sm:text-[15px]">
                     {item}
                   </p>
                 </div>
@@ -201,12 +204,6 @@ export default function SuccessStoriesContent() {
           </div>
         </div>
       </section>
-
-      {/* Diagnosis anchors (for nav deep links) */}
-      <div id="ivf" className="scroll-mt-28" />
-      <div id="low-amh" className="scroll-mt-28" />
-      <div id="pcos" className="scroll-mt-28" />
-      <div id="iui" className="scroll-mt-28" />
-    </div>
+    </>
   );
 }

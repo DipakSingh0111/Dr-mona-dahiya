@@ -34,6 +34,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${poppins.variable} ${playfair.variable} antialiased`}
     >
       <head>
@@ -44,7 +45,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="flex min-h-screen flex-col font-sans">
+      <body suppressHydrationWarning className="flex min-h-screen flex-col font-sans">
         <ScrollToTop />
 
         {/* Sticky TopBar + Navbar across all pages */}

@@ -36,7 +36,6 @@ const clinics: ClinicItem[] = [
 export default function IvfSuccessClinics() {
   return (
     <section className="relative overflow-hidden bg-[#061532] px-4 py-6 text-white sm:px-6 sm:py-7 lg:px-8 lg:py-8">
-      {/* Ambient background glow accents matching Royal Navy Theme */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -top-32 right-10 h-72 w-72 rounded-full bg-[#0047ca]/20 blur-[100px]"
@@ -47,7 +46,6 @@ export default function IvfSuccessClinics() {
       />
 
       <div className="relative mx-auto w-full max-w-[1440px]">
-        {/* Section Header */}
         <div className="max-w-3xl">
           <span className="text-[12px] font-semibold tracking-wider text-[#e83e74] uppercase">
             Visit Dr. Mona
@@ -60,17 +58,14 @@ export default function IvfSuccessClinics() {
           </p>
         </div>
 
-        {/* 3 Clinic Cards Grid */}
-        <div className="mt-7 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-7 grid grid-cols-1 gap-5 md:grid-cols-3">
           {clinics.map((clinic) => (
             <div
               key={clinic.city}
               className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-[#0b1f48]/75 p-5 backdrop-blur-md transition-all duration-300 hover:border-[#e83e74]/40 hover:bg-[#0b1f48] hover:shadow-[0_12px_32px_rgba(0,0,0,0.35)]"
             >
               <div>
-                {/* Styled Map Graphic Preview Container */}
                 <div className="relative h-36 w-full overflow-hidden rounded-xl border border-white/10 bg-[#050f24]">
-                  {/* Stylized vector map grid pattern */}
                   <svg
                     className="absolute inset-0 h-full w-full opacity-35"
                     xmlns="http://www.w3.org/2000/svg"
@@ -81,12 +76,10 @@ export default function IvfSuccessClinics() {
                       </pattern>
                     </defs>
                     <rect width="100%" height="100%" fill={`url(#map-grid-${clinic.city})`} />
-                    {/* Simulated diagonal road */}
                     <line x1="0" y1="120" x2="350" y2="20" stroke="rgba(232, 62, 116, 0.25)" strokeWidth="8" strokeLinecap="round" />
                     <line x1="60" y1="0" x2="280" y2="150" stroke="rgba(0, 71, 202, 0.35)" strokeWidth="5" strokeLinecap="round" />
                   </svg>
 
-                  {/* Pin Pulse Marker */}
                   <div className="absolute inset-0 flex items-center justify-center">
                     <span className="relative flex h-11 w-11 items-center justify-center">
                       <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#e83e74]/40 opacity-75" />
@@ -97,7 +90,6 @@ export default function IvfSuccessClinics() {
                   </div>
                 </div>
 
-                {/* Sublocation Badge & City Name */}
                 <div className="mt-4">
                   <span className="text-[11px] font-semibold tracking-wider text-[#e83e74] uppercase">
                     {clinic.subLocation}
@@ -110,7 +102,6 @@ export default function IvfSuccessClinics() {
                   </p>
                 </div>
 
-                {/* Links: Get directions & Clinic page */}
                 <div className="mt-4 flex items-center gap-4 text-[13px] font-medium">
                   <a
                     href={clinic.mapsUrl}
@@ -130,7 +121,6 @@ export default function IvfSuccessClinics() {
                 </div>
               </div>
 
-              {/* Action Button: Book appointment */}
               <div className="mt-5 pt-2">
                 <a
                   href="#book-consultation"
@@ -147,4 +137,3 @@ export default function IvfSuccessClinics() {
     </section>
   );
 }
-

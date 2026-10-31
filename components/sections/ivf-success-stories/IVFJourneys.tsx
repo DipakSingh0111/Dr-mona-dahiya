@@ -70,7 +70,6 @@ const reviews: JourneyReview[] = [
 export default function IVFJourneys() {
   return (
     <section className="relative overflow-hidden bg-slate-50/70 px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
-      {/* Soft ambient theme glow */}
       <div
         aria-hidden
         className="pointer-events-none absolute -top-24 right-1/4 h-[340px] w-[460px] rounded-full opacity-40 blur-3xl"
@@ -81,7 +80,6 @@ export default function IVFJourneys() {
       />
 
       <div className="relative mx-auto w-full max-w-[1440px]">
-        {/* Section Header matching Screenshot */}
         <Reveal className="mb-8 sm:mb-10">
           <span className="text-[12px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:text-[13px]">
             Patient stories
@@ -96,7 +94,6 @@ export default function IVFJourneys() {
           </p>
         </Reveal>
 
-        {/* 3 Column Review Cards Grid matching Screenshot */}
         <Stagger
           className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 lg:gap-6"
           stagger={0.06}
@@ -118,7 +115,6 @@ export default function IVFJourneys() {
                   </p>
                 </div>
 
-                {/* Author Info */}
                 <div className="mt-6 flex items-center gap-3 border-t border-slate-100 pt-4">
                   <div
                     className={`flex size-9 shrink-0 items-center justify-center rounded-full ${rev.avatarBg} text-[13px] font-bold text-white shadow-xs`}
@@ -137,7 +133,6 @@ export default function IVFJourneys() {
           ))}
         </Stagger>
 
-        {/* Action Button matching Screenshot with Pink Hover */}
         <div className="mt-9 sm:mt-11">
           <Link
             href="/about#reviews"
@@ -150,4 +145,3 @@ export default function IVFJourneys() {
     </section>
   );
 }
-

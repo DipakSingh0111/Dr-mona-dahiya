@@ -73,19 +73,19 @@
           },
           {
             "label": "Low AMH Success Stories",
-            "href": "/success-stories#low-amh"
+            "href": "/low-amh-success-stories"
           },
           {
             "label": "PCOS Success Stories",
-            "href": "/success-stories#pcos"
+            "href": "/404"
           },
           {
             "label": "IUI Success Stories",
-            "href": "/success-stories#iui"
+            "href": "/iui-success-stories"
           },
           {
             "label": "Google Verified Patient Reviews",
-            "href": "/about#reviews"
+            "href": "/patient-reviews"
           }
         ]
       },
@@ -1672,10 +1672,10 @@
     ]
   },
   "successStoriesPage": {
-    "breadcrumb": "Success Stories",
-    "eyebrow": "Over 25,000 Parenthood Journeys",
-    "title": "Real Fertility & IVF Success Stories",
-    "subtitle": "Stories of hope, perseverance and medical excellence from couples treated by Dr. Mona Dahiya across Delhi NCR.",
+    "breadcrumb": "Fertility Success Stories",
+    "eyebrow": "Patient success stories",
+    "title": "Fertility Success Stories: Over 25,000 Parenthood Journeys",
+    "subtitle": "Every fertility journey is different. Guided by Dr. Mona Dahiya across Noida, Delhi and Ghaziabad, couples have overcome failed IVF cycles, low AMH, PCOS and male factor infertility with personalised care. Read their experiences in their own words and explore stories by treatment below.",
     "image": "/images/about/success-stories.jpg",
     "primaryCta": {
       "label": "Book In-Clinic Consultation",
@@ -1687,161 +1687,132 @@
     },
     "reviewsLink": {
       "label": "Read Dr. Mona's Google reviews",
-      "href": "/about#reviews"
+      "href": "/patient-reviews"
     },
     "badges": [
-      "25+ years experience",
-      "15,000+ completed cycles",
-      "Single blastocyst transfer",
-      "Stories in patients' own words"
+      "25,000+ families guided",
+      "Stories in patients' own words",
+      "IVF · Low AMH · PCOS · IUI"
     ],
     "diagnosis": {
       "eyebrow": "Browse by diagnosis",
-      "title": "Stories by Treatment Category",
+      "title": "Explore Patient Stories by Diagnosis",
       "items": [
         {
           "id": "ivf",
-          "title": "IVF Success Stories",
-          "description": "Complex & recurrent failure IVF journeys",
+          "title": "IVF & ICSI Success Stories",
+          "description": "Failed cycles, male factor and tubal blockage",
+          "href": "/ivf-success-stories",
           "accent": "rose"
         },
         {
           "id": "low-amh",
           "title": "Low AMH Success Stories",
           "description": "Own-egg pregnancies with low ovarian reserve",
+          "href": "/low-amh-success-stories",
           "accent": "navy"
         },
         {
           "id": "pcos",
-          "title": "PCOS Success Stories",
-          "description": "Safe ovulation and OHSS-free IVF protocols",
+          "title": "PCOS & PCOD Success Stories",
+          "description": "Safe ovulation and OHSS-free IVF",
+          "href": "#pcos",
           "accent": "magenta"
         },
         {
           "id": "iui",
           "title": "IUI Success Stories",
-          "description": "Gentle first-line fertility treatments",
+          "description": "Gentle, first-line treatment within 2 to 3 cycles",
+          "href": "/iui-success-stories",
           "accent": "blue"
         }
       ]
     },
     "stories": {
-      "eyebrow": "Patient journeys",
-      "title": "Stories in Patients' Own Words",
-      "subtitle": "Direct feedback and emotional journeys shared by couples after successful treatment.",
+      "eyebrow": "Patient stories",
+      "title": "Parenthood Journeys in Patients' Own Words",
+      "subtitle": "Reviews shared by couples treated by Dr. Mona Dahiya. Names are shown as the patients posted them.",
       "cta": {
         "label": "Read All Patient Reviews",
-        "href": "/about#reviews"
+        "href": "/patient-reviews"
       },
       "columns": [
         [
           {
-            "id": "s-1",
             "title": "Pregnancy in the 1st IVF Cycle",
-            "body": "After extensive online research for the Best IVF doctor in Ghaziabad, we consulted Dr. Mona Dahiya. We were amazed with her complete knowledge of IVF treatment. The frozen embryo transfer done by her was spot on and we had a healthy pregnancy in the first IVF Cycle.",
-            "name": "Vinesh",
-            "source": "Patient review",
+            "body": "After extensive online research for the Best IVF doctor in Ghaziabad, we consulted Dr. Mona Dahiya. We were amazed with her complete knowledge of IVF treatment. Her IVF clinic in Ghaziabad has very good fertility testing facilities. Her team is also very knowledge and supportive. The care that we got though the entire IVF process were incredible. The frozen embryo transfer done by her was spot on and we had a healthy pregnancy in the first IVF Cycle. We are forever grateful to her for helping us expand our family.",
             "initial": "V",
-            "diagnosis": "IVF"
-          },
+            "name": "Viresh",
+            "source": "Patient review"
+          }
+        ],
+        [
           {
-            "id": "s-2",
-            "title": "Best IVF Success Rates",
-            "body": "Dr Mona did our Egg retrieval herself and that too on a holiday. She is very good with ultrasound check-ups to find out any deviations. We had amazing results and a successful first transfer. My wife is 12 weeks pregnant.",
-            "name": "Gaurav Baghel",
-            "source": "Patient review",
+            "title": "Best IVF Success Rates.",
+            "body": "Dr Mona did our Egg retrieval herself and that too on a holiday. She is very good with ultrasound check-ups to find out any deviations. We did not feel any unease in the embryo transfer process. We had amazing results and a successful first transfer. My wife is 12 weeks pregnant and we would highly recommend Dr Mona's IVF Clinic in Delhi for best IVF success rates.",
             "initial": "G",
-            "diagnosis": "IVF"
-          }
-        ],
-        [
-          {
-            "id": "s-3",
-            "body": "Dr. Dahiya doesn't believe in a general approach for fertility treatment. She analyzed our case deeply and designed a tailored IVF plan that worked in the first IVF cycle. Her dedication makes her the Best Fertility Doctor.",
-            "name": "Arbaj khan",
-            "source": "Google patient review",
-            "initial": "A",
-            "diagnosis": "Tailored IVF"
+            "name": "Gaurav Baghel",
+            "source": "Patient review"
           },
           {
-            "id": "s-4",
-            "body": "Dr Mona is a really good fertility doctor in Delhi. She has a very patient focussed approach which is unheard of these days. Her treatment was precise and it has resulted in a positive result in the First IVF Cycle.",
-            "name": "Brahm Prakash",
-            "source": "Google patient review",
+            "title": "",
+            "body": "Dr Mona is a really good fertility doctor in Delhi. She has a very patient focussed approach which is unheard of these days with such famous doctors in Delhi. She came across as very genuine in every consultation. Her treatment was precise and it has resulted in a positive result in the First IVF Cycle.",
             "initial": "B",
-            "diagnosis": "First Cycle Success"
+            "name": "Brahm Prakash",
+            "source": "Google patient review"
           }
         ],
         [
           {
-            "id": "s-5",
-            "title": "Incredibly Talented IVF Doctor",
-            "body": "I sincerely thank Dr Mona Dahiya and her Medical Team for being very supportive in our infertility journey. She diagnosed our infertility problems and did the best possible IVF procedure to make us parents in the first IVF Cycle.",
-            "name": "Udaryaj Saroj",
-            "source": "Patient review",
-            "initial": "U",
-            "diagnosis": "IVF Care"
+            "title": "",
+            "body": "Dr. Dahiya doesn't believe in a general approach for fertility treatment. She analyzed our case deeply and designed a tailored IVF plan that worked in the first IVF cycle. Her dedication makes her the Best Fertility Doctor in Ghaziabad. Thank you for our precious blessing and wish you infinite success.",
+            "initial": "A",
+            "name": "Arbaj khan",
+            "source": "Google patient review"
           },
           {
-            "id": "s-6",
-            "body": "We got excellent fertility counselling at her IVF centre in noida. We became pregnant in the 1st IVF cycle. Highly recommend Dr. Mona to any couple struggling with parenthood.",
-            "name": "Aman goswami123",
-            "source": "Google patient review",
+            "title": "Incredibly Talented IVF Doctor",
+            "body": "I sincerely thank Dr Mona Dahiya and her Medical Team for being very supportive in our infertility journey. She is an incredibly talented IVF Doctor in Ghaziabad with magical hands. She diagnosed our infertility problems and did the best possible IVF procedure to make us parents in the first IVF Cycle.",
+            "initial": "U",
+            "name": "Udaryaj Saroj",
+            "source": "Patient review"
+          },
+          {
+            "title": "",
+            "body": "We got excellent fertility counselling at her IVF centre in noida.we became pregnant in the 1st IVF cycle.",
             "initial": "A",
-            "diagnosis": "Noida Clinic"
+            "name": "Aman goswami123",
+            "source": "Google patient review"
           }
         ]
       ]
     },
     "trust": {
-      "eyebrow": "Why couples trust us",
-      "title": "What Makes Dr. Mona Dahiya's Success Rates Different?",
+      "eyebrow": "Expertise & authority",
+      "title": "Why Couples Trust Dr. Mona Dahiya",
       "items": [
         {
-          "title": "25+ Years of Clinical Expertise",
-          "description": "Gold Medalist from Lady Hardinge & Maulana Azad Medical College, Singapore General Hospital Fellow."
+          "title": "Honest, measurable care",
+          "description": "Plans are built on test results such as AMH, embryo grades and lining thickness, not generic promises."
         },
         {
-          "title": "Personalized Protocols",
-          "description": "Every stimulation protocol, scan and embryo transfer is planned and performed by Dr. Mona personally."
+          "title": "Gold-medalist training",
+          "description": "MBBS Gold Medalist (Lady Hardinge), MD Gold Medalist (Maulana Azad Medical College), DNB and Singapore General Hospital fellowship, with 25+ years' experience."
         },
         {
-          "title": "State-of-the-Art Embryology Labs",
-          "description": "Equipped with advanced clean rooms, benchtop incubators and microfluidic sperm selection."
+          "title": "Rated 4.9 on Google",
+          "description": "Consistently strong patient reviews for ethical, patient-first fertility care."
         }
       ]
     },
     "journey": {
-      "eyebrow": "Parenthood roadmap",
-      "title": "Your Journey to a Healthy Pregnancy",
-      "subtitle": "Step-by-step guidance from initial consultation to positive pregnancy scan.",
+      "eyebrow": "Before treatment",
+      "title": "How Every Journey Begins",
+      "subtitle": "An objective first assessment sets realistic expectations before any treatment starts.",
       "items": [
-        "In-depth reproductive consultation and comprehensive diagnostics for both partners",
-        "Individualized stimulation protocols designed to optimize egg quality and embryo yield",
-        "Extended Day-5/6 blastocyst culture and advanced embryology support (ICSI, PGT-A)",
-        "Precise ultrasound-guided embryo transfer with continuous clinical and hormonal care"
-      ]
-    },
-    "faq": {
-      "eyebrow": "Patient questions",
-      "title": "Frequently Asked Questions About IVF Success",
-      "items": [
-        {
-          "q": "What is Dr. Mona Dahiya's IVF success rate?",
-          "a": "Dr. Mona Dahiya maintains an industry-leading success rate of up to 75-80% for couples with favorable indications, and superior cumulative success rates even for complex and recurrent failure cases."
-        },
-        {
-          "q": "How many IVF cycles does it usually take to achieve pregnancy?",
-          "a": "With blastocyst transfer and personalized stimulation, many couples achieve pregnancy in their first or second cycle."
-        },
-        {
-          "q": "Does age affect IVF success rates?",
-          "a": "While maternal age is an important factor in ovarian reserve and egg quality, customized protocols and advanced technologies like PGT-A significantly enhance outcomes across age groups."
-        },
-        {
-          "q": "Can couples with multiple failed IVF cycles succeed?",
-          "a": "Yes. By identifying missed root causes such as endometrial receptivity defects, hydrosalpinx, or sperm DNA fragmentation, protocol adjustments often yield success after previous failures."
-        }
+        "Full review of earlier stimulation charts, embryology records and surgery notes.",
+        "Baseline transvaginal scan of ovarian reserve and the uterus.",
+        "Semen analysis and DNA fragmentation test after 2 to 3 days of abstinence."
       ]
     }
   },
@@ -2305,179 +2276,5 @@
         ]
       }
     ]
-  },
-  "successStoriesPage": {
-    "breadcrumb": "Success Stories",
-    "eyebrow": "Over 25,000 Parenthood Journeys",
-    "title": "Real Fertility & IVF Success Stories",
-    "subtitle": "Stories of hope, perseverance and medical excellence from couples treated by Dr. Mona Dahiya across Delhi NCR.",
-    "image": "/images/about/success-stories.jpg",
-    "primaryCta": {
-      "label": "Book In-Clinic Consultation",
-      "href": "#book-consultation"
-    },
-    "secondaryCta": {
-      "label": "Schedule Online Consultation",
-      "href": "/online-consultation"
-    },
-    "reviewsLink": {
-      "label": "Read Dr. Mona's Google reviews",
-      "href": "/about#reviews"
-    },
-    "badges": [
-      "25+ years experience",
-      "15,000+ completed cycles",
-      "Single blastocyst transfer",
-      "Stories in patients' own words"
-    ],
-    "diagnosis": {
-      "eyebrow": "Browse by diagnosis",
-      "title": "Stories by Treatment Category",
-      "items": [
-        {
-          "id": "ivf",
-          "title": "IVF Success Stories",
-          "description": "Complex & recurrent failure IVF journeys",
-          "accent": "rose"
-        },
-        {
-          "id": "low-amh",
-          "title": "Low AMH Success Stories",
-          "description": "Own-egg pregnancies with low ovarian reserve",
-          "accent": "navy"
-        },
-        {
-          "id": "pcos",
-          "title": "PCOS Success Stories",
-          "description": "Safe ovulation and OHSS-free IVF protocols",
-          "accent": "magenta"
-        },
-        {
-          "id": "iui",
-          "title": "IUI Success Stories",
-          "description": "Gentle first-line fertility treatments",
-          "accent": "blue"
-        }
-      ]
-    },
-    "stories": {
-      "eyebrow": "Patient journeys",
-      "title": "Stories in Patients' Own Words",
-      "subtitle": "Direct feedback and emotional journeys shared by couples after successful treatment.",
-      "cta": {
-        "label": "Read All Patient Reviews",
-        "href": "/about#reviews"
-      },
-      "columns": [
-        [
-          {
-            "id": "s-1",
-            "title": "Pregnancy in the 1st IVF Cycle",
-            "body": "After extensive online research for the Best IVF doctor in Ghaziabad, we consulted Dr. Mona Dahiya. We were amazed with her complete knowledge of IVF treatment. The frozen embryo transfer done by her was spot on and we had a healthy pregnancy in the first IVF Cycle.",
-            "name": "Vinesh",
-            "source": "Patient review",
-            "initial": "V",
-            "diagnosis": "IVF"
-          },
-          {
-            "id": "s-2",
-            "title": "Best IVF Success Rates",
-            "body": "Dr Mona did our Egg retrieval herself and that too on a holiday. She is very good with ultrasound check-ups to find out any deviations. We had amazing results and a successful first transfer. My wife is 12 weeks pregnant.",
-            "name": "Gaurav Baghel",
-            "source": "Patient review",
-            "initial": "G",
-            "diagnosis": "IVF"
-          }
-        ],
-        [
-          {
-            "id": "s-3",
-            "body": "Dr. Dahiya doesn't believe in a general approach for fertility treatment. She analyzed our case deeply and designed a tailored IVF plan that worked in the first IVF cycle. Her dedication makes her the Best Fertility Doctor.",
-            "name": "Arbaj khan",
-            "source": "Google patient review",
-            "initial": "A",
-            "diagnosis": "Tailored IVF"
-          },
-          {
-            "id": "s-4",
-            "body": "Dr Mona is a really good fertility doctor in Delhi. She has a very patient focussed approach which is unheard of these days. Her treatment was precise and it has resulted in a positive result in the First IVF Cycle.",
-            "name": "Brahm Prakash",
-            "source": "Google patient review",
-            "initial": "B",
-            "diagnosis": "First Cycle Success"
-          }
-        ],
-        [
-          {
-            "id": "s-5",
-            "title": "Incredibly Talented IVF Doctor",
-            "body": "I sincerely thank Dr Mona Dahiya and her Medical Team for being very supportive in our infertility journey. She diagnosed our infertility problems and did the best possible IVF procedure to make us parents in the first IVF Cycle.",
-            "name": "Udaryaj Saroj",
-            "source": "Patient review",
-            "initial": "U",
-            "diagnosis": "IVF Care"
-          },
-          {
-            "id": "s-6",
-            "body": "We got excellent fertility counselling at her IVF centre in noida. We became pregnant in the 1st IVF cycle. Highly recommend Dr. Mona to any couple struggling with parenthood.",
-            "name": "Aman goswami123",
-            "source": "Google patient review",
-            "initial": "A",
-            "diagnosis": "Noida Clinic"
-          }
-        ]
-      ]
-    },
-    "trust": {
-      "eyebrow": "Why couples trust us",
-      "title": "What Makes Dr. Mona Dahiya's Success Rates Different?",
-      "items": [
-        {
-          "title": "25+ Years of Clinical Expertise",
-          "description": "Gold Medalist from Lady Hardinge & Maulana Azad Medical College, Singapore General Hospital Fellow."
-        },
-        {
-          "title": "Personalized Protocols",
-          "description": "Every stimulation protocol, scan and embryo transfer is planned and performed by Dr. Mona personally."
-        },
-        {
-          "title": "State-of-the-Art Embryology Labs",
-          "description": "Equipped with advanced clean rooms, benchtop incubators and microfluidic sperm selection."
-        }
-      ]
-    },
-    "journey": {
-      "eyebrow": "Parenthood roadmap",
-      "title": "Your Journey to a Healthy Pregnancy",
-      "subtitle": "Step-by-step guidance from initial consultation to positive pregnancy scan.",
-      "items": [
-        "In-depth reproductive consultation and comprehensive diagnostics for both partners",
-        "Individualized stimulation protocols designed to optimize egg quality and embryo yield",
-        "Extended Day-5/6 blastocyst culture and advanced embryology support (ICSI, PGT-A)",
-        "Precise ultrasound-guided embryo transfer with continuous clinical and hormonal care"
-      ]
-    },
-    "faq": {
-      "eyebrow": "Patient questions",
-      "title": "Frequently Asked Questions About IVF Success",
-      "items": [
-        {
-          "q": "What is Dr. Mona Dahiya's IVF success rate?",
-          "a": "Dr. Mona Dahiya maintains an industry-leading success rate of up to 75-80% for couples with favorable indications, and superior cumulative success rates even for complex and recurrent failure cases."
-        },
-        {
-          "q": "How many IVF cycles does it usually take to achieve pregnancy?",
-          "a": "With blastocyst transfer and personalized stimulation, many couples achieve pregnancy in their first or second cycle."
-        },
-        {
-          "q": "Does age affect IVF success rates?",
-          "a": "While maternal age is an important factor in ovarian reserve and egg quality, customized protocols and advanced technologies like PGT-A significantly enhance outcomes across age groups."
-        },
-        {
-          "q": "Can couples with multiple failed IVF cycles succeed?",
-          "a": "Yes. By identifying missed root causes such as endometrial receptivity defects, hydrosalpinx, or sperm DNA fragmentation, protocol adjustments often yield success after previous failures."
-        }
-      ]
-    }
   }
 }

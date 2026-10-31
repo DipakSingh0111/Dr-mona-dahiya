@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 
 import SuccessStoriesHero from "@/components/sections/success-stories/SuccessStoriesHero";
+import MedicalRegistration from "@/components/sections/MedicalRegistration";
 import SuccessStoriesContent from "@/components/sections/success-stories/SuccessStoriesContent";
+import IvfSuccessClinics from "@/components/sections/ivf-success-stories/IvfSuccessClinics";
 import SuccessStoriesFaq from "@/components/sections/success-stories/SuccessStoriesFaq";
-import IvfFaqsClinics from "@/components/sections/ivf-faqs/IvfFaqsClinics";
-import LocationsRegistration from "@/components/sections/locations/LocationsRegistration";
 import AboutConsultation from "@/components/sections/about/AboutConsultation";
 import AboutParenthoodCta from "@/components/sections/about/AboutParenthoodCta";
 
@@ -13,22 +13,22 @@ import { SectionReveal } from "@/components/ui/Reveal";
 export const metadata: Metadata = {
   title: "Fertility Success Stories | Dr. Mona Dahiya",
   description:
-    "Real patient success stories — IVF, Low AMH, PCOS and IUI journeys with Dr. Mona Dahiya. Over 25,000 parenthood journeys.",
+    "Over 25,000 parenthood journeys guided by Dr. Mona Dahiya across Noida, Delhi and Ghaziabad — IVF, low AMH, PCOS and IUI stories in patients' own words.",
 };
 
 export default function SuccessStoriesPage() {
   return (
-    <main className="flex min-h-screen flex-col bg-[#061532]">
+    <main className="flex min-h-screen flex-col">
       <SuccessStoriesHero />
 
       <SectionReveal>
-        <LocationsRegistration />
+        <MedicalRegistration />
       </SectionReveal>
 
       <SuccessStoriesContent />
 
       <SectionReveal delay={0.04}>
-        <IvfFaqsClinics />
+        <IvfSuccessClinics />
       </SectionReveal>
 
       <SectionReveal delay={0.04}>
@@ -41,6 +41,7 @@ export default function SuccessStoriesPage() {
           eyebrow="Next step"
           title="Start Your Own Journey"
           subtitle="Book an in-clinic consultation or an online review of your previous reports with Dr. Mona Dahiya. Call"
+          appendContacts={true}
         />
       </SectionReveal>
 
