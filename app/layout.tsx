@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins, Playfair_Display } from "next/font/google";
 import ScrollToTop from "@/components/layout/ScrollToTop";
+import HeaderHeightSync from "@/components/layout/HeaderHeightSync";
 import TopBar from "@/components/layout/TopBar";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -47,6 +48,7 @@ export default function RootLayout({
       </head>
       <body suppressHydrationWarning className="flex min-h-screen flex-col font-sans">
         <ScrollToTop />
+        <HeaderHeightSync />
 
         <div className="site-header sticky top-0 z-50 w-full shrink-0 shadow-[0_4px_20px_rgba(0,25,90,0.22)]">
           <TopBar />

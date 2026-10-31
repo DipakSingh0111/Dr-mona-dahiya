@@ -25,9 +25,9 @@ export default function Hero() {
       : [{ image: backgroundImage, eyebrow, title }];
 
   const slidePositions = [
-    "object-[74%_0%] sm:object-[58%_0%] lg:object-[55%_8%]",
-    "object-[72%_8%] sm:object-[68%_4%] lg:object-[62%_0%]",
-    "object-[76%_0%] sm:object-[60%_0%] lg:object-[55%_0%]",
+    "object-[62%_8%] sm:object-[52%_0%] lg:object-[48%_0%]",
+    "object-[70%_6%] sm:object-[65%_0%] lg:object-[60%_0%]",
+    "object-[72%_4%] sm:object-[58%_0%] lg:object-[52%_0%]",
   ];
 
   const [activeSlide, setActiveSlide] = useState(0);
@@ -43,7 +43,7 @@ export default function Hero() {
   const currentSlide = slides[activeSlide] || slides[0];
 
   return (
-    <section className="hero-section relative flex w-full flex-col overflow-hidden bg-[#0047ca]">
+    <section className="hero-section relative flex w-full flex-col overflow-x-hidden bg-[#0047ca]">
       <div className="hero-banner-frame relative h-[250px] w-full shrink-0 overflow-hidden sm:absolute sm:inset-0 sm:h-auto">
         {slides.map((slideItem, index) => {
           const isActive = index === activeSlide;

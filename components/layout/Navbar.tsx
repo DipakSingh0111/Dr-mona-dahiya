@@ -57,12 +57,12 @@ export default function Navbar() {
               "radial-gradient(ellipse 70% 100% at 90% 50%, rgba(140,200,255,0.35) 0%, transparent 65%)",
           }}
         />
-        <div className="relative z-10 mx-auto flex max-w-[1440px] items-center gap-4 px-4 py-2 sm:px-6 sm:py-2 lg:px-8 xl:py-3">
+        <div className="relative z-10 mx-auto flex max-w-[1440px] items-center gap-3 px-4 py-1.5 sm:px-6 sm:py-1.5 lg:px-8 xl:py-2">
           <a href={brand.href} className="min-w-0 shrink-0 text-left">
-            <span className="font-display block text-left text-[1.45rem] leading-none font-bold tracking-tight whitespace-nowrap text-white sm:text-[1.6rem] lg:text-[1.65rem] xl:text-[2.1rem]">
+            <span className="font-display block text-left text-[1.35rem] leading-none font-bold tracking-tight whitespace-nowrap text-white sm:text-[1.5rem] lg:text-[1.55rem] xl:text-[1.85rem]">
               {brand.name}
             </span>
-            <span className="mt-1 block text-left text-[10px] font-medium tracking-wide whitespace-nowrap text-white/85 xl:text-[11px]">
+            <span className="mt-0.5 block text-left text-[9.5px] font-medium tracking-wide whitespace-nowrap text-white/85 xl:text-[10.5px]">
               {brand.tagline}
             </span>
           </a>
@@ -70,9 +70,9 @@ export default function Navbar() {
           <div className="ml-auto hidden shrink-0 items-center gap-3.5 md:flex lg:gap-4 xl:gap-5">
             <a
               href="tel:+919267982924"
-              className="flex shrink-0 items-center gap-2 text-[13px] font-semibold whitespace-nowrap text-white transition-opacity hover:opacity-90 xl:text-[15px]"
+              className="flex shrink-0 items-center gap-2 text-[12.5px] font-semibold whitespace-nowrap text-white transition-opacity hover:opacity-90 xl:text-[14px]"
             >
-              <PhoneIcon className="size-3.5 shrink-0 rotate-[-10deg] text-white/90 xl:size-4" />
+              <PhoneIcon className="size-3.5 shrink-0 rotate-[-10deg] text-white/90 xl:size-3.5" />
               <span className="tracking-wide tabular-nums">+91 92679 82924</span>
             </a>
 
@@ -81,13 +81,13 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Chat on WhatsApp"
-              className="flex size-8 shrink-0 items-center justify-center rounded-full bg-[#25d366] text-white shadow-[0_0_16px_rgba(37,211,102,0.55)] transition-transform hover:scale-105 active:scale-95 xl:size-9"
+              className="flex size-7 shrink-0 items-center justify-center rounded-full bg-[#25d366] text-white shadow-[0_0_16px_rgba(37,211,102,0.55)] transition-transform hover:scale-105 active:scale-95 xl:size-8"
             >
-              <FaWhatsapp className="size-4.5 xl:size-5" />
+              <FaWhatsapp className="size-4 xl:size-4.5" />
             </a>
 
             <div
-              className="flex shrink-0 items-center gap-2 rounded-xl border border-white/35 px-3 py-1 whitespace-nowrap shadow-sm xl:px-3.5 xl:py-1.5"
+              className="flex shrink-0 items-center gap-1.5 rounded-xl border border-white/35 px-2.5 py-0.5 whitespace-nowrap shadow-sm xl:px-3 xl:py-1"
               style={{
                 background:
                   "linear-gradient(135deg, rgba(0,30,100,0.55) 0%, rgba(0,50,140,0.35) 100%)",
@@ -144,20 +144,20 @@ export default function Navbar() {
             "linear-gradient(90deg, #061e52 0%, #09296e 50%, #061e52 100%)",
         }}
       >
-        <div className="mx-auto flex max-w-[1440px] items-center gap-2 px-4 py-1 sm:px-6 sm:py-1 lg:gap-4 lg:px-8 xl:py-1.5">
+        <div className="mx-auto flex max-w-[1440px] items-center gap-2 px-4 py-0.5 sm:px-6 lg:gap-3 lg:px-8 xl:py-1">
           <nav
-            className="hidden items-center justify-start gap-1 lg:flex xl:gap-2.5"
+            className="hidden items-center justify-start gap-0.5 lg:flex xl:gap-1.5"
             aria-label="Primary"
           >
             {menu.map((item) => {
               const hasItems = "dropdown" in item && Array.isArray(item.dropdown) && item.dropdown.length > 0;
 
               return (
-                <div key={item.label} className="group/nav relative py-1">
+                <div key={item.label} className="group/nav relative py-0.5">
                   <a
                     href={item.href}
                     onClick={(e) => handlePlainNavClick(e, item.href)}
-                    className="group inline-flex shrink-0 items-center gap-1.5 rounded-lg px-2 py-1.5 text-[11.5px] font-semibold tracking-[0.05em] text-white/95 uppercase whitespace-nowrap transition-all hover:bg-white/10 hover:text-[#f9b4c4] xl:px-3.5 xl:py-2 xl:text-[13.5px] xl:tracking-[0.07em]"
+                    className="group inline-flex shrink-0 items-center gap-1 rounded-lg px-2 py-1 text-[11px] font-semibold tracking-[0.05em] text-white/95 uppercase whitespace-nowrap transition-all hover:bg-white/10 hover:text-[#f9b4c4] xl:px-3 xl:py-1.5 xl:text-[12.5px] xl:tracking-[0.06em]"
                   >
                     <span>{item.label}</span>
                     {item.hasDropdown ? (
@@ -191,10 +191,10 @@ export default function Navbar() {
             })}
           </nav>
 
-          <div className="ml-auto hidden shrink-0 py-0.5 lg:block xl:py-1">
+          <div className="ml-auto hidden shrink-0 lg:block">
             <a
               href={cta.href}
-              className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-[#e83e74] px-4 py-2 text-[11.5px] font-bold tracking-[0.07em] text-white uppercase whitespace-nowrap shadow-[0_4px_14px_rgba(232,62,116,0.4)] transition-all hover:bg-[#c53658] xl:px-6 xl:py-2.5 xl:text-[13.5px] xl:tracking-[0.08em]"
+              className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-[#e83e74] px-3.5 py-1.5 text-[11px] font-bold tracking-[0.07em] text-white uppercase whitespace-nowrap shadow-[0_4px_14px_rgba(232,62,116,0.4)] transition-all hover:bg-[#c53658] xl:px-5 xl:py-2 xl:text-[12.5px] xl:tracking-[0.07em]"
             >
               <CalendarIcon className="size-3.5 shrink-0 xl:size-4" />
               {cta.label}

@@ -39,13 +39,13 @@ export default function TopBar() {
 
   return (
     <div
-      className="relative z-50 text-[11.5px] text-white/90 xl:text-[13px]"
+      className="relative z-50 text-[11px] text-white/90 xl:text-[12px]"
       style={{
         background:
           "linear-gradient(105deg, #0039b8 0%, #0047ca 42%, #1a5fd4 72%, #2b7de8 100%)",
       }}
     >
-      <div className="mx-auto flex h-8 max-w-[1440px] items-center gap-2 px-4 sm:h-9 sm:gap-4 sm:px-6 lg:px-8 xl:h-10">
+      <div className="mx-auto flex h-7 max-w-[1440px] items-center gap-2 px-4 sm:h-8 sm:gap-4 sm:px-6 lg:px-8">
         <div className="flex min-w-0 items-center justify-start gap-3 sm:gap-4 lg:gap-5">
           {locations.map((location, index) => (
             <a
