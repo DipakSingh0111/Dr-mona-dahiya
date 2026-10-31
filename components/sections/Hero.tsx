@@ -119,22 +119,22 @@ export default function Hero() {
           </HeroReveal>
 
           <HeroReveal delay={0.32}>
-            <div className="hero-ctas flex flex-col gap-3.5 sm:flex-row sm:flex-nowrap sm:items-center sm:gap-5 xl:gap-6">
+            <div className="hero-ctas flex flex-row flex-nowrap items-center gap-2.5 sm:gap-5 xl:gap-6">
               <a
                 href={primaryCta.href}
-                className="hero-cta inline-flex h-12 shrink-0 items-center justify-center gap-2.5 rounded-full bg-[#e83e74] px-7 text-[14px] font-bold whitespace-nowrap text-white shadow-[0_10px_24px_rgba(232,62,116,0.35)] transition-all hover:bg-[#c53658] xl:h-[3.25rem] xl:gap-3 xl:px-9 xl:text-[15.5px]"
+                className="hero-cta inline-flex h-10 min-w-0 flex-1 items-center justify-center gap-1.5 rounded-full bg-[#e83e74] px-3 text-[12px] font-bold whitespace-nowrap text-white shadow-[0_10px_24px_rgba(232,62,116,0.35)] transition-all hover:bg-[#c53658] sm:h-12 sm:flex-none sm:gap-2.5 sm:px-7 sm:text-[14px] xl:h-[3.25rem] xl:gap-3 xl:px-9 xl:text-[15.5px]"
               >
-                <CalendarIcon className="size-4 shrink-0 xl:size-[18px]" />
+                <CalendarIcon className="size-3.5 shrink-0 sm:size-4 xl:size-[18px]" />
                 {primaryCta.label}
               </a>
               <a
                 href={secondaryCta.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hero-cta inline-flex h-12 shrink-0 items-center justify-center gap-2.5 rounded-full border border-white/55 bg-transparent px-7 text-[14px] font-bold whitespace-nowrap text-white transition-all hover:bg-white/10 xl:h-[3.25rem] xl:gap-3 xl:px-9 xl:text-[15.5px]"
+                className="hero-cta inline-flex h-10 min-w-0 flex-1 items-center justify-center gap-1.5 rounded-full border border-white/55 bg-transparent px-3 text-[12px] font-bold whitespace-nowrap text-white transition-all hover:bg-white/10 sm:h-12 sm:flex-none sm:gap-2.5 sm:px-7 sm:text-[14px] xl:h-[3.25rem] xl:gap-3 xl:px-9 xl:text-[15.5px]"
               >
-                <span className="inline-flex size-5.5 shrink-0 items-center justify-center rounded-[3px] bg-[#e50914] text-white xl:size-6">
-                  <PlayIcon className="size-2.5 fill-white text-white xl:size-3" />
+                <span className="inline-flex size-4 shrink-0 items-center justify-center rounded-[3px] bg-[#e50914] text-white sm:size-5.5 xl:size-6">
+                  <PlayIcon className="size-2 fill-white text-white sm:size-2.5 xl:size-3" />
                 </span>
                 {secondaryCta.label}
               </a>
