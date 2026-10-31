@@ -22,12 +22,12 @@ import { SectionReveal } from "@/components/ui/Reveal";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
-      {/* Hero starts flush right below the sticky header */}
-      <div className="relative isolate flex flex-col overflow-hidden bg-[#0047ca]">
-        <Hero />
+      <div className="home-first-screen">
+        <div className="relative isolate flex min-h-0 flex-1 flex-col overflow-hidden bg-[#0047ca]">
+          <Hero />
+        </div>
+        <ServicesTicker />
       </div>
-
-      <ServicesTicker />
 
       <SectionReveal>
         <MedicalRegistration />

@@ -108,7 +108,7 @@ export default function MeetYourDoctor() {
               ))}
             </ul>
 
-            <div className="mt-7 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:items-center xl:mt-8 xl:gap-3">
+            <div className="mt-7 hidden flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:items-center lg:flex xl:mt-8 xl:gap-3">
               <a
                 href={data.primaryCta.href}
                 className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#e83e74] via-[#f0518e] to-[#d13266] px-3.5 py-2.5 text-[11.5px] font-semibold text-white whitespace-nowrap shadow-[0_10px_28px_rgba(232,62,116,0.32)] transition hover:brightness-105 xl:gap-2.5 xl:px-5 xl:py-3 xl:text-[13.5px]"
@@ -191,6 +191,30 @@ export default function MeetYourDoctor() {
                 })}
               </ul>
             </article>
+
+            <div className="mx-auto mt-5 flex w-full max-w-[520px] flex-col gap-3 lg:hidden">
+              <a
+                href={data.primaryCta.href}
+                className="inline-flex w-full items-center justify-center gap-2.5 rounded-full bg-gradient-to-r from-[#e83e74] via-[#f0518e] to-[#d13266] px-5 py-3.5 text-[14px] font-semibold text-white shadow-[0_10px_28px_rgba(232,62,116,0.32)] transition hover:brightness-105"
+              >
+                <span>{data.primaryCta.label}</span>
+                <span className="flex size-6 shrink-0 items-center justify-center rounded-full bg-white text-[#e83e74]">
+                  <FaArrowRight className="size-2.5" />
+                </span>
+              </a>
+
+              <a
+                href={data.secondaryCta.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex w-full items-center justify-center gap-2.5 rounded-full border border-[#f5a3bd] bg-white px-5 py-3 text-[14px] font-semibold text-[#0f2438] shadow-[0_6px_18px_rgba(232,62,116,0.08)] transition hover:bg-[#fff5f8]"
+              >
+                <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-[#ff0033] text-white shadow-[0_3px_10px_rgba(255,0,51,0.3)]">
+                  <FaYoutube className="size-[18px]" />
+                </span>
+                <span>{data.secondaryCta.label}</span>
+              </a>
+            </div>
           </Reveal>
         </div>
       </div>

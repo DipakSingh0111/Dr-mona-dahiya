@@ -183,7 +183,7 @@ export default function Navbar() {
           <div className="ml-auto hidden shrink-0 py-0.5 lg:block xl:py-1">
             <a
               href={cta.href}
-              className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-[#c54866] px-4 py-2 text-[11.5px] font-bold tracking-[0.07em] text-white uppercase whitespace-nowrap shadow-[0_4px_14px_rgba(197,72,102,0.4)] transition-all hover:bg-[#b03a55] xl:px-6 xl:py-2.5 xl:text-[13.5px] xl:tracking-[0.08em]"
+              className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-[#e83e74] px-4 py-2 text-[11.5px] font-bold tracking-[0.07em] text-white uppercase whitespace-nowrap shadow-[0_4px_14px_rgba(232,62,116,0.4)] transition-all hover:bg-[#c53658] xl:px-6 xl:py-2.5 xl:text-[13.5px] xl:tracking-[0.08em]"
             >
               <CalendarIcon className="size-3.5 shrink-0 xl:size-4" />
               {cta.label}

@@ -73,22 +73,22 @@ export default function BookAppointment() {
               {data.subtitle}
             </p>
 
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-nowrap">
+            <div className="mt-9 sm:mt-11 flex flex-col gap-3 sm:flex-row sm:flex-nowrap">
               <a
                 href={data.primaryCta.href}
-                className="inline-flex shrink-0 items-center justify-center gap-2.5 rounded-full bg-[#ff4d8d] px-5 py-3.5 text-[13px] font-semibold whitespace-nowrap text-white shadow-[0_10px_28px_rgba(255,77,141,0.35)] transition hover:bg-[#e83e74] xl:text-[13.5px]"
+                className="inline-flex shrink-0 items-center justify-center gap-2.5 rounded-full bg-[#f1f3f5] px-6 py-3.5 text-[13px] font-semibold whitespace-nowrap text-[#0f2438] shadow-sm transition-all hover:bg-white active:scale-95 xl:text-[13.5px]"
               >
-                <FaCalendarAlt className="size-3.5 shrink-0" />
+                <FaCalendarAlt className="size-3.5 shrink-0 text-[#0f2438]" />
                 {data.primaryCta.label}
-                <FaArrowRight className="size-3.5 shrink-0" />
+                <FaArrowRight className="size-3.5 shrink-0 text-[#0f2438]" />
               </a>
               <a
                 href={data.secondaryCta.href}
-                className="inline-flex shrink-0 items-center justify-center gap-2.5 rounded-full border border-[#1f2a44]/25 bg-white px-5 py-3.5 text-[13px] font-semibold whitespace-nowrap text-[#0f2438] transition hover:bg-[#fff5f8] xl:text-[13.5px]"
+                className="inline-flex shrink-0 items-center justify-center gap-2.5 rounded-full bg-[#2563eb] px-6 py-3.5 text-[13px] font-semibold whitespace-nowrap text-white shadow-[0_10px_28px_rgba(37,99,235,0.35)] transition-all hover:bg-[#1d4ed8] active:scale-95 xl:text-[13.5px]"
               >
-                <FaVideo className="size-3.5 shrink-0 text-[#ff4d8d]" />
+                <FaVideo className="size-3.5 shrink-0 text-white" />
                 {data.secondaryCta.label}
-                <FaArrowRight className="size-3.5 shrink-0 text-[#ff4d8d]" />
+                <FaArrowRight className="size-3.5 shrink-0 text-white" />
               </a>
             </div>
 

@@ -48,8 +48,7 @@ export default function RootLayout({
       <body suppressHydrationWarning className="flex min-h-screen flex-col font-sans">
         <ScrollToTop />
 
-        {/* Sticky TopBar + Navbar across all pages */}
-        <div className="sticky top-0 z-50 w-full shrink-0 shadow-[0_4px_20px_rgba(0,25,90,0.22)]">
+        <div className="site-header sticky top-0 z-50 w-full shrink-0 shadow-[0_4px_20px_rgba(0,25,90,0.22)]">
           <TopBar />
           <Navbar />
         </div>
