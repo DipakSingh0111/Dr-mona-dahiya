@@ -334,8 +334,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 
   .hero-cta {
-    height: clamp(2.25rem, 4.8svh, 3rem) !important;
-    font-size: clamp(12px, 1.7svh, 14.5px) !important;
+    height: clamp(2.9rem, 5.8svh, 3.75rem) !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    font-size: clamp(12.5px, 1.9svh, 15.5px) !important;
   }
 }
 
