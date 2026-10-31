@@ -74,6 +74,7 @@ export default function HowItWorks() {
               const hasImage = Boolean(step.image);
               const highlight =
                 "highlight" in step && Boolean(step.highlight);
+              const isLast = index === steps.length - 1;
 
               return (
                 <div
@@ -82,13 +83,17 @@ export default function HowItWorks() {
                   style={{ zIndex: index + 1 }}
                 >
                   <article
-                    className={`flex flex-col overflow-hidden rounded-[28px] bg-[#f6f7f9] shadow-[0_12px_36px_rgba(15,23,42,0.08)] sm:flex-row sm:items-stretch ${
+                    className={`flex w-full flex-col overflow-hidden rounded-[28px] bg-[#f6f7f9] shadow-[0_12px_36px_rgba(15,23,42,0.08)] sm:flex-row sm:items-stretch ${
+                      isLast
+                        ? "min-h-[228px] sm:min-h-[252px] lg:min-h-[268px]"
+                        : "min-h-[220px] sm:min-h-[245px] lg:min-h-[260px]"
+                    } ${
                       highlight
                         ? "border-2 border-[#e83e74]/55 ring-1 ring-[#e83e74]/20"
                         : "border border-zinc-100"
                     }`}
                   >
-                    <div className="flex flex-1 flex-col justify-center px-5 py-6 sm:px-9 sm:py-10 lg:px-11 lg:py-12">
+                    <div className="flex flex-1 flex-col justify-center px-5 py-6 sm:px-9 sm:py-9 lg:px-11 lg:py-10">
                       {"stepLabel" in step && step.stepLabel ? (
                         <span className="mb-2 text-[11.5px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:text-[12px]">
                           {step.stepLabel}
@@ -97,7 +102,7 @@ export default function HowItWorks() {
                       <h3 className="font-display text-[1.35rem] leading-snug font-bold tracking-tight text-zinc-900 sm:text-[1.5rem]">
                         {step.title}
                       </h3>
-                      <p className="mt-3 max-w-[340px] text-[13.5px] leading-relaxed text-zinc-500 sm:text-[14px]">
+                      <p className="mt-3 max-w-xl text-[13.5px] leading-relaxed text-zinc-500 sm:text-[14px]">
                         {step.description}
                       </p>
                     </div>
