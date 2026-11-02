@@ -106,7 +106,7 @@ const protocols: ProtocolCard[] = [
       {
         text: "PESA, TESA or micro-TESE for azoospermia. See ",
         linkText: "Surgical Sperm Retrieval",
-        linkHref: "/treatments",
+        linkHref: "/surgical-sperm-retrieval",
       },
     ],
   },

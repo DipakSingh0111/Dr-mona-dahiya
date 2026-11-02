@@ -123,15 +123,15 @@ export default function FallopianTubesHero() {
           </Stagger>
         </div>
 
-        {/* Right Column: Doctor Room Image */}
+        {/* Right Column: Original Doctor in USG Clinic photo */}
         <div className="relative mx-auto w-full max-w-[400px] lg:col-span-5 lg:max-w-[420px] xl:max-w-[440px]">
           <Reveal variant="scaleIn">
             <div className="relative overflow-hidden rounded-[20px] border-[3px] border-white/80 shadow-[0_20px_50px_rgba(0,10,40,0.45)] sm:rounded-[24px]">
               <Image
-                src="/images/about/female-infertility.jpg"
+                src="/images/about/fallopian-tubes.jpg"
                 alt="Dr. Mona Dahiya - Fallopian Tube Blockage Specialist"
-                width={500}
-                height={550}
+                width={530}
+                height={665}
                 className="max-h-[380px] sm:max-h-[440px] lg:max-h-[460px] w-full object-cover object-top"
                 priority
               />

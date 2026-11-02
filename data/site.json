@@ -68,23 +68,23 @@
                 },
                 {
                   "label": "IUI Treatment (Clinical Guide)",
-                  "href": "/iui-success-stories"
+                  "href": "/iui-treatment"
                 },
                 {
                   "label": "Blastocyst Culture & Transfer",
-                  "href": "/treatments"
+                  "href": "/blastocyst-transfer"
                 },
                 {
                   "label": "Frozen Embryo Transfer (FET)",
-                  "href": "/treatments"
+                  "href": "/frozen-embryo-transfer"
                 },
                 {
                   "label": "Natural Cycle / Mini-IVF",
-                  "href": "/treatments"
+                  "href": "/mini-ivf"
                 },
                 {
                   "label": "Laser-Assisted Hatching (LAH)",
-                  "href": "/treatments"
+                  "href": "/laser-assisted-hatching"
                 }
               ]
             },
@@ -93,15 +93,15 @@
               "items": [
                 {
                   "label": "Egg Freezing / Social Freezing",
-                  "href": "/treatments"
+                  "href": "/egg-freezing"
                 },
                 {
                   "label": "Semen / Sperm Freezing",
-                  "href": "/treatments"
+                  "href": "/sperm-freezing"
                 },
                 {
                   "label": "Embryo Freezing & Banking",
-                  "href": "/treatments"
+                  "href": "/embryo-freezing"
                 },
                 {
                   "label": "Oncofertility (Cancer Preservation)",
@@ -109,19 +109,19 @@
                 },
                 {
                   "label": "Preimplantation Genetic Testing (PGT)",
-                  "href": "/treatments"
+                  "href": "/pgt-testing"
                 },
                 {
                   "label": "Ovarian & Endometrial PRP Therapy",
-                  "href": "/treatments"
+                  "href": "/prp-therapy"
                 },
                 {
                   "label": "Endometrial Receptivity Analysis (ERA)",
-                  "href": "/treatments"
+                  "href": "/era-test"
                 },
                 {
                   "label": "Follicular Ultrasound Monitoring",
-                  "href": "/treatments"
+                  "href": "/follicular-monitoring"
                 }
               ]
             },
@@ -130,19 +130,19 @@
               "items": [
                 {
                   "label": "Laparoscopic Fertility Surgery",
-                  "href": "/treatments"
+                  "href": "/laparoscopy-hysteroscopy"
                 },
                 {
                   "label": "Diagnostic & Operative Hysteroscopy",
-                  "href": "/treatments"
+                  "href": "/hysteroscopy"
                 },
                 {
                   "label": "Donor Gamete Programs",
-                  "href": "/treatments"
+                  "href": "/donor-gamete"
                 },
                 {
                   "label": "Surgical Sperm Retrieval (TESA/PESA)",
-                  "href": "/treatments"
+                  "href": "/surgical-sperm-retrieval"
                 },
                 {
                   "label": "All Services Hub",
@@ -1548,11 +1548,11 @@
       },
       {
         "label": "PRP Fertility Therapy in Noida",
-        "href": "#"
+        "href": "/prp-therapy"
       },
       {
         "label": "Laparoscopic Surgeon in Noida",
-        "href": "#"
+        "href": "/laparoscopy-hysteroscopy"
       },
       {
         "label": "PCOS & PCOD Clinic Noida",

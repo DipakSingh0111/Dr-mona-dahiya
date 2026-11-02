@@ -12,6 +12,8 @@ type Props = {
   subtitle?: ReactNode;
   /** When false, phone/email are not appended after subtitle (use when subtitle already includes them). */
   appendContacts?: boolean;
+  /** Online consultation duration label shown on pricing cards. */
+  consultationDuration?: string;
 };
 
 export default function AboutConsultation({
@@ -26,6 +28,7 @@ export default function AboutConsultation({
   ),
   subtitle = "Book an in-clinic consultation or an online record review. Appointment line:",
   appendContacts = true,
+  consultationDuration = "30 minutes",
 }: Props) {
   const [formData, setFormData] = useState({
     name: "",
@@ -107,7 +110,9 @@ export default function AboutConsultation({
                   <p className="mt-1 text-[11.5px] text-white/55">
                     Online consultation
                   </p>
-                  <p className="text-[11.5px] text-white/55">30 minutes</p>
+                  <p className="text-[11.5px] text-white/55">
+                    {consultationDuration}
+                  </p>
                 </div>
 
                 <div className="w-[168px] rounded-[18px] border border-[#e83e74]/40 bg-[#0a1f45]/85 p-4 shadow-sm">
@@ -120,7 +125,9 @@ export default function AboutConsultation({
                   <p className="mt-1 text-[11.5px] text-white/55">
                     Online consultation
                   </p>
-                  <p className="text-[11.5px] text-white/55">30 minutes</p>
+                  <p className="text-[11.5px] text-white/55">
+                    {consultationDuration}
+                  </p>
                 </div>
               </div>
 

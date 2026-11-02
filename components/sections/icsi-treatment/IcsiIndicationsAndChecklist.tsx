@@ -36,7 +36,7 @@ const indications: IndicationItem[] = [
       <>
         Sperm taken from the testis or epididymis through{" "}
         <Link
-          href="/azoospermia"
+          href="/surgical-sperm-retrieval"
           className="font-medium text-[#93c5fd] underline underline-offset-2 hover:text-white"
         >
           Surgical Sperm Retrieval (TESA/PESA/Micro-TESE)

@@ -24,12 +24,12 @@ const dfiRelatedTreatments: RelatedTreatmentItem[] = [
   {
     title: "Surgical Sperm Retrieval (TESA/PESA/Micro-TESE)",
     subtitle: "Getting sperm directly from the testis or epididymis",
-    href: "/treatments",
+    href: "/surgical-sperm-retrieval",
   },
   {
     title: "Semen & Sperm Freezing",
     subtitle: "Keep your options open",
-    href: "/treatments",
+    href: "/sperm-freezing",
   },
 ];
 
