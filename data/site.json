@@ -60,11 +60,11 @@
               "items": [
                 {
                   "label": "In Vitro Fertilisation (IVF)",
-                  "href": "/treatments"
+                  "href": "/ivf-treatment"
                 },
                 {
                   "label": "ICSI Treatment",
-                  "href": "/treatments"
+                  "href": "/icsi-treatment"
                 },
                 {
                   "label": "IUI Treatment (Clinical Guide)",
