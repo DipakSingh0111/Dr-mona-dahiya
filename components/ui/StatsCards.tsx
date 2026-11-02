@@ -97,7 +97,7 @@ export default function StatsCards({ stats }: { stats: StatItem[] }) {
       <Stagger className="grid grid-cols-2 gap-5 xl:gap-6" stagger={0.08}>
         {stats.map((stat) => (
           <StaggerItem key={stat.label} variant="scaleIn" className="min-w-0">
-            <div className="stat-tile flex h-full flex-col justify-center rounded-2xl border border-white/30 bg-[rgba(255,255,255,0.1)] px-5 py-3.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.14)] backdrop-blur-[3px] xl:px-6 xl:py-4">
+            <div className="stat-tile flex h-full flex-col justify-center rounded-2xl border border-white/30 bg-[rgba(255,255,255,0.12)] px-5 py-3.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.14)] backdrop-blur-[1px] xl:px-6 xl:py-4">
               <p className="stat-value font-display text-[1.75rem] leading-none font-bold tracking-tight whitespace-nowrap text-white tabular-nums xl:text-[2.25rem]">
                 <StatValue stat={stat} active={active} />
               </p>

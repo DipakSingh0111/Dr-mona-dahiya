@@ -249,16 +249,24 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .hero-veil {
   background: linear-gradient(
     90deg,
-    rgba(0, 42, 132, 0.72) 0%,
-    rgba(0, 48, 148, 0.52) 22%,
-    rgba(0, 55, 170, 0.18) 38%,
-    transparent 52%
+    rgba(12, 42, 100, 0.94) 0%,
+    rgba(14, 48, 110, 0.88) 22%,
+    rgba(16, 55, 125, 0.72) 38%,
+    rgba(18, 62, 140, 0.35) 52%,
+    transparent 64%
   );
 }
 
 .hero-content {
   padding-top: 1.25rem;
   padding-bottom: 1.75rem;
+  background-color: var(--hero-backdrop, #163f8a);
+}
+
+@media (min-width: 640px) {
+  .hero-content {
+    background-color: transparent;
+  }
 }
 
 .hero-title {

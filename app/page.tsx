@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
       <div className="home-first-screen">
-        <div className="home-hero-wrap relative isolate flex flex-1 flex-col bg-[#0047ca]">
+        <div className="home-hero-wrap relative isolate flex flex-1 flex-col bg-transparent">
           <Hero />
         </div>
         <ServicesTicker />

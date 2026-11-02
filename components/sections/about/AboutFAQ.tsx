@@ -108,7 +108,7 @@ export default function AboutFAQ() {
           </Link>
           ,{" "}
           <Link
-            href="/treatments/low-amh"
+            href="/low-amh"
             className="text-[#0047ca] underline underline-offset-2 hover:text-[#e83e74]"
           >
             low AMH

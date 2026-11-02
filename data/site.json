@@ -176,31 +176,31 @@
             "items": [
               {
                 "label": "Female Infertility Overview",
-                "href": "/treatments"
+                "href": "/female-infertility"
               },
               {
                 "label": "Low AMH / Diminished Ovarian Reserve",
-                "href": "/low-amh-success-stories"
+                "href": "/low-amh"
               },
               {
                 "label": "PCOS & PCOD Management",
-                "href": "/404"
+                "href": "/pcos-treatment"
               },
               {
                 "label": "Endometriosis & Adenomyosis",
-                "href": "/404"
+                "href": "/endometriosis"
               },
               {
                 "label": "Fallopian Tube Blockage",
-                "href": "/404"
+                "href": "/fallopian-tube-blockage"
               },
               {
                 "label": "Recurrent Miscarriages (RPL)",
-                "href": "/404"
+                "href": "/recurrent-miscarriage"
               },
               {
                 "label": "Recurrent Implantation Failure (RIF)",
-                "href": "/404"
+                "href": "/recurrent-implantation-failure"
               }
             ]
           },
@@ -209,19 +209,19 @@
             "items": [
               {
                 "label": "Male Infertility Overview",
-                "href": "/treatments"
+                "href": "/male-infertility"
               },
               {
                 "label": "Azoospermia (Zero Sperm Count)",
-                "href": "/404"
+                "href": "/azoospermia"
               },
               {
                 "label": "Low Sperm Count & Motility (Oligospermia)",
-                "href": "/404"
+                "href": "/low-sperm-count"
               },
               {
                 "label": "Sperm DNA Fragmentation Index (DFI)",
-                "href": "/404"
+                "href": "/sperm-dna-fragmentation"
               }
             ]
           }
@@ -312,21 +312,21 @@
     }
   },
   "hero": {
-    "backgroundImage": "/images/HeroBanner.jpeg",
+    "backgroundImage": "/images/HeroBanner_v2.jpeg",
     "slides": [
       {
-        "image": "/images/HeroBanner.jpeg",
-        "eyebrow": "TOP FERTILITY DOCTOR IN INDIA",
-        "title": "Dr. Mona Dahiya"
-      },
-      {
-        "image": "/images/HeroBanner_02.png",
+        "image": "/images/HeroBanner_02_wide.jpeg",
         "eyebrow": "INDIA'S BEST IVF DOCTOR",
         "title": "Dr. Mona Dahiya"
       },
       {
-        "image": "/images/HeroBanner_03.png",
-        "eyebrow": "TOP RATED FERTILITY SPECIALIST IN INDIA",
+        "image": "/images/HeroBanner_04_wide.jpeg",
+        "eyebrow": "TRUSTED IVF SPECIALIST IN DELHI NCR",
+        "title": "Dr. Mona Dahiya"
+      },
+      {
+        "image": "/images/HeroBanner_05_wide.jpeg",
+        "eyebrow": "LEADING FERTILITY EXPERT IN INDIA",
         "title": "Dr. Mona Dahiya"
       }
     ],

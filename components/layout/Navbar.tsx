@@ -136,12 +136,12 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Menu row — Deep Royal Navy bar with subtle border & rose hover accent (desktop only) */}
+      {/* Menu row — brand blue, seamless with hero (no dark edge) */}
       <div
-        className="relative z-10 hidden border-y border-white/12 shadow-[0_4px_14px_rgba(4,18,48,0.25)] lg:block"
+        className="relative z-10 hidden lg:block"
         style={{
           background:
-            "linear-gradient(90deg, #061e52 0%, #09296e 50%, #061e52 100%)",
+            "linear-gradient(90deg, #0039b8 0%, #0047ca 50%, #0a4fcf 100%)",
         }}
       >
         <div className="mx-auto flex max-w-[1440px] items-center gap-2 px-4 py-0.5 sm:px-6 lg:gap-3 lg:px-8 xl:py-1">

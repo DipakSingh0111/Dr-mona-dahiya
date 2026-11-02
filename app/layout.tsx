@@ -50,7 +50,7 @@ export default function RootLayout({
         <ScrollToTop />
         <HeaderHeightSync />
 
-        <div className="site-header sticky top-0 z-50 w-full shrink-0 shadow-[0_4px_20px_rgba(0,25,90,0.22)]">
+        <div className="site-header sticky top-0 z-50 w-full shrink-0 border-b-0 bg-[#163f8a]">
           <TopBar />
           <Navbar />
         </div>

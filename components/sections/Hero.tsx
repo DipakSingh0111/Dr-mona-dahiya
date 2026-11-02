@@ -24,10 +24,30 @@ export default function Hero() {
       ? heroSlides
       : [{ image: backgroundImage, eyebrow, title }];
 
+  const slideFits = ["object-cover", "object-cover", "object-cover"];
+
   const slidePositions = [
-    "object-[62%_8%] sm:object-[52%_0%] lg:object-[48%_0%]",
-    "object-[70%_6%] sm:object-[65%_0%] lg:object-[60%_0%]",
-    "object-[72%_4%] sm:object-[58%_0%] lg:object-[52%_0%]",
+    // Award group — shifted down with generous top headroom so "TIMES NETWORK" text is completely clear of the navbar
+    "object-right sm:object-[92%_15%]",
+    // Outdoor portrait — wide format, doctor on right side, clear headroom
+    "object-right sm:object-[95%_12%]",
+    // Red-curtain portrait — wide format, doctor on right side, clear headroom
+    "object-right sm:object-[95%_10%]",
+  ];
+
+  // Solid fallback + photo-matched fill for award letterbox
+  const slideBackdrops = ["#2b48d8", "#122a52", "#1e1e40"];
+  const slideBackdropFills = [
+    "linear-gradient(180deg, #2245d5 0%, #353ecb 35%, #3f3ab0 70%, #443ea8 100%)",
+    "#122a52",
+    "#1e1e40",
+  ];
+
+  const slideVeils = [
+    // Soft subtle veil on left edge for readability
+    "linear-gradient(90deg, rgba(34,69,213,0.65) 0%, rgba(38,72,216,0.3) 30%, transparent 55%)",
+    "linear-gradient(90deg, rgba(12,32,70,0.85) 0%, rgba(14,38,85,0.45) 28%, transparent 52%)",
+    "linear-gradient(90deg, rgba(20,20,50,0.85) 0%, rgba(30,25,55,0.45) 28%, transparent 52%)",
   ];
 
   const [activeSlide, setActiveSlide] = useState(0);
@@ -41,13 +61,31 @@ export default function Hero() {
   }, [slides.length]);
 
   const currentSlide = slides[activeSlide] || slides[0];
+  const activeBackdrop =
+    slideBackdrops[activeSlide % slideBackdrops.length] || "#163f8a";
+  const activeVeil =
+    slideVeils[activeSlide % slideVeils.length] || slideVeils[1];
 
   return (
-    <section className="hero-section relative flex w-full flex-col overflow-x-hidden bg-[#0047ca]">
+    <section
+      className="hero-section relative flex w-full flex-col overflow-x-hidden transition-colors duration-700"
+      style={
+        {
+          backgroundColor: activeBackdrop,
+          "--hero-backdrop": activeBackdrop,
+        } as React.CSSProperties
+      }
+    >
       <div className="hero-banner-frame relative h-[250px] w-full shrink-0 overflow-hidden sm:absolute sm:inset-0 sm:h-auto">
         {slides.map((slideItem, index) => {
           const isActive = index === activeSlide;
           const src = slideItem.image;
+          const backdrop =
+            slideBackdrops[index % slideBackdrops.length] || "#163f8a";
+          const backdropFill =
+            slideBackdropFills[index % slideBackdropFills.length] || backdrop;
+          const isContain =
+            slideFits[index % slideFits.length] === "object-contain";
           return (
             <div
               key={src}
@@ -56,6 +94,14 @@ export default function Hero() {
                   ? "z-10 opacity-100"
                   : "pointer-events-none z-0 opacity-0"
               }`}
+              style={{
+                backgroundColor: backdrop,
+                backgroundImage:
+                  typeof backdropFill === "string" &&
+                  backdropFill.startsWith("linear")
+                    ? backdropFill
+                    : undefined,
+              }}
             >
               <Image
                 src={src}
@@ -64,8 +110,7 @@ export default function Hero() {
                 priority={index === 0}
                 quality={100}
                 unoptimized
-                className={`hero-banner-img object-cover ${slidePositions[index % slidePositions.length]}`}
-                style={{ objectFit: "cover" }}
+                className={`hero-banner-img ${slideFits[index % slideFits.length]} ${slidePositions[index % slidePositions.length]}`}
                 sizes="100vw"
               />
             </div>
@@ -74,7 +119,10 @@ export default function Hero() {
 
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-10 bg-gradient-to-t from-[#003db8] to-transparent sm:hidden"
+          className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-10 sm:hidden"
+          style={{
+            background: `linear-gradient(to top, ${activeBackdrop}, transparent)`,
+          }}
         />
 
         {slides.length > 1 && (
@@ -96,15 +144,17 @@ export default function Hero() {
         )}
       </div>
 
+      {/* Left readability veil — hue matches active slide backdrop */}
       <div
         aria-hidden
-        className="hero-veil pointer-events-none absolute inset-0 z-10 hidden sm:block"
+        className="pointer-events-none absolute inset-0 z-10 hidden transition-[background] duration-700 sm:block"
+        style={{ background: activeVeil }}
       />
 
-      <div className="hero-content relative z-20 mx-auto flex w-full max-w-[1440px] flex-1 items-center bg-gradient-to-b from-[#003db8] via-[#0044c4] to-[#003399] px-4 pt-5 pb-7 sm:bg-none sm:px-6 lg:px-8">
-        <div className="hero-copy flex w-full max-w-[520px] flex-col gap-6 xl:max-w-[600px] xl:gap-7">
+      <div className="hero-content relative z-20 mx-auto flex w-full max-w-[1440px] flex-1 items-center px-4 pt-5 pb-7 sm:px-6 lg:px-8">
+        <div className="hero-copy flex w-full max-w-[390px] flex-col gap-4.5 sm:max-w-[410px] xl:max-w-[430px] xl:gap-5">
           <HeroReveal key={`eyebrow-${activeSlide}`} delay={0.05}>
-            <p className="hero-eyebrow text-[12px] font-semibold tracking-[0.14em] text-white/90 uppercase transition-all duration-500 sm:tracking-[0.16em] lg:text-[13px] xl:text-[14px] xl:tracking-[0.18em]">
+            <p className="hero-eyebrow text-[11.5px] font-semibold tracking-[0.14em] text-white/90 uppercase transition-all duration-500 sm:tracking-[0.16em] lg:text-[12.5px] xl:text-[13px] xl:tracking-[0.18em]">
               {currentSlide.eyebrow || eyebrow}
             </p>
             <h1 className="hero-title font-display font-bold tracking-tight text-white transition-all duration-500">
@@ -113,25 +163,25 @@ export default function Hero() {
           </HeroReveal>
 
           <HeroReveal delay={0.22}>
-            <div className="hero-stats w-full max-w-[450px] xl:max-w-[500px]">
+            <div className="hero-stats w-full max-w-[380px] sm:max-w-[395px] xl:max-w-[410px]">
               <StatsCards stats={stats} />
             </div>
           </HeroReveal>
 
           <HeroReveal delay={0.32}>
-            <div className="hero-ctas grid w-full max-w-[450px] grid-cols-2 gap-5 xl:max-w-[500px] xl:gap-6">
+            <div className="hero-ctas grid w-full max-w-[380px] grid-cols-2 gap-3.5 sm:max-w-[395px] xl:max-w-[410px] xl:gap-4">
               <a
                 href={primaryCta.href}
-                className="hero-cta inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-[#e83e74] px-3 text-[12.5px] font-bold whitespace-nowrap text-white shadow-[0_10px_24px_rgba(232,62,116,0.35)] transition-all hover:bg-[#c53658] sm:h-14 sm:gap-2.5 sm:px-4 sm:text-[14.5px] xl:h-[3.75rem] xl:text-[15.5px]"
+                className="hero-cta inline-flex h-11 w-full items-center justify-center gap-2 rounded-full bg-[#e83e74] px-3 text-[12px] font-bold whitespace-nowrap text-white shadow-[0_10px_24px_rgba(232,62,116,0.35)] transition-all hover:bg-[#c53658] sm:h-12 sm:gap-2.5 sm:px-3.5 sm:text-[13.5px] xl:h-[3.35rem] xl:text-[14.5px]"
               >
-                <CalendarIcon className="size-3.5 shrink-0 sm:size-4 xl:size-[18px]" />
+                <CalendarIcon className="size-3.5 shrink-0 sm:size-4 xl:size-[17px]" />
                 {primaryCta.label}
               </a>
               <a
                 href={secondaryCta.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hero-cta inline-flex h-12 w-full items-center justify-center gap-2 rounded-full border border-white/55 bg-transparent px-3 text-[12.5px] font-bold whitespace-nowrap text-white transition-all hover:bg-white/10 sm:h-14 sm:gap-2.5 sm:px-4 sm:text-[14.5px] xl:h-[3.75rem] xl:text-[15.5px]"
+                className="hero-cta inline-flex h-11 w-full items-center justify-center gap-2 rounded-full border border-white/55 bg-transparent px-3 text-[12px] font-bold whitespace-nowrap text-white transition-all hover:bg-white/10 sm:h-12 sm:gap-2.5 sm:px-3.5 sm:text-[13.5px] xl:h-[3.35rem] xl:text-[14.5px]"
               >
                 <span className="inline-flex h-[14px] w-[20px] shrink-0 items-center justify-center rounded-[4px] bg-[#e50914] text-white sm:h-4 sm:w-[22px] xl:h-[18px] xl:w-6">
                   <PlayIcon className="ml-0.5 size-2 fill-white text-white sm:size-2.5 xl:size-[11px]" />
@@ -142,7 +192,7 @@ export default function Hero() {
           </HeroReveal>
 
           <HeroReveal delay={0.4}>
-            <div className="hero-review-badge flex w-fit items-center gap-2.5 rounded-full border border-[#fed7aa] bg-[#fffbf2] px-5 py-2.5 whitespace-nowrap shadow-sm backdrop-blur-md xl:px-5.5 xl:py-3">
+            <div className="hero-review-badge flex w-fit items-center gap-2 rounded-full border border-[#fed7aa] bg-[#fffbf2] px-4 py-2 whitespace-nowrap shadow-sm backdrop-blur-md xl:px-4.5 xl:py-2.5">
               <div className="flex items-center gap-0.5 text-[#f59e0b]">
                 <FaStar className="size-3.5 fill-current xl:size-4" />
                 <FaStar className="size-3.5 fill-current xl:size-4" />
@@ -150,10 +200,10 @@ export default function Hero() {
                 <FaStar className="size-3.5 fill-current xl:size-4" />
                 <FaStar className="size-3.5 fill-current xl:size-4" />
               </div>
-              <span className="text-[14px] font-bold text-[#0f2438] xl:text-[15px]">
+              <span className="text-[13px] font-bold text-[#0f2438] xl:text-[14px]">
                 4.9
               </span>
-              <span className="text-[13px] font-medium text-gray-600 xl:text-[14px]">
+              <span className="text-[12px] font-medium text-gray-600 xl:text-[13px]">
                 Google patient reviews
               </span>
             </div>
