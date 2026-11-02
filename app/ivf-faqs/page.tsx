@@ -4,9 +4,9 @@ import IvfFaqsHero from "@/components/sections/ivf-faqs/IvfFaqsHero";
 import IvfFaqsContent from "@/components/sections/ivf-faqs/IvfFaqsContent";
 import IvfFaqsClinics from "@/components/sections/ivf-faqs/IvfFaqsClinics";
 import IvfFaqsReviews from "@/components/sections/ivf-faqs/IvfFaqsReviews";
-import LocationsRegistration from "@/components/sections/locations/LocationsRegistration";
-import AboutConsultation from "@/components/sections/about/AboutConsultation";
-import AboutParenthoodCta from "@/components/sections/about/AboutParenthoodCta";
+import LocationsRegistration from "@/components/sections/location/LocationsRegistration";
+import AboutConsultation from "@/components/sections/about-mona-dahiya/AboutConsultation";
+import AboutParenthoodCta from "@/components/sections/about-mona-dahiya/AboutParenthoodCta";
 
 import { SectionReveal } from "@/components/ui/Reveal";
 

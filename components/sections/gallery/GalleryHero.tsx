@@ -63,7 +63,7 @@ export default function GalleryHero() {
           {/* Google Reviews Link matching Screenshot */}
           <div className="mt-4 sm:mt-5">
             <Link
-              href="/patient-reviews"
+              href="/best-ivf-patient-reviews"
               className="inline-flex items-center gap-1.5 text-[14px] font-semibold text-[#ff8fb3] transition-colors hover:text-white hover:underline sm:text-[15px]"
             >
               <span>Read Dr. Mona&apos;s Google reviews</span>

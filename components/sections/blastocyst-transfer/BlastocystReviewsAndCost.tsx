@@ -121,7 +121,7 @@ export default function BlastocystReviewsAndCost() {
           {/* Read All Patient Reviews Button */}
           <Reveal variant="fadeUp" delay={0.12} className="mt-6">
             <Link
-              href="/patient-reviews"
+              href="/best-ivf-patient-reviews"
               className="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-5 py-2.5 text-[13px] font-semibold text-[#0a1d37] shadow-sm transition-all hover:border-[#e83e74] hover:text-[#e83e74] sm:text-[13.5px]"
             >
               Read All Patient Reviews

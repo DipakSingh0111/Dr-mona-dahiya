@@ -5,11 +5,11 @@ import MedicalRegistration from "@/components/sections/MedicalRegistration";
 import IvfIndicationsAndChecklist from "@/components/sections/ivf-treatment/IvfIndicationsAndChecklist";
 import IvfProtocolAndWhy from "@/components/sections/ivf-treatment/IvfProtocolAndWhy";
 import IvfReviews from "@/components/sections/ivf-treatment/IvfReviews";
-import IvfSuccessClinics from "@/components/sections/ivf-success-stories/IvfSuccessClinics";
+import IvfSuccessClinics from "@/components/sections/ivf-stories/IvfSuccessClinics";
 import IvfCostAndFaq from "@/components/sections/ivf-treatment/IvfCostAndFaq";
 import IvfRelatedTreatments from "@/components/sections/ivf-treatment/IvfRelatedTreatments";
-import AboutConsultation from "@/components/sections/about/AboutConsultation";
-import AboutParenthoodCta from "@/components/sections/about/AboutParenthoodCta";
+import AboutConsultation from "@/components/sections/about-mona-dahiya/AboutConsultation";
+import AboutParenthoodCta from "@/components/sections/about-mona-dahiya/AboutParenthoodCta";
 
 import { SectionReveal } from "@/components/ui/Reveal";
 

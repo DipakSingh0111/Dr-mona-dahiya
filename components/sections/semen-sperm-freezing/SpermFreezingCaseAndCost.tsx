@@ -1,0 +1,73 @@
+"use client";
+
+import { FaVial, FaSnowflake, FaCalendarAlt, FaCheck } from "react-icons/fa";
+import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
+import {
+  TreatmentSection,
+  TreatmentSectionHeader,
+  CostFactorCard,
+} from "@/components/ui/treatment";
+
+const costCards = [
+  {
+    title: "Semen analysis and screening",
+    description: "Initial tests.",
+    icon: <FaCheck className="size-3.5" />,
+  },
+  {
+    title: "Freezing process",
+    description: "Processing and vials.",
+    icon: <FaVial className="size-3.5" />,
+  },
+  {
+    title: "Annual storage",
+    description: "Charge for the storage period.",
+    icon: <FaCalendarAlt className="size-3.5" />,
+  },
+  {
+    title: "Thawing and use",
+    description: "Preparation for IUI or ICSI later.",
+    icon: <FaSnowflake className="size-3.5" />,
+  },
+];
+
+export default function SpermFreezingCaseAndCost() {
+  return (
+    <TreatmentSection>
+      <div className="mb-14 sm:mb-16 lg:mb-20">
+        <TreatmentSectionHeader
+          eyebrow="From the clinic"
+          title="Clinical Case Insight"
+        />
+        <Reveal variant="fadeUp" delay={0.06} className="mt-6">
+          <div className="rounded-2xl border border-[#e83e74]/35 bg-gradient-to-r from-[#141b36] via-[#0e223d] to-[#0a1024] p-6 shadow-[0_0_24px_rgba(232,62,116,0.12)] sm:p-7">
+            <p className="text-[14px] leading-relaxed font-medium text-slate-100 sm:text-[15.5px]">
+              A young man was advised chemotherapy and had two samples frozen the same week. Years later, his stored sperm was thawed and used in an ICSI cycle with his partner.
+            </p>
+            <p className="mt-3 text-[12px] text-slate-400">
+              Details changed to protect patient privacy. Individual results vary.
+            </p>
+          </div>
+        </Reveal>
+      </div>
+
+      <div>
+        <TreatmentSectionHeader
+          eyebrow="Transparency"
+          title="Cost Factors Breakdown"
+          subtitle="Cost includes the collection, the freezing process and storage by year. We explain the numbers before you begin."
+        />
+        <Stagger
+          delay={0.05}
+          className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4"
+        >
+          {costCards.map((card) => (
+            <StaggerItem key={card.title}>
+              <CostFactorCard {...card} />
+            </StaggerItem>
+          ))}
+        </Stagger>
+      </div>
+    </TreatmentSection>
+  );
+}

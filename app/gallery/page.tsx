@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import GalleryHero from "@/components/sections/gallery/GalleryHero";
 // import GalleryGrid from "@/components/sections/gallery/GalleryGrid";
 import MedicalRegistration from "@/components/sections/MedicalRegistration";
-import AboutParenthoodCta from "@/components/sections/about/AboutParenthoodCta";
+import AboutParenthoodCta from "@/components/sections/about-mona-dahiya/AboutParenthoodCta";
 
 import { SectionReveal } from "@/components/ui/Reveal";
 

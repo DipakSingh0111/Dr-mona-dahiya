@@ -94,7 +94,7 @@ export default function IvfHero() {
           </div>
 
           <Link
-            href="/patient-reviews"
+            href="/best-ivf-patient-reviews"
             className="mt-4 inline-flex items-center gap-1.5 text-[13.5px] font-medium text-white/90 transition-colors hover:text-white sm:text-[14px]"
           >
             Read Dr. Mona&apos;s Google reviews →
@@ -118,7 +118,7 @@ export default function IvfHero() {
           <Reveal variant="scaleIn">
             <div className="relative overflow-hidden rounded-[20px] border-[3px] border-white/80 shadow-[0_20px_50px_rgba(0,10,40,0.45)] sm:rounded-[24px]">
               <Image
-                src="/images/about/dr-mona-dahiya.jpg"
+                src="/images/about-mona-dahiya/dr-mona-dahiya.jpg"
                 alt="Dr. Mona Dahiya - IVF Specialist in Delhi NCR"
                 width={500}
                 height={550}

@@ -21,7 +21,7 @@ function handlePlainNavClick(
   const path = href.split("?")[0] || "/";
   if (window.location.pathname !== path) return;
 
-  // Same page (e.g. /about#credentials → About): clear hash & go to top
+  // Same page (e.g. /about-mona-dahiya#credentials → About): clear hash & go to top
   e.preventDefault();
   if (window.location.hash) {
     history.replaceState(null, "", path);
@@ -136,12 +136,12 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Menu row — brand blue, seamless with hero (no dark edge) */}
+      {/* Menu row — Deep Royal Navy bar with subtle border & rose hover accent (desktop only) */}
       <div
         className="relative z-10 hidden lg:block"
         style={{
           background:
-            "linear-gradient(90deg, #0039b8 0%, #0047ca 50%, #0a4fcf 100%)",
+            "linear-gradient(90deg, #061e52 0%, #09296e 50%, #061e52 100%)",
         }}
       >
         <div className="mx-auto flex max-w-[1440px] items-center gap-2 px-4 py-0.5 sm:px-6 lg:gap-3 lg:px-8 xl:py-1">

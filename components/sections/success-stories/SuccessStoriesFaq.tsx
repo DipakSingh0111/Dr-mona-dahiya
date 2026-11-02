@@ -30,7 +30,7 @@ const faqList: FaqItem[] = [
       <>
         Many couples do. A root-cause review often finds a fixable reason, such
         as a uterine problem or sperm DNA damage. See{" "}
-        <Link href="/online-consultation" className={linkClass}>
+        <Link href="/ivf-consultation-online" className={linkClass}>
           Second Opinion
         </Link>
         .
@@ -42,7 +42,7 @@ const faqList: FaqItem[] = [
     answer: (
       <>
         Yes. Low AMH means fewer eggs, not poor quality. See{" "}
-        <Link href="/low-amh-success-stories" className={linkClass}>
+        <Link href="/low-amh-stories" className={linkClass}>
           Low AMH Stories
         </Link>
         .
@@ -66,7 +66,7 @@ const faqList: FaqItem[] = [
     answer: (
       <>
         3 to 4 well-timed cycles before moving to IVF. See{" "}
-        <Link href="/iui-success-stories" className={linkClass}>
+        <Link href="/iui-stories" className={linkClass}>
           IUI Stories
         </Link>
         .
@@ -94,7 +94,7 @@ const faqList: FaqItem[] = [
       <>
         Yes. A 30-minute online consultation costs ₹1,000 in India or US$25
         abroad. See{" "}
-        <Link href="/online-consultation" className={linkClass}>
+        <Link href="/ivf-consultation-online" className={linkClass}>
           Online Consultation
         </Link>
         .

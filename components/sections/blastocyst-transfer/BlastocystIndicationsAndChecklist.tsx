@@ -72,7 +72,7 @@ const indications: IndicationCard[] = [
     description: (
       <span>
         Couples whose normal-looking Day 2 or Day 3 embryos have not implanted. See{" "}
-        <Link href="/recurrent-implantation-failure" className="text-[#0047ca] underline font-semibold hover:text-[#e83e74] transition-colors">
+        <Link href="/recurrent-implantation-failure-rif" className="text-[#0047ca] underline font-semibold hover:text-[#e83e74] transition-colors">
           Recurrent Implantation Failure
         </Link>
         .

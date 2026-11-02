@@ -64,7 +64,7 @@
                 },
                 {
                   "label": "ICSI Treatment",
-                  "href": "/icsi-treatment"
+                  "href": "/intracytoplasmic-sperm-injection-icsi-treatment"
                 },
                 {
                   "label": "IUI Treatment (Clinical Guide)",
@@ -80,11 +80,11 @@
                 },
                 {
                   "label": "Natural Cycle / Mini-IVF",
-                  "href": "/mini-ivf"
+                  "href": "/minimal-stimulation-mini-ivf"
                 },
                 {
                   "label": "Laser-Assisted Hatching (LAH)",
-                  "href": "/laser-assisted-hatching"
+                  "href": "/best-laser-assisted-hatching-doctor-in-noida"
                 }
               ]
             },
@@ -93,35 +93,35 @@
               "items": [
                 {
                   "label": "Egg Freezing / Social Freezing",
-                  "href": "/egg-freezing"
+                  "href": "/best-egg-freezing-center-in-noida"
                 },
                 {
                   "label": "Semen / Sperm Freezing",
-                  "href": "/sperm-freezing"
+                  "href": "/semen-sperm-freezing"
                 },
                 {
                   "label": "Embryo Freezing & Banking",
-                  "href": "/embryo-freezing"
+                  "href": "/embryo-cryopreservation"
                 },
                 {
                   "label": "Oncofertility (Cancer Preservation)",
-                  "href": "/treatments"
+                  "href": "/oncofertility-cancer-fertility-preservation"
                 },
                 {
                   "label": "Preimplantation Genetic Testing (PGT)",
-                  "href": "/pgt-testing"
+                  "href": "/preimplantation-genetic-testing-pgt-center-in-noida"
                 },
                 {
                   "label": "Ovarian & Endometrial PRP Therapy",
-                  "href": "/prp-therapy"
+                  "href": "/platelet-rich-plasma-prp-ivf-treatment-in-noida"
                 },
                 {
                   "label": "Endometrial Receptivity Analysis (ERA)",
-                  "href": "/era-test"
+                  "href": "/endometrial-receptivity-analysis-era-test-in-noida"
                 },
                 {
                   "label": "Follicular Ultrasound Monitoring",
-                  "href": "/follicular-monitoring"
+                  "href": "/follicular-ultrasound"
                 }
               ]
             },
@@ -130,23 +130,23 @@
               "items": [
                 {
                   "label": "Laparoscopic Fertility Surgery",
-                  "href": "/laparoscopy-hysteroscopy"
+                  "href": "/best-laparoscopic-surgeon-in-noida"
                 },
                 {
                   "label": "Diagnostic & Operative Hysteroscopy",
-                  "href": "/hysteroscopy"
+                  "href": "/hysteroscopy-treatment"
                 },
                 {
                   "label": "Donor Gamete Programs",
-                  "href": "/donor-gamete"
+                  "href": "/donor-gametes"
                 },
                 {
                   "label": "Surgical Sperm Retrieval (TESA/PESA)",
-                  "href": "/surgical-sperm-retrieval"
+                  "href": "/surgical-sperm-retrieval-tesa-pesa"
                 },
                 {
                   "label": "All Services Hub",
-                  "href": "/treatments",
+                  "href": "/our-services",
                   "highlight": true
                 }
               ]
@@ -156,7 +156,7 @@
             "title": "Had a failed IVF cycle elsewhere?",
             "subtitle": "Share your previous reports and get Dr. Mona's second opinion.",
             "ctaLabel": "Second Opinion / Failed IVF Desk",
-            "ctaHref": "/online-consultation"
+            "ctaHref": "/ivf-consultation-online"
           },
           "bottomBanner": {
             "title": "Not sure where to start?",
@@ -176,31 +176,31 @@
             "items": [
               {
                 "label": "Female Infertility Overview",
-                "href": "/female-infertility"
+                "href": "/female-infertility-treatment"
               },
               {
                 "label": "Low AMH / Diminished Ovarian Reserve",
-                "href": "/low-amh"
+                "href": "/best-low-amh-treatment-in-noida"
               },
               {
                 "label": "PCOS & PCOD Management",
-                "href": "/pcos-treatment"
+                "href": "/best-pcos-prod-treatment-centre-in-noida"
               },
               {
                 "label": "Endometriosis & Adenomyosis",
-                "href": "/endometriosis"
+                "href": "/endometriosis-fertility-treatment"
               },
               {
                 "label": "Fallopian Tube Blockage",
-                "href": "/fallopian-tube-blockage"
+                "href": "/fallopian-tube-blockage-treatment"
               },
               {
                 "label": "Recurrent Miscarriages (RPL)",
-                "href": "/recurrent-miscarriage"
+                "href": "/miscarriage-treatment-in-noida"
               },
               {
                 "label": "Recurrent Implantation Failure (RIF)",
-                "href": "/recurrent-implantation-failure"
+                "href": "/recurrent-implantation-failure-rif"
               }
             ]
           },
@@ -209,19 +209,19 @@
             "items": [
               {
                 "label": "Male Infertility Overview",
-                "href": "/male-infertility"
+                "href": "/male-infertility-treatment"
               },
               {
                 "label": "Azoospermia (Zero Sperm Count)",
-                "href": "/azoospermia"
+                "href": "/azoospermia-treatment"
               },
               {
                 "label": "Low Sperm Count & Motility (Oligospermia)",
-                "href": "/low-sperm-count"
+                "href": "/low-sperm-count-oligospermia"
               },
               {
                 "label": "Sperm DNA Fragmentation Index (DFI)",
-                "href": "/sperm-dna-fragmentation"
+                "href": "/sperm-dna-fragmentation-test"
               }
             ]
           }
@@ -238,11 +238,11 @@
           },
           {
             "label": "IVF Success Stories",
-            "href": "/ivf-success-stories"
+            "href": "/ivf-stories"
           },
           {
             "label": "Low AMH Success Stories",
-            "href": "/low-amh-success-stories"
+            "href": "/low-amh-stories"
           },
           {
             "label": "PCOS Success Stories",
@@ -250,22 +250,22 @@
           },
           {
             "label": "IUI Success Stories",
-            "href": "/iui-success-stories"
+            "href": "/iui-stories"
           },
           {
             "label": "Google Verified Patient Reviews",
-            "href": "/patient-reviews"
+            "href": "/best-ivf-patient-reviews"
           }
         ]
       },
       {
         "label": "About Dr. Mona",
-        "href": "/about",
+        "href": "/about-mona-dahiya",
         "hasDropdown": true,
         "dropdown": [
           {
             "label": "Credentials & Bio",
-            "href": "/about"
+            "href": "/about-mona-dahiya"
           },
           {
             "label": "Gallery",
@@ -273,7 +273,7 @@
           },
           {
             "label": "News & Media",
-            "href": "/news-media"
+            "href": "/news-and-media"
           },
           {
             "label": "ART Ethics & Compliance",
@@ -296,11 +296,11 @@
           },
           {
             "label": "Online IVF Consultation",
-            "href": "/online-consultation"
+            "href": "/ivf-consultation-online"
           },
           {
             "label": "Contact Us",
-            "href": "/locations"
+            "href": "/location"
           }
         ]
       }
@@ -1548,11 +1548,11 @@
       },
       {
         "label": "PRP Fertility Therapy in Noida",
-        "href": "/prp-therapy"
+        "href": "/platelet-rich-plasma-prp-ivf-treatment-in-noida"
       },
       {
         "label": "Laparoscopic Surgeon in Noida",
-        "href": "/laparoscopy-hysteroscopy"
+        "href": "/best-laparoscopic-surgeon-in-noida"
       },
       {
         "label": "PCOS & PCOD Clinic Noida",
@@ -1673,7 +1673,7 @@
     },
     "supportText": "Can't find your area?",
     "supportBookLabel": "book an appointment online",
-    "supportBookHref": "/about#book-consultation",
+    "supportBookHref": "/about-mona-dahiya#book-consultation",
     "cities": [
       {
         "id": "noida",
@@ -1845,18 +1845,18 @@
     "eyebrow": "Patient success stories",
     "title": "Fertility Success Stories: Over 25,000 Parenthood Journeys",
     "subtitle": "Every fertility journey is different. Guided by Dr. Mona Dahiya across Noida, Delhi and Ghaziabad, couples have overcome failed IVF cycles, low AMH, PCOS and male factor infertility with personalised care. Read their experiences in their own words and explore stories by treatment below.",
-    "image": "/images/about/success-stories.jpg",
+    "image": "/images/about-mona-dahiya/success-stories.jpg",
     "primaryCta": {
       "label": "Book In-Clinic Consultation",
       "href": "#book-consultation"
     },
     "secondaryCta": {
       "label": "Schedule Online Consultation",
-      "href": "/online-consultation"
+      "href": "/ivf-consultation-online"
     },
     "reviewsLink": {
       "label": "Read Dr. Mona's Google reviews",
-      "href": "/patient-reviews"
+      "href": "/best-ivf-patient-reviews"
     },
     "badges": [
       "25,000+ families guided",
@@ -1871,14 +1871,14 @@
           "id": "ivf",
           "title": "IVF & ICSI Success Stories",
           "description": "Failed cycles, male factor and tubal blockage",
-          "href": "/ivf-success-stories",
+          "href": "/ivf-stories",
           "accent": "rose"
         },
         {
           "id": "low-amh",
           "title": "Low AMH Success Stories",
           "description": "Own-egg pregnancies with low ovarian reserve",
-          "href": "/low-amh-success-stories",
+          "href": "/low-amh-stories",
           "accent": "navy"
         },
         {
@@ -1892,7 +1892,7 @@
           "id": "iui",
           "title": "IUI Success Stories",
           "description": "Gentle, first-line treatment within 2 to 3 cycles",
-          "href": "/iui-success-stories",
+          "href": "/iui-stories",
           "accent": "blue"
         }
       ]
@@ -1903,7 +1903,7 @@
       "subtitle": "Reviews shared by couples treated by Dr. Mona Dahiya. Names are shown as the patients posted them.",
       "cta": {
         "label": "Read All Patient Reviews",
-        "href": "/patient-reviews"
+        "href": "/best-ivf-patient-reviews"
       },
       "columns": [
         [
@@ -2006,7 +2006,7 @@
     "breadcrumb": "Online IVF Consultation",
     "eyebrow": "Online fertility consultation",
     "title": "Online IVF Consultation with Dr. Mona Dahiya",
-    "image": "/images/about/online-ivf-consultation.jpg",
+    "image": "/images/about-mona-dahiya/online-ivf-consultation.jpg",
     "primaryCta": {
       "label": "Book In-Clinic Consultation",
       "href": "#schedule-consultation"
@@ -2017,7 +2017,7 @@
     },
     "reviewsLink": {
       "label": "Read Dr. Mona's Google reviews",
-      "href": "/about#reviews"
+      "href": "/about-mona-dahiya#reviews"
     },
     "badges": [
       "30-minute slots",
@@ -2176,7 +2176,7 @@
       "subtitle": "Individual experiences in patients' own words.",
       "cta": {
         "label": "Read All Patient Reviews",
-        "href": "/about#reviews"
+        "href": "/about-mona-dahiya#reviews"
       },
       "items": [
         {
@@ -2207,18 +2207,18 @@
     "breadcrumb": "IVF FAQs",
     "eyebrow": "IVF FAQs",
     "title": "IVF Frequently Asked Questions, Answered by Dr. Mona Dahiya",
-    "image": "/images/about/IVF-FAq.jpg",
+    "image": "/images/about-mona-dahiya/IVF-FAq.jpg",
     "primaryCta": {
       "label": "Book In-Clinic Consultation",
-      "href": "/about#book-consultation"
+      "href": "/about-mona-dahiya#book-consultation"
     },
     "secondaryCta": {
       "label": "Schedule Online Consultation",
-      "href": "/online-consultation"
+      "href": "/ivf-consultation-online"
     },
     "reviewsLink": {
       "label": "Read Dr. Mona's Google reviews",
-      "href": "/about#reviews"
+      "href": "/about-mona-dahiya#reviews"
     },
     "badges": [
       "Reviewed by Dr. Mona Dahiya",
@@ -2234,21 +2234,21 @@
           "area": "SECTOR 49",
           "city": "Noida",
           "address": "3rd Floor, K-06, above FirstCry, Baraula, Sector 49, Noida, Uttar Pradesh 201301",
-          "clinicPageUrl": "/locations#noida",
+          "clinicPageUrl": "/location#noida",
           "directionsUrl": "https://www.google.com/maps/search/?api=1&query=3rd+Floor+K-06+above+FirstCry+Baraula+Sector+49+Noida"
         },
         {
           "area": "RAJ NAGAR",
           "city": "Ghaziabad",
           "address": "2nd Floor, RDC, C-53A, near Bikanerwala, Sector 15, Sector 10, Raj Nagar, Ghaziabad, Uttar Pradesh 201002",
-          "clinicPageUrl": "/locations#ghaziabad",
+          "clinicPageUrl": "/location#ghaziabad",
           "directionsUrl": "https://www.google.com/maps/search/?api=1&query=2nd+Floor+RDC+C-53A+near+Bikanerwala+Raj+Nagar+Ghaziabad"
         },
         {
           "area": "LAJPAT NAGAR",
           "city": "Delhi",
           "address": "Building Number 41, First Floor, Ring Road, Block Q, Lajpat Nagar IV, Lajpat Nagar, New Delhi 110024",
-          "clinicPageUrl": "/locations#delhi",
+          "clinicPageUrl": "/location#delhi",
           "directionsUrl": "https://www.google.com/maps/search/?api=1&query=Building+Number+41+First+Floor+Ring+Road+Block+Q+Lajpat+Nagar+IV+New+Delhi"
         }
       ]
@@ -2259,7 +2259,7 @@
       "subtitle": "Individual experiences in patients' own words.",
       "cta": {
         "label": "Read All Patient Reviews",
-        "href": "/about#reviews"
+        "href": "/about-mona-dahiya#reviews"
       },
       "items": [
         {

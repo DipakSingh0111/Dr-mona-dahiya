@@ -27,7 +27,7 @@ const galleryItems: GalleryItem[] = [
     id: "clinic-reception",
     title: "Patient Consultation & Reception",
     subtitle: "Nayra Fertility and IVF Centre",
-    image: "/images/about/book-a-appointment.jpg",
+    image: "/images/about-mona-dahiya/book-a-appointment.jpg",
   },
   {
     id: "clinic-delhi",

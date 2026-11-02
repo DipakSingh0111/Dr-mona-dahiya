@@ -123,7 +123,7 @@ export default function IuiTreatmentHero() {
           <Reveal variant="scaleIn">
             <div className="relative overflow-hidden rounded-[20px] border-[3px] border-white/80 shadow-[0_20px_50px_rgba(0,10,40,0.45)] sm:rounded-[24px]">
               <Image
-                src="/images/about/iui-treatment.jpg"
+                src="/images/about-mona-dahiya/iui-treatment.jpg"
                 alt="Intrauterine Insemination (IUI) Treatment - Dr. Mona Dahiya"
                 width={540}
                 height={550}

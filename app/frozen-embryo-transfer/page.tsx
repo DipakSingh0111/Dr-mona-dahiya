@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 
-import FetHero from "@/components/sections/fet-treatment/FetHero";
+import FetHero from "@/components/sections/frozen-embryo-transfer/FetHero";
 import MedicalRegistration from "@/components/sections/MedicalRegistration";
-import FetIndicationsAndChecklist from "@/components/sections/fet-treatment/FetIndicationsAndChecklist";
-import FetProtocolWhyAndCase from "@/components/sections/fet-treatment/FetProtocolWhyAndCase";
-import FetCostAndFaq from "@/components/sections/fet-treatment/FetCostAndFaq";
-import FetRelatedTreatments from "@/components/sections/fet-treatment/FetRelatedTreatments";
-import AboutConsultation from "@/components/sections/about/AboutConsultation";
-import AboutParenthoodCta from "@/components/sections/about/AboutParenthoodCta";
+import FetIndicationsAndChecklist from "@/components/sections/frozen-embryo-transfer/FetIndicationsAndChecklist";
+import FetProtocolWhyAndCase from "@/components/sections/frozen-embryo-transfer/FetProtocolWhyAndCase";
+import FetCostAndFaq from "@/components/sections/frozen-embryo-transfer/FetCostAndFaq";
+import FetRelatedTreatments from "@/components/sections/frozen-embryo-transfer/FetRelatedTreatments";
+import AboutConsultation from "@/components/sections/about-mona-dahiya/AboutConsultation";
+import AboutParenthoodCta from "@/components/sections/about-mona-dahiya/AboutParenthoodCta";
 
 import { SectionReveal } from "@/components/ui/Reveal";
 

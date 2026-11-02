@@ -123,7 +123,7 @@ export default function BlastocystHero() {
           <Reveal variant="scaleIn">
             <div className="relative overflow-hidden rounded-[20px] border-[3px] border-white/80 shadow-[0_20px_50px_rgba(0,10,40,0.45)] sm:rounded-[24px]">
               <Image
-                src="/images/about/blastocyst-doctor.jpg"
+                src="/images/about-mona-dahiya/blastocyst-doctor.jpg"
                 alt="Dr. Mona Dahiya - Blastocyst Transfer & Embryology Specialist"
                 width={530}
                 height={665}

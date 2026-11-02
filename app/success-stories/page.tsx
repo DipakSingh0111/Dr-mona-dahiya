@@ -3,10 +3,10 @@ import type { Metadata } from "next";
 import SuccessStoriesHero from "@/components/sections/success-stories/SuccessStoriesHero";
 import MedicalRegistration from "@/components/sections/MedicalRegistration";
 import SuccessStoriesContent from "@/components/sections/success-stories/SuccessStoriesContent";
-import IvfSuccessClinics from "@/components/sections/ivf-success-stories/IvfSuccessClinics";
+import IvfSuccessClinics from "@/components/sections/ivf-stories/IvfSuccessClinics";
 import SuccessStoriesFaq from "@/components/sections/success-stories/SuccessStoriesFaq";
-import AboutConsultation from "@/components/sections/about/AboutConsultation";
-import AboutParenthoodCta from "@/components/sections/about/AboutParenthoodCta";
+import AboutConsultation from "@/components/sections/about-mona-dahiya/AboutConsultation";
+import AboutParenthoodCta from "@/components/sections/about-mona-dahiya/AboutParenthoodCta";
 
 import { SectionReveal } from "@/components/ui/Reveal";
 

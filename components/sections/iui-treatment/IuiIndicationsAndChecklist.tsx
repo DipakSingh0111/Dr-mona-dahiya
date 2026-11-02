@@ -81,7 +81,7 @@ const indications: IndicationCard[] = [
     description: (
       <span>
         Post-wash total motile sperm count (TMSC) of 5 to 10 million with acceptable shape. See{" "}
-        <Link href="/low-sperm-count" className="text-[#0047ca] underline font-semibold hover:text-[#e83e74] transition-colors">
+        <Link href="/low-sperm-count-oligospermia" className="text-[#0047ca] underline font-semibold hover:text-[#e83e74] transition-colors">
           Low Sperm Count &amp; Motility
         </Link>
       </span>
