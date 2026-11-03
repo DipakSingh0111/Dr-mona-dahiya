@@ -19,7 +19,7 @@
         "type": "text",
         "icon": "globe",
         "label": "International Desk",
-        "href": "#international"
+        "href": "/international-patients"
       },
       {
         "type": "email",
@@ -68,7 +68,7 @@
                 },
                 {
                   "label": "IUI Treatment (Clinical Guide)",
-                  "href": "/iui-treatment"
+                  "href": "/best-iui-doctor-in-noida"
                 },
                 {
                   "label": "Blastocyst Culture & Transfer",
@@ -1353,7 +1353,7 @@
     ],
     "primaryCta": {
       "label": "International patient desk",
-      "href": "#international"
+      "href": "/international-patients"
     },
     "secondaryCta": {
       "label": "Schedule Online Consultation",
@@ -1531,7 +1531,7 @@
     "noidaTreatments": [
       {
         "label": "Best IUI Doctor in Noida",
-        "href": "#"
+        "href": "/best-iui-doctor-in-noida"
       },
       {
         "label": "Female Infertility Specialist Noida",
@@ -1578,13 +1578,13 @@
           "name": "Lajpat Nagar (South Delhi) Center",
           "address": "Building Number 41, First Floor, Ring Road, Block Q, Lajpat Nagar IV, Lajpat Nagar, New Delhi 110024",
           "linkLabel": "Best IUI Doctor in Delhi",
-          "href": "#"
+          "href": "/best-iui-doctor-in-delhi"
         },
         {
           "name": "Rajnagar Ext. (Ghaziabad) Center",
           "address": "2nd Floor, RDC, C-53A, near Bikanerwala, Sector 15, Sector 10, Raj Nagar, Ghaziabad, Uttar Pradesh 201002",
           "linkLabel": "Best IUI Doctor in Ghaziabad",
-          "href": "#"
+          "href": "/best-iui-doctor-in-ghaziabad"
         }
       ]
     },

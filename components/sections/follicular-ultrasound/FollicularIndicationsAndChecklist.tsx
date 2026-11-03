@@ -30,7 +30,7 @@ const indications: { number: string; title: string; description: ReactNode }[] =
         <>
           Insemination 36 hours after trigger. See{" "}
           <Link
-            href="/iui-treatment"
+            href="/best-iui-doctor-in-noida"
             className="font-medium text-[#93c5fd] underline underline-offset-2 hover:text-white"
           >
             IUI Treatment

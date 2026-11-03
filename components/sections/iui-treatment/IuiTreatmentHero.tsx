@@ -7,15 +7,14 @@ import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
 export default function IuiTreatmentHero() {
   const badges = [
-    "25+ years' experience",
-    "25,000+ families treated",
-    "Painless, 10-minute procedure",
-    "Online or in person",
+    "Noida Sector 49",
+    "25+ years of experience",
+    "Also visits Delhi & Ghaziabad",
   ];
 
   return (
     <section
-      className="relative overflow-hidden pt-3 pb-6 sm:pt-4 sm:pb-8 lg:pt-5 lg:pb-9"
+      className="relative flex flex-col justify-center overflow-hidden py-8 sm:py-10 lg:min-h-[calc(100svh-var(--site-header-h,8.75rem))] lg:py-8 xl:py-10"
       style={{
         background:
           "linear-gradient(115deg, #05193d 0%, #00369e 35%, #0047ca 70%, #08286a 100%)",
@@ -39,9 +38,9 @@ export default function IuiTreatmentHero() {
         }}
       />
 
-      <div className="relative mx-auto grid w-full max-w-[1440px] grid-cols-1 items-start gap-6 px-4 sm:gap-7 sm:px-6 lg:grid-cols-12 lg:items-center lg:gap-6 lg:px-8 xl:gap-8">
+      <div className="relative mx-auto grid w-full max-w-[1440px] grid-cols-1 items-start gap-6 px-4 sm:gap-7 sm:px-6 lg:grid-cols-12 lg:items-center lg:gap-8 lg:px-8 xl:gap-12">
         <div className="min-w-0 lg:col-span-7">
-          {/* Breadcrumb: Home / IUI Treatment in Delhi NCR */}
+          {/* Breadcrumb: Home / Our Services / IUI doctor in Noida */}
           <nav aria-label="Breadcrumb" className="mb-4 sm:mb-5">
             <ol className="inline-flex max-w-full flex-wrap items-center gap-1.5 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 shadow-[0_8px_24px_rgba(0,20,80,0.2)] backdrop-blur-md sm:gap-2 sm:px-3.5 sm:py-2">
               <li>
@@ -56,61 +55,73 @@ export default function IuiTreatmentHero() {
               <li className="text-white/40" aria-hidden="true">
                 <FaChevronRight className="size-2.5" />
               </li>
+              <li>
+                <Link
+                  href="/our-services"
+                  className="inline-flex items-center rounded-full px-1.5 py-0.5 text-[12px] font-medium text-white/75 transition-colors hover:bg-white/10 hover:text-white sm:text-[13px]"
+                >
+                  Our Services
+                </Link>
+              </li>
+              <li className="text-white/40" aria-hidden="true">
+                <FaChevronRight className="size-2.5" />
+              </li>
               <li className="truncate">
-                <span className="rounded-full px-1.5 py-0.5 text-[12px] font-semibold text-[#f9a8d4] sm:text-[13px]">
-                  IUI Treatment in Delhi NCR
+                <span className="rounded-full bg-[#e83e74]/20 px-2.5 py-0.5 text-[12px] font-semibold text-[#f9a8d4] ring-1 ring-[#e83e74]/35 sm:px-3 sm:text-[13px]">
+                  IUI doctor in Noida
                 </span>
               </li>
             </ol>
           </nav>
 
           {/* Eyebrow */}
-          <p className="text-[11.5px] font-bold tracking-[0.14em] text-[#f9a8d4] uppercase sm:text-[12.5px]">
-            IUI treatment in Delhi NCR
+          <p className="text-[12px] font-bold tracking-[0.12em] text-[#f9a8d4] uppercase sm:text-[13px] lg:text-[13.5px]">
+            Fertility Doctor in Noida | Best IUI Doctor in Noida
           </p>
 
           {/* Headline */}
-          <h1 className="font-serif mt-1 text-[2.1rem] leading-[1.12] font-normal tracking-tight text-white sm:text-[2.75rem] lg:text-[3.2rem]">
-            Intrauterine Insemination (IUI) Treatment in Delhi, Noida &amp; Ghaziabad
+          <h1 className="font-serif mt-1.5 max-w-[42rem] text-[2.1rem] leading-[1.14] font-normal tracking-tight text-white sm:text-[2.75rem] lg:text-[3.3rem] xl:text-[3.65rem]">
+            IUI Treatment in Noida
           </h1>
 
           {/* Subtitle / Paragraph from image */}
-          <p className="mt-3.5 max-w-2xl text-[14px] leading-relaxed text-slate-200 sm:text-[15.5px]">
-            Intrauterine insemination (IUI) is a first-line fertility treatment in which washed, concentrated, highly motile sperm is placed into the uterus close to ovulation. Guided by Dr. Mona Dahiya across Delhi, Noida and Ghaziabad, our ultrasound-timed protocols give clinical pregnancy rates higher than the industry average.
+          <p className="mt-3.5 max-w-2xl text-[13.5px] leading-relaxed text-slate-100 sm:text-[15px] lg:text-[16px]">
+            Dr. Mona Dahiya has over 25 years&apos; experience in performing IUI in Noida. We will help you understand the IUI procedure and decide if it&apos;s the right option for you. Dr. Mona Dahiya designs a treatment plan for every IUI cycle for all her patients.
           </p>
 
           {/* Action Buttons */}
-          <div className="mt-6 flex flex-wrap items-center gap-3 sm:gap-4">
+          <div className="mt-5 flex flex-wrap items-center gap-3 sm:gap-4 lg:mt-6">
             <a
               href="#book-consultation"
-              className="inline-flex items-center justify-center rounded-xl bg-[#e83e74] px-5 py-2.5 text-[13.5px] font-semibold text-white shadow-[0_4px_18px_rgba(232,62,116,0.35)] transition-all hover:bg-[#d42c63] hover:shadow-[0_6px_22px_rgba(232,62,116,0.5)] sm:px-6 sm:py-3 sm:text-[14.5px]"
+              className="inline-flex items-center justify-center rounded-full bg-[#c53658] px-5 py-2.5 text-[13px] font-semibold text-white shadow-[0_4px_16px_rgba(197,54,88,0.35)] transition-all hover:bg-[#d82d64] hover:shadow-[0_6px_20px_rgba(197,54,88,0.45)] sm:px-6 sm:py-3 sm:text-[14px] lg:text-[15px]"
             >
-              Book In-Clinic Consultation
+              Book An Appointment At Clinic
             </a>
 
-            <a
-              href="#book-consultation"
-              className="inline-flex items-center justify-center rounded-xl bg-[#0047ca] px-5 py-2.5 text-[13.5px] font-semibold text-white shadow-[0_4px_18px_rgba(0,71,202,0.35)] transition-all hover:bg-[#0038a8] hover:shadow-[0_6px_22px_rgba(0,71,202,0.5)] sm:px-6 sm:py-3 sm:text-[14.5px]"
+            <Link
+              href="/ivf-consultation-online"
+              className="inline-flex items-center justify-center rounded-full bg-[#0047ca] px-5 py-2.5 text-[13px] font-semibold text-white shadow-[0_4px_16px_rgba(0,71,202,0.35)] transition-all hover:bg-[#0037a3] hover:shadow-[0_6px_20px_rgba(0,71,202,0.45)] sm:px-6 sm:py-3 sm:text-[14px] lg:text-[15px]"
             >
-              Schedule Online Consultation
-            </a>
+              Online Consultation
+            </Link>
           </div>
 
           {/* Google Reviews link */}
-          <div className="mt-4">
+          <div className="mt-4 sm:mt-5">
             <Link
-              href="#patient-reviews"
-              className="inline-flex items-center gap-1.5 text-[13px] font-medium text-slate-200 transition-colors hover:text-white"
+              href="/best-ivf-patient-reviews"
+              className="inline-flex items-center gap-1.5 text-[12.5px] font-semibold text-[#f9a8d4] transition-colors hover:text-white hover:underline sm:text-[13.5px] lg:text-[14px]"
             >
-              Read Dr. Mona&apos;s Google reviews →
+              Read Dr. Mona Dahiya&apos;s Google reviews
+              <span aria-hidden>→</span>
             </Link>
           </div>
 
           {/* Badges */}
-          <Stagger delay={0.05} className="mt-5 flex flex-wrap items-center gap-2 sm:gap-2.5">
-            {badges.map((badge, idx) => (
-              <StaggerItem key={idx}>
-                <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[11.5px] font-medium text-white shadow-sm backdrop-blur-md sm:text-[12.5px]">
+          <Stagger className="mt-4 flex flex-wrap items-center gap-2 sm:mt-5 sm:gap-2.5 lg:mt-6" stagger={0.06}>
+            {badges.map((badge) => (
+              <StaggerItem key={badge}>
+                <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[11px] font-medium text-white/90 shadow-sm backdrop-blur-md sm:px-3.5 sm:py-1.5 sm:text-[12px] lg:text-[12.5px]">
                   {badge}
                 </span>
               </StaggerItem>
@@ -118,23 +129,32 @@ export default function IuiTreatmentHero() {
           </Stagger>
         </div>
 
-        {/* Right Column: Hero Image */}
-        <div className="relative mx-auto w-full max-w-[400px] lg:col-span-5 lg:max-w-[420px] xl:max-w-[440px]">
-          <Reveal variant="scaleIn">
-            <div className="relative overflow-hidden rounded-[20px] border-[3px] border-white/80 shadow-[0_20px_50px_rgba(0,10,40,0.45)] sm:rounded-[24px]">
-              <Image
-                src="/images/about-mona-dahiya/iui-treatment.jpg"
-                alt="Intrauterine Insemination (IUI) Treatment - Dr. Mona Dahiya"
-                width={540}
-                height={550}
-                className="max-h-[380px] sm:max-h-[440px] lg:max-h-[460px] w-full object-cover object-top"
-                priority
-              />
-            </div>
-          </Reveal>
-        </div>
+        {/* Doctor Photo in Rounded Card */}
+        <Reveal
+          delay={0.1}
+          variant="slideRight"
+          className="relative mx-auto w-full max-w-[280px] justify-self-center sm:max-w-[320px] lg:col-span-5 lg:mx-0 lg:max-w-[380px] lg:justify-self-end xl:max-w-[430px]"
+        >
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -inset-2 rounded-[28px] opacity-70 blur-xl"
+            style={{
+              background:
+                "radial-gradient(circle, rgba(232,62,116,0.35) 0%, rgba(59,130,246,0.25) 50%, transparent 75%)",
+            }}
+          />
+          <div className="relative aspect-[3/4] max-h-[min(50vh,400px)] overflow-hidden rounded-[24px] border-4 border-white bg-white shadow-[0_18px_40px_rgba(0,18,60,0.5)] sm:rounded-[28px] lg:max-h-[min(65vh,480px)] xl:max-h-[min(70vh,540px)]">
+            <Image
+              src="/images/IUI-treatment.jpg"
+              alt="Dr. Mona Dahiya — IUI Treatment in Noida"
+              fill
+              priority
+              sizes="(max-width: 1024px) 320px, (max-width: 1280px) 380px, 440px"
+              className="object-cover object-center"
+            />
+          </div>
+        </Reveal>
       </div>
     </section>
   );
 }
-

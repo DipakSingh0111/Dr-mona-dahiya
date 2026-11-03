@@ -98,7 +98,7 @@ export default function AboutFAQ() {
           </Link>
           ,{" "}
           <Link
-            href="/iui-treatment"
+            href="/best-iui-doctor-in-noida"
             className="text-teal-400 underline decoration-teal-400/40 underline-offset-2 hover:text-teal-300"
           >
             IUI
