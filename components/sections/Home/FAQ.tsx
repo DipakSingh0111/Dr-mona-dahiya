@@ -85,7 +85,7 @@ function FaqCard({
 }
 
 export default function FAQ() {
-  const { titlePrefix, titleHighlight, cta, leftFaqs, rightFaqs } =
+  const { eyebrow, titlePrefix, titleHighlight, cta, leftFaqs, rightFaqs } =
     siteData.faq;
 
   const [openId, setOpenId] = useState<string | null>("faq-01");
@@ -124,10 +124,22 @@ export default function FAQ() {
       <div className="mx-auto w-full max-w-[1440px]">
         <Reveal>
           <header className="mb-7 flex flex-col items-start justify-between gap-4 sm:mb-9 sm:flex-row sm:items-center">
-            <h2 className="font-serif text-2xl font-bold tracking-tight text-[#0f2438] sm:whitespace-nowrap sm:text-3xl lg:text-[2.2rem] xl:text-[2.75rem]">
-              <span>{titlePrefix} </span>
-              <span className="text-[#e11d68]">{titleHighlight}</span>
-            </h2>
+            <div>
+              {eyebrow ? (
+                <p className="mb-2 text-[12px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:text-[13px]">
+                  {eyebrow}
+                </p>
+              ) : null}
+              <h2 className="font-serif text-2xl font-bold tracking-tight text-[#0f2438] sm:whitespace-nowrap sm:text-3xl lg:text-[2.2rem] xl:text-[2.75rem]">
+                <span>{titlePrefix}</span>
+                {titleHighlight ? (
+                  <>
+                    {" "}
+                    <span className="text-[#e11d68]">{titleHighlight}</span>
+                  </>
+                ) : null}
+              </h2>
+            </div>
             {cta ? (
               <a
                 href={cta.href}

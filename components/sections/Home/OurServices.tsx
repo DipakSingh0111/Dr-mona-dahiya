@@ -181,13 +181,6 @@ export default function OurServices() {
                     boxShadow: `0 10px 30px ${theme.glow}`,
                   }}
                 >
-                  {/* Subtle decorative gradient top bar */}
-                  <div
-                    aria-hidden
-                    className="absolute top-0 inset-x-0 h-1.5 opacity-80"
-                    style={{ backgroundColor: theme.color }}
-                  />
-
                   <div>
                     <div className="mb-5 flex items-center justify-between">
                       <div

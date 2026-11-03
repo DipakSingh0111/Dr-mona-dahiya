@@ -94,14 +94,14 @@ export default function StatsCards({ stats }: { stats: StatItem[] }) {
 
   return (
     <div ref={ref} className="w-full">
-      <Stagger className="grid grid-cols-2 gap-5 xl:gap-6" stagger={0.08}>
+      <Stagger className="grid grid-cols-2 gap-4 sm:gap-4.5 xl:gap-5" stagger={0.08}>
         {stats.map((stat) => (
           <StaggerItem key={stat.label} variant="scaleIn" className="min-w-0">
-            <div className="stat-tile flex h-full flex-col justify-center rounded-2xl border border-white/30 bg-[rgba(255,255,255,0.12)] px-5 py-3.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.14)] backdrop-blur-[1px] xl:px-6 xl:py-4">
-              <p className="stat-value font-display text-[1.75rem] leading-none font-bold tracking-tight whitespace-nowrap text-white tabular-nums xl:text-[2.25rem]">
+            <div className="stat-tile flex h-full flex-col justify-center rounded-2xl border border-white/30 bg-[rgba(255,255,255,0.12)] px-4.5 py-3.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.14)] backdrop-blur-[1px] sm:px-5 sm:py-4 xl:px-6 xl:py-4.5">
+              <p className="stat-value font-display text-[2rem] leading-none font-bold tracking-tight whitespace-nowrap text-white tabular-nums sm:text-[2.25rem] xl:text-[2.65rem]">
                 <StatValue stat={stat} active={active} />
               </p>
-              <p className="stat-label mt-2 text-[13px] leading-snug font-medium whitespace-nowrap text-white/85 xl:mt-2 xl:text-[14.5px]">
+              <p className="stat-label mt-2 text-[14px] leading-snug font-medium whitespace-nowrap text-white/90 sm:text-[15px] xl:mt-2.5 xl:text-[16px]">
                 {stat.label}
               </p>
             </div>

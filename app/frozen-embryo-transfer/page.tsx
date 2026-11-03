@@ -6,6 +6,7 @@ import FetIndicationsAndChecklist from "@/components/sections/frozen-embryo-tran
 import FetProtocolWhyAndCase from "@/components/sections/frozen-embryo-transfer/FetProtocolWhyAndCase";
 import FetCostAndFaq from "@/components/sections/frozen-embryo-transfer/FetCostAndFaq";
 import FetRelatedTreatments from "@/components/sections/frozen-embryo-transfer/FetRelatedTreatments";
+import ClinicsAppointmentCards from "@/components/sections/ClinicsAppointmentCards";
 import AboutConsultation from "@/components/sections/about-mona-dahiya/AboutConsultation";
 import AboutParenthoodCta from "@/components/sections/about-mona-dahiya/AboutParenthoodCta";
 
@@ -41,6 +42,14 @@ export default function FrozenEmbryoTransferPage() {
 
       <SectionReveal delay={0.04}>
         <FetRelatedTreatments />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <ClinicsAppointmentCards
+          eyebrow="Visit Dr. Mona"
+          title="Book a Consultation at Our Clinics"
+          subtitle="Dr. Mona sees patients in Noida, Ghaziabad and Delhi, and offers online consultations."
+        />
       </SectionReveal>
 
       <SectionReveal delay={0.04}>

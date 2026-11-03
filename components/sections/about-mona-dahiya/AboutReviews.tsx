@@ -10,10 +10,8 @@ export default function AboutReviews() {
       name: "Shivam Singh",
       source: "Google patient review",
       comment:
-        "Unlike other fertility doctors who seem to have major Ego issues,Dr Mona Dahiya is so lovable and approachable. She provides individualized attention so that couples feel heard and supported. We were always well-informed for the medicines,tests and costs involved.We will rate her as simply exceptional.",
-      reaction: "🔥 1",
+        "Unlike other fertility doctors who seem to have major Ego issues,Dr Mona Dahiya is so lovable and approachable. She provides individualized attention so that couples feel heard and supported. We were always well-informed for the medicines,tests and costs involved.We will rate her as simply exceptional. 🔥 1",
       avatarBg: "bg-[#e83e74]",
-      accentBorder: "hover:border-[#e83e74]/50",
     },
     {
       initial: "C",
@@ -21,9 +19,7 @@ export default function AboutReviews() {
       source: "Google patient review",
       comment:
         "Dr. Mona provides ethical infertility care with amazing success results. Her explanations are very clear and the costs are transparent. She prioritizes necessary treatments and has very good infertility experience. I Highly recommend Doctor Mona as one of the Best Fertility doctors in the world today.",
-      reaction: null,
-      avatarBg: "bg-[#0047ca]",
-      accentBorder: "hover:border-[#0047ca]/50",
+      avatarBg: "bg-[#e83e74]",
     },
     {
       initial: "A",
@@ -31,76 +27,51 @@ export default function AboutReviews() {
       source: "Google patient review",
       comment:
         "Choosing IVF procedure was an emotional journey, but Dr. Mona Dahiya's compassionate guidance made all the difference. Her ethical approach and high moral values gave us peace of mind. Today, we hold our healthy baby boy in our arms, forever grateful for the selfless gift of Dr. Dahiya's expertise.",
-      reaction: null,
-      avatarBg: "bg-[#c53658]",
-      accentBorder: "hover:border-[#c53658]/50",
+      avatarBg: "bg-[#e83e74]",
     },
   ];
 
   return (
-    <section id="reviews" className="relative overflow-hidden bg-slate-50/70 px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
-      {/* Soft ambient theme glow */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -top-24 right-1/4 h-[340px] w-[460px] rounded-full opacity-40 blur-3xl"
-        style={{
-          background:
-            "radial-gradient(circle, rgba(232,62,116,0.12) 0%, rgba(0,71,202,0.08) 50%, transparent 70%)",
-        }}
-      />
-
+    <section id="reviews" className="relative overflow-hidden bg-[#061532] px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
       <div className="relative mx-auto w-full max-w-[1440px]">
-        {/* Section Header matching Theme */}
-        <Reveal className="mb-10 sm:mb-12">
-          <span className="text-[12px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:text-[13px]">
-            Patient reviews
+        <Reveal className="mb-8">
+          <span className="text-[12px] font-semibold tracking-wider text-[#e83e74] uppercase sm:text-[13px]">
+            Reviews
           </span>
 
-          <h2 className="font-display mt-2 text-[2rem] leading-[1.18] font-bold tracking-tight text-[#0f2438] sm:text-[2.65rem] lg:text-[2.85rem]">
-            What Patients Say About Dr. Mona
+          <h2 className="font-serif mt-2 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-white sm:text-[2.2rem] lg:text-[2.45rem]">
+            Feedback From Our Patients.
           </h2>
 
-          <p className="mt-3 max-w-2xl text-[13.5px] leading-relaxed text-[#64748b] sm:text-[15px]">
-            Individual experiences in patients&apos; own words.
+          <p className="mt-2.5 max-w-2xl text-[13.5px] leading-relaxed text-slate-300 sm:text-[14.5px]">
+            Here are some of the feedback from our patients.
           </p>
         </Reveal>
 
-        {/* 3 Review Cards Grid matching Theme */}
         <Stagger
-          className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-7"
+          className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 lg:gap-6"
           stagger={0.08}
         >
           {reviews.map((rev) => (
             <StaggerItem key={rev.name} variant="scaleIn" className="h-full">
-              <article
-                className={`group relative flex h-full flex-col justify-between overflow-hidden rounded-[24px] border border-slate-200/90 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-8 ${rev.accentBorder}`}
-              >
+              <article className="group relative flex h-full flex-col justify-between overflow-hidden rounded-[20px] border border-white/10 bg-[#091a3c]/75 p-6 backdrop-blur-md transition-all duration-300 hover:border-[#e83e74]/40 hover:bg-[#0c224e] sm:p-7">
                 <div>
-                  {/* Review Text */}
-                  <p className="text-[14px] leading-relaxed text-slate-700 sm:text-[14.5px]">
-                    &ldquo;{rev.comment}&rdquo;
+                  <p className="text-[13.5px] leading-relaxed text-slate-200 sm:text-[14px]">
+                    {rev.comment}
                   </p>
-
-                  {/* Reaction icon if present */}
-                  {rev.reaction && (
-                    <div className="mt-3 inline-flex items-center gap-1 rounded-md border border-slate-200 bg-slate-50 px-2 py-0.5 text-[12px] font-medium text-slate-700 shadow-2xs">
-                      <span>{rev.reaction}</span>
-                    </div>
-                  )}
                 </div>
 
-                {/* Author Info matching Theme */}
-                <div className="mt-7 flex items-center gap-3.5 border-t border-slate-100 pt-5">
+                <div className="mt-6 flex items-center gap-3.5 border-t border-white/10 pt-5">
                   <div
-                    className={`flex size-11 shrink-0 items-center justify-center rounded-full text-base font-bold text-white shadow-sm ${rev.avatarBg}`}
+                    className={`flex size-10 shrink-0 items-center justify-center rounded-full text-[14px] font-bold text-white shadow-sm ${rev.avatarBg}`}
                   >
                     {rev.initial}
                   </div>
                   <div>
-                    <h3 className="text-[15px] font-bold text-[#0f2438]">
+                    <h3 className="text-[14.5px] font-bold text-white">
                       {rev.name}
                     </h3>
-                    <p className="text-[12.5px] text-slate-500">{rev.source}</p>
+                    <p className="text-[12px] text-slate-400">{rev.source}</p>
                   </div>
                 </div>
               </article>
@@ -108,13 +79,12 @@ export default function AboutReviews() {
           ))}
         </Stagger>
 
-        {/* Action Button matching Theme */}
-        <div className="mt-10 sm:mt-12">
+        <div className="mt-8">
           <Link
             href="/best-ivf-patient-reviews"
-            className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-7 py-3 text-[13.5px] font-semibold text-slate-800 shadow-sm transition-all duration-200 hover:border-[#e83e74] hover:bg-[#e83e74] hover:text-white hover:shadow-lg hover:shadow-[#e83e74]/25 active:scale-98"
+            className="inline-flex items-center justify-center rounded-full border border-teal-500/50 bg-teal-500/10 px-6 py-2.5 text-[13px] font-medium text-teal-300 shadow-sm backdrop-blur-md transition-all duration-200 hover:border-teal-400 hover:bg-teal-500/20 hover:text-white active:scale-95 sm:text-[13.5px]"
           >
-            Read All Patient Reviews
+            View More Reviews
           </Link>
         </div>
       </div>

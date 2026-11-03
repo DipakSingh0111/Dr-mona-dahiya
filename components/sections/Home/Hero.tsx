@@ -24,30 +24,24 @@ export default function Hero() {
       ? heroSlides
       : [{ image: backgroundImage, eyebrow, title }];
 
-  const slideFits = ["object-cover", "object-cover", "object-cover"];
+  const slideFits = ["object-cover", "object-cover"];
 
   const slidePositions = [
-    // Award group — shifted down with generous top headroom so "TIMES NETWORK" text is completely clear of the navbar
+    // Award group — headroom clear of navbar
     "object-right sm:object-[92%_15%]",
-    // Outdoor portrait — wide format, doctor on right side, clear headroom
+    // Outdoor portrait — doctor on right, clear headroom
     "object-right sm:object-[95%_12%]",
-    // Red-curtain portrait — wide format, doctor on right side, clear headroom
-    "object-right sm:object-[95%_10%]",
   ];
 
-  // Solid fallback + photo-matched fill for award letterbox
-  const slideBackdrops = ["#2b48d8", "#122a52", "#1e1e40"];
+  const slideBackdrops = ["#2b48d8", "#122a52"];
   const slideBackdropFills = [
     "linear-gradient(180deg, #2245d5 0%, #353ecb 35%, #3f3ab0 70%, #443ea8 100%)",
     "#122a52",
-    "#1e1e40",
   ];
 
   const slideVeils = [
-    // Soft subtle veil on left edge for readability
     "linear-gradient(90deg, rgba(34,69,213,0.65) 0%, rgba(38,72,216,0.3) 30%, transparent 55%)",
     "linear-gradient(90deg, rgba(12,32,70,0.85) 0%, rgba(14,38,85,0.45) 28%, transparent 52%)",
-    "linear-gradient(90deg, rgba(20,20,50,0.85) 0%, rgba(30,25,55,0.45) 28%, transparent 52%)",
   ];
 
   const [activeSlide, setActiveSlide] = useState(0);
@@ -84,8 +78,6 @@ export default function Hero() {
             slideBackdrops[index % slideBackdrops.length] || "#163f8a";
           const backdropFill =
             slideBackdropFills[index % slideBackdropFills.length] || backdrop;
-          const isContain =
-            slideFits[index % slideFits.length] === "object-contain";
           return (
             <div
               key={src}
@@ -152,9 +144,9 @@ export default function Hero() {
       />
 
       <div className="hero-content relative z-20 mx-auto flex w-full max-w-[1440px] flex-1 items-center px-4 pt-5 pb-7 sm:px-6 lg:px-8">
-        <div className="hero-copy flex w-full max-w-[390px] flex-col gap-4.5 sm:max-w-[410px] xl:max-w-[430px] xl:gap-5">
+        <div className="hero-copy flex w-full max-w-[430px] flex-col gap-4.5 sm:max-w-[460px] xl:max-w-[490px] xl:gap-5">
           <HeroReveal key={`eyebrow-${activeSlide}`} delay={0.05}>
-            <p className="hero-eyebrow text-[11.5px] font-semibold tracking-[0.14em] text-white/90 uppercase transition-all duration-500 sm:tracking-[0.16em] lg:text-[12.5px] xl:text-[13px] xl:tracking-[0.18em]">
+            <p className="hero-eyebrow text-[12.5px] font-semibold tracking-[0.14em] text-white/90 uppercase transition-all duration-500 sm:text-[13.5px] sm:tracking-[0.16em] lg:text-[14px] xl:text-[15px] xl:tracking-[0.18em]">
               {currentSlide.eyebrow || eyebrow}
             </p>
             <h1 className="hero-title font-display font-bold tracking-tight text-white transition-all duration-500">
@@ -163,28 +155,28 @@ export default function Hero() {
           </HeroReveal>
 
           <HeroReveal delay={0.22}>
-            <div className="hero-stats w-full max-w-[380px] sm:max-w-[395px] xl:max-w-[410px]">
+            <div className="hero-stats w-full max-w-[420px] sm:max-w-[450px] xl:max-w-[480px]">
               <StatsCards stats={stats} />
             </div>
           </HeroReveal>
 
           <HeroReveal delay={0.32}>
-            <div className="hero-ctas grid w-full max-w-[380px] grid-cols-2 gap-3.5 sm:max-w-[395px] xl:max-w-[410px] xl:gap-4">
+            <div className="hero-ctas grid w-full max-w-[420px] grid-cols-2 gap-3.5 sm:max-w-[450px] xl:max-w-[480px] xl:gap-4">
               <a
                 href={primaryCta.href}
-                className="hero-cta inline-flex h-11 w-full items-center justify-center gap-2 rounded-full bg-[#e83e74] px-3 text-[12px] font-bold whitespace-nowrap text-white shadow-[0_10px_24px_rgba(232,62,116,0.35)] transition-all hover:bg-[#c53658] sm:h-12 sm:gap-2.5 sm:px-3.5 sm:text-[13.5px] xl:h-[3.35rem] xl:text-[14.5px]"
+                className="hero-cta inline-flex h-11 w-full items-center justify-center gap-2 rounded-full bg-[#e83e74] px-3.5 text-[13.5px] font-bold whitespace-nowrap text-white shadow-[0_10px_24px_rgba(232,62,116,0.35)] transition-all hover:bg-[#c53658] sm:h-12.5 sm:gap-2.5 sm:px-4 sm:text-[14.5px] xl:h-[3.45rem] xl:text-[15.5px]"
               >
-                <CalendarIcon className="size-3.5 shrink-0 sm:size-4 xl:size-[17px]" />
+                <CalendarIcon className="size-4 shrink-0 sm:size-4.5 xl:size-5" />
                 {primaryCta.label}
               </a>
               <a
                 href={secondaryCta.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hero-cta inline-flex h-11 w-full items-center justify-center gap-2 rounded-full border border-white/55 bg-transparent px-3 text-[12px] font-bold whitespace-nowrap text-white transition-all hover:bg-white/10 sm:h-12 sm:gap-2.5 sm:px-3.5 sm:text-[13.5px] xl:h-[3.35rem] xl:text-[14.5px]"
+                className="hero-cta inline-flex h-11 w-full items-center justify-center gap-2 rounded-full border border-white/55 bg-transparent px-3.5 text-[13.5px] font-bold whitespace-nowrap text-white transition-all hover:bg-white/10 sm:h-12.5 sm:gap-2.5 sm:px-4 sm:text-[14.5px] xl:h-[3.45rem] xl:text-[15.5px]"
               >
-                <span className="inline-flex h-[14px] w-[20px] shrink-0 items-center justify-center rounded-[4px] bg-[#e50914] text-white sm:h-4 sm:w-[22px] xl:h-[18px] xl:w-6">
-                  <PlayIcon className="ml-0.5 size-2 fill-white text-white sm:size-2.5 xl:size-[11px]" />
+                <span className="inline-flex h-[15px] w-[21px] shrink-0 items-center justify-center rounded-[4px] bg-[#e50914] text-white sm:h-[17px] sm:w-[23px] xl:h-[19px] xl:w-[25px]">
+                  <PlayIcon className="ml-0.5 size-2.5 fill-white text-white sm:size-3 xl:size-3" />
                 </span>
                 {secondaryCta.label}
               </a>
@@ -192,19 +184,20 @@ export default function Hero() {
           </HeroReveal>
 
           <HeroReveal delay={0.4}>
-            <div className="hero-review-badge flex w-fit items-center gap-2 rounded-full border border-[#fed7aa] bg-[#fffbf2] px-4 py-2 whitespace-nowrap shadow-sm backdrop-blur-md xl:px-4.5 xl:py-2.5">
+            <div className="hero-review-badge flex w-fit items-center gap-2.5 rounded-full border border-[#fed7aa] bg-[#fffbf2] px-4 py-2 whitespace-nowrap shadow-sm backdrop-blur-md xl:px-5 xl:py-2.5">
               <div className="flex items-center gap-0.5 text-[#f59e0b]">
-                <FaStar className="size-3.5 fill-current xl:size-4" />
-                <FaStar className="size-3.5 fill-current xl:size-4" />
-                <FaStar className="size-3.5 fill-current xl:size-4" />
-                <FaStar className="size-3.5 fill-current xl:size-4" />
-                <FaStar className="size-3.5 fill-current xl:size-4" />
+                <FaStar className="size-4 fill-current xl:size-4.5" />
+                <FaStar className="size-4 fill-current xl:size-4.5" />
+                <FaStar className="size-4 fill-current xl:size-4.5" />
+                <FaStar className="size-4 fill-current xl:size-4.5" />
+                <FaStar className="size-4 fill-current xl:size-4.5" />
               </div>
-              <span className="text-[13px] font-bold text-[#0f2438] xl:text-[14px]">
+              <span className="text-[14px] font-bold text-[#0f2438] xl:text-[15px]">
                 4.9
               </span>
-              <span className="text-[12px] font-medium text-gray-600 xl:text-[13px]">
-                Google patient reviews
+              <span className="text-[13px] font-medium text-gray-700 xl:text-[14px]">
+                {siteData.hero.googleReviewsLabel ??
+                  "Read Dr. Mona Dahiya's Google reviews"}
               </span>
             </div>
           </HeroReveal>

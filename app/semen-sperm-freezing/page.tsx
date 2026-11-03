@@ -7,6 +7,7 @@ import SpermFreezingProtocolAndWhy from "@/components/sections/semen-sperm-freez
 import SpermFreezingCaseAndCost from "@/components/sections/semen-sperm-freezing/SpermFreezingCaseAndCost";
 import SpermFreezingFaq from "@/components/sections/semen-sperm-freezing/SpermFreezingFaq";
 import SpermFreezingRelatedTreatments from "@/components/sections/semen-sperm-freezing/SpermFreezingRelatedTreatments";
+import ClinicsAppointmentCards from "@/components/sections/ClinicsAppointmentCards";
 import AboutConsultation from "@/components/sections/about-mona-dahiya/AboutConsultation";
 import AboutParenthoodCta from "@/components/sections/about-mona-dahiya/AboutParenthoodCta";
 
@@ -46,6 +47,14 @@ export default function SpermFreezingPage() {
 
       <SectionReveal delay={0.04}>
         <SpermFreezingRelatedTreatments />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <ClinicsAppointmentCards
+          eyebrow="Visit Dr. Mona"
+          title="Book a Consultation at Our Clinics"
+          subtitle="Dr. Mona sees patients in Noida, Ghaziabad and Delhi, and offers online consultations."
+        />
       </SectionReveal>
 
       <SectionReveal delay={0.04}>

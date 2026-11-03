@@ -271,7 +271,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .hero-title {
   margin-top: 0.35rem;
-  font-size: clamp(2rem, 7vw, 2.5rem);
+  font-size: clamp(2.35rem, 7.5vw, 2.9rem);
   line-height: 1.08;
 }
 
@@ -291,7 +291,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 
   .hero-title {
-    font-size: clamp(2.25rem, 3.8vw, 2.85rem);
+    font-size: clamp(2.65rem, 4.2vw, 3.35rem);
   }
 }
 
@@ -321,12 +321,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 
   .hero-copy {
-    gap: clamp(0.7rem, 1.6svh, 1.2rem) !important;
+    gap: clamp(0.75rem, 1.6svh, 1.25rem) !important;
   }
 
   .hero-title {
     margin-top: 0.2rem;
-    font-size: clamp(2.15rem, 4.2svh, 2.9rem);
+    font-size: clamp(2.6rem, 4.8svh, 3.45rem);
   }
 
   .hero-review-badge {
@@ -338,24 +338,28 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 
   .hero-stats .stat-value {
-    font-size: clamp(1.35rem, 3.2svh, 2rem) !important;
+    font-size: clamp(1.75rem, 3.8svh, 2.45rem) !important;
+  }
+
+  .hero-stats .stat-label {
+    font-size: clamp(14px, 1.8svh, 16px) !important;
   }
 
   .hero-cta {
-    height: clamp(2.9rem, 5.8svh, 3.75rem) !important;
+    height: clamp(3rem, 6svh, 3.85rem) !important;
     width: 100% !important;
     min-width: 0 !important;
-    font-size: clamp(12.5px, 1.9svh, 15.5px) !important;
+    font-size: clamp(13.5px, 2.1svh, 16px) !important;
   }
 }
 
 @media (min-width: 1280px) {
   .hero-title {
-    font-size: clamp(2.55rem, 5svh, 3.45rem);
+    font-size: clamp(3.1rem, 5.8svh, 4rem);
   }
 
   .hero-copy {
-    gap: clamp(0.85rem, 1.8svh, 1.35rem) !important;
+    gap: clamp(0.9rem, 1.8svh, 1.4rem) !important;
   }
 }
 

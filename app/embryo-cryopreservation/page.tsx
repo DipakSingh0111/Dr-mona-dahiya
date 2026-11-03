@@ -6,6 +6,7 @@ import EmbryoFreezingIndicationsAndChecklist from "@/components/sections/embryo-
 import EmbryoFreezingProtocolWhyAndCase from "@/components/sections/embryo-cryopreservation/EmbryoFreezingProtocolWhyAndCase";
 import EmbryoFreezingCostAndFaq from "@/components/sections/embryo-cryopreservation/EmbryoFreezingCostAndFaq";
 import EmbryoFreezingRelatedTreatments from "@/components/sections/embryo-cryopreservation/EmbryoFreezingRelatedTreatments";
+import ClinicsAppointmentCards from "@/components/sections/ClinicsAppointmentCards";
 import AboutConsultation from "@/components/sections/about-mona-dahiya/AboutConsultation";
 import AboutParenthoodCta from "@/components/sections/about-mona-dahiya/AboutParenthoodCta";
 
@@ -41,6 +42,14 @@ export default function EmbryoFreezingPage() {
 
       <SectionReveal delay={0.04}>
         <EmbryoFreezingRelatedTreatments />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <ClinicsAppointmentCards
+          eyebrow="Visit Dr. Mona"
+          title="Book a Consultation at Our Clinics"
+          subtitle="Dr. Mona sees patients in Noida, Ghaziabad and Delhi, and offers online consultations."
+        />
       </SectionReveal>
 
       <SectionReveal delay={0.04}>

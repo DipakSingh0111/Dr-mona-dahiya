@@ -71,31 +71,36 @@ export default function Testimonials() {
   } = siteData.successStories;
 
   const [activeCategory, setActiveCategory] = useState("ivf");
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const STEP = 4;
+  const total = testimonials.length;
+  const totalPages = Math.ceil(total / STEP);
+
+  const [page, setPage] = useState(0);
   const [paused, setPaused] = useState(false);
   const touchStartX = useRef(0);
-  const total = testimonials.length;
 
-  const goTo = (index: number) => {
-    setCurrentIndex(((index % total) + total) % total);
+  const goToPage = (nextPage: number) => {
+    setPage(((nextPage % totalPages) + totalPages) % totalPages);
   };
 
-  const handlePrev = () => goTo(currentIndex - 1);
-  const handleNext = () => goTo(currentIndex + 1);
+  const handlePrev = () => goToPage(page - 1);
+  const handleNext = () => goToPage(page + 1);
 
   const onAutoNext = useEffectEvent(() => {
-    if (!paused) goTo(currentIndex + 1);
+    if (!paused) goToPage(page + 1);
   });
 
   useEffect(() => {
-    const id = window.setInterval(() => onAutoNext(), 4200);
+    const id = window.setInterval(() => onAutoNext(), 5000);
     return () => window.clearInterval(id);
   }, []);
 
-  // Build a window of 4 cards starting at currentIndex (wrapping)
+  const startIndex = (page * STEP) % total;
+
+  // Build a window of 4 cards starting at startIndex (wrapping)
   const visible = Array.from({ length: 4 }, (_, i) => {
-    const item = testimonials[(currentIndex + i) % total];
-    return { ...item, key: `${item.id}-${currentIndex}-${i}` };
+    const item = testimonials[(startIndex + i) % total];
+    return { ...item, key: `${item.id}-${page}-${i}` };
   });
 
   return (
@@ -129,7 +134,7 @@ export default function Testimonials() {
             className="w-full min-w-0 flex-1 p-0 lg:max-w-[780px] lg:pr-14 xl:max-w-[840px]"
           >
             <h3 className="font-display mb-3.5 text-[17px] font-bold whitespace-nowrap text-[#0f2438] sm:text-[18px]">
-              Browse stories by treatment
+              Filter By Treatment
             </h3>
             <Stagger
               className="grid grid-cols-3 gap-2.5 pb-1 sm:grid-cols-6 sm:gap-2.5 xl:gap-3"
@@ -196,7 +201,7 @@ export default function Testimonials() {
           >
             {/* Desktop 4-card grid with fade/slide */}
             <div
-              key={currentIndex}
+              key={page}
               className="story-slide hidden gap-4 md:grid md:grid-cols-2 lg:grid-cols-4 lg:gap-5"
             >
               {visible.map((item) => (
@@ -205,8 +210,8 @@ export default function Testimonials() {
             </div>
 
             {/* Mobile single card */}
-            <div key={`m-${currentIndex}`} className="story-slide md:hidden">
-              <TestimonialCard item={testimonials[currentIndex]} />
+            <div key={`m-${page}`} className="story-slide md:hidden">
+              <TestimonialCard item={testimonials[startIndex]} />
             </div>
           </div>
 
@@ -221,20 +226,25 @@ export default function Testimonials() {
         </div>
         </Reveal>
 
-        <div className="mt-8 flex items-center justify-center gap-2.5">
-          {testimonials.map((_, idx) => (
-            <button
-              key={idx}
-              type="button"
-              onClick={() => goTo(idx)}
-              aria-label={`Go to slide ${idx + 1}`}
-              className={`h-2.5 cursor-pointer rounded-full transition-all duration-300 ease-out ${
-                currentIndex === idx
-                  ? "w-6 bg-[#e83e74]"
-                  : "w-2.5 bg-[#ffd1e0] hover:bg-[#fca5c2]"
-              }`}
-            />
-          ))}
+        <div className="mt-8 flex flex-col items-center justify-center gap-2.5">
+          <div className="flex items-center justify-center gap-2.5">
+            {Array.from({ length: totalPages }).map((_, idx) => (
+              <button
+                key={idx}
+                type="button"
+                onClick={() => goToPage(idx)}
+                aria-label={`Go to slide set ${idx + 1}`}
+                className={`h-2.5 cursor-pointer rounded-full transition-all duration-300 ease-out ${
+                  page === idx
+                    ? "w-6 bg-[#e83e74]"
+                    : "w-2.5 bg-[#ffd1e0] hover:bg-[#fca5c2]"
+                }`}
+              />
+            ))}
+          </div>
+          <p className="text-[12px] text-[#94a3b8]">
+            {testimonials.length} testimonials - scroll sideways to read more
+          </p>
         </div>
       </div>
     </section>

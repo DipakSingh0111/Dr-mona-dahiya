@@ -6,6 +6,7 @@ import HysteroscopyIndicationsAndChecklist from "@/components/sections/hysterosc
 import HysteroscopyProtocolWhyAndCase from "@/components/sections/hysteroscopy-treatment/HysteroscopyProtocolWhyAndCase";
 import HysteroscopyCostAndFaq from "@/components/sections/hysteroscopy-treatment/HysteroscopyCostAndFaq";
 import HysteroscopyRelatedTreatments from "@/components/sections/hysteroscopy-treatment/HysteroscopyRelatedTreatments";
+import ClinicsAppointmentCards from "@/components/sections/ClinicsAppointmentCards";
 import AboutConsultation from "@/components/sections/about-mona-dahiya/AboutConsultation";
 import AboutParenthoodCta from "@/components/sections/about-mona-dahiya/AboutParenthoodCta";
 
@@ -41,6 +42,14 @@ export default function HysteroscopyPage() {
 
       <SectionReveal delay={0.04}>
         <HysteroscopyRelatedTreatments />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <ClinicsAppointmentCards
+          eyebrow="Visit Dr. Mona"
+          title="Book a Consultation at Our Clinics"
+          subtitle="Dr. Mona sees patients in Noida, Ghaziabad and Delhi, and offers online consultations."
+        />
       </SectionReveal>
 
       <SectionReveal delay={0.04}>

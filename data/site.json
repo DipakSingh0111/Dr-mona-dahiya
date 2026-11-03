@@ -156,7 +156,7 @@
             "title": "Had a failed IVF cycle elsewhere?",
             "subtitle": "Share your previous reports and get Dr. Mona's second opinion.",
             "ctaLabel": "Second Opinion / Failed IVF Desk",
-            "ctaHref": "/ivf-consultation-online"
+            "ctaHref": "/second-opinion-failed-ivf"
           },
           "bottomBanner": {
             "title": "Not sure where to start?",
@@ -316,21 +316,21 @@
     "slides": [
       {
         "image": "/images/HeroBanner_02_wide.jpeg",
-        "eyebrow": "INDIA'S BEST IVF DOCTOR",
+        "eyebrow": "TOP RATED FERTILITY SPECIALIST IN INDIA",
         "title": "Dr. Mona Dahiya"
       },
       {
-        "image": "/images/HeroBanner_04_wide.jpeg",
-        "eyebrow": "TRUSTED IVF SPECIALIST IN DELHI NCR",
+        "image": "/images/HeroBanner_12_wide.png",
+        "eyebrow": "TOP RATED FERTILITY SPECIALIST IN INDIA",
         "title": "Dr. Mona Dahiya"
       },
       {
-        "image": "/images/HeroBanner_05_wide.jpeg",
-        "eyebrow": "LEADING FERTILITY EXPERT IN INDIA",
+        "image": "/images/HeroBanner_09_wide.png",
+        "eyebrow": "TOP RATED FERTILITY SPECIALIST IN INDIA",
         "title": "Dr. Mona Dahiya"
       }
     ],
-    "eyebrow": "TOP FERTILITY DOCTOR IN INDIA",
+    "eyebrow": "TOP RATED FERTILITY SPECIALIST IN INDIA",
     "title": "Dr. Mona Dahiya",
     "subtitle": "Pioneering IVF centre of India since 1993",
     "description": "Providing a full range of advanced infertility solutions to patients from over 66 countries. Dr. Mona Gupta leads the pioneering IVF centres of India, with locations in New Delhi, Lajpat Nagar and Rohini.",
@@ -438,63 +438,64 @@
         "100% Confidential | No Obligation",
         "We call within 2 hours"
       ]
-    }
+    },
+    "googleReviewsLabel": "Read Dr. Mona Dahiya's Google reviews"
   },
   "medicalRegistration": {
     "eyebrow": "Registered Medical Practitioner",
-    "title": "Medical",
-    "titleAccent": "Registration",
-    "subtitle": "Dr. Mona Dahiya is registered with the following medical councils.",
+    "title": "Medical Council",
+    "titleAccent": "Registration Numbers",
+    "subtitle": "Dr. Mona Dahiya is a registered fertility doctor.",
     "items": [
       {
         "code": "DMC",
         "councilName": "Delhi Medical Council",
         "regNumber": "DMC-7795",
-        "regLabel": "DMC registration number",
+        "regLabel": "Registration number",
         "colorScheme": "teal"
       },
       {
         "code": "MCI",
         "councilName": "Medical Council of India",
         "regNumber": "MCI-09/6820",
-        "regLabel": "MCI registration number",
+        "regLabel": "Registration number",
         "colorScheme": "crimson"
       },
       {
         "code": "UPMC",
         "councilName": "Uttar Pradesh Medical Council",
         "regNumber": "UPMC-110541",
-        "regLabel": "UPMC registration number",
+        "regLabel": "Registration number",
         "colorScheme": "blue"
       }
     ]
   },
   "whyChoose": {
-    "badge": "Why choose us?",
-    "title": "Why couples choose",
+    "badge": "Why us?",
+    "title": "Reasons why couples choose",
     "titleAccent": "Dr. Mona Dahiya",
-    "subtitle": "One well-qualified doctor to lead the care, and all the options are just around the corner.",
-    "image": "/images/why-choose-us.png",
+    "subtitle": "",
+    "image": "/images/why-choose/dr-mona-dahiya.jpg",
     "leftCards": [
       {
         "number": "01",
         "icon": "stethoscope",
-        "title": "Doctor-led, start to finish",
-        "description": "Dr. Mona sees you at every visit and plans each cycle herself.",
+        "title": "Doctor Led Care",
+        "description": "Dr. Mona will meet you personally on each visit And plan your cycles.",
         "color": "pink"
       },
       {
         "number": "02",
         "icon": "graduation",
-        "title": "25+ years of experience",
-        "description": "Gold medalist MBBS and MD, DNB, and an IVF fellowship at Singapore General Hospital.",
+        "title": "25+ Years of Experience",
+        "description": "Gold Medalist in MBBS and MD, DNB and IVF fellowship from Singapore General Hospital.",
         "color": "orange"
       },
       {
         "number": "03",
         "icon": "chart",
-        "title": "90%+ success rate",
-        "description": "25K+ happy parents and 15K+ IVF cycles, rated 4.9 by patients on Google.",
+        "title": "90%+ Success Rate",
+        "description": "More than 25k Happy Parents and 15k+ IVF Cycles with patient rating of 4.9 on Google.",
         "color": "rose"
       }
     ],
@@ -502,40 +503,40 @@
       {
         "number": "04",
         "icon": "heartHands",
-        "title": "Care for complex cases",
-        "description": "Low AMH, PCOS, recurrent miscarriage and couples with failed IVF cycles.",
+        "title": "Low AMH, Failed IVF & PCOS",
+        "description": "Couples with Low AMH, PCOS & Recurrent Miscarriage and Failed IVF will find care here.",
         "color": "blue"
       },
       {
         "number": "05",
         "icon": "document",
-        "title": "Customised treatment protocols",
-        "description": "Every IVF, IUI or ICSI plan is built around your age, reports and earlier cycles.",
+        "title": "Individualized Protocols",
+        "description": "Your Age, Reports & previous Cycles will be considered while making your IVF/IUI/ICSI Plan.",
         "color": "teal"
       },
       {
         "number": "06",
         "icon": "video",
-        "title": "Three clinics & online consults",
-        "description": "Noida, Ghaziabad and Delhi, plus online consultations for outstation and international couples.",
+        "title": "3 Clinics & Tele Consult",
+        "description": "Noida, Ghaziabad & Delhi Clinics and online consultations for patients outside city/country.",
         "color": "purple"
       }
     ]
   },
   "ourServices": {
-    "eyebrow": "Our services",
-    "titlePrefix": "For infertility treatment in",
+    "eyebrow": "Services we provide",
+    "titlePrefix": "Infertility Treatment at",
     "titleLocations": ["Noida", "Delhi", "Ghaziabad"],
-    "description": "From a first IUI to advanced lab work, each treatment is chosen after testing both partners.",
+    "description": "Starting from simple IUI to advance lab procedures will be decided based on couple's investigation.",
     "cta": {
-      "label": "View all services",
-      "href": "#our-services"
+      "label": "View More Services",
+      "href": "/our-services"
     },
     "items": [
       {
         "id": "ivf",
         "title": "In vitro fertilization (IVF)",
-        "description": "IVF is an ART in which egg and sperm are combined in a laboratory dish.",
+        "description": "A type of ART where egg and sperm are mixed together in a dish.",
         "icon": "uterus",
         "image": "/images/services/service-ivf-soft.png",
         "videoHref": "https://www.youtube.com/@drmonadahiya"
@@ -543,7 +544,7 @@
       {
         "id": "iui",
         "title": "Intrauterine Insemination (IUI)",
-        "description": "IUI is a fertility procedure in which the doctor injects prepared sperm into the uterus.",
+        "description": "Type of fertility treatment where doctor places processed sperm in your uterus.",
         "icon": "uterus",
         "image": "/images/services/service-iui-soft.png",
         "videoHref": "https://www.youtube.com/@drmonadahiya"
@@ -551,23 +552,23 @@
       {
         "id": "follicular-ultrasound",
         "title": "Follicular Ultrasound",
-        "description": "Ovulation induction is a procedure used to induce the growth of follicles by the use of medication.",
+        "description": "Procedure to induce ovulation by growing the follicle using medication.",
         "icon": "monitor",
         "image": "/images/services/service-ultrasound-soft.png",
         "videoHref": "https://www.youtube.com/@drmonadahiya"
       },
       {
         "id": "infertility-tests",
-        "title": "Female Infertility Tests",
-        "description": "These tests are useful for a diagnosis of female fertility problems. They involve hormone testing to assess.",
+        "title": "Tests for Female Infertility",
+        "description": "Helpful to diagnose if any problem exists in female. Includes various hormone tests to determine.",
         "icon": "clipboard",
         "image": "/images/services/service-infertility-tests-soft.png",
         "videoHref": "https://www.youtube.com/@drmonadahiya"
       },
       {
         "id": "male-infertility",
-        "title": "Male Infertility Tests",
-        "description": "The tests are carried out to evaluate male fertility problems. The most usual test is semen analysis.",
+        "title": "Tests for Male Infertility",
+        "description": "Various tests can be performed to find out if any issue exists in males. Semen Analysis is one of them.",
         "icon": "male",
         "image": "/images/services/service-male-infertility-soft.png",
         "videoHref": "https://www.youtube.com/@drmonadahiya"
@@ -575,7 +576,7 @@
       {
         "id": "mini-ivf",
         "title": "Mini IVF",
-        "description": "Mini IVF (also called micro IVF) is an adapted IVF treatment. It uses smaller amounts of fertility drugs.",
+        "description": "Mini ivf or Micro-ivf is a modified form of IVF where less amount of fertility medication is used.",
         "icon": "cells",
         "image": "/images/services/service-mini-ivf-soft.png",
         "videoHref": "https://www.youtube.com/@drmonadahiya"
@@ -583,23 +584,23 @@
       {
         "id": "laparoscopy",
         "title": "Laparoscopy & Hysteroscopy",
-        "description": "Laparoscopy is a medical procedure that is performed to diagnose and treat endometriosis, blocked fallopian tubes and more.",
+        "description": "Procedure to find and cure problems like Endometriosis, blocked tubes, etc.",
         "icon": "uterus",
         "image": "/images/services/service-laparoscopy-soft.png",
         "videoHref": "https://www.youtube.com/@drmonadahiya"
       },
       {
         "id": "low-amh",
-        "title": "Low AMH Treatment",
-        "description": "Ovarian reserve is the indicator of Anti-Mullerian Hormone (AMH). Low AMH IVF is a treatment for women who have low egg reserve.",
+        "title": "Low AMH",
+        "description": "Anti Mullerian Hormone (AMH) is the marker for ovarian reserve. Low AMH IVF for women with low egg reserve.",
         "icon": "drop",
         "image": "/images/services/service-low-amh-soft.png",
         "videoHref": "https://www.youtube.com/@drmonadahiya"
       },
       {
         "id": "cryopreservation",
-        "title": "Embryo Cryopreservation",
-        "description": "Embryo Cryopreservation is the procedure of freezing and preserving IVF (in-vitro-fertilization) embryos for future use.",
+        "title": "Embryo Freezing",
+        "description": "Freezing of your embryos (also known as embryo cryopreservation) for future use in IVF.",
         "icon": "snowflake",
         "image": "/images/services/service-cryopreservation-soft.png",
         "videoHref": "https://www.youtube.com/@drmonadahiya"
@@ -607,15 +608,15 @@
       {
         "id": "era",
         "title": "Endometrial Receptivity Array",
-        "description": "Endometrial Receptivity Array is a test that evaluates the receptivity of the uterine lining (endometrium) for embryo implantation.",
+        "description": "Endometrial Receptivity Array is used to check whether the endometrium is receptive to accept an embryo.",
         "icon": "uterus",
         "image": "/images/services/service-era-soft.png",
         "videoHref": "https://www.youtube.com/@drmonadahiya"
       },
       {
         "id": "donor-gametes",
-        "title": "Donor Gametes",
-        "description": "Donor Gametes are gametes, or reproductive cells, that are contributed by individuals who wish to help other couples.",
+        "title": "Donor Gamete",
+        "description": "Donor gamete or reproductive cell donated by people who want to help couples have children.",
         "icon": "dna",
         "image": "/images/services/service-donor-gametes-soft.png",
         "videoHref": "https://www.youtube.com/@drmonadahiya"
@@ -623,7 +624,7 @@
       {
         "id": "pgt",
         "title": "Preimplantation Genetic Testing",
-        "description": "Preimplantation Genetic Testing (PGT) is a cutting-edge fertility treatment in which embryos formed via IVF are screened for genetic disorders.",
+        "description": "Genetic screening of embryos created during IVF procedure.",
         "icon": "dna",
         "image": "/images/services/service-pgt-soft.png",
         "videoHref": "https://www.youtube.com/@drmonadahiya"
@@ -631,97 +632,97 @@
     ]
   },
   "advancedServices": {
-    "eyebrow": "Advanced care · Infertility treatment options",
+    "eyebrow": "Advanced Treatments - For Infertility",
     "topCards": [
       {
         "id": "fertility-testing",
-        "title": "Fertility Testing",
-        "description": "Fertility tests to assess reproductive health and potential for successful conception.",
+        "title": "Fertility Test",
+        "description": "Fertility tests to know about your chances of having a child.",
         "icon": "sperm",
         "theme": "rose"
       },
       {
         "id": "genetic-testing",
-        "title": "Genetic Testing",
-        "description": "World-class facilities for DNA genetic testing for hereditary issues.",
+        "title": "Genetic Test",
+        "description": "World Class facility to perform DNA test for various genetic conditions.",
         "icon": "dna",
         "theme": "blue"
       },
       {
         "id": "fertility-preservation",
-        "title": "Fertility Preservation",
-        "description": "Diverse options to preserve fertility for future dreams amidst life's uncertainties.",
+        "title": "Preserve Fertility",
+        "description": "Option to have kids in future when you feel life isn't sure.",
         "icon": "uterus",
         "theme": "green"
       }
     ],
     "womenConditions": {
-      "title": "Conditions we treat in women",
+      "title": "What we treat for females",
       "tags": [
         "Low AMH",
         "PCOS / PCOD",
         "Endometriosis",
-        "Blocked tubes",
-        "Recurrent miscarriage",
+        "Blocked Tubes",
+        "Recurrent Miscarriages",
         "Failed IVF (RIF)",
-        "All female infertility"
+        "All Types of Infertility"
       ]
     },
     "menConditions": {
-      "title": "Conditions we treat in men",
+      "title": "What we treat for males",
       "tags": [
         "Azoospermia",
-        "Low sperm count",
-        "Sperm DNA test",
-        "TESA / PESA",
-        "All male infertility"
+        "Low Sperm Count",
+        "DNA Fragmentation Test",
+        "TESA/PESA",
+        "All Types of Infertility"
       ]
     }
   },
   "howItWorks": {
-    "badge": "How it works",
-    "title": "Start your\ntreatment in 3\nsimple steps",
+    "badge": "How it Works",
+    "title": "Complete your treatment in 3 easy steps",
     "steps": [
       {
         "id": "step-1",
         "stepLabel": "STEP 1",
-        "title": "Book a consultation",
-        "description": "Meet Dr. Mona at the Noida, Ghaziabad or Delhi clinic, or on a online consultation from anywhere.",
+        "title": "Book Consultation",
+        "description": "Visit our clinic at Noida, Ghaziabad or Delhi or connect on video call from your home.",
         "image": "",
         "highlight": true
       },
       {
         "id": "step-2",
         "stepLabel": "STEP 2",
-        "title": "Get tested & get a plan",
-        "description": "Both partners are tested, and Dr. Mona explains the right treatment for your reports.",
+        "title": "Investigations & Plan",
+        "description": "Both Partner will be investigated and explained about the suitable treatment.",
         "image": "",
         "highlight": true
       },
       {
         "id": "step-3",
         "stepLabel": "STEP 3",
-        "title": "Begin your treatment",
-        "description": "Start IUI, IVF or another treatment with her personal follow-up at every stage.",
+        "title": "Treatment",
+        "description": "Start your IUI/IVF with Dr. Mona taking care of your each cycle.",
         "image": "",
         "highlight": true
       }
     ]
   },
   "meetYourDoctor": {
-    "badge": "Meet your doctor",
-    "titleLine1": "Doctor-led fertility",
-    "titleLine2": "care, from first",
+    "badge": "Meet Your Doctor",
+    "titleLine1": "Doctor-led fertility care,",
+    "titleLine2": "from first",
     "titleAccent": "scan to positive test",
-    "description": "Dr. Mona Dahiya received her training from Lady Hardinge and Maulana Azad Medical Colleges in New Delhi and did her IVF fellowship at Singapore General Hospital, and she is an associate professor by training. She always meets couples herself on every visit.",
+    "description": "Dr. Mona Dahiya studied from Lady Hardinge & Maulana Azad Medical College New Delhi. Completed her fellowship from Singapore general hospital and is an Associate Professor by qualification. Dr. Mona will meet you personally on each visit.",
     "features": [
-      "Personal protocol for every cycle",
-      "Expertise in low AMH and failed IVF",
-      "Laparoscopy & hysteroscopy in-house",
-      "Clinics in Noida, Ghaziabad & Delhi"
+      "Personal Protocol For Each Cycle",
+      "Experience With Low AMH & Failed IVF",
+      "Laparoscopy & Hysteroscopy Available in house",
+      "Clinic at Noida, Ghaziabad & Delhi"
     ],
     "primaryCta": {
-      "label": "Read full profile",
+      "label": "Read Full Profile",
       "href": "#profile"
     },
     "secondaryCta": {
@@ -730,45 +731,45 @@
     },
     "image": "/images/meet/doctor-cutout.png",
     "card": {
-      "eyebrow": "Consult Best IVF Specialist in India",
+      "eyebrow": "Best IVF Doctor in India",
       "namePrefix": "Dr",
       "name": "Mona Dahiya",
-      "sectionLabel": "World Class Qualifications",
+      "sectionLabel": "INTERNATIONALLY QUALIFIED",
       "qualifications": [
         {
           "title": "MBBS (Gold Medalist)",
-          "subtitle": "Lady Hardinge Medical College, New Delhi",
+          "subtitle": "Lady Hardinge Medical College New Delhi",
           "color": "pink"
         },
         {
           "title": "MD (Gold Medalist)",
-          "subtitle": "Maulana Azad Medical College, New Delhi",
+          "subtitle": "Maulana Azad Medical College New Delhi",
           "color": "purple"
         },
         {
-          "title": "Senior Residency",
-          "subtitle": "Maulana Azad Medical College, New Delhi",
+          "title": "Senior Resident",
+          "subtitle": "Maulana Azad Medical College New Delhi",
           "color": "green"
         },
         {
-          "title": "DNB (Obs & Gynae)",
+          "title": "DNB (Obstetrics & Gynaecology)",
           "subtitle": "Diplomate of National Board",
           "color": "orange"
         },
         {
-          "title": "Fellowship in IVF & Reproductive Medicine",
-          "subtitle": "Singapore General Hospital, Singapore",
+          "title": "Fellowship in IVF",
+          "subtitle": "Singapore General Hospital Singapore",
           "color": "blue"
         }
       ]
     }
   },
   "fertilityPreservation": {
-    "eyebrow": "Fertility preservation",
-    "title": "Keep the option of",
-    "titleAccent": "parenthood",
-    "titleEnd": "open",
-    "subtitle": "For women delaying pregnancy, men before surgery or travel, couples banking embryos across cycles, and patients starting cancer treatment.",
+    "eyebrow": "Fertility Preservation",
+    "title": "Want to keep your",
+    "titleAccent": "option",
+    "titleEnd": "open?",
+    "subtitle": "Women who want to delay pregnancy. Men before surgery or long travel. Couples who want to store Embryo for multiple cycles. Cancer Patients.",
     "image": "/images/Accolades.png",
     "cta": {
       "label": "Contact Us",
@@ -778,9 +779,9 @@
       {
         "id": "egg",
         "number": "01",
-        "title": "Egg freezing",
-        "subtitle": "Social and elective oocyte freezing",
-        "description": "Egg freezing helps preserve a woman's fertility by freezing and storing healthy eggs for future use. It is an option for women who wish to delay pregnancy due to personal, medical or professional reasons.",
+        "title": "Freeze Eggs",
+        "subtitle": "Social Oocyte Freezing",
+        "description": "Social Oocyte Freezing",
         "icon": "egg",
         "accent": "pink",
         "art": "/images/fertility/egg.jpg"
@@ -788,9 +789,9 @@
       {
         "id": "sperm",
         "number": "02",
-        "title": "Sperm freezing",
-        "subtitle": "Semen banking for men",
-        "description": "Preserve sperm before surgery, travel, medical treatment or when timing is uncertain. Samples are processed and stored under controlled laboratory conditions.",
+        "title": "Freeze Sperm",
+        "subtitle": "Semen Preservation",
+        "description": "Semen Preservation",
         "icon": "sperm",
         "accent": "pink",
         "art": "/images/fertility/sperm.jpg"
@@ -798,9 +799,9 @@
       {
         "id": "embryo",
         "number": "03",
-        "title": "Embryo freezing",
-        "subtitle": "Vitrification and embryo banking",
-        "description": "Create and freeze embryos for future transfer. Ideal for couples planning treatment across multiple cycles or needing to pause between stages of care.",
+        "title": "Store Embryo",
+        "subtitle": "Vitrification of Embryo",
+        "description": "Vitrification of Embryo",
         "icon": "embryo",
         "accent": "purple",
         "art": "/images/fertility/embryo.jpg"
@@ -809,8 +810,8 @@
         "id": "onco",
         "number": "04",
         "title": "Oncofertility",
-        "subtitle": "Preservation before cancer treatment",
-        "description": "Urgent fertility preservation for patients starting chemotherapy or radiation. We coordinate quickly with your oncology team so options stay open.",
+        "subtitle": "Store Before Cancer Treatment",
+        "description": "Store Before Cancer Treatment",
         "icon": "ribbon",
         "accent": "teal",
         "art": "/images/fertility/onco.jpg"
@@ -818,48 +819,48 @@
     ]
   },
   "faq": {
-    "titlePrefix": "Frequently",
-    "titleHighlight": "asked questions",
+    "titlePrefix": "FAQs",
+    "titleHighlight": "",
     "cta": {
-      "label": "All IVF FAQs",
-      "href": "#faq"
+      "label": "View All Questions",
+      "href": "/ivf-faqs"
     },
     "leftFaqs": [
       {
         "id": "faq-01",
         "number": "01",
         "question": "Who offers the best IVF treatment in India?",
-        "answer": "Dr. Mona Dahiya is a leading choice for couples in India and from abroad who want affordable IVF with high success rates."
+        "answer": "Dr. Mona Dahiya can help you with your journey to parenthood with affordable price and high success rate in India."
       },
       {
         "id": "faq-02",
         "number": "02",
         "question": "What is the success rate of IVF in India?",
-        "answer": "On average, IVF success rates in India range from about 40% to 60%. They are higher for younger women and depend on age, the cause of infertility and the clinic's expertise."
+        "answer": "IVF has success rate of approximately 40%-60% in India. It may vary with the age of women and type of infertility you have. Dr Mona Dahiya has an IVF success rate of 90%+."
       },
       {
         "id": "faq-03",
         "number": "03",
         "question": "What age is good for IVF?",
-        "answer": "It varies from person to person. Women in their 20s and early 30s usually respond best, and chances fall with age, especially after 35."
+        "answer": "Every woman is different but typically women in their 20s and early 30s will have better chances of getting pregnant. It decreases with age."
       },
       {
         "id": "faq-04",
         "number": "04",
         "question": "Is IVF safe after 35?",
-        "answer": "Yes, it can be a safe and effective option after 35, though success rates decline with age. Steps such as preimplantation genetic testing may help."
+        "answer": "Yes you can have IVF after 35 years of age. But your chances decrease as you age. There are some techniques that can increase your chance of success."
       },
       {
         "id": "faq-05",
         "number": "05",
         "question": "How many IVF cycles are needed to get pregnant?",
-        "answer": "It depends on age, the cause of infertility and how the body responds. Some couples conceive in the first cycle and others need more than one."
+        "answer": "Everyone is different some will conceive in their first cycle and some may take longer than that. Age and Type of Infertility can effect this."
       },
       {
         "id": "faq-06",
         "number": "06",
         "question": "Which month is best for IVF?",
-        "answer": "No single month is best. IVF can be done year-round and is planned around your own menstrual cycle."
+        "answer": "There is no particular month for doing IVF. You can get it done anytime of the year based on your period."
       }
     ],
     "rightFaqs": [
@@ -867,52 +868,53 @@
         "id": "faq-07",
         "number": "07",
         "question": "Is IVF harmful or beneficial?",
-        "answer": "IVF helps many couples conceive. Like any treatment it has risks, such as multiple pregnancy, ovarian hyperstimulation and emotional stress, which your doctor will discuss with you."
+        "answer": "IVF can help you conceive a baby. However there can be side effects such as Multiple pregnancy, Ovarian hyper stimulation and stress from the treatment. All these side effects are very rare if the IVF procedure is done by an expert IVF specialist like Dr Mona Dahiya."
       },
       {
         "id": "faq-08",
         "number": "08",
         "question": "How safe is IVF pregnancy in India?",
-        "answer": "IVF pregnancy is generally safe when strict clinical protocols are followed. Choose an experienced, reputable centre such as Little Angel IVF."
+        "answer": "If proper protocol is followed then IVF baby is perfectly safe. Make sure to consult the right fertility doctor like Dr Mona Dahiya."
       },
       {
         "id": "faq-09",
         "number": "09",
         "question": "How can I share my medical records?",
-        "answer": "You can send them by email, WhatsApp or courier before your first consultation."
+        "answer": "You can send us your report on email, whatsapp before your appointment."
       },
       {
         "id": "faq-10",
         "number": "10",
         "question": "What if I don't have previous medical records?",
-        "answer": "Dr. Mona will order the preliminary tests needed to plan your treatment."
+        "answer": "We can do initial basic tests that are required to plan your treatment."
       },
       {
         "id": "faq-11",
         "number": "11",
         "question": "Which documents should I carry for treatment?",
-        "answer": "International patients should carry their original passport, passport-size photographs and any previous medical records."
+        "answer": "Passport original, passport size photo and old report (if any) should be there with you."
       },
       {
         "id": "faq-12",
         "number": "12",
         "question": "What is the Indian country code?",
-        "answer": "The country code for India is +91. Dial +91 92679 82924 to reach the clinic from abroad."
+        "answer": "India's Code is: +91. To reach us internationally dial +91 92679 82924."
       }
-    ]
+    ],
+    "eyebrow": "Queries"
   },
   "publications": {
-    "eyebrow": "Globally acclaimed fertility doctor in India",
-    "title": "Publications, memberships & recognition",
-    "subtitle": "Two decades of research, teaching and conference work in reproductive medicine.",
+    "eyebrow": "Renowned Fertility Doctor in India",
+    "title": "Achievements & Awards",
+    "subtitle": "Research papers and Conferences over last 25 years.",
     "tabs": [
       {
         "id": "publications",
-        "label": "Publications"
+        "label": "Publication"
       },
       {
         "id": "member",
-        "label": "Member"
+        "label": "Membership"
       },
       {
         "id": "speaker",
@@ -920,7 +922,7 @@
       },
       {
         "id": "awards",
-        "label": "Awards & events"
+        "label": "Conferences & Award"
       }
     ],
     "publications": {
@@ -1078,13 +1080,13 @@
     }
   },
   "affiliations": {
-    "eyebrow": "Affiliations",
+    "eyebrow": "Affiliation",
     "title": "Dr. Mona Dahiya's",
-    "titleAccent": "affiliations",
-    "subtitle": "Dr. Mona's current and previous hospitals/fertility clinics she has worked in.",
+    "titleAccent": "affiliations:",
+    "subtitle": "Dr. Mona's Current & Past Work History.",
     "present": {
-      "badge": "Present",
-      "title": "Present affiliations",
+      "badge": "CURRENTLY",
+      "title": "Present Affiliations",
       "items": [
         {
           "id": "nayra",
@@ -1110,8 +1112,8 @@
       ]
     },
     "past": {
-      "badge": "Past",
-      "title": "Past affiliations",
+      "badge": "PREVIOUSLY",
+      "title": "Past Affiliations",
       "items": [
         {
           "id": "apollo",
@@ -1132,12 +1134,12 @@
     }
   },
   "clinicsSection": {
-    "eyebrow": "OUR FERTILITY CENTRES",
-    "titlePrefix": "Three clinics across",
-    "titleAccent": "Delhi NCR",
+    "eyebrow": "Centers",
+    "titlePrefix": "Find us",
+    "titleAccent": "at",
     "hoursBadge": {
-      "title": "Open Monday to Saturday, 10:00 AM to 5:00 PM.",
-      "subtitle": "Book a slot at the clinic closest to you."
+      "title": "Timings from Monday to Saturday 10:00 AM — 5:00 PM. Book a consultation at your nearest center.",
+      "subtitle": ""
     },
     "clinics": [
       {
@@ -1164,10 +1166,10 @@
     ]
   },
   "successStories": {
-    "eyebrow": "PATIENT TESTIMONIALS",
-    "titlePrefix": "Our",
-    "titleHighlight": "success stories",
-    "subtitle": "Messages from couples treated by Dr. Mona, shared with permission.",
+    "eyebrow": "Success Stories",
+    "titlePrefix": "Patient",
+    "titleHighlight": "Testimonial",
+    "subtitle": "Some of our happy patients have written few words for us.",
     "categories": [
       {
         "id": "ivf",
@@ -1195,13 +1197,13 @@
       },
       {
         "id": "video",
-        "label": "Patient online consultation",
+        "label": "Patient Reviews",
         "icon": "star",
         "color": "yellow"
       },
       {
         "id": "all",
-        "label": "All Success Stories",
+        "label": "Success Stories",
         "icon": "heart",
         "color": "peach"
       }
@@ -1327,7 +1329,8 @@
         "type": "Patient testimonial",
         "image": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=700&q=85"
       }
-    ]
+    ],
+    "scrollNote": "15 testimonials - scroll sideways to read more"
   },
   "internationalPatients": {
     "badge": "International patients",
@@ -1341,7 +1344,7 @@
       },
       {
         "id": "video",
-        "label": "online consultation"
+        "label": "Online consultation"
       },
       {
         "id": "travel",
@@ -1358,7 +1361,7 @@
     }
   },
   "latestBlog": {
-    "eyebrow": "LATEST BLOG",
+    "eyebrow": "Latest blog",
     "titlePrefix": "Guides",
     "titleHighlight": "from the clinic",
     "cta": {
@@ -1369,7 +1372,7 @@
       {
         "id": "article-1",
         "category": "Fertility",
-        "date": "2 Oct 2026",
+        "date": "2 Oct 2024",
         "title": "Can You Work During IVF? A Practical Guide to Treatment-Day Planning",
         "image": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80",
         "href": "#article-1"
@@ -1377,7 +1380,7 @@
       {
         "id": "article-2",
         "category": "IUI",
-        "date": "2 Aug 2026",
+        "date": "7 Aug 2024",
         "title": "IUI Specialist in Noida: Complete Guide to Intrauterine Insemination",
         "image": "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=80",
         "href": "#article-2"
@@ -1385,7 +1388,7 @@
       {
         "id": "article-3",
         "category": "Infertility",
-        "date": "31 Jul 2026",
+        "date": "21 Jul 2024",
         "title": "Know what secondary infertility is",
         "image": "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80",
         "href": "#article-3"
@@ -1393,13 +1396,13 @@
     ]
   },
   "bookAppointment": {
-    "eyebrow": "Book Your Appointment",
-    "titleLine1": "Consult the best IVF",
-    "titleAccent": "specialist in India",
-    "subtitle": "Leave your number and the clinic team will call to confirm a time with Dr. Mona.",
+    "eyebrow": "Book An Appointment",
+    "titleLine1": "Speak to the Best Fertility",
+    "titleAccent": "Doctor in India",
+    "subtitle": "Fill up the below details and our team will call you to schedule your appointment with Dr. Mona.",
     "image": "/images/book-appointment-bg.jpg",
     "primaryCta": {
-      "label": "Book In-Clinic Consultation",
+      "label": "Book Consultation",
       "href": "#book-appointment"
     },
     "secondaryCta": {
@@ -1409,17 +1412,17 @@
     "pricing": [
       {
         "id": "indian",
-        "label": "Indian Nationals",
+        "label": "INDIAN CITIZENS",
         "price": "₹1,000",
-        "note": "Online consultation 30 minutes",
+        "note": "online Consultation",
         "icon": "users",
         "tone": "pink"
       },
       {
         "id": "foreign",
-        "label": "Foreign Patients",
+        "label": "NON-INDIAN CITIZENS",
         "price": "US$25",
-        "note": "Online consultation 30 minutes",
+        "note": "online Consultation",
         "icon": "plane",
         "tone": "blue"
       }
@@ -1427,22 +1430,22 @@
     "contacts": [
       {
         "id": "phone",
-        "label": "Helpline",
+        "label": "Call Us",
         "value": "+91 92679 82924",
         "href": "tel:+919267982924",
         "icon": "phone"
       },
       {
         "id": "email",
-        "label": "Email",
+        "label": "Mail Us",
         "value": "info@drmonadahiya.com",
         "href": "mailto:info@drmonadahiya.com",
         "icon": "mail"
       },
       {
         "id": "hours",
-        "label": "Hours",
-        "value": "Mon - Sat, 10:00 AM to 5:00 PM",
+        "label": "Timings",
+        "value": "Mon to Sat 10:00 AM – 5:00 PM",
         "href": null,
         "icon": "clock"
       }
@@ -1450,7 +1453,7 @@
     "form": {
       "title": "Request an Appointment",
       "subtitle": "Fill in your details and we will get back to you shortly.",
-      "submitLabel": "Request appointment",
+      "submitLabel": "Book Consultation",
       "disclaimer": "Demo form. In production this posts to the booking system.",
       "clinics": ["Noida", "Ghaziabad", "Delhi"]
     }

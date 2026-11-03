@@ -3,14 +3,12 @@
 import { useState } from "react";
 import Link from "next/link";
 import { FaChevronDown } from "react-icons/fa";
-import { motion, AnimatePresence } from "framer-motion";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
 export default function AboutFAQ() {
-  // Accordion: only one FAQ open at a time
   const [openId, setOpenId] = useState<string | null>("left-0");
 
-  const toggleItem = (id: string) => {
+  const toggleFaq = (id: string) => {
     setOpenId((prev) => (prev === id ? null : id));
   };
 
@@ -20,10 +18,10 @@ export default function AboutFAQ() {
       q: "What are Dr. Mona Dahiya's core medical qualifications?",
       a: (
         <span>
-          MBBS (Gold Medalist) from Lady Hardinge Medical College, MD in
-          Obstetrics &amp; Gynaecology (Gold Medalist) from Maulana Azad Medical
-          College, DNB from the National Board of Examinations, and a Fellowship
-          in Reproductive Medicine at Singapore General Hospital.
+          She has completed her MBBS (Gold Medalist) from Lady Hardinge Medical
+          College and MD Obs &amp; Gynae (Gold Medalist) from Maulana Azad
+          Medical College. She is a National Board Certified (DNB). She has done
+          her Fellowship from Singapore General Hospital.
         </span>
       ),
     },
@@ -32,8 +30,8 @@ export default function AboutFAQ() {
       q: "How many years of experience does Dr. Mona Dahiya have?",
       a: (
         <span>
-          25+ years in obstetrics, gynaecology and reproductive medicine, with
-          15,000+ completed IVF/ICSI cycles.
+          More than 25 years of experience in Obstetrics, Gynaecology and
+          Reproductive Medicine. More than 15000 cycles completed.
         </span>
       ),
     },
@@ -42,9 +40,8 @@ export default function AboutFAQ() {
       q: "Does Dr. Mona Dahiya personally perform procedures?",
       a: (
         <span>
-          Yes. Consultations, ultrasound scans, egg retrievals, hysteroscopies
-          and embryo transfers are personally managed and performed by Dr.
-          Dahiya.
+          Yes, all your appointments will be taken by Dr. Mona Dahiya. Scans,
+          Pick ups and Transfers will also be done by her.
         </span>
       ),
     },
@@ -53,8 +50,8 @@ export default function AboutFAQ() {
       q: "Where did Dr. Mona Dahiya train in IVF?",
       a: (
         <span>
-          At Singapore General Hospital, Singapore, through a sub-specialty
-          fellowship in assisted reproductive technology.
+          Singapore General Hospital, Singapore. She has completed her
+          Fellowship in IVF there.
         </span>
       ),
     },
@@ -63,8 +60,8 @@ export default function AboutFAQ() {
       q: "Has Dr. Mona Dahiya published research?",
       a: (
         <span>
-          Yes. She has authored 100+ publications in indexed national and
-          international medical journals.
+          Yes, she has published more than 100 papers in various medical
+          journals. Both national and international.
         </span>
       ),
     },
@@ -73,8 +70,8 @@ export default function AboutFAQ() {
       q: "Has Dr. Mona Dahiya received awards?",
       a: (
         <span>
-          Yes. She has received 50+ national and international awards for her
-          work in fertility care.
+          Yes, Dr. Mona Dahiya has won more than 50 national and international
+          awards.
         </span>
       ),
     },
@@ -87,33 +84,33 @@ export default function AboutFAQ() {
       a: (
         <span>
           <Link
-            href="/treatments/ivf"
-            className="text-[#0047ca] underline underline-offset-2 hover:text-[#e83e74]"
+            href="/ivf-treatment"
+            className="text-teal-400 underline decoration-teal-400/40 underline-offset-2 hover:text-teal-300"
           >
             IVF
           </Link>
           ,{" "}
           <Link
-            href="/treatments/icsi"
-            className="text-[#0047ca] underline underline-offset-2 hover:text-[#e83e74]"
+            href="/intracytoplasmic-sperm-injection-icsi-treatment"
+            className="text-teal-400 underline decoration-teal-400/40 underline-offset-2 hover:text-teal-300"
           >
             ICSI
           </Link>
           ,{" "}
           <Link
-            href="/treatments/iui"
-            className="text-[#0047ca] underline underline-offset-2 hover:text-[#e83e74]"
+            href="/iui-treatment"
+            className="text-teal-400 underline decoration-teal-400/40 underline-offset-2 hover:text-teal-300"
           >
             IUI
           </Link>
           ,{" "}
           <Link
             href="/best-low-amh-treatment-in-noida"
-            className="text-[#0047ca] underline underline-offset-2 hover:text-[#e83e74]"
+            className="text-teal-400 underline decoration-teal-400/40 underline-offset-2 hover:text-teal-300"
           >
-            low AMH
-          </Link>{" "}
-          protocols, recurrent IVF failure and fertility preservation.
+            Low AMH
+          </Link>
+          , Failed IVF, Egg freezing.
         </span>
       ),
     },
@@ -122,8 +119,9 @@ export default function AboutFAQ() {
       q: "Where can I consult Dr. Mona Dahiya?",
       a: (
         <span>
-          At 3 clinics: Noida (Sector 49), Ghaziabad (Raj Nagar) and Delhi
-          (Lajpat Nagar IV), Monday to Saturday, 10:00 AM to 5:00 PM.
+          You can book your appointment at any of our 3 centres: Noida (Sector
+          49), Ghaziabad (Raj Nagar), Delhi (Lajpat Nagar IV). We are open
+          Monday to Saturday from 10 am to 5 pm.
         </span>
       ),
     },
@@ -132,15 +130,14 @@ export default function AboutFAQ() {
       q: "Can international patients consult Dr. Mona Dahiya?",
       a: (
         <span>
-          Yes. Online consultations (US$25) review past records before you plan
-          travel. See{" "}
+          Yes, you can consult us online for US$25. We will evaluate your
+          previous records and tell you how we can treat you. Visit{" "}
           <Link
             href="/international-patients"
-            className="text-[#0047ca] underline underline-offset-2 hover:text-[#e83e74]"
+            className="text-teal-400 underline decoration-teal-400/40 underline-offset-2 hover:text-teal-300"
           >
             International Patients
           </Link>
-          .
         </span>
       ),
     },
@@ -149,14 +146,13 @@ export default function AboutFAQ() {
       q: "Can I book an online consultation?",
       a: (
         <span>
-          Yes. A 30-minute online consultation costs ₹1,000 in India. See{" "}
+          Yes, our online consultation cost is 1000 rupees in India.{" "}
           <Link
-            href="#book-consultation"
-            className="text-[#0047ca] underline underline-offset-2 hover:text-[#e83e74]"
+            href="/ivf-consultation-online"
+            className="text-teal-400 underline decoration-teal-400/40 underline-offset-2 hover:text-teal-300"
           >
-            Online Consultation
+            Click here to know more.
           </Link>
-          .
         </span>
       ),
     },
@@ -165,163 +161,119 @@ export default function AboutFAQ() {
       q: "How do I book an appointment?",
       a: (
         <span>
-          Call or WhatsApp{" "}
+          You can call or whatsapp us on{" "}
           <a
             href="tel:+919267982924"
-            className="font-medium text-slate-900 hover:text-[#0047ca]"
+            className="text-white underline decoration-white/40 hover:text-teal-300"
           >
             +91 92679 82924
           </a>
-          , or email{" "}
+          . Or write to us at{" "}
           <a
             href="mailto:info@drmonadahiya.com"
-            className="font-medium text-slate-900 hover:text-[#0047ca]"
+            className="text-white underline decoration-white/40 hover:text-teal-300"
           >
             info@drmonadahiya.com
           </a>
-          . See{" "}
-          <Link
+          .{" "}
+          <a
             href="#book-consultation"
-            className="text-[#0047ca] underline underline-offset-2 hover:text-[#e83e74]"
+            className="text-teal-400 underline decoration-teal-400/40 underline-offset-2 hover:text-teal-300"
           >
-            Book Appointment
-          </Link>
-          .
+            Click here to know more.
+          </a>
         </span>
       ),
     },
   ];
 
+  const renderFaqCard = (faq: {
+    id: string;
+    q: string;
+    a: React.ReactNode;
+  }) => {
+    const isOpen = openId === faq.id;
+    return (
+      <div
+        key={faq.id}
+        className={`group flex flex-col justify-start rounded-2xl border transition-[border-color,background-color,box-shadow] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+          isOpen
+            ? "border-[#e83e74]/50 bg-[#0c224e] shadow-[0_8px_24px_rgba(0,0,0,0.25)] ring-1 ring-[#e83e74]/20"
+            : "border-white/10 bg-[#091a3c]/75 hover:border-white/20 hover:bg-[#0c224e]"
+        }`}
+      >
+        <button
+          type="button"
+          onClick={() => toggleFaq(faq.id)}
+          className="flex w-full cursor-pointer items-center justify-between gap-4 p-5 text-left select-none sm:p-6"
+          aria-expanded={isOpen}
+        >
+          <h3
+            className={`font-serif text-[1rem] font-semibold leading-snug transition-colors duration-300 sm:text-[1.08rem] ${
+              isOpen ? "text-[#e83e74]" : "text-white group-hover:text-[#e83e74]"
+            }`}
+          >
+            {faq.q}
+          </h3>
+          <span
+            className={`flex size-7 shrink-0 items-center justify-center rounded-full border transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+              isOpen
+                ? "rotate-180 border-[#e83e74] bg-[#e83e74] text-white shadow-sm"
+                : "border-white/15 bg-white/5 text-white/70 group-hover:border-white/30 group-hover:text-white"
+            }`}
+            aria-hidden="true"
+          >
+            <FaChevronDown className="size-2.5 transition-transform" />
+          </span>
+        </button>
+
+        <div
+          className={`grid transition-[grid-template-rows,opacity] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+            isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+          }`}
+        >
+          <div className="overflow-hidden">
+            <div className="border-t border-white/10 px-5 pt-3.5 pb-5 text-[13px] leading-relaxed text-slate-300 sm:px-6 sm:pb-6 sm:text-[13.5px]">
+              {faq.a}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   return (
-    <section id="faqs" className="relative overflow-hidden bg-slate-50/70 px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
+    <section id="faqs" className="relative overflow-hidden bg-[#061532] px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
       <div className="mx-auto w-full max-w-[1440px]">
-        {/* Header matching Screenshot */}
-        <Reveal className="mb-10 sm:mb-12">
-          <span className="text-[12px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:text-[13px]">
+        <Reveal className="mb-8">
+          <span className="text-[12px] font-semibold tracking-wider text-[#e83e74] uppercase sm:text-[13px]">
             Patient questions
           </span>
 
-          <h2 className="font-display mt-2 text-[2rem] leading-[1.18] font-bold tracking-tight text-[#0f2438] sm:text-[2.65rem] lg:text-[2.85rem]">
+          <h2 className="font-serif mt-2 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-white sm:text-[2.2rem] lg:text-[2.45rem]">
             Frequently Asked Questions About Dr. Mona Dahiya
           </h2>
+
+          <p className="mt-2.5 max-w-2xl text-[13.5px] leading-relaxed text-slate-300 sm:text-[14.5px]">
+            Some commonly asked questions about Dr. Mona Dahiya.
+          </p>
         </Reveal>
 
-        {/* 2 Column FAQ Grid */}
-        <div className="grid grid-cols-1 gap-5 lg:grid-cols-2 lg:gap-6">
-          {/* Left Column */}
-          <Stagger className="flex flex-col gap-4 sm:gap-4.5" stagger={0.05}>
-            {leftColumnFaqs.map((faq) => {
-              const isOpen = openId === faq.id;
-              return (
-                <StaggerItem key={faq.id} variant="fadeIn">
-                  <div
-                    className={`group overflow-hidden rounded-[20px] border transition-all duration-300 ${
-                      isOpen
-                        ? "border-[#0047ca]/40 bg-white shadow-md ring-1 ring-[#0047ca]/10"
-                        : "border-slate-200/90 bg-[#fafbfe] shadow-xs hover:border-slate-300 hover:bg-white"
-                    }`}
-                  >
-                    <button
-                      type="button"
-                      onClick={() => toggleItem(faq.id)}
-                      aria-expanded={isOpen}
-                      className="flex w-full cursor-pointer items-center justify-between gap-4 p-5 text-left transition-colors sm:p-6"
-                    >
-                      <h3 className="font-display text-[15.5px] font-bold tracking-tight text-[#0f2438] sm:text-[16.5px]">
-                        {faq.q}
-                      </h3>
-                      <span
-                        className={`flex size-8 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${
-                          isOpen
-                            ? "rotate-180 bg-[#0047ca] text-white shadow-sm"
-                            : "bg-slate-100 text-slate-500 group-hover:bg-slate-200 group-hover:text-slate-800"
-                        }`}
-                      >
-                        <FaChevronDown className="size-3.5 transition-transform" />
-                      </span>
-                    </button>
-
-                    <AnimatePresence initial={false}>
-                      {isOpen && (
-                        <motion.div
-                          key="content"
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: "auto", opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{
-                            duration: 0.3,
-                            ease: [0.16, 1, 0.3, 1],
-                          }}
-                          className="overflow-hidden"
-                        >
-                          <div className="border-t border-slate-100 px-5 pt-3.5 pb-5 text-[13px] leading-relaxed text-slate-600 sm:px-6 sm:pt-4 sm:pb-6 sm:text-[14px]">
-                            {faq.a}
-                          </div>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                </StaggerItem>
-              );
-            })}
+        <div className="grid grid-cols-1 items-start gap-4 md:grid-cols-2 lg:gap-5">
+          <Stagger className="flex flex-col gap-4" stagger={0.05}>
+            {leftColumnFaqs.map((faq) => (
+              <StaggerItem key={faq.id}>
+                {renderFaqCard(faq)}
+              </StaggerItem>
+            ))}
           </Stagger>
 
-          {/* Right Column */}
-          <Stagger className="flex flex-col gap-4 sm:gap-4.5" stagger={0.05}>
-            {rightColumnFaqs.map((faq) => {
-              const isOpen = openId === faq.id;
-              return (
-                <StaggerItem key={faq.id} variant="fadeIn">
-                  <div
-                    className={`group overflow-hidden rounded-[20px] border transition-all duration-300 ${
-                      isOpen
-                        ? "border-[#0047ca]/40 bg-white shadow-md ring-1 ring-[#0047ca]/10"
-                        : "border-slate-200/90 bg-[#fafbfe] shadow-xs hover:border-slate-300 hover:bg-white"
-                    }`}
-                  >
-                    <button
-                      type="button"
-                      onClick={() => toggleItem(faq.id)}
-                      aria-expanded={isOpen}
-                      className="flex w-full cursor-pointer items-center justify-between gap-4 p-5 text-left transition-colors sm:p-6"
-                    >
-                      <h3 className="font-display text-[15.5px] font-bold tracking-tight text-[#0f2438] sm:text-[16.5px]">
-                        {faq.q}
-                      </h3>
-                      <span
-                        className={`flex size-8 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${
-                          isOpen
-                            ? "rotate-180 bg-[#0047ca] text-white shadow-sm"
-                            : "bg-slate-100 text-slate-500 group-hover:bg-slate-200 group-hover:text-slate-800"
-                        }`}
-                      >
-                        <FaChevronDown className="size-3.5 transition-transform" />
-                      </span>
-                    </button>
-
-                    <AnimatePresence initial={false}>
-                      {isOpen && (
-                        <motion.div
-                          key="content"
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: "auto", opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{
-                            duration: 0.3,
-                            ease: [0.16, 1, 0.3, 1],
-                          }}
-                          className="overflow-hidden"
-                        >
-                          <div className="border-t border-slate-100 px-5 pt-3.5 pb-5 text-[13px] leading-relaxed text-slate-600 sm:px-6 sm:pt-4 sm:pb-6 sm:text-[14px]">
-                            {faq.a}
-                          </div>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                </StaggerItem>
-              );
-            })}
+          <Stagger className="flex flex-col gap-4" stagger={0.05}>
+            {rightColumnFaqs.map((faq) => (
+              <StaggerItem key={faq.id}>
+                {renderFaqCard(faq)}
+              </StaggerItem>
+            ))}
           </Stagger>
         </div>
       </div>

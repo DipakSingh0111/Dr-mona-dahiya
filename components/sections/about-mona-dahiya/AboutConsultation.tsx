@@ -12,7 +12,7 @@ type Props = {
   subtitle?: ReactNode;
   /** When false, phone/email are not appended after subtitle (use when subtitle already includes them). */
   appendContacts?: boolean;
-  /** Online consultation duration label shown on pricing cards. */
+  /** Online consultation duration label shown on pricing cards. Empty hides the line. */
   consultationDuration?: string;
 };
 
@@ -110,9 +110,11 @@ export default function AboutConsultation({
                   <p className="mt-1 text-[11.5px] text-white/55">
                     Online consultation
                   </p>
-                  <p className="text-[11.5px] text-white/55">
-                    {consultationDuration}
-                  </p>
+                  {consultationDuration ? (
+                    <p className="text-[11.5px] text-white/55">
+                      {consultationDuration}
+                    </p>
+                  ) : null}
                 </div>
 
                 <div className="w-[168px] rounded-[18px] border border-[#e83e74]/40 bg-[#0a1f45]/85 p-4 shadow-sm">
@@ -125,9 +127,11 @@ export default function AboutConsultation({
                   <p className="mt-1 text-[11.5px] text-white/55">
                     Online consultation
                   </p>
-                  <p className="text-[11.5px] text-white/55">
-                    {consultationDuration}
-                  </p>
+                  {consultationDuration ? (
+                    <p className="text-[11.5px] text-white/55">
+                      {consultationDuration}
+                    </p>
+                  ) : null}
                 </div>
               </div>
 

@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { FaVial, FaMicroscope, FaDna, FaSnowflake, FaCalendarCheck, FaMapMarkerAlt, FaCheck } from "react-icons/fa";
+import { FaMicroscope, FaDna, FaCheck, FaVial, FaSnowflake, FaCalendarCheck } from "react-icons/fa";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
+import ClinicsAppointmentCards from "@/components/sections/ClinicsAppointmentCards";
 
 export default function PgtCostAndClinics() {
   const costFactors = [
@@ -67,35 +68,9 @@ export default function PgtCostAndClinics() {
     },
   ];
 
-  const clinics = [
-    {
-      sector: "SECTOR 49",
-      city: "Noida",
-      address:
-        "3rd Floor, K-06, above FirstCry, Baraula, Sector 49, Noida, Uttar Pradesh 201301",
-      mapUrl: "https://maps.google.com/?q=Sector+49+Noida",
-      clinicUrl: "/location",
-    },
-    {
-      sector: "RAJ NAGAR",
-      city: "Ghaziabad",
-      address:
-        "2nd Floor, RDC, C-53A, near Bikanerwala, Sector 15, Sector 10, Raj Nagar, Ghaziabad, Uttar Pradesh 201002",
-      mapUrl: "https://maps.google.com/?q=Raj+Nagar+Ghaziabad",
-      clinicUrl: "/location",
-    },
-    {
-      sector: "LAJPAT NAGAR",
-      city: "Delhi",
-      address:
-        "Building Number 41, First Floor, Ring Road, Block Q, Lajpat Nagar IV, Lajpat Nagar, New Delhi 110024",
-      mapUrl: "https://maps.google.com/?q=Lajpat+Nagar+Delhi",
-      clinicUrl: "/location",
-    },
-  ];
-
   return (
-    <section className="relative overflow-hidden bg-slate-50/70 px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
+    <>
+      <section className="relative overflow-hidden bg-slate-50/70 px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
       <div className="relative mx-auto w-full max-w-[1440px]">
         {/* Cost Factors & Pricing Variables */}
         <Reveal className="mb-6 sm:mb-8">
@@ -138,70 +113,15 @@ export default function PgtCostAndClinics() {
           })}
         </Stagger>
 
-        {/* Book a Consultation at Our Clinics */}
-        <div className="mt-12 sm:mt-16">
-          <Reveal className="mb-6 sm:mb-8">
-            <p className="text-[12px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:text-[13px]">
-              Visit Dr. Mona
-            </p>
-            <h2 className="font-serif mt-1 text-[1.65rem] leading-[1.2] font-normal tracking-tight text-slate-900 sm:text-[2.1rem] lg:text-[2.35rem]">
-              Book a Consultation at Our Clinics
-            </h2>
-            <p className="mt-2 text-[14px] leading-relaxed text-slate-600 sm:text-[15px]">
-              Dr. Mona sees patients in Noida, Ghaziabad and Delhi, and offers online consultations.
-            </p>
-          </Reveal>
-
-          <Stagger
-            stagger={0.06}
-            className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
-          >
-            {clinics.map((c, idx) => (
-              <StaggerItem key={idx}>
-                <div className="flex h-full flex-col justify-between rounded-[20px] border border-slate-200/90 bg-white p-6 shadow-[0_4px_18px_rgba(0,20,60,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-[#0047ca]/40 hover:shadow-[0_14px_30px_rgba(0,30,80,0.08)]">
-                  <div>
-                    <span className="text-[11.5px] font-bold tracking-wider text-[#e83e74] uppercase">
-                      {c.sector}
-                    </span>
-                    <h3 className="font-serif mt-1 text-[1.4rem] font-bold text-slate-900">
-                      {c.city}
-                    </h3>
-                    <p className="mt-2 text-[13px] leading-relaxed text-slate-600">
-                      {c.address}
-                    </p>
-                  </div>
-
-                  <div className="mt-6 flex flex-wrap items-center gap-3 pt-4 border-t border-slate-100">
-                    <a
-                      href={c.mapUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-[12.5px] font-semibold text-[#0047ca] hover:underline"
-                    >
-                      <FaMapMarkerAlt className="size-3" />
-                      Get directions
-                    </a>
-                    <span className="text-slate-300">•</span>
-                    <Link
-                      href={c.clinicUrl}
-                      className="text-[12.5px] font-semibold text-slate-700 hover:text-[#0047ca]"
-                    >
-                      Clinic page
-                    </Link>
-                    <a
-                      href="#book-consultation"
-                      className="mt-2 w-full rounded-full border border-slate-300 bg-white py-2 text-center text-[13px] font-semibold text-slate-800 transition-colors hover:border-[#0047ca] hover:bg-[#0047ca] hover:text-white"
-                    >
-                      Book appointment
-                    </a>
-                  </div>
-                </div>
-              </StaggerItem>
-            ))}
-          </Stagger>
-        </div>
       </div>
     </section>
-  );
+
+    <ClinicsAppointmentCards
+      eyebrow="Visit Dr. Mona"
+      title="Book a Consultation at Our Clinics"
+      subtitle="Dr. Mona sees patients in Noida, Ghaziabad and Delhi, and offers online consultations."
+    />
+  </>
+);
 }
 

@@ -24,15 +24,17 @@ export function TreatmentSectionHeader({
   title,
   subtitle,
 }: {
-  eyebrow: string;
+  eyebrow?: string;
   title: ReactNode;
   subtitle?: ReactNode;
 }) {
   return (
     <Reveal variant="fadeUp">
-      <p className="text-[12px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:text-[13px]">
-        {eyebrow}
-      </p>
+      {eyebrow ? (
+        <p className="text-[12px] font-semibold tracking-wide text-[#e83e74] sm:text-[13px]">
+          {eyebrow}
+        </p>
+      ) : null}
       <h2 className="font-serif mt-1 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-white sm:text-[2.2rem] lg:text-[2.45rem]">
         {title}
       </h2>

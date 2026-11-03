@@ -2,15 +2,15 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { FaHome, FaChevronRight, FaStar, FaArrowRight } from "react-icons/fa";
+import { FaHome, FaChevronRight } from "react-icons/fa";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
 export default function AboutHero() {
   const badges = [
-    "MBBS & MD Gold Medalist",
-    "Singapore General Hospital Fellow",
-    "25+ years' experience",
-    "50+ awards",
+    "MBBS Gold Medalist & MD Gold Medalist",
+    "Fellow from Singapore General Hospital",
+    "Experience of more than 25 Years",
+    "More than 50 Awards Received",
   ];
 
   return (
@@ -63,55 +63,39 @@ export default function AboutHero() {
           </nav>
 
           <Reveal variant="slideLeft">
-            <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[10.5px] font-bold tracking-[0.12em] text-[#ff7fa9] uppercase backdrop-blur-md sm:px-3.5 sm:text-[11.5px]">
-              <span className="size-1.5 rounded-full bg-[#ff7fa9]" />
+            <p className="text-[12px] font-semibold tracking-wide text-[#f9a8d4] sm:text-[13px]">
               About Dr. Mona Dahiya
-            </div>
+            </p>
 
-            <h1 className="font-display max-w-[34rem] text-[1.65rem] leading-[1.18] font-bold tracking-tight text-white sm:text-[2.1rem] lg:text-[2.3rem] xl:text-[2.55rem]">
-              About Dr. Mona Dahiya:{" "}
-              <span className="bg-gradient-to-r from-white via-[#ffd6e4] to-[#ff9ebd] bg-clip-text text-transparent">
-                Medical Excellence in Reproductive Medicine
-              </span>
+            <h1 className="font-serif mt-1.5 max-w-[40rem] text-[1.65rem] leading-[1.18] font-normal tracking-tight text-white sm:text-[2.1rem] lg:text-[2.35rem] xl:text-[2.55rem]">
+              Dr. Mona Dahiya - Senior Reproductive Endocrinologist &amp; Fertility Specialist
             </h1>
 
-            <p className="mt-3 max-w-xl text-[13px] leading-relaxed text-white/80 sm:mt-4 sm:text-[14px]">
-              Dr. Mona Dahiya (MBBS Gold Medalist, MD Gold Medalist, DNB,
-              Singapore General Hospital Fellowship) is a senior reproductive
-              endocrinologist and fertility specialist with 25+ years of
-              clinical experience. Founder Director of her fertility centres,
-              she has guided over 25,000 families across India and overseas.
+            <p className="mt-3.5 max-w-xl text-[13px] leading-relaxed text-white/80 sm:mt-4 sm:text-[14px]">
+              Dr. Mona Dahiya is a senior reproductive endocrinologist &amp; infertility specialist with 25+ years of experience. She is the Founder Director of Little Angel IVF. She has successfully treated more than 25000 couples from India and abroad.
             </p>
 
             <div className="mt-4 flex flex-wrap items-center gap-2 sm:mt-5 sm:gap-2.5">
               <a
-                href="#book-appointment"
+                href="#book-consultation"
                 className="inline-flex items-center justify-center rounded-full bg-[#c53658] px-3.5 py-2 text-[12px] font-semibold whitespace-nowrap text-white shadow-md transition-all hover:bg-[#a82946] active:scale-95 sm:px-5 sm:py-2.5 sm:text-[13px]"
               >
                 Book In-Clinic Consultation
               </a>
-              <a
-                href="#online-consultation"
+              <Link
+                href="/ivf-consultation-online"
                 className="inline-flex items-center justify-center rounded-full bg-[#0047ca] px-3.5 py-2 text-[12px] font-semibold whitespace-nowrap text-white shadow-md ring-1 ring-white/25 transition-all hover:bg-[#0037a3] active:scale-95 sm:px-5 sm:py-2.5 sm:text-[13px]"
               >
                 Schedule Online Consultation
-              </a>
+              </Link>
             </div>
 
-            <div className="mt-3 flex flex-wrap items-center gap-2 sm:mt-4 sm:gap-3">
-              <div className="flex items-center gap-0.5 text-[#f59e0b]">
-                <FaStar className="size-3 fill-current sm:size-3.5" />
-                <FaStar className="size-3 fill-current sm:size-3.5" />
-                <FaStar className="size-3 fill-current sm:size-3.5" />
-                <FaStar className="size-3 fill-current sm:size-3.5" />
-                <FaStar className="size-3 fill-current sm:size-3.5" />
-              </div>
+            <div className="mt-3 sm:mt-4">
               <Link
-                href="#testimonials"
-                className="group inline-flex items-center gap-1.5 text-[12.5px] font-semibold text-[#f9a8d4] transition-colors hover:text-white hover:underline sm:text-[13.5px]"
+                href="#reviews"
+                className="inline-flex items-center gap-1.5 text-[12.5px] font-semibold text-[#f9a8d4] transition-colors hover:text-white hover:underline sm:text-[13.5px]"
               >
-                <span>Read Dr. Mona&apos;s Google reviews</span>
-                <FaArrowRight className="size-2.5 transition-transform group-hover:translate-x-0.5 sm:size-3" />
+                Read Dr. Mona Dahiya&apos;s Google reviews →
               </Link>
             </div>
 
@@ -146,7 +130,7 @@ export default function AboutHero() {
           <div className="relative aspect-[3/4] max-h-[min(50vh,400px)] overflow-hidden rounded-[22px] border-2 border-white/70 bg-[#06183a] shadow-[0_18px_40px_rgba(0,18,60,0.5)] sm:rounded-[26px] lg:max-h-[min(56vh,440px)]">
             <Image
               src="/images/about-mona-dahiya/dr-mona-dahiya.jpg"
-              alt="Dr. Mona Dahiya - Senior Reproductive Endocrinologist & IVF Specialist"
+              alt="Dr. Mona Dahiya - Senior Reproductive Endocrinologist & Fertility Specialist"
               fill
               priority
               sizes="(max-width: 1024px) 320px, 390px"

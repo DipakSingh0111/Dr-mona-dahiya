@@ -1,0 +1,58 @@
+"use client";
+
+import Image from "next/image";
+import { FaCheck } from "react-icons/fa";
+import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
+import {
+  TreatmentSection,
+  TreatmentSectionHeader,
+} from "@/components/ui/treatment";
+
+const tests = [
+  "Check ovarian reserve by doing serum AMH and day 2/3 trans vaginal ultrasound to look at antral follicle count.",
+  "Semen analysis and sperm DNA fragmentation test.",
+  "Evaluate the uterus by 3D ultrasound or SIS and sometimes hysteroscopy is needed.",
+  "Blood tests to check thyroid, sugar and hormones (Prolactin, HbA1c, FSH, LH and Estradiol levels)",
+  "Test for infections in both partners (HIV I & II, HbsAg, Anti HCV and VDRL)",
+];
+
+export default function BestIvfGhaziabadDiagnostic() {
+  return (
+    <TreatmentSection>
+      <TreatmentSectionHeader
+        eyebrow="Work up before treatment"
+        title="Diagnostic checklist"
+        subtitle="This will help us know why you are unable to conceive and tailor your plan. These may not be required for all couples."
+      />
+
+      <div className="mt-7 grid grid-cols-1 items-center gap-8 lg:grid-cols-12 lg:gap-10">
+        <Stagger className="flex flex-col gap-3 lg:col-span-7" stagger={0.06}>
+          {tests.map((text) => (
+            <StaggerItem key={text}>
+              <div className="flex items-start gap-3 rounded-2xl border border-white/10 bg-[#0a1f45]/80 px-4 py-3.5 sm:px-5 sm:py-4">
+                <span className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-[#134e43] text-white">
+                  <FaCheck className="size-3" />
+                </span>
+                <p className="text-[13.5px] leading-relaxed text-white/85 sm:text-[14px]">
+                  {text}
+                </p>
+              </div>
+            </StaggerItem>
+          ))}
+        </Stagger>
+
+        <Reveal variant="scaleIn" className="lg:col-span-5">
+          <div className="relative mx-auto max-w-[420px] overflow-hidden rounded-[22px] border border-white/15 shadow-[0_20px_50px_rgba(0,10,40,0.4)]">
+            <Image
+              src="/images/about-mona-dahiya/dr-mona-dahiya.jpg"
+              alt="Dr. Mona Dahiya"
+              width={500}
+              height={560}
+              className="h-auto w-full object-cover object-top"
+            />
+          </div>
+        </Reveal>
+      </div>
+    </TreatmentSection>
+  );
+}

@@ -71,9 +71,8 @@ export default function PatientReviewsHero() {
               IVF Patient Reviews
             </h1>
             <p className="mt-3 max-w-xl text-[13px] leading-relaxed text-white/80 sm:mt-4 sm:text-[14px]">
-              Read what patients wrote about their care with Dr. Mona Dahiya,
-              grouped by what they mention most. These are individual
-              experiences in patients&apos; own words.
+              These are some of our patient reviews. Listed under keywords that
+              they commonly talk about. All written by our patients.
             </p>
 
             <div className="mt-4 flex flex-wrap items-center gap-2 sm:mt-5 sm:gap-2.5">
@@ -96,7 +95,7 @@ export default function PatientReviewsHero() {
                 href="/about-mona-dahiya#reviews"
                 className="inline-flex items-center gap-1.5 text-[12.5px] font-semibold text-[#f9a8d4] transition-colors hover:text-white hover:underline sm:text-[13.5px]"
               >
-                Read Dr. Mona&apos;s Google reviews
+                Read Dr. Mona Dahiya&apos;s Google reviews
                 <span aria-hidden>→</span>
               </Link>
             </div>
@@ -129,14 +128,14 @@ export default function PatientReviewsHero() {
                 "radial-gradient(circle, rgba(232,62,116,0.35) 0%, rgba(59,130,246,0.25) 50%, transparent 75%)",
             }}
           />
-          <div className="relative aspect-[3/4] max-h-[min(50vh,400px)] overflow-hidden rounded-[22px] border-2 border-white/70 bg-[#06183a] shadow-[0_18px_40px_rgba(0,18,60,0.5)] sm:rounded-[26px] lg:max-h-[min(56vh,440px)]">
+          <div className="relative aspect-[3/4] max-h-[min(50vh,400px)] overflow-hidden rounded-[24px] border-4 border-white bg-white shadow-[0_18px_40px_rgba(0,18,60,0.5)] sm:rounded-[28px] lg:max-h-[min(56vh,440px)]">
             <Image
-              src="/images/about-mona-dahiya/IVF-sucess-stories.jpg"
+              src="/images/about-mona-dahiya/ivf-patient-reviews-doctor.jpg"
               alt="Dr. Mona Dahiya — IVF Patient Reviews"
               fill
               priority
               sizes="(max-width: 1024px) 320px, 400px"
-              className="object-cover object-[center_12%]"
+              className="object-cover object-center"
             />
           </div>
         </Reveal>

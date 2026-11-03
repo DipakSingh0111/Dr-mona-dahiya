@@ -22,8 +22,9 @@ type QualCard = {
 type LogoItem = {
   id: string;
   logo?: string;
-  /** Short brand shown inside white card when no logo file */
   brand?: string;
+  subBrand?: string;
+  brandColor?: string;
   caption: string;
 };
 
@@ -31,22 +32,22 @@ const educationCards: QualCard[] = [
   {
     badge: "MBBS",
     title: "MBBS (Gold Medalist)",
-    institution: "Lady Hardinge Medical College, University of Delhi",
+    institution: "Lady Hardinge Medical College, University of Delhi.",
   },
   {
     badge: "MD",
-    title: "MD, Obstetrics & Gynaecology (Gold Medalist)",
-    institution: "Maulana Azad Medical College, University of Delhi",
+    title: "MD Obs & Gynae (Gold Medalist)",
+    institution: "Maulana Azad Medical College, University of Delhi.",
   },
   {
     badge: "DNB",
-    title: "DNB (Diplomate of National Board)",
-    institution: "National Board of Examinations, India",
+    title: "DNB",
+    institution: "DNB from National Board of Examination.",
   },
   {
-    badge: "ART",
-    title: "Fellowship in Reproductive Medicine & IVF",
-    institution: "Singapore General Hospital, Singapore",
+    badge: "IVF",
+    title: "Fellowship in IVF",
+    institution: "Singapore General Hospital.",
   },
 ];
 
@@ -69,16 +70,22 @@ const experienceItems: LogoItem[] = [
   {
     id: "milann",
     brand: "milann",
+    subBrand: "THE FERTILITY CENTER",
+    brandColor: "text-[#5b2c6f]",
     caption: "Milann Fertility",
   },
   {
     id: "nova",
     brand: "NOVA IVF",
+    subBrand: "FERTILITY",
+    brandColor: "text-[#c0392b]",
     caption: "NOVA IVF Fertility Centre",
   },
   {
     id: "mamc",
     brand: "MAMC",
+    subBrand: "AGRASEN MEDICAL",
+    brandColor: "text-[#1a5276]",
     caption: "Maharaja Agrasen Medical College",
   },
   {
@@ -94,6 +101,8 @@ const experienceItems: LogoItem[] = [
   {
     id: "echs",
     brand: "ECHS",
+    subBrand: "POLYCLINIC",
+    brandColor: "text-[#2e4053]",
     caption: "ECHS Clinic",
   },
   {
@@ -117,10 +126,10 @@ function FeatureStat({
       className="flex h-full flex-col justify-center rounded-[22px] px-6 py-7 text-white sm:px-7 sm:py-8"
       style={{
         background:
-          "linear-gradient(160deg, #4a2a32 0%, #3b2d2d 45%, #2f2428 100%)",
+          "linear-gradient(160deg, #3d1b28 0%, #2f1822 45%, #231119 100%)",
       }}
     >
-      <p className="font-serif text-[2.6rem] leading-none font-bold text-[#e8838f] sm:text-[3.1rem]">
+      <p className="font-serif text-[2.1rem] leading-[1.1] font-bold text-[#e8838f] sm:text-[2.5rem]">
         {value}
       </p>
       <p className="mt-4 font-serif text-[1.2rem] leading-snug font-bold text-white sm:text-[1.35rem]">
@@ -135,7 +144,7 @@ function FeatureStat({
 
 function EducationCard({ badge, title, institution }: QualCard) {
   return (
-    <article className="flex h-full items-start gap-3.5 rounded-[20px] border border-white/12 bg-white/[0.06] p-4 transition-all duration-200 hover:border-[#60a5fa]/35 hover:bg-white/[0.09] sm:gap-4 sm:p-5">
+    <article className="flex h-full items-start gap-3.5 rounded-[20px] border border-white/12 bg-[#091a3c]/80 p-4.5 backdrop-blur-md transition-all duration-200 hover:border-[#60a5fa]/35 hover:bg-[#0c224e] sm:gap-4 sm:p-5">
       <span className="flex size-11 shrink-0 items-center justify-center rounded-[14px] bg-gradient-to-br from-[#0047ca] to-[#0037a3] text-[11.5px] font-bold tracking-wide text-white shadow-[0_8px_18px_rgba(0,71,202,0.35)] sm:size-12 sm:rounded-2xl sm:text-[12.5px]">
         {badge}
       </span>
@@ -151,10 +160,10 @@ function EducationCard({ badge, title, institution }: QualCard) {
   );
 }
 
-function LogoCard({ logo, brand, caption }: LogoItem) {
+function LogoCard({ logo, brand, subBrand, brandColor, caption }: LogoItem) {
   return (
     <article className="flex h-full flex-col gap-2.5">
-      <div className="flex min-h-[100px] items-center justify-center rounded-2xl bg-white px-4 py-4 sm:min-h-[112px]">
+      <div className="flex min-h-[100px] items-center justify-center rounded-2xl bg-white px-4 py-4 shadow-sm sm:min-h-[112px]">
         {logo ? (
           <div className="relative h-12 w-full sm:h-14">
             <Image
@@ -166,9 +175,20 @@ function LogoCard({ logo, brand, caption }: LogoItem) {
             />
           </div>
         ) : (
-          <p className="px-2 text-center text-[15px] font-bold tracking-tight text-[#0f2438] sm:text-[16px]">
-            {brand || caption}
-          </p>
+          <div className="flex flex-col items-center justify-center text-center">
+            <p
+              className={`text-[17px] font-black tracking-tight ${
+                brandColor || "text-[#0f2438]"
+              }`}
+            >
+              {brand || caption}
+            </p>
+            {subBrand ? (
+              <span className="text-[9px] font-bold tracking-widest text-slate-500 uppercase">
+                {subBrand}
+              </span>
+            ) : null}
+          </div>
         )}
       </div>
       <p className="text-left text-[12px] leading-snug text-white/70 sm:text-[13px]">
@@ -201,27 +221,22 @@ export default function AboutCredentials() {
   const pubData = siteData.publications;
 
   const tabs: { id: TabId; label: string }[] = [
-    { id: "education", label: "Educational qualifications" },
-    { id: "experience", label: "Clinical experience" },
-    { id: "publications", label: "Publications" },
-    { id: "member", label: "Member" },
+    { id: "education", label: "Education" },
+    { id: "experience", label: "Experience" },
+    { id: "publications", label: "Publication" },
+    { id: "member", label: "Membership" },
     { id: "speaker", label: "Speaker" },
-    { id: "awards", label: "Awards & events" },
+    { id: "awards", label: "Awards" },
   ];
 
   return (
     <section
       id="credentials"
-      className="relative overflow-hidden px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8"
-      style={{
-        background:
-          "linear-gradient(165deg, #061e52 0%, #0a2a6e 42%, #082458 72%, #051a45 100%)",
-      }}
+      className="relative overflow-hidden bg-[#061532] px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12 text-white"
     >
-      {/* Soft depth accents */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-24 right-[-8%] h-[420px] w-[420px] rounded-full opacity-40 blur-3xl"
+        className="pointer-events-none absolute -top-24 right-[-8%] h-[420px] w-[420px] rounded-full opacity-35 blur-3xl"
         style={{
           background:
             "radial-gradient(circle, rgba(0,71,202,0.28) 0%, transparent 68%)",
@@ -229,7 +244,7 @@ export default function AboutCredentials() {
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute bottom-[-12%] left-[-6%] h-[380px] w-[380px] rounded-full opacity-35 blur-3xl"
+        className="pointer-events-none absolute bottom-[-12%] left-[-6%] h-[380px] w-[380px] rounded-full opacity-30 blur-3xl"
         style={{
           background:
             "radial-gradient(circle, rgba(232,62,116,0.18) 0%, transparent 70%)",
@@ -239,15 +254,15 @@ export default function AboutCredentials() {
       <div className="relative mx-auto w-full max-w-[1440px]">
         <Reveal>
           <header className="mb-7 sm:mb-8">
-            <p className="text-[13px] font-semibold text-[#e8838f] sm:text-[14px]">
+            <p className="text-[12px] font-semibold tracking-wider text-[#e83e74] uppercase sm:text-[13px]">
               Credentials
             </p>
-            <h2 className="mt-2 font-serif text-[1.65rem] leading-tight font-bold tracking-tight text-white sm:text-[2.1rem] lg:text-[2.35rem]">
-              Qualifications, experience & recognition
+            <h2 className="mt-2 font-serif text-[1.85rem] leading-[1.2] font-normal tracking-tight text-white sm:text-[2.2rem] lg:text-[2.45rem]">
+              Qualifications, experience &amp; recognition
             </h2>
-            <p className="mt-3 max-w-3xl text-[13.5px] leading-relaxed text-white/65 sm:text-[14.5px]">
-              Education, clinical experience, research, memberships and awards
-              from 25+ years in reproductive medicine.
+            <p className="mt-3 max-w-3xl text-[13.5px] leading-relaxed text-slate-300 sm:text-[14.5px]">
+              Qualifications, Publications and Awards from more than 25 Years
+              Experience.
             </p>
           </header>
         </Reveal>
@@ -261,10 +276,10 @@ export default function AboutCredentials() {
                   key={tab.id}
                   type="button"
                   onClick={() => setActiveTab(tab.id)}
-                  className={`whitespace-nowrap rounded-full px-4 py-2.5 text-[12.5px] font-semibold transition-colors sm:px-5 sm:text-[14px] ${
+                  className={`whitespace-nowrap rounded-full px-4 py-2.5 text-[12.5px] font-semibold transition-all duration-200 cursor-pointer sm:px-5 sm:text-[13.5px] ${
                     isActive
-                      ? "bg-[#e83e74] text-white shadow-[0_8px_22px_rgba(232,62,116,0.45)]"
-                      : "border border-white/25 bg-transparent text-white/85 hover:border-white/45 hover:text-white"
+                      ? "bg-[#0047ca] text-white shadow-[0_4px_16px_rgba(0,71,202,0.35)] ring-1 ring-white/20"
+                      : "border border-white/20 bg-white/5 text-white/80 hover:border-white/40 hover:bg-white/10 hover:text-white"
                   }`}
                 >
                   {tab.label}
@@ -278,9 +293,9 @@ export default function AboutCredentials() {
           <div className="grid grid-cols-1 items-stretch gap-4 lg:grid-cols-[0.85fr_2.15fr] lg:gap-5">
             <Reveal variant="slideLeft" className="h-full">
               <FeatureStat
-                value="2× Gold"
-                label="Educational qualifications"
-                description="Gold medals in both MBBS and MD, national board certification, and sub-specialty IVF training in Singapore."
+                value="2 Times Gold Medalist"
+                label="Education"
+                description="MBBS Gold Medalist, MD Gold Medalist. National Board Certified and Fellowship from Singapore."
               />
             </Reveal>
             <Stagger
@@ -313,9 +328,9 @@ export default function AboutCredentials() {
           <div className="grid grid-cols-1 items-start gap-4 lg:grid-cols-[0.85fr_2.15fr] lg:gap-5">
             <Reveal variant="slideLeft">
               <FeatureStat
-                value={pubData.publications.stat.value}
-                label={pubData.publications.stat.label}
-                description={pubData.publications.stat.description}
+                value="100+"
+                label="Publications"
+                description="Research papers in national and international journals on infertility treatment."
               />
             </Reveal>
             <LogoGrid

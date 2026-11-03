@@ -19,7 +19,7 @@ function FaqCard({
 }) {
   return (
     <div
-      className={`overflow-hidden rounded-2xl border bg-[#091a3c]/70 backdrop-blur-md transition-all duration-300 ${
+      className={`overflow-hidden rounded-2xl border bg-[#091a3c]/70 backdrop-blur-md transition-[border-color,box-shadow] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
         isOpen
           ? "border-[#e83e74]/45 shadow-[0_0_24px_rgba(232,62,116,0.12)]"
           : "border-white/10 hover:border-[#0047ca]/50"
@@ -35,7 +35,7 @@ function FaqCard({
           {item.question}
         </span>
         <span
-          className={`flex size-7 shrink-0 items-center justify-center rounded-full bg-white/5 text-slate-300 transition-transform duration-300 ease-out ${
+          className={`flex size-7 shrink-0 items-center justify-center rounded-full bg-white/5 text-slate-300 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
             isOpen ? "rotate-180 text-[#e83e74]" : ""
           }`}
         >
@@ -44,7 +44,7 @@ function FaqCard({
       </button>
 
       <div
-        className={`grid transition-[grid-template-rows,opacity] duration-300 ease-in-out ${
+        className={`grid transition-[grid-template-rows,opacity] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
           isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
         }`}
       >

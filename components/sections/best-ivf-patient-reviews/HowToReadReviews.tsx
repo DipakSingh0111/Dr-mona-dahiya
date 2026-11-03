@@ -9,19 +9,19 @@ export default function HowToReadReviews() {
         <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-12 lg:gap-10">
           <Reveal className="lg:col-span-5">
             <span className="text-[12px] font-semibold tracking-wider text-[#e83e74] uppercase">
-              How to read this page
+              How to navigate this page
             </span>
             <h2 className="font-serif mt-1 text-[1.85rem] leading-[1.18] font-normal tracking-tight text-white sm:text-[2.2rem] lg:text-[2.45rem]">
-              Patient reviews, grouped by theme
+              Patient Reviews Categorized
             </h2>
           </Reveal>
 
           <Reveal delay={0.06} className="lg:col-span-7">
-            <p className="text-[14px] leading-relaxed text-white/70 sm:text-[15px]">
-              Patients often mention several things at once, so a review can
-              appear under more than one theme. Reviews describe individual
-              experiences. Results depend on age, diagnosis and test results,
-              and no clinic can guarantee a pregnancy.
+            <p className="text-[14px] leading-relaxed text-white/75 sm:text-[15.5px]">
+              Some patients will talk about multiple topics in their review. So
+              they may fall under different categories. They all represent what
+              one person experienced. There is no guaranteed pregnancy.
+              It&apos;s dependent on your age and diagnosis and tests.
             </p>
           </Reveal>
         </div>

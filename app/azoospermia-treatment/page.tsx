@@ -9,6 +9,7 @@ import AzoospermiaCaseInsight from "@/components/sections/azoospermia-treatment/
 import AzoospermiaCost from "@/components/sections/azoospermia-treatment/AzoospermiaCost";
 import AzoospermiaFaq from "@/components/sections/azoospermia-treatment/AzoospermiaFaq";
 import AzoospermiaRelated from "@/components/sections/azoospermia-treatment/AzoospermiaRelated";
+import ClinicsAppointmentCards from "@/components/sections/ClinicsAppointmentCards";
 import AboutConsultation from "@/components/sections/about-mona-dahiya/AboutConsultation";
 import AboutParenthoodCta from "@/components/sections/about-mona-dahiya/AboutParenthoodCta";
 
@@ -56,6 +57,14 @@ export default function AzoospermiaPage() {
 
       <SectionReveal delay={0.04}>
         <AzoospermiaRelated />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <ClinicsAppointmentCards
+          eyebrow="Visit Dr. Mona"
+          title="Book a Consultation at Our Clinics"
+          subtitle="Dr. Mona sees patients in Noida, Ghaziabad and Delhi, and offers online consultations."
+        />
       </SectionReveal>
 
       <SectionReveal delay={0.04}>

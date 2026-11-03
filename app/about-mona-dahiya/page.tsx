@@ -15,9 +15,9 @@ import AboutParenthoodCta from "@/components/sections/about-mona-dahiya/AboutPar
 import { SectionReveal } from "@/components/ui/Reveal";
 
 export const metadata: Metadata = {
-  title: "About Dr. Mona Dahiya | Medical Excellence in Reproductive Medicine",
+  title: "Dr. Mona Dahiya - Senior Reproductive Endocrinologist & Fertility Specialist",
   description:
-    "Dr. Mona Dahiya (MBBS Gold Medalist, MD Gold Medalist, Singapore General Hospital Fellow) is a senior reproductive endocrinologist and fertility specialist with 25+ years of clinical experience.",
+    "Dr. Mona Dahiya is a senior reproductive endocrinologist & infertility specialist with 25+ years of experience. She is the Founder Director of Little Angel IVF. She has successfully treated more than 25000 couples from India and abroad.",
 };
 
 export default function AboutPage() {
@@ -30,7 +30,7 @@ export default function AboutPage() {
 
       {/* Medical Registration (DMC-7795, MCI-09/6820, UPMC-110541) */}
       <SectionReveal>
-        <MedicalRegistration />
+        <MedicalRegistration dark={true} />
       </SectionReveal>
 
       {/* Doctor-Led Fertility Care & "Dr. Mona Dahiya at a glance" Stats */}
@@ -65,7 +65,13 @@ export default function AboutPage() {
 
       {/* 4. Book a Consultation with Dr. Mona Dahiya (Pricing & Form) */}
       <SectionReveal delay={0.04}>
-        <AboutConsultation />
+        <AboutConsultation
+          eyebrow="Book Appointment"
+          title="Book An Appointment With Dr. Mona Dahiya"
+          subtitle="Book Your In-Clinic Consultation or Record Evaluation Online. Call: +91 92679 82924 Email: info@drmonadahiya.com"
+          appendContacts={false}
+          consultationDuration=""
+        />
       </SectionReveal>
 
       {/* 5. Take your first step towards parenthood CTA */}

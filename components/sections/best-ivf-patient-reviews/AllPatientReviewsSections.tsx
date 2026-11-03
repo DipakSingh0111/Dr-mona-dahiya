@@ -6,12 +6,12 @@ export default function AllPatientReviewsSections() {
       <PatientReviewsGroup
         id="first-cycle"
         eyebrow="First cycle"
-        title="Couples who reported a pregnancy in their first cycle"
-        subtitle="Reviews from patients who describe a positive result in their first treatment cycle. Each one is an individual experience, not a prediction."
+        title="Pregnant in my first cycle"
+        subtitle="Our patients have mentioned becoming pregnant in their first cycle. Every case is different."
         col1={[
           {
             title: "Success in 1st IVF Cycle",
-            body: "I was referred to Dr. Mona Dahiya by a friend, and I must admit that I was initially hesitant to make an appointment, given her reputation as a renowned infertility specialist in India. I assumed I would be put on a long waiting list, but to my surprise, I was able to secure an appointment sooner than expected. Our meeting with Dr. Mona was a breath of fresh air. She took the time to listen to our story, and her empathetic approach put us at ease. We felt like we were in good hands, as she worked collaboratively with us to develop a personalized protocol. After previously struggling to create embryos, we left our first appointment feeling encouraged and hopeful. And, incredibly, we achieved success on our very first round of IVF! We're still in awe of our miracle baby boy, and we're forever grateful to Dr. Mona and her team for being with us every step of the way during a challenging and emotional time in our lives. Their support and expertise were invaluable, and we can't thank them enough for helping us achieve our dream of becoming parents.",
+            body: "I was referred to Dr. Mona Dahiya by a friend, and I must admit that I was initially hesitant to make an appointment, given her reputation as a renowned infertility specialist in India. I assumed I would be put on a long waiting list, but to my surprise, I was able to secure an appointment sooner than expected.Our meeting with Dr. Mona was a breath of fresh air. She took the time to listen to our story, and her empathetic approach put us at ease. We felt like we were in good hands, as she worked collaboratively with us to develop a personalized protocol. After previously struggling to create embryos, we left our first appointment feeling encouraged and hopeful. And, incredibly, we achieved success on our very first round of IVF! We're still in awe of our miracle baby boy, and we're forever grateful to Dr. Mona and her team for being with us every step of the way during a challenging and emotional time in our lives. Their support and expertise were invaluable, and we can't thank them enough for helping us achieve our dream of becoming parents.",
             author: "ASHUTOSH KUMAR",
             source: "Patient review",
             avatarLetter: "A",
@@ -27,20 +27,20 @@ export default function AllPatientReviewsSections() {
         col2={[
           {
             title: "Pregnancy in the 1st IVF Cycle",
-            body: "After extensive online research for the Best IVF doctor in Ghaziabad, we consulted Dr. Mona Dahiya. We were amazed with her complete knowledge of IVF treatment. Her IVF clinic in Ghaziabad has very good fertility testing facilities. Her team is also very knowledgeable and supportive. The care that we got though the entire IVF process were incredible. The frozen embryo transfer done by her was spot on and we had a healthy pregnancy in the first IVF Cycle. We are forever grateful to her for helping us expand our family.",
+            body: "After extensive online research for the Best IVF doctor in Ghaziabad, we consulted Dr. Mona Dahiya. We were amazed with her complete knowledge of IVF treatment. Her IVF clinic in Ghaziabad has very good fertility testing facilities. Her team is also very knowledge and supportive. The care that we got though the entire IVF process were incredible. The frozen embryo transfer done by her was spot on and we had a healthy pregnancy in the first IVF Cycle. We are forever grateful to her for helping us expand our family.",
             author: "Vinesh",
             source: "Patient review",
             avatarLetter: "V",
           },
           {
             title: "Best IVF Success Rates.",
-            body: "Dr Mona did our Egg retrieval herself and that too on a holiday. She is very good with ultrasound check-ups to find out any deviations. We did not feel any unease in the embryo transfer process. We had amazing results and a successful first transfer. My wife is 12 weeks pregnant and we would highly recommend Dr Mona's IVF Clinic in Delhi for best IVF success rates.",
+            body: "Dr Mona did our Egg retrieval herself and that too on a holiday. She is very good with ultrasound check-ups to find out any deviations. We did not feel any unease in the embryo transfer process. We had amazing results and a successful first transfer. My wife is 12 weeks pregnant and we highly recommend Dr Mona's IVF Clinic in Delhi for best IVF success rates.",
             author: "Gaurav Baghel",
             source: "Patient review",
             avatarLetter: "G",
           },
           {
-            body: "Dr. Mona is a really good fertility doctor in Delhi. She has a very patient-focussed approach which is unheard of these days with such famous doctors in Delhi. She came across as very genuine in every consultation. Her treatment was precise and it has resulted in a positive result in the First IVF Cycle.",
+            body: "Dr Mona is a really good fertility doctor in Delhi. She has a very patient focussed approach which is unheard of these days with such famous doctors in Delhi. She came across as very genuine in every consultation. Her treatment was precise and it has resulted in a positive result in the First IVF Cycle.",
             author: "Brahm Prakash",
             source: "Google patient review",
             avatarLetter: "B",
@@ -56,19 +56,19 @@ export default function AllPatientReviewsSections() {
           {
             title: "Incredibly Talented IVF Doctor",
             body: "I sincerely thank Dr Mona Dahiya and her Medical Team for being very supportive in our infertility journey. She is an incredibly talented IVF Doctor in Ghaziabad with magical hands. She diagnosed our infertility problems and did the best possible IVF procedure to make us parents in the first IVF Cycle.",
-            author: "Udayraj Saroj",
+            author: "Udaryaj Saroj",
             source: "Patient review",
             avatarLetter: "U",
           },
           {
-            body: "We got excellent fertility counselling at her IVF centre in noida. we became pregnant in the 1st IVF cycle.",
+            body: "We got excellent fertility counselling at her IVF centre in noida.we became pregnant in the 1st IVF cycle.",
             author: "Aman goswami123",
             source: "Google patient review",
             avatarLetter: "A",
           },
           {
-            body: "Dr Mona is the best for Male infertility treatment in India. I had severe oligospermia but Dr. Mona Dahiya's ICSI treatment gave us success in the first cycle! Her cutting-edge laboratory and sperm retrieval techniques are unmatched in India.",
-            author: "Aashish jha",
+            body: "Dr Mona is the best for Male Infertility treatment in India. I had severe oligospermia but Dr. Mona Dahiya's ICSI treatment gave us success in the first cycle! Her cutting-edge laboratory and sperm retrieval techniques are unmatched in India.",
+            author: "Aashish Jha",
             source: "Google patient review",
             avatarLetter: "A",
           },
@@ -78,13 +78,13 @@ export default function AllPatientReviewsSections() {
       <PatientReviewsGroup
         id="complex-cases"
         eyebrow="Complex cases"
-        title="Care after earlier setbacks and for complex diagnoses"
-        subtitle="Reviews from patients who came after earlier attempts or with a specific diagnosis, such as PCOS, low AMH, miscarriage, blocked tubes or fibroids."
+        title="Second time around & patients with a diagnosis"
+        subtitle="Patients that have tried elsewhere before coming to us or have been diagnosed with a problem. Whether it's PCOS, Low AMH, Miscarriages, Blocked Tubes or Fibroids."
         col1={[
           {
             title: "Best Infertility Doctor in Delhi",
             body: "We had an incredible experience with Dr. Mona's fertility clinic in Delhi. After 1 failed IVF attempt at Nova Fertility, we were on the verge of giving up, but Dr. Mona's experience and care helped us achieve success. Throughout our pregnancy, everything went smoothly, and we were thrilled to welcome our healthy 3kg baby boy into the world through a natural birth. As our son has now turned 10 months old, we wanted to express our heartfelt gratitude to Dr. Mona for making our dreams of parenthood a reality. She is truly the best infertility doctor in Delhi, and we're forever grateful for her exceptional care and guidance. Thank you, Dr. Mona, for giving us the gift of our precious child.",
-            author: "Starlinglover143",
+            author: "Skatinglover 143",
             source: "Patient review",
             avatarLetter: "S",
           },
@@ -99,7 +99,7 @@ export default function AllPatientReviewsSections() {
         col2={[
           {
             title: "Superb Infertility Specialist",
-            body: "Dr. Mona Dahiya is superb infertility specialist. She expertly diagnosed and treated our uterine issues, including polyps and fibroids, because of which we were not able to conceive. Her thorough approach and attention to detail, especially in managing adhesions from past surgeries, was incredible. I highly recommend her as the best infertility doctor.",
+            body: "Dr. Mona Dahiya is superb infertility specialist. She expertly diagnosed and treated our uterine issues, including polyps and fibroids, because of which we were not able to conceive. Her thorough approach and attention to detail, especially in managing adhesions from past surgeries, was incredible.I highly recommend her as the best infertility doctor.",
             author: "Sachin Upadhyay",
             source: "Patient review",
             avatarLetter: "S",
@@ -111,9 +111,9 @@ export default function AllPatientReviewsSections() {
             avatarLetter: "A",
           },
           {
-            body: "Her fertility clinic is a boon for patients with complex infertility problems. Dr Mona is really good is what we can say. Her experience and success rates are one of the best in India. Her team is very friendly and cooperative. Our recommendation is that you should obviously meet her for the right guidance.",
+            body: "Her fertility clinic is a boon for patients with complex infertility problems.Dr Mona is really good is what we can say.Her experience and success rates are one of the best in India.Her team is very friendly and cooperative.Our recommendation is that you should obviously meet her for the right guidance.",
             author: "Anand Kumar",
-            source: "Patient review",
+            source: "Google patient review",
             avatarLetter: "A",
           },
           {
@@ -131,8 +131,8 @@ export default function AllPatientReviewsSections() {
             avatarLetter: "M",
           },
           {
-            body: "I cannot thank Doctor Mona enough. She is exceptional when it comes to female infertility treatment in Delhi. My wife underwent PCOD treatment under her guidance and the symptoms drastically reduced. Last month we experienced success with ... More 🙏 1",
-            author: "Govind Puney",
+            body: "I cannot thank Doctor Mona enough. She is exceptional when it comes to female infertility treatment in Delhi. My wife underwent PCOS treatment under her guidance and the symptoms drastically reduced. Last month we experienced success with ... More 🙏 1",
+            author: "Govind Funny",
             source: "Google patient review",
             avatarLetter: "G",
           },
@@ -155,8 +155,8 @@ export default function AllPatientReviewsSections() {
       <PatientReviewsGroup
         id="clear-explanations"
         eyebrow="Clear explanations"
-        title="Being listened to and given clear explanations"
-        subtitle="Reviews that mention time, patience and plain-language explanations of each step."
+        title="Took time to listen & explain things clearly"
+        subtitle="Many of our patients love how we take the time to explain everything."
         col1={[
           {
             title: "Wealth of International Experience",
@@ -188,7 +188,7 @@ export default function AllPatientReviewsSections() {
             avatarLetter: "M",
           },
           {
-            body: "The nurses and patient staff are very helpful. The fertility clinic has a very neat and comfortable environment. Dr Mona Dahiya is the most caring fertility doctor that we have met. She is personable, knowledgeable, and very kind hearted. She ticks every box for the perfect fertility treatment doctor in India.",
+            body: "The nurses and patient staff are very helpful. The fertility clinic has a very neat and comfortable environment. Dr Mona Dahiya is the most caring fertility doctor that we have met. She is personable, knowledgeable, and very kind hearted. She ticks every box for the perfect fertility treatment doctor in India,",
             author: "satyam sharma",
             source: "Google patient review",
             avatarLetter: "S",
@@ -200,7 +200,7 @@ export default function AllPatientReviewsSections() {
             avatarLetter: "T",
           },
           {
-            body: "If you are looking for the Best Female Infertility doctor in Delhi, Dr. Mona Dahiya is the one. Her compassionate approach and thorough knowledge made our journey smooth and successful. She listens patiently and provides the best solutions. We could not have asked for a better doctor.",
+            body: "If you are looking for the Best Female infertility doctor in Delhi, Dr. Mona Dahiya is the one. Her compassionate approach and thorough knowledge made our journey smooth and successful. She listens patiently and provides the best solutions. We could not have asked for a better doctor.",
             author: "Yatendra Kumar",
             source: "Google patient review",
             avatarLetter: "Y",
@@ -214,14 +214,14 @@ export default function AllPatientReviewsSections() {
             avatarLetter: "P",
           },
           {
-            body: "Dr Mona Dahiya helped us with IVF treatment at a very challenging time with a positive result. She usually has a long waitlist but her patient coordinator gave us an online appointment to start with. We came from Chandigarh as we did not ... More 🙏 2",
+            body: "Dr Mona Dahiya helped us with IVF treatment at a very challenging time with a positive result. She usually has a long waitlist but her patient coordinator gave us an online appointment to start with. We came from Chandigarh as we did not ... More 🙏 3",
             author: "Karan Kumar",
             source: "Google patient review",
             avatarLetter: "K",
           },
           {
             title: "Best Fertility Physician in India",
-            body: "After years of trying with two top IVF clinics in India, we were advised to seek out Dr. Mona Dahiya's expertise. We were fortunate to be referred to her, and the staff at Apollo Fertility told us that we were indeed lucky to have met her. We were immediately drawn to her honesty and empathy, which made us feel at ease. Although it was difficult to relive our struggles and start anew, Dr. Mona was patient and took the time to thoroughly explain the IVF process. We appreciated the personalized communication, which included texts and emails from the nurses, allowing us to stay on top of the next steps despite our busy schedules. The nurses were compassionate and caring, and we loved the balanced approach of pragmatism and care from the entire team. If only we had known about Dr. Mona Dahiya at the beginning of our journey, we may have saved ourselves years of trying. But ultimately, we're just grateful to be the proud parents of a beautiful little girl. Dr. Mona Dahiya is, without a doubt, the best fertility physician in India, and we're forever grateful for her expertise and care.",
+            body: "After years of trying with two top IVF clinics in India, we were advised to seek out Dr. Mona Dahiya's expertise. We were fortunate to be referred to her, and the staff at Apollo Fertility told us that we were indeed lucky to have met her.We were immediately drawn to her honesty and empathy, which made us feel at ease. Although it was difficult to relive our struggles and start anew, Dr. Mona was patient and took the time to thoroughly explain the IVF process. We appreciated the personalized communication, which included texts and emails from the nurses, allowing us to stay on top of the next steps despite our busy schedules. The nurses were compassionate and caring, and we loved the balanced approach of pragmatism and care from the entire team. If only we had known about Dr. Mona Dahiya at the beginning of our journey, we may have saved ourselves years of trying. But ultimately, we're just grateful to be the proud parents of a beautiful little girl. Dr. Mona Dahiya is, without a doubt, the best fertility physician in India, and we're forever grateful for her expertise and care.",
             author: "Monu Kumar",
             source: "Patient review",
             avatarLetter: "M",
@@ -232,8 +232,8 @@ export default function AllPatientReviewsSections() {
       <PatientReviewsGroup
         id="compassion"
         eyebrow="Compassion"
-        title="Compassion, warmth and encouragement"
-        subtitle="Reviews from patients who describe feeling at ease, understood and encouraged."
+        title="Warmth & Empathy"
+        subtitle="Patients have loved that we care about them. And want the best for them."
         col1={[
           {
             title: "Fertility Specialist Who Truly Cares",
@@ -255,7 +255,7 @@ export default function AllPatientReviewsSections() {
             avatarLetter: "R",
           },
           {
-            body: "Being the best female infertility doctor, Dr Mona Dahiya understood our concern deeply. Her compassionate approach and tailored treatments made all the difference. She suggested Natural Cycle IVF, which involves harvesting one good egg ... More 🙏 1",
+            body: "Being the best female infertility doctor, Dr. Mona Dahiya understood our concerns deeply. Her compassionate approach and tailored treatments made all the difference. She suggested Natural Cycle IVF, which involves harvesting one good egg ... More 🙏 1",
             author: "love kumar",
             source: "Google patient review",
             avatarLetter: "L",
@@ -263,7 +263,7 @@ export default function AllPatientReviewsSections() {
         ]}
         col2={[
           {
-            body: "We feel so lucky that Doctor mona madam helped us right till my wife's pregnancy today. She is the most educated, caring and trusted infertility physician in India.",
+            body: "We feel so lucky that Doctor mona madam helped us right till my wife's pregnancy today.She is the most educated, caring and trusted infertility physician in India.",
             author: "tuntunkumar sharma",
             source: "Google patient review",
             avatarLetter: "T",
@@ -271,7 +271,7 @@ export default function AllPatientReviewsSections() {
           {
             title: "Best Infertility Doctor in India",
             body: "Dr. Mona Dahiya is really good at a fertility treatment called ICSI, especially the kind that uses very high magnification. She carefully picks out and injects a single sperm into an egg, which helped us a lot in our journey to become parents. Even though this process is very delicate, Dr. Mona did it so well, making sure she chose the best sperm. She took the time to explain everything to us and made us feel comfortable. We really appreciate how she uses the latest methods to help us get the best chance of success. She is very skilled in her field, and her detailed work showed us we could trust her. Dr. Mona is not just skilled but also very caring, making her stand out in her field. Her help was very important to us as we tried to overcome our fertility challenges. We are so thankful for her help in our journey to have a baby, showing us why she is considered as one of the best infertility doctor in India.",
-            author: "Ansh Madanwal",
+            author: "Ansh Modanwal",
             source: "Patient review",
             avatarLetter: "A",
           },
@@ -311,12 +311,12 @@ export default function AllPatientReviewsSections() {
       <PatientReviewsGroup
         id="staff-support"
         eyebrow="Staff support"
-        title="Nurses, staff and everyday support"
-        subtitle="Reviews that mention the nurses, the front desk, counsellors and the practical help between visits."
+        title="Love our Nurses/Staff"
+        subtitle="Patients mention our nurses, front desk, counsellor and staff that are always there for them."
         col1={[
           {
             title: "Best IVF Doctor in India",
-            body: "Dr Mona has been a blessing for our family. She made the infertility treatment a seamless process for us .Dr Mona has a heart of Gold and welcomes questions as if she is trying to teach you infertility treatment. We had heard about her IVF success stories but we could have never imagined that all our worries will come to an end instantly. Her team is also very sincere and extremely helpful throughout the journey, be it booking appointments or training how to inject the medicines or for any follow up issues. She is the best IVF doctor in India.",
+            body: "Dr Mona has been a blessing for our family. She made the infertility treatment a seamless process for us .Dr Mona has a heart of Gold and welcomes questions as if she is trying to teach you infertility treatment. We had heard about her IVF success stories but we could have never imagined that all our worries will come to an end instantly.Her team is also very sincere and extremely helpful throughout the journey, be it booking appointments or training how to inject the medicines or for any follow up issues.She is the best IVF doctor in India.",
             author: "Rohit Chandel",
             source: "Patient review",
             avatarLetter: "R",
@@ -337,7 +337,7 @@ export default function AllPatientReviewsSections() {
           {
             title: "IVF Success Rates are Exceptional",
             body: "Our experience at Dr. Mona Dahiya's IVF Clinic in Noida was truly exceptional. From the administrative staff to the nurses, specialists, and obstetricians, everyone was kind, helpful, and compassionate. This made our challenging fertility journey much more manageable, as we felt supported and cared for throughout the process. The nurses were particularly wonderful, always available to answer our questions over the phone and provide guidance whenever we needed it. The entire staff was always happy to assist us with any queries or concerns we had, making us feel valued and cared for. We're thrilled to report that Dr. Mona Dahiya's IVF success rates are truly exceptional, and we can attest to that firsthand. It's a relief to know that there are internationally recognized IVF doctors in Delhi who can help make the dream of starting a family a reality, and that Dr. Mona Dahiya's clinic is accessible to everyone. We're grateful for the care and support we received and would highly recommend her clinic to anyone seeking fertility treatment.",
-            author: "Akanksha Mritunjay",
+            author: "Akanksha Matascha",
             source: "Patient review",
             avatarLetter: "A",
           },
@@ -361,8 +361,8 @@ export default function AllPatientReviewsSections() {
         col3={[
           {
             title: "Best Doctor for Infertility Treatment",
-            body: "Dr Mona Dahiya is the best doctor for infertility treatment we have ever met! She attentively listened to all our concerns and addressed them directly with honesty and transparency. Her humility and concern for her patients is remarkable and she makes you feel important. My wife and I are thrilled with joy to rate her as the Best infertility specialist doctor in Delhi after what she has done for us. As first-time expectant parents, we appreciate her staff's professionalism, friendliness, and patience in answering all our questions. We highly recommend Dr Dahiya to everyone searching for the Best IVF Doctor in Delhi.",
-            author: "Shayan Qureshi",
+            body: "Dr Mona Dahiya is the best doctor for infertility treatment we have ever met! She attentively listened to all our concerns and addressed them directly with honesty and transparency. Her humility and concern for her patients is remarkable and she makes you feel important. My wife and I are thrilled with joy to rate her as the Best Infertility specialist doctor in Delhi after what she has done for us. As first-time expectant parents, we appreciate her staff's professionalism, friendliness, and patience in answering all our questions. We highly recommend Dr Dahiya to everyone searching for the Best IVF Doctor in Delhi.",
+            author: "Shoyab Qureshi",
             source: "Patient review",
             avatarLetter: "S",
           },
@@ -381,7 +381,7 @@ export default function AllPatientReviewsSections() {
           },
           {
             body: "Dr Mona stands out as one of Ghaziabad's finest infertility specialists, with a supportive staff team. Her kindness and professional expertise have been invaluable in our journey towards parenthood. We're deeply thankful to Dr. Mona and eagerly look forward to celebrating our baby's arrival with her. God bless.",
-            author: "करुणा शंकर तिवारी",
+            author: "कल्पना शंकर तिवारी",
             source: "Google patient review",
             avatarLetter: "क",
           },
@@ -391,34 +391,34 @@ export default function AllPatientReviewsSections() {
       <PatientReviewsGroup
         id="honesty"
         eyebrow="Honesty"
-        title="Honesty, ethics and no unnecessary treatment"
-        subtitle="Reviews that mention straight answers, clear costs and a focused approach to tests and treatment."
+        title="We tell you the truth"
+        subtitle="Some patients have told us they love that we don't push unnecessary tests/treatment on them. And explain to them what they should and shouldn't do."
         col1={[
           {
             title: "Best Fertility Physician in India",
-            body: "After years of trying with two top IVF clinics in India, we were advised to seek out Dr. Mona Dahiya's expertise. We were fortunate to be referred to her, and the staff at Apollo Fertility told us that we were indeed lucky to have met her. We were immediately drawn to her honesty and empathy, which made us feel at ease. Although it was difficult to relive our struggles and start anew, Dr. Mona was patient and took the time to thoroughly explain the IVF process. We appreciated the personalized communication, which included texts and emails from the nurses, allowing us to stay on top of the next steps despite our busy schedules. The nurses were compassionate and caring, and we loved the balanced approach of pragmatism and care from the entire team. If only we had known about Dr. Mona Dahiya at the beginning of our journey, we may have saved ourselves years of trying. But ultimately, we're just grateful to be the proud parents of a beautiful little girl. Dr. Mona Dahiya is, without a doubt, the best fertility physician in India, and we're forever grateful for her expertise and care.",
+            body: "After years of trying with two top IVF clinics in India, we were advised to seek out Dr. Mona Dahiya's expertise. We were fortunate to be referred to her, and the staff at Apollo Fertility told us that we were indeed lucky to have met her.We were immediately drawn to her honesty and empathy, which made us feel at ease. Although it was difficult to relive our struggles and start anew, Dr. Mona was patient and took the time to thoroughly explain the IVF process. We appreciated the personalized communication, which included texts and emails from the nurses, allowing us to stay on top of the next steps despite our busy schedules. The nurses were compassionate and caring, and we loved the balanced approach of pragmatism and care from the entire team. If only we had known about Dr. Mona Dahiya at the beginning of our journey, we may have saved ourselves years of trying. But ultimately, we're just grateful to be the proud parents of a beautiful little girl. Dr. Mona Dahiya is, without a doubt, the best fertility physician in India, and we're forever grateful for her expertise and care.",
             author: "Monu Kumar",
             source: "Patient review",
             avatarLetter: "M",
           },
           {
             title: "Best Doctor for Infertility Treatment",
-            body: "Dr Mona Dahiya is the best doctor for infertility treatment we have ever met! She attentively listened to all our concerns and addressed them directly with honesty and transparency. Her humility and concern for her patients is remarkable and she makes you feel important. My wife and I are thrilled with joy to rate her as the Best infertility specialist doctor in Delhi after what she has done for us. As first-time expectant parents, we appreciate her staff's professionalism, friendliness, and patience in answering all our questions. We highly recommend Dr Dahiya to everyone searching for the Best IVF Doctor in Delhi.",
-            author: "Shayan Qureshi",
+            body: "Dr Mona Dahiya is the best doctor for infertility treatment we have ever met! She attentively listened to all our concerns and addressed them directly with honesty and transparency. Her humility and concern for her patients is remarkable and she makes you feel important. My wife and I are thrilled with joy to rate her as the Best Infertility specialist doctor in Delhi after what she has done for us. As first-time expectant parents, we appreciate her staff's professionalism, friendliness, and patience in answering all our questions. We highly recommend Dr Dahiya to everyone searching for the Best IVF Doctor in Delhi.",
+            author: "Shoyab Qureshi",
             source: "Patient review",
             avatarLetter: "S",
           },
         ]}
         col2={[
           {
-            body: "Unlike other fertility doctors who seem to have major Ego issues,Dr Mona Dahiya is so lovable and approachable. She provides individualized attention so that couples feel heard and supported. We were always well-informed for the medicines,tests and costs involved.We will rate her as simply exceptional! 👏 1",
+            body: "Unlike other fertility doctors who seem to have major Ego issues, Dr Mona Dahiya is so lovable and approachable. She provides Individualized attention so that couples feel heard and supported. We were always well-informed for the medicines,tests and costs involved.We will rate her as simply exceptional. 👍 1",
             author: "Shivam Singh",
             source: "Google patient review",
             avatarLetter: "S",
           },
           {
-            body: "Dr. Mona provides ethical infertility care with amazing success results. Her explanations are very clear and the costs are transparent. She prioritizes necessary treatments and has very good infertility experience. I highly recommend Doctor Mona as one of the Best Fertility doctors in the world today.",
-            author: "Chota Yaksha",
+            body: "Dr. Mona provides ethical infertility care with amazing success results. Her explanations are very clear and the costs are transparent. She prioritizes necessary treatments and has very good infertility experience. I Highly recommend Doctor Mona as one of the Best Fertility doctors in the world today.",
+            author: "Chuta Yakshe",
             source: "Google patient review",
             avatarLetter: "C",
           },
@@ -444,7 +444,7 @@ export default function AllPatientReviewsSections() {
           },
           {
             title: "Dr Mona's Astounding Results",
-            body: "We wholeheartedly endorse Dr. Mona's IVF Clinic in Delhi! Our experience with Dr. Mona was exceptional, particularly during our egg freezing procedure. We were anxious about my AMH levels, but Dr. Mona's clinic offered a clear plan forward and options to preserve our fertility, which put our minds at ease. The staff is exceptional - kind, available, and communicative, making us feel supported every step of the way. In the world of fertility procedures, it's easy to feel like just a number, but Dr. Mona and her team make you feel seen, heard, and valued. With her expertise, honesty, and warmth, we highly recommend Dr. Mona's IVF Clinic for outstanding results, just like we experienced. Her clinic is truly a haven for those seeking fertility treatment, and we feel grateful to have found her.",
+            body: "We wholeheartedly endorse Dr. Mona's IVF Clinic in Delhi! Our experience with Dr. Mona was exceptional, particularly during our egg freezing procedure. We were anxious about my AMH levels, but Dr. Mona's clinic offered a clear plan forward and options to preserve our fertility, which put our minds at ease. The staff is exceptional—kind, available, and communicative, making us feel supported every step of the way. In the world of fertility procedures, it's easy to feel like just a number, but Dr. Mona and her team make you feel seen, heard, and valued. With her expertise, honesty, and warmth, we highly recommend Dr. Mona's IVF Clinic for outstanding results, just like we experienced. Her clinic is truly a haven for those seeking fertility treatment, and we feel grateful to have found her.",
             author: "Amit Kumar",
             source: "Patient review",
             avatarLetter: "A",
@@ -458,7 +458,7 @@ export default function AllPatientReviewsSections() {
           },
           {
             body: "Dr. Mona Dahiya is hands down the Best Fertility Doctor in Delhi.Her attention to detail and constant support made our pregnancy possible through low cost IUI treatment. We will be Forever grateful to her support in making us happy parents.",
-            author: "Arbaj khan",
+            author: "Arbaj Khan",
             source: "Google patient review",
             avatarLetter: "A",
           },
@@ -468,13 +468,13 @@ export default function AllPatientReviewsSections() {
       <PatientReviewsGroup
         id="icsi"
         eyebrow="ICSI"
-        title="ICSI treatment reviews"
-        subtitle="Reviews from patients who write about ICSI, where a single sperm is selected and injected into an egg."
+        title="Patients who mentioned ICSI"
+        subtitle="Patients have mentioned how we perform ICSI."
         col1={[
           {
             title: "Best Infertility Doctor in India",
             body: "Dr. Mona Dahiya is really good at a fertility treatment called ICSI, especially the kind that uses very high magnification. She carefully picks out and injects a single sperm into an egg, which helped us a lot in our journey to become parents. Even though this process is very delicate, Dr. Mona did it so well, making sure she chose the best sperm. She took the time to explain everything to us and made us feel comfortable. We really appreciate how she uses the latest methods to help us get the best chance of success. She is very skilled in her field, and her detailed work showed us we could trust her. Dr. Mona is not just skilled but also very caring, making her stand out in her field. Her help was very important to us as we tried to overcome our fertility challenges. We are so thankful for her help in our journey to have a baby, showing us why she is considered as one of the best infertility doctor in India.",
-            author: "Ansh Madanwal",
+            author: "Ansh Modanwal",
             source: "Patient review",
             avatarLetter: "A",
           },
@@ -508,20 +508,20 @@ export default function AllPatientReviewsSections() {
             avatarLetter: "V",
           },
           {
-            body: "Dr. Mona Dahiya's ICSI IVF expertise turned our dream into reality. Her team explained every step with patience, and her advanced lab facilities ensured the best results. We are now proud parents to a baby boy, thanks to her skill and dedication. 👶 1",
+            body: "Dr. Mona Dahiya's ICSI IVF expertise turned our dream into reality. Her team explained every step with patience, and her advanced lab facilities ensured the best results. We are now proud parents to a baby boy, thanks to her skill and dedication. 🤩 1",
             author: "Shyam Manohar",
             source: "Google patient review",
             avatarLetter: "S",
           },
           {
-            body: "Dr Mona is the best for Male infertility treatment in India. I had severe oligospermia but Dr. Mona Dahiya's ICSI treatment gave us success in the first cycle! Her cutting-edge laboratory and sperm retrieval techniques are unmatched in India.",
-            author: "Aashish jha",
+            body: "Dr Mona is the best for Male Infertility treatment in India. I had severe oligospermia but Dr. Mona Dahiya's ICSI treatment gave us success in the first cycle! Her cutting-edge laboratory and sperm retrieval techniques are unmatched in India.",
+            author: "Aashish Jha",
             source: "Google patient review",
             avatarLetter: "A",
           },
           {
             body: "Dr. Mona Dahiya found antisperm antibodies after 3 failed IUIs with some advanced testing. She adjusted our ICSI protocol and we are now the proud parents of twins. Her diagnostics are the best in Delhi, hands down.",
-            author: "Krish Maurya (Krishmaurya)",
+            author: "Krish Maurya (Krishmourya)",
             source: "Google patient review",
             avatarLetter: "K",
           },
@@ -531,8 +531,8 @@ export default function AllPatientReviewsSections() {
       <PatientReviewsGroup
         id="embryo-selection"
         eyebrow="Embryo selection"
-        title="Embryo selection, testing and laboratory methods"
-        subtitle="Reviews that mention embryo development, genetic testing or the laboratory."
+        title="Embryo selection/testing & Lab work"
+        subtitle="Patients who have mentioned how we grow your embryos. Testing or our lab."
         col1={[
           {
             title: "Top Notch IVF Treatment",
@@ -564,19 +564,19 @@ export default function AllPatientReviewsSections() {
           },
           {
             body: "Dr. Mona Dahiya's expertise in fertility testing is unmatched. She provided us with a clear plan for IVF treatment and her high IVF success rate speaks volumes. We are thrilled with our journey towards parenthood. If you are considering frozen embryo transfer, she is the doctor you can trust. 🙏 1",
-            author: "Vikrant Singh",
+            author: "vikrant Singh",
             source: "Google patient review",
             avatarLetter: "V",
           },
           {
             body: "Our journey led us to Dr. Mona Dahiya, India's best IVF specialist, who could diagnose low sperm motility through Fructose Screening. Her tailored treatment and blastocyst transfer worked—we're now expecting! Her clinic's cutting-edge lab and compassionate care are unmatched.",
-            author: "Dev Saratha Study",
+            author: "Dev Sarathe Study",
             source: "Google patient review",
             avatarLetter: "D",
           },
           {
             body: "We were worried about passing on a genetic condition in our family. Dr. Mona Dahiya recommended genetic testing before IVF, which gave us peace of mind. Her detailed explanation and careful planning helped us have a healthy baby. She is truly the best fertility doctor.",
-            author: "Md Rejjak",
+            author: "Md Rajjak",
             source: "Google patient review",
             avatarLetter: "M",
           },
@@ -589,7 +589,7 @@ export default function AllPatientReviewsSections() {
             avatarLetter: "A",
           },
           {
-            body: "I am very thankful to Dr. Mona and the entire team. Everyone, from the admin staff to the nurses, embryologist, and counsellors, was kind and helpful. We never felt pressured in any decisions. We only wanted one round of IVF, knowing that ... More 🙏 2",
+            body: "I am very thankful to Dr. Mona and the entire team. Everyone, from the admin staff to the nurses, embryologist, and counsellors, was kind and helpful. We never felt pressured in any decisions. We only wanted one round of IVF, knowing that ... More 🙏 💖 3",
             author: "Ravi Shahani",
             source: "Google patient review",
             avatarLetter: "R",
@@ -607,8 +607,8 @@ export default function AllPatientReviewsSections() {
       <PatientReviewsGroup
         id="iui"
         eyebrow="IUI"
-        title="IUI treatment reviews"
-        subtitle="Reviews from patients who write about IUI."
+        title="Patients who mentioned IUI"
+        subtitle="Patients who have mentioned that we perform IUI."
         col1={[
           {
             title: "Exceptional Knowledge & Patience",
@@ -621,7 +621,7 @@ export default function AllPatientReviewsSections() {
         col2={[
           {
             title: "Best Infertility Doctor",
-            body: "Thanks a lot Dr. Mona Dahiya. I believe she is one of the best knowledgeable gynaecologists in Noida. When pregnancy was not conceived in these two years, we came to know about Dr. Mona Dahiya on the internet and went to her for consultation. After meeting her continuously for two months and following all the instructions suggested by her, pregnancy was finally conceived during normal follicular monitoring. We did not have to do any other treatment like IUI or IVF. She studies each case very carefully and never suggests unnecessary tests or medicines. We are very happy that we found Dr. Mona Dahiya. Strongly recommend to anyone, if you are searching for the best infertility doctor in Noida, you must consult Dr. Mona Dahiya. Her expertise helps you.",
+            body: "Thanks a lot Dr. Mona Dahiya. I believe she is one of the best knowledgeable gynaecologists in Noida. When pregnancy was not conceived in these two years, we came to know about Dr. Mona Dahiya on the internet and went to her for consultation. After meeting her continuously for two months and following all the instructions suggested by her, pregnancy was finally conceived during normal follicular monitoring. We did not have to do any other treatment like IUI or IVF. She studies each case very carefully and never suggests unnecessary tests or medicines. We are very happy that we found Dr. Mona Dahiya. Strongly recommend to anyone, if you are searching for the best infertility doctor in Noida, you must consult Dr Mona Dahiya. Her expertise helps you.",
             author: "PUSHPA KHANDEKAR",
             source: "Patient review",
             avatarLetter: "P",
@@ -636,19 +636,19 @@ export default function AllPatientReviewsSections() {
         col3={[
           {
             body: "Do not be scared of invasive procedures is what we can share. Dr. Mona uses latest techniques to minimize discomfort. Our embryo transfer felt like normal checkup. She cares for patient comfort along with success rates. We have got 3 babies with the help of Dr Mona through IUI/IVF.",
-            author: "Scout phansah",
+            author: "Scout pharoah",
             source: "Google patient review",
             avatarLetter: "S",
           },
           {
-            body: "Nobody knows as much about ART and reproductive medicine than her. Our story is about 5 years of struggle and we completely lost trust in assisted reproductive technology (ART) after 3 failed cycles of IUI and 2 failed IVF cycles. our ... More ☝️ 1",
+            body: "Nobody knows as much about ART and reproductive medicine than her. Our story is about 5 years of struggle and we completely lost trust in assisted reproductive technology (ART) after 3 failed cycles of IUI and 2 failed IVF cycles. our ... More 👍 1",
             author: "Ajay Shakya",
             source: "Google patient review",
             avatarLetter: "A",
           },
           {
             body: "Dr. Mona Dahiya is hands down the Best Fertility Doctor in Delhi.Her attention to detail and constant support made our pregnancy possible through low cost IUI treatment. We will be Forever grateful to her support in making us happy parents.",
-            author: "Arbaj khan",
+            author: "Arbaj Khan",
             source: "Google patient review",
             avatarLetter: "A",
           },
@@ -658,12 +658,12 @@ export default function AllPatientReviewsSections() {
       <PatientReviewsGroup
         id="egg-freezing"
         eyebrow="Egg freezing"
-        title="Egg freezing and fertility preservation reviews"
-        subtitle="Reviews that mention egg freezing or fertility preservation."
+        title="Egg Freezing/Fertility Preservation"
+        subtitle="Patients who have mentioned Egg Freezing."
         col1={[
           {
             title: "Dr Mona's Astounding Results",
-            body: "We wholeheartedly endorse Dr. Mona's IVF Clinic in Delhi! Our experience with Dr. Mona was exceptional, particularly during our egg freezing procedure. We were anxious about my AMH levels, but Dr. Mona's clinic offered a clear plan forward and options to preserve our fertility, which put our minds at ease. The staff is exceptional - kind, available, and communicative, making us feel supported every step of the way. In the world of fertility procedures, it's easy to feel like just a number, but Dr. Mona and her team make you feel seen, heard, and valued. With her expertise, honesty, and warmth, we highly recommend Dr. Mona's IVF Clinic for outstanding results, just like we experienced. Her clinic is truly a haven for those seeking fertility treatment, and we feel grateful to have found her.",
+            body: "We wholeheartedly endorse Dr. Mona's IVF Clinic in Delhi! Our experience with Dr. Mona was exceptional, particularly during our egg freezing procedure. We were anxious about my AMH levels, but Dr. Mona's clinic offered a clear plan forward and options to preserve our fertility, which put our minds at ease. The staff is exceptional—kind, available, and communicative, making us feel supported every step of the way. In the world of fertility procedures, it's easy to feel like just a number, but Dr. Mona and her team make you feel seen, heard, and valued. With her expertise, honesty, and warmth, we highly recommend Dr. Mona's IVF Clinic for outstanding results, just like we experienced. Her clinic is truly a haven for those seeking fertility treatment, and we feel grateful to have found her.",
             author: "Amit Kumar",
             source: "Patient review",
             avatarLetter: "A",
@@ -680,7 +680,7 @@ export default function AllPatientReviewsSections() {
         col3={[
           {
             body: "Dr. Mona Dahiya's foresight in recommending fertility preservation before my cancer treatment was life-changing. Years later, after beating cancer, we were able to use our frozen eggs to conceive our miracle baby. Her dedication to safeguarding fertility for future generations is truly inspiring.",
-            author: "Shivam Shakya",
+            author: "Shivam. Shakya",
             source: "Google patient review",
             avatarLetter: "S",
           },
@@ -695,9 +695,9 @@ export default function AllPatientReviewsSections() {
 
       <PatientReviewsGroup
         id="expertise"
-        eyebrow="Reputation"
-        title="Experience, knowledge and reputation"
-        subtitle="Reviews that comment on Dr. Mona's knowledge, diagnosis and experience."
+        eyebrow="Expertise"
+        title="Dr. Mona's experience & knowledge"
+        subtitle="Some of our patients love that Dr. Mona knows her stuff. Knows how to diagnose and help you."
         col1={[
           {
             body: "Dr. Mona Dahiya's expertise was evident when she analyzed my baseline FSH and estradiol levels to assess egg quality. Her tailored approach, based on these results, guided our treatment perfectly. Thanks to her precision and care, our IVF journey succeeded. Highly recommend her for thorough, science-backed fertility care!",
@@ -726,13 +726,13 @@ export default function AllPatientReviewsSections() {
         ]}
         col2={[
           {
-            body: "Doctor Mona ji has the highest level of medical expertise in Infertility treatment.We feel Lucky to have found her through extensive research.we highly recommend her for positive results.",
+            body: "Doctor Mona ji has the highest level of medical expertise in infertility treatment.We feel Lucky to have found her through extensive research.we highly recommend her for positive results.",
             author: "Pankaj Raj",
             source: "Google patient review",
             avatarLetter: "P",
           },
           {
-            body: "She is a fantastic fertility doctor who follows individualized treatment protocols!We have achieved our dreams and recommend her fertility skills to everyone.",
+            body: "She is a fantastic fertility doctor who follows individualized treatment protocols.We have achieved our dreams and recommend her fertility skills to everyone.",
             author: "Hari Thapa",
             source: "Google patient review",
             avatarLetter: "H",
@@ -746,7 +746,7 @@ export default function AllPatientReviewsSections() {
           {
             title: "Best Infertility Doctor in Delhi",
             body: "We had an incredible experience with Dr. Mona's fertility clinic in Delhi. After 1 failed IVF attempt at Nova Fertility, we were on the verge of giving up, but Dr. Mona's experience and care helped us achieve success. Throughout our pregnancy, everything went smoothly, and we were thrilled to welcome our healthy 3kg baby boy into the world through a natural birth. As our son has now turned 10 months old, we wanted to express our heartfelt gratitude to Dr. Mona for making our dreams of parenthood a reality. She is truly the best infertility doctor in Delhi, and we're forever grateful for her exceptional care and guidance. Thank you, Dr. Mona, for giving us the gift of our precious child.",
-            author: "Starlinglover143",
+            author: "Skatinglover 143",
             source: "Patient review",
             avatarLetter: "S",
           },
@@ -762,7 +762,7 @@ export default function AllPatientReviewsSections() {
           {
             title: "Highest IVF Success Rates",
             body: "Dr Mona Dahiya is beyond question the best IVF doctor in India. She is India's renowned IVF Doctor recognized for her Highest IVF Success rates. With over 25 years of global experience, she has helped over 10,000 thousand of couples realize their dream of parenthood. Her global recognition and contributions to the field of infertility through numerous publications and research articles make her a trailblazer in IVF treatment. Dr Dahiya's patient-centric approach and innovative infertility treatments makes her the Top Infertility doctor in India.",
-            author: "Krish Kumar Jainesh",
+            author: "Krish Kumar Jaiswal",
             source: "Patient review",
             avatarLetter: "K",
           },
@@ -772,13 +772,13 @@ export default function AllPatientReviewsSections() {
       <PatientReviewsGroup
         id="best-noida"
         eyebrow="Best IVF doctor in Noida"
-        title="Best IVF doctor in Noida"
-        subtitle="Reviews from patients who mention Noida."
+        title="Mentioned Noida"
+        subtitle="Our patients have mentioned Noida in their reviews."
         col1={[
           {
             title: "IVF Success Rates are Exceptional",
             body: "Our experience at Dr. Mona Dahiya's IVF Clinic in Noida was truly exceptional. From the administrative staff to the nurses, specialists, and obstetricians, everyone was kind, helpful, and compassionate. This made our challenging fertility journey much more manageable, as we felt supported and cared for throughout the process. The nurses were particularly wonderful, always available to answer our questions over the phone and provide guidance whenever we needed it. The entire staff was always happy to assist us with any queries or concerns we had, making us feel valued and cared for. We're thrilled to report that Dr. Mona Dahiya's IVF success rates are truly exceptional, and we can attest to that firsthand. It's a relief to know that there are internationally recognized IVF doctors in Delhi who can help make the dream of starting a family a reality, and that Dr. Mona Dahiya's clinic is accessible to everyone. We're grateful for the care and support we received and would highly recommend her clinic to anyone seeking fertility treatment.",
-            author: "Akanksha Mritunjay",
+            author: "Akanksha Matascha",
             source: "Patient review",
             avatarLetter: "A",
           },
@@ -804,7 +804,7 @@ export default function AllPatientReviewsSections() {
             avatarLetter: "S",
           },
           {
-            body: "Dr. Mona Dahiya made our dream come true. She's approachable and kind, which made us feel comfortable throughout the IVF treatment. Truly, she's the best IVF doctor in Noida. The clinic is well-organized, and the staff is great. We can't thank her enough for helping us become parents!",
+            body: "Dr. Mona Dahiya made our dream come true. She's approachable and kind, which made us feel comfortable throughout the IVF treatment. Truly, she's the best IVF doctor in Noida. The clinic is well organized, and the staff is great. We can't thank her enough for helping us become parents!",
             author: "Dinesh Sarkar",
             source: "Google patient review",
             avatarLetter: "D",
@@ -826,13 +826,13 @@ export default function AllPatientReviewsSections() {
           },
           {
             body: "IVF can be emotionally draining, but Dr. Mona Dahiya made us feel supported at every step. Her transparent communication and high success rates make her the Best IVF Doctor in Noida. Our twins are proof of her brilliance.",
-            author: "Anil Maurya",
+            author: "Anil Morya",
             source: "Google patient review",
             avatarLetter: "A",
           },
           {
             title: "Best Infertility Doctor",
-            body: "Thanks a lot Dr. Mona Dahiya. I believe she is one of the best knowledgeable gynaecologists in Noida. When pregnancy was not conceived in these two years, we came to know about Dr. Mona Dahiya on the internet and went to her for consultation. After meeting her continuously for two months and following all the instructions suggested by her, pregnancy was finally conceived during normal follicular monitoring. We did not have to do any other treatment like IUI or IVF. She studies each case very carefully and never suggests unnecessary tests or medicines. We are very happy that we found Dr. Mona Dahiya. Strongly recommend to anyone, if you are searching for the best infertility doctor in Noida, you must consult Dr. Mona Dahiya. Her expertise helps you.",
+            body: "Thanks a lot Dr. Mona Dahiya. I believe she is one of the best knowledgeable gynaecologists in Noida. When pregnancy was not conceived in these two years, we came to know about Dr. Mona Dahiya on the internet and went to her for consultation. After meeting her continuously for two months and following all the instructions suggested by her, pregnancy was finally conceived during normal follicular monitoring. We did not have to do any other treatment like IUI or IVF. She studies each case very carefully and never suggests unnecessary tests or medicines. We are very happy that we found Dr. Mona Dahiya. Strongly recommend to anyone, if you are searching for the best infertility doctor in Noida, you must consult Dr Mona Dahiya. Her expertise helps you.",
             author: "PUSHPA KHANDEKAR",
             source: "Patient review",
             avatarLetter: "P",
@@ -849,8 +849,8 @@ export default function AllPatientReviewsSections() {
       <PatientReviewsGroup
         id="best-ghaziabad"
         eyebrow="Best IVF doctor in Ghaziabad"
-        title="Best IVF doctor in Ghaziabad"
-        subtitle="Reviews from patients who mention Ghaziabad."
+        title="Mentioned Ghaziabad"
+        subtitle="Our patients have mentioned Ghaziabad in their reviews."
         col1={[
           {
             body: "Dr. Mona Dahiya is the best IVF specialist in Ghaziabad, hands down. My wife and I had been through two failed IVF cycles before coming to her. Dr. Dahiya took the time to understand our case thoroughly and adjusted our treatment accordingly. We are now expecting our first child and could not be happier. Thank you, Dr. Dahiya.",
@@ -873,7 +873,7 @@ export default function AllPatientReviewsSections() {
         ]}
         col2={[
           {
-            body: "Dr. Mona Dahiya is an exceptional fertility specialist. Her personalized approach and attention to detail gave us confidence from our first consultation. Her knowledge and experience in IVF treatments are evident, and we felt supported every step of the way. We highly recommend her as the Best IVF Doctor in Ghaziabad. 👶 1",
+            body: "Dr. Mona Dahiya is an exceptional fertility specialist. Her personalized approach and attention to detail gave us confidence from our first consultation. Her knowledge and experience in IVF treatments are evident, and we felt supported every step of the way. We highly recommend her as the Best IVF Dotor in Ghaziabad. 🥰 1",
             author: "Praveen Kumar",
             source: "Google patient review",
             avatarLetter: "P",
@@ -891,7 +891,7 @@ export default function AllPatientReviewsSections() {
             avatarLetter: "R",
           },
           {
-            body: "We consulted many doctors before finding Dr. Mona Dahiya in Ghaziabad, and she was different. Her expertise in complex IVF cases and genuine care led to our successful pregnancy. She's the Best IVF Doctor in Ghaziabad—don't hesitate, just go! 👶 1",
+            body: "We consulted many doctors before finding Dr. Mona Dahiya in Ghaziabad, and she was different. Her expertise in complex IVF cases and genuine care led to our successful pregnancy. She's the Best IVF Doctor in Ghaziabad—don't hesitate, just go! 🔥 1",
             author: "Shivcharan Mandal",
             source: "Google patient review",
             avatarLetter: "S",
@@ -900,7 +900,7 @@ export default function AllPatientReviewsSections() {
         col3={[
           {
             body: "My honest opinion is that there cannot be a better infertility doctor in ghaziabad than Mona madam.She is very experienced and knows exactly what has to be done.",
-            author: "Neeraj Tiwari",
+            author: "Naraj Tiwari",
             source: "Google patient review",
             avatarLetter: "N",
           },
@@ -923,8 +923,8 @@ export default function AllPatientReviewsSections() {
       <PatientReviewsGroup
         id="best-delhi"
         eyebrow="Best IVF doctor in Delhi"
-        title="Best IVF doctor in Delhi"
-        subtitle="Reviews from patients who mention Delhi."
+        title="Mentioned Delhi"
+        subtitle="Our patients have mentioned Delhi in their reviews."
         col1={[
           {
             body: "Dr. Mona Dahiya is the best IVF doctor in Delhi! Her wealth of experience and dedication to personalized care made all the difference during our treatment. The success rates at Little Angel IVF are exceptional, and Dr. Dahiya's support kept us positive throughout our journey. We couldn't be happier with the results!",
@@ -979,8 +979,8 @@ export default function AllPatientReviewsSections() {
             avatarLetter: "R",
           },
           {
-            body: "Dr. Mona Dahiya's reputation as the best IVF doctor in Delhi is well-deserved. Her empathetic approach and IVF success rate in our age group brought us our long-awaited baby boy. Her skill and care are extraordinary.",
-            author: "dharmendra kumar rajput",
+            body: "Dr. Mona Dahiya's reputation as the best IVF doctor in Delhi is well-deserved. Her empathetic approach and IVF success rate in our age group brought us our long-awaited baby boy. Her skills and care are extraordinary.",
+            author: "dharmendrakumar rajput",
             source: "Google patient review",
             avatarLetter: "D",
           },
@@ -996,8 +996,8 @@ export default function AllPatientReviewsSections() {
       <PatientReviewsGroup
         id="best-india"
         eyebrow="Best IVF doctor in India"
-        title="Best IVF doctor in India"
-        subtitle="Reviews from patients who mention India."
+        title="Mentioned India"
+        subtitle="Our patients have mentioned India in their reviews."
         col1={[
           {
             title: "Highest IVF Success Rates",
@@ -1049,9 +1049,9 @@ export default function AllPatientReviewsSections() {
           },
           {
             body: "Dr. Mona Dahiya's comprehensive female infertility tests uncovered issues that others missed. Her detailed analysis and treatment options increased our confidence. With her help, we conceived naturally within six months. Her expertise about female infertility treatment is the best in India.",
-            author: "rohit kumar",
+            author: "sohit kumar",
             source: "Google patient review",
-            avatarLetter: "R",
+            avatarLetter: "S",
           },
           {
             body: "With Dr. Mona Dahiya as one of the expert IVF doctors in India, our treatment experience was exceptional. Her approach is both professional and empathetic, ensuring we felt supported and informed at every stage. We are grateful for her guidance and the positive outcome we achieved.",

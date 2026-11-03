@@ -49,9 +49,11 @@ export default function Clinics() {
               <p className="text-[12.5px] leading-snug font-bold text-[#0f2438] sm:whitespace-nowrap xl:text-[14.5px]">
                 {hoursBadge.title}
               </p>
-              <p className="mt-0.5 text-[11.5px] font-normal text-gray-500 sm:whitespace-nowrap xl:text-[12.5px]">
-                {hoursBadge.subtitle}
-              </p>
+              {hoursBadge.subtitle ? (
+                <p className="mt-0.5 text-[11.5px] font-normal text-gray-500 sm:whitespace-nowrap xl:text-[12.5px]">
+                  {hoursBadge.subtitle}
+                </p>
+              ) : null}
             </div>
           </div>
         </div>

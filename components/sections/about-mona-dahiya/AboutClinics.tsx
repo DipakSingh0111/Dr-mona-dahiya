@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { FaMapMarkerAlt, FaArrowRight, FaDirections } from "react-icons/fa";
+import { FaMapMarkerAlt } from "react-icons/fa";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
 const clinics = [
@@ -9,7 +9,7 @@ const clinics = [
     city: "Noida",
     address:
       "3rd Floor, K-06, above FirstCry, Baraula, Sector 49, Noida, Uttar Pradesh 201301",
-    clinicPageUrl: "/clinics/noida",
+    clinicPageUrl: "/best-ivf-doctor-in-noida",
     directionsUrl:
       "https://www.google.com/maps/search/?api=1&query=3rd+Floor+K-06+above+FirstCry+Baraula+Sector+49+Noida",
   },
@@ -17,7 +17,7 @@ const clinics = [
     city: "Ghaziabad",
     address:
       "2nd Floor, RDC, C-53A, near Bikanerwala, Sector 15, Sector 10, Raj Nagar, Ghaziabad, Uttar Pradesh 201002",
-    clinicPageUrl: "/clinics/ghaziabad",
+    clinicPageUrl: "/best-ivf-doctor-in-ghaziabad",
     directionsUrl:
       "https://www.google.com/maps/search/?api=1&query=2nd+Floor+RDC+C-53A+near+Bikanerwala+Raj+Nagar+Ghaziabad",
   },
@@ -25,7 +25,7 @@ const clinics = [
     city: "Delhi",
     address:
       "Building Number 41, First Floor, Ring Road, Block Q, Lajpat Nagar IV, Lajpat Nagar, New Delhi 110024",
-    clinicPageUrl: "/clinics/delhi",
+    clinicPageUrl: "/best-ivf-doctor-in-delhi",
     directionsUrl:
       "https://www.google.com/maps/search/?api=1&query=Building+Number+41+First+Floor+Ring+Road+Block+Q+Lajpat+Nagar+IV+New+Delhi",
   },
@@ -33,129 +33,76 @@ const clinics = [
 
 export default function AboutClinics() {
   return (
-    <section id="clinics" className="relative overflow-hidden bg-gradient-to-b from-[#fff8fb] via-white to-[#fff5f8] px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute top-[-10%] right-[-5%] h-[320px] w-[320px] rounded-full opacity-70 blur-3xl"
-        style={{
-          background:
-            "radial-gradient(circle, rgba(255,210,228,0.55) 0%, transparent 68%)",
-        }}
-      />
-
+    <section
+      id="clinics"
+      className="relative overflow-hidden bg-[#061532] px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12"
+    >
       <div className="relative mx-auto w-full max-w-[1440px]">
         <Reveal className="mb-7 flex flex-col justify-between gap-3 sm:mb-8 md:flex-row md:items-end md:gap-6">
           <div>
-            <span className="text-[12px] font-semibold tracking-[0.04em] text-[#e83e74] sm:text-[13px]">
-              Visit Dr. Mona
+            <span className="text-[12px] font-semibold tracking-wider text-[#e83e74] sm:text-[13px]">
+              Book An Appointment With Dr. Mona Dahiya
             </span>
-            <h2 className="font-serif mt-2 text-[1.75rem] leading-[1.18] font-bold tracking-tight text-[#0f2438] sm:text-[2.2rem] lg:text-[2.45rem]">
+            <h2 className="font-serif mt-1 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-white sm:text-[2.2rem] lg:text-[2.45rem]">
               Three clinics across Delhi NCR
             </h2>
           </div>
 
-          <p className="max-w-md text-[13px] leading-relaxed text-[#64748b] sm:text-[14px] md:text-right">
-            Open Monday to Saturday, 10:00 AM to 5:00 PM. Book a slot at the
-            clinic closest to you.
+          <p className="max-w-md text-[13px] leading-relaxed text-slate-300 sm:text-[14px] md:text-right">
+            Timings: Monday To Saturday 10:00 AM To 5:00 PM. Choose The Clinic
+            Near You.
           </p>
         </Reveal>
 
         <Stagger
-          className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5"
+          className="grid grid-cols-1 gap-5 md:grid-cols-3"
           stagger={0.08}
         >
           {clinics.map((clinic) => (
-            <StaggerItem key={clinic.city} variant="fadeUp" className="h-full">
-              <article className="group flex h-full flex-col overflow-hidden rounded-[20px] border border-[#f5c9d6]/70 bg-white shadow-[0_10px_28px_rgba(232,62,116,0.08)] transition-all duration-300 hover:-translate-y-1 hover:border-[#e83e74]/45 hover:shadow-[0_16px_36px_rgba(232,62,116,0.14)]">
-                {/* Compact map preview */}
-                <div className="relative flex h-[88px] w-full items-center justify-center overflow-hidden sm:h-[96px]">
-                  <div
-                    aria-hidden
-                    className="absolute inset-0"
-                    style={{
-                      background:
-                        "linear-gradient(135deg, #0c1f4a 0%, #132b5c 50%, #0a1838 100%)",
-                    }}
-                  />
-                  <svg
-                    aria-hidden
-                    className="absolute inset-0 h-full w-full opacity-45"
-                    xmlns="http://www.w3.org/2000/svg"
-                    preserveAspectRatio="none"
-                  >
-                    <line
-                      x1="0"
-                      y1="70%"
-                      x2="100%"
-                      y2="15%"
-                      stroke="#e83e74"
-                      strokeWidth="5"
-                      strokeOpacity="0.45"
-                    />
-                    <line
-                      x1="28%"
-                      y1="0"
-                      x2="28%"
-                      y2="100%"
-                      stroke="#38bdf8"
-                      strokeWidth="3"
-                      strokeOpacity="0.35"
-                    />
-                    <line
-                      x1="0"
-                      y1="42%"
-                      x2="100%"
-                      y2="42%"
-                      stroke="#ffffff"
-                      strokeWidth="1.5"
-                      strokeDasharray="5 5"
-                      strokeOpacity="0.22"
-                    />
-                    <line
-                      x1="62%"
-                      y1="0"
-                      x2="62%"
-                      y2="100%"
-                      stroke="#ffffff"
-                      strokeWidth="1.5"
-                      strokeDasharray="5 5"
-                      strokeOpacity="0.22"
-                    />
-                  </svg>
-                  <div className="relative z-10 flex size-9 items-center justify-center rounded-full bg-[#0a1838]/90 shadow-[0_0_18px_rgba(232,62,116,0.55)] ring-2 ring-[#e83e74]/90">
-                    <FaMapMarkerAlt className="size-3.5 text-[#f4729a]" />
-                  </div>
-                </div>
+            <StaggerItem key={clinic.city} className="h-full">
+              <div className="group relative flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-[#091a3c]/75 p-5 backdrop-blur-md transition-all duration-300 hover:border-[#e83e74]/40 hover:bg-[#0c224e]">
+                <div>
+                  {/* Stylized map container with road lines and pin icon */}
+                  <div className="relative flex h-36 w-full items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-[#071329]">
+                    {/* Diagonal and cross road lines */}
+                    <div className="pointer-events-none absolute inset-0 opacity-25">
+                      <div className="absolute top-0 bottom-0 left-1/2 w-[2px] bg-white/30" />
+                      <div className="absolute top-1/2 right-0 left-0 h-[2px] bg-white/30" />
+                      <div className="absolute -top-10 -bottom-10 left-1/4 w-[4px] rotate-45 bg-[#e83e74]/40" />
+                      <div className="absolute -top-10 -bottom-10 right-1/4 w-[3px] -rotate-45 bg-cyan-400/30" />
+                    </div>
 
-                {/* Compact body */}
-                <div className="flex flex-1 flex-col px-4 pt-3.5 pb-4 sm:px-5 sm:pt-4 sm:pb-4.5">
-                  <h3 className="font-serif text-[1.2rem] font-bold tracking-tight text-[#0f2438] sm:text-[1.3rem]">
+                    {/* Glowing Pin */}
+                    <div className="relative z-10 flex size-10 items-center justify-center rounded-full bg-[#e83e74]/20 ring-1 ring-[#e83e74]/50">
+                      <FaMapMarkerAlt className="size-5 text-[#e83e74] drop-shadow-[0_2px_8px_rgba(232,62,116,0.6)]" />
+                    </div>
+                  </div>
+
+                  <h3 className="font-serif mt-5 text-[22px] font-normal text-white">
                     {clinic.city}
                   </h3>
-                  <p className="mt-1.5 line-clamp-2 text-[12.5px] leading-snug text-[#64748b] sm:text-[13px]">
+                  <p className="mt-2 text-[13px] leading-relaxed text-slate-300">
                     {clinic.address}
                   </p>
-
-                  <div className="mt-3.5 flex items-center gap-4 border-t border-[#fde2ec] pt-3 text-[12.5px] font-semibold sm:text-[13px]">
-                    <Link
-                      href={clinic.clinicPageUrl}
-                      className="inline-flex items-center gap-1.5 text-[#0047ca] underline-offset-4 transition hover:text-[#e83e74] hover:underline"
-                    >
-                      Clinic page
-                      <FaArrowRight className="size-2.5 opacity-70" />
-                    </Link>
-                    <a
-                      href={clinic.directionsUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-[#0047ca] underline-offset-4 transition hover:text-[#e83e74] hover:underline"
-                    >
-                      <FaDirections className="size-3 opacity-80" />
-                      Get directions
-                    </a>
-                  </div>
                 </div>
-              </article>
+
+                <div className="mt-6 flex flex-wrap items-center gap-4 text-[13px] font-medium">
+                  <Link
+                    href={clinic.clinicPageUrl}
+                    className="text-teal-400 underline decoration-teal-400/40 underline-offset-4 transition hover:text-teal-300"
+                  >
+                    Click here to view clinic
+                  </Link>
+                  <a
+                    href={clinic.directionsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-teal-400 underline decoration-teal-400/40 underline-offset-4 transition hover:text-teal-300"
+                  >
+                    Get directions
+                  </a>
+                </div>
+              </div>
             </StaggerItem>
           ))}
         </Stagger>
