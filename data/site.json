@@ -1138,8 +1138,8 @@
     "titlePrefix": "Find us",
     "titleAccent": "at",
     "hoursBadge": {
-      "title": "Timings from Monday to Saturday 10:00 AM — 5:00 PM. Book a consultation at your nearest center.",
-      "subtitle": ""
+      "title": "Timings from Monday to Saturday 10:00 AM — 5:00 PM.",
+      "subtitle": "Book a consultation at your nearest center."
     },
     "clinics": [
       {
