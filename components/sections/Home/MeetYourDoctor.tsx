@@ -147,7 +147,7 @@ export default function MeetYourDoctor() {
               <p className="text-[12.5px] font-bold tracking-wide text-[#e11d60] sm:text-[13.5px]">
                 {card.eyebrow}
               </p>
-              <h3 className="font-display mt-2 text-[1.85rem] leading-none font-bold sm:text-[2.25rem] xl:text-[2.45rem]">
+              <h3 className="font-display mt-2 text-[1.85rem] leading-none font-normal sm:text-[2.25rem] xl:text-[2.45rem]">
                 <span className="text-ink">{card.namePrefix}</span>{" "}
                 <span className="bg-gradient-to-r from-[#e11d60] to-[#f0518e] bg-clip-text text-transparent">
                   {card.name}

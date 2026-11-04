@@ -71,7 +71,7 @@ When looking at any reference design, screenshot, Figma mockup, or third-party t
 - Absolutely NO other fonts (no Inter, Roboto, Arial, Times New Roman, Playfair, etc.).
 - Never hardcode font families inline; always use:
   - `font-sans` (`var(--font-poppins), Tahoma, sans-serif`)
-  - `font-serif` (`Tahoma, var(--font-poppins), sans-serif`)
+  - `font-serif` (`var(--font-poppins), Tahoma, sans-serif`)
   - `font-display` (`var(--font-poppins), Tahoma, sans-serif`)
 
 ---

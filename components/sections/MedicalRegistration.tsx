@@ -64,7 +64,7 @@ export default function MedicalRegistration({ dark = false }: { dark?: boolean }
             Registered Medical Practitioner
           </p>
 
-          <h2 className="font-serif mt-2 text-[2rem] leading-tight font-bold tracking-tight text-black sm:text-[2.6rem] lg:text-[2.85rem]">
+          <h2 className="font-serif mt-2 text-[2rem] leading-tight font-normal tracking-tight text-black sm:text-[2.6rem] lg:text-[2.85rem]">
             Medical Council Registration Numbers
           </h2>
 
