@@ -35,7 +35,7 @@ export function TreatmentSectionHeader({
           {eyebrow}
         </p>
       ) : null}
-      <h2 className="font-serif mt-1 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-ink sm:text-[2.2rem] lg:text-[2.45rem]">
+      <h2 className="font-serif mt-1 text-[1.65rem] leading-[1.18] font-normal tracking-tight text-ink sm:text-[2.1rem] lg:text-[2.35rem] xl:text-[2.55rem]">
         {title}
       </h2>
       {subtitle ? (
