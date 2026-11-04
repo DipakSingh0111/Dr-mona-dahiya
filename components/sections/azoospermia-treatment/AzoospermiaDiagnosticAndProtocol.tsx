@@ -79,11 +79,11 @@ export default function AzoospermiaDiagnosticAndProtocol() {
                     variant="fadeUp"
                     delay={(colIdx * 2 + idx) * 0.05}
                   >
-                    <div className="flex items-center gap-3.5 rounded-xl border border-white/10 bg-[#091a3c]/70 px-4 py-3.5 backdrop-blur-md transition-all duration-200 hover:border-[#0047ca]/50 hover:bg-[#0c224e]/80 sm:px-5 sm:py-4">
-                      <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-[#0047ca]/25 text-[#93c5fd] ring-1 ring-[#0047ca]/45 sm:size-6">
+                    <div className="flex items-center gap-3.5 rounded-xl border border-[#fde2ec] bg-white px-4 py-3.5 backdrop-blur-md transition-all duration-200 hover:border-blue/50 hover:bg-[#fff0f5] sm:px-5 sm:py-4">
+                      <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-blue/25 text-blue ring-1 ring-blue/45 sm:size-6">
                         <FaCheck className="size-2.5 sm:size-3" />
                       </span>
-                      <p className="text-[13.5px] leading-relaxed text-slate-200 sm:text-[14.5px]">
+                      <p className="text-[13.5px] leading-relaxed text-black sm:text-[14.5px]">
                         {item}
                       </p>
                     </div>

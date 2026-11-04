@@ -32,28 +32,28 @@ export default function PatientReviewsGroup({
   const renderCard = (rev: ReviewCard, idx: number) => (
     <div
       key={idx}
-      className="group flex flex-col justify-between rounded-[20px] border border-white/10 bg-[#0a1e46]/70 p-5 backdrop-blur-md transition-all duration-300 hover:border-[#e83e74]/40 hover:bg-[#0a1e46] hover:shadow-[0_12px_32px_rgba(0,0,0,0.35)]"
+      className="group flex flex-col justify-between rounded-[20px] border border-[#fde2ec] bg-white p-5 backdrop-blur-md transition-all duration-300 hover:border-rose/40 hover:bg-pink hover:shadow-[0_12px_32px_rgba(0,0,0,0.35)]"
     >
       <div>
         {rev.title ? (
-          <h3 className="mb-2 text-[15px] font-bold text-white transition-colors group-hover:text-[#f9a8d4] sm:text-[16px]">
+          <h3 className="mb-2 text-[15px] font-bold text-black transition-colors group-hover:text-rose sm:text-[16px]">
             {rev.title}
           </h3>
         ) : null}
-        <p className="text-[12.5px] leading-relaxed text-white/80 sm:text-[13px]">
+        <p className="text-[12.5px] leading-relaxed text-black sm:text-[13px]">
           {rev.body}
         </p>
       </div>
 
       <div className="mt-4 flex items-center gap-3 pt-1">
-        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#c53658] text-[13px] font-bold text-white shadow-md">
+        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-rose text-[13px] font-bold text-white shadow-md">
           {rev.avatarLetter}
         </div>
         <div>
-          <p className="text-[12.5px] font-bold text-white sm:text-[13px]">
+          <p className="text-[12.5px] font-bold text-black sm:text-[13px]">
             {rev.author}
           </p>
-          <p className="text-[11px] text-white/60">
+          <p className="text-[11px] text-black">
             {rev.source}
           </p>
         </div>
@@ -62,16 +62,16 @@ export default function PatientReviewsGroup({
   );
 
   return (
-    <section id={id} className="relative overflow-hidden bg-[#061532] px-4 py-6 text-white sm:px-6 sm:py-7 lg:px-8 lg:py-8 scroll-mt-24">
+    <section id={id} className="relative overflow-hidden bg-pink px-4 py-6 text-ink sm:px-6 sm:py-7 lg:px-8 lg:py-8 scroll-mt-24">
       <div className="relative mx-auto w-full max-w-[1440px]">
         <Reveal className="max-w-3xl">
-          <span className="text-[12px] font-semibold tracking-wider text-[#e83e74] uppercase">
+          <span className="text-[12px] font-semibold tracking-wider text-rose uppercase">
             {eyebrow}
           </span>
-          <h2 className="font-serif mt-1 text-[1.85rem] leading-[1.18] font-bold tracking-tight text-white sm:text-[2.2rem] lg:text-[2.5rem]">
+          <h2 className="font-serif mt-1 text-[1.85rem] leading-[1.18] font-bold tracking-tight text-black sm:text-[2.2rem] lg:text-[2.5rem]">
             {title}
           </h2>
-          <p className="mt-2 text-[13.5px] leading-relaxed text-white/70 sm:text-[14.5px]">
+          <p className="mt-2 text-[13.5px] leading-relaxed text-black sm:text-[14.5px]">
             {subtitle}
           </p>
         </Reveal>

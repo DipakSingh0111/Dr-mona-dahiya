@@ -98,7 +98,7 @@ export default function PcosCostAndReviews() {
           <Reveal variant="fadeUp" delay={0.1} className="mt-8">
             <Link
               href="/best-ivf-patient-reviews"
-              className="inline-flex items-center justify-center rounded-full border border-teal-500/50 bg-[#0a1e3b]/80 px-5 py-2.5 text-[13px] font-semibold text-teal-300 shadow-sm transition-all hover:border-teal-400 hover:bg-teal-500/20 hover:text-white"
+              className="inline-flex items-center justify-center rounded-full border border-blue/40 bg-white px-5 py-2.5 text-[13px] font-semibold text-blue shadow-sm transition-all hover:border-blue hover:bg-blue hover:text-white"
             >
               Read All Patient Reviews
             </Link>

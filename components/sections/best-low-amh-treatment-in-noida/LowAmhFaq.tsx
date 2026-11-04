@@ -13,7 +13,7 @@ const leftFaqs: FaqItem[] = [
     answer: (
       <p>
         Yes. Anti-Müllerian Hormone (AMH) measures egg{" "}
-        <strong className="font-semibold text-white">quantity</strong>, not
+        <strong className="font-semibold text-black">quantity</strong>, not
         quality. As long as you ovulate regularly, natural conception remains
         possible. Your monthly chance is driven mainly by age, not the AMH
         number alone.
@@ -25,32 +25,32 @@ const leftFaqs: FaqItem[] = [
     answer: (
       <ul className="space-y-2 pl-1">
         <li className="flex items-start gap-2">
-          <span className="pt-1 text-[13px] text-[#e83e74] select-none">•</span>
+          <span className="pt-1 text-[13px] text-rose select-none">•</span>
           <p>
-            <strong className="font-semibold text-white">Normal Reserve:</strong>{" "}
+            <strong className="font-semibold text-black">Normal Reserve:</strong>{" "}
             2.0 to 4.0 ng/mL
           </p>
         </li>
         <li className="flex items-start gap-2">
-          <span className="pt-1 text-[13px] text-[#e83e74] select-none">•</span>
+          <span className="pt-1 text-[13px] text-rose select-none">•</span>
           <p>
-            <strong className="font-semibold text-white">Low Reserve:</strong> 1.0
+            <strong className="font-semibold text-black">Low Reserve:</strong> 1.0
             to 1.5 ng/mL
           </p>
         </li>
         <li className="flex items-start gap-2">
-          <span className="pt-1 text-[13px] text-[#e83e74] select-none">•</span>
+          <span className="pt-1 text-[13px] text-rose select-none">•</span>
           <p>
-            <strong className="font-semibold text-white">
+            <strong className="font-semibold text-black">
               Significantly Low Reserve:
             </strong>{" "}
             0.5 to 0.9 ng/mL
           </p>
         </li>
         <li className="flex items-start gap-2">
-          <span className="pt-1 text-[13px] text-[#e83e74] select-none">•</span>
+          <span className="pt-1 text-[13px] text-rose select-none">•</span>
           <p>
-            <strong className="font-semibold text-white">
+            <strong className="font-semibold text-black">
               Critically Low Reserve:
             </strong>{" "}
             Below 0.5 ng/mL (typically yields 1–3 eggs per IVF cycle)
@@ -74,23 +74,23 @@ const leftFaqs: FaqItem[] = [
     answer: (
       <ul className="space-y-2 pl-1">
         <li className="flex items-start gap-2">
-          <span className="pt-1 text-[13px] text-[#e83e74] select-none">•</span>
+          <span className="pt-1 text-[13px] text-rose select-none">•</span>
           <p>
-            <strong className="font-semibold text-white">Under 35:</strong> High
+            <strong className="font-semibold text-black">Under 35:</strong> High
             (40% to 50%)
           </p>
         </li>
         <li className="flex items-start gap-2">
-          <span className="pt-1 text-[13px] text-[#e83e74] select-none">•</span>
+          <span className="pt-1 text-[13px] text-rose select-none">•</span>
           <p>
-            <strong className="font-semibold text-white">Age 35–39:</strong> 25%
+            <strong className="font-semibold text-black">Age 35–39:</strong> 25%
             to 35%
           </p>
         </li>
         <li className="flex items-start gap-2">
-          <span className="pt-1 text-[13px] text-[#e83e74] select-none">•</span>
+          <span className="pt-1 text-[13px] text-rose select-none">•</span>
           <p>
-            <strong className="font-semibold text-white">
+            <strong className="font-semibold text-black">
               Age 40 and above:
             </strong>{" "}
             10% to 15% (can improve with PGT-A and embryo banking)
@@ -105,25 +105,25 @@ const leftFaqs: FaqItem[] = [
     answer: (
       <ul className="space-y-2 pl-1">
         <li className="flex items-start gap-2">
-          <span className="pt-1 text-[13px] text-[#e83e74] select-none">•</span>
+          <span className="pt-1 text-[13px] text-rose select-none">•</span>
           <p>
-            <strong className="font-semibold text-white">
+            <strong className="font-semibold text-black">
               DuoStim (Double Stimulation)
             </strong>
           </p>
         </li>
         <li className="flex items-start gap-2">
-          <span className="pt-1 text-[13px] text-[#e83e74] select-none">•</span>
+          <span className="pt-1 text-[13px] text-rose select-none">•</span>
           <p>
-            <strong className="font-semibold text-white">
+            <strong className="font-semibold text-black">
               Micro-Dose Flare or GnRH Antagonist
             </strong>
           </p>
         </li>
         <li className="flex items-start gap-2">
-          <span className="pt-1 text-[13px] text-[#e83e74] select-none">•</span>
+          <span className="pt-1 text-[13px] text-rose select-none">•</span>
           <p>
-            <strong className="font-semibold text-white">
+            <strong className="font-semibold text-black">
               Mild IVF / Mini-IVF
             </strong>
           </p>
@@ -155,31 +155,31 @@ const rightFaqs: FaqItem[] = [
         </p>
         <ul className="space-y-2 pl-1">
           <li className="flex items-start gap-2">
-            <span className="pt-1 text-[13px] text-[#e83e74] select-none">
+            <span className="pt-1 text-[13px] text-rose select-none">
               •
             </span>
             <p>
-              <strong className="font-semibold text-white">
+              <strong className="font-semibold text-black">
                 Gonadotropin Injections & Priming
               </strong>
             </p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="pt-1 text-[13px] text-[#e83e74] select-none">
+            <span className="pt-1 text-[13px] text-rose select-none">
               •
             </span>
             <p>
-              <strong className="font-semibold text-white">
+              <strong className="font-semibold text-black">
                 ICSI & Blastocyst Culture
               </strong>
             </p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="pt-1 text-[13px] text-[#e83e74] select-none">
+            <span className="pt-1 text-[13px] text-rose select-none">
               •
             </span>
             <p>
-              <strong className="font-semibold text-white">
+              <strong className="font-semibold text-black">
                 Vitrification & Storage
               </strong>
             </p>
@@ -193,31 +193,31 @@ const rightFaqs: FaqItem[] = [
     answer: (
       <ul className="space-y-2 pl-1">
         <li className="flex items-start gap-2">
-          <span className="pt-1 text-[13px] text-[#e83e74] select-none">•</span>
+          <span className="pt-1 text-[13px] text-rose select-none">•</span>
           <p>
-            <strong className="font-semibold text-white">
+            <strong className="font-semibold text-black">
               Endometriosis & Ovarian Cysts
             </strong>
           </p>
         </li>
         <li className="flex items-start gap-2">
-          <span className="pt-1 text-[13px] text-[#e83e74] select-none">•</span>
+          <span className="pt-1 text-[13px] text-rose select-none">•</span>
           <p>
-            <strong className="font-semibold text-white">Genetic Factors</strong>
+            <strong className="font-semibold text-black">Genetic Factors</strong>
           </p>
         </li>
         <li className="flex items-start gap-2">
-          <span className="pt-1 text-[13px] text-[#e83e74] select-none">•</span>
+          <span className="pt-1 text-[13px] text-rose select-none">•</span>
           <p>
-            <strong className="font-semibold text-white">
+            <strong className="font-semibold text-black">
               Previous Surgeries or Chemotherapy
             </strong>
           </p>
         </li>
         <li className="flex items-start gap-2">
-          <span className="pt-1 text-[13px] text-[#e83e74] select-none">•</span>
+          <span className="pt-1 text-[13px] text-rose select-none">•</span>
           <p>
-            <strong className="font-semibold text-white">
+            <strong className="font-semibold text-black">
               Autoimmune Disorders
             </strong>
           </p>
@@ -260,23 +260,23 @@ const rightFaqs: FaqItem[] = [
     answer: (
       <ul className="space-y-2 pl-1">
         <li className="flex items-start gap-2">
-          <span className="pt-1 text-[13px] text-[#e83e74] select-none">•</span>
+          <span className="pt-1 text-[13px] text-rose select-none">•</span>
           <p>
-            <strong className="font-semibold text-white">Noida:</strong> 3rd
+            <strong className="font-semibold text-black">Noida:</strong> 3rd
             Floor, K-06, above FirstCry, Baraula, Sector 49
           </p>
         </li>
         <li className="flex items-start gap-2">
-          <span className="pt-1 text-[13px] text-[#e83e74] select-none">•</span>
+          <span className="pt-1 text-[13px] text-rose select-none">•</span>
           <p>
-            <strong className="font-semibold text-white">Ghaziabad:</strong> 2nd
+            <strong className="font-semibold text-black">Ghaziabad:</strong> 2nd
             Floor, RDC, C-53A, near Bikanerwala, Sector 15
           </p>
         </li>
         <li className="flex items-start gap-2">
-          <span className="pt-1 text-[13px] text-[#e83e74] select-none">•</span>
+          <span className="pt-1 text-[13px] text-rose select-none">•</span>
           <p>
-            <strong className="font-semibold text-white">Delhi:</strong> Building
+            <strong className="font-semibold text-black">Delhi:</strong> Building
             Number 41, First Floor, Ring Road, Block Q, Lajpat Nagar IV
           </p>
         </li>

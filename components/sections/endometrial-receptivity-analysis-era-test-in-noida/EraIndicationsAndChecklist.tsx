@@ -19,7 +19,7 @@ const indications: { number: string; title: string; description: ReactNode }[] =
           2 or more failed transfers of good blastocysts. See{" "}
           <Link
             href="/recurrent-implantation-failure-rif"
-            className="font-medium text-[#93c5fd] underline underline-offset-2 hover:text-white"
+            className="font-medium text-blue underline underline-offset-2 hover:text-white"
           >
             Recurrent Implantation Failure
           </Link>
@@ -102,7 +102,7 @@ export default function EraIndicationsAndChecklist() {
             {checklist.map((item, idx) => (
               <Reveal key={item.title} variant="fadeUp" delay={idx * 0.04}>
                 <ChecklistRow>
-                  <strong className="font-semibold text-white">{item.title}:</strong>{" "}
+                  <strong className="font-semibold text-black">{item.title}:</strong>{" "}
                   {item.text}
                 </ChecklistRow>
               </Reveal>

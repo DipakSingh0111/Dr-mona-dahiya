@@ -46,7 +46,7 @@ export default function Navbar() {
         className="relative overflow-hidden"
         style={{
           background:
-            "linear-gradient(105deg, #003db8 0%, #0047ca 50%, #0d55d0 100%)",
+            "linear-gradient(105deg, #003db8 0%, var(--blue) 50%, #0d55d0 100%)",
         }}
       >
         <div
@@ -141,7 +141,7 @@ export default function Navbar() {
         className="relative z-10 hidden lg:block"
         style={{
           background:
-            "linear-gradient(90deg, #061e52 0%, #09296e 50%, #061e52 100%)",
+            "linear-gradient(90deg, var(--navy) 0%, var(--navy-mid) 50%, var(--navy) 100%)",
         }}
       >
         <div className="mx-auto flex max-w-[1440px] items-center gap-2 px-4 py-0.5 sm:px-6 lg:gap-3 lg:px-8 xl:py-1">
@@ -159,25 +159,25 @@ export default function Navbar() {
                   <a
                     href={item.href}
                     onClick={(e) => handlePlainNavClick(e, item.href)}
-                    className="group inline-flex shrink-0 items-center gap-1 rounded-lg px-2 py-1 text-[11px] font-semibold tracking-[0.05em] text-white/95 uppercase whitespace-nowrap transition-all hover:bg-white/10 hover:text-[#f9b4c4] xl:px-3 xl:py-1.5 xl:text-[12.5px] xl:tracking-[0.06em]"
+                    className="group inline-flex shrink-0 items-center gap-1 rounded-lg px-2 py-1 text-[11px] font-semibold tracking-[0.05em] text-white/95 uppercase whitespace-nowrap transition-all hover:bg-white/10 hover:text-rose group-hover/nav:bg-white/10 group-hover/nav:text-rose xl:px-3 xl:py-1.5 xl:text-[12.5px] xl:tracking-[0.06em]"
                   >
                     <span>{item.label}</span>
                     {item.hasDropdown ? (
-                      <ChevronDownIcon className="size-3 shrink-0 opacity-70 transition-transform duration-200 group-hover/nav:rotate-180 group-hover/nav:text-[#f9b4c4] group-hover/nav:opacity-100 xl:size-3.5" />
+                      <ChevronDownIcon className="size-3 shrink-0 opacity-70 transition-transform duration-200 group-hover/nav:rotate-180 group-hover/nav:text-rose group-hover/nav:opacity-100 xl:size-3.5" />
                     ) : null}
                   </a>
 
                   {/* Treatments Mega Menu Dropdown (3 Columns + Promo Card + Bottom Assessment Banner) */}
                   {isTreatmentsMega ? (
                     <div className="invisible absolute top-full left-0 z-50 pt-1 opacity-0 pointer-events-none translate-y-2 transition-all duration-250 ease-out group-hover/nav:visible group-hover/nav:pointer-events-auto group-hover/nav:translate-y-0 group-hover/nav:opacity-100">
-                      <div className="w-[1180px] max-w-[92vw] overflow-hidden rounded-b-2xl border-t-2 border-[#e83e74] bg-[#071e4d] shadow-[0_25px_50px_rgba(0,10,30,0.8)] ring-1 ring-white/10">
+                      <div className="w-[1180px] max-w-[92vw] overflow-hidden rounded-b-2xl border-t-2 border-rose bg-navy shadow-[0_25px_50px_rgba(0,10,30,0.8)] ring-1 ring-white/10">
                         {/* Top Columns + Promo Card Grid */}
                         <div className="grid grid-cols-12 gap-8 px-8 pt-7 pb-6">
                           {/* 3 Categories Columns */}
                           <div className="col-span-9 grid grid-cols-3 gap-8">
                             {item.treatmentsMega!.columns.map((col) => (
                               <div key={col.category} className="flex flex-col">
-                                <span className="mb-4 text-[11px] font-bold tracking-[0.12em] text-[#e83e74] uppercase">
+                                <span className="mb-4 text-[11px] font-bold tracking-[0.12em] text-rose uppercase">
                                   {col.category}
                                 </span>
                                 <div className="flex flex-col space-y-3">
@@ -187,8 +187,8 @@ export default function Navbar() {
                                       href={sub.href}
                                       className={`text-[13.5px] leading-snug normal-case transition-colors duration-150 ${
                                         "highlight" in sub && sub.highlight
-                                          ? "font-semibold text-[#5eead4] hover:underline"
-                                          : "font-normal text-white/90 hover:text-[#5eead4]"
+                                          ? "font-semibold text-rose hover:underline"
+                                          : "font-normal text-white/90 hover:text-rose"
                                       }`}
                                     >
                                       {sub.label}
@@ -200,7 +200,7 @@ export default function Navbar() {
                           </div>
 
                           {/* Right Promo Card */}
-                          <div className="col-span-3 flex flex-col justify-between rounded-2xl border border-white/10 bg-[#0c285e]/80 p-6 shadow-md backdrop-blur-sm">
+                          <div className="col-span-3 flex flex-col justify-between rounded-2xl border border-white/10 bg-navy-mid/80 p-6 shadow-md backdrop-blur-sm">
                             <div>
                               <h4 className="font-serif text-[19px] leading-[1.3] font-normal text-white">
                                 {item.treatmentsMega!.promoCard.title}
@@ -213,7 +213,7 @@ export default function Navbar() {
                             <div className="mt-6">
                               <a
                                 href={item.treatmentsMega!.promoCard.ctaHref}
-                                className="inline-flex w-full items-center justify-center rounded-full bg-white px-5 py-2.5 text-[12.5px] font-bold text-[#0f2438] shadow-sm transition-all hover:bg-slate-100 hover:text-[#0047ca] active:scale-95"
+                                className="inline-flex w-full items-center justify-center rounded-full bg-white px-5 py-2.5 text-[12.5px] font-bold text-ink shadow-sm transition-all hover:bg-slate-100 hover:text-blue active:scale-95"
                               >
                                 {item.treatmentsMega!.promoCard.ctaLabel}
                               </a>
@@ -222,14 +222,14 @@ export default function Navbar() {
                         </div>
 
                         {/* Bottom Banner Bar */}
-                        <div className="mx-8 mb-6 overflow-hidden rounded-xl bg-[#03112c]/90 px-6 py-3.5 border border-white/10">
+                        <div className="mx-8 mb-6 overflow-hidden rounded-xl bg-navy/90 px-6 py-3.5 border border-white/10">
                           <div className="flex items-center gap-2 text-[13px] text-white/85">
                             <span className="font-bold text-white">
                               {item.treatmentsMega!.bottomBanner.title}
                             </span>
                             <a
                               href={item.treatmentsMega!.bottomBanner.linkHref}
-                              className="font-medium text-white/90 transition-colors hover:text-[#e83e74]"
+                              className="font-medium text-white/90 transition-colors hover:text-rose"
                             >
                               {item.treatmentsMega!.bottomBanner.linkText}
                             </a>
@@ -242,11 +242,11 @@ export default function Navbar() {
                   {/* Mega Menu Dropdown (2-Column Layout matching Screenshot) */}
                   {isMegaMenu ? (
                     <div className="invisible absolute top-full left-0 z-50 pt-1 opacity-0 pointer-events-none translate-y-2 transition-all duration-250 ease-out group-hover/nav:visible group-hover/nav:pointer-events-auto group-hover/nav:translate-y-0 group-hover/nav:opacity-100">
-                      <div className="w-[660px] overflow-hidden rounded-b-2xl border-t-2 border-[#e83e74] bg-[#071e4d] p-5 shadow-[0_22px_45px_rgba(0,10,30,0.7)] ring-1 ring-white/10">
+                      <div className="w-[660px] overflow-hidden rounded-b-2xl border-t-2 border-rose bg-navy p-5 shadow-[0_22px_45px_rgba(0,10,30,0.7)] ring-1 ring-white/10">
                         <div className="grid grid-cols-2 gap-7">
                           {item.megaMenu!.map((col) => (
                             <div key={col.category} className="flex flex-col">
-                              <span className="mb-3 text-[11px] font-bold tracking-[0.12em] text-[#e83e74] uppercase">
+                              <span className="mb-3 text-[11px] font-bold tracking-[0.12em] text-rose uppercase">
                                 {col.category}
                               </span>
                               <div className="flex flex-col space-y-1">
@@ -254,7 +254,7 @@ export default function Navbar() {
                                   <a
                                     key={sub.label}
                                     href={sub.href}
-                                    className="rounded-lg px-2.5 py-1.5 text-[13.5px] font-medium text-slate-100 normal-case transition-all duration-150 hover:bg-white/10 hover:text-[#5eead4]"
+                                    className="rounded-lg px-2.5 py-1.5 text-[13.5px] font-medium text-slate-100 normal-case transition-all duration-150 hover:bg-white/10 hover:text-rose"
                                   >
                                     {sub.label}
                                   </a>
@@ -270,12 +270,12 @@ export default function Navbar() {
                   {/* Standard Single Column Dropdown */}
                   {!isMegaMenu && hasDropdown ? (
                     <div className="invisible absolute top-full left-0 z-50 pt-1 opacity-0 pointer-events-none translate-y-2 transition-all duration-250 ease-out group-hover/nav:visible group-hover/nav:pointer-events-auto group-hover/nav:translate-y-0 group-hover/nav:opacity-100">
-                      <div className="w-[290px] overflow-hidden rounded-b-2xl border-t-2 border-[#e83e74] bg-[#071e4d] p-2 shadow-[0_22px_45px_rgba(0,10,30,0.7)] ring-1 ring-white/10">
+                      <div className="w-[290px] overflow-hidden rounded-b-2xl border-t-2 border-rose bg-navy p-2 shadow-[0_22px_45px_rgba(0,10,30,0.7)] ring-1 ring-white/10">
                         {item.dropdown!.map((sub) => (
                           <a
                             key={sub.label}
                             href={sub.href}
-                            className="flex items-center justify-between rounded-xl px-4 py-2.5 text-[14px] font-medium text-slate-100 normal-case transition-all duration-200 hover:bg-white/10 hover:text-[#5eead4]"
+                            className="flex items-center justify-between rounded-xl px-4 py-2.5 text-[14px] font-medium text-slate-100 normal-case transition-all duration-200 hover:bg-white/10 hover:text-rose"
                           >
                             <span>{sub.label}</span>
                             {"badge" in sub && typeof sub.badge === "string" ? (
@@ -296,7 +296,7 @@ export default function Navbar() {
           <div className="ml-auto hidden shrink-0 lg:block">
             <a
               href={cta.href}
-              className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-[#e83e74] px-3.5 py-1.5 text-[11px] font-bold tracking-[0.07em] text-white uppercase whitespace-nowrap shadow-[0_4px_14px_rgba(232,62,116,0.4)] transition-all hover:bg-[#c53658] xl:px-5 xl:py-2 xl:text-[12.5px] xl:tracking-[0.07em]"
+              className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-rose px-3.5 py-1.5 text-[11px] font-bold tracking-[0.07em] text-white uppercase whitespace-nowrap shadow-[0_4px_14px_rgba(232,62,116,0.4)] transition-all hover:bg-rose-dark xl:px-5 xl:py-2 xl:text-[12.5px] xl:tracking-[0.07em]"
             >
               <CalendarIcon className="size-3.5 shrink-0 xl:size-4" />
               {cta.label}
@@ -309,7 +309,7 @@ export default function Navbar() {
       {open ? (
         <div
           id="mobile-menu"
-          className="border-t border-white/10 bg-[rgba(8,33,73,0.96)] px-4 py-4 backdrop-blur-md lg:hidden"
+          className="border-t border-white/10 bg-[rgba(6,21,50,0.96)] px-4 py-4 backdrop-blur-md lg:hidden"
         >
           <nav className="flex flex-col gap-1" aria-label="Mobile">
             {menu.map((item) => {
@@ -363,10 +363,10 @@ export default function Navbar() {
                   )}
 
                   {isTreatmentsMega && isExpanded ? (
-                    <div className="ml-4 mb-2 flex flex-col gap-3 border-l-2 border-[#e83e74]/60 pl-3 pt-1">
+                    <div className="ml-4 mb-2 flex flex-col gap-3 border-l-2 border-rose/60 pl-3 pt-1">
                       {item.treatmentsMega!.columns.map((col) => (
                         <div key={col.category} className="flex flex-col gap-1">
-                          <span className="text-[10.5px] font-bold tracking-wider text-[#e83e74] uppercase">
+                          <span className="text-[10.5px] font-bold tracking-wider text-rose uppercase">
                             {col.category}
                           </span>
                           {col.items.map((sub) => (
@@ -375,8 +375,8 @@ export default function Navbar() {
                               href={sub.href}
                               className={`px-2 py-1 text-[13px] font-normal normal-case ${
                                 "highlight" in sub && sub.highlight
-                                  ? "font-bold text-[#5eead4]"
-                                  : "text-white/80 hover:text-[#5eead4]"
+                                  ? "font-bold text-rose"
+                                  : "text-white/80 hover:text-rose"
                               }`}
                               onClick={closeMobileMenu}
                             >
@@ -389,17 +389,17 @@ export default function Navbar() {
                   ) : null}
 
                   {isMegaMenu && isExpanded ? (
-                    <div className="ml-4 mb-2 flex flex-col gap-3 border-l-2 border-[#e83e74]/60 pl-3 pt-1">
+                    <div className="ml-4 mb-2 flex flex-col gap-3 border-l-2 border-rose/60 pl-3 pt-1">
                       {item.megaMenu!.map((col) => (
                         <div key={col.category} className="flex flex-col gap-1">
-                          <span className="text-[10.5px] font-bold tracking-wider text-[#e83e74] uppercase">
+                          <span className="text-[10.5px] font-bold tracking-wider text-rose uppercase">
                             {col.category}
                           </span>
                           {col.items.map((sub) => (
                             <a
                               key={sub.label}
                               href={sub.href}
-                              className="px-2 py-1 text-[13px] font-normal text-white/80 normal-case hover:text-[#5eead4]"
+                              className="px-2 py-1 text-[13px] font-normal text-white/80 normal-case hover:text-rose"
                               onClick={closeMobileMenu}
                             >
                               {sub.label}
@@ -419,12 +419,12 @@ export default function Navbar() {
                       }`}
                     >
                       <div className="overflow-hidden">
-                        <div className="ml-4 mb-2 flex flex-col gap-1 border-l-2 border-[#e83e74]/60 pl-3">
+                        <div className="ml-4 mb-2 flex flex-col gap-1 border-l-2 border-rose/60 pl-3">
                           {item.dropdown!.map((sub) => (
                             <a
                               key={sub.label}
                               href={sub.href}
-                              className="flex items-center justify-between px-2 py-1.5 text-[13px] font-normal text-white/80 normal-case hover:text-[#5eead4]"
+                              className="flex items-center justify-between px-2 py-1.5 text-[13px] font-normal text-white/80 normal-case hover:text-rose"
                               onClick={closeMobileMenu}
                               tabIndex={isExpanded ? 0 : -1}
                             >
@@ -446,7 +446,7 @@ export default function Navbar() {
             })}
             <a
               href={cta.href}
-              className="mt-2 inline-flex items-center justify-center gap-2 rounded-lg bg-[#b34562] px-5 py-3 text-[12px] font-bold tracking-[0.08em] text-white uppercase"
+              className="mt-2 inline-flex items-center justify-center gap-2 rounded-lg bg-rose px-5 py-3 text-[12px] font-bold tracking-[0.08em] text-white uppercase"
               onClick={closeMobileMenu}
             >
               <CalendarIcon className="size-3.5" />

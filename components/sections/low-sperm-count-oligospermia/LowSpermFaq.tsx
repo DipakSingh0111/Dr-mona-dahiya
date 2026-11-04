@@ -41,19 +41,19 @@ const leftFaqs: FaqItem[] = [
         </p>
         <ul className="space-y-1.5 pl-1">
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-0.5">•</span>
+            <span className="text-rose select-none text-[13px] pt-0.5">•</span>
             <p>Take daily antioxidants (CoQ10, L-Carnitine, Zinc, Vitamin E).</p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-0.5">•</span>
+            <span className="text-rose select-none text-[13px] pt-0.5">•</span>
             <p>Avoid excessive scrotal heat (saunas, hot tubs, tight underwear, laptops on laps).</p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-0.5">•</span>
+            <span className="text-rose select-none text-[13px] pt-0.5">•</span>
             <p>Eliminate smoking and limit alcohol.</p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-0.5">•</span>
+            <span className="text-rose select-none text-[13px] pt-0.5">•</span>
             <p>Maintain a healthy BMI.</p>
           </li>
         </ul>
@@ -67,23 +67,23 @@ const leftFaqs: FaqItem[] = [
         <p>Key etiologies include:</p>
         <ul className="space-y-1.5 pl-1">
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-0.5">•</span>
+            <span className="text-rose select-none text-[13px] pt-0.5">•</span>
             <p><strong className="text-white font-semibold">Varicocele:</strong> Enlarged scrotal veins causing testicular overheating and hypoxia.</p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-0.5">•</span>
+            <span className="text-rose select-none text-[13px] pt-0.5">•</span>
             <p><strong className="text-white font-semibold">Genital Infections:</strong> Epididymitis or prostatitis triggering oxidative stress.</p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-0.5">•</span>
+            <span className="text-rose select-none text-[13px] pt-0.5">•</span>
             <p><strong className="text-white font-semibold">Hormonal Imbalances:</strong> Low testosterone, elevated prolactin, or thyroid dysfunction.</p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-0.5">•</span>
+            <span className="text-rose select-none text-[13px] pt-0.5">•</span>
             <p><strong className="text-white font-semibold">Genetic Factors:</strong> Y-chromosome microdeletions or Klinefelter syndrome.</p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-0.5">•</span>
+            <span className="text-rose select-none text-[13px] pt-0.5">•</span>
             <p><strong className="text-white font-semibold">Environmental Toxins:</strong> Exposure to heavy metals, pesticides, or radiation.</p>
           </li>
         </ul>
@@ -98,13 +98,13 @@ const rightFaqs: FaqItem[] = [
     answer: (
       <ul className="space-y-2 pl-1">
         <li className="flex items-start gap-2">
-          <span className="text-[#e83e74] select-none text-[13px] pt-0.5">•</span>
+          <span className="text-rose select-none text-[13px] pt-0.5">•</span>
           <p>
             <strong className="text-white font-semibold">Intrauterine Insemination (IUI):</strong> Viable if the post-wash Total Motile Sperm Count (TMSC) is ≥ 5–10 million with normal female tubes.
           </p>
         </li>
         <li className="flex items-start gap-2">
-          <span className="text-[#e83e74] select-none text-[13px] pt-0.5">•</span>
+          <span className="text-rose select-none text-[13px] pt-0.5">•</span>
           <p>
             <strong className="text-white font-semibold">IVF with ICSI:</strong> Strongly indicated if TMSC is &lt; 5 million, motility is severe (&lt; 10%), or previous IUI cycles failed, ensuring direct egg micro-injection.
           </p>

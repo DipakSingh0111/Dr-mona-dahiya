@@ -23,12 +23,12 @@ const mediaArticles: MediaArticle[] = [
   {
     publisher: "IPS News",
     headline: "Embrace Parenthood with the Best IVF Centre in Noida",
-    color: "from-[#0047ca] to-[#0037a3]",
+    color: "from-blue to-blue-dark",
   },
   {
     publisher: "APN News",
     headline: "Little Angel IVF is the Leading IVF Centre in Ghaziabad",
-    color: "from-[#c53658] to-[#9f1239]",
+    color: "from-rose to-[#9f1239]",
   },
   {
     publisher: "DNA India",
@@ -43,7 +43,7 @@ const mediaArticles: MediaArticle[] = [
   {
     publisher: "ThePrint",
     headline: "Dr. Mona Dahiya is the Best IVF Doctor in Ghaziabad",
-    color: "from-[#1e293b] to-[#0f172a]",
+    color: "from-navy to-navy",
   },
   {
     publisher: "DNA India",
@@ -80,7 +80,7 @@ const mediaArticles: MediaArticle[] = [
   {
     publisher: "Free Press Journal",
     headline: "Dr. Mona Dahiya - Best IVF Doctor in Delhi",
-    color: "from-[#0284c7] to-[#0369a1]",
+    color: "from-blue to-[#0369a1]",
   },
   {
     publisher: "Zee Business",
@@ -90,7 +90,7 @@ const mediaArticles: MediaArticle[] = [
   {
     publisher: "ThePrint",
     headline: "Dr. Mona Dahiya - The Best Fertility Doctor in Delhi",
-    color: "from-[#1e293b] to-[#0f172a]",
+    color: "from-navy to-navy",
   },
   {
     publisher: "The Tribune",
@@ -100,7 +100,7 @@ const mediaArticles: MediaArticle[] = [
   {
     publisher: "Indian Television",
     headline: "Dr. Mona Dahiya: The Best IVF Doctor in Delhi",
-    color: "from-[#c53658] to-[#9f1239]",
+    color: "from-rose to-[#9f1239]",
   },
   {
     publisher: "DNA India",
@@ -116,12 +116,12 @@ const mediaArticles: MediaArticle[] = [
   {
     publisher: "PTI News",
     headline: "Best IVF Treatment Doctor in Delhi",
-    color: "from-[#0047ca] to-[#0037a3]",
+    color: "from-blue to-blue-dark",
   },
   {
     publisher: "APN News",
     headline: "Best Fertility Treatment Centre in Noida & Delhi NCR",
-    color: "from-[#c53658] to-[#9f1239]",
+    color: "from-rose to-[#9f1239]",
   },
   {
     publisher: "Bhaskar Live",
@@ -132,28 +132,28 @@ const mediaArticles: MediaArticle[] = [
   {
     publisher: "Daily Excelsior",
     headline: "Top 5 Fertility Clinics in India",
-    color: "from-[#0284c7] to-[#0369a1]",
+    color: "from-blue to-[#0369a1]",
   },
   {
     publisher: "Free Press Journal",
     headline: "List of Top 5 IVF Doctors in Delhi",
-    color: "from-[#0047ca] to-[#0037a3]",
+    color: "from-blue to-blue-dark",
   },
   {
     publisher: "The Pioneer",
     headline:
       "Pioneering the Future of Parenthood as the Best IVF Doctor in Delhi",
-    color: "from-[#0284c7] to-[#0369a1]",
+    color: "from-blue to-[#0369a1]",
   },
   {
     publisher: "The Assam Tribune",
     headline: "Pioneering IVF Treatment in Ghaziabad",
-    color: "from-[#c53658] to-[#9f1239]",
+    color: "from-rose to-[#9f1239]",
   },
   {
     publisher: "The Sentinel",
     headline: "Dr. Mona Dahiya is Delhi's Best IVF Doctor for Fertility Care",
-    color: "from-[#0047ca] to-[#0037a3]",
+    color: "from-blue to-blue-dark",
   },
   {
     publisher: "Deccan Chronicle",
@@ -187,7 +187,7 @@ const mediaArticles: MediaArticle[] = [
     publisher: "Business News This Week",
     headline:
       "When Time Becomes the Biggest Factor in Family Planning: Insights from Dr Mona Dahiya",
-    color: "from-[#0047ca] to-[#0037a3]",
+    color: "from-blue to-blue-dark",
   },
   {
     publisher: "NewsX",
@@ -204,7 +204,7 @@ const mediaArticles: MediaArticle[] = [
     publisher: "The Second Angle",
     headline:
       "Best IVF Doctor in Delhi, Dr Mona Dahiya, on the New Psychology of Fertility Decision-Making",
-    color: "from-[#0284c7] to-[#0369a1]",
+    color: "from-blue to-[#0369a1]",
   },
   {
     publisher: "The Sunday Guardian",
@@ -216,13 +216,13 @@ const mediaArticles: MediaArticle[] = [
     publisher: "Business Connect India",
     headline:
       "How Social Media is Changing Fertility Expectations in India - Perspective from the Best IVF Centre in Delhi",
-    color: "from-[#0047ca] to-[#0037a3]",
+    color: "from-blue to-blue-dark",
   },
   {
     publisher: "India Pharma Outlook",
     headline:
       "Personalized Fertility Care at Little Angel IVF, Best IVF Centre in Delhi",
-    color: "from-[#0284c7] to-[#0369a1]",
+    color: "from-blue to-[#0369a1]",
   },
   {
     publisher: "Zee News",
@@ -240,7 +240,7 @@ const mediaArticles: MediaArticle[] = [
     publisher: "eMedicoDiary",
     headline:
       "Beyond One-Size-Fits-All: Insights from the Best IVF Doctor in Noida",
-    color: "from-[#0ea5e9] to-[#0284c7]",
+    color: "from-[#0ea5e9] to-[var(--blue)]",
   },
 ];
 
@@ -250,15 +250,15 @@ export default function MediaFeatures() {
       <div className="mx-auto w-full max-w-[1440px]">
         {/* Section Header matching Screenshot */}
         <Reveal className="mb-10 sm:mb-12">
-          <span className="text-[12px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:text-[13px]">
+          <span className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
             As featured in
           </span>
 
-          <h2 className="font-display mt-2 text-[2rem] leading-[1.18] font-bold tracking-tight text-[#0f2438] sm:text-[2.65rem] lg:text-[2.85rem]">
+          <h2 className="font-display mt-2 text-[2rem] leading-[1.18] font-bold tracking-tight text-black sm:text-[2.65rem] lg:text-[2.85rem]">
             Media Features
           </h2>
 
-          <p className="mt-3 max-w-2xl text-[13.5px] leading-relaxed text-[#64748b] sm:text-[15px]">
+          <p className="mt-3 max-w-2xl text-[13.5px] leading-relaxed text-black sm:text-[15px]">
             Interviews and feature articles about Dr. Mona Dahiya and her
             fertility care in Delhi, Noida and Ghaziabad. Click a publication to
             read the article.
@@ -272,7 +272,7 @@ export default function MediaFeatures() {
         >
           {mediaArticles.map((article, idx) => (
             <StaggerItem key={idx} variant="scaleIn" className="h-full">
-              <article className="group relative flex h-full flex-col justify-between overflow-hidden rounded-[20px] border border-slate-200/90 bg-white shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#0047ca]/40 hover:shadow-lg">
+              <article className="group relative flex h-full flex-col justify-between overflow-hidden rounded-[20px] border border-slate-200/90 bg-white shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-blue/40 hover:shadow-lg">
                 <div>
                   {/* Top Header Banner with Publisher Name */}
                   <div
@@ -285,7 +285,7 @@ export default function MediaFeatures() {
 
                   {/* Headline in Card Body */}
                   <div className="p-5 sm:p-5.5">
-                    <h3 className="font-display text-[13.5px] leading-snug font-bold text-[#0f2438] transition-colors group-hover:text-[#0047ca] sm:text-[14px]">
+                    <h3 className="font-display text-[13.5px] leading-snug font-bold text-black transition-colors group-hover:text-blue sm:text-[14px]">
                       {article.headline}
                     </h3>
                   </div>
@@ -293,7 +293,7 @@ export default function MediaFeatures() {
 
                 {/* Read Article Link */}
                 <div className="px-5 pb-5 pt-0 sm:px-5.5 sm:pb-5.5">
-                  <span className="inline-flex items-center gap-1 text-[12px] font-semibold text-[#e83e74] transition-colors group-hover:text-[#0047ca] group-hover:underline">
+                  <span className="inline-flex items-center gap-1 text-[12px] font-semibold text-rose transition-colors group-hover:text-blue group-hover:underline">
                     <span>Read article</span>
                     <span aria-hidden className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
                       ↗
@@ -307,8 +307,8 @@ export default function MediaFeatures() {
 
         {/* Highlighted Disclaimer Footer */}
         <div className="mt-10 flex flex-wrap items-center sm:mt-12">
-          <div className="inline-flex items-center gap-2.5 rounded-2xl border border-[#0047ca]/20 bg-gradient-to-r from-[#eff6ff] via-[#f8fafc] to-[#fff1f5] px-4 py-2.5 text-[12.5px] font-medium text-[#1e293b] shadow-xs sm:rounded-full sm:px-5 sm:text-[13px]">
-            <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-[#0047ca] text-[11px] font-bold text-white shadow-xs">
+          <div className="inline-flex items-center gap-2.5 rounded-2xl border border-blue/20 bg-gradient-to-r from-[#eff6ff] via-[#f8fafc] to-[#fff1f5] px-4 py-2.5 text-[12.5px] font-medium text-navy shadow-xs sm:rounded-full sm:px-5 sm:text-[13px]">
+            <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-blue text-[11px] font-bold text-white shadow-xs">
               i
             </span>
             <span>

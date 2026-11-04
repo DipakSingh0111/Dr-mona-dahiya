@@ -29,11 +29,11 @@ export default function BestIvfGhaziabadDiagnostic() {
         <Stagger className="flex flex-col gap-3 lg:col-span-7" stagger={0.06}>
           {tests.map((text) => (
             <StaggerItem key={text}>
-              <div className="flex items-start gap-3 rounded-2xl border border-white/10 bg-[#0a1f45]/80 px-4 py-3.5 sm:px-5 sm:py-4">
-                <span className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-[#134e43] text-white">
+              <div className="flex items-start gap-3 rounded-2xl border border-[#fde2ec] bg-white/80 px-4 py-3.5 sm:px-5 sm:py-4">
+                <span className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-blue text-white">
                   <FaCheck className="size-3" />
                 </span>
-                <p className="text-[13.5px] leading-relaxed text-white/85 sm:text-[14px]">
+                <p className="text-[13.5px] leading-relaxed text-slate-700 sm:text-[14px]">
                   {text}
                 </p>
               </div>
@@ -42,7 +42,7 @@ export default function BestIvfGhaziabadDiagnostic() {
         </Stagger>
 
         <Reveal variant="scaleIn" className="lg:col-span-5">
-          <div className="relative mx-auto max-w-[420px] overflow-hidden rounded-[22px] border border-white/15 shadow-[0_20px_50px_rgba(0,10,40,0.4)]">
+          <div className="relative mx-auto max-w-[420px] overflow-hidden rounded-[22px] border border-[#fde2ec] shadow-[0_20px_50px_rgba(0,10,40,0.4)]">
             <Image
               src="/images/about-mona-dahiya/dr-mona-dahiya.jpg"
               alt="Dr. Mona Dahiya"

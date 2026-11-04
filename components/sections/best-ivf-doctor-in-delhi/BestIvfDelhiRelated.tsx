@@ -57,13 +57,13 @@ const treatments = [
 
 export default function BestIvfDelhiRelated() {
   return (
-    <section className="relative overflow-hidden bg-[#061532] px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
+    <section className="relative overflow-hidden bg-pink px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
       <div className="mx-auto w-full max-w-[1440px]">
         <Reveal variant="fadeUp">
-          <p className="text-[12px] font-semibold tracking-wide text-[#e83e74] sm:text-[13px]">
+          <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">
             Other Services
           </p>
-          <h2 className="font-serif mt-1 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-white sm:text-[2.2rem] lg:text-[2.45rem]">
+          <h2 className="font-serif mt-1 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-black sm:text-[2.2rem] lg:text-[2.45rem]">
             Other Treatments we provide
           </h2>
         </Reveal>
@@ -76,17 +76,17 @@ export default function BestIvfDelhiRelated() {
             <StaggerItem key={item.title}>
               <Link
                 href={item.href}
-                className="group relative flex items-center justify-between rounded-xl border border-white/10 bg-[#091a3c]/70 p-4 backdrop-blur-md transition-all duration-200 hover:-translate-y-0.5 hover:border-[#0047ca]/60 hover:bg-[#0c224e]/85"
+                className="group relative flex items-center justify-between rounded-xl border border-[#fde2ec] bg-white p-4 backdrop-blur-md transition-all duration-200 hover:-translate-y-0.5 hover:border-blue/60 hover:bg-[#fff0f5]"
               >
                 <div>
-                  <h3 className="font-serif text-[1rem] font-semibold text-white transition-colors group-hover:text-sky-300 sm:text-[1.05rem]">
+                  <h3 className="font-serif text-[1rem] font-semibold text-black transition-colors group-hover:text-sky-300 sm:text-[1.05rem]">
                     {item.title}
                   </h3>
-                  <p className="mt-0.5 text-[12px] text-slate-400 group-hover:text-slate-300">
+                  <p className="mt-0.5 text-[12px] text-black group-hover:text-black">
                     Treatment page
                   </p>
                 </div>
-                <span className="flex size-6 shrink-0 items-center justify-center rounded-full text-slate-400 transition-all group-hover:translate-x-1 group-hover:text-sky-300">
+                <span className="flex size-6 shrink-0 items-center justify-center rounded-full text-black transition-all group-hover:translate-x-1 group-hover:text-sky-300">
                   <FaArrowRight className="size-3" />
                 </span>
               </Link>

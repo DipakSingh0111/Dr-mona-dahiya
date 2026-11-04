@@ -83,7 +83,7 @@ const rightFaqs: FaqItem[] = [
         In IVF, sperm and egg are combined in a dish. In{" "}
         <Link
           href="/treatments"
-          className="font-medium text-[#93c5fd] underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-white"
         >
           ICSI Treatment
         </Link>
@@ -100,14 +100,14 @@ const rightFaqs: FaqItem[] = [
         and realistic counselling. See also{" "}
         <Link
           href="/best-pcos-prod-treatment-centre-in-noida"
-          className="font-medium text-[#93c5fd] underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-white"
         >
           PCOS treatment
         </Link>{" "}
         and{" "}
         <Link
           href="/best-low-amh-treatment-in-noida"
-          className="font-medium text-[#93c5fd] underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-white"
         >
           Low AMH care
         </Link>

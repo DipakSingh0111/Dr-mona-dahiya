@@ -20,8 +20,8 @@ const reviews: JourneyReview[] = [
     author: "Vinesh",
     source: "Patient review",
     initial: "V",
-    avatarBg: "bg-[#e83e74]",
-    accentBorder: "hover:border-[#e83e74]/50",
+    avatarBg: "bg-rose",
+    accentBorder: "hover:border-rose/50",
   },
   {
     title: "Best IVF Success Rates.",
@@ -29,24 +29,24 @@ const reviews: JourneyReview[] = [
     author: "Gaurav Baghel",
     source: "Patient review",
     initial: "G",
-    avatarBg: "bg-[#0047ca]",
-    accentBorder: "hover:border-[#0047ca]/50",
+    avatarBg: "bg-blue",
+    accentBorder: "hover:border-blue/50",
   },
   {
     body: "Dr. Dahiya doesn't believe in a general approach for fertility treatment. She analyzed our case deeply and designed a tailored IVF plan that worked in the first IVF cycle. Her dedication makes her the Best Fertility Doctor in Ghaziabad. Thank you for our precious blessing and wish you infinite success.",
     author: "Arbaj khan",
     source: "Google patient review",
     initial: "A",
-    avatarBg: "bg-[#c53658]",
-    accentBorder: "hover:border-[#c53658]/50",
+    avatarBg: "bg-rose",
+    accentBorder: "hover:border-rose/50",
   },
   {
     body: "Dr Mona is a really good fertility doctor in Delhi. She has a very patient focussed approach which is unheard of these days with such famous doctors in Delhi. She came across as very genuine in every consultation. Her treatment was precise and it has resulted in a positive result in the First IVF Cycle.",
     author: "Brahm Prakash",
     source: "Google patient review",
     initial: "B",
-    avatarBg: "bg-[#0047ca]",
-    accentBorder: "hover:border-[#0047ca]/50",
+    avatarBg: "bg-blue",
+    accentBorder: "hover:border-blue/50",
   },
   {
     title: "Incredibly Talented IVF Doctor",
@@ -54,16 +54,16 @@ const reviews: JourneyReview[] = [
     author: "Udaryaj Saroj",
     source: "Patient review",
     initial: "U",
-    avatarBg: "bg-[#e83e74]",
-    accentBorder: "hover:border-[#e83e74]/50",
+    avatarBg: "bg-rose",
+    accentBorder: "hover:border-rose/50",
   },
   {
     body: "We got excellent fertility counselling at her IVF centre in noida.we became pregnant in the 1st IVF cycle.",
     author: "Aman goswami123",
     source: "Google patient review",
     initial: "A",
-    avatarBg: "bg-[#c53658]",
-    accentBorder: "hover:border-[#c53658]/50",
+    avatarBg: "bg-rose",
+    accentBorder: "hover:border-rose/50",
   },
 ];
 
@@ -81,15 +81,15 @@ export default function IVFJourneys() {
 
       <div className="relative mx-auto w-full max-w-[1440px]">
         <Reveal className="mb-8 sm:mb-10">
-          <span className="text-[12px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:text-[13px]">
+          <span className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
             Patient stories
           </span>
 
-          <h2 className="font-display mt-2 text-[2rem] leading-[1.18] font-bold tracking-tight text-[#0f2438] sm:text-[2.5rem] lg:text-[2.75rem]">
+          <h2 className="font-display mt-2 text-[2rem] leading-[1.18] font-bold tracking-tight text-black sm:text-[2.5rem] lg:text-[2.75rem]">
             IVF Journeys in Patients&apos; Own Words
           </h2>
 
-          <p className="mt-2 text-[14px] text-slate-600 sm:text-[15px]">
+          <p className="mt-2 text-[14px] text-black sm:text-[15px]">
             Reviews from couples who completed IVF or ICSI with Dr. Mona Dahiya.
           </p>
         </Reveal>
@@ -105,27 +105,27 @@ export default function IVFJourneys() {
               >
                 <div>
                   {rev.title ? (
-                    <h3 className="font-display mb-3 text-[16px] font-bold text-[#0f2438]">
+                    <h3 className="font-display mb-3 text-[16px] font-bold text-black">
                       {rev.title}
                     </h3>
                   ) : null}
 
-                  <p className="text-[13px] leading-relaxed text-slate-600 sm:text-[13.5px]">
+                  <p className="text-[13px] leading-relaxed text-black sm:text-[13.5px]">
                     {rev.body}
                   </p>
                 </div>
 
                 <div className="mt-6 flex items-center gap-3 border-t border-slate-100 pt-4">
                   <div
-                    className={`flex size-9 shrink-0 items-center justify-center rounded-full ${rev.avatarBg} text-[13px] font-bold text-white shadow-xs`}
+                    className={`flex size-9 shrink-0 items-center justify-center rounded-full ${rev.avatarBg} text-[13px] font-bold text-black shadow-xs`}
                   >
                     {rev.initial}
                   </div>
                   <div>
-                    <h4 className="text-[14px] font-bold text-[#0f2438]">
+                    <h4 className="text-[14px] font-bold text-black">
                       {rev.author}
                     </h4>
-                    <p className="text-[12px] text-slate-500">{rev.source}</p>
+                    <p className="text-[12px] text-black">{rev.source}</p>
                   </div>
                 </div>
               </article>
@@ -136,7 +136,7 @@ export default function IVFJourneys() {
         <div className="mt-9 sm:mt-11">
           <Link
             href="/about-mona-dahiya#reviews"
-            className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-7 py-3 text-[13.5px] font-semibold text-slate-800 shadow-sm transition-all duration-200 hover:border-[#e83e74] hover:bg-[#e83e74] hover:text-white hover:shadow-lg hover:shadow-[#e83e74]/25 active:scale-98"
+            className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-7 py-3 text-[13.5px] font-semibold text-slate-800 shadow-sm transition-all duration-200 hover:border-rose hover:bg-rose-dark hover:text-white hover:shadow-lg hover:shadow-rose/25 active:scale-98"
           >
             Read All Patient Reviews
           </Link>

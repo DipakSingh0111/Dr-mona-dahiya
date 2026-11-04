@@ -23,63 +23,62 @@ export const metadata: Metadata = {
 
 export default function BestIuiDoctorInGhaziabadPage() {
   return (
-    <main className="flex min-h-screen flex-col bg-[#061532]">
-      {/* 1. Hero: IUI Treatment in Ghaziabad (Image 1) */}
+    <main className="flex min-h-screen flex-col bg-pink">
+      {/* 1. Hero: IUI Treatment in Ghaziabad */}
       <IuiGhaziabadHero />
 
-      {/* 2. Medical Council Registration Numbers (Image 2 Top) */}
+      {/* 2. Medical Council Registration Numbers */}
       <SectionReveal>
-        <MedicalRegistration dark={true} />
+        <MedicalRegistration />
       </SectionReveal>
 
-      {/* 3. IUI in simple words (Image 2 Bottom) */}
+      {/* 3. IUI in simple words */}
       <SectionReveal delay={0.04}>
         <IuiGhaziabadAbout />
       </SectionReveal>
 
-      {/* 4. Doctor you will meet: Dr. Mona Dahiya (Image 3 Top) */}
+      {/* 4. Doctor you will meet: Dr. Mona Dahiya */}
       <SectionReveal delay={0.04}>
         <IuiGhaziabadDoctorGlance />
       </SectionReveal>
 
-      {/* 5. Why choose Dr. Mona Dahiya for IUI (Image 3 Bottom) */}
+      {/* 5. Why choose Dr. Mona Dahiya for IUI */}
       <SectionReveal delay={0.04}>
         <IuiGhaziabadWhy />
       </SectionReveal>
 
-      {/* 6. Tests you need to do before starting IUI (Image 4 Top) */}
+      {/* 6. Tests you need to do before starting IUI */}
       <SectionReveal delay={0.04}>
         <IuiGhaziabadTests />
       </SectionReveal>
 
-      {/* 7. Steps involved in doing IUI (Image 4 Bottom) */}
+      {/* 7. Steps involved in doing IUI */}
       <SectionReveal delay={0.04}>
         <IuiGhaziabadSteps />
       </SectionReveal>
 
-      {/* 8. What is the cost of IUI in Ghaziabad? (Image 5 Top) */}
+      {/* 8. What is the cost of IUI in Ghaziabad? */}
       <SectionReveal delay={0.04}>
         <IuiGhaziabadCost />
       </SectionReveal>
 
-      {/* 9. Consult Dr Mona in Ghaziabad (Image 5 Bottom) */}
+      {/* 9. Consult Dr Mona in Ghaziabad */}
       <SectionReveal delay={0.04}>
         <IuiGhaziabadLocation />
       </SectionReveal>
 
-      {/* 10. Questions about IUI in Ghaziabad (Image 6) */}
+      {/* 10. Questions about IUI in Ghaziabad */}
       <SectionReveal delay={0.04}>
         <IuiGhaziabadFaq />
       </SectionReveal>
 
-      {/* 11. Begin your conception journey / Request an appointment (Image 7 Top) */}
+      {/* 11. Begin your conception journey / Request an appointment */}
       <SectionReveal delay={0.04}>
         <IuiGhaziabadConsultation />
       </SectionReveal>
 
-      {/* 12. Take your first step towards parenthood CTA banner (Image 7 Bottom) */}
+      {/* 12. Take your first step towards parenthood CTA banner */}
       <AboutParenthoodCta />
     </main>
   );
 }
-

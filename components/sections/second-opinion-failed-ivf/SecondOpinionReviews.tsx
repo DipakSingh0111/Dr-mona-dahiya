@@ -13,7 +13,7 @@ export default function SecondOpinionReviews() {
       author: "Sachin Upadhyay",
       source: "Patient review",
       initial: "S",
-      color: "bg-[#e83e74]",
+      color: "bg-rose",
     },
     {
       title: "",
@@ -22,7 +22,7 @@ export default function SecondOpinionReviews() {
       author: "Ashok Yadav",
       source: "Google patient review",
       initial: "A",
-      color: "bg-[#0047ca]",
+      color: "bg-blue",
     },
     {
       title: "",
@@ -31,7 +31,7 @@ export default function SecondOpinionReviews() {
       author: "Anand Kumar",
       source: "Google patient review",
       initial: "A",
-      color: "bg-[#0d9488]",
+      color: "bg-blue",
     },
   ];
 
@@ -39,13 +39,13 @@ export default function SecondOpinionReviews() {
     <section id="patient-reviews" className="relative overflow-hidden bg-white px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
       <div className="relative mx-auto w-full max-w-[1440px]">
         <Reveal className="mb-6 sm:mb-8">
-          <p className="text-[12px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:text-[13px]">
+          <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
             Patient reviews
           </p>
           <h2 className="font-serif mt-1 text-[1.65rem] leading-[1.2] font-normal tracking-tight text-slate-900 sm:text-[2.1rem] lg:text-[2.35rem]">
             What Patients Say About Dr. Mona
           </h2>
-          <p className="mt-2 text-[14px] leading-relaxed text-slate-600 sm:text-[15px]">
+          <p className="mt-2 text-[14px] leading-relaxed text-black sm:text-[15px]">
             Individual experiences in patients&apos; own words.
           </p>
         </Reveal>
@@ -56,7 +56,7 @@ export default function SecondOpinionReviews() {
         >
           {reviews.map((r, idx) => (
             <StaggerItem key={idx}>
-              <div className="flex h-full flex-col justify-between rounded-[20px] border border-slate-200/90 bg-gradient-to-br from-slate-50/60 to-white p-6 shadow-[0_4px_18px_rgba(0,20,60,0.03)] transition-all duration-300 hover:-translate-y-1 hover:border-[#0047ca]/40 hover:shadow-[0_12px_28px_rgba(0,30,80,0.08)]">
+              <div className="flex h-full flex-col justify-between rounded-[20px] border border-slate-200/90 bg-gradient-to-br from-slate-50/60 to-white p-6 shadow-[0_4px_18px_rgba(0,20,60,0.03)] transition-all duration-300 hover:-translate-y-1 hover:border-blue/40 hover:shadow-[0_12px_28px_rgba(0,30,80,0.08)]">
                 <div>
                   <div className="flex items-center gap-1 text-amber-400">
                     {[...Array(5)].map((_, i) => (
@@ -70,14 +70,14 @@ export default function SecondOpinionReviews() {
                     </h3>
                   )}
 
-                  <p className="mt-3 text-[13.5px] leading-relaxed text-slate-600">
+                  <p className="mt-3 text-[13.5px] leading-relaxed text-black">
                     &ldquo;{r.quote}&rdquo;
                   </p>
                 </div>
 
                 <div className="mt-5 flex items-center gap-3 pt-4 border-t border-slate-100">
                   <span
-                    className={`inline-flex size-9 shrink-0 items-center justify-center rounded-full text-[13px] font-bold text-white shadow-xs ${r.color}`}
+                    className={`inline-flex size-9 shrink-0 items-center justify-center rounded-full text-[13px] font-bold text-black shadow-xs ${r.color}`}
                   >
                     {r.initial}
                   </span>
@@ -85,7 +85,7 @@ export default function SecondOpinionReviews() {
                     <h4 className="text-[13.5px] font-bold text-slate-900">
                       {r.author}
                     </h4>
-                    <p className="text-[11.5px] text-slate-500">{r.source}</p>
+                    <p className="text-[11.5px] text-black">{r.source}</p>
                   </div>
                 </div>
               </div>
@@ -96,7 +96,7 @@ export default function SecondOpinionReviews() {
         <div className="mt-8">
           <Link
             href="/patient-reviews"
-            className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-2.5 text-[13.5px] font-semibold text-slate-800 transition-all hover:border-[#0047ca] hover:bg-[#0047ca] hover:text-white"
+            className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-2.5 text-[13.5px] font-semibold text-slate-800 transition-all hover:border-blue hover:bg-blue hover:text-white"
           >
             Read All Patient Reviews
           </Link>

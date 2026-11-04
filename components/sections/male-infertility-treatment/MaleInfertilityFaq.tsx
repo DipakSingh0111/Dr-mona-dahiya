@@ -68,7 +68,7 @@ const rightFaqs: FaqItem[] = [
         Yes. A 30-minute online consultation costs ₹1,000 in India or US$25 abroad. See{" "}
         <a
           href="#book-consultation"
-          className="font-medium text-[#93c5fd] underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-white"
         >
           Online Consultation
         </a>

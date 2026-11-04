@@ -49,16 +49,16 @@ export default function AzoospermiaIndications() {
         >
           {indications.map((item) => (
             <StaggerItem key={item.number}>
-              <div className="relative flex h-full flex-col rounded-2xl border border-[#e83e74]/40 bg-gradient-to-b from-[#141b36] to-[#0a1024] p-5 shadow-[0_0_24px_rgba(232,62,116,0.12)] transition-all duration-300 hover:-translate-y-1 hover:border-[#e83e74]/70 sm:p-6">
+              <div className="relative flex h-full flex-col rounded-2xl border border-rose/40 bg-gradient-to-b from-white to-[#fff8fa] p-5 shadow-[0_8px_24px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-rose/70 sm:p-6">
                 <div className="flex items-center gap-3">
-                  <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-[#e83e74] text-[15px] font-bold text-white shadow-[0_2px_8px_rgba(232,62,116,0.4)]">
+                  <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-rose text-[15px] font-bold text-white shadow-[0_2px_8px_rgba(232,62,116,0.4)]">
                     {item.number}
                   </span>
-                  <h3 className="font-serif text-[1.05rem] font-semibold text-white sm:text-[1.12rem]">
+                  <h3 className="font-serif text-[1.05rem] font-semibold text-black sm:text-[1.12rem]">
                     {item.title}
                   </h3>
                 </div>
-                <p className="mt-3.5 text-[13px] leading-relaxed text-slate-300 sm:text-[14px]">
+                <p className="mt-3.5 text-[13px] leading-relaxed text-black sm:text-[14px]">
                   {item.description}
                 </p>
               </div>

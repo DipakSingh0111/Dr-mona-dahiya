@@ -41,7 +41,7 @@ const stages = [
         Eggs are fertilised using{" "}
         <Link
           href="/intracytoplasmic-sperm-injection-icsi-treatment"
-          className="font-medium text-[#93c5fd] underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-white"
         >
           ICSI
         </Link>{" "}
@@ -57,7 +57,7 @@ const stages = [
       <>
         <Link
           href="/embryo-cryopreservation"
-          className="font-medium text-[#93c5fd] underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-white"
         >
           Freeze all your embryos
         </Link>{" "}
@@ -89,12 +89,12 @@ export default function IntlProcess() {
       >
         {stages.map((stage) => (
           <StaggerItem key={stage.number} className="h-full">
-            <div className="flex h-full flex-col rounded-2xl border border-[#e83e74]/25 bg-[#091a3c]/75 p-5 shadow-[0_0_20px_rgba(232,62,116,0.08)] backdrop-blur-md transition-all duration-300 hover:border-[#e83e74]/45 hover:bg-[#0c224e] sm:p-6">
+            <div className="flex h-full flex-col rounded-2xl border border-rose/25 bg-white p-5 shadow-[0_0_20px_rgba(232,62,116,0.08)] backdrop-blur-md transition-all duration-300 hover:border-rose/45 hover:bg-[#fff0f5] sm:p-6">
               <div className="flex items-start gap-3">
-                <span className="flex size-7 shrink-0 items-center justify-center rounded-lg bg-[#e83e74] text-[13px] font-bold text-white shadow-[0_2px_10px_rgba(232,62,116,0.35)]">
+                <span className="flex size-7 shrink-0 items-center justify-center rounded-lg bg-rose text-[13px] font-bold text-white shadow-[0_2px_10px_rgba(232,62,116,0.35)]">
                   {stage.number}
                 </span>
-                <h3 className="text-[14.5px] font-bold leading-snug text-white sm:text-[15px]">
+                <h3 className="text-[14.5px] font-bold leading-snug text-black sm:text-[15px]">
                   {stage.title}
                 </h3>
               </div>
@@ -102,7 +102,7 @@ export default function IntlProcess() {
                 {stage.bullets.map((bullet, idx) => (
                   <li
                     key={idx}
-                    className="relative pl-4 text-[13px] leading-relaxed text-slate-300 before:absolute before:top-2 before:left-0 before:h-1.5 before:w-1.5 before:rounded-full before:bg-[#e83e74] sm:text-[13.5px]"
+                    className="relative pl-4 text-[13px] leading-relaxed text-black before:absolute before:top-2 before:left-0 before:h-1.5 before:w-1.5 before:rounded-full before:bg-rose sm:text-[13.5px]"
                   >
                     {bullet}
                   </li>

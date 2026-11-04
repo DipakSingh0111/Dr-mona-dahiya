@@ -29,7 +29,7 @@ const indications: {
         of embryo, endometrium and sperm DNA are checked. Read more here:{" "}
         <Link
           href="/recurrent-implantation-failure-rif"
-          className="font-medium text-[#93c5fd] underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-white"
         >
           Recurrent implantation failure
         </Link>
@@ -46,21 +46,21 @@ const indications: {
         fragmentation or no sperms in the ejaculate. Read more about{" "}
         <Link
           href="/low-sperm-count-oligospermia"
-          className="font-medium text-[#93c5fd] underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-white"
         >
           Low sperm count
         </Link>
         ,{" "}
         <Link
           href="/azoospermia-treatment"
-          className="font-medium text-[#93c5fd] underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-white"
         >
           Azoospermia
         </Link>{" "}
         and{" "}
         <Link
           href="/surgical-sperm-retrieval-tesa-pesa"
-          className="font-medium text-[#93c5fd] underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-white"
         >
           Surgical Sperm Extraction
         </Link>
@@ -82,14 +82,14 @@ const indications: {
         Ultrasound and sometimes{" "}
         <Link
           href="/hysteroscopy-treatment"
-          className="font-medium text-[#93c5fd] underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-white"
         >
           hysteroscopy
         </Link>{" "}
         / laparoscopy is performed before treatment. Read more about{" "}
         <Link
           href="/fallopian-tube-blockage-treatment"
-          className="font-medium text-[#93c5fd] underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-white"
         >
           Blocked Fallopian tubes
         </Link>
@@ -105,7 +105,7 @@ const indications: {
         You may need to act faster and plan ahead with{" "}
         <Link
           href="/embryo-cryopreservation"
-          className="font-medium text-[#93c5fd] underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-white"
         >
           freezing embryos
         </Link>

@@ -25,16 +25,16 @@ const costFactors = [
 
 export default function BestIvfDelhiCost() {
   return (
-    <section className="relative overflow-hidden bg-[#061532] px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
+    <section className="relative overflow-hidden bg-pink px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
       <div className="mx-auto w-full max-w-[1440px]">
         <Reveal variant="fadeUp">
-          <p className="text-[12px] font-semibold tracking-wide text-[#e83e74] sm:text-[13px]">
+          <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">
             Transparency
           </p>
-          <h2 className="font-serif mt-1 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-white sm:text-[2.2rem] lg:text-[2.45rem]">
+          <h2 className="font-serif mt-1 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-black sm:text-[2.2rem] lg:text-[2.45rem]">
             Cost of IVF in Delhi
           </h2>
-          <p className="mt-2 text-[14px] leading-relaxed text-slate-300 sm:text-[15px]">
+          <p className="mt-2 text-[14px] leading-relaxed text-black sm:text-[15px]">
             IVF can cost between 1.5 Lakhs to 2.5 Lakhs at Dr. Mona Dahiya. It
             will vary based on drugs, lab work and transfers needed.
           </p>
@@ -46,17 +46,17 @@ export default function BestIvfDelhiCost() {
         >
           {costFactors.map((item) => (
             <StaggerItem key={item.title} className="h-full">
-              <div className="relative flex h-full flex-col justify-between rounded-2xl border border-[#e83e74]/35 bg-gradient-to-b from-[#141b36] to-[#0a1024] p-5 shadow-[0_0_24px_rgba(232,62,116,0.12)] transition-all duration-300 hover:-translate-y-1 hover:border-[#e83e74]/65 hover:shadow-[0_0_32px_rgba(232,62,116,0.22)] sm:p-6">
+              <div className="relative flex h-full flex-col justify-between rounded-2xl border border-rose/35 bg-gradient-to-b from-white to-[#fff8fa] p-5 shadow-[0_8px_24px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-rose/65 hover:shadow-[0_0_32px_rgba(232,62,116,0.22)] sm:p-6">
                 <div>
                   <div className="flex items-center gap-3">
-                    <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-[#e83e74] text-white shadow-[0_2px_8px_rgba(232,62,116,0.4)]">
+                    <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-rose text-white shadow-[0_2px_8px_rgba(232,62,116,0.4)]">
                       <FaCheck className="size-3.5" />
                     </span>
-                    <h3 className="font-serif text-[1.05rem] leading-snug font-semibold text-white">
+                    <h3 className="font-serif text-[1.05rem] leading-snug font-semibold text-black">
                       {item.title}
                     </h3>
                   </div>
-                  <p className="mt-4 text-[13px] leading-relaxed text-slate-300 sm:text-[13.5px]">
+                  <p className="mt-4 text-[13px] leading-relaxed text-black sm:text-[13.5px]">
                     {item.description}
                   </p>
                 </div>

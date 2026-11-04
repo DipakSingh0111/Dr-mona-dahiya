@@ -102,17 +102,17 @@ export default function FetProtocolWhyAndCase() {
           </div>
 
           <Reveal variant="fadeUp" delay={0.15} className="mt-6">
-            <div className="rounded-xl border border-white/10 bg-[#081734] px-5 py-4 text-[12.5px] leading-relaxed text-slate-300 sm:text-[13px]">
+            <div className="rounded-xl border border-[#fde2ec] bg-white px-5 py-4 text-[12.5px] leading-relaxed text-ink sm:text-[13px]">
               <p>
-                <strong className="text-white">Delhi</strong> · Building Number 41, First
+                <strong className="text-ink">Delhi</strong> · Building Number 41, First
                 Floor, Ring Road, Block Q, Lajpat Nagar IV, Lajpat Nagar, New Delhi 110024
               </p>
               <p className="mt-1.5">
-                <strong className="text-white">Noida</strong> · 3rd Floor, K-06, above
+                <strong className="text-ink">Noida</strong> · 3rd Floor, K-06, above
                 FirstCry, Baraula, Sector 49, Noida, Uttar Pradesh 201301
               </p>
               <p className="mt-1.5">
-                <strong className="text-white">Ghaziabad</strong> · 2nd Floor, RDC, C-53A,
+                <strong className="text-ink">Ghaziabad</strong> · 2nd Floor, RDC, C-53A,
                 near Bikanerwala, Sector 15, Sector 10, Raj Nagar, Ghaziabad, Uttar
                 Pradesh 201002
               </p>
@@ -127,14 +127,14 @@ export default function FetProtocolWhyAndCase() {
         />
 
           <Reveal variant="fadeUp" delay={0.06} className="mt-6">
-            <div className="rounded-2xl border border-[#e83e74]/35 bg-gradient-to-r from-[#141b36] via-[#0e223d] to-[#0a1024] p-6 shadow-[0_0_24px_rgba(232,62,116,0.12)] sm:p-7">
-              <p className="text-[14px] leading-relaxed font-medium text-slate-100 sm:text-[15.5px]">
+            <div className="rounded-2xl border border-[#fde2ec] bg-white p-6 shadow-[0_8px_24px_rgba(232,62,116,0.06)] sm:p-7">
+              <p className="text-[14px] leading-relaxed font-medium text-ink sm:text-[15.5px]">
                 A patient with two failed fresh transfers and a borderline lining moved to
                 a medicated FET after her lining was optimised. A single, well-graded
                 blastocyst was transferred in the next cycle and led to a clinical
                 pregnancy.
               </p>
-              <p className="mt-3 text-[12px] text-slate-400">
+              <p className="mt-3 text-[12px] text-ink/65">
                 Details changed to protect patient privacy. Individual results vary.
               </p>
             </div>

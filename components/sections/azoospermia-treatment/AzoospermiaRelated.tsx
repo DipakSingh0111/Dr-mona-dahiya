@@ -46,17 +46,17 @@ export default function AzoospermiaRelated() {
             <StaggerItem key={item.title}>
               <Link
                 href={item.href}
-                className="group relative flex items-center justify-between gap-3 rounded-xl border border-white/10 bg-[#091a3c]/70 p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-[#0047ca]/60 hover:bg-[#0c224e]/85 sm:p-5"
+                className="group relative flex items-center justify-between gap-3 rounded-xl border border-[#fde2ec] bg-white p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-blue/60 hover:bg-[#fff0f5] sm:p-5"
               >
                 <div className="min-w-0">
-                  <h3 className="font-serif text-[1rem] font-semibold text-white transition-colors group-hover:text-sky-300 sm:text-[1.08rem]">
+                  <h3 className="font-serif text-[1rem] font-semibold text-black transition-colors group-hover:text-sky-300 sm:text-[1.08rem]">
                     {item.title}
                   </h3>
-                  <p className="mt-1 text-[12.5px] text-slate-400 group-hover:text-slate-300">
+                  <p className="mt-1 text-[12.5px] text-black group-hover:text-black">
                     {item.description}
                   </p>
                 </div>
-                <span className="flex size-8 shrink-0 items-center justify-center rounded-full text-[#e83e74] transition-transform duration-200 group-hover:translate-x-1 group-hover:text-[#f9a8d4]">
+                <span className="flex size-8 shrink-0 items-center justify-center rounded-full text-rose transition-transform duration-200 group-hover:translate-x-1 group-hover:text-rose">
                   <FaArrowRight className="size-3.5" />
                 </span>
               </Link>

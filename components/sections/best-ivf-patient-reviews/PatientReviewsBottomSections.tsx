@@ -80,8 +80,8 @@ export default function PatientReviewsBottomSections() {
         key={faq.idx}
         className={`group flex flex-col justify-start rounded-2xl border transition-[border-color,background-color,box-shadow] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
           isOpen
-            ? "border-[#e83e74]/50 bg-[#0b1f48] shadow-[0_8px_24px_rgba(0,0,0,0.25)] ring-1 ring-[#e83e74]/20"
-            : "border-white/10 bg-[#0b1f48]/70 hover:border-white/20 hover:bg-[#0b1f48]"
+            ? "border-rose/40 bg-white shadow-[0_8px_24px_rgba(232,62,116,0.1)] ring-1 ring-rose/20"
+            : "border-[#fde2ec] bg-white hover:border-[#fbcfe0] hover:bg-pink"
         }`}
       >
         <button
@@ -92,7 +92,7 @@ export default function PatientReviewsBottomSections() {
         >
           <h3
             className={`text-[14.5px] font-bold transition-colors duration-300 ${
-              isOpen ? "text-[#e83e74]" : "text-white group-hover:text-[#e83e74]"
+              isOpen ? "text-rose" : "text-black group-hover:text-rose"
             }`}
           >
             {faq.item.question}
@@ -100,8 +100,8 @@ export default function PatientReviewsBottomSections() {
           <span
             className={`flex size-7 shrink-0 items-center justify-center rounded-full border transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
               isOpen
-                ? "rotate-180 border-[#e83e74] bg-[#e83e74] text-white shadow-sm"
-                : "border-white/15 bg-white/5 text-white/70 group-hover:border-white/30 group-hover:text-white"
+                ? "rotate-180 border-rose bg-rose text-white shadow-sm"
+                : "border-[#fde2ec] bg-white/5 text-black group-hover:border-[#fbcfe0] group-hover:text-rose"
             }`}
           >
             <FaChevronDown className="size-2.5 transition-transform" />
@@ -114,7 +114,7 @@ export default function PatientReviewsBottomSections() {
           }`}
         >
           <div className="overflow-hidden">
-            <div className="border-t border-white/10 px-5 pt-3.5 pb-5 text-[13px] leading-relaxed text-white/75">
+            <div className="border-t border-[#fde2ec] px-5 pt-3.5 pb-5 text-[13px] leading-relaxed text-black">
               {faq.item.answer}
             </div>
           </div>
@@ -124,7 +124,7 @@ export default function PatientReviewsBottomSections() {
   };
 
   return (
-    <div className="flex flex-col bg-[#061532] text-white">
+    <div className="flex flex-col bg-pink text-ink">
       <ClinicsAppointmentCards
         eyebrow="Visit Dr. Mona"
         title="Book a consultation at a clinic near you"
@@ -134,10 +134,10 @@ export default function PatientReviewsBottomSections() {
       <section className="px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
         <div className="mx-auto w-full max-w-[1440px]">
           <Reveal className="mb-6">
-            <span className="text-[12px] font-semibold tracking-wider text-[#e83e74] uppercase">
+            <span className="text-[12px] font-semibold tracking-wider text-rose uppercase">
               Keep reading
             </span>
-            <h2 className="font-serif mt-1 text-[2.2rem] leading-[1.18] font-normal tracking-tight text-white sm:text-[2.6rem] lg:text-[2.9rem]">
+            <h2 className="font-serif mt-1 text-[2.2rem] leading-[1.18] font-normal tracking-tight text-black sm:text-[2.6rem] lg:text-[2.9rem]">
               Related pages
             </h2>
           </Reveal>
@@ -147,18 +147,18 @@ export default function PatientReviewsBottomSections() {
               <Link
                 key={page.title}
                 href={page.href}
-                className="group relative flex flex-col justify-between rounded-2xl border border-white/10 bg-[#0b1f48]/75 p-5 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-[#e83e74]/50 hover:bg-[#0b1f48]"
+                className="group relative flex flex-col justify-between rounded-2xl border border-[#fde2ec] bg-white p-5 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-rose/50 hover:bg-pink"
               >
                 <div>
-                  <h3 className="font-bold text-[15px] text-white transition-colors group-hover:text-[#e83e74]">
+                  <h3 className="font-bold text-[15px] text-black transition-colors group-hover:text-rose">
                     {page.title}
                   </h3>
-                  <p className="mt-1 text-[12.5px] text-white/70">
+                  <p className="mt-1 text-[12.5px] text-black">
                     {page.description}
                   </p>
                 </div>
                 <div className="mt-4 flex items-center justify-end">
-                  <span className="text-[#e83e74] text-[13px] opacity-75 group-hover:opacity-100 group-hover:translate-x-1 transition-all">
+                  <span className="text-rose text-[13px] opacity-75 group-hover:opacity-100 group-hover:translate-x-1 transition-all">
                     →
                   </span>
                 </div>
@@ -171,10 +171,10 @@ export default function PatientReviewsBottomSections() {
       <section className="px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
         <div className="mx-auto w-full max-w-[1440px]">
           <Reveal className="mb-6">
-            <span className="text-[12px] font-semibold tracking-wider text-[#e83e74] uppercase">
+            <span className="text-[12px] font-semibold tracking-wider text-rose uppercase">
               FAQ
             </span>
-            <h2 className="font-serif mt-1 text-[2.2rem] leading-[1.18] font-normal tracking-tight text-white sm:text-[2.6rem] lg:text-[2.9rem]">
+            <h2 className="font-serif mt-1 text-[2.2rem] leading-[1.18] font-normal tracking-tight text-black sm:text-[2.6rem] lg:text-[2.9rem]">
               Review Info
             </h2>
           </Reveal>

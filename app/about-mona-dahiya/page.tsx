@@ -30,7 +30,7 @@ export default function AboutPage() {
 
       {/* Medical Registration (DMC-7795, MCI-09/6820, UPMC-110541) */}
       <SectionReveal>
-        <MedicalRegistration dark={true} />
+        <MedicalRegistration />
       </SectionReveal>
 
       {/* Doctor-Led Fertility Care & "Dr. Mona Dahiya at a glance" Stats */}
@@ -74,10 +74,8 @@ export default function AboutPage() {
         />
       </SectionReveal>
 
-      {/* 5. Take your first step towards parenthood CTA */}
-      <SectionReveal delay={0.04}>
-        <AboutParenthoodCta />
-      </SectionReveal>
+      {/* 5. Parenthood CTA banner */}
+      <AboutParenthoodCta />
     </main>
   );
 }

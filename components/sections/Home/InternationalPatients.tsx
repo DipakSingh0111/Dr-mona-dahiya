@@ -40,7 +40,7 @@ export default function InternationalPatients() {
       className="relative overflow-hidden bg-white px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8"
     >
       <div className="mx-auto w-full max-w-[1440px]">
-        <div className="relative isolate overflow-hidden rounded-[26px] bg-[#0c241f] shadow-xl sm:rounded-[32px]">
+        <div className="relative isolate overflow-hidden rounded-[26px] bg-navy shadow-xl sm:rounded-[32px]">
           <div className="absolute inset-0">
             <Image
               src={data.image}
@@ -81,8 +81,8 @@ export default function InternationalPatients() {
             className="relative z-10 px-6 py-10 sm:px-9 sm:py-12 lg:max-w-[58%] lg:px-11 lg:py-14 xl:px-12"
           >
             <div className="mb-4 flex items-center gap-2">
-              <span className="size-1.5 rounded-full bg-[#e83e74]" />
-              <span className="text-[11px] font-bold tracking-[0.2em] text-[#e83e74] uppercase sm:text-xs">
+              <span className="size-1.5 rounded-full bg-rose" />
+              <span className="text-[11px] font-bold tracking-[0.2em] text-rose uppercase sm:text-xs">
                 {data.badge}
               </span>
             </div>
@@ -91,7 +91,7 @@ export default function InternationalPatients() {
               {data.title}
             </h2>
 
-            <p className="mt-3.5 max-w-lg text-[13px] leading-relaxed text-white/80 sm:text-[14.5px]">
+            <p className="mt-3.5 max-w-lg text-[13px] leading-relaxed text-white/75 sm:text-[14.5px]">
               {data.subtitle}
             </p>
 
@@ -113,13 +113,13 @@ export default function InternationalPatients() {
             <Reveal delay={0.2} className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-nowrap sm:items-center">
               <a
                 href={data.primaryCta.href}
-                className="inline-flex shrink-0 items-center justify-center rounded-full bg-white px-6 py-3.5 text-[13.5px] font-semibold whitespace-nowrap text-[#0c241f] transition hover:bg-white/90 sm:text-[14px]"
+                className="inline-flex shrink-0 items-center justify-center rounded-full bg-white px-6 py-3.5 text-[13.5px] font-semibold whitespace-nowrap text-navy transition hover:bg-white/90 sm:text-[14px]"
               >
                 {data.primaryCta.label}
               </a>
               <a
                 href={data.secondaryCta.href}
-                className="inline-flex shrink-0 items-center justify-center gap-2.5 rounded-full bg-[#2563eb] px-6 py-3.5 text-[13.5px] font-semibold whitespace-nowrap text-white transition hover:bg-[#1d4ed8] sm:text-[14px]"
+                className="inline-flex shrink-0 items-center justify-center gap-2.5 rounded-full bg-blue px-6 py-3.5 text-[13.5px] font-semibold whitespace-nowrap text-white transition hover:bg-blue-dark sm:text-[14px]"
               >
                 <FaVideo className="size-3.5 shrink-0" />
                 {data.secondaryCta.label}

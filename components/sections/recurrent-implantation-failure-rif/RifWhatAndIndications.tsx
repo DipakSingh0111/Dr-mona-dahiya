@@ -57,16 +57,16 @@ export default function RifWhatAndIndications() {
 
           {/* Single large card from screenshot */}
           <Reveal variant="fadeUp" delay={0.06} className="mt-6">
-            <div className="rounded-2xl border border-[#e83e74]/35 bg-gradient-to-r from-[#141b36] via-[#0e223d] to-[#0a1024] p-6 sm:p-7 shadow-[0_0_24px_rgba(232,62,116,0.12)]">
+            <div className="rounded-2xl border border-[#fde2ec] bg-white p-6 sm:p-7 shadow-[0_8px_24px_rgba(232,62,116,0.06)]">
               <div className="flex items-center gap-3">
-                <span className="flex size-7 shrink-0 items-center justify-center rounded-lg bg-[#e83e74] text-white shadow-[0_2px_8px_rgba(232,62,116,0.4)]">
+                <span className="flex size-7 shrink-0 items-center justify-center rounded-lg bg-rose text-white shadow-[0_2px_8px_rgba(232,62,116,0.4)]">
                   <FaCheck className="size-3" />
                 </span>
-                <h3 className="font-serif text-[1.05rem] font-semibold text-white sm:text-[1.12rem]">
+                <h3 className="font-serif text-[1.05rem] font-semibold text-black sm:text-[1.12rem]">
                   Recurrent Implantation Failure (RIF)
                 </h3>
               </div>
-              <p className="mt-4 text-[13.5px] leading-relaxed text-slate-200 sm:text-[14.5px]">
+              <p className="mt-4 text-[13.5px] leading-relaxed text-black sm:text-[14.5px]">
                 Recurrent Implantation Failure (RIF) is the failure to achieve pregnancy after transferring ≥2 top-grade blastocysts, affecting 10% to 15% of IVF patients. Roughly 50% of cases stem from embryonic chromosomal abnormalities—where PGT-A screening restores implantation rates to 65%–70%—while 25% to 30% involve a displaced implantation window (identified via ERA) or silent uterine issues like chronic endometritis and thin linings (&lt;7 mm).
               </p>
             </div>

@@ -72,7 +72,7 @@ export default function GalleryGrid() {
         >
           {galleryItems.map((item) => (
             <StaggerItem key={item.id} variant="scaleIn" className="h-full">
-              <article className="group relative flex h-full flex-col overflow-hidden rounded-[24px] border border-slate-200/90 bg-white shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#0047ca]/40 hover:shadow-xl">
+              <article className="group relative flex h-full flex-col overflow-hidden rounded-[24px] border border-slate-200/90 bg-white shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-blue/40 hover:shadow-xl">
                 {/* Image */}
                 <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-100">
                   <Image
@@ -88,10 +88,10 @@ export default function GalleryGrid() {
                 {/* Content */}
                 <div className="flex flex-1 flex-col justify-between p-5">
                   <div>
-                    <h3 className="font-display text-[15px] font-bold text-[#0f2438] transition-colors group-hover:text-[#0047ca] sm:text-[16px]">
+                    <h3 className="font-display text-[15px] font-bold text-black transition-colors group-hover:text-blue sm:text-[16px]">
                       {item.title}
                     </h3>
-                    <p className="mt-1.5 text-[12.5px] leading-relaxed text-[#64748b]">
+                    <p className="mt-1.5 text-[12.5px] leading-relaxed text-black">
                       {item.subtitle}
                     </p>
                   </div>

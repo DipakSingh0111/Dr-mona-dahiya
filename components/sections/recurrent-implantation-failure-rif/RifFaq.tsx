@@ -57,17 +57,17 @@ const leftFaqs: FaqItem[] = [
         </p>
         <ul className="space-y-2 pl-1">
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>Extended high-dose oral or transdermal estradiol priming with micronized vaginal sildenafil.</p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>
               <strong className="text-white">Intrauterine Platelet-Rich Plasma (PRP) infusions:</strong> Adds <strong className="text-white">1.5 to 2.5 mm of vascularized thickness</strong> within 48–72 hours via concentrated autologous growth factors.
             </p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>Diagnostic hysteroscopy to lyse intrauterine synechiae or basal scar tissue (Asherman&apos;s syndrome).</p>
           </li>
         </ul>
@@ -86,25 +86,25 @@ const rightFaqs: FaqItem[] = [
         </p>
         <ul className="space-y-2 pl-1">
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>
               <strong className="text-white">Genetic / Parental:</strong> High-resolution parental karyotyping for balanced translocations; PGT-A for remaining embryos.
             </p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>
               <strong className="text-white">Anatomical / Cavity:</strong> 3D pelvic ultrasound or diagnostic hysteroscopy to rule out polyps, septa, or intrauterine adhesions.
             </p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>
               <strong className="text-white">Endometrial &amp; Microbiome:</strong> CD138 biopsy for chronic endometritis, and the EndomeTRIO panel (ERA, EMMA for Lactobacillus balance, and ALICE for pathogens).
             </p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>
               <strong className="text-white">Systemic &amp; Male Factors:</strong> High-sensitivity Sperm DNA Fragmentation Index (DFI &gt;30% impairs blastocyst viability), alongside antiphospholipid and thrombophilia screenings.
             </p>
@@ -132,13 +132,13 @@ const rightFaqs: FaqItem[] = [
         </p>
         <ul className="space-y-2 pl-1">
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>
               <strong className="text-white">Thrombophilias (Factor V Leiden, Protein C/S deficiency, Antiphospholipid Syndrome - APLS):</strong> Micro-thrombi obstruct fragile spiral arterioles at the implantation site, starving the early trophoblast.
             </p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>
               <strong className="text-white">Elevated Uterine Natural Killer (uNK) Cells:</strong> In rare instances, hyperactive uNK cytotoxicity impedes trophoblast invasion.
             </p>

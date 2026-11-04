@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import {
@@ -25,7 +25,7 @@ const cardColorThemes = {
   pink: {
     border: "border-[#fbcfe0]",
     cardBg: "bg-gradient-to-br from-[#fff5f8] via-white to-[#ffe8f0]",
-    iconBg: "bg-gradient-to-br from-[#f85f8f] to-[#e6356e]",
+    iconBg: "bg-gradient-to-br from-rose to-rose-dark",
     iconShadow: "shadow-[0_8px_20px_rgba(248,95,143,0.35)]",
     numColor: "text-[#f8b4cd]",
     hoverGlow: "hover:shadow-[0_16px_36px_rgba(230,53,110,0.15)]",
@@ -136,16 +136,16 @@ export default function WhyChooseUs() {
       <div className="mx-auto w-full max-w-[1440px]">
         <header className="mb-7 text-center sm:mb-9">
           <div className="mb-3.5 inline-flex max-w-full items-center justify-center gap-2 sm:gap-3">
-            <span className="hidden h-[2px] w-8 shrink-0 rounded-full bg-[#e83e74] sm:inline-block" />
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#fff0f5] px-3.5 py-1.5 text-center text-[11.5px] font-semibold text-[#e83e74] sm:whitespace-nowrap sm:px-4 sm:text-sm">
-              <span className="size-2 shrink-0 rounded-full bg-[#e83e74]" />
+            <span className="hidden h-[2px] w-8 shrink-0 rounded-full bg-rose sm:inline-block" />
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#fff0f5] px-3.5 py-1.5 text-center text-[11.5px] font-semibold text-rose sm:whitespace-nowrap sm:px-4 sm:text-sm">
+              <span className="size-2 shrink-0 rounded-full bg-rose" />
               {badge}
             </span>
-            <span className="hidden h-[2px] w-8 shrink-0 rounded-full bg-[#e83e74] sm:inline-block" />
+            <span className="hidden h-[2px] w-8 shrink-0 rounded-full bg-rose sm:inline-block" />
           </div>
 
-          <h2 className="font-display text-2xl font-bold tracking-tight text-[#0f2438] sm:text-3xl lg:whitespace-nowrap lg:text-[2.35rem] xl:text-[3rem]">
-            {title} <span className="text-[#e83e74]">{titleAccent}</span>
+          <h2 className="font-display text-2xl font-bold tracking-tight text-ink sm:text-3xl lg:whitespace-nowrap lg:text-[2.35rem] xl:text-[3rem]">
+            {title} <span className="text-rose">{titleAccent}</span>
           </h2>
 
           {subtitle ? (
@@ -194,7 +194,7 @@ export default function WhyChooseUs() {
                 alt="Dr. Mona Dahiya - Fertility & IVF Specialist"
                 fill
                 priority
-                className="object-cover object-[center_12%] select-none"
+                className="object-cover object-top select-none"
                 sizes="(max-width: 1024px) 320px, 380px"
               />
             </div>

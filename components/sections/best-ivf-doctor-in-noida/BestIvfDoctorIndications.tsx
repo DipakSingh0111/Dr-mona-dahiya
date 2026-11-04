@@ -30,7 +30,7 @@ const indications: IndicationItem[] = [
         AMH level &lt;1.0 ng/mL. See{" "}
         <Link
           href="/frozen-embryo-transfer"
-          className="font-medium text-[#93c5fd] underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-white"
         >
           Frozen Embryo Transfer
         </Link>
@@ -46,21 +46,21 @@ const indications: IndicationItem[] = [
         Low sperm count/motility. See{" "}
         <Link
           href="/sperm-dna-fragmentation-test"
-          className="font-medium text-[#93c5fd] underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-white"
         >
           Sperm DNA Fragmentation treatment
         </Link>
         ,{" "}
         <Link
           href="/low-sperm-count-oligospermia"
-          className="font-medium text-[#93c5fd] underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-white"
         >
           Low sperm count treatment
         </Link>{" "}
         and{" "}
         <Link
           href="/azoospermia-treatment"
-          className="font-medium text-[#93c5fd] underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-white"
         >
           Azoospermia
         </Link>
@@ -76,7 +76,7 @@ const indications: IndicationItem[] = [
         See{" "}
         <Link
           href="/recurrent-implantation-failure-rif"
-          className="font-medium text-[#93c5fd] underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-white"
         >
           Recurrent implantation failure
         </Link>
@@ -93,14 +93,14 @@ const indications: IndicationItem[] = [
         See{" "}
         <Link
           href="/endometriosis-fertility-treatment"
-          className="font-medium text-[#93c5fd] underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-white"
         >
           Endometriosis treatment
         </Link>{" "}
         and{" "}
         <Link
           href="/fallopian-tube-blockage-treatment"
-          className="font-medium text-[#93c5fd] underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-white"
         >
           What is fallopian tube blockage?
         </Link>

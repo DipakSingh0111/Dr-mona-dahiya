@@ -45,13 +45,13 @@ const areas = [
 
 export default function BestIvfDelhiAreas() {
   return (
-    <section className="relative overflow-hidden bg-[#061532] px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
+    <section className="relative overflow-hidden bg-pink px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
       <div className="mx-auto w-full max-w-[1440px]">
         <Reveal variant="fadeUp">
-          <p className="text-[12px] font-semibold tracking-wide text-[#e83e74] sm:text-[13px]">
+          <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">
             Areas we serve
           </p>
-          <h2 className="font-serif mt-1 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-white sm:text-[2.2rem] lg:text-[2.45rem]">
+          <h2 className="font-serif mt-1 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-black sm:text-[2.2rem] lg:text-[2.45rem]">
             Nearby Areas Served in Delhi
           </h2>
         </Reveal>
@@ -64,17 +64,17 @@ export default function BestIvfDelhiAreas() {
             <StaggerItem key={area.title}>
               <Link
                 href="#book-consultation"
-                className="group relative flex min-h-[105px] flex-col justify-between rounded-2xl border border-white/10 bg-[#0a1f45]/80 p-5 backdrop-blur-md transition-all duration-200 hover:-translate-y-0.5 hover:border-[#e83e74]/40 hover:bg-[#0b1f48]"
+                className="group relative flex min-h-[105px] flex-col justify-between rounded-2xl border border-[#fde2ec] bg-white/80 p-5 backdrop-blur-md transition-all duration-200 hover:-translate-y-0.5 hover:border-rose/40 hover:bg-pink"
               >
                 <div>
-                  <h3 className="font-serif text-[15px] font-bold leading-snug text-white sm:text-[15.5px]">
+                  <h3 className="font-serif text-[15px] font-bold leading-snug text-black sm:text-[15.5px]">
                     {area.title}
                   </h3>
-                  <p className="mt-1.5 text-[12.5px] text-slate-400">
+                  <p className="mt-1.5 text-[12.5px] text-black">
                     {area.subtitle}
                   </p>
                 </div>
-                <span className="mt-3 self-end text-[#e83e74] transition-transform duration-200 group-hover:translate-x-1">
+                <span className="mt-3 self-end text-rose transition-transform duration-200 group-hover:translate-x-1">
                   <FaArrowRight className="size-3.5" />
                 </span>
               </Link>

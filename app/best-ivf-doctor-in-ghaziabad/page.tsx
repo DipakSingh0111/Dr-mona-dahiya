@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 
 export default function BestIvfDoctorInGhaziabadPage() {
   return (
-    <main className="flex min-h-screen flex-col bg-[#061532]">
+    <main className="flex min-h-screen flex-col bg-pink">
       <BestIvfGhaziabadHero />
 
       <SectionReveal>

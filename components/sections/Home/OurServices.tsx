@@ -38,14 +38,14 @@ type Theme = {
 const THEMES: Record<string, Theme> = {
   ivf: {
     bg: "#fff5f8",
-    color: "#e83e74",
+    color: "var(--rose)",
     glow: "rgba(232,62,116,0.18)",
     border: "#fcd5e2",
     badgeBg: "#ffe4ee",
   },
   iui: {
     bg: "#f4f8ff",
-    color: "#2563eb",
+    color: "var(--blue)",
     glow: "rgba(37,99,235,0.16)",
     border: "#d0e1fd",
     badgeBg: "#e3efff",
@@ -66,14 +66,14 @@ const THEMES: Record<string, Theme> = {
   },
   "male-infertility": {
     bg: "#f0fdf4",
-    color: "#0d9488",
+    color: "var(--blue)",
     glow: "rgba(13,148,136,0.16)",
     border: "#bbf7d0",
     badgeBg: "#ccfbf1",
   },
   "mini-ivf": {
     bg: "#fff5f8",
-    color: "#e83e74",
+    color: "var(--rose)",
     glow: "rgba(232,62,116,0.16)",
     border: "#fcd5e2",
     badgeBg: "#ffe4ee",
@@ -87,21 +87,21 @@ const THEMES: Record<string, Theme> = {
   },
   "low-amh": {
     bg: "#f0f9ff",
-    color: "#0284c7",
+    color: "var(--blue)",
     glow: "rgba(2,132,199,0.16)",
     border: "#bae6fd",
     badgeBg: "#e0f2fe",
   },
   cryopreservation: {
     bg: "#fff5f8",
-    color: "#e83e74",
+    color: "var(--rose)",
     glow: "rgba(232,62,116,0.16)",
     border: "#fcd5e2",
     badgeBg: "#ffe4ee",
   },
   era: {
     bg: "#f0fdfa",
-    color: "#0d9488",
+    color: "var(--blue)",
     glow: "rgba(13,148,136,0.16)",
     border: "#99f6e4",
     badgeBg: "#ccfbf1",
@@ -135,15 +135,15 @@ export default function OurServices() {
         <Reveal>
           <div className="mb-6 sm:mb-8">
             <div className="mb-4 flex flex-wrap items-center gap-2.5 sm:flex-nowrap sm:gap-3">
-              <span className="text-[11.5px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:whitespace-nowrap sm:text-[13px] sm:tracking-[0.16em]">
+              <span className="text-[11.5px] font-bold tracking-[0.14em] text-rose uppercase sm:whitespace-nowrap sm:text-[13px] sm:tracking-[0.16em]">
                 {eyebrow}
               </span>
-              <span className="h-[2px] w-8 shrink-0 rounded-full bg-[#e83e74] sm:w-10" />
+              <span className="h-[2px] w-8 shrink-0 rounded-full bg-rose sm:w-10" />
             </div>
 
             <h2 className="font-display text-[1.5rem] leading-[1.2] font-bold tracking-tight text-[#0f2038] sm:text-[1.85rem] lg:whitespace-nowrap lg:text-[2.1rem] xl:text-[2.6rem]">
               {titlePrefix}{" "}
-              <span className="text-[#e83e74]">
+              <span className="text-rose">
                 {titleLocations.join(" | ")}
               </span>
             </h2>
@@ -154,7 +154,7 @@ export default function OurServices() {
 
             <a
               href={cta.href}
-              className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#e83e74] px-4.5 py-2.5 text-[12.5px] font-semibold whitespace-nowrap text-white shadow-[0_10px_24px_rgba(232,62,116,0.28)] transition hover:bg-[#d12f63] xl:mt-6 xl:px-5 xl:py-3 xl:text-[13.5px]"
+              className="mt-5 inline-flex items-center gap-2 rounded-full bg-rose px-4.5 py-2.5 text-[12.5px] font-semibold whitespace-nowrap text-white shadow-[0_10px_24px_rgba(232,62,116,0.28)] transition hover:bg-[#d12f63] xl:mt-6 xl:px-5 xl:py-3 xl:text-[13.5px]"
             >
               {cta.label}
               <span className="inline-flex size-6 items-center justify-center rounded-full bg-white/20">

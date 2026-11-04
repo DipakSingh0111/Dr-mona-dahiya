@@ -40,11 +40,11 @@ export default function SpermFreezingCaseAndCost() {
           title="Clinical Case Insight"
         />
         <Reveal variant="fadeUp" delay={0.06} className="mt-6">
-          <div className="rounded-2xl border border-[#e83e74]/35 bg-gradient-to-r from-[#141b36] via-[#0e223d] to-[#0a1024] p-6 shadow-[0_0_24px_rgba(232,62,116,0.12)] sm:p-7">
-            <p className="text-[14px] leading-relaxed font-medium text-slate-100 sm:text-[15.5px]">
+          <div className="rounded-2xl border border-[#fde2ec] bg-white p-6 shadow-[0_8px_24px_rgba(232,62,116,0.06)] sm:p-7">
+            <p className="text-[14px] leading-relaxed font-medium text-ink sm:text-[15.5px]">
               A young man was advised chemotherapy and had two samples frozen the same week. Years later, his stored sperm was thawed and used in an ICSI cycle with his partner.
             </p>
-            <p className="mt-3 text-[12px] text-slate-400">
+            <p className="mt-3 text-[12px] text-ink/65">
               Details changed to protect patient privacy. Individual results vary.
             </p>
           </div>

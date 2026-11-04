@@ -126,11 +126,11 @@ export default function FAQ() {
           <header className="mb-7 flex flex-col items-start justify-between gap-4 sm:mb-9 sm:flex-row sm:items-center">
             <div>
               {eyebrow ? (
-                <p className="mb-2 text-[12px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:text-[13px]">
+                <p className="mb-2 text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
                   {eyebrow}
                 </p>
               ) : null}
-              <h2 className="font-serif text-2xl font-bold tracking-tight text-[#0f2438] sm:whitespace-nowrap sm:text-3xl lg:text-[2.2rem] xl:text-[2.75rem]">
+              <h2 className="font-serif text-2xl font-bold tracking-tight text-ink sm:whitespace-nowrap sm:text-3xl lg:text-[2.2rem] xl:text-[2.75rem]">
                 <span>{titlePrefix}</span>
                 {titleHighlight ? (
                   <>
@@ -143,7 +143,7 @@ export default function FAQ() {
             {cta ? (
               <a
                 href={cta.href}
-                className="inline-flex shrink-0 items-center rounded-full border border-[#0f2438]/25 px-5 py-2.5 text-sm font-medium whitespace-nowrap text-[#0f2438] transition-colors hover:border-[#e11d68] hover:text-[#e11d68]"
+                className="inline-flex shrink-0 items-center rounded-full border border-[var(--ink)]/25 px-5 py-2.5 text-sm font-medium whitespace-nowrap text-ink transition-colors hover:border-[#e11d68] hover:text-[#e11d68]"
               >
                 {cta.label}
               </a>

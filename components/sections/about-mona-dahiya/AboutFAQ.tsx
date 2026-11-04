@@ -85,28 +85,28 @@ export default function AboutFAQ() {
         <span>
           <Link
             href="/ivf-treatment"
-            className="text-teal-400 underline decoration-teal-400/40 underline-offset-2 hover:text-teal-300"
+            className="text-blue underline decoration-[var(--blue)]/40 underline-offset-2 hover:text-rose"
           >
             IVF
           </Link>
           ,{" "}
           <Link
             href="/intracytoplasmic-sperm-injection-icsi-treatment"
-            className="text-teal-400 underline decoration-teal-400/40 underline-offset-2 hover:text-teal-300"
+            className="text-blue underline decoration-[var(--blue)]/40 underline-offset-2 hover:text-rose"
           >
             ICSI
           </Link>
           ,{" "}
           <Link
             href="/best-iui-doctor-in-noida"
-            className="text-teal-400 underline decoration-teal-400/40 underline-offset-2 hover:text-teal-300"
+            className="text-blue underline decoration-[var(--blue)]/40 underline-offset-2 hover:text-rose"
           >
             IUI
           </Link>
           ,{" "}
           <Link
             href="/best-low-amh-treatment-in-noida"
-            className="text-teal-400 underline decoration-teal-400/40 underline-offset-2 hover:text-teal-300"
+            className="text-blue underline decoration-[var(--blue)]/40 underline-offset-2 hover:text-rose"
           >
             Low AMH
           </Link>
@@ -134,7 +134,7 @@ export default function AboutFAQ() {
           previous records and tell you how we can treat you. Visit{" "}
           <Link
             href="/international-patients"
-            className="text-teal-400 underline decoration-teal-400/40 underline-offset-2 hover:text-teal-300"
+            className="text-blue underline decoration-[var(--blue)]/40 underline-offset-2 hover:text-rose"
           >
             International Patients
           </Link>
@@ -149,7 +149,7 @@ export default function AboutFAQ() {
           Yes, our online consultation cost is 1000 rupees in India.{" "}
           <Link
             href="/ivf-consultation-online"
-            className="text-teal-400 underline decoration-teal-400/40 underline-offset-2 hover:text-teal-300"
+            className="text-blue underline decoration-[var(--blue)]/40 underline-offset-2 hover:text-rose"
           >
             Click here to know more.
           </Link>
@@ -164,21 +164,21 @@ export default function AboutFAQ() {
           You can call or whatsapp us on{" "}
           <a
             href="tel:+919267982924"
-            className="text-white underline decoration-white/40 hover:text-teal-300"
+            className="text-blue underline decoration-[var(--blue)]/40 hover:text-rose"
           >
             +91 92679 82924
           </a>
           . Or write to us at{" "}
           <a
             href="mailto:info@drmonadahiya.com"
-            className="text-white underline decoration-white/40 hover:text-teal-300"
+            className="text-blue underline decoration-[var(--blue)]/40 hover:text-rose"
           >
             info@drmonadahiya.com
           </a>
           .{" "}
           <a
             href="#book-consultation"
-            className="text-teal-400 underline decoration-teal-400/40 underline-offset-2 hover:text-teal-300"
+            className="text-blue underline decoration-[var(--blue)]/40 underline-offset-2 hover:text-rose"
           >
             Click here to know more.
           </a>
@@ -196,10 +196,10 @@ export default function AboutFAQ() {
     return (
       <div
         key={faq.id}
-        className={`group flex flex-col justify-start rounded-2xl border transition-[border-color,background-color,box-shadow] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+        className={`group flex flex-col justify-start rounded-[18px] border transition-[border-color,background-color,box-shadow] duration-300 ease-out sm:rounded-[20px] ${
           isOpen
-            ? "border-[#e83e74]/50 bg-[#0c224e] shadow-[0_8px_24px_rgba(0,0,0,0.25)] ring-1 ring-[#e83e74]/20"
-            : "border-white/10 bg-[#091a3c]/75 hover:border-white/20 hover:bg-[#0c224e]"
+            ? "border-[#fbcfe0] bg-[#fffbfd] shadow-[0_8px_24px_rgba(230,53,110,0.08)] ring-1 ring-[#fecdd3]/40"
+            : "border-slate-100 bg-white shadow-[0_2px_8px_rgba(15,23,42,0.03)] hover:border-slate-200 hover:shadow-sm"
         }`}
       >
         <button
@@ -209,17 +209,17 @@ export default function AboutFAQ() {
           aria-expanded={isOpen}
         >
           <h3
-            className={`font-serif text-[1rem] font-semibold leading-snug transition-colors duration-300 sm:text-[1.08rem] ${
-              isOpen ? "text-[#e83e74]" : "text-white group-hover:text-[#e83e74]"
+            className={`font-serif text-[1rem] font-bold leading-snug transition-colors duration-300 sm:text-[1.08rem] ${
+              isOpen ? "text-rose" : "text-ink group-hover:text-rose"
             }`}
           >
             {faq.q}
           </h3>
           <span
-            className={`flex size-7 shrink-0 items-center justify-center rounded-full border transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+            className={`flex size-7 shrink-0 items-center justify-center rounded-full border transition-all duration-300 ${
               isOpen
-                ? "rotate-180 border-[#e83e74] bg-[#e83e74] text-white shadow-sm"
-                : "border-white/15 bg-white/5 text-white/70 group-hover:border-white/30 group-hover:text-white"
+                ? "rotate-180 border-rose bg-rose text-white shadow-sm"
+                : "border-[#fde2ec] bg-[#fff0f5] text-slate-700 group-hover:border-[#fbcfe0] group-hover:text-rose"
             }`}
             aria-hidden="true"
           >
@@ -228,12 +228,12 @@ export default function AboutFAQ() {
         </button>
 
         <div
-          className={`grid transition-[grid-template-rows,opacity] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+          className={`grid transition-[grid-template-rows,opacity] duration-300 ease-out ${
             isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
           }`}
         >
           <div className="overflow-hidden">
-            <div className="border-t border-white/10 px-5 pt-3.5 pb-5 text-[13px] leading-relaxed text-slate-300 sm:px-6 sm:pb-6 sm:text-[13.5px]">
+            <div className="border-t border-[#fde2ec]/60 px-5 pt-3.5 pb-5 text-[13px] leading-relaxed text-slate-600 sm:px-6 sm:pb-6 sm:text-[13.5px]">
               {faq.a}
             </div>
           </div>
@@ -243,18 +243,18 @@ export default function AboutFAQ() {
   };
 
   return (
-    <section id="faqs" className="relative overflow-hidden bg-[#061532] px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
+    <section id="faqs" className="relative overflow-hidden bg-white px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12 border-t border-slate-100">
       <div className="mx-auto w-full max-w-[1440px]">
         <Reveal className="mb-8">
-          <span className="text-[12px] font-semibold tracking-wider text-[#e83e74] uppercase sm:text-[13px]">
+          <span className="text-[12px] font-semibold tracking-wider text-rose uppercase sm:text-[13px]">
             Patient questions
           </span>
 
-          <h2 className="font-serif mt-2 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-white sm:text-[2.2rem] lg:text-[2.45rem]">
+          <h2 className="font-serif mt-2 text-[1.85rem] leading-[1.2] font-bold tracking-tight text-ink sm:text-[2.2rem] lg:text-[2.45rem]">
             Frequently Asked Questions About Dr. Mona Dahiya
           </h2>
 
-          <p className="mt-2.5 max-w-2xl text-[13.5px] leading-relaxed text-slate-300 sm:text-[14.5px]">
+          <p className="mt-2.5 max-w-2xl text-[13.5px] leading-relaxed text-slate-600 sm:text-[14.5px]">
             Some commonly asked questions about Dr. Mona Dahiya.
           </p>
         </Reveal>

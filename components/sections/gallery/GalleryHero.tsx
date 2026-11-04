@@ -10,7 +10,7 @@ export default function GalleryHero() {
       className="relative overflow-hidden pt-5 pb-8 sm:pt-6 sm:pb-9 lg:pt-7 lg:pb-10"
       style={{
         background:
-          "linear-gradient(115deg, #05193d 0%, #00369e 35%, #0047ca 70%, #08286a 100%)",
+          "var(--pink)",
       }}
     >
       {/* Radiant ambient glow spots matching Home theme (Rose & Royal Blue) */}
@@ -33,21 +33,21 @@ export default function GalleryHero() {
 
       <div className="relative mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8">
         <nav aria-label="Breadcrumb" className="mb-5 sm:mb-6">
-          <ol className="inline-flex max-w-full flex-wrap items-center gap-1.5 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 shadow-[0_8px_24px_rgba(0,20,80,0.2)] backdrop-blur-md sm:gap-2 sm:px-3.5 sm:py-2">
+          <ol className="inline-flex max-w-full flex-wrap items-center gap-1.5 rounded-full border border-rose/25 bg-white px-3 py-1.5 shadow-sm backdrop-blur-md sm:gap-2 sm:px-3.5 sm:py-2">
             <li>
               <Link
                 href="/"
-                className="inline-flex items-center gap-1.5 rounded-full px-1.5 py-0.5 text-[12px] font-medium text-white/75 transition-colors hover:bg-white/10 hover:text-white sm:text-[13px]"
+                className="inline-flex items-center gap-1.5 rounded-full px-1.5 py-0.5 text-[12px] font-medium text-ink/70 transition-colors hover:bg-white hover:text-rose sm:text-[13px]"
               >
                 <FaHome className="size-3 shrink-0 sm:size-3.5" />
                 Home
               </Link>
             </li>
-            <li aria-hidden className="text-white/35">
+            <li aria-hidden className="text-ink/35">
               <FaChevronRight className="size-2.5 sm:size-3" />
             </li>
             <li>
-              <span className="inline-flex items-center rounded-full bg-[#e83e74]/20 px-2.5 py-0.5 text-[12px] font-semibold text-[#f9a8d4] ring-1 ring-[#e83e74]/35 sm:px-3 sm:text-[13px]">
+              <span className="inline-flex items-center rounded-full bg-rose/20 px-2.5 py-0.5 text-[12px] font-semibold text-rose ring-1 ring-rose/35 sm:px-3 sm:text-[13px]">
                 Gallery
               </span>
             </li>
@@ -56,7 +56,7 @@ export default function GalleryHero() {
 
         {/* Title matching Screenshot */}
         <Reveal variant="slideLeft">
-          <h1 className="font-serif text-[2.75rem] leading-[1.15] font-normal tracking-tight text-white sm:text-[3.5rem] lg:text-[4rem]">
+          <h1 className="font-serif text-[2.75rem] leading-[1.15] font-normal tracking-tight text-ink sm:text-[3.5rem] lg:text-[4rem]">
             Gallery
           </h1>
 
@@ -64,7 +64,7 @@ export default function GalleryHero() {
           <div className="mt-4 sm:mt-5">
             <Link
               href="/best-ivf-patient-reviews"
-              className="inline-flex items-center gap-1.5 text-[14px] font-semibold text-[#ff8fb3] transition-colors hover:text-white hover:underline sm:text-[15px]"
+              className="inline-flex items-center gap-1.5 text-[14px] font-semibold text-rose transition-colors hover:text-rose hover:underline sm:text-[15px]"
             >
               <span>Read Dr. Mona&apos;s Google reviews</span>
               <span aria-hidden>&rarr;</span>

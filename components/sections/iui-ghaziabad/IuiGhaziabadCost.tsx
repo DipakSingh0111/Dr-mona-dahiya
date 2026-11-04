@@ -6,64 +6,64 @@ import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 export default function IuiGhaziabadCost() {
   const costFactors = [
     {
-      icon: <FaPills className="size-4 text-[#f9a8d4]" />,
+      icon: <FaPills className="size-4 text-rose" />,
       title: "Medication",
       desc: "If we only use oral drugs then the cost will be less. If we need to add injectable gonadotropins the cost will increase.",
     },
     {
-      icon: <FaHeartbeat className="size-4 text-[#f9a8d4]" />,
+      icon: <FaHeartbeat className="size-4 text-rose" />,
       title: "Monitoring",
       desc: "How many scans you will require to monitor your follicles and trigger ovulation.",
     },
     {
-      icon: <FaFlask className="size-4 text-[#f9a8d4]" />,
+      icon: <FaFlask className="size-4 text-rose" />,
       title: "Sperm Washing",
       desc: "This involves using special media to separate the best quality sperms.",
     },
     {
-      icon: <FaHeart className="size-4 text-[#f9a8d4]" />,
+      icon: <FaHeart className="size-4 text-rose" />,
       title: "Sperms Used",
       desc: "Are you using your partner's sperm or donor's sperm?",
     },
   ];
 
   return (
-    <section id="iui-cost" className="relative overflow-hidden bg-[#061532] px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-14 border-t border-white/10">
+    <section id="iui-cost" className="relative overflow-hidden bg-white px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-14 border-t border-slate-100">
       <div className="relative mx-auto w-full max-w-[1440px]">
         <Reveal variant="fadeUp">
-          <span className="text-[12px] font-semibold tracking-wider text-[#e83e74] uppercase sm:text-[13px]">
+          <span className="text-[12px] font-semibold tracking-wider text-rose uppercase sm:text-[13px]">
             Cost of IUI
           </span>
 
-          <h2 className="font-serif mt-2 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-white sm:text-[2.2rem] lg:text-[2.45rem]">
+          <h2 className="font-serif mt-2 text-[1.85rem] leading-[1.2] font-bold tracking-tight text-ink sm:text-[2.2rem] lg:text-[2.45rem]">
             What is the cost of IUI in Ghaziabad?
           </h2>
 
-          <p className="mt-2.5 max-w-3xl text-[13.5px] leading-relaxed text-slate-300 sm:text-[14.5px]">
+          <p className="mt-2.5 max-w-3xl text-[13.5px] leading-relaxed text-slate-600 sm:text-[14.5px]">
             IUI is cheaper than IVF but can still be expensive.
           </p>
         </Reveal>
 
         {/* Highlight Price Banner */}
         <Reveal variant="fadeUp" delay={0.1} className="mt-7">
-          <div className="relative overflow-hidden rounded-2xl border border-teal-500/40 bg-[#0d2f3b]/85 p-6 backdrop-blur-md sm:p-8">
+          <div className="relative overflow-hidden rounded-2xl border border-[#fde2ec] bg-gradient-to-br from-[#fff7fa] to-[#fff0f5] p-6 shadow-sm sm:p-8">
             <div
               aria-hidden
-              className="pointer-events-none absolute top-0 right-0 h-64 w-64 -translate-y-1/2 translate-x-1/2 rounded-full opacity-25 blur-3xl"
-              style={{ background: "radial-gradient(circle, #14b8a6 0%, transparent 70%)" }}
+              className="pointer-events-none absolute top-0 right-0 h-64 w-64 -translate-y-1/2 translate-x-1/2 rounded-full opacity-20 blur-3xl"
+              style={{ background: "radial-gradient(circle, var(--blue) 0%, transparent 70%)" }}
             />
             <div className="relative grid grid-cols-1 items-center gap-6 md:grid-cols-12 md:gap-8">
               <div className="md:col-span-4 lg:col-span-3">
-                <p className="font-serif text-[2.4rem] font-bold tracking-tight text-white sm:text-[2.8rem] lg:text-[3.1rem]">
+                <p className="font-serif text-[2.4rem] font-bold tracking-tight text-rose sm:text-[2.8rem] lg:text-[3.1rem]">
                   ₹15,000
                 </p>
               </div>
 
-              <div className="md:col-span-8 lg:col-span-9 md:border-l md:border-white/10 md:pl-8">
-                <h3 className="text-[15px] font-bold text-white sm:text-[16px]">
+              <div className="md:col-span-8 lg:col-span-9 md:border-l md:border-[#fde2ec] md:pl-8">
+                <h3 className="text-[15px] font-bold text-ink sm:text-[16px]">
                   Starting price per IUI Cycle at Dr Mona Dahiya&apos;s Ghaziabad Center
                 </h3>
-                <p className="mt-2 text-[13px] leading-relaxed text-slate-300 sm:text-[13.5px]">
+                <p className="mt-2 text-[13px] leading-relaxed text-slate-600 sm:text-[13.5px]">
                   There are multiple factors that determine how much your IUI will cost you. Here are a few.
                 </p>
               </div>
@@ -73,23 +73,23 @@ export default function IuiGhaziabadCost() {
 
         {/* Cost Factors Grid */}
         <div className="mt-10">
-          <h3 className="font-serif text-[1.15rem] font-semibold text-white sm:text-[1.25rem]">
+          <h3 className="font-serif text-[1.15rem] font-bold text-ink sm:text-[1.25rem]">
             Factors that can affect the price of IUI
           </h3>
 
           <Stagger className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5" stagger={0.06}>
             {costFactors.map((item, idx) => (
               <StaggerItem key={idx} className="h-full">
-                <div className="flex h-full flex-col rounded-2xl border border-white/10 bg-[#091a3c]/75 p-5 backdrop-blur-md transition-all duration-300 hover:border-white/20 hover:bg-[#0c224e] sm:p-6">
+                <div className="flex h-full flex-col rounded-2xl border border-[#fde2ec] bg-white p-5 shadow-sm transition-all duration-300 hover:border-[#fbcfe0] hover:bg-[#fff0f5] hover:shadow-md sm:p-6">
                   <div className="flex items-center gap-3">
-                    <span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-[#e83e74]/20 ring-1 ring-[#e83e74]/35">
+                    <span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-rose/15 text-rose">
                       {item.icon}
                     </span>
-                    <h4 className="text-[14px] font-bold leading-snug text-white sm:text-[14.5px]">
+                    <h4 className="text-[14px] font-bold leading-snug text-ink sm:text-[14.5px]">
                       {item.title}
                     </h4>
                   </div>
-                  <p className="mt-3 text-[13px] leading-relaxed text-slate-300 sm:text-[13.5px]">
+                  <p className="mt-3 text-[13px] leading-relaxed text-slate-600 sm:text-[13.5px]">
                     {item.desc}
                   </p>
                 </div>
@@ -101,4 +101,3 @@ export default function IuiGhaziabadCost() {
     </section>
   );
 }
-

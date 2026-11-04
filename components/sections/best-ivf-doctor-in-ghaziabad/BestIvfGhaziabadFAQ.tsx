@@ -160,21 +160,21 @@ const rightFaqs: FaqItem[] = [
         more about{" "}
         <Link
           href="/recurrent-implantation-failure-rif"
-          className="underline decoration-[#93c5fd]/50 underline-offset-2 text-[#93c5fd]"
+          className="underline decoration-[var(--blue)]/50 underline-offset-2 text-blue"
         >
           Recurrent implantation failure
         </Link>
         ,{" "}
         <Link
           href="/fallopian-tube-blockage-treatment"
-          className="underline decoration-[#93c5fd]/50 underline-offset-2 text-[#93c5fd]"
+          className="underline decoration-[var(--blue)]/50 underline-offset-2 text-blue"
         >
           Blocked fallopian tubes
         </Link>{" "}
         and{" "}
         <Link
           href="/azoospermia-treatment"
-          className="underline decoration-[#93c5fd]/50 underline-offset-2 text-[#93c5fd]"
+          className="underline decoration-[var(--blue)]/50 underline-offset-2 text-blue"
         >
           Azoospermia
         </Link>
@@ -238,7 +238,7 @@ const rightFaqs: FaqItem[] = [
         can transfer them in the coming cycles. Read more about{" "}
         <Link
           href="/frozen-embryo-transfer"
-          className="underline decoration-[#93c5fd]/50 underline-offset-2 text-[#93c5fd]"
+          className="underline decoration-[var(--blue)]/50 underline-offset-2 text-blue"
         >
           Frozen embryo transfer
         </Link>

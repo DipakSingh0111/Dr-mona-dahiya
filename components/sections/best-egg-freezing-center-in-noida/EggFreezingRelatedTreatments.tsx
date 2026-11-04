@@ -16,7 +16,7 @@ const relatedTreatments = [
   { title: "Azoospermia", href: "/azoospermia-treatment" },
   { title: "Low Sperm Count", href: "/low-sperm-count-oligospermia" },
   { title: "Surgical Sperm Retrieval", href: "/surgical-sperm-retrieval-tesa-pesa" },
-  { title: "Sperm Freezing", href: "/treatments" },
+  { title: "Sperm Freezing", href: "/semen-sperm-freezing" },
   { title: "Embryo Freezing", href: "/embryo-cryopreservation" },
   { title: "Oncofertility", href: "/oncofertility-cancer-fertility-preservation" },
 ];

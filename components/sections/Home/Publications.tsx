@@ -49,7 +49,7 @@ function AwardCard({
         />
       </div>
       <div>
-        <p className="text-[13px] leading-snug font-bold text-[#0f2438] sm:text-[13.5px]">
+        <p className="text-[13px] leading-snug font-bold text-ink sm:text-[13.5px]">
           {title}
         </p>
         <p className="mt-1 text-[12px] leading-snug text-[#5a3a45]/70 sm:text-[12.5px]">
@@ -73,7 +73,7 @@ function StatCard({
 }) {
   return (
     <article
-      className={`flex flex-col rounded-2xl bg-[#3b2d2d] px-5 py-5 sm:px-6 sm:py-6 ${
+      className={`flex flex-col rounded-2xl bg-navy px-5 py-5 sm:px-6 sm:py-6 ${
         compact ? "justify-start" : "h-fit justify-center"
       }`}
     >
@@ -95,7 +95,7 @@ function StatCard({
       >
         {label}
       </p>
-      <p className="mt-3 text-[12.5px] leading-relaxed text-white/70 sm:text-[13.5px]">
+      <p className="mt-3 text-[12.5px] leading-relaxed text-white/75 sm:text-[13.5px]">
         {description}
       </p>
     </article>
@@ -127,10 +127,10 @@ export default function Publications() {
       <div className="relative z-10 mx-auto w-full max-w-[1440px]">
         <Reveal>
           <header className="mb-7 max-w-none sm:mb-8">
-            <p className="text-[13px] font-semibold text-[#e83e74] sm:text-[14px]">
+            <p className="text-[13px] font-semibold text-rose sm:text-[14px]">
               {data.eyebrow}
             </p>
-            <h2 className="mt-2 font-serif text-[1.65rem] leading-tight font-bold tracking-tight text-[#0f2438] sm:text-[2.1rem] lg:whitespace-nowrap lg:text-[2.25rem] xl:text-[2.75rem]">
+            <h2 className="mt-2 font-serif text-[1.65rem] leading-tight font-bold tracking-tight text-ink sm:text-[2.1rem] lg:whitespace-nowrap lg:text-[2.25rem] xl:text-[2.75rem]">
               {data.title}
             </h2>
             <p className="mt-3 max-w-none text-[13.5px] leading-relaxed text-[#5a3a45]/75 sm:text-[14.5px] lg:whitespace-nowrap xl:text-[15px]">
@@ -150,8 +150,8 @@ export default function Publications() {
                   onClick={() => setActiveTab(tab.id as TabId)}
                   className={`whitespace-nowrap rounded-full px-5 py-2.5 text-[13px] font-semibold transition-colors sm:text-[14px] ${
                     isActive
-                      ? "bg-[#e83e74] text-white shadow-[0_8px_20px_rgba(232,62,116,0.28)]"
-                      : "border border-[#e83e74]/30 bg-white/70 text-[#0f2438] hover:border-[#e83e74]/55 hover:bg-white"
+                      ? "bg-rose text-white shadow-[0_8px_20px_rgba(232,62,116,0.28)]"
+                      : "border border-rose/30 bg-white/70 text-ink hover:border-rose/55 hover:bg-white"
                   }`}
                 >
                   {tab.label}
@@ -258,7 +258,7 @@ export default function Publications() {
                 <Reveal delay={0.1}>
                   <a
                     href={data.awards.cta.href}
-                    className="inline-flex text-[14px] font-semibold text-[#e83e74] underline decoration-[#e83e74]/45 underline-offset-4 transition hover:text-[#c54866] hover:decoration-[#c54866]"
+                    className="inline-flex text-[14px] font-semibold text-rose underline decoration-rose/45 underline-offset-4 transition hover:text-rose-dark hover:decoration-[var(--rose-dark)]"
                   >
                     {data.awards.cta.label}
                   </a>

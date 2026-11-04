@@ -164,7 +164,7 @@ export default function Hero() {
             <div className="hero-ctas grid w-full max-w-[420px] grid-cols-2 gap-3.5 sm:max-w-[450px] xl:max-w-[480px] xl:gap-4">
               <a
                 href={primaryCta.href}
-                className="hero-cta inline-flex h-11 w-full items-center justify-center gap-2 rounded-full bg-[#e83e74] px-3.5 text-[13.5px] font-bold whitespace-nowrap text-white shadow-[0_10px_24px_rgba(232,62,116,0.35)] transition-all hover:bg-[#c53658] sm:h-12.5 sm:gap-2.5 sm:px-4 sm:text-[14.5px] xl:h-[3.45rem] xl:text-[15.5px]"
+                className="hero-cta inline-flex h-11 w-full items-center justify-center gap-2 rounded-full bg-rose px-3.5 text-[13.5px] font-bold whitespace-nowrap text-white shadow-[0_10px_24px_rgba(232,62,116,0.35)] transition-all hover:bg-rose-dark sm:h-12.5 sm:gap-2.5 sm:px-4 sm:text-[14.5px] xl:h-[3.45rem] xl:text-[15.5px]"
               >
                 <CalendarIcon className="size-4 shrink-0 sm:size-4.5 xl:size-5" />
                 {primaryCta.label}
@@ -192,7 +192,7 @@ export default function Hero() {
                 <FaStar className="size-4 fill-current xl:size-4.5" />
                 <FaStar className="size-4 fill-current xl:size-4.5" />
               </div>
-              <span className="text-[14px] font-bold text-[#0f2438] xl:text-[15px]">
+              <span className="text-[14px] font-bold text-ink xl:text-[15px]">
                 4.9
               </span>
               <span className="text-[13px] font-medium text-gray-700 xl:text-[14px]">

@@ -55,7 +55,7 @@ const solutions = [
 
 export default function ComplexIVFSolutions() {
   return (
-    <section className="relative overflow-hidden bg-[#061532] px-4 py-8 text-white sm:px-6 sm:py-10 lg:px-8 lg:py-12">
+    <section className="relative overflow-hidden bg-pink px-4 py-8 text-ink sm:px-6 sm:py-10 lg:px-8 lg:py-12">
       <div
         aria-hidden
         className="pointer-events-none absolute -top-32 left-1/4 h-[440px] w-[500px] rounded-full opacity-25 blur-3xl"
@@ -79,7 +79,7 @@ export default function ComplexIVFSolutions() {
             What makes the difference
           </span>
 
-          <h2 className="font-serif mt-2 text-[2.1rem] leading-[1.18] font-normal tracking-tight text-white sm:text-[2.65rem] lg:text-[2.9rem]">
+          <h2 className="font-serif mt-2 text-[2.1rem] leading-[1.18] font-normal tracking-tight text-black sm:text-[2.65rem] lg:text-[2.9rem]">
             How Complex IVF Cases Are Solved
           </h2>
         </Reveal>
@@ -90,7 +90,7 @@ export default function ComplexIVFSolutions() {
         >
           {solutions.map((item) => (
             <StaggerItem key={item.num} variant="scaleIn" className="h-full">
-              <div className="group relative flex h-full flex-col justify-between overflow-hidden rounded-[24px] border border-white/12 bg-gradient-to-b from-[#0a2048]/90 to-[#071838]/90 p-6 shadow-[0_12px_32px_rgba(0,10,35,0.45)] backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-[#e83e74]/55 hover:shadow-[0_20px_45px_rgba(232,62,116,0.18)] sm:p-7">
+              <div className="group relative flex h-full flex-col justify-between overflow-hidden rounded-[24px] border border-[#fde2ec] bg-white p-6 shadow-[0_8px_24px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-rose/45 hover:shadow-[0_14px_36px_rgba(232,62,116,0.12)] sm:p-7">
                 <div
                   aria-hidden
                   className="pointer-events-none absolute -top-16 -right-16 size-44 rounded-full opacity-40 blur-2xl transition-opacity duration-300 group-hover:opacity-75"
@@ -102,23 +102,23 @@ export default function ComplexIVFSolutions() {
 
                 <div
                   aria-hidden
-                  className="pointer-events-none absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-[#ff8fb3]/60 to-transparent"
+                  className="pointer-events-none absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-[var(--rose)]/60 to-transparent"
                 />
 
                 <div className="relative z-10">
                   <div className="flex items-center gap-3.5 sm:gap-4">
-                    <div className="flex size-11 shrink-0 items-center justify-center rounded-[16px] bg-gradient-to-br from-[#ff6b9d] via-[#e83e74] to-[#c53658] text-white shadow-[0_6px_18px_rgba(232,62,116,0.4)] ring-1 ring-white/20">
+                    <div className="flex size-11 shrink-0 items-center justify-center rounded-[16px] bg-gradient-to-br from-[#ff6b9d] via-[var(--rose)] to-[var(--rose)] text-white shadow-[0_6px_18px_rgba(232,62,116,0.4)] ring-1 ring-white/20">
                       <span className="font-serif text-[20px] font-bold leading-none">
                         {item.num}
                       </span>
                     </div>
 
-                    <h3 className="font-serif text-[17px] font-normal leading-snug tracking-tight text-white transition-colors group-hover:text-[#ff8fb3] sm:text-[18.5px]">
+                    <h3 className="font-serif text-[17px] font-normal leading-snug tracking-tight text-black transition-colors group-hover:text-rose sm:text-[18.5px]">
                       {item.title}
                     </h3>
                   </div>
 
-                  <p className="mt-4.5 text-[13.5px] leading-relaxed text-slate-300 sm:text-[14px]">
+                  <p className="mt-4.5 text-[13.5px] leading-relaxed text-black sm:text-[14px]">
                     {item.description}
                   </p>
                 </div>

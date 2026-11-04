@@ -27,7 +27,7 @@ const qualIconMap = {
   green: {
     Icon: FaHospital,
     bg: "bg-[#e4f0ff]",
-    text: "text-[#0047ca]",
+    text: "text-blue",
   },
   orange: {
     Icon: FaCertificate,
@@ -76,8 +76,8 @@ export default function MeetYourDoctor() {
       <div className="relative mx-auto w-full max-w-[1440px]">
         <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-10 xl:gap-14">
           <Reveal variant="slideLeft" className="relative z-10 w-full min-w-0">
-            <span className="inline-flex items-center gap-2 rounded-full border border-[#f9c5d4]/60 bg-gradient-to-r from-[#ffe8f0] to-[#fff5f8] px-3.5 py-1.5 text-[12px] font-semibold whitespace-nowrap text-[#e83e74] shadow-[0_4px_14px_rgba(232,62,116,0.08)]">
-              <span className="size-1.5 rounded-full bg-gradient-to-br from-[#f4729a] to-[#e83e74]" />
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#f9c5d4]/60 bg-gradient-to-r from-[#ffe8f0] to-[#fff5f8] px-3.5 py-1.5 text-[12px] font-semibold whitespace-nowrap text-rose shadow-[0_4px_14px_rgba(232,62,116,0.08)]">
+              <span className="size-1.5 rounded-full bg-gradient-to-br from-[#f4729a] to-[var(--rose)]" />
               {data.badge}
             </span>
 
@@ -86,7 +86,7 @@ export default function MeetYourDoctor() {
               <br />
               <span className="sm:whitespace-nowrap">{data.titleLine2}</span>
               <br />
-              <span className="bg-gradient-to-r from-[#e83e74] via-[#f0518e] to-[#c53658] bg-clip-text text-transparent sm:whitespace-nowrap">
+              <span className="bg-gradient-to-r from-rose via-[#f0518e] to-[var(--rose)] bg-clip-text text-transparent sm:whitespace-nowrap">
                 {data.titleAccent}
               </span>
             </h2>
@@ -98,10 +98,10 @@ export default function MeetYourDoctor() {
             <ul className="mt-6 grid grid-cols-1 gap-x-4 gap-y-3 sm:grid-cols-2 xl:mt-7 xl:gap-x-6 xl:gap-y-3.5">
               {data.features.map((feature) => (
                 <li key={feature} className="flex items-start gap-2">
-                  <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-[#ffe8f0] text-[#e83e74]">
+                  <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-[#ffe8f0] text-rose">
                     <FaCheck className="size-2.5" />
                   </span>
-                  <span className="text-[12.5px] leading-snug font-semibold text-[#1e293b] xl:text-[13.5px]">
+                  <span className="text-[12.5px] leading-snug font-semibold text-navy xl:text-[13.5px]">
                     {feature}
                   </span>
                 </li>
@@ -111,10 +111,10 @@ export default function MeetYourDoctor() {
             <div className="mt-7 hidden flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:items-center lg:flex xl:mt-8 xl:gap-3">
               <a
                 href={data.primaryCta.href}
-                className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#e83e74] via-[#f0518e] to-[#d13266] px-3.5 py-2.5 text-[11.5px] font-semibold text-white whitespace-nowrap shadow-[0_10px_28px_rgba(232,62,116,0.32)] transition hover:brightness-105 xl:gap-2.5 xl:px-5 xl:py-3 xl:text-[13.5px]"
+                className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-rose via-[#f0518e] to-[#d13266] px-3.5 py-2.5 text-[11.5px] font-semibold text-white whitespace-nowrap shadow-[0_10px_28px_rgba(232,62,116,0.32)] transition hover:brightness-105 xl:gap-2.5 xl:px-5 xl:py-3 xl:text-[13.5px]"
               >
                 <span>{data.primaryCta.label}</span>
-                <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-white text-[#e83e74] xl:size-6">
+                <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-white text-rose xl:size-6">
                   <FaArrowRight className="size-2.5" />
                 </span>
               </a>
@@ -123,7 +123,7 @@ export default function MeetYourDoctor() {
                 href={data.secondaryCta.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full border border-[#f5a3bd] bg-gradient-to-r from-white to-[#fff5f8] px-3.5 py-2 text-[11.5px] font-semibold text-[#0f2438] whitespace-nowrap shadow-[0_6px_18px_rgba(232,62,116,0.08)] transition hover:from-[#fff5f8] hover:to-[#ffe8f0] xl:gap-2.5 xl:px-5 xl:py-2.5 xl:text-[13.5px]"
+                className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full border border-[#f5a3bd] bg-gradient-to-r from-white to-[#fff5f8] px-3.5 py-2 text-[11.5px] font-semibold text-ink whitespace-nowrap shadow-[0_6px_18px_rgba(232,62,116,0.08)] transition hover:from-[#fff5f8] hover:to-[#ffe8f0] xl:gap-2.5 xl:px-5 xl:py-2.5 xl:text-[13.5px]"
               >
                 <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-[#ff0033] text-white shadow-[0_3px_10px_rgba(255,0,51,0.3)] xl:size-8">
                   <FaYoutube className="size-4 xl:size-[18px]" />
@@ -148,7 +148,7 @@ export default function MeetYourDoctor() {
                 {card.eyebrow}
               </p>
               <h3 className="font-display mt-2 text-[1.85rem] leading-none font-bold sm:text-[2.25rem] xl:text-[2.45rem]">
-                <span className="text-[#0f2438]">{card.namePrefix}</span>{" "}
+                <span className="text-ink">{card.namePrefix}</span>{" "}
                 <span className="bg-gradient-to-r from-[#e11d60] to-[#f0518e] bg-clip-text text-transparent">
                   {card.name}
                 </span>
@@ -179,7 +179,7 @@ export default function MeetYourDoctor() {
                         <Icon className="size-5 sm:size-[22px]" />
                       </span>
                       <div className="min-w-0 pt-0.5">
-                        <p className="text-[15px] leading-snug font-bold text-[#0f2438] sm:text-[16px]">
+                        <p className="text-[15px] leading-snug font-bold text-ink sm:text-[16px]">
                           {item.title}
                         </p>
                         <p className="mt-1 text-[12.5px] leading-snug text-[#667d99] sm:text-[13.5px]">
@@ -195,10 +195,10 @@ export default function MeetYourDoctor() {
             <div className="mx-auto mt-5 flex w-full max-w-[520px] flex-col gap-3 lg:hidden">
               <a
                 href={data.primaryCta.href}
-                className="inline-flex w-full items-center justify-center gap-2.5 rounded-full bg-gradient-to-r from-[#e83e74] via-[#f0518e] to-[#d13266] px-5 py-3.5 text-[14px] font-semibold text-white shadow-[0_10px_28px_rgba(232,62,116,0.32)] transition hover:brightness-105"
+                className="inline-flex w-full items-center justify-center gap-2.5 rounded-full bg-gradient-to-r from-rose via-[#f0518e] to-[#d13266] px-5 py-3.5 text-[14px] font-semibold text-white shadow-[0_10px_28px_rgba(232,62,116,0.32)] transition hover:brightness-105"
               >
                 <span>{data.primaryCta.label}</span>
-                <span className="flex size-6 shrink-0 items-center justify-center rounded-full bg-white text-[#e83e74]">
+                <span className="flex size-6 shrink-0 items-center justify-center rounded-full bg-white text-rose">
                   <FaArrowRight className="size-2.5" />
                 </span>
               </a>
@@ -207,7 +207,7 @@ export default function MeetYourDoctor() {
                 href={data.secondaryCta.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex w-full items-center justify-center gap-2.5 rounded-full border border-[#f5a3bd] bg-white px-5 py-3 text-[14px] font-semibold text-[#0f2438] shadow-[0_6px_18px_rgba(232,62,116,0.08)] transition hover:bg-[#fff5f8]"
+                className="inline-flex w-full items-center justify-center gap-2.5 rounded-full border border-[#f5a3bd] bg-white px-5 py-3 text-[14px] font-semibold text-ink shadow-[0_6px_18px_rgba(232,62,116,0.08)] transition hover:bg-[#fff5f8]"
               >
                 <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-[#ff0033] text-white shadow-[0_3px_10px_rgba(255,0,51,0.3)]">
                   <FaYoutube className="size-[18px]" />

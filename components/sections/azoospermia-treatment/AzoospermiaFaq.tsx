@@ -19,18 +19,18 @@ const leftFaqs: FaqItem[] = [
         </p>
         <ul className="space-y-2 pl-1">
           <li className="flex items-start gap-2">
-            <span className="pt-1 text-[13px] text-[#e83e74] select-none">•</span>
+            <span className="pt-1 text-[13px] text-rose select-none">•</span>
             <p>
-              <strong className="font-semibold text-white">
+              <strong className="font-semibold text-black">
                 Obstructive Azoospermia (OA, ~40% of cases):
               </strong>{" "}
               Sperm is produced but blocked from reaching the semen.
             </p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="pt-1 text-[13px] text-[#e83e74] select-none">•</span>
+            <span className="pt-1 text-[13px] text-rose select-none">•</span>
             <p>
-              <strong className="font-semibold text-white">
+              <strong className="font-semibold text-black">
                 Non-Obstructive Azoospermia (NOA, ~60% of cases):
               </strong>{" "}
               Production inside the testis is severely reduced or absent.
@@ -50,16 +50,16 @@ const leftFaqs: FaqItem[] = [
         </p>
         <ul className="space-y-2 pl-1">
           <li className="flex items-start gap-2">
-            <span className="pt-1 text-[13px] text-[#e83e74] select-none">•</span>
+            <span className="pt-1 text-[13px] text-rose select-none">•</span>
             <p>
-              <strong className="font-semibold text-white">OA:</strong> Sperm
+              <strong className="font-semibold text-black">OA:</strong> Sperm
               retrieval success is typically 95%–100% with PESA or TESA.
             </p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="pt-1 text-[13px] text-[#e83e74] select-none">•</span>
+            <span className="pt-1 text-[13px] text-rose select-none">•</span>
             <p>
-              <strong className="font-semibold text-white">NOA:</strong>{" "}
+              <strong className="font-semibold text-black">NOA:</strong>{" "}
               Micro-TESE finds sperm in about 50%–60% of carefully selected
               cases.
             </p>
@@ -78,9 +78,9 @@ const leftFaqs: FaqItem[] = [
         </p>
         <ol className="space-y-2 pl-1">
           <li className="flex items-start gap-2">
-            <span className="pt-0.5 text-[13px] font-bold text-[#e83e74]">1.</span>
+            <span className="pt-0.5 text-[13px] font-bold text-rose">1.</span>
             <p>
-              <strong className="font-semibold text-white">
+              <strong className="font-semibold text-black">
                 Centrifuged Semen Analysis:
               </strong>{" "}
               Verifies zero sperm in the resuspended pellet alongside semen
@@ -89,9 +89,9 @@ const leftFaqs: FaqItem[] = [
             </p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="pt-0.5 text-[13px] font-bold text-[#e83e74]">2.</span>
+            <span className="pt-0.5 text-[13px] font-bold text-rose">2.</span>
             <p>
-              <strong className="font-semibold text-white">
+              <strong className="font-semibold text-black">
                 Endocrine Profiling:
               </strong>{" "}
               Morning serum Total Testosterone, FSH, LH and Prolactin. Markedly
@@ -100,9 +100,9 @@ const leftFaqs: FaqItem[] = [
             </p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="pt-0.5 text-[13px] font-bold text-[#e83e74]">3.</span>
+            <span className="pt-0.5 text-[13px] font-bold text-rose">3.</span>
             <p>
-              <strong className="font-semibold text-white">
+              <strong className="font-semibold text-black">
                 Genetic Testing:
               </strong>{" "}
               Karyotyping to rule out Klinefelter syndrome (47,XXY) and
@@ -113,9 +113,9 @@ const leftFaqs: FaqItem[] = [
             </p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="pt-0.5 text-[13px] font-bold text-[#e83e74]">4.</span>
+            <span className="pt-0.5 text-[13px] font-bold text-rose">4.</span>
             <p>
-              <strong className="font-semibold text-white">
+              <strong className="font-semibold text-black">
                 Scrotal & Transrectal Ultrasound (TRUS):
               </strong>{" "}
               Identifies subclinical varicoceles, epididymal dilation, seminal
@@ -177,9 +177,9 @@ const rightFaqs: FaqItem[] = [
     answer: (
       <ul className="space-y-2.5 pl-1">
         <li className="flex items-start gap-2">
-          <span className="pt-1 text-[13px] text-[#e83e74] select-none">•</span>
+          <span className="pt-1 text-[13px] text-rose select-none">•</span>
           <p>
-            <strong className="font-semibold text-white">
+            <strong className="font-semibold text-black">
               PESA (Percutaneous Epididymal Sperm Aspiration):
             </strong>{" "}
             Needle aspiration from the epididymis — mainly for obstructive
@@ -187,9 +187,9 @@ const rightFaqs: FaqItem[] = [
           </p>
         </li>
         <li className="flex items-start gap-2">
-          <span className="pt-1 text-[13px] text-[#e83e74] select-none">•</span>
+          <span className="pt-1 text-[13px] text-rose select-none">•</span>
           <p>
-            <strong className="font-semibold text-white">
+            <strong className="font-semibold text-black">
               TESA (Testicular Sperm Aspiration):
             </strong>{" "}
             Needle aspiration from testicular tissue; useful in selected OA and
@@ -197,9 +197,9 @@ const rightFaqs: FaqItem[] = [
           </p>
         </li>
         <li className="flex items-start gap-2">
-          <span className="pt-1 text-[13px] text-[#e83e74] select-none">•</span>
+          <span className="pt-1 text-[13px] text-rose select-none">•</span>
           <p>
-            <strong className="font-semibold text-white">
+            <strong className="font-semibold text-black">
               Micro-TESE (Microsurgical Testicular Sperm Extraction):
             </strong>{" "}
             Microscope-guided search for sperm-producing tubules — the preferred
@@ -214,36 +214,36 @@ const rightFaqs: FaqItem[] = [
     answer: (
       <ul className="space-y-2.5 pl-1">
         <li className="flex items-start gap-2">
-          <span className="pt-1 text-[13px] text-[#e83e74] select-none">•</span>
+          <span className="pt-1 text-[13px] text-rose select-none">•</span>
           <p>
-            <strong className="font-semibold text-white">
+            <strong className="font-semibold text-black">
               Genetic Anomalies:
             </strong>{" "}
             e.g. Klinefelter syndrome.
           </p>
         </li>
         <li className="flex items-start gap-2">
-          <span className="pt-1 text-[13px] text-[#e83e74] select-none">•</span>
+          <span className="pt-1 text-[13px] text-rose select-none">•</span>
           <p>
-            <strong className="font-semibold text-white">
+            <strong className="font-semibold text-black">
               Surgical & Medical History:
             </strong>{" "}
             undescended testes, chemotherapy, prior genital surgery.
           </p>
         </li>
         <li className="flex items-start gap-2">
-          <span className="pt-1 text-[13px] text-[#e83e74] select-none">•</span>
+          <span className="pt-1 text-[13px] text-rose select-none">•</span>
           <p>
-            <strong className="font-semibold text-white">
+            <strong className="font-semibold text-black">
               Physical Blockages:
             </strong>{" "}
             infections (e.g. Chlamydia), vasectomy, ejaculatory duct stones.
           </p>
         </li>
         <li className="flex items-start gap-2">
-          <span className="pt-1 text-[13px] text-[#e83e74] select-none">•</span>
+          <span className="pt-1 text-[13px] text-rose select-none">•</span>
           <p>
-            <strong className="font-semibold text-white">
+            <strong className="font-semibold text-black">
               Exogenous Hormone Use:
             </strong>{" "}
             Anabolic steroid misuse or testosterone replacement therapy (TRT),
@@ -287,18 +287,18 @@ const rightFaqs: FaqItem[] = [
         </p>
         <ul className="space-y-2 pl-1">
           <li className="flex items-start gap-2">
-            <span className="pt-1 text-[13px] text-[#e83e74] select-none">•</span>
+            <span className="pt-1 text-[13px] text-rose select-none">•</span>
             <p>
-              <strong className="font-semibold text-white">
+              <strong className="font-semibold text-black">
                 Fertilisation Rates:
               </strong>{" "}
               65% to 75% per injected mature oocyte.
             </p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="pt-1 text-[13px] text-[#e83e74] select-none">•</span>
+            <span className="pt-1 text-[13px] text-rose select-none">•</span>
             <p>
-              <strong className="font-semibold text-white">
+              <strong className="font-semibold text-black">
                 Clinical Pregnancy Rates:
               </strong>{" "}
               50% to 60% per transfer, primarily dictated by the female
@@ -306,9 +306,9 @@ const rightFaqs: FaqItem[] = [
             </p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="pt-1 text-[13px] text-[#e83e74] select-none">•</span>
+            <span className="pt-1 text-[13px] text-rose select-none">•</span>
             <p>
-              <strong className="font-semibold text-white">
+              <strong className="font-semibold text-black">
                 Neonatal Health:
               </strong>{" "}
               Long-term follow-up data shows children conceived using surgically
@@ -331,27 +331,27 @@ const rightFaqs: FaqItem[] = [
         </p>
         <ul className="space-y-2 pl-1">
           <li className="flex items-start gap-2">
-            <span className="pt-1 text-[13px] text-[#e83e74] select-none">•</span>
+            <span className="pt-1 text-[13px] text-rose select-none">•</span>
             <p>
-              <strong className="font-semibold text-white">
+              <strong className="font-semibold text-black">
                 Diagnostic Workup (Semen Pellet, Hormones, Karyotype, AZF):
               </strong>{" "}
               ₹8,000 to ₹16,000
             </p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="pt-1 text-[13px] text-[#e83e74] select-none">•</span>
+            <span className="pt-1 text-[13px] text-rose select-none">•</span>
             <p>
-              <strong className="font-semibold text-white">
+              <strong className="font-semibold text-black">
                 Percutaneous Aspiration (PESA / TESA):
               </strong>{" "}
               ₹18,000 to ₹35,000
             </p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="pt-1 text-[13px] text-[#e83e74] select-none">•</span>
+            <span className="pt-1 text-[13px] text-rose select-none">•</span>
             <p>
-              <strong className="font-semibold text-white">
+              <strong className="font-semibold text-black">
                 Advanced Micro-TESE Surgery:
               </strong>{" "}
               ₹65,000 to ₹1,20,000 (reflects operative microscopy, surgical
@@ -359,9 +359,9 @@ const rightFaqs: FaqItem[] = [
             </p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="pt-1 text-[13px] text-[#e83e74] select-none">•</span>
+            <span className="pt-1 text-[13px] text-rose select-none">•</span>
             <p>
-              <strong className="font-semibold text-white">
+              <strong className="font-semibold text-black">
                 Subsequent ICSI & Vitrification Cycle:
               </strong>{" "}
               ₹1,25,000 to ₹1,85,000 (excluding female stimulation medications)

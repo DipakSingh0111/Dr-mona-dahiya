@@ -25,7 +25,7 @@ const indications: IndicationItem[] = [
         If your AMH is lower or your age is more than 35 years we may advise{" "}
         <Link
           href="/embryo-cryopreservation"
-          className="font-medium text-[#93c5fd] underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-white"
         >
           freezing embryos
         </Link>{" "}
@@ -42,14 +42,14 @@ const indications: IndicationItem[] = [
         ejaculate. Read more on{" "}
         <Link
           href="/sperm-dna-fragmentation-test"
-          className="font-medium text-[#93c5fd] underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-white"
         >
           Sperm DNA Fragmentation
         </Link>{" "}
         and{" "}
         <Link
           href="/azoospermia-treatment"
-          className="font-medium text-[#93c5fd] underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-white"
         >
           Azoospermia
         </Link>
@@ -66,7 +66,7 @@ const indications: IndicationItem[] = [
         parameters. Read more on{" "}
         <Link
           href="/recurrent-implantation-failure-rif"
-          className="font-medium text-[#93c5fd] underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-white"
         >
           Implantation Failures
         </Link>
@@ -82,14 +82,14 @@ const indications: IndicationItem[] = [
         Customized approach. We perform{" "}
         <Link
           href="/hysteroscopy-treatment"
-          className="font-medium text-[#93c5fd] underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-white"
         >
           Hysteroscopy
         </Link>{" "}
         and treat{" "}
         <Link
           href="/endometriosis-fertility-treatment"
-          className="font-medium text-[#93c5fd] underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-white"
         >
           Endometriosis
         </Link>
@@ -105,7 +105,7 @@ const indications: IndicationItem[] = [
         We can help you preserve your eggs/sperms/embryos. Read more on{" "}
         <Link
           href="/oncofertility-cancer-fertility-preservation"
-          className="font-medium text-[#93c5fd] underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-white"
         >
           Oncofertility
         </Link>
@@ -117,13 +117,13 @@ const indications: IndicationItem[] = [
 
 export default function BestIvfDelhiIndications() {
   return (
-    <section className="relative overflow-hidden bg-[#061532] px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
+    <section className="relative overflow-hidden bg-pink px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
       <div className="mx-auto w-full max-w-[1440px]">
         <Reveal variant="fadeUp">
-          <p className="text-[12px] font-semibold tracking-wide text-[#e83e74] sm:text-[13px]">
+          <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">
             Clinical overview
           </p>
-          <h2 className="font-serif mt-1 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-white sm:text-[2.2rem] lg:text-[2.45rem]">
+          <h2 className="font-serif mt-1 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-black sm:text-[2.2rem] lg:text-[2.45rem]">
             Indications: Who Needs IVF?
           </h2>
         </Reveal>
@@ -134,17 +134,17 @@ export default function BestIvfDelhiIndications() {
         >
           {indications.map((item) => (
             <StaggerItem key={item.number} className="h-full">
-              <div className="relative flex h-full flex-col justify-between rounded-2xl border border-[#e83e74]/35 bg-gradient-to-b from-[#141b36] to-[#0a1024] p-5 shadow-[0_0_24px_rgba(232,62,116,0.12)] transition-all duration-300 hover:-translate-y-1 hover:border-[#e83e74]/65 hover:shadow-[0_0_32px_rgba(232,62,116,0.22)] sm:p-6">
+              <div className="relative flex h-full flex-col justify-between rounded-2xl border border-rose/35 bg-gradient-to-b from-white to-[#fff8fa] p-5 shadow-[0_8px_24px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-rose/65 hover:shadow-[0_0_32px_rgba(232,62,116,0.22)] sm:p-6">
                 <div>
                   <div className="flex items-start gap-3">
-                    <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-[#e83e74] text-[15px] font-bold text-white shadow-[0_2px_8px_rgba(232,62,116,0.4)]">
+                    <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-rose text-[15px] font-bold text-white shadow-[0_2px_8px_rgba(232,62,116,0.4)]">
                       {item.number}
                     </span>
-                    <h3 className="font-serif pt-0.5 text-[1.05rem] leading-snug font-semibold text-white sm:text-[1.12rem]">
+                    <h3 className="font-serif pt-0.5 text-[1.05rem] leading-snug font-semibold text-black sm:text-[1.12rem]">
                       {item.title}
                     </h3>
                   </div>
-                  <p className="mt-3.5 text-[13px] leading-relaxed text-slate-300 sm:text-[13.5px]">
+                  <p className="mt-3.5 text-[13px] leading-relaxed text-black sm:text-[13.5px]">
                     {item.description}
                   </p>
                 </div>

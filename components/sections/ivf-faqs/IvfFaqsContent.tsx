@@ -37,8 +37,8 @@ function FaqAccordion({
                 key={id}
                 className={`w-full min-w-0 overflow-hidden rounded-[18px] border transition-colors duration-300 ${
                   isOpen
-                    ? "border-[#e83e74]/45 bg-[#0a1f45] shadow-[0_10px_28px_rgba(232,62,116,0.12)]"
-                    : "border-white/10 bg-[#0a1f45]/55 hover:border-white/20"
+                    ? "border-rose/45 bg-white shadow-[0_10px_28px_rgba(232,62,116,0.12)]"
+                    : "border-[#fde2ec] bg-white hover:border-[#fbcfe0]"
                 }`}
               >
                 <button
@@ -49,14 +49,14 @@ function FaqAccordion({
                   aria-expanded={isOpen}
                   className="flex w-full min-w-0 cursor-pointer items-center justify-between gap-3 px-4 py-4 text-left sm:gap-4 sm:px-5 sm:py-5"
                 >
-                  <h3 className="min-w-0 flex-1 text-[14.5px] font-bold leading-snug break-words text-white sm:text-[15px]">
+                  <h3 className="min-w-0 flex-1 text-[14.5px] font-bold leading-snug break-words text-black sm:text-[15px]">
                     {item.q}
                   </h3>
                   <span
                     className={`flex size-8 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${
                       isOpen
-                        ? "rotate-180 bg-[#e83e74] text-white"
-                        : "bg-white/10 text-white/70"
+                        ? "rotate-180 bg-rose text-white"
+                        : "bg-[#fff0f5] text-black"
                     }`}
                   >
                     <FaChevronDown className="size-3.5" />
@@ -76,7 +76,7 @@ function FaqAccordion({
                       }}
                       className="overflow-hidden"
                     >
-                      <p className="border-t border-white/10 px-4 pt-3 pb-4 text-[13.5px] leading-relaxed text-white/65 sm:px-5 sm:pt-3.5 sm:pb-5">
+                      <p className="border-t border-[#fde2ec] px-4 pt-3 pb-4 text-[13.5px] leading-relaxed text-black sm:px-5 sm:pt-3.5 sm:pb-5">
                         {item.a}
                       </p>
                     </motion.div>
@@ -102,15 +102,15 @@ export default function IvfFaqsContent() {
   };
 
   return (
-    <div className="bg-[#061532] text-white">
+    <div className="bg-pink text-black">
       {/* Categories */}
       <section className="px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
         <div className="mx-auto w-full max-w-[1440px]">
           <Reveal className="mb-7 sm:mb-9">
-            <p className="text-[12px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:text-[13px]">
+            <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
               Browse by topic
             </p>
-            <h2 className="font-serif mt-2 text-[1.9rem] leading-tight font-bold tracking-tight sm:text-[2.4rem]">
+            <h2 className="font-serif mt-2 text-[1.9rem] leading-tight font-bold tracking-tight text-black sm:text-[2.4rem]">
               Choose a Question Category
             </h2>
           </Reveal>
@@ -121,15 +121,15 @@ export default function IvfFaqsContent() {
                 key={cat.id}
                 type="button"
                 onClick={() => scrollTo(cat.id)}
-                className="group flex h-full flex-col rounded-[20px] border border-white/12 bg-[#0a1f45]/70 p-5 text-left transition-all duration-300 hover:-translate-y-0.5 hover:border-[#e83e74]/45 hover:shadow-[0_14px_32px_rgba(232,62,116,0.15)]"
+                className="group flex h-full flex-col rounded-[20px] border border-[#fde2ec] bg-white p-5 text-left shadow-[0_8px_24px_rgba(232,62,116,0.05)] transition-all duration-300 hover:-translate-y-0.5 hover:border-rose/45 hover:shadow-[0_14px_32px_rgba(232,62,116,0.15)]"
               >
-                <h3 className="font-serif text-[1.15rem] font-semibold leading-snug text-white sm:text-[1.25rem]">
+                <h3 className="font-serif text-[1.15rem] font-semibold leading-snug text-black sm:text-[1.25rem]">
                   {cat.label}
                 </h3>
-                <p className="mt-2 flex-1 text-[12.5px] leading-relaxed text-white/55">
+                <p className="mt-2 flex-1 text-[12.5px] leading-relaxed text-black">
                   {cat.meta}
                 </p>
-                <FaArrowRight className="mt-4 size-3.5 text-[#e83e74] transition-transform group-hover:translate-x-1" />
+                <FaArrowRight className="mt-4 size-3.5 text-rose transition-transform group-hover:translate-x-1" />
               </button>
             ))}
           </div>
@@ -145,10 +145,10 @@ export default function IvfFaqsContent() {
         >
           <div className="mx-auto w-full max-w-[1440px]">
             <Reveal className="mb-7 sm:mb-9">
-              <p className="text-[12px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:text-[13px]">
+              <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
                 {section.categoryLabel}
               </p>
-              <h2 className="font-serif mt-2 max-w-3xl text-[1.9rem] leading-tight font-bold tracking-tight sm:text-[2.4rem]">
+              <h2 className="font-serif mt-2 max-w-3xl text-[1.9rem] leading-tight font-bold tracking-tight text-black sm:text-[2.4rem]">
                 {section.title}
               </h2>
             </Reveal>

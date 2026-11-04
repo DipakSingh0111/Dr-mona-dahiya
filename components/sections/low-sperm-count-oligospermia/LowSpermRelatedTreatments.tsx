@@ -51,18 +51,18 @@ export default function LowSpermRelatedTreatments() {
             <StaggerItem key={idx}>
               <Link
                 href={item.href}
-                className="group relative flex h-full flex-col justify-between rounded-2xl border border-white/10 bg-[#091a3c]/70 p-5 sm:p-6 backdrop-blur-md transition-all duration-200 hover:-translate-y-1 hover:border-[#0047ca]/60 hover:bg-[#0c224e]/85"
+                className="group relative flex h-full flex-col justify-between rounded-2xl border border-[#fde2ec] bg-white p-5 sm:p-6 backdrop-blur-md transition-all duration-200 hover:-translate-y-1 hover:border-blue/60 hover:bg-[#fff0f5]"
               >
                 <div>
                   <div className="flex items-start justify-between gap-3">
-                    <h3 className="font-serif text-[1.05rem] font-semibold text-white transition-colors group-hover:text-sky-300 sm:text-[1.12rem] leading-snug">
+                    <h3 className="font-serif text-[1.05rem] font-semibold text-black transition-colors group-hover:text-sky-300 sm:text-[1.12rem] leading-snug">
                       {item.title}
                     </h3>
-                    <span className="flex size-6 shrink-0 items-center justify-center text-[#e83e74] transition-transform duration-200 group-hover:translate-x-1 group-hover:text-[#f9a8d4]">
+                    <span className="flex size-6 shrink-0 items-center justify-center text-rose transition-transform duration-200 group-hover:translate-x-1 group-hover:text-rose">
                       <FaArrowRight className="size-3" />
                     </span>
                   </div>
-                  <p className="mt-2.5 text-[12.5px] leading-relaxed text-slate-300 group-hover:text-slate-200 sm:text-[13px]">
+                  <p className="mt-2.5 text-[12.5px] leading-relaxed text-black group-hover:text-black sm:text-[13px]">
                     {item.subtitle}
                   </p>
                 </div>

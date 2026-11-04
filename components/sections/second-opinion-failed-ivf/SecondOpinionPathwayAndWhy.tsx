@@ -10,8 +10,8 @@ export default function SecondOpinionPathwayAndWhy() {
       step: "1",
       title: "Record review and timeline",
       desc: "Detailed look at past protocols, hormone curves and embryology logs.",
-      color: "from-[#e83e74] to-[#f43f5e]",
-      border: "hover:border-[#e83e74]/50",
+      color: "from-rose to-[#f43f5e]",
+      border: "hover:border-rose/50",
     },
     {
       step: "2",
@@ -21,15 +21,15 @@ export default function SecondOpinionPathwayAndWhy() {
           3D sonohysterography or{" "}
           <Link
             href="/treatments"
-            className="font-medium text-[#0047ca] underline underline-offset-2 hover:text-[#00369e]"
+            className="font-medium text-blue underline underline-offset-2 hover:text-blue-dark"
           >
             Operative Hysteroscopy
           </Link>{" "}
           for subtle septa, polyps or adhesions. Endometrial biopsy with CD138 staining for chronic endometritis.
         </>
       ),
-      color: "from-[#0047ca] to-[#0284c7]",
-      border: "hover:border-[#0047ca]/50",
+      color: "from-blue to-[var(--blue)]",
+      border: "hover:border-blue/50",
     },
     {
       step: "3",
@@ -39,7 +39,7 @@ export default function SecondOpinionPathwayAndWhy() {
           Halosperm testing through the{" "}
           <Link
             href="/sperm-dna-fragmentation"
-            className="font-medium text-[#0047ca] underline underline-offset-2 hover:text-[#00369e]"
+            className="font-medium text-blue underline underline-offset-2 hover:text-blue-dark"
           >
             Sperm DNA Fragmentation Test
           </Link>
@@ -57,15 +57,15 @@ export default function SecondOpinionPathwayAndWhy() {
           Deciding whether an{" "}
           <Link
             href="/treatments"
-            className="font-medium text-[#0047ca] underline underline-offset-2 hover:text-[#00369e]"
+            className="font-medium text-blue underline underline-offset-2 hover:text-blue-dark"
           >
             ERA Test
           </Link>{" "}
           is needed after repeated blastocyst failure.
         </>
       ),
-      color: "from-[#0d9488] to-[#14b8a6]",
-      border: "hover:border-[#0d9488]/50",
+      color: "from-blue to-[var(--blue)]",
+      border: "hover:border-blue/50",
     },
     {
       step: "5",
@@ -81,25 +81,25 @@ export default function SecondOpinionPathwayAndWhy() {
       title: "Find the cause before repeating",
       desc: "Dr. Dahiya identifies why earlier cycles failed before starting new treatment, instead of repeating the same protocol.",
       icon: FaSearch,
-      iconColor: "text-[#e83e74]",
-      iconBg: "bg-[#e83e74]/10",
-      border: "hover:border-[#e83e74]/40",
+      iconColor: "text-rose",
+      iconBg: "bg-rose/10",
+      border: "hover:border-rose/40",
     },
     {
       title: "Direct physician care",
       desc: "Consultations, stimulation planning, scans and embryo transfers are handled by Dr. Dahiya herself.",
       icon: FaUserMd,
-      iconColor: "text-[#0047ca]",
-      iconBg: "bg-[#0047ca]/10",
-      border: "hover:border-[#0047ca]/40",
+      iconColor: "text-blue",
+      iconBg: "bg-blue/10",
+      border: "hover:border-blue/40",
     },
     {
       title: "Cleanroom laboratory standards",
       desc: "Class 10,000 cleanroom labs with benchtop mini-incubators and laser systems for blastocyst culture.",
       icon: FaHospital,
-      iconColor: "text-[#0d9488]",
-      iconBg: "bg-[#0d9488]/10",
-      border: "hover:border-[#0d9488]/40",
+      iconColor: "text-blue",
+      iconBg: "bg-blue/10",
+      border: "hover:border-blue/40",
     },
   ];
 
@@ -108,7 +108,7 @@ export default function SecondOpinionPathwayAndWhy() {
       <div className="relative mx-auto w-full max-w-[1440px]">
         {/* Step-by-Step Second-Opinion Pathway */}
         <Reveal className="mb-6 sm:mb-8">
-          <p className="text-[12px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:text-[13px]">
+          <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
             How it works
           </p>
           <h2 className="font-serif mt-1 text-[1.65rem] leading-[1.2] font-normal tracking-tight text-slate-900 sm:text-[2.1rem] lg:text-[2.35rem]">
@@ -127,15 +127,15 @@ export default function SecondOpinionPathwayAndWhy() {
               >
                 <div className="flex items-center gap-3">
                   <span
-                    className={`inline-flex size-8 shrink-0 items-center justify-center rounded-lg text-[13px] font-bold text-white shadow-sm bg-gradient-to-r ${st.color}`}
+                    className={`inline-flex size-8 shrink-0 items-center justify-center rounded-lg text-[13px] font-bold text-black shadow-sm bg-gradient-to-r ${st.color}`}
                   >
                     {st.step}
                   </span>
-                  <h3 className="text-[15px] font-bold text-slate-900 group-hover:text-[#0047ca] transition-colors sm:text-[16px]">
+                  <h3 className="text-[15px] font-bold text-slate-900 group-hover:text-blue transition-colors sm:text-[16px]">
                     {st.title}
                   </h3>
                 </div>
-                <div className="mt-3 text-[13px] leading-relaxed text-slate-600 sm:text-[13.5px]">
+                <div className="mt-3 text-[13px] leading-relaxed text-black sm:text-[13.5px]">
                   {st.desc}
                 </div>
               </div>
@@ -146,7 +146,7 @@ export default function SecondOpinionPathwayAndWhy() {
         {/* Why Consult Dr. Mona Dahiya for a Second Opinion? */}
         <div className="mt-12 sm:mt-16">
           <Reveal className="mb-6 sm:mb-8">
-            <p className="text-[12px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:text-[13px]">
+            <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
               Expertise &amp; authority
             </p>
             <h2 className="font-serif mt-1 text-[1.65rem] leading-[1.2] font-normal tracking-tight text-slate-900 sm:text-[2.1rem] lg:text-[2.35rem]">
@@ -168,10 +168,10 @@ export default function SecondOpinionPathwayAndWhy() {
                       <Icon className="size-5" />
                     </div>
                     <div className="min-w-0 flex-1">
-                      <h3 className="text-[15px] font-bold text-slate-900 group-hover:text-[#0047ca] transition-colors sm:text-[16px]">
+                      <h3 className="text-[15px] font-bold text-slate-900 group-hover:text-blue transition-colors sm:text-[16px]">
                         {item.title}
                       </h3>
-                      <p className="mt-1.5 text-[13.5px] leading-relaxed text-slate-600 sm:text-[14px]">
+                      <p className="mt-1.5 text-[13.5px] leading-relaxed text-black sm:text-[14px]">
                         {item.desc}
                       </p>
                     </div>

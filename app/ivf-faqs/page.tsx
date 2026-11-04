@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function IvfFaqsPage() {
   return (
-    <main className="flex min-h-screen flex-col bg-[#061532]">
+    <main className="flex min-h-screen flex-col bg-pink">
       <IvfFaqsHero />
 
       <SectionReveal>
@@ -45,14 +45,14 @@ export default function IvfFaqsPage() {
               Speak directly with our clinical team on{" "}
               <a
                 href="tel:+919267982924"
-                className="text-white/85 hover:text-white"
+                className="text-blue hover:text-blue-dark"
               >
                 +91 92679 82924
               </a>{" "}
               or{" "}
               <a
                 href="mailto:info@drmonadahiya.com"
-                className="text-white/85 hover:text-white"
+                className="text-blue hover:text-blue-dark"
               >
                 info@drmonadahiya.com
               </a>

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 
 export default function LowAmhPage() {
   return (
-    <main className="flex min-h-screen flex-col bg-[#061532]">
+    <main className="flex min-h-screen flex-col bg-pink">
       <LowAmhHero />
 
       <SectionReveal>

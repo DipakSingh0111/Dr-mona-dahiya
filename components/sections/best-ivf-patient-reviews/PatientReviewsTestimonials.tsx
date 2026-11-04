@@ -153,7 +153,7 @@ export default function PatientReviewsTestimonials() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#061532] px-4 py-5 text-white sm:px-6 sm:py-6 lg:px-8 lg:py-7">
+    <section className="relative overflow-hidden bg-pink px-4 py-5 text-ink sm:px-6 sm:py-6 lg:px-8 lg:py-7">
       <div className="relative mx-auto w-full max-w-[1440px]">
         {/* Horizontal scroll track */}
         <div
@@ -164,25 +164,25 @@ export default function PatientReviewsTestimonials() {
           {testimonials.map((item) => (
             <article
               key={item.id}
-              className="flex w-[86vw] shrink-0 snap-start flex-col justify-between rounded-2xl border border-white/10 bg-[#091a3c]/75 p-6 backdrop-blur-md transition-all duration-300 hover:border-white/20 hover:bg-[#0c224e] sm:w-[calc(50%-8px)] sm:min-w-[320px] lg:w-[calc(33.333%-11px)] lg:min-w-[360px]"
+              className="flex w-[86vw] shrink-0 snap-start flex-col justify-between rounded-2xl border border-[#fde2ec] bg-white p-6 backdrop-blur-md transition-all duration-300 hover:border-[#fbcfe0] hover:bg-[#fff0f5] sm:w-[calc(50%-8px)] sm:min-w-[320px] lg:w-[calc(33.333%-11px)] lg:min-w-[360px]"
             >
               <div>
-                <p className="font-serif text-[1.12rem] font-bold leading-snug text-white sm:text-[1.18rem] lg:text-[1.22rem]">
-                  <span className="text-[#e83e74]">“</span>
+                <p className="font-serif text-[1.12rem] font-bold leading-snug text-black sm:text-[1.18rem] lg:text-[1.22rem]">
+                  <span className="text-rose">“</span>
                   {item.quote}
-                  <span className="text-[#e83e74]">”</span>
+                  <span className="text-rose">”</span>
                 </p>
               </div>
 
               <div className="mt-6 flex items-center gap-3">
-                <div className="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#381a28] text-[12.5px] font-bold text-[#e83e74]">
+                <div className="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#381a28] text-[12.5px] font-bold text-rose">
                   {item.initials}
                 </div>
                 <div className="min-w-0">
-                  <h4 className="truncate text-[14px] font-bold text-white sm:text-[14.5px]">
+                  <h4 className="truncate text-[14px] font-bold text-black sm:text-[14.5px]">
                     {item.author}
                   </h4>
-                  <p className="text-[12px] text-slate-400">{item.type}</p>
+                  <p className="text-[12px] text-black">{item.type}</p>
                 </div>
               </div>
             </article>
@@ -205,7 +205,7 @@ export default function PatientReviewsTestimonials() {
               type="button"
               onClick={() => handleScroll("left")}
               aria-label="Previous testimonial"
-              className="flex size-6 cursor-pointer items-center justify-center rounded-full bg-white/10 text-white/70 transition-all hover:bg-white/20 hover:text-white active:scale-95 sm:size-7"
+              className="flex size-6 cursor-pointer items-center justify-center rounded-full bg-white/10 text-black transition-all hover:bg-white/20 hover:text-white active:scale-95 sm:size-7"
             >
               <FaChevronLeft className="size-2.5 sm:size-3" />
             </button>
@@ -213,7 +213,7 @@ export default function PatientReviewsTestimonials() {
               type="button"
               onClick={() => handleScroll("right")}
               aria-label="Next testimonial"
-              className="flex size-6 cursor-pointer items-center justify-center rounded-full bg-white/10 text-white/70 transition-all hover:bg-white/20 hover:text-white active:scale-95 sm:size-7"
+              className="flex size-6 cursor-pointer items-center justify-center rounded-full bg-white/10 text-black transition-all hover:bg-white/20 hover:text-white active:scale-95 sm:size-7"
             >
               <FaChevronRight className="size-2.5 sm:size-3" />
             </button>

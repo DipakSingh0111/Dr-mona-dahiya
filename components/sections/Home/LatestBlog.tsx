@@ -33,22 +33,22 @@ export default function LatestBlog() {
         <div className="mb-6 flex flex-col items-start justify-between gap-5 sm:mb-8 sm:flex-row sm:items-end">
           <div className="w-full text-center sm:max-w-xl sm:text-left">
             <div className="mb-3.5 flex items-center justify-center gap-2.5 sm:justify-start sm:gap-3">
-              <span className="h-px w-7 shrink-0 bg-[#e83e74] sm:w-12" />
-              <span className="text-[11px] font-bold tracking-[0.13em] text-[#e83e74] uppercase sm:whitespace-nowrap sm:text-[13px] sm:tracking-[0.16em]">
+              <span className="h-px w-7 shrink-0 bg-rose sm:w-12" />
+              <span className="text-[11px] font-bold tracking-[0.13em] text-rose uppercase sm:whitespace-nowrap sm:text-[13px] sm:tracking-[0.16em]">
                 {eyebrow}
               </span>
-              <span className="h-px w-7 shrink-0 bg-[#e83e74] sm:w-12" />
+              <span className="h-px w-7 shrink-0 bg-rose sm:w-12" />
             </div>
 
-            <h2 className="font-display text-2xl leading-[1.14] font-bold tracking-tight text-[#0f2438] sm:whitespace-nowrap sm:text-3xl lg:text-[2.2rem] xl:text-[2.75rem]">
+            <h2 className="font-display text-2xl leading-[1.14] font-bold tracking-tight text-ink sm:whitespace-nowrap sm:text-3xl lg:text-[2.2rem] xl:text-[2.75rem]">
               {titlePrefix}{" "}
-              <span className="text-[#e83e74]">{titleHighlight}</span>
+              <span className="text-rose">{titleHighlight}</span>
             </h2>
           </div>
 
           <a
             href={cta.href}
-            className="inline-flex shrink-0 items-center gap-2 self-center rounded-full border border-[#f0a8bc] bg-white px-5 py-2.5 text-[13px] font-semibold whitespace-nowrap text-[#e83e74] transition hover:bg-[#fff5f8] sm:self-auto"
+            className="inline-flex shrink-0 items-center gap-2 self-center rounded-full border border-[#f0a8bc] bg-white px-5 py-2.5 text-[13px] font-semibold whitespace-nowrap text-rose transition hover:bg-[#fff5f8] sm:self-auto"
           >
             {cta.label}
             <FaArrowRight className="size-3" />
@@ -60,18 +60,18 @@ export default function LatestBlog() {
             <StaggerItem key={item.id} variant="scaleIn" className="h-full">
               <article className="group flex h-full min-h-[210px] flex-col justify-between rounded-[22px] border border-[#fde2ec] bg-white p-6 shadow-[0_10px_30px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-[#f8b4cb] hover:shadow-[0_18px_40px_rgba(232,62,116,0.12)] sm:p-7">
                 <div>
-                  <p className="text-[13px] font-bold tracking-wide text-[#e83e74]">
+                  <p className="text-[13px] font-bold tracking-wide text-rose">
                     {item.category} • {item.date}
                   </p>
 
-                  <h3 className="font-display mt-3 text-[19px] leading-snug font-bold tracking-tight text-[#0f2438] transition-colors group-hover:text-[#e83e74] sm:text-[21px]">
+                  <h3 className="font-display mt-3 text-[19px] leading-snug font-bold tracking-tight text-ink transition-colors group-hover:text-rose sm:text-[21px]">
                     <a href={item.href}>{item.title}</a>
                   </h3>
                 </div>
 
                 <a
                   href={item.href}
-                  className="mt-6 inline-flex w-fit items-center gap-1.5 border-b border-[#e83e74] pb-0.5 text-[13.5px] font-semibold text-[#e83e74] transition-all group-hover:gap-2.5"
+                  className="mt-6 inline-flex w-fit items-center gap-1.5 border-b border-rose pb-0.5 text-[13.5px] font-semibold text-rose transition-all group-hover:gap-2.5"
                 >
                   <span>Read article</span>
                   <span>→</span>

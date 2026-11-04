@@ -27,13 +27,13 @@ export const metadata: Metadata = {
 
 export default function BestIuiDoctorInNoidaPage() {
   return (
-    <main className="flex min-h-screen flex-col bg-[#061532]">
+    <main className="flex min-h-screen flex-col bg-pink">
       {/* 1. Hero: IUI Treatment in Noida (Image 1) */}
       <IuiTreatmentHero />
 
       {/* 2. Medical Council Registration Numbers (Image 2 Top) */}
       <SectionReveal>
-        <MedicalRegistration dark={true} />
+        <MedicalRegistration />
       </SectionReveal>
 
       {/* 3. More about IUI (Image 2 Bottom) */}

@@ -68,13 +68,13 @@ export default function IuiReviewsAndCost() {
         {/* ================= SECTION 1: What Patients Say About IUI with Dr. Mona ================= */}
         <div id="patient-reviews" className="mb-14 sm:mb-16 lg:mb-20">
           <Reveal variant="fadeUp">
-            <p className="text-[12px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:text-[13px]">
+            <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
               Patient reviews
             </p>
-            <h2 className="font-serif mt-1 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-[#0a1d37] sm:text-[2.2rem] lg:text-[2.45rem]">
+            <h2 className="font-serif mt-1 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-navy sm:text-[2.2rem] lg:text-[2.45rem]">
               What Patients Say About IUI with Dr. Mona
             </h2>
-            <p className="mt-2 text-[14px] text-slate-600 sm:text-[15px]">
+            <p className="mt-2 text-[14px] text-black sm:text-[15px]">
               Reviews from patients who mention IUI. These are individual experiences in patients&apos; own words.
             </p>
           </Reveal>
@@ -82,18 +82,18 @@ export default function IuiReviewsAndCost() {
           <Stagger delay={0.04} className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-5">
             {reviews.map((rev, idx) => (
               <StaggerItem key={idx}>
-                <div className="relative flex h-full flex-col justify-between rounded-2xl border border-slate-200 bg-slate-50/70 p-5 sm:p-6 transition-all duration-300 hover:border-[#e83e74]/40 hover:bg-white hover:shadow-md">
+                <div className="relative flex h-full flex-col justify-between rounded-2xl border border-slate-200 bg-slate-50/70 p-5 sm:p-6 transition-all duration-300 hover:border-rose/40 hover:bg-white hover:shadow-md">
                   <p className="text-[13px] leading-relaxed text-slate-700 sm:text-[13.5px]">
                     {rev.body}
                   </p>
 
                   <div className="mt-5 flex items-center gap-3 pt-3 border-t border-slate-200">
-                    <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-[#e83e74] text-white font-bold text-sm shadow-[0_2px_8px_rgba(232,62,116,0.35)]">
+                    <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-rose text-white font-bold text-sm shadow-[0_2px_8px_rgba(232,62,116,0.35)]">
                       {rev.initial}
                     </span>
                     <div>
-                      <p className="text-[13px] font-semibold text-[#0a1d37]">{rev.name}</p>
-                      <p className="text-[11.5px] text-slate-500">{rev.source}</p>
+                      <p className="text-[13px] font-semibold text-navy">{rev.name}</p>
+                      <p className="text-[11.5px] text-black">{rev.source}</p>
                     </div>
                   </div>
                 </div>
@@ -105,7 +105,7 @@ export default function IuiReviewsAndCost() {
           <Reveal variant="fadeUp" delay={0.12} className="mt-6">
             <Link
               href="/best-ivf-patient-reviews"
-              className="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-5 py-2.5 text-[13px] font-semibold text-[#0a1d37] shadow-sm transition-all hover:border-[#e83e74] hover:text-[#e83e74] sm:text-[13.5px]"
+              className="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-5 py-2.5 text-[13px] font-semibold text-navy shadow-sm transition-all hover:border-rose hover:text-rose-dark sm:text-[13.5px]"
             >
               Read All Patient Reviews
             </Link>
@@ -115,13 +115,13 @@ export default function IuiReviewsAndCost() {
         {/* ================= SECTION 2: What Affects the Cost of IUI ================= */}
         <div>
           <Reveal variant="fadeUp">
-            <p className="text-[12px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:text-[13px]">
+            <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
               Transparency
             </p>
-            <h2 className="font-serif mt-1 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-[#0a1d37] sm:text-[2.2rem] lg:text-[2.45rem]">
+            <h2 className="font-serif mt-1 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-navy sm:text-[2.2rem] lg:text-[2.45rem]">
               What Affects the Cost of IUI
             </h2>
-            <p className="mt-2.5 max-w-3xl text-[14px] leading-relaxed text-slate-600 sm:text-[15px]">
+            <p className="mt-2.5 max-w-3xl text-[14px] leading-relaxed text-black sm:text-[15px]">
               IUI is an accessible first-line option with clear component fees. The total is ₹15,000 per completed cycle.
             </p>
           </Reveal>
@@ -130,19 +130,19 @@ export default function IuiReviewsAndCost() {
           <Stagger delay={0.04} className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 sm:gap-5">
             {costCards.map((card, idx) => (
               <StaggerItem key={idx}>
-                <div className="relative flex h-full flex-col justify-between rounded-2xl border border-slate-200 bg-gradient-to-b from-white to-slate-50 p-5 sm:p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#e83e74]/40 hover:shadow-md">
+                <div className="relative flex h-full flex-col justify-between rounded-2xl border border-slate-200 bg-gradient-to-b from-white to-slate-50 p-5 sm:p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-rose/40 hover:shadow-md">
                   <div>
                     {/* Icon Pill + Title */}
                     <div className="flex items-center gap-3">
-                      <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-[#e83e74] text-white shadow-[0_2px_8px_rgba(232,62,116,0.35)]">
+                      <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-rose text-white shadow-[0_2px_8px_rgba(232,62,116,0.35)]">
                         {card.icon}
                       </span>
-                      <h3 className="font-serif text-[1rem] font-semibold text-[#0a1d37] leading-snug">
+                      <h3 className="font-serif text-[1rem] font-semibold text-navy leading-snug">
                         {card.title}
                       </h3>
                     </div>
 
-                    <p className="mt-4 text-[13px] leading-relaxed text-slate-600 sm:text-[13.5px]">
+                    <p className="mt-4 text-[13px] leading-relaxed text-black sm:text-[13.5px]">
                       {card.description}
                     </p>
                   </div>

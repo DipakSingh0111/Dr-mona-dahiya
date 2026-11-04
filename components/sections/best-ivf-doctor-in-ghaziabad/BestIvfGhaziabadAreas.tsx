@@ -55,17 +55,17 @@ export default function BestIvfGhaziabadAreas() {
           <StaggerItem key={area.title}>
             <Link
               href="#book-consultation"
-              className="group relative flex min-h-[96px] flex-col justify-between rounded-2xl border border-white/10 bg-[#0a1f45]/80 p-5 transition-all hover:border-[#e83e74]/40 hover:bg-[#0b1f48]"
+              className="group relative flex min-h-[96px] flex-col justify-between rounded-2xl border border-[#fde2ec] bg-white/80 p-5 transition-all hover:border-rose/40 hover:bg-pink"
             >
               <div>
-                <h3 className="text-[15px] leading-snug font-bold text-white sm:text-[15.5px]">
+                <h3 className="text-[15px] leading-snug font-bold text-black sm:text-[15.5px]">
                   {area.title}
                 </h3>
-                <p className="mt-1.5 text-[12.5px] text-white/55">
+                <p className="mt-1.5 text-[12.5px] text-black">
                   {area.subtitle}
                 </p>
               </div>
-              <span className="mt-3 self-end text-[#e83e74] transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+              <span className="mt-3 self-end text-rose transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
                 <FaExternalLinkAlt className="size-3.5" />
               </span>
             </Link>

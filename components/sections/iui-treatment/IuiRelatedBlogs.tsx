@@ -45,14 +45,14 @@ export default function IuiRelatedBlogs() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-[#061532] px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-14 border-t border-white/10">
+    <section className="relative overflow-hidden bg-white px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-14 border-t border-slate-100">
       <div className="relative mx-auto w-full max-w-[1440px]">
         <Reveal variant="fadeUp">
-          <span className="text-[12px] font-semibold tracking-wider text-[#e83e74] uppercase sm:text-[13px]">
+          <span className="text-[12px] font-semibold tracking-wider text-rose uppercase sm:text-[13px]">
             Blog Posts
           </span>
 
-          <h2 className="font-serif mt-2 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-white sm:text-[2.2rem] lg:text-[2.45rem]">
+          <h2 className="font-serif mt-2 text-[1.85rem] leading-[1.2] font-bold tracking-tight text-ink sm:text-[2.2rem] lg:text-[2.45rem]">
             Things you may be interested in.
           </h2>
         </Reveal>
@@ -63,27 +63,31 @@ export default function IuiRelatedBlogs() {
             <StaggerItem key={idx}>
               <Link
                 href={item.href}
-                className="group flex h-full flex-col justify-between rounded-2xl border border-white/10 bg-[#091a3c]/75 p-5 backdrop-blur-md transition-all duration-200 hover:-translate-y-0.5 hover:border-[#0047ca]/50 hover:bg-[#0c224e] hover:shadow-[0_8px_24px_rgba(0,0,0,0.3)] sm:p-6"
+                className="group flex h-full flex-col justify-between rounded-2xl border border-[#fde2ec] bg-white p-5 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-[#fbcfe0] hover:bg-[#fff0f5] hover:shadow-md sm:p-6"
               >
                 <div>
-                  <h3 className="font-serif text-[1.1rem] font-medium text-white transition-colors group-hover:text-teal-300 sm:text-[1.2rem]">
+                  <h3 className="font-serif text-[1.1rem] font-bold text-ink transition-colors group-hover:text-rose sm:text-[1.2rem]">
                     {item.title}
                   </h3>
                   {item.desc ? (
-                    <p className="mt-2.5 text-[12.5px] leading-relaxed text-slate-300">
+                    <p className="mt-2 text-[12.5px] leading-relaxed text-slate-600 sm:text-[13px]">
                       {item.desc}
                     </p>
                   ) : null}
-                  {item.isBlog ? (
-                    <span className="mt-3 inline-block text-[11px] font-medium text-slate-400">
-                      Blog Post
-                    </span>
-                  ) : null}
                 </div>
 
-                <div className="mt-6 flex justify-end">
-                  <span className="flex size-7 items-center justify-center rounded-full bg-white/5 text-slate-400 transition-all duration-200 group-hover:bg-[#e83e74] group-hover:text-white">
-                    <FaArrowRight className="size-2.5" />
+                <div className="mt-5 flex items-center justify-between border-t border-[#fde2ec]/60 pt-4">
+                  {item.isBlog ? (
+                    <span className="text-[11.5px] font-medium text-slate-500">
+                      Blog Post
+                    </span>
+                  ) : (
+                    <span className="text-[11.5px] font-semibold text-rose">
+                      Learn more
+                    </span>
+                  )}
+                  <span className="flex size-7 items-center justify-center rounded-full bg-[#fff0f5] text-rose transition-all duration-200 group-hover:bg-rose group-hover:text-white">
+                    <FaArrowRight className="size-2.5 transition-transform group-hover:translate-x-0.5" />
                   </span>
                 </div>
               </Link>
@@ -94,4 +98,3 @@ export default function IuiRelatedBlogs() {
     </section>
   );
 }
-

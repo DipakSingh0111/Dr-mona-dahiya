@@ -48,15 +48,15 @@ export default function LowAmhJourneys() {
 
       <div className="relative mx-auto w-full max-w-[1440px]">
         <Reveal className="max-w-3xl">
-          <span className="text-[12px] font-semibold tracking-wider text-[#e83e74] uppercase">
+          <span className="text-[12px] font-semibold tracking-wider text-rose uppercase">
             Patient stories
           </span>
-          <h2 className="font-serif mt-1 text-[2rem] leading-[1.18] font-normal tracking-tight text-[#0f2438] sm:text-[2.4rem] lg:text-[2.65rem]">
+          <h2 className="font-serif mt-1 text-[2rem] leading-[1.18] font-normal tracking-tight text-black sm:text-[2.4rem] lg:text-[2.65rem]">
             Low AMH Journeys in
             <br />
             Patients&apos; Own Words
           </h2>
-          <p className="mt-2 text-[14px] leading-relaxed text-[#64748b] sm:text-[15px]">
+          <p className="mt-2 text-[14px] leading-relaxed text-black sm:text-[15px]">
             Reviews from women who were treated for low ovarian reserve by Dr.
             Mona Dahiya.
           </p>
@@ -68,30 +68,30 @@ export default function LowAmhJourneys() {
         >
           {reviews.map((rev, idx) => (
             <StaggerItem key={idx}>
-              <div className="group flex h-full flex-col justify-between rounded-2xl border border-[#f5c9d6]/70 bg-white p-6 shadow-[0_8px_28px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-[#e83e74]/40 hover:shadow-[0_14px_36px_rgba(232,62,116,0.12)]">
+              <div className="group flex h-full flex-col justify-between rounded-2xl border border-[#f5c9d6]/70 bg-white p-6 shadow-[0_8px_28px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-rose/40 hover:shadow-[0_14px_36px_rgba(232,62,116,0.12)]">
                 <div>
-                  <div className="mb-3 text-[#e83e74]/50">
+                  <div className="mb-3 text-rose/50">
                     <FaQuoteLeft className="h-4 w-4" />
                   </div>
                   {rev.title ? (
-                    <h3 className="font-serif mb-2 text-[18px] font-normal text-[#0f2438]">
+                    <h3 className="font-serif mb-2 text-[18px] font-normal text-black">
                       {rev.title}
                     </h3>
                   ) : null}
-                  <p className="text-[13.5px] leading-relaxed text-[#475569]">
+                  <p className="text-[13.5px] leading-relaxed text-black">
                     {rev.body}
                   </p>
                 </div>
 
                 <div className="mt-6 flex items-center gap-3 border-t border-[#fde2ec] pt-4">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#e83e74] text-[15px] font-bold text-white shadow-md">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-rose text-[15px] font-bold text-white shadow-md">
                     {rev.avatarLetter}
                   </div>
                   <div>
-                    <p className="text-[14px] font-bold text-[#0f2438]">
+                    <p className="text-[14px] font-bold text-black">
                       {rev.author}
                     </p>
-                    <p className="text-[11.5px] text-[#94a3b8]">{rev.source}</p>
+                    <p className="text-[11.5px] text-black">{rev.source}</p>
                   </div>
                 </div>
               </div>
@@ -102,7 +102,7 @@ export default function LowAmhJourneys() {
         <div className="mt-7">
           <Link
             href="/about-mona-dahiya#reviews"
-            className="inline-flex items-center justify-center rounded-full border border-[#e83e74]/40 bg-white px-6 py-2.5 text-[13px] font-semibold text-[#0f2438] transition-all duration-200 hover:border-[#e83e74] hover:bg-[#e83e74] hover:text-white hover:shadow-lg active:scale-95"
+            className="inline-flex items-center justify-center rounded-full border border-rose/40 bg-white px-6 py-2.5 text-[13px] font-semibold text-black transition-all duration-200 hover:border-rose hover:bg-rose-dark hover:text-white hover:shadow-lg active:scale-95"
           >
             Read All Patient Reviews
           </Link>

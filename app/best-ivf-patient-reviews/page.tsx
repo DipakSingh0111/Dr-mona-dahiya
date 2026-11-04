@@ -24,7 +24,7 @@ export default function PatientReviewsPage() {
       <PatientReviewsHero />
 
       <SectionReveal>
-        <MedicalRegistration dark={true} />
+        <MedicalRegistration />
       </SectionReveal>
 
       <SectionReveal delay={0.04}>

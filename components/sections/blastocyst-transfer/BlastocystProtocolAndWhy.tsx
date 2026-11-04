@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
@@ -79,8 +79,8 @@ export default function BlastocystProtocolAndWhy() {
   return (
     <TreatmentSection className="lg:py-14">
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute top-1/4 right-0 h-96 w-96 rounded-full bg-[#0047ca]/15 blur-3xl" />
-        <div className="absolute bottom-1/4 left-0 h-96 w-96 rounded-full bg-[#e83e74]/15 blur-3xl" />
+        <div className="absolute top-1/4 right-0 h-96 w-96 rounded-full bg-blue/15 blur-3xl" />
+        <div className="absolute bottom-1/4 left-0 h-96 w-96 rounded-full bg-rose/15 blur-3xl" />
       </div>
 
       <div className="relative">
@@ -130,9 +130,9 @@ export default function BlastocystProtocolAndWhy() {
             {/* Right Column: Doctor sitting at desk photo from screenshot */}
             <div className="flex justify-center lg:col-span-5 lg:justify-end">
               <Reveal variant="scaleIn" delay={0.1}>
-                <div className="relative overflow-hidden rounded-[20px] border-[3px] border-white/20 shadow-[0_20px_50px_rgba(0,10,40,0.45)] sm:rounded-[24px]">
+                <div className="relative overflow-hidden rounded-[20px] border-[3px] border-[#fbcfe0] shadow-[0_20px_50px_rgba(0,10,40,0.45)] sm:rounded-[24px]">
                   <Image
-                    src="/images/about-mona-dahiya/ivf-patient-reviews.jpg"
+                    src="/images/about-mona-dahiya/iui-benefits-doctor.jpg"
                     alt="Dr. Mona Dahiya - Blastocyst Transfer Expert in Clinic"
                     width={440}
                     height={520}

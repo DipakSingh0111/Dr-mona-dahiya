@@ -32,24 +32,24 @@ export default function IuiDelhiTests() {
   ];
 
   return (
-    <section className="relative overflow-hidden border-t border-white/10 bg-[#061532] px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-14">
+    <section className="relative overflow-hidden border-t border-[#fde2ec] bg-pink px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-14">
       <div className="relative mx-auto w-full max-w-[1440px]">
         <Reveal variant="fadeUp">
-          <span className="text-[12px] font-semibold tracking-wider text-[#e83e74] uppercase sm:text-[13px]">
+          <span className="text-[12px] font-semibold tracking-wider text-rose uppercase sm:text-[13px]">
             Before You Begin
           </span>
 
-          <h2 className="font-serif mt-2 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-white sm:text-[2.2rem] lg:text-[2.45rem]">
+          <h2 className="font-serif mt-2 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-black sm:text-[2.2rem] lg:text-[2.45rem]">
             Tests Required Before Starting IUI
           </h2>
 
-          <p className="mt-2.5 max-w-3xl text-[13.5px] leading-relaxed text-slate-300 sm:text-[14.5px]">
+          <p className="mt-2.5 max-w-3xl text-[13.5px] leading-relaxed text-black sm:text-[14.5px]">
             Dr Mona Dahiya would perform certain tests at her clinic in Delhi
             before she prescribes any stimulation. These tests help us identify
             if you are likely to get pregnant with IUI.
           </p>
 
-          <h3 className="font-serif mt-7 text-[1.12rem] font-semibold text-white sm:text-[1.22rem]">
+          <h3 className="font-serif mt-7 text-[1.12rem] font-semibold text-black sm:text-[1.22rem]">
             Tests Performed
           </h3>
         </Reveal>
@@ -60,16 +60,16 @@ export default function IuiDelhiTests() {
         >
           {tests.map((item) => (
             <StaggerItem key={item.num} className="h-full">
-              <div className="flex h-full flex-col rounded-2xl border border-[#e83e74]/25 bg-[#091a3c]/75 p-5 shadow-[0_0_20px_rgba(232,62,116,0.08)] backdrop-blur-md transition-all duration-300 hover:border-[#e83e74]/45 hover:bg-[#0c224e] sm:p-6">
+              <div className="flex h-full flex-col rounded-2xl border border-rose/25 bg-white p-5 shadow-[0_0_20px_rgba(232,62,116,0.08)] backdrop-blur-md transition-all duration-300 hover:border-rose/45 hover:bg-[#fff0f5] sm:p-6">
                 <div className="flex items-start gap-3">
-                  <span className="flex size-7 shrink-0 items-center justify-center rounded-lg bg-[#e83e74] text-[13px] font-bold text-white shadow-[0_2px_10px_rgba(232,62,116,0.35)]">
+                  <span className="flex size-7 shrink-0 items-center justify-center rounded-lg bg-rose text-[13px] font-bold text-white shadow-[0_2px_10px_rgba(232,62,116,0.35)]">
                     {item.num}
                   </span>
-                  <h4 className="text-[14.5px] font-bold leading-snug text-white sm:text-[15px]">
+                  <h4 className="text-[14.5px] font-bold leading-snug text-black sm:text-[15px]">
                     {item.title}
                   </h4>
                 </div>
-                <p className="mt-3 text-[13px] leading-relaxed text-slate-300 sm:text-[13.5px]">
+                <p className="mt-3 text-[13px] leading-relaxed text-black sm:text-[13.5px]">
                   {item.desc}
                 </p>
               </div>

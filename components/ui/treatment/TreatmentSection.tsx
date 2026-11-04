@@ -12,7 +12,7 @@ export function TreatmentSection({
 }) {
   return (
     <section
-      className={`relative overflow-hidden bg-[#061532] px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12 ${className}`}
+      className={`relative overflow-hidden bg-pink px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12 ${className}`}
     >
       <div className="mx-auto w-full max-w-[1440px]">{children}</div>
     </section>
@@ -31,15 +31,15 @@ export function TreatmentSectionHeader({
   return (
     <Reveal variant="fadeUp">
       {eyebrow ? (
-        <p className="text-[12px] font-semibold tracking-wide text-[#e83e74] sm:text-[13px]">
+        <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">
           {eyebrow}
         </p>
       ) : null}
-      <h2 className="font-serif mt-1 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-white sm:text-[2.2rem] lg:text-[2.45rem]">
+      <h2 className="font-serif mt-1 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-ink sm:text-[2.2rem] lg:text-[2.45rem]">
         {title}
       </h2>
       {subtitle ? (
-        <p className="mt-2 text-[14px] leading-relaxed text-slate-300 sm:text-[15px]">
+        <p className="mt-2 text-[14px] leading-relaxed text-ink/80 sm:text-[15px]">
           {subtitle}
         </p>
       ) : null}

@@ -9,17 +9,17 @@ export default function PgtWhatAndModalities() {
       title: "PGT-A (Aneuploidy Screening)",
       desc: "Screens all 23 pairs of human chromosomes for numerical abnormalities (trisomy, monosomy, or polyploidy), such as Trisomy 21 (Down syndrome), Trisomy 18 (Edwards syndrome), or Turner syndrome.",
       icon: FaDna,
-      color: "from-[#e83e74] to-[#f43f5e]",
-      iconBg: "bg-[#e83e74]/10 text-[#e83e74]",
-      border: "hover:border-[#e83e74]/50",
+      color: "from-rose to-[#f43f5e]",
+      iconBg: "bg-rose/10 text-rose",
+      border: "hover:border-rose/50",
     },
     {
       title: "PGT-M (Monogenic/Single-Gene Defects)",
       desc: "Detects known inherited single-gene conditions carried by either or both parents, such as Thalassemia, Cystic Fibrosis, Sickle Cell Anemia, Spinal Muscular Atrophy (SMA), and Huntington's disease.",
       icon: FaMicroscope,
-      color: "from-[#0047ca] to-[#0284c7]",
-      iconBg: "bg-[#0047ca]/10 text-[#0047ca]",
-      border: "hover:border-[#0047ca]/50",
+      color: "from-blue to-[var(--blue)]",
+      iconBg: "bg-blue/10 text-blue",
+      border: "hover:border-blue/50",
     },
     {
       title: "PGT-SR (Structural Rearrangements)",
@@ -36,7 +36,7 @@ export default function PgtWhatAndModalities() {
       <div className="relative mx-auto w-full max-w-[1440px]">
         {/* Top: Understanding PGT */}
         <Reveal className="mb-6 sm:mb-8">
-          <p className="text-[12px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:text-[13px]">
+          <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
             Understanding PGT
           </p>
           <h2 className="font-serif mt-1 text-[1.65rem] leading-[1.2] font-normal tracking-tight text-slate-900 sm:text-[2.1rem] lg:text-[2.35rem]">
@@ -45,7 +45,7 @@ export default function PgtWhatAndModalities() {
         </Reveal>
 
         <Reveal variant="fadeUp">
-          <div className="rounded-[22px] border border-slate-200/90 bg-gradient-to-br from-slate-50/70 via-white to-blue-50/30 p-6 shadow-[0_4px_20px_rgba(0,20,60,0.04)] sm:p-8">
+          <div className="rounded-[22px] border border-slate-200/90 bg-gradient-to-br from-slate-50/70 via-white to-blue/10 p-6 shadow-[0_4px_20px_rgba(0,20,60,0.04)] sm:p-8">
             <p className="text-[14.5px] leading-relaxed text-slate-700 sm:text-[15.5px]">
               Preimplantation Genetic Testing (PGT) bridges assisted reproduction and molecular genetics. During an IVF or ICSI cycle, embryos are cultured in benchtop incubators to the advanced blastocyst stage (Day 5 or 6). At this window, skilled embryologists extract a micro-biopsy of 4 to 6 cells from the trophectoderm (the cell layer destined to form the placenta), leaving the inner cell mass (which develops into the baby) untouched.
             </p>
@@ -58,7 +58,7 @@ export default function PgtWhatAndModalities() {
         {/* Bottom: The Three Clinical Modalities of PGT */}
         <div className="mt-12 sm:mt-16">
           <Reveal className="mb-6 sm:mb-8">
-            <p className="text-[12px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:text-[13px]">
+            <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
               Types of PGT
             </p>
             <h2 className="font-serif mt-1 text-[1.65rem] leading-[1.2] font-normal tracking-tight text-slate-900 sm:text-[2.1rem] lg:text-[2.35rem]">
@@ -82,10 +82,10 @@ export default function PgtWhatAndModalities() {
                     >
                       <Icon className="size-5" />
                     </div>
-                    <h3 className="mt-3.5 text-[15px] font-bold text-slate-900 group-hover:text-[#0047ca] transition-colors sm:text-[16px]">
+                    <h3 className="mt-3.5 text-[15px] font-bold text-slate-900 group-hover:text-blue transition-colors sm:text-[16px]">
                       {item.title}
                     </h3>
-                    <p className="mt-2 text-[13.5px] leading-relaxed text-slate-600">
+                    <p className="mt-2 text-[13.5px] leading-relaxed text-black">
                       {item.desc}
                     </p>
                   </div>

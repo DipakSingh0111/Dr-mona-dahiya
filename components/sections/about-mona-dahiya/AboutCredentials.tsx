@@ -122,20 +122,14 @@ function FeatureStat({
   description: string;
 }) {
   return (
-    <article
-      className="flex h-full flex-col justify-center rounded-[22px] px-6 py-7 text-white sm:px-7 sm:py-8"
-      style={{
-        background:
-          "linear-gradient(160deg, #3d1b28 0%, #2f1822 45%, #231119 100%)",
-      }}
-    >
-      <p className="font-serif text-[2.1rem] leading-[1.1] font-bold text-[#e8838f] sm:text-[2.5rem]">
+    <article className="flex h-full flex-col justify-center rounded-[22px] border border-[#fde2ec] bg-gradient-to-br from-[#fff7fa] to-[#fff0f5] px-6 py-7 text-ink shadow-sm sm:px-7 sm:py-8">
+      <p className="font-serif text-[2.1rem] leading-[1.1] font-bold text-rose sm:text-[2.5rem]">
         {value}
       </p>
-      <p className="mt-4 font-serif text-[1.2rem] leading-snug font-bold text-white sm:text-[1.35rem]">
+      <p className="mt-4 font-serif text-[1.2rem] leading-snug font-bold text-ink sm:text-[1.35rem]">
         {label}
       </p>
-      <p className="mt-3 text-[13px] leading-relaxed text-white/75 sm:text-[14px]">
+      <p className="mt-3 text-[13px] leading-relaxed text-slate-600 sm:text-[14px]">
         {description}
       </p>
     </article>
@@ -144,15 +138,15 @@ function FeatureStat({
 
 function EducationCard({ badge, title, institution }: QualCard) {
   return (
-    <article className="flex h-full items-start gap-3.5 rounded-[20px] border border-white/12 bg-[#091a3c]/80 p-4.5 backdrop-blur-md transition-all duration-200 hover:border-[#60a5fa]/35 hover:bg-[#0c224e] sm:gap-4 sm:p-5">
-      <span className="flex size-11 shrink-0 items-center justify-center rounded-[14px] bg-gradient-to-br from-[#0047ca] to-[#0037a3] text-[11.5px] font-bold tracking-wide text-white shadow-[0_8px_18px_rgba(0,71,202,0.35)] sm:size-12 sm:rounded-2xl sm:text-[12.5px]">
+    <article className="flex h-full items-start gap-3.5 rounded-[20px] border border-[#fde2ec] bg-white p-4.5 shadow-[0_8px_24px_rgba(232,62,116,0.05)] transition-all duration-200 hover:border-[#f8b4cb] hover:bg-[#fff0f5] sm:gap-4 sm:p-5">
+      <span className="flex size-11 shrink-0 items-center justify-center rounded-[14px] bg-gradient-to-br from-blue to-blue-dark text-[11.5px] font-bold tracking-wide text-white shadow-[0_8px_18px_rgba(0,71,202,0.35)] sm:size-12 sm:rounded-2xl sm:text-[12.5px]">
         {badge}
       </span>
       <div className="min-w-0 pt-0.5">
-        <h4 className="text-[14px] leading-snug font-bold text-white sm:text-[15px]">
+        <h4 className="text-[14px] leading-snug font-bold text-ink sm:text-[15px]">
           {title}
         </h4>
-        <p className="mt-1.5 text-[12px] leading-snug text-white/60 sm:text-[13px]">
+        <p className="mt-1.5 text-[12px] leading-snug text-slate-600 sm:text-[13px]">
           {institution}
         </p>
       </div>
@@ -163,7 +157,7 @@ function EducationCard({ badge, title, institution }: QualCard) {
 function LogoCard({ logo, brand, subBrand, brandColor, caption }: LogoItem) {
   return (
     <article className="flex h-full flex-col gap-2.5">
-      <div className="flex min-h-[100px] items-center justify-center rounded-2xl bg-white px-4 py-4 shadow-sm sm:min-h-[112px]">
+      <div className="flex min-h-[100px] items-center justify-center rounded-2xl border border-[#fde2ec] bg-white px-4 py-4 shadow-sm sm:min-h-[112px]">
         {logo ? (
           <div className="relative h-12 w-full sm:h-14">
             <Image
@@ -178,7 +172,7 @@ function LogoCard({ logo, brand, subBrand, brandColor, caption }: LogoItem) {
           <div className="flex flex-col items-center justify-center text-center">
             <p
               className={`text-[17px] font-black tracking-tight ${
-                brandColor || "text-[#0f2438]"
+                brandColor || "text-ink"
               }`}
             >
               {brand || caption}
@@ -191,7 +185,7 @@ function LogoCard({ logo, brand, subBrand, brandColor, caption }: LogoItem) {
           </div>
         )}
       </div>
-      <p className="text-left text-[12px] leading-snug text-white/70 sm:text-[13px]">
+      <p className="text-left text-[12px] leading-snug text-slate-600 sm:text-[13px]">
         {caption}
       </p>
     </article>
@@ -206,7 +200,10 @@ function LogoGrid({
   cols?: string;
 }) {
   return (
-    <Stagger className={`grid grid-cols-2 gap-3 sm:gap-4 ${cols}`} stagger={0.05}>
+    <Stagger
+      className={`grid grid-cols-2 gap-3 sm:gap-4 ${cols}`}
+      stagger={0.05}
+    >
       {items.map((item) => (
         <StaggerItem key={item.id} variant="scaleIn" className="h-full">
           <LogoCard {...item} />
@@ -232,14 +229,14 @@ export default function AboutCredentials() {
   return (
     <section
       id="credentials"
-      className="relative overflow-hidden bg-[#061532] px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12 text-white"
+      className="relative overflow-hidden bg-[#f5f6f8] px-4 py-8 text-ink sm:px-6 sm:py-10 lg:px-8 lg:py-12 border-t border-slate-100"
     >
       <div
         aria-hidden
         className="pointer-events-none absolute -top-24 right-[-8%] h-[420px] w-[420px] rounded-full opacity-35 blur-3xl"
         style={{
           background:
-            "radial-gradient(circle, rgba(0,71,202,0.28) 0%, transparent 68%)",
+            "radial-gradient(circle, rgba(0,71,202,0.12) 0%, transparent 68%)",
         }}
       />
       <div
@@ -247,20 +244,20 @@ export default function AboutCredentials() {
         className="pointer-events-none absolute bottom-[-12%] left-[-6%] h-[380px] w-[380px] rounded-full opacity-30 blur-3xl"
         style={{
           background:
-            "radial-gradient(circle, rgba(232,62,116,0.18) 0%, transparent 70%)",
+            "radial-gradient(circle, rgba(232,62,116,0.1) 0%, transparent 70%)",
         }}
       />
 
       <div className="relative mx-auto w-full max-w-[1440px]">
         <Reveal>
           <header className="mb-7 sm:mb-8">
-            <p className="text-[12px] font-semibold tracking-wider text-[#e83e74] uppercase sm:text-[13px]">
+            <p className="text-[12px] font-semibold tracking-wider text-rose uppercase sm:text-[13px]">
               Credentials
             </p>
-            <h2 className="mt-2 font-serif text-[1.85rem] leading-[1.2] font-normal tracking-tight text-white sm:text-[2.2rem] lg:text-[2.45rem]">
+            <h2 className="mt-2 font-serif text-[1.85rem] leading-[1.2] font-bold tracking-tight text-ink sm:text-[2.2rem] lg:text-[2.45rem]">
               Qualifications, experience &amp; recognition
             </h2>
-            <p className="mt-3 max-w-3xl text-[13.5px] leading-relaxed text-slate-300 sm:text-[14.5px]">
+            <p className="mt-3 max-w-3xl text-[13.5px] leading-relaxed text-slate-600 sm:text-[14.5px]">
               Qualifications, Publications and Awards from more than 25 Years
               Experience.
             </p>
@@ -278,8 +275,8 @@ export default function AboutCredentials() {
                   onClick={() => setActiveTab(tab.id)}
                   className={`whitespace-nowrap rounded-full px-4 py-2.5 text-[12.5px] font-semibold transition-all duration-200 cursor-pointer sm:px-5 sm:text-[13.5px] ${
                     isActive
-                      ? "bg-[#0047ca] text-white shadow-[0_4px_16px_rgba(0,71,202,0.35)] ring-1 ring-white/20"
-                      : "border border-white/20 bg-white/5 text-white/80 hover:border-white/40 hover:bg-white/10 hover:text-white"
+                      ? "bg-rose text-white shadow-[0_4px_16px_rgba(232,62,116,0.3)]"
+                      : "border border-[#fde2ec] bg-white text-slate-700 hover:border-rose hover:text-rose"
                   }`}
                 >
                   {tab.label}
@@ -303,7 +300,11 @@ export default function AboutCredentials() {
               stagger={0.06}
             >
               {educationCards.map((card) => (
-                <StaggerItem key={card.badge} variant="scaleIn" className="h-full">
+                <StaggerItem
+                  key={card.badge}
+                  variant="scaleIn"
+                  className="h-full"
+                >
                   <EducationCard {...card} />
                 </StaggerItem>
               ))}
@@ -409,10 +410,10 @@ export default function AboutCredentials() {
                       />
                     </div>
                     <div>
-                      <p className="text-[13px] leading-snug font-bold text-white sm:text-[13.5px]">
+                      <p className="text-[13px] leading-snug font-bold text-ink sm:text-[13.5px]">
                         {item.title}
                       </p>
-                      <p className="mt-1 text-[12px] leading-snug text-white/60">
+                      <p className="mt-1 text-[12px] leading-snug text-slate-600">
                         {item.subtitle}
                       </p>
                     </div>

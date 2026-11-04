@@ -1,6 +1,6 @@
-"use client";
+﻿"use client";
+import HeroBannerImage from "@/components/ui/HeroBannerImage";
 
-import Image from "next/image";
 import Link from "next/link";
 import { FaHome, FaChevronRight } from "react-icons/fa";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
@@ -17,7 +17,7 @@ export default function RecurrentMiscarriageHero() {
       className="relative overflow-hidden pt-3 pb-6 sm:pt-4 sm:pb-8 lg:pt-5 lg:pb-9"
       style={{
         background:
-          "linear-gradient(115deg, #05193d 0%, #00369e 35%, #0047ca 70%, #08286a 100%)",
+          "var(--pink)",
       }}
     >
       {/* Decorative Radial Glows matching Theme */}
@@ -26,7 +26,7 @@ export default function RecurrentMiscarriageHero() {
         className="pointer-events-none absolute top-0 right-[8%] h-[280px] w-[280px] -translate-y-1/4 rounded-full opacity-35 blur-3xl"
         style={{
           background:
-            "radial-gradient(circle, rgba(255,107,157,0.4) 0%, rgba(147,197,253,0.18) 50%, transparent 70%)",
+            "radial-gradient(circle, rgba(255,107,157,0.4) 0%, rgba(232,62,116,0.12) 50%, transparent 70%)",
         }}
       />
       <div
@@ -34,29 +34,29 @@ export default function RecurrentMiscarriageHero() {
         className="pointer-events-none absolute bottom-0 left-0 h-[240px] w-[240px] -translate-x-1/4 translate-y-1/4 rounded-full opacity-25 blur-3xl"
         style={{
           background:
-            "radial-gradient(circle, rgba(147,197,253,0.3) 0%, transparent 68%)",
+            "radial-gradient(circle, rgba(232,62,116,0.1) 0%, transparent 68%)",
         }}
       />
 
-      <div className="relative mx-auto grid w-full max-w-[1440px] grid-cols-1 items-start gap-6 px-4 sm:gap-7 sm:px-6 lg:grid-cols-12 lg:items-center lg:gap-6 lg:px-8 xl:gap-8">
+      <div className="relative mx-auto grid w-full max-w-[1440px] grid-cols-1 items-start gap-6 px-4 sm:gap-7 sm:px-6 lg:grid-cols-12 lg:items-start lg:gap-6 lg:px-8 xl:gap-8">
         <div className="min-w-0 lg:col-span-7">
           {/* Breadcrumb matching exact image: Home / Miscarriage Treatment in Noida */}
           <nav aria-label="Breadcrumb" className="mb-4 sm:mb-5">
-            <ol className="inline-flex max-w-full flex-wrap items-center gap-1.5 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 shadow-[0_8px_24px_rgba(0,20,80,0.2)] backdrop-blur-md sm:gap-2 sm:px-3.5 sm:py-2">
+            <ol className="inline-flex max-w-full flex-wrap items-center gap-1.5 rounded-full border border-rose/25 bg-white px-3 py-1.5 shadow-sm backdrop-blur-md sm:gap-2 sm:px-3.5 sm:py-2">
               <li>
                 <Link
                   href="/"
-                  className="inline-flex items-center gap-1.5 rounded-full px-1.5 py-0.5 text-[12px] font-medium text-white/75 transition-colors hover:bg-white/10 hover:text-white sm:text-[13px]"
+                  className="inline-flex items-center gap-1.5 rounded-full px-1.5 py-0.5 text-[12px] font-medium text-ink/70 transition-colors hover:bg-white hover:text-rose sm:text-[13px]"
                 >
-                  <FaHome className="size-3 text-[#f9a8d4]" />
+                  <FaHome className="size-3 text-rose" />
                   <span>Home</span>
                 </Link>
               </li>
-              <li className="text-white/40" aria-hidden="true">
+              <li className="text-ink/40" aria-hidden="true">
                 <FaChevronRight className="size-2.5" />
               </li>
               <li className="truncate">
-                <span className="rounded-full px-1.5 py-0.5 text-[12px] font-semibold text-[#f9a8d4] sm:text-[13px]">
+                <span className="rounded-full px-1.5 py-0.5 text-[12px] font-semibold text-rose sm:text-[13px]">
                   Miscarriage Treatment in Noida
                 </span>
               </li>
@@ -64,12 +64,12 @@ export default function RecurrentMiscarriageHero() {
           </nav>
 
           {/* Eyebrow: Recurrent pregnancy loss care */}
-          <p className="text-[11.5px] font-bold tracking-[0.14em] text-[#f9a8d4] uppercase sm:text-[12.5px]">
+          <p className="text-[11.5px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[12.5px]">
             Recurrent pregnancy loss care
           </p>
 
           {/* Title: Recurrent Pregnancy Loss (RPL) & Miscarriage Treatment in Noida, Ghaziabad & Delhi */}
-          <h1 className="font-serif mt-1 text-[2.1rem] leading-[1.12] font-normal tracking-tight text-white sm:text-[2.75rem] lg:text-[3.2rem]">
+          <h1 className="font-serif mt-1 text-[2.1rem] leading-[1.12] font-normal tracking-tight text-ink sm:text-[2.75rem] lg:text-[3.2rem]">
             Recurrent Pregnancy Loss (RPL) &amp; Miscarriage Treatment in Noida, Ghaziabad &amp; Delhi
           </h1>
 
@@ -77,14 +77,14 @@ export default function RecurrentMiscarriageHero() {
           <div className="mt-6 flex flex-wrap items-center gap-3 sm:gap-4">
             <a
               href="#book-consultation"
-              className="inline-flex items-center justify-center rounded-xl bg-[#e83e74] px-5 py-2.5 text-[13.5px] font-semibold text-white shadow-[0_4px_18px_rgba(232,62,116,0.35)] transition-all hover:bg-[#d42c63] hover:shadow-[0_6px_22px_rgba(232,62,116,0.5)] sm:px-6 sm:py-3 sm:text-[14.5px]"
+              className="inline-flex items-center justify-center rounded-xl bg-rose px-5 py-2.5 text-[13.5px] font-semibold text-white shadow-[0_4px_18px_rgba(232,62,116,0.35)] transition-all hover:bg-[#d42c63] hover:shadow-[0_6px_22px_rgba(232,62,116,0.5)] sm:px-6 sm:py-3 sm:text-[14.5px]"
             >
               Book In-Clinic Consultation
             </a>
 
             <a
               href="#book-consultation"
-              className="inline-flex items-center justify-center rounded-xl bg-[#0047ca] px-5 py-2.5 text-[13.5px] font-semibold text-white shadow-[0_4px_18px_rgba(0,71,202,0.35)] transition-all hover:bg-[#0038a8] hover:shadow-[0_6px_22px_rgba(0,71,202,0.5)] sm:px-6 sm:py-3 sm:text-[14.5px]"
+              className="inline-flex items-center justify-center rounded-xl bg-blue px-5 py-2.5 text-[13.5px] font-semibold text-white shadow-[0_4px_18px_rgba(0,71,202,0.35)] transition-all hover:bg-blue-dark hover:shadow-[0_6px_22px_rgba(0,71,202,0.5)] sm:px-6 sm:py-3 sm:text-[14.5px]"
             >
               Schedule Online Consultation
             </a>
@@ -94,7 +94,7 @@ export default function RecurrentMiscarriageHero() {
           <div className="mt-4">
             <Link
               href="#patient-reviews"
-              className="inline-flex items-center gap-1.5 text-[13px] font-medium text-slate-200 transition-colors hover:text-white"
+              className="inline-flex items-center gap-1.5 text-[13px] font-medium text-rose transition-colors hover:text-rose-dark"
             >
               Read Dr. Mona&apos;s Google reviews →
             </Link>
@@ -104,7 +104,7 @@ export default function RecurrentMiscarriageHero() {
           <Stagger delay={0.05} className="mt-5 flex flex-wrap items-center gap-2 sm:gap-2.5">
             {badges.map((badge, idx) => (
               <StaggerItem key={idx}>
-                <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[11.5px] font-medium text-white shadow-sm backdrop-blur-md sm:text-[12.5px]">
+                <span className="inline-flex items-center rounded-full border border-rose/25 bg-white px-3 py-1 text-[11.5px] font-medium text-ink shadow-sm backdrop-blur-md sm:text-[12.5px]">
                   {badge}
                 </span>
               </StaggerItem>
@@ -112,21 +112,10 @@ export default function RecurrentMiscarriageHero() {
           </Stagger>
         </div>
 
-        {/* Right Column: Exact Doctor Image cropped from user uploaded photo */}
-        <div className="relative mx-auto w-full max-w-[400px] lg:col-span-5 lg:max-w-[420px] xl:max-w-[440px]">
-          <Reveal variant="scaleIn">
-            <div className="relative overflow-hidden rounded-[20px] border-[3px] border-white/80 shadow-[0_20px_50px_rgba(0,10,40,0.45)] sm:rounded-[24px]">
-              <Image
-                src="/images/about-mona-dahiya/rpl-doctor.jpg"
-                alt="Dr. Mona Dahiya - Recurrent Pregnancy Loss Specialist"
-                width={360}
-                height={450}
-                className="max-h-[380px] sm:max-h-[440px] lg:max-h-[460px] w-full object-cover object-top"
-                priority
-              />
-            </div>
-          </Reveal>
-        </div>
+        <HeroBannerImage
+          src="/images/Confident-Doctor.png"
+          alt="Dr. Mona Dahiya - Recurrent Pregnancy Loss Specialist"
+        />
       </div>
     </section>
   );

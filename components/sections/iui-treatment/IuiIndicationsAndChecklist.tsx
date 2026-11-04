@@ -19,16 +19,16 @@ const cardThemes = {
     badgeShadow: "shadow-[0_4px_12px_rgba(248,95,143,0.35)]",
     hoverShadow: "hover:shadow-[0_12px_30px_rgba(230,53,110,0.15)]",
     titleColor: "text-[#831843]",
-    descColor: "text-slate-600",
+    descColor: "text-black",
   },
   teal: {
     border: "border-[#b8ebe2]",
     bg: "bg-gradient-to-br from-[#f0fbf9] via-white to-[#e6f8f5]",
-    badgeBg: "bg-gradient-to-br from-[#14b8a6] to-[#0d9488]",
+    badgeBg: "bg-gradient-to-br from-blue to-[var(--blue)]",
     badgeShadow: "shadow-[0_4px_12px_rgba(20,184,166,0.35)]",
     hoverShadow: "hover:shadow-[0_12px_30px_rgba(20,184,166,0.15)]",
-    titleColor: "text-[#134e4a]",
-    descColor: "text-slate-600",
+    titleColor: "text-black",
+    descColor: "text-black",
   },
   purple: {
     border: "border-[#dfd3fa]",
@@ -37,7 +37,7 @@ const cardThemes = {
     badgeShadow: "shadow-[0_4px_12px_rgba(118,77,232,0.35)]",
     hoverShadow: "hover:shadow-[0_12px_30px_rgba(118,77,232,0.15)]",
     titleColor: "text-[#4c1d95]",
-    descColor: "text-slate-600",
+    descColor: "text-black",
   },
   orange: {
     border: "border-[#fedab7]",
@@ -46,16 +46,16 @@ const cardThemes = {
     badgeShadow: "shadow-[0_4px_12px_rgba(235,118,41,0.35)]",
     hoverShadow: "hover:shadow-[0_12px_30px_rgba(235,118,41,0.15)]",
     titleColor: "text-[#7c2d12]",
-    descColor: "text-slate-600",
+    descColor: "text-black",
   },
   blue: {
     border: "border-[#c4e1fd]",
     bg: "bg-gradient-to-br from-[#f2f8fe] via-white to-[#e6f2fd]",
-    badgeBg: "bg-gradient-to-br from-[#3b82f6] to-[#1d4ed8]",
+    badgeBg: "bg-gradient-to-br from-[#3b82f6] to-blue-dark",
     badgeShadow: "shadow-[0_4px_12px_rgba(37,99,235,0.35)]",
     hoverShadow: "hover:shadow-[0_12px_30px_rgba(37,99,235,0.15)]",
     titleColor: "text-[#1e3a8a]",
-    descColor: "text-slate-600",
+    descColor: "text-black",
   },
   rose: {
     border: "border-[#ffc7d5]",
@@ -64,7 +64,7 @@ const cardThemes = {
     badgeShadow: "shadow-[0_4px_12px_rgba(234,49,94,0.35)]",
     hoverShadow: "hover:shadow-[0_12px_30px_rgba(234,49,94,0.15)]",
     titleColor: "text-[#881337]",
-    descColor: "text-slate-600",
+    descColor: "text-black",
   },
 };
 
@@ -81,7 +81,7 @@ const indications: IndicationCard[] = [
     description: (
       <span>
         Post-wash total motile sperm count (TMSC) of 5 to 10 million with acceptable shape. See{" "}
-        <Link href="/low-sperm-count-oligospermia" className="text-[#0047ca] underline font-semibold hover:text-[#e83e74] transition-colors">
+        <Link href="/low-sperm-count-oligospermia" className="text-blue underline font-semibold hover:text-rose transition-colors">
           Low Sperm Count &amp; Motility
         </Link>
       </span>
@@ -128,10 +128,10 @@ export default function IuiIndicationsAndChecklist() {
         {/* ================= SECTION 1: Indications ================= */}
         <div className="mb-14 sm:mb-16 lg:mb-20">
           <Reveal variant="fadeUp">
-            <p className="text-[12px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:text-[13px]">
+            <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
               Clinical breakdown
             </p>
-            <h2 className="font-serif mt-1 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-[#0a1d37] sm:text-[2.2rem] lg:text-[2.45rem]">
+            <h2 className="font-serif mt-1 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-navy sm:text-[2.2rem] lg:text-[2.45rem]">
               Indications: Who is a Good Candidate for IUI?
             </h2>
           </Reveal>
@@ -147,7 +147,7 @@ export default function IuiIndicationsAndChecklist() {
                   >
                     <div className="flex items-start gap-3.5">
                       <span
-                        className={`flex size-8 shrink-0 items-center justify-center rounded-lg ${theme.badgeBg} text-[15px] font-bold text-white ${theme.badgeShadow}`}
+                        className={`flex size-8 shrink-0 items-center justify-center rounded-lg ${theme.badgeBg} text-[15px] font-bold text-black ${theme.badgeShadow}`}
                       >
                         {item.number}
                       </span>
@@ -168,13 +168,13 @@ export default function IuiIndicationsAndChecklist() {
         {/* ================= SECTION 2: Diagnostic Checklist: Preliminary Investigations ================= */}
         <div>
           <Reveal variant="fadeUp">
-            <p className="text-[12px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:text-[13px]">
+            <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
               Before treatment
             </p>
-            <h2 className="font-serif mt-1 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-[#0a1d37] sm:text-[2.2rem] lg:text-[2.45rem]">
+            <h2 className="font-serif mt-1 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-navy sm:text-[2.2rem] lg:text-[2.45rem]">
               Diagnostic Checklist: Preliminary Investigations
             </h2>
-            <p className="mt-2 text-[14px] text-slate-600 sm:text-[15px]">
+            <p className="mt-2 text-[14px] text-black sm:text-[15px]">
               Tubal patency is mandatory. IUI only works if at least one fallopian tube is open.
             </p>
           </Reveal>
@@ -183,8 +183,8 @@ export default function IuiIndicationsAndChecklist() {
           <div className="mt-6 flex flex-col gap-3 sm:mt-7 sm:gap-3.5">
             {checklistItems.map((text, idx) => (
               <Reveal key={idx} variant="fadeUp" delay={idx * 0.04}>
-                <div className="flex items-center gap-3.5 rounded-xl border border-slate-200 bg-slate-50/70 px-4 py-3.5 transition-all duration-200 hover:border-[#14b8a6]/40 hover:bg-white hover:shadow-sm sm:px-5 sm:py-4">
-                  <span className="flex size-6 shrink-0 items-center justify-center rounded-md bg-[#14b8a6] text-white shadow-[0_2px_8px_rgba(20,184,166,0.35)]">
+                <div className="flex items-center gap-3.5 rounded-xl border border-slate-200 bg-slate-50/70 px-4 py-3.5 transition-all duration-200 hover:border-blue/40 hover:bg-white hover:shadow-sm sm:px-5 sm:py-4">
+                  <span className="flex size-6 shrink-0 items-center justify-center rounded-md bg-blue text-white shadow-[0_2px_8px_rgba(20,184,166,0.35)]">
                     <FaCheck className="size-3" />
                   </span>
                   <p className="text-[13px] leading-relaxed text-slate-700 sm:text-[14px]">

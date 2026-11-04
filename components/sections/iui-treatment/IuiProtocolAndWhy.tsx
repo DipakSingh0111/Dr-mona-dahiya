@@ -74,7 +74,7 @@ const whyPoints = [
     desc: (
       <span>
         IUI is advised only when tubes are open and sperm parameters support it, so you avoid repeat cycles when{" "}
-        <Link href="/ivf-treatment" className="text-[#f9a8d4] underline hover:text-white transition-colors">
+        <Link href="/ivf-treatment" className="text-rose underline hover:text-white transition-colors">
           IVF Treatment
         </Link>{" "}
         is the better route.
@@ -96,8 +96,8 @@ export default function IuiProtocolAndWhy() {
     <TreatmentSection className="lg:py-14">
       {/* Glows */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute top-1/4 right-0 h-96 w-96 rounded-full bg-[#0047ca]/15 blur-3xl" />
-        <div className="absolute bottom-1/4 left-0 h-96 w-96 rounded-full bg-[#e83e74]/15 blur-3xl" />
+        <div className="absolute top-1/4 right-0 h-96 w-96 rounded-full bg-blue/15 blur-3xl" />
+        <div className="absolute bottom-1/4 left-0 h-96 w-96 rounded-full bg-rose/15 blur-3xl" />
       </div>
 
       <div className="relative">
@@ -160,7 +160,7 @@ export default function IuiProtocolAndWhy() {
 
             <div className="flex justify-center lg:col-span-5 lg:justify-end">
               <Reveal variant="scaleIn" delay={0.1}>
-                <div className="relative overflow-hidden rounded-[20px] border-[3px] border-white/20 shadow-[0_20px_50px_rgba(0,10,40,0.45)] sm:rounded-[24px]">
+                <div className="relative overflow-hidden rounded-[20px] border-[3px] border-[#fbcfe0] shadow-[0_20px_50px_rgba(0,10,40,0.45)] sm:rounded-[24px]">
                   <Image
                     src="/images/about-mona-dahiya/male-infertility.jpg"
                     alt="Dr. Mona Dahiya - Senior Infertility & IUI Specialist"

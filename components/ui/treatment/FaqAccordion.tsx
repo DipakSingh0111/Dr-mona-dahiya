@@ -19,10 +19,10 @@ function FaqCard({
 }) {
   return (
     <div
-      className={`overflow-hidden rounded-2xl border bg-[#091a3c]/70 backdrop-blur-md transition-[border-color,box-shadow] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+      className={`overflow-hidden rounded-2xl border bg-white transition-[border-color,box-shadow] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
         isOpen
-          ? "border-[#e83e74]/45 shadow-[0_0_24px_rgba(232,62,116,0.12)]"
-          : "border-white/10 hover:border-[#0047ca]/50"
+          ? "border-[#fbcfe0] shadow-[0_8px_24px_rgba(232,62,116,0.1)] ring-1 ring-[#fecdd3]/40"
+          : "border-[#fde2ec] hover:border-[#f8b4cb]"
       }`}
     >
       <button
@@ -31,12 +31,14 @@ function FaqCard({
         aria-expanded={isOpen}
         className="flex w-full cursor-pointer items-center justify-between gap-4 p-5 text-left sm:p-5.5"
       >
-        <span className="font-serif text-[1rem] font-semibold text-white sm:text-[1.05rem]">
+        <span className="font-serif text-[1rem] font-semibold text-black sm:text-[1.05rem]">
           {item.question}
         </span>
         <span
-          className={`flex size-7 shrink-0 items-center justify-center rounded-full bg-white/5 text-slate-300 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-            isOpen ? "rotate-180 text-[#e83e74]" : ""
+          className={`flex size-7 shrink-0 items-center justify-center rounded-full transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+            isOpen
+              ? "rotate-180 bg-[#ffe4ee] text-rose"
+              : "bg-[#fff0f5] text-black"
           }`}
         >
           <FaChevronDown className="size-3" />
@@ -49,7 +51,7 @@ function FaqCard({
         }`}
       >
         <div className="overflow-hidden">
-          <div className="border-t border-white/5 px-5 pt-3 pb-5 text-[13px] leading-relaxed text-slate-300 sm:px-5.5 sm:text-[13.5px]">
+          <div className="border-t border-[#fde8ef] px-5 pt-3 pb-5 text-[13px] leading-relaxed text-black sm:px-5.5 sm:text-[13.5px]">
             {item.answer}
           </div>
         </div>

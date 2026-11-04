@@ -54,13 +54,13 @@ const protocols = [
 
 export default function BestIvfDelhiProtocol() {
   return (
-    <section className="relative overflow-hidden bg-[#061532] px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
+    <section className="relative overflow-hidden bg-pink px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
       <div className="mx-auto w-full max-w-[1440px]">
         <Reveal variant="fadeUp">
-          <p className="text-[12px] font-semibold tracking-wide text-[#e83e74] sm:text-[13px]">
+          <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">
             How it works
           </p>
-          <h2 className="font-serif mt-1 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-white sm:text-[2.2rem] lg:text-[2.45rem]">
+          <h2 className="font-serif mt-1 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-black sm:text-[2.2rem] lg:text-[2.45rem]">
             Step wise Protocol for IVF treatment in Delhi
           </h2>
         </Reveal>
@@ -71,12 +71,12 @@ export default function BestIvfDelhiProtocol() {
         >
           {protocols.map((item) => (
             <StaggerItem key={item.number} className="h-full">
-              <div className="relative flex h-full flex-col rounded-2xl border border-[#e83e74]/30 bg-gradient-to-b from-[#141b36] to-[#0a1024] p-5 shadow-[0_0_24px_rgba(232,62,116,0.1)] transition-all duration-300 hover:-translate-y-1 hover:border-[#e83e74]/60 hover:shadow-[0_0_32px_rgba(232,62,116,0.2)] sm:p-6">
+              <div className="relative flex h-full flex-col rounded-2xl border border-rose/30 bg-gradient-to-b from-white to-[#fff8fa] p-5 shadow-[0_0_24px_rgba(232,62,116,0.1)] transition-all duration-300 hover:-translate-y-1 hover:border-rose/60 hover:shadow-[0_0_32px_rgba(232,62,116,0.2)] sm:p-6">
                 <div className="flex items-start gap-3">
-                  <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-[#e83e74] text-[15px] font-bold text-white shadow-[0_2px_8px_rgba(232,62,116,0.4)]">
+                  <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-rose text-[15px] font-bold text-white shadow-[0_2px_8px_rgba(232,62,116,0.4)]">
                     {item.number}
                   </span>
-                  <h3 className="font-serif pt-0.5 text-[1.05rem] leading-snug font-semibold text-white sm:text-[1.12rem]">
+                  <h3 className="font-serif pt-0.5 text-[1.05rem] leading-snug font-semibold text-black sm:text-[1.12rem]">
                     {item.title}
                   </h3>
                 </div>
@@ -84,9 +84,9 @@ export default function BestIvfDelhiProtocol() {
                   {item.bullets.map((bullet) => (
                     <div
                       key={bullet}
-                      className="flex items-start gap-2.5 text-[13px] leading-relaxed text-slate-300 sm:text-[13.5px]"
+                      className="flex items-start gap-2.5 text-[13px] leading-relaxed text-black sm:text-[13.5px]"
                     >
-                      <span className="pt-0.5 text-[14px] leading-none text-[#e83e74] select-none">
+                      <span className="pt-0.5 text-[14px] leading-none text-rose select-none">
                         ↳
                       </span>
                       <p className="flex-1">{bullet}</p>

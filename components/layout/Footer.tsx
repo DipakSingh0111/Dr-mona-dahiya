@@ -43,8 +43,8 @@ function SectionTitle({
 }) {
   return (
     <div className="mb-3 flex items-center gap-2">
-      {Icon ? <Icon className="size-3.5 text-[#f48fb1]" /> : null}
-      <h3 className="text-[11px] font-bold tracking-[0.14em] text-[#f48fb1] uppercase">
+      {Icon ? <Icon className="size-3.5 text-rose" /> : null}
+      <h3 className="text-[11px] font-bold tracking-[0.14em] text-rose uppercase">
         {children}
       </h3>
     </div>
@@ -81,7 +81,7 @@ export default function Footer() {
       className="relative overflow-hidden text-white"
       style={{
         background:
-          "linear-gradient(90deg, #061e52 0%, #09296e 50%, #061e52 100%)",
+          "linear-gradient(90deg, var(--navy) 0%, var(--navy-mid) 50%, var(--navy) 100%)",
       }}
     >
       <div className="pointer-events-none absolute inset-y-0 right-0 w-[42%] opacity-[0.22]">
@@ -96,7 +96,7 @@ export default function Footer() {
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(to left, transparent, rgba(6,30,82,0.4), #061e52)",
+              "linear-gradient(to left, transparent, rgba(6,21,50,0.4), var(--navy))",
           }}
         />
       </div>
@@ -132,7 +132,7 @@ export default function Footer() {
                     aria-label={item.label}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex size-9 items-center justify-center rounded-full border border-white/25 text-white/80 transition hover:border-[#f48fb1] hover:text-[#f48fb1]"
+                    className="flex size-9 items-center justify-center rounded-full border border-white/25 text-white/80 transition hover:border-[#f48fb1] hover:text-rose"
                   >
                     <Icon className="size-3.5" />
                   </a>
@@ -158,7 +158,7 @@ export default function Footer() {
                       href={item.href}
                       className="flex items-start gap-2.5 transition hover:opacity-90"
                     >
-                      <span className="mt-0.5 flex size-7 shrink-0 items-center justify-center rounded-full bg-[#e83e74]/15 text-[#f48fb1]">
+                      <span className="mt-0.5 flex size-7 shrink-0 items-center justify-center rounded-full bg-rose/15 text-rose">
                         <Icon className="size-3" />
                       </span>
                       <span className="min-w-0 text-[12px] leading-snug text-white/85">
@@ -230,7 +230,7 @@ export default function Footer() {
             </div>
 
             <div className="mt-5 flex items-center gap-2 rounded-xl border border-white/15 bg-white/[0.04] px-3 py-2.5">
-              <FaClock className="size-3.5 shrink-0 text-[#f48fb1]" />
+              <FaClock className="size-3.5 shrink-0 text-rose" />
               <p className="text-[11.5px] leading-snug text-white/80">
                 {data.clinicHours}
               </p>

@@ -152,25 +152,25 @@ export default function RecurrentMiscarriageProtocolAndWhy() {
           <Stagger delay={0.05} className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-5">
             {reviews.map((rev, idx) => (
               <StaggerItem key={idx}>
-                <div className="relative flex h-full flex-col justify-between rounded-2xl border border-white/10 bg-[#091a3c]/70 p-5 sm:p-6 backdrop-blur-md transition-all duration-300 hover:border-[#0047ca]/50">
+                <div className="relative flex h-full flex-col justify-between rounded-2xl border border-[#fde2ec] bg-white p-5 sm:p-6 backdrop-blur-md transition-all duration-300 hover:border-blue/50">
                   <div>
                     {rev.title && (
-                      <h3 className="font-serif text-[1.05rem] font-semibold text-white mb-2 leading-snug">
+                      <h3 className="font-serif text-[1.05rem] font-semibold text-ink mb-2 leading-snug">
                         {rev.title}
                       </h3>
                     )}
-                    <p className="text-[13px] leading-relaxed text-slate-200 sm:text-[13.5px]">
+                    <p className="text-[13px] leading-relaxed text-black sm:text-[13.5px]">
                       {rev.body}
                     </p>
                   </div>
 
-                  <div className="mt-5 flex items-center gap-3 pt-3 border-t border-white/10">
-                    <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-[#e83e74] text-white font-bold text-sm shadow-[0_2px_8px_rgba(232,62,116,0.4)]">
+                  <div className="mt-5 flex items-center gap-3 pt-3 border-t border-[#fde2ec]">
+                    <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-rose text-white font-bold text-sm shadow-[0_2px_8px_rgba(232,62,116,0.4)]">
                       {rev.initial}
                     </span>
                     <div>
-                      <p className="text-[13px] font-semibold text-white">{rev.name}</p>
-                      <p className="text-[11.5px] text-slate-400">{rev.source}</p>
+                      <p className="text-[13px] font-semibold text-black">{rev.name}</p>
+                      <p className="text-[11.5px] text-black">{rev.source}</p>
                     </div>
                   </div>
                 </div>
@@ -182,7 +182,7 @@ export default function RecurrentMiscarriageProtocolAndWhy() {
           <Reveal variant="fadeUp" delay={0.15} className="mt-6">
             <a
               href="#book-consultation"
-              className="inline-flex items-center justify-center rounded-xl border border-white/15 bg-white/5 px-5 py-2.5 text-[13px] font-semibold text-white transition-all hover:border-[#e83e74]/50 hover:bg-[#e83e74]/10 sm:text-[13.5px]"
+              className="inline-flex items-center justify-center rounded-xl border border-[#fde2ec] bg-white/5 px-5 py-2.5 text-[13px] font-semibold text-white transition-all hover:border-rose/50 hover:bg-rose-dark/10 sm:text-[13.5px]"
             >
               Read All Patient Reviews
             </a>

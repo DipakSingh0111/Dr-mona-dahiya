@@ -57,20 +57,20 @@ const themes = [
 
 export default function ReviewsByTheme() {
   return (
-    <section className="relative overflow-hidden bg-[#061532] border-t border-white/10 px-4 py-6 text-white sm:px-6 sm:py-7 lg:px-8 lg:py-8">
+    <section className="relative overflow-hidden bg-pink border-t border-[#fde2ec] px-4 py-6 text-ink sm:px-6 sm:py-7 lg:px-8 lg:py-8">
       <div className="relative mx-auto w-full max-w-[1440px]">
         <Reveal className="max-w-3xl">
-          <span className="text-[12px] font-semibold tracking-wider text-[#e83e74] uppercase">
+          <span className="text-[12px] font-semibold tracking-wider text-rose uppercase">
             Genuine patient reviews
           </span>
-          <h2 className="font-serif mt-1 text-[2rem] leading-[1.18] font-normal tracking-tight text-white sm:text-[2.4rem] lg:text-[2.65rem]">
+          <h2 className="font-serif mt-1 text-[2rem] leading-[1.18] font-normal tracking-tight text-black sm:text-[2.4rem] lg:text-[2.65rem]">
             Check out reviews by category
           </h2>
-          <p className="mt-2 text-[14px] leading-relaxed text-white/70 sm:text-[15px]">
+          <p className="mt-2 text-[14px] leading-relaxed text-black sm:text-[15px]">
             Take a look at our patient reviews. Find topics that may pertain to
             you.
           </p>
-          <p className="mt-2 text-[12px] text-[#f9a8d4]">
+          <p className="mt-2 text-[12px] text-rose">
             Click on the below links to read patient reviews
           </p>
         </Reveal>
@@ -85,12 +85,12 @@ export default function ReviewsByTheme() {
               <StaggerItem key={theme.label}>
                 <Link
                   href={theme.href}
-                  className="group flex h-full items-center gap-2.5 rounded-2xl border border-white/10 bg-[#091a3c]/75 px-3.5 py-3.5 shadow-sm backdrop-blur-md transition-all duration-200 hover:-translate-y-0.5 hover:border-[#e83e74]/50 hover:bg-[#0b214c] sm:px-4"
+                  className="group flex h-full items-center gap-2.5 rounded-2xl border border-[#fde2ec] bg-white px-3.5 py-3.5 shadow-sm backdrop-blur-md transition-all duration-200 hover:-translate-y-0.5 hover:border-rose/50 hover:bg-pink sm:px-4"
                 >
-                  <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-[#e83e74]/20 text-[#f9a8d4] ring-1 ring-[#e83e74]/35 transition-colors group-hover:bg-[#e83e74] group-hover:text-white">
+                  <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-rose/20 text-rose ring-1 ring-rose/35 transition-colors group-hover:bg-rose-dark group-hover:text-rose">
                     <Icon className="size-3.5" />
                   </span>
-                  <span className="min-w-0 text-[12.5px] leading-snug font-medium text-white sm:text-[13px]">
+                  <span className="min-w-0 text-[12.5px] leading-snug font-medium text-black sm:text-[13px]">
                     {theme.label}
                   </span>
                 </Link>

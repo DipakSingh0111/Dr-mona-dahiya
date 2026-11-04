@@ -60,13 +60,13 @@ const leftFaqs: FaqItem[] = [
         </p>
         <ul className="space-y-2 pl-1">
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>
               <strong className="text-white font-semibold">Laparoscopy:</strong> Best for young women with mild, single-point distal adhesions or proximal blockages who desire natural conception and have good ovarian reserve and normal semen.
             </p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>
               <strong className="text-white font-semibold">IVF:</strong> Recommended when woman is &gt;35, has severe tubal damage, bilateral hydrosalpinx, concurrent male factor infertility, or reduced ovarian reserve, because IVF directly bypasses the tubes entirely.
             </p>
@@ -85,19 +85,19 @@ const rightFaqs: FaqItem[] = [
         <p>Common causes include:</p>
         <ul className="space-y-1.5 pl-1">
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>Pelvic Inflammatory Disease (PID) from infections such as Chlamydia or Gonorrhoea</p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>Endometriosis causing pelvic adhesions and tubal scarring</p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>Previous pelvic or abdominal surgeries (e.g., ruptured appendix, ovarian cyst removal)</p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>Past ectopic pregnancy or pelvic tuberculosis (common in India)</p>
           </li>
         </ul>

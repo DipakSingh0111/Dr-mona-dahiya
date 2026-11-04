@@ -61,23 +61,22 @@ const rightQuestions: QuestionItem[] = [
   },
   {
     id: "right-3",
-    q: "Is IUI safe?",
-    a: "IUI is a very safe procedure. Some risks are that you could have multiples, you may have an increased risk of an ectopic pregnancy, and you can become stressed from failing many cycles.",
+    q: "Can I do IUI with donor sperm?",
+    a: "Yes, you can do IUI with donor sperm from a certified ART sperm bank.",
   },
   {
     id: "right-4",
-    q: "How long does an IUI cycle take?",
-    a: "The actual procedure takes only a few minutes. The whole process takes as long as your IUI cycle, from your first scan to when you take your pregnancy test.",
+    q: "Are there any side effects of IUI?",
+    a: "IUI itself has minimal side effects — slight cramping or spotting. The ovulation medication may sometimes cause mild bloating or breast tenderness.",
   },
   {
     id: "right-5",
-    q: "How do I book an appointment?",
-    a: "Fill out the form on this page or give us a call at 9267982924. You can also reach us at info@drmonadahiya.com. Just let us know if you want to come in or do it online.",
+    q: "When can I take a pregnancy test after IUI?",
+    a: "You should wait at least 14 days after your IUI procedure before taking a urine pregnancy test or beta hCG blood test.",
   },
 ];
 
 export default function IuiQuestionsFaq() {
-  // Accordion state: first question open by default, clicking any question toggles it open/close
   const [openId, setOpenId] = useState<string | null>("left-0");
 
   const toggleFaq = (id: string) => {
@@ -89,10 +88,10 @@ export default function IuiQuestionsFaq() {
     return (
       <div
         key={faq.id}
-        className={`group flex flex-col justify-start rounded-2xl border transition-[border-color,background-color,box-shadow] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+        className={`group flex flex-col justify-start rounded-[18px] border transition-[border-color,background-color,box-shadow] duration-300 ease-out sm:rounded-[20px] ${
           isOpen
-            ? "border-[#e83e74]/50 bg-[#0c224e] shadow-[0_8px_24px_rgba(0,0,0,0.25)] ring-1 ring-[#e83e74]/20"
-            : "border-white/10 bg-[#091a3c]/75 hover:border-white/20 hover:bg-[#0c224e]"
+            ? "border-[#fbcfe0] bg-[#fffbfd] shadow-[0_8px_24px_rgba(230,53,110,0.08)] ring-1 ring-[#fecdd3]/40"
+            : "border-slate-100 bg-white shadow-[0_2px_8px_rgba(15,23,42,0.03)] hover:border-slate-200 hover:shadow-sm"
         }`}
       >
         <button
@@ -102,17 +101,17 @@ export default function IuiQuestionsFaq() {
           aria-expanded={isOpen}
         >
           <h3
-            className={`font-serif text-[1rem] font-semibold leading-snug transition-colors duration-300 sm:text-[1.08rem] ${
-              isOpen ? "text-[#e83e74]" : "text-white group-hover:text-[#e83e74]"
+            className={`font-serif text-[1rem] font-bold leading-snug transition-colors duration-300 sm:text-[1.08rem] ${
+              isOpen ? "text-rose" : "text-ink group-hover:text-rose"
             }`}
           >
             {faq.q}
           </h3>
           <span
-            className={`flex size-7 shrink-0 items-center justify-center rounded-full border transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+            className={`flex size-7 shrink-0 items-center justify-center rounded-full border transition-all duration-300 ${
               isOpen
-                ? "rotate-180 border-[#e83e74] bg-[#e83e74] text-white shadow-sm"
-                : "border-white/15 bg-white/5 text-white/70 group-hover:border-white/30 group-hover:text-white"
+                ? "rotate-180 border-rose bg-rose text-white shadow-sm"
+                : "border-[#fde2ec] bg-[#fff0f5] text-slate-700 group-hover:border-[#fbcfe0] group-hover:text-rose"
             }`}
             aria-hidden="true"
           >
@@ -121,12 +120,12 @@ export default function IuiQuestionsFaq() {
         </button>
 
         <div
-          className={`grid transition-[grid-template-rows,opacity] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+          className={`grid transition-[grid-template-rows,opacity] duration-300 ease-out ${
             isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
           }`}
         >
           <div className="overflow-hidden">
-            <div className="border-t border-white/10 px-5 pt-3.5 pb-5 text-[13px] leading-relaxed text-slate-300 sm:px-6 sm:pb-6 sm:text-[13.5px]">
+            <div className="border-t border-[#fde2ec]/60 px-5 pt-3.5 pb-5 text-[13px] leading-relaxed text-slate-600 sm:px-6 sm:pb-6 sm:text-[13.5px]">
               {faq.a}
             </div>
           </div>
@@ -136,13 +135,13 @@ export default function IuiQuestionsFaq() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#061532] px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-14 border-t border-white/10">
+    <section className="relative overflow-hidden bg-white px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-14 border-t border-slate-100">
       <div className="relative mx-auto w-full max-w-[1440px]">
         <Reveal variant="fadeUp">
-          <span className="text-[12px] font-semibold tracking-wider text-[#e83e74] uppercase sm:text-[13px]">
+          <span className="text-[12px] font-semibold tracking-wider text-rose uppercase sm:text-[13px]">
             Patient questions
           </span>
-          <h2 className="font-serif mt-2 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-white sm:text-[2.2rem] lg:text-[2.45rem]">
+          <h2 className="font-serif mt-2 text-[1.85rem] leading-[1.2] font-bold tracking-tight text-ink sm:text-[2.2rem] lg:text-[2.45rem]">
             Questions
           </h2>
         </Reveal>

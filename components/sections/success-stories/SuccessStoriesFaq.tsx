@@ -11,7 +11,7 @@ interface FaqItem {
 }
 
 const linkClass =
-  "font-semibold text-[#e83e74] underline decoration-[#e83e74]/40 underline-offset-2 hover:text-[#c53658]";
+  "font-semibold text-rose underline decoration-rose/40 underline-offset-2 hover:text-rose";
 
 const faqList: FaqItem[] = [
   {
@@ -115,8 +115,8 @@ export default function SuccessStoriesFaq() {
         key={index}
         className={`overflow-hidden rounded-2xl border transition-all duration-300 ${
           isOpen
-            ? "border-[#e83e74]/45 bg-white shadow-[0_10px_28px_rgba(232,62,116,0.1)]"
-            : "border-slate-200/90 bg-white hover:border-[#e83e74]/30"
+            ? "border-rose/45 bg-white shadow-[0_10px_28px_rgba(232,62,116,0.1)]"
+            : "border-slate-200/90 bg-white hover:border-rose/30"
         }`}
       >
         <button
@@ -129,7 +129,7 @@ export default function SuccessStoriesFaq() {
         >
           <h3
             className={`text-[15px] font-bold transition-colors ${
-              isOpen ? "text-[#e83e74]" : "text-[#0f2438]"
+              isOpen ? "text-rose" : "text-black"
             }`}
           >
             {item.question}
@@ -137,8 +137,8 @@ export default function SuccessStoriesFaq() {
           <span
             className={`flex size-7 shrink-0 items-center justify-center rounded-full border transition-all duration-300 ${
               isOpen
-                ? "rotate-180 border-[#e83e74] bg-[#e83e74] text-white"
-                : "border-slate-200 bg-slate-50 text-slate-500"
+                ? "rotate-180 border-rose bg-rose text-white"
+                : "border-slate-200 bg-slate-50 text-black"
             }`}
           >
             <FaChevronDown className="size-3" />
@@ -150,7 +150,7 @@ export default function SuccessStoriesFaq() {
           }`}
         >
           <div className="overflow-hidden">
-            <div className="border-t border-slate-100 px-5 pt-3 pb-5 text-[13.5px] leading-relaxed text-[#64748b]">
+            <div className="border-t border-slate-100 px-5 pt-3 pb-5 text-[13.5px] leading-relaxed text-black">
               {item.answer}
             </div>
           </div>
@@ -163,10 +163,10 @@ export default function SuccessStoriesFaq() {
     <section className="relative overflow-hidden bg-gradient-to-b from-[#fff8fb] via-white to-[#fff5f8] px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
       <div className="relative mx-auto w-full max-w-[1440px]">
         <Reveal className="mb-7 sm:mb-9">
-          <p className="text-[12px] font-semibold tracking-wide text-[#e83e74] sm:text-[13px]">
+          <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">
             Patient questions
           </p>
-          <h2 className="font-serif mt-2 max-w-3xl text-[1.75rem] leading-tight font-normal tracking-tight text-[#0f2438] sm:text-[2.2rem] lg:text-[2.45rem]">
+          <h2 className="font-serif mt-2 max-w-3xl text-[1.75rem] leading-tight font-normal tracking-tight text-black sm:text-[2.2rem] lg:text-[2.45rem]">
             Frequently Asked Questions: Success Stories
           </h2>
         </Reveal>

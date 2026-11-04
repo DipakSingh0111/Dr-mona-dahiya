@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 
 export default function MaleInfertilityPage() {
   return (
-    <main className="flex min-h-screen flex-col bg-[#061532]">
+    <main className="flex min-h-screen flex-col bg-pink">
       {/* 1. Male Infertility Hero */}
       <MaleInfertilityHero />
 

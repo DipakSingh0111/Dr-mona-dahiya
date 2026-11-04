@@ -12,8 +12,8 @@ export default function PgtProtocolAndWhy() {
         "Personalized gonadotropin stimulation protocols to develop multiple mature follicles",
         "Monitored via serial high-resolution follicular ultrasound and serum estradiol (E2) levels",
       ],
-      color: "from-[#e83e74] to-[#f43f5e]",
-      border: "hover:border-[#e83e74]/50",
+      color: "from-rose to-[#f43f5e]",
+      border: "hover:border-rose/50",
     },
     {
       step: "2",
@@ -22,8 +22,8 @@ export default function PgtProtocolAndWhy() {
         "Transvaginal ultrasound-guided egg collection under light IV sedation",
         "ICSI is exclusively utilized—rather than conventional IVF—to avoid extraneous sperm cell DNA contamination on the outer embryo shell during genetic testing",
       ],
-      color: "from-[#0047ca] to-[#0284c7]",
-      border: "hover:border-[#0047ca]/50",
+      color: "from-blue to-[var(--blue)]",
+      border: "hover:border-blue/50",
     },
     {
       step: "3",
@@ -40,8 +40,8 @@ export default function PgtProtocolAndWhy() {
       bullets: [
         "Using a non-contact infrared diode laser, an expert embryologist breaches the zona pellucida and aspirates 4 to 6 cells from the trophectoderm layer",
       ],
-      color: "from-[#0d9488] to-[#14b8a6]",
-      border: "hover:border-[#0d9488]/50",
+      color: "from-blue to-[var(--blue)]",
+      border: "hover:border-blue/50",
     },
     {
       step: "5",
@@ -60,8 +60,8 @@ export default function PgtProtocolAndWhy() {
         "Biopsied cell DNA is amplified and analyzed using high-resolution Next-Generation Sequencing (NGS)",
         "Embryos are categorised as Euploid (chromosomally normal), Aneuploid (abnormal), or Mosaic (mixed normal/abnormal cell populations)",
       ],
-      color: "from-[#0284c7] to-[#0047ca]",
-      border: "hover:border-[#0284c7]/50",
+      color: "from-blue to-[var(--blue)]",
+      border: "hover:border-blue/50",
     },
     {
       step: "7",
@@ -70,8 +70,8 @@ export default function PgtProtocolAndWhy() {
         "A single euploid blastocyst is thawed and transferred into a prepared, receptive endometrium",
         "Done during a subsequent hormone replacement or natural cycle",
       ],
-      color: "from-[#e83e74] to-[#f43f5e]",
-      border: "hover:border-[#e83e74]/50",
+      color: "from-rose to-[#f43f5e]",
+      border: "hover:border-rose/50",
     },
   ];
 
@@ -80,25 +80,25 @@ export default function PgtProtocolAndWhy() {
       title: "25+ Years of Clinical Reproductive Mastery",
       desc: "Dr. Mona Dahiya is an acclaimed fertility specialist, holding an MBBS (Gold Medalist) from Lady Hardinge Medical College, MD from Maulana Azad Medical College (MAMC), and an advanced Fellowship in Reproductive Medicine from Singapore General Hospital. Over her career, she has guided more than 10,000 families to parenthood.",
       icon: FaAward,
-      iconColor: "text-[#e83e74]",
-      iconBg: "bg-[#e83e74]/10",
-      border: "hover:border-[#e83e74]/40",
+      iconColor: "text-rose",
+      iconBg: "bg-rose/10",
+      border: "hover:border-rose/40",
     },
     {
       title: "Dedicated High-Complexity Cleanroom Embryology Labs",
       desc: "Operating with modern benchtop incubators, 1.48 µm non-contact lasers, and micro-vibration-free micromanipulation systems, our labs minimize cellular stress and maintain high post-biopsy survival rates (>98%).",
       icon: FaHospital,
-      iconColor: "text-[#0047ca]",
-      iconBg: "bg-[#0047ca]/10",
-      border: "hover:border-[#0047ca]/40",
+      iconColor: "text-blue",
+      iconBg: "bg-blue/10",
+      border: "hover:border-blue/40",
     },
     {
       title: "Stringent Double-Witness & Barcode Security",
       desc: "Eliminates sample mix-ups through an unbroken electronic verification chain from cell biopsy to cryogenic storage and warming.",
       icon: FaBarcode,
-      iconColor: "text-[#0d9488]",
-      iconBg: "bg-[#0d9488]/10",
-      border: "hover:border-[#0d9488]/40",
+      iconColor: "text-blue",
+      iconBg: "bg-blue/10",
+      border: "hover:border-blue/40",
     },
     {
       title: "Transparent Genetic Counseling",
@@ -115,7 +115,7 @@ export default function PgtProtocolAndWhy() {
       <div className="relative mx-auto w-full max-w-[1440px]">
         {/* Step-by-Step PGT Treatment Protocol */}
         <Reveal className="mb-6 sm:mb-8">
-          <p className="text-[12px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:text-[13px]">
+          <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
             How it works
           </p>
           <h2 className="font-serif mt-1 text-[1.65rem] leading-[1.2] font-normal tracking-tight text-slate-900 sm:text-[2.1rem] lg:text-[2.35rem]">
@@ -134,16 +134,16 @@ export default function PgtProtocolAndWhy() {
               >
                 <div className="flex items-center gap-3">
                   <span
-                    className={`inline-flex size-8 shrink-0 items-center justify-center rounded-lg text-[13px] font-bold text-white shadow-sm bg-gradient-to-r ${st.color}`}
+                    className={`inline-flex size-8 shrink-0 items-center justify-center rounded-lg text-[13px] font-bold text-black shadow-sm bg-gradient-to-r ${st.color}`}
                   >
                     {st.step}
                   </span>
-                  <h3 className="text-[15px] font-bold text-slate-900 group-hover:text-[#0047ca] transition-colors sm:text-[16px]">
+                  <h3 className="text-[15px] font-bold text-slate-900 group-hover:text-blue transition-colors sm:text-[16px]">
                     {st.title}
                   </h3>
                 </div>
 
-                <ul className="mt-3.5 space-y-2 text-[13px] text-slate-600 sm:text-[13.5px]">
+                <ul className="mt-3.5 space-y-2 text-[13px] text-black sm:text-[13.5px]">
                   {st.bullets.map((b, bIdx) => (
                     <li key={bIdx} className="flex items-start gap-2">
                       <span className="mt-1 size-1.5 shrink-0 rounded-full bg-slate-400" />
@@ -159,7 +159,7 @@ export default function PgtProtocolAndWhy() {
         {/* Why Consult Dr. Mona Dahiya for PGT */}
         <div className="mt-12 sm:mt-16">
           <Reveal className="mb-6 sm:mb-8">
-            <p className="text-[12px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:text-[13px]">
+            <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
               Expertise &amp; authority
             </p>
             <h2 className="font-serif mt-1 text-[1.65rem] leading-[1.2] font-normal tracking-tight text-slate-900 sm:text-[2.1rem] lg:text-[2.35rem]">
@@ -181,10 +181,10 @@ export default function PgtProtocolAndWhy() {
                       <Icon className="size-5" />
                     </div>
                     <div className="min-w-0 flex-1">
-                      <h3 className="text-[15px] font-bold text-slate-900 group-hover:text-[#0047ca] transition-colors sm:text-[16px]">
+                      <h3 className="text-[15px] font-bold text-slate-900 group-hover:text-blue transition-colors sm:text-[16px]">
                         {item.title}
                       </h3>
-                      <p className="mt-1.5 text-[13.5px] leading-relaxed text-slate-600 sm:text-[14px]">
+                      <p className="mt-1.5 text-[13.5px] leading-relaxed text-black sm:text-[14px]">
                         {item.desc}
                       </p>
                     </div>

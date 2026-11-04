@@ -32,7 +32,7 @@ const costCards: CostCard[] = [
         Day-care septum resection: ₹35,000 to ₹60,000. See{" "}
         <Link
           href="/hysteroscopy-treatment"
-          className="text-[#f9a8d4] underline hover:text-white transition-colors"
+          className="text-rose underline hover:text-white transition-colors"
         >
           Laparoscopy &amp; Hysteroscopy
         </Link>

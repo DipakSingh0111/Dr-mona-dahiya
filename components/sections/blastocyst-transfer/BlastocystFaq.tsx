@@ -44,13 +44,13 @@ const leftFaqs: FaqItem[] = [
       <div className="space-y-2">
         <p>3 clinics:</p>
         <p>
-          <strong className="text-white">Noida</strong> (3rd Floor, K-06, above FirstCry, Baraula, Sector 49, Noida, Uttar Pradesh 201301)
+          <strong className="text-ink">Noida</strong> (3rd Floor, K-06, above FirstCry, Baraula, Sector 49, Noida, Uttar Pradesh 201301)
         </p>
         <p>
-          <strong className="text-white">Ghaziabad</strong> (2nd Floor, RDC, C-53A, near Bikanerwala, Sector 15, Sector 10, Raj Nagar, Ghaziabad, Uttar Pradesh 201002)
+          <strong className="text-ink">Ghaziabad</strong> (2nd Floor, RDC, C-53A, near Bikanerwala, Sector 15, Sector 10, Raj Nagar, Ghaziabad, Uttar Pradesh 201002)
         </p>
         <p>
-          <strong className="text-white">Delhi</strong> (Building Number 41, First Floor, Ring Road, Block Q, Lajpat Nagar IV, Lajpat Nagar, New Delhi 110024)
+          <strong className="text-ink">Delhi</strong> (Building Number 41, First Floor, Ring Road, Block Q, Lajpat Nagar IV, Lajpat Nagar, New Delhi 110024)
         </p>
       </div>
     ),
@@ -74,7 +74,7 @@ const rightFaqs: FaqItem[] = [
       <div className="space-y-3">
         <p>
           Yes. Vitrified blastocysts survive warming over 95% of the time, and a frozen transfer lets the lining recover after stimulation. See{" "}
-          <span className="text-[#f9a8d4] underline">Frozen Embryo Transfer</span>.
+          <span className="text-rose underline">Frozen Embryo Transfer</span>.
         </p>
       </div>
     ),

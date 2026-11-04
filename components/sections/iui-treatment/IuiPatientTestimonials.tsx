@@ -29,41 +29,44 @@ export default function IuiPatientTestimonials() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-[#061532] px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-14 border-t border-white/10">
+    <section className="relative overflow-hidden bg-[#f5f6f8] px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-14 border-t border-slate-100">
       <div className="relative mx-auto w-full max-w-[1440px]">
         <Reveal variant="fadeUp">
-          <span className="text-[12px] font-semibold tracking-wider text-[#e83e74] uppercase sm:text-[13px]">
+          <span className="text-[12px] font-semibold tracking-wider text-rose uppercase sm:text-[13px]">
             Testimonials
           </span>
 
-          <h2 className="font-serif mt-2 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-white sm:text-[2.2rem] lg:text-[2.45rem]">
+          <h2 className="font-serif mt-2 text-[1.85rem] leading-[1.2] font-bold tracking-tight text-ink sm:text-[2.2rem] lg:text-[2.45rem]">
             What our patients have to say.
           </h2>
         </Reveal>
 
         {/* 3 Testimonial Cards */}
-        <Stagger className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 sm:gap-6" stagger={0.06}>
+        <Stagger
+          className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 sm:gap-6"
+          stagger={0.06}
+        >
           {testimonials.map((t, idx) => (
             <StaggerItem key={idx}>
-              <div className="flex h-full flex-col justify-between rounded-2xl border border-white/10 bg-[#091a3c]/75 p-6 backdrop-blur-md transition-all duration-200 hover:border-white/20 hover:bg-[#0c224e]">
+              <div className="flex h-full flex-col justify-between rounded-2xl border border-[#fde2ec] bg-white p-6 shadow-sm transition-all duration-300 hover:border-rose/30 hover:bg-[#fff0f5] hover:shadow-md">
                 <div>
-                  <h3 className="font-serif text-[1.1rem] font-medium text-white sm:text-[1.2rem]">
+                  <h3 className="font-serif text-[1.1rem] font-bold text-ink sm:text-[1.2rem]">
                     {t.title}
                   </h3>
-                  <p className="mt-4 text-[12.5px] leading-relaxed text-slate-300 sm:text-[13px]">
+                  <p className="mt-4 text-[12.5px] leading-relaxed text-slate-700 sm:text-[13px]">
                     {t.review}
                   </p>
                 </div>
 
-                <div className="mt-6 flex items-center gap-3 pt-4 border-t border-white/10">
-                  <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#e83e74] text-[13px] font-bold text-white shadow-sm">
+                <div className="mt-6 flex items-center gap-3 pt-4 border-t border-[#fde2ec]">
+                  <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-rose text-[13px] font-bold text-white shadow-sm">
                     {t.initial}
                   </span>
                   <div>
-                    <h4 className="text-[13px] font-semibold text-white">
+                    <h4 className="text-[13px] font-bold text-ink">
                       {t.author}
                     </h4>
-                    <p className="text-[11px] text-slate-400">
+                    <p className="text-[11px] text-slate-500">
                       Google patient review
                     </p>
                   </div>
@@ -73,11 +76,10 @@ export default function IuiPatientTestimonials() {
           ))}
         </Stagger>
 
-        {/* All Reviews Button */}
         <Reveal variant="fadeUp" delay={0.2} className="mt-8">
           <Link
             href="/best-ivf-patient-reviews"
-            className="inline-flex items-center justify-center rounded-full border border-teal-500/50 bg-teal-500/10 px-6 py-2.5 text-[13px] font-medium text-teal-300 shadow-sm backdrop-blur-md transition-all duration-200 hover:border-teal-400 hover:bg-teal-500/20 hover:text-white active:scale-95 sm:text-[13.5px]"
+            className="inline-flex items-center justify-center rounded-full border border-blue/40 bg-white px-6 py-2.5 text-[13px] font-semibold text-blue shadow-sm transition-all duration-200 hover:border-blue hover:bg-blue hover:text-white active:scale-95 sm:text-[13.5px]"
           >
             All Reviews
           </Link>
@@ -86,4 +88,3 @@ export default function IuiPatientTestimonials() {
     </section>
   );
 }
-

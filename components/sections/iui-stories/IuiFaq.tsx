@@ -63,7 +63,7 @@ const faqList: FaqItem[] = [
         abroad. See{" "}
         <Link
           href="/ivf-consultation-online"
-          className="font-semibold text-[#e83e74] underline decoration-[#e83e74]/40 underline-offset-2 hover:text-[#c53658]"
+          className="font-semibold text-rose underline decoration-rose/40 underline-offset-2 hover:text-rose"
         >
           Online Consultation
         </Link>
@@ -85,8 +85,8 @@ export default function IuiFaq() {
         key={index}
         className={`overflow-hidden rounded-2xl border transition-all duration-300 ${
           isOpen
-            ? "border-[#e83e74]/45 bg-white shadow-[0_10px_28px_rgba(232,62,116,0.1)]"
-            : "border-slate-200/90 bg-white hover:border-[#e83e74]/30"
+            ? "border-rose/45 bg-white shadow-[0_10px_28px_rgba(232,62,116,0.1)]"
+            : "border-slate-200/90 bg-white hover:border-rose/30"
         }`}
       >
         <button
@@ -99,7 +99,7 @@ export default function IuiFaq() {
         >
           <h3
             className={`text-[15px] font-bold transition-colors ${
-              isOpen ? "text-[#e83e74]" : "text-[#0f2438]"
+              isOpen ? "text-rose" : "text-black"
             }`}
           >
             {item.question}
@@ -107,8 +107,8 @@ export default function IuiFaq() {
           <span
             className={`flex size-7 shrink-0 items-center justify-center rounded-full border transition-all duration-300 ${
               isOpen
-                ? "rotate-180 border-[#e83e74] bg-[#e83e74] text-white"
-                : "border-slate-200 bg-slate-50 text-slate-500"
+                ? "rotate-180 border-rose bg-rose text-white"
+                : "border-slate-200 bg-slate-50 text-black"
             }`}
           >
             <FaChevronDown className="size-3" />
@@ -120,7 +120,7 @@ export default function IuiFaq() {
           }`}
         >
           <div className="overflow-hidden">
-            <p className="border-t border-slate-100 px-5 pt-3 pb-5 text-[13.5px] leading-relaxed text-[#64748b]">
+            <p className="border-t border-slate-100 px-5 pt-3 pb-5 text-[13.5px] leading-relaxed text-black">
               {item.answer}
             </p>
           </div>
@@ -133,10 +133,10 @@ export default function IuiFaq() {
     <section className="relative overflow-hidden bg-gradient-to-b from-[#fff8fb] via-[#f8fafc] to-white px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
       <div className="relative mx-auto w-full max-w-[1440px]">
         <div className="max-w-3xl">
-          <span className="text-[12px] font-semibold tracking-wider text-[#e83e74] uppercase">
+          <span className="text-[12px] font-semibold tracking-wider text-rose uppercase">
             Patient questions
           </span>
-          <h2 className="font-serif mt-1 text-[2rem] leading-[1.18] font-normal tracking-tight text-[#0f2438] sm:text-[2.4rem] lg:text-[2.65rem]">
+          <h2 className="font-serif mt-1 text-[2rem] leading-[1.18] font-normal tracking-tight text-black sm:text-[2.4rem] lg:text-[2.65rem]">
             Frequently Asked Questions:
             <br />
             IUI Success Stories

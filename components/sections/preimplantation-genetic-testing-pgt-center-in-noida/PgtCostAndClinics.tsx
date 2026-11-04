@@ -11,17 +11,17 @@ export default function PgtCostAndClinics() {
       title: "IVF/ICSI Clinical Phase",
       desc: "Ovarian stimulation medications, cycle monitoring, egg retrieval anesthesia, and extended blastocyst culture.",
       icon: FaCheck,
-      color: "from-[#e83e74] to-[#f43f5e]",
-      iconBg: "bg-[#e83e74]/10 text-[#e83e74]",
-      border: "hover:border-[#e83e74]/50",
+      color: "from-rose to-[#f43f5e]",
+      iconBg: "bg-rose/10 text-rose",
+      border: "hover:border-rose/50",
     },
     {
       title: "Laser Biopsy Fee",
       desc: "Technical embryology fee for laser perforation and cellular extraction (typically calculated per cycle).",
       icon: FaMicroscope,
-      color: "from-[#0047ca] to-[#0284c7]",
-      iconBg: "bg-[#0047ca]/10 text-[#0047ca]",
-      border: "hover:border-[#0047ca]/50",
+      color: "from-blue to-[var(--blue)]",
+      iconBg: "bg-blue/10 text-blue",
+      border: "hover:border-blue/50",
     },
     {
       title: "Genomic NGS Lab Testing",
@@ -35,9 +35,9 @@ export default function PgtCostAndClinics() {
       title: "PGT-M Custom Probe Design",
       desc: "Required for single-gene disorders to engineer family-specific molecular primers prior to the clinical cycle.",
       icon: FaVial,
-      color: "from-[#0d9488] to-[#14b8a6]",
-      iconBg: "bg-[#0d9488]/10 text-[#0d9488]",
-      border: "hover:border-[#0d9488]/50",
+      color: "from-blue to-[var(--blue)]",
+      iconBg: "bg-blue/10 text-blue",
+      border: "hover:border-blue/50",
     },
     {
       title: "Vitrification & Storage",
@@ -46,7 +46,7 @@ export default function PgtCostAndClinics() {
           Liquid nitrogen cryo-maintenance for frozen blastocysts while awaiting genetic reports. See{" "}
           <Link
             href="/treatments"
-            className="font-medium text-[#0047ca] underline underline-offset-2 hover:text-[#00369e]"
+            className="font-medium text-blue underline underline-offset-2 hover:text-blue-dark"
           >
             Embryo Freezing &amp; Banking
           </Link>
@@ -62,9 +62,9 @@ export default function PgtCostAndClinics() {
       title: "Downstream FET Cycle",
       desc: "Uterine priming medications, lining scans, embryo thawing, and soft catheter transfer.",
       icon: FaCalendarCheck,
-      color: "from-[#0284c7] to-[#0047ca]",
-      iconBg: "bg-[#0284c7]/10 text-[#0284c7]",
-      border: "hover:border-[#0284c7]/50",
+      color: "from-blue to-[var(--blue)]",
+      iconBg: "bg-blue/10 text-blue",
+      border: "hover:border-blue/50",
     },
   ];
 
@@ -74,13 +74,13 @@ export default function PgtCostAndClinics() {
       <div className="relative mx-auto w-full max-w-[1440px]">
         {/* Cost Factors & Pricing Variables */}
         <Reveal className="mb-6 sm:mb-8">
-          <p className="text-[12px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:text-[13px]">
+          <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
             Transparency
           </p>
           <h2 className="font-serif mt-1 text-[1.65rem] leading-[1.2] font-normal tracking-tight text-slate-900 sm:text-[2.1rem] lg:text-[2.35rem]">
             PGT Cost Factors &amp; Pricing Variables in Delhi | Noida | Ghaziabad
           </h2>
-          <p className="mt-2 text-[14px] leading-relaxed text-slate-600 sm:text-[15px]">
+          <p className="mt-2 text-[14px] leading-relaxed text-black sm:text-[15px]">
             The cost of an IVF cycle with PGT testing depends on clinical and laboratory variables:
           </p>
         </Reveal>
@@ -101,10 +101,10 @@ export default function PgtCostAndClinics() {
                   >
                     <Icon className="size-5" />
                   </div>
-                  <h3 className="mt-3.5 text-[15px] font-bold text-slate-900 group-hover:text-[#0047ca] transition-colors sm:text-[16px]">
+                  <h3 className="mt-3.5 text-[15px] font-bold text-slate-900 group-hover:text-blue transition-colors sm:text-[16px]">
                     {item.title}
                   </h3>
-                  <div className="mt-2 text-[13px] leading-relaxed text-slate-600 sm:text-[13.5px]">
+                  <div className="mt-2 text-[13px] leading-relaxed text-black sm:text-[13.5px]">
                     {item.desc}
                   </div>
                 </div>

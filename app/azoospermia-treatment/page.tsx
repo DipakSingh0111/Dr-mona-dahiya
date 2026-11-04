@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 
 export default function AzoospermiaPage() {
   return (
-    <main className="flex min-h-screen flex-col bg-[#061532]">
+    <main className="flex min-h-screen flex-col bg-pink">
       <AzoospermiaHero />
 
       <SectionReveal>

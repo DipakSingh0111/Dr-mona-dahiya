@@ -31,7 +31,7 @@ const indications: { number: string; title: string; description: ReactNode }[] =
           Insemination 36 hours after trigger. See{" "}
           <Link
             href="/best-iui-doctor-in-noida"
-            className="font-medium text-[#93c5fd] underline underline-offset-2 hover:text-white"
+            className="font-medium text-blue underline underline-offset-2 hover:text-white"
           >
             IUI Treatment
           </Link>
@@ -48,7 +48,7 @@ const indications: { number: string; title: string; description: ReactNode }[] =
           See{" "}
           <Link
             href="/best-pcos-prod-treatment-centre-in-noida"
-            className="font-medium text-[#93c5fd] underline underline-offset-2 hover:text-white"
+            className="font-medium text-blue underline underline-offset-2 hover:text-white"
           >
             PCOS Treatment
           </Link>
@@ -114,7 +114,7 @@ export default function FollicularIndicationsAndChecklist() {
             {checklist.map((item, idx) => (
               <Reveal key={item.title} variant="fadeUp" delay={idx * 0.04}>
                 <ChecklistRow>
-                  <strong className="font-semibold text-white">{item.title}:</strong>{" "}
+                  <strong className="font-semibold text-black">{item.title}:</strong>{" "}
                   {item.text}
                 </ChecklistRow>
               </Reveal>

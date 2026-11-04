@@ -42,7 +42,7 @@ const protocols: { number: string; title: string; description: ReactNode }[] = [
         progesterone starts for{" "}
         <Link
           href="/frozen-embryo-transfer"
-          className="font-medium text-[#93c5fd] underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-white"
         >
           Frozen Embryo Transfer
         </Link>
@@ -82,16 +82,16 @@ export default function PrpProtocolAndWhy() {
           >
             {protocols.map((item) => (
               <StaggerItem key={item.number}>
-                <div className="relative flex h-full flex-col rounded-2xl border border-[#e83e74]/30 bg-gradient-to-b from-[#141b36] to-[#0a1024] p-5 shadow-[0_0_24px_rgba(232,62,116,0.1)] transition-all duration-300 hover:-translate-y-1 hover:border-[#e83e74]/60 hover:shadow-[0_0_32px_rgba(232,62,116,0.2)] sm:p-6">
+                <div className="relative flex h-full flex-col rounded-2xl border border-rose/30 bg-gradient-to-b from-white to-[#fff8fa] p-5 shadow-[0_0_24px_rgba(232,62,116,0.1)] transition-all duration-300 hover:-translate-y-1 hover:border-rose/60 hover:shadow-[0_0_32px_rgba(232,62,116,0.2)] sm:p-6">
                   <div className="flex items-start gap-3">
-                    <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-[#e83e74] text-[15px] font-bold text-white shadow-[0_2px_8px_rgba(232,62,116,0.4)]">
+                    <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-rose text-[15px] font-bold text-white shadow-[0_2px_8px_rgba(232,62,116,0.4)]">
                       {item.number}
                     </span>
-                    <h3 className="font-serif pt-0.5 text-[1.05rem] leading-snug font-semibold text-white sm:text-[1.12rem]">
+                    <h3 className="font-serif pt-0.5 text-[1.05rem] leading-snug font-semibold text-black sm:text-[1.12rem]">
                       {item.title}
                     </h3>
                   </div>
-                  <p className="mt-4 text-[13px] leading-relaxed text-slate-300 sm:text-[13.5px]">
+                  <p className="mt-4 text-[13px] leading-relaxed text-black sm:text-[13.5px]">
                     {item.description}
                   </p>
                 </div>

@@ -80,13 +80,13 @@ const rightFaqs = [
 
 export default function BestIvfDelhiFAQ() {
   return (
-    <section className="relative overflow-hidden bg-[#061532] px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
+    <section className="relative overflow-hidden bg-pink px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
       <div className="mx-auto w-full max-w-[1440px]">
         <Reveal variant="fadeUp">
-          <p className="text-[12px] font-semibold tracking-wide text-[#e83e74] sm:text-[13px]">
+          <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">
             FAQ&apos;s
           </p>
-          <h2 className="font-serif mt-1 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-white sm:text-[2.2rem] lg:text-[2.45rem]">
+          <h2 className="font-serif mt-1 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-black sm:text-[2.2rem] lg:text-[2.45rem]">
             Top FAQs About fertility Treatment in Delhi
           </h2>
         </Reveal>
@@ -95,11 +95,11 @@ export default function BestIvfDelhiFAQ() {
           <Stagger className="flex flex-col gap-4" stagger={0.05}>
             {leftFaqs.map((faq) => (
               <StaggerItem key={faq.question}>
-                <div className="rounded-2xl border border-white/10 bg-[#091a3c]/75 p-5 backdrop-blur-md transition-all duration-200 hover:border-[#0047ca]/40 hover:bg-[#0c224e]/85 sm:p-6">
-                  <h3 className="font-serif text-[1rem] font-semibold leading-snug text-white sm:text-[1.08rem]">
+                <div className="rounded-2xl border border-[#fde2ec] bg-white p-5 backdrop-blur-md transition-all duration-200 hover:border-blue/40 hover:bg-[#fff0f5] sm:p-6">
+                  <h3 className="font-serif text-[1rem] font-semibold leading-snug text-black sm:text-[1.08rem]">
                     {faq.question}
                   </h3>
-                  <p className="mt-2.5 text-[13px] leading-relaxed text-slate-300 sm:text-[13.5px]">
+                  <p className="mt-2.5 text-[13px] leading-relaxed text-black sm:text-[13.5px]">
                     {faq.answer}
                   </p>
                 </div>
@@ -110,11 +110,11 @@ export default function BestIvfDelhiFAQ() {
           <Stagger className="flex flex-col gap-4" stagger={0.05}>
             {rightFaqs.map((faq) => (
               <StaggerItem key={faq.question}>
-                <div className="rounded-2xl border border-white/10 bg-[#091a3c]/75 p-5 backdrop-blur-md transition-all duration-200 hover:border-[#0047ca]/40 hover:bg-[#0c224e]/85 sm:p-6">
-                  <h3 className="font-serif text-[1rem] font-semibold leading-snug text-white sm:text-[1.08rem]">
+                <div className="rounded-2xl border border-[#fde2ec] bg-white p-5 backdrop-blur-md transition-all duration-200 hover:border-blue/40 hover:bg-[#fff0f5] sm:p-6">
+                  <h3 className="font-serif text-[1rem] font-semibold leading-snug text-black sm:text-[1.08rem]">
                     {faq.question}
                   </h3>
-                  <p className="mt-2.5 text-[13px] leading-relaxed text-slate-300 sm:text-[13.5px]">
+                  <p className="mt-2.5 text-[13px] leading-relaxed text-black sm:text-[13.5px]">
                     {faq.answer}
                   </p>
                 </div>

@@ -58,7 +58,7 @@ export default function HowItWorks() {
 
             <div className="relative z-10">
               <span className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-zinc-100/90 px-3.5 py-1.5 text-[12px] font-semibold whitespace-nowrap text-zinc-600">
-                <span className="size-1.5 rounded-full bg-[#0d7d74]" />
+                <span className="size-1.5 rounded-full bg-blue" />
                 {badge}
               </span>
 
@@ -89,13 +89,13 @@ export default function HowItWorks() {
                         : "min-h-[175px] sm:min-h-[195px] lg:min-h-[205px]"
                     } ${
                       highlight
-                        ? "border border-[#e83e74]/35 shadow-[0_10px_25px_rgba(0,0,0,0.05)] hover:border-[#e83e74] hover:shadow-[0_20px_45px_rgba(232,62,116,0.22)]"
-                        : "border border-zinc-200/80 shadow-[0_10px_25px_rgba(0,0,0,0.05)] hover:border-[#e83e74]/50 hover:shadow-[0_20px_45px_rgba(232,62,116,0.18)]"
+                        ? "border border-rose/35 shadow-[0_10px_25px_rgba(0,0,0,0.05)] hover:border-rose hover:shadow-[0_20px_45px_rgba(232,62,116,0.22)]"
+                        : "border border-zinc-200/80 shadow-[0_10px_25px_rgba(0,0,0,0.05)] hover:border-rose/50 hover:shadow-[0_20px_45px_rgba(232,62,116,0.18)]"
                     }`}
                   >
                     <div className="flex flex-1 flex-col justify-center px-5 py-5 sm:px-9 sm:py-6 lg:px-11 lg:py-7">
                       {"stepLabel" in step && step.stepLabel ? (
-                        <span className="mb-1.5 text-[11.5px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:text-[12px]">
+                        <span className="mb-1.5 text-[11.5px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[12px]">
                           {step.stepLabel}
                         </span>
                       ) : null}

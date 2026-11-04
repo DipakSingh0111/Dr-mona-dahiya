@@ -20,7 +20,7 @@ export default function SecondOpinionWhatAuditLooksAt() {
               DFI testing. See{" "}
               <Link
                 href="/sperm-dna-fragmentation"
-                className="font-medium text-[#0047ca] underline underline-offset-2 hover:text-[#00369e]"
+                className="font-medium text-blue underline underline-offset-2 hover:text-blue-dark"
               >
                 Sperm DNA Fragmentation Test
               </Link>
@@ -47,7 +47,7 @@ export default function SecondOpinionWhatAuditLooksAt() {
               3D sonography or{" "}
               <Link
                 href="/treatments"
-                className="font-medium text-[#0047ca] underline underline-offset-2 hover:text-[#00369e]"
+                className="font-medium text-blue underline underline-offset-2 hover:text-blue-dark"
               >
                 Hysteroscopy
               </Link>{" "}
@@ -66,7 +66,7 @@ export default function SecondOpinionWhatAuditLooksAt() {
               Whether an{" "}
               <Link
                 href="/treatments"
-                className="font-medium text-[#0047ca] underline underline-offset-2 hover:text-[#00369e]"
+                className="font-medium text-blue underline underline-offset-2 hover:text-blue-dark"
               >
                 ERA test
               </Link>{" "}
@@ -81,7 +81,7 @@ export default function SecondOpinionWhatAuditLooksAt() {
               A lining under 7 mm. See{" "}
               <Link
                 href="/treatments"
-                className="font-medium text-[#0047ca] underline underline-offset-2 hover:text-[#00369e]"
+                className="font-medium text-blue underline underline-offset-2 hover:text-blue-dark"
               >
                 PRP Therapy
               </Link>
@@ -118,13 +118,13 @@ export default function SecondOpinionWhatAuditLooksAt() {
     <section className="relative overflow-hidden bg-white px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
       <div className="relative mx-auto w-full max-w-[1440px]">
         <Reveal className="mb-6 sm:mb-8">
-          <p className="text-[12px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:text-[13px]">
+          <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
             Root-cause framework
           </p>
           <h2 className="font-serif mt-1 text-[1.65rem] leading-[1.2] font-normal tracking-tight text-slate-900 sm:text-[2.1rem] lg:text-[2.35rem]">
             What a Failed IVF Audit Looks At
           </h2>
-          <p className="mt-2 text-[14px] leading-relaxed text-slate-600 sm:text-[15px]">
+          <p className="mt-2 text-[14px] leading-relaxed text-black sm:text-[15px]">
             Every review covers 3 areas, because most failures come from more than one factor.
           </p>
         </Reveal>
@@ -142,16 +142,16 @@ export default function SecondOpinionWhatAuditLooksAt() {
               >
                 {grp.cards.map((c, cIdx) => (
                   <StaggerItem key={cIdx}>
-                    <div className="group flex h-full flex-col justify-start rounded-[18px] border border-slate-200/90 bg-gradient-to-br from-slate-50/70 to-white p-5 shadow-[0_4px_16px_rgba(0,20,60,0.03)] transition-all duration-300 hover:-translate-y-1 hover:border-[#0047ca]/40 hover:shadow-[0_12px_28px_rgba(0,30,80,0.08)]">
+                    <div className="group flex h-full flex-col justify-start rounded-[18px] border border-slate-200/90 bg-gradient-to-br from-slate-50/70 to-white p-5 shadow-[0_4px_16px_rgba(0,20,60,0.03)] transition-all duration-300 hover:-translate-y-1 hover:border-blue/40 hover:shadow-[0_12px_28px_rgba(0,30,80,0.08)]">
                       <div className="flex items-center gap-2.5">
-                        <span className="inline-flex size-7 shrink-0 items-center justify-center rounded-lg bg-gradient-to-r from-[#e83e74] to-[#f43f5e] text-white shadow-xs">
+                        <span className="inline-flex size-7 shrink-0 items-center justify-center rounded-lg bg-gradient-to-r from-rose to-[#f43f5e] text-white shadow-xs">
                           <FaCheck className="size-3" />
                         </span>
-                        <h4 className="text-[14.5px] font-bold text-slate-900 group-hover:text-[#0047ca] transition-colors sm:text-[15px]">
+                        <h4 className="text-[14.5px] font-bold text-slate-900 group-hover:text-blue transition-colors sm:text-[15px]">
                           {c.title}
                         </h4>
                       </div>
-                      <div className="mt-3 text-[13px] leading-relaxed text-slate-600 sm:text-[13.5px]">
+                      <div className="mt-3 text-[13px] leading-relaxed text-black sm:text-[13.5px]">
                         {c.desc}
                       </div>
                     </div>

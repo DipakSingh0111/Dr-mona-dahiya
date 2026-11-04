@@ -35,10 +35,10 @@ export default function IuiWhenWorks() {
     <section className="relative overflow-hidden bg-[#f8fafc] px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
       <div className="relative mx-auto w-full max-w-[1440px]">
         <Reveal className="max-w-3xl">
-          <span className="text-[12px] font-semibold tracking-wider text-[#e83e74] uppercase">
+          <span className="text-[12px] font-semibold tracking-wider text-rose uppercase">
             What makes the difference
           </span>
-          <h2 className="font-serif mt-1 text-[2rem] leading-[1.18] font-normal tracking-tight text-[#0f2438] sm:text-[2.4rem] lg:text-[2.65rem]">
+          <h2 className="font-serif mt-1 text-[2rem] leading-[1.18] font-normal tracking-tight text-black sm:text-[2.4rem] lg:text-[2.65rem]">
             When IUI Works Best
           </h2>
         </Reveal>
@@ -52,22 +52,22 @@ export default function IuiWhenWorks() {
               key={card.step}
               className={card.step === "4" ? "lg:col-span-1" : undefined}
             >
-              <article className="flex h-full flex-col rounded-2xl border border-slate-200/90 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#0047ca]/35 hover:shadow-[0_14px_32px_rgba(0,71,202,0.1)]">
+              <article className="flex h-full flex-col rounded-2xl border border-slate-200/90 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue/35 hover:shadow-[0_14px_32px_rgba(0,71,202,0.1)]">
                 <div className="mb-3 flex items-center gap-3">
-                  <span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#e83e74] to-[#c53658] text-[15px] font-bold text-white shadow-[0_4px_14px_rgba(232,62,116,0.35)]">
+                  <span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-rose to-rose-dark text-[15px] font-bold text-white shadow-[0_4px_14px_rgba(232,62,116,0.35)]">
                     {card.step}
                   </span>
-                  <h3 className="text-[16px] font-bold text-[#0f2438]">
+                  <h3 className="text-[16px] font-bold text-black">
                     {card.title}
                   </h3>
                 </div>
-                <p className="text-[13px] leading-relaxed text-[#64748b]">
+                <p className="text-[13px] leading-relaxed text-black">
                   {card.hasUltrasoundLink ? (
                     <>
                       Combined with Letrozole and{" "}
                       <Link
                         href="/treatments"
-                        className="font-semibold text-[#0047ca] underline decoration-[#0047ca]/35 underline-offset-2 hover:text-[#e83e74]"
+                        className="font-semibold text-blue underline decoration-[var(--blue)]/35 underline-offset-2 hover:text-rose"
                       >
                         Follicular Ultrasound
                       </Link>{" "}

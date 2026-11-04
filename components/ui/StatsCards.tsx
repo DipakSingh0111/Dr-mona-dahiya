@@ -101,7 +101,7 @@ export default function StatsCards({ stats }: { stats: StatItem[] }) {
               <p className="stat-value font-display text-[2rem] leading-none font-bold tracking-tight whitespace-nowrap text-white tabular-nums sm:text-[2.25rem] xl:text-[2.65rem]">
                 <StatValue stat={stat} active={active} />
               </p>
-              <p className="stat-label mt-2 text-[14px] leading-snug font-medium whitespace-nowrap text-white/90 sm:text-[15px] xl:mt-2.5 xl:text-[16px]">
+              <p className="stat-label mt-2 text-[14px] leading-snug font-medium whitespace-nowrap text-slate-700 sm:text-[15px] xl:mt-2.5 xl:text-[16px]">
                 {stat.label}
               </p>
             </div>

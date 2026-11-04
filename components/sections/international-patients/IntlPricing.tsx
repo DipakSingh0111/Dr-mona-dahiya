@@ -43,21 +43,21 @@ export default function IntlPricing() {
       />
 
       <Reveal variant="fadeUp" delay={0.08} className="mt-7">
-        <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#091a3c]/80 backdrop-blur-md">
+        <div className="overflow-hidden rounded-2xl border border-[#fde2ec] bg-white backdrop-blur-md">
           <div className="overflow-x-auto">
             <table className="w-full min-w-[640px] border-collapse text-left">
               <thead>
-                <tr className="border-b border-white/10">
-                  <th className="px-4 py-3.5 text-[11px] font-semibold tracking-wider text-slate-400 uppercase sm:px-5 sm:text-[12px]">
+                <tr className="border-b border-[#fde2ec]">
+                  <th className="px-4 py-3.5 text-[11px] font-semibold tracking-wider text-black uppercase sm:px-5 sm:text-[12px]">
                     Procedure
                   </th>
-                  <th className="px-4 py-3.5 text-[11px] font-semibold tracking-wider text-slate-400 uppercase sm:px-5 sm:text-[12px]">
+                  <th className="px-4 py-3.5 text-[11px] font-semibold tracking-wider text-black uppercase sm:px-5 sm:text-[12px]">
                     US Price
                   </th>
-                  <th className="px-4 py-3.5 text-[11px] font-semibold tracking-wider text-slate-400 uppercase sm:px-5 sm:text-[12px]">
+                  <th className="px-4 py-3.5 text-[11px] font-semibold tracking-wider text-black uppercase sm:px-5 sm:text-[12px]">
                     UK Price
                   </th>
-                  <th className="px-4 py-3.5 text-[11px] font-semibold tracking-wider text-slate-400 uppercase sm:px-5 sm:text-[12px]">
+                  <th className="px-4 py-3.5 text-[11px] font-semibold tracking-wider text-black uppercase sm:px-5 sm:text-[12px]">
                     Price With Dr. Mona Dahiya
                   </th>
                 </tr>
@@ -66,18 +66,18 @@ export default function IntlPricing() {
                 {rows.map((row) => (
                   <tr
                     key={row.procedure}
-                    className="border-b border-white/10 last:border-b-0"
+                    className="border-b border-[#fde2ec] last:border-b-0"
                   >
-                    <td className="px-4 py-4 text-[13.5px] font-semibold text-white sm:px-5 sm:text-[14px]">
+                    <td className="px-4 py-4 text-[13.5px] font-semibold text-black sm:px-5 sm:text-[14px]">
                       {row.procedure}
                     </td>
-                    <td className="px-4 py-4 text-[13px] text-slate-300 sm:px-5 sm:text-[13.5px]">
+                    <td className="px-4 py-4 text-[13px] text-black sm:px-5 sm:text-[13.5px]">
                       {row.us}
                     </td>
-                    <td className="px-4 py-4 text-[13px] text-slate-300 sm:px-5 sm:text-[13.5px]">
+                    <td className="px-4 py-4 text-[13px] text-black sm:px-5 sm:text-[13.5px]">
                       {row.uk}
                     </td>
-                    <td className="px-4 py-4 text-[13.5px] font-semibold text-[#f9a8d4] sm:px-5 sm:text-[14px]">
+                    <td className="px-4 py-4 text-[13.5px] font-semibold text-rose sm:px-5 sm:text-[14px]">
                       {row.mona}
                     </td>
                   </tr>

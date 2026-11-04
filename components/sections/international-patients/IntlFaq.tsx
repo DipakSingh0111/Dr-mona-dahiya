@@ -67,7 +67,7 @@ const leftFaqs: FaqItem[] = [
         costs US$25, and we will go over your files with you.{" "}
         <Link
           href="/ivf-consultation-online"
-          className="underline decoration-[#93c5fd]/50 underline-offset-2 text-[#93c5fd]"
+          className="underline decoration-[var(--blue)]/50 underline-offset-2 text-blue"
         >
           More information about online consultations
         </Link>

@@ -1,22 +1,68 @@
 @import "tailwindcss";
 
 :root {
-  --color-navy: #0a1d37;
-  --color-navy-deep: #061324;
-  --color-rose: #c53658;
-  --color-rose-dark: #a82e4a;
-  --color-rose-soft: #e8a0b4;
-  --color-teal: #006d6d;
-  --color-teal-dark: #005858;
-  --color-ink: #142033;
-  --color-muted: #64748b;
-  --font-sans: var(--font-poppins), "Segoe UI", sans-serif;
-  --font-display: var(--font-playfair), Georgia, serif;
+  /* Home theme */
+  --navy: #061532;
+  --navy-mid: #0a1f45;
+  --navy-deep: #061532;
+  --rose: #e83e74;
+  --rose-dark: #c53658;
+  --rose-soft: #fbcfe0;
+  --rose-bright: #e83e74;
+  --blue: #0047ca;
+  --blue-dark: #0037a3;
+  --pink: #fff5f7;
+  --ink: #0f2438;
+  --muted: #64748b;
+  --teal: #006d6d;
+  --teal-dark: #005858;
+
+  /* aliases used by existing CSS / components */
+  --color-navy: var(--navy);
+  --color-navy-mid: var(--navy-mid);
+  --color-navy-deep: var(--navy-deep);
+  --color-rose: var(--rose);
+  --color-rose-dark: var(--rose-dark);
+  --color-rose-soft: var(--rose-soft);
+  --color-rose-bright: var(--rose-bright);
+  --color-blue: var(--blue);
+  --color-blue-dark: var(--blue-dark);
+  --color-pink: var(--pink);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-teal: var(--teal);
+  --color-teal-dark: var(--teal-dark);
+
+  /* Fonts: Globally defined — strictly Poppins and Tahoma only */
+  --font-sans: var(--font-poppins), Tahoma, sans-serif;
+  --font-serif: Tahoma, var(--font-poppins), sans-serif;
+  --font-display: var(--font-poppins), Tahoma, sans-serif;
+  --font-poppins-family: var(--font-poppins), Tahoma, sans-serif;
+  --font-tahoma-family: Tahoma, var(--font-poppins), sans-serif;
 }
 
 @theme inline {
-  --font-sans: var(--font-poppins), "Segoe UI", sans-serif;
-  --font-display: var(--font-playfair), Georgia, serif;
+  --color-navy: var(--navy);
+  --color-navy-mid: var(--navy-mid);
+  --color-navy-deep: var(--navy-deep);
+  --color-rose: var(--rose);
+  --color-rose-dark: var(--rose-dark);
+  --color-rose-soft: var(--rose-soft);
+  --color-rose-bright: var(--rose-bright);
+  --color-blue: var(--blue);
+  --color-blue-dark: var(--blue-dark);
+  --color-pink: var(--pink);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-teal: var(--teal);
+  --color-teal-dark: var(--teal-dark);
+
+  /* Tailwind font utilities strictly mapping to Poppins and Tahoma */
+  --font-sans: var(--font-poppins), Tahoma, sans-serif;
+  --font-serif: Tahoma, var(--font-poppins), sans-serif;
+  --font-display: var(--font-poppins), Tahoma, sans-serif;
+  --font-poppins: var(--font-poppins), Tahoma, sans-serif;
+  --font-tahoma: Tahoma, var(--font-poppins), sans-serif;
 }
 
 html {
@@ -31,14 +77,35 @@ body {
   font-size: 15px;
   line-height: 1.6;
   color: var(--color-ink);
-  background: #fff;
+  background: var(--pink);
   -webkit-font-smoothing: antialiased;
   overflow-x: clip;
   width: 100%;
 }
 
+.font-sans {
+  font-family: var(--font-sans) !important;
+}
+
 .font-display {
-  font-family: var(--font-display);
+  font-family: var(--font-display) !important;
+}
+
+.font-serif {
+  font-family: var(--font-serif) !important;
+}
+
+.font-poppins {
+  font-family: var(--font-poppins) !important;
+}
+
+.font-tahoma {
+  font-family: var(--font-tahoma) !important;
+}
+
+/* Inner-page banners — pale pink (same as Home light theme) */
+.page-hero {
+  background: var(--pink);
 }
 
 /* Dark left for copy, clear center so Hero-banner people + Times Network show */
@@ -63,14 +130,14 @@ body {
 }
 
 .btn-rose {
-  background: #c44569;
+  background: var(--color-rose);
   color: #fff;
   box-shadow: none;
   transition: background 0.2s ease;
 }
 
 .btn-rose:hover {
-  background: #ad3a5a;
+  background: var(--color-rose-dark);
 }
 
 .btn-outline {
@@ -85,20 +152,22 @@ body {
   background: rgba(255, 255, 255, 0.08);
 }
 
-.btn-teal {
-  background: var(--color-teal);
+.btn-teal,
+.btn-blue {
+  background: var(--color-blue);
   color: #fff;
-  box-shadow: 0 8px 20px rgba(0, 109, 109, 0.28);
+  box-shadow: 0 8px 20px rgba(0, 71, 202, 0.28);
   transition:
     background 0.2s ease,
     transform 0.2s ease,
     box-shadow 0.2s ease;
 }
 
-.btn-teal:hover {
-  background: var(--color-teal-dark);
+.btn-teal:hover,
+.btn-blue:hover {
+  background: var(--color-blue-dark);
   transform: translateY(-1px);
-  box-shadow: 0 10px 24px rgba(0, 109, 109, 0.35);
+  box-shadow: 0 10px 24px rgba(0, 71, 202, 0.35);
 }
 
 .field {
@@ -249,10 +318,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .hero-veil {
   background: linear-gradient(
     90deg,
-    rgba(12, 42, 100, 0.94) 0%,
-    rgba(14, 48, 110, 0.88) 22%,
-    rgba(16, 55, 125, 0.72) 38%,
-    rgba(18, 62, 140, 0.35) 52%,
+    rgba(6, 21, 50, 0.94) 0%,
+    rgba(10, 31, 69, 0.88) 22%,
+    rgba(10, 31, 69, 0.72) 38%,
+    rgba(6, 21, 50, 0.35) 52%,
     transparent 64%
   );
 }

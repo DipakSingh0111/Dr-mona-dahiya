@@ -30,11 +30,11 @@ export default function FloatingActions() {
         href="#book-appointment"
         aria-label="Take Fertility Assessment"
         tabIndex={visible ? 0 : -1}
-        className={`group inline-flex items-center gap-2.5 rounded-full border border-white/25 bg-gradient-to-r from-[#e83e74] via-[#ea4c80] to-[#c53658] px-3.5 py-2.5 text-white shadow-[0_8px_26px_rgba(232,62,116,0.4)] backdrop-blur-md transition-all duration-200 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-[0_12px_32px_rgba(232,62,116,0.55)] sm:gap-3 sm:px-4 sm:py-3 ${
+        className={`group inline-flex items-center gap-2.5 rounded-full border border-white/25 bg-gradient-to-r from-rose via-[#ea4c80] to-[var(--rose)] px-3.5 py-2.5 text-white shadow-[0_8px_26px_rgba(232,62,116,0.4)] backdrop-blur-md transition-all duration-200 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-[0_12px_32px_rgba(232,62,116,0.55)] sm:gap-3 sm:px-4 sm:py-3 ${
           visible ? "pointer-events-auto" : "pointer-events-none"
         }`}
       >
-        <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-white text-[#e83e74] shadow-sm transition-transform duration-200 group-hover:scale-110 sm:size-5.5">
+        <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-white text-rose shadow-sm transition-transform duration-200 group-hover:scale-110 sm:size-5.5">
           <FaCheck className="size-2.5 sm:size-3" />
         </span>
 

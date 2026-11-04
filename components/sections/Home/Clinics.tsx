@@ -25,28 +25,28 @@ export default function Clinics() {
         <div className="mb-6 flex flex-col justify-between gap-5 md:mb-8 md:flex-row md:items-end">
           <div className="shrink-0">
             <div className="mb-3 flex items-center gap-2.5 sm:gap-3">
-              <span className="h-[2px] w-7 shrink-0 rounded-full bg-[#e83e74] sm:w-8" />
-              <span className="text-[11.5px] font-bold tracking-[0.12em] text-[#e83e74] uppercase sm:whitespace-nowrap sm:text-[13px] sm:tracking-[0.14em]">
+              <span className="h-[2px] w-7 shrink-0 rounded-full bg-rose sm:w-8" />
+              <span className="text-[11.5px] font-bold tracking-[0.12em] text-rose uppercase sm:whitespace-nowrap sm:text-[13px] sm:tracking-[0.14em]">
                 {eyebrow}
               </span>
             </div>
 
-            <h2 className="font-display text-2xl leading-[1.15] font-bold tracking-tight text-[#0f2438] sm:whitespace-nowrap sm:text-3xl lg:text-[2.2rem] xl:text-[2.75rem]">
+            <h2 className="font-display text-2xl leading-[1.15] font-bold tracking-tight text-ink sm:whitespace-nowrap sm:text-3xl lg:text-[2.2rem] xl:text-[2.75rem]">
               <span>{titlePrefix} </span>
-              <span className="text-[#e83e74]">{titleAccent}</span>
+              <span className="text-rose">{titleAccent}</span>
             </h2>
           </div>
 
           <div className="flex w-fit shrink-0 items-center gap-3.5 rounded-[20px] border border-[#fde2ec] bg-gradient-to-r from-[#fff7fa] to-[#fff0f5] px-4 py-3 shadow-sm xl:gap-4 xl:rounded-[22px] xl:px-5 xl:py-4">
-            <div className="relative flex size-[44px] shrink-0 items-center justify-center rounded-2xl bg-[#fee7ef] text-[#e83e74] shadow-sm xl:size-[54px]">
+            <div className="relative flex size-[44px] shrink-0 items-center justify-center rounded-2xl bg-[#fee7ef] text-rose shadow-sm xl:size-[54px]">
               <MdOutlineCalendarMonth className="size-6 xl:size-8" />
-              <span className="absolute -right-0.5 -bottom-0.5 flex size-4.5 items-center justify-center rounded-full bg-white text-[#e83e74] shadow-sm ring-1 ring-[#fde2ec] xl:size-5">
+              <span className="absolute -right-0.5 -bottom-0.5 flex size-4.5 items-center justify-center rounded-full bg-white text-rose shadow-sm ring-1 ring-[#fde2ec] xl:size-5">
                 <FaClock className="size-2.5 xl:size-3" />
               </span>
             </div>
 
             <div className="min-w-0 flex-1">
-              <p className="text-[12.5px] leading-snug font-bold text-[#0f2438] sm:whitespace-nowrap xl:text-[14px]">
+              <p className="text-[12.5px] leading-snug font-bold text-ink sm:whitespace-nowrap xl:text-[14px]">
                 {hoursBadge.title}
               </p>
               {hoursBadge.subtitle ? (
@@ -76,7 +76,7 @@ export default function Clinics() {
 
                 <div className="pointer-events-none absolute top-[210px] left-8 z-30 -translate-y-1/2 sm:top-[230px] sm:left-9">
                   <div className="flex size-[58px] items-center justify-center rounded-full bg-white shadow-[0_6px_18px_rgba(15,23,42,0.12)] sm:size-[62px]">
-                    <div className="flex size-[42px] items-center justify-center rounded-full bg-gradient-to-br from-[#f85f8f] to-[#e6356e] text-white sm:size-[46px]">
+                    <div className="flex size-[42px] items-center justify-center rounded-full bg-gradient-to-br from-rose to-rose-dark text-white sm:size-[46px]">
                       <FaMapMarkerAlt className="size-[17px] sm:size-[18px]" />
                     </div>
                   </div>
@@ -84,7 +84,7 @@ export default function Clinics() {
 
                 <div className="relative z-10 mt-9 flex flex-1 items-end justify-between gap-3">
                   <div className="flex min-w-0 flex-1 flex-col justify-between self-stretch pr-2 pl-1">
-                    <h3 className="font-display text-[22px] font-bold tracking-tight text-[#0f2438] sm:text-[24px]">
+                    <h3 className="font-display text-[22px] font-bold tracking-tight text-ink sm:text-[24px]">
                       {clinic.city}
                     </h3>
                     <p className="mt-2 min-h-[58px] text-[12.5px] leading-relaxed text-gray-500 sm:min-h-[62px] sm:text-[13px]">
@@ -95,7 +95,7 @@ export default function Clinics() {
                   <a
                     href={clinic.href}
                     aria-label={`Open ${clinic.city} clinic details`}
-                    className="pointer-events-auto flex size-[44px] shrink-0 items-center justify-center rounded-full border border-[#fde2ec] bg-[#fff0f5] text-[#e83e74] transition-all duration-300 hover:scale-105 hover:bg-[#e83e74] hover:text-white sm:size-[48px]"
+                    className="pointer-events-auto flex size-[44px] shrink-0 items-center justify-center rounded-full border border-[#fde2ec] bg-[#fff0f5] text-rose transition-all duration-300 hover:scale-105 hover:bg-rose-dark hover:text-white sm:size-[48px]"
                   >
                     <FaArrowRight className="size-3.5 sm:size-4" />
                   </a>

@@ -45,19 +45,19 @@ export default function IuiDelhiSteps() {
   return (
     <section
       id="iui-steps"
-      className="relative overflow-hidden border-t border-white/10 bg-[#061532] px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-14"
+      className="relative overflow-hidden border-t border-[#fde2ec] bg-pink px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-14"
     >
       <div className="relative mx-auto w-full max-w-[1440px]">
         <Reveal variant="fadeUp">
-          <span className="text-[12px] font-semibold tracking-wider text-[#e83e74] uppercase sm:text-[13px]">
+          <span className="text-[12px] font-semibold tracking-wider text-rose uppercase sm:text-[13px]">
             Steps involved
           </span>
 
-          <h2 className="font-serif mt-2 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-white sm:text-[2.2rem] lg:text-[2.45rem]">
+          <h2 className="font-serif mt-2 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-black sm:text-[2.2rem] lg:text-[2.45rem]">
             Steps in an IUI Cycle
           </h2>
 
-          <p className="mt-2.5 max-w-3xl text-[13.5px] leading-relaxed text-slate-300 sm:text-[14.5px]">
+          <p className="mt-2.5 max-w-3xl text-[13.5px] leading-relaxed text-black sm:text-[14.5px]">
             Following are the steps that are explained to every couple who comes
             for IUI at our Delhi clinic.
           </p>
@@ -69,16 +69,16 @@ export default function IuiDelhiSteps() {
         >
           {steps.map((item) => (
             <StaggerItem key={item.num} className="h-full">
-              <div className="flex h-full flex-col rounded-2xl border border-[#e83e74]/25 bg-[#091a3c]/75 p-5 shadow-[0_0_20px_rgba(232,62,116,0.08)] backdrop-blur-md transition-all duration-300 hover:border-[#e83e74]/45 hover:bg-[#0c224e] sm:p-6">
+              <div className="flex h-full flex-col rounded-2xl border border-rose/25 bg-white p-5 shadow-[0_0_20px_rgba(232,62,116,0.08)] backdrop-blur-md transition-all duration-300 hover:border-rose/45 hover:bg-[#fff0f5] sm:p-6">
                 <div className="flex items-center gap-3">
-                  <span className="flex size-7 shrink-0 items-center justify-center rounded-lg bg-[#e83e74] text-[13px] font-bold text-white shadow-[0_2px_10px_rgba(232,62,116,0.35)]">
+                  <span className="flex size-7 shrink-0 items-center justify-center rounded-lg bg-rose text-[13px] font-bold text-white shadow-[0_2px_10px_rgba(232,62,116,0.35)]">
                     {item.num}
                   </span>
-                  <h3 className="text-[14.5px] font-bold text-white sm:text-[15px]">
+                  <h3 className="text-[14.5px] font-bold text-black sm:text-[15px]">
                     {item.title}
                   </h3>
                 </div>
-                <p className="mt-3 text-[13px] leading-relaxed text-slate-300 sm:text-[13.5px]">
+                <p className="mt-3 text-[13px] leading-relaxed text-black sm:text-[13.5px]">
                   {item.desc}
                 </p>
               </div>
@@ -89,7 +89,7 @@ export default function IuiDelhiSteps() {
         <Reveal variant="fadeUp" delay={0.2} className="mt-8">
           <Link
             href="#iui-cost"
-            className="inline-flex items-center justify-center rounded-full border border-white/30 bg-transparent px-6 py-2.5 text-[13px] font-medium text-white shadow-sm transition-all duration-200 hover:border-teal-400/60 hover:bg-teal-500/10 hover:text-teal-200 active:scale-95 sm:text-[13.5px]"
+            className="inline-flex items-center justify-center rounded-full border border-white/30 bg-transparent px-6 py-2.5 text-[13px] font-medium text-black shadow-sm transition-all duration-200 hover:border-blue/60 hover:bg-blue/10 hover:text-blue active:scale-95 sm:text-[13.5px]"
           >
             See the full IUI timetable and cost
           </Link>

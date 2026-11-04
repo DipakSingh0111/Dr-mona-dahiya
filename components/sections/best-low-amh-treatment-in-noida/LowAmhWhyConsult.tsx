@@ -45,15 +45,15 @@ export default function LowAmhWhyConsult() {
       <Stagger className="mt-7 flex flex-col gap-4" stagger={0.08}>
         {reasons.map((item) => (
           <StaggerItem key={item.title}>
-            <div className="group flex flex-col gap-4 rounded-2xl border border-[#e83e74]/25 bg-[#0a1f45]/80 p-5 transition-all duration-300 hover:border-[#e83e74]/45 sm:flex-row sm:items-start sm:p-6">
-              <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#e83e74] to-[#c53658] text-white shadow-[0_4px_14px_rgba(232,62,116,0.35)]">
+            <div className="group flex flex-col gap-4 rounded-2xl border border-rose/25 bg-white/80 p-5 transition-all duration-300 hover:border-rose/45 sm:flex-row sm:items-start sm:p-6">
+              <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-rose to-rose-dark text-white shadow-[0_4px_14px_rgba(232,62,116,0.35)]">
                 <FaCheck className="size-4" />
               </div>
               <div className="min-w-0 flex-1">
-                <h3 className="text-[15.5px] font-bold text-white transition-colors group-hover:text-[#f9a8d4] sm:text-[16.5px]">
+                <h3 className="text-[15.5px] font-bold text-black transition-colors group-hover:text-rose sm:text-[16.5px]">
                   {item.title}
                 </h3>
-                <p className="mt-1.5 text-[13.5px] leading-relaxed text-white/70 sm:text-[14px]">
+                <p className="mt-1.5 text-[13.5px] leading-relaxed text-black sm:text-[14px]">
                   {item.description}
                 </p>
               </div>

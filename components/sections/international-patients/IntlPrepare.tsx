@@ -38,12 +38,12 @@ export default function IntlPrepare() {
       <Stagger className="mt-7 flex flex-col gap-3" stagger={0.05}>
         {items.map((item) => (
           <StaggerItem key={item.title}>
-            <div className="flex items-start gap-3 rounded-2xl border border-white/10 bg-[#091a3c]/75 px-4 py-3.5 backdrop-blur-md sm:px-5 sm:py-4">
-              <span className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-teal-500/20 text-teal-300 ring-1 ring-teal-500/40">
+            <div className="flex items-start gap-3 rounded-2xl border border-[#fde2ec] bg-white px-4 py-3.5 backdrop-blur-md sm:px-5 sm:py-4">
+              <span className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-blue/20 text-blue ring-1 ring-blue/40">
                 <FaCheck className="size-2.5" />
               </span>
-              <p className="text-[13.5px] leading-relaxed text-slate-200 sm:text-[14px]">
-                <span className="font-semibold text-white">{item.title}</span>{" "}
+              <p className="text-[13.5px] leading-relaxed text-black sm:text-[14px]">
+                <span className="font-semibold text-black">{item.title}</span>{" "}
                 {item.text}
               </p>
             </div>

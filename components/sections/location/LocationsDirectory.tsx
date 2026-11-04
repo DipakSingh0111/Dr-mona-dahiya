@@ -26,7 +26,7 @@ export default function LocationsDirectory({ query }: Props) {
   const q = query.trim();
 
   return (
-    <section className="relative overflow-hidden bg-[#061532] px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
+    <section className="relative overflow-hidden bg-pink px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
       <div className="relative mx-auto w-full max-w-[1440px] space-y-12 sm:space-y-16">
         {cities.map((city) => {
           const groupsToShow = city.groups
@@ -52,14 +52,14 @@ export default function LocationsDirectory({ query }: Props) {
             <Reveal key={city.id}>
               <div
                 id={city.id}
-                className="scroll-mt-36 rounded-[28px] border border-white/10 bg-[#0a1f45]/55 p-5 shadow-[0_12px_36px_rgba(0,10,40,0.35)] sm:p-7 lg:p-9"
+                className="scroll-mt-36 rounded-[28px] border border-[#fde2ec] bg-white/55 p-5 shadow-[0_12px_36px_rgba(0,10,40,0.35)] sm:p-7 lg:p-9"
               >
                 <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
                   <div className="min-w-0">
-                    <h2 className="font-serif text-[2rem] font-semibold tracking-tight text-white sm:text-[2.35rem]">
+                    <h2 className="font-serif text-[2rem] font-semibold tracking-tight text-black sm:text-[2.35rem]">
                       {city.name}
                     </h2>
-                    <p className="mt-2 max-w-2xl text-[13px] leading-relaxed text-white/60 sm:text-[14px]">
+                    <p className="mt-2 max-w-2xl text-[13px] leading-relaxed text-black sm:text-[14px]">
                       {city.address}
                     </p>
                   </div>
@@ -67,13 +67,13 @@ export default function LocationsDirectory({ query }: Props) {
                   <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
                     <a
                       href={city.clinicHref}
-                      className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#e83e74] via-[#ea4c80] to-[#c53658] px-5 py-2.5 text-[13px] font-bold text-white shadow-[0_8px_22px_rgba(232,62,116,0.35)] transition-all hover:brightness-110 active:scale-95"
+                      className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-rose via-[#ea4c80] to-[var(--rose)] px-5 py-2.5 text-[13px] font-bold text-white shadow-[0_8px_22px_rgba(232,62,116,0.35)] transition-all hover:brightness-110 active:scale-95"
                     >
                       Clinic page
                     </a>
                     <a
                       href={phone.href}
-                      className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/5 px-5 py-2.5 text-[13px] font-bold text-white transition-all hover:border-white/60 hover:bg-white/10 active:scale-95"
+                      className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/5 px-5 py-2.5 text-[13px] font-bold text-black transition-all hover:border-white/60 hover:bg-white/10 active:scale-95"
                     >
                       <FaPhoneAlt className="size-3" />
                       Call {phone.label}
@@ -84,7 +84,7 @@ export default function LocationsDirectory({ query }: Props) {
                 <div className="mt-8 space-y-7">
                   {visibleGroups.map((group) => (
                     <div key={group.label}>
-                      <p className="mb-3 text-[11px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:text-[11.5px]">
+                      <p className="mb-3 text-[11px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[11.5px]">
                         {group.label}
                       </p>
                       <div className="flex flex-wrap gap-2 sm:gap-2.5">
@@ -97,8 +97,8 @@ export default function LocationsDirectory({ query }: Props) {
                               href="#"
                               className={`rounded-full border px-3.5 py-2 text-[12.5px] font-medium transition-all sm:text-[13px] ${
                                 highlighted
-                                  ? "border-[#e83e74]/70 bg-[#e83e74]/20 text-white ring-1 ring-[#e83e74]/35"
-                                  : "border-white/15 bg-[#071a3a]/80 text-white/85 hover:border-[#e83e74]/40 hover:bg-[#e83e74]/10 hover:text-white"
+                                  ? "border-rose/70 bg-rose/20 text-white ring-1 ring-rose/35"
+                                  : "border-[#fde2ec] bg-white text-ink hover:border-rose/40 hover:bg-rose/10 hover:text-rose"
                               }`}
                             >
                               {area}
@@ -115,18 +115,18 @@ export default function LocationsDirectory({ query }: Props) {
         })}
 
         <Reveal>
-          <p className="text-center text-[14px] text-white/65 sm:text-[15px]">
+          <p className="text-center text-[14px] text-black sm:text-[15px]">
             {supportText}{" "}
             <a
               href={phone.href}
-              className="font-semibold text-[#f472b6] underline-offset-2 hover:text-white hover:underline"
+              className="font-semibold text-rose underline-offset-2 hover:text-rose hover:underline"
             >
               {phone.label}
             </a>{" "}
             or{" "}
             <Link
               href={supportBookHref}
-              className="font-semibold text-[#93c5fd] underline-offset-2 hover:text-white hover:underline"
+              className="font-semibold text-blue underline-offset-2 hover:text-rose hover:underline"
             >
               {supportBookLabel}
             </Link>

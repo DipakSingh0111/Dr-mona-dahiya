@@ -17,13 +17,13 @@ const leftFaqs: FaqItem[] = [
         </p>
         <ul className="space-y-2 pl-1">
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>
               <strong className="text-white font-semibold">Endometriosis:</strong> Tissue implants <strong className="text-white">outside</strong> the uterine cavity—most frequently across the ovaries, fallopian tubes, pouch of Douglas, and pelvic peritoneum. It causes pelvic adhesions, distorted tubal motility, and local inflammatory toxicity.
             </p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>
               <strong className="text-white font-semibold">Adenomyosis:</strong> Endometrial glands and stroma infiltrate the <strong className="text-white">muscular wall (myometrium)</strong> of the uterus itself. This causes myometrial thickening, asymmetrical uterine enlargement, altered junctional zone dynamics, and defective embryo implantation.
             </p>
@@ -44,15 +44,15 @@ const leftFaqs: FaqItem[] = [
         </p>
         <ul className="space-y-2 pl-1">
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>Pelvic adhesions physically blocking the fimbriae from picking up eggs.</p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>Chronic cytokine-rich peritoneal fluid damaging sperm DNA and oocyte spindles.</p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>Disrupted peristalsis of the uterine junctional zone impairing blastocyst attachment.</p>
           </li>
         </ul>
@@ -69,13 +69,13 @@ const leftFaqs: FaqItem[] = [
         <p>To overcome this, modern protocols avoid fresh embryo transfers:</p>
         <ul className="space-y-2 pl-1">
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>
               <strong className="text-white font-semibold">Freeze-All Strategy:</strong> Blastocysts are vitrified during the retrieval cycle to prevent high stimulation hormones from inflaming the myometrium.
             </p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>
               <strong className="text-white font-semibold">Downregulation:</strong> Pre-treating with <strong className="text-white">long-acting GnRH agonists (depot therapy for 1 to 3 months)</strong> shrinks the myometrial lesions and cools local inflammation before carrying out a primed Frozen Embryo Transfer (FET).
             </p>
@@ -93,13 +93,13 @@ const leftFaqs: FaqItem[] = [
         </p>
         <ul className="space-y-2 pl-1">
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>
               <strong className="text-white font-semibold">Surgical Excision is Advised:</strong> For large, painful ovarian endometriomas (&gt;4 cm), deep infiltrating endometriosis causing bowel/urinary obstruction, or hydrosalpinx (fluid-filled damaged tubes that must be clipped prior to transfer).
             </p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>
               <strong className="text-white font-semibold">Surgery is Avoided / Deferred:</strong> In women with low AMH (&lt;1.5 ng/mL) or diffuse adenomyosis. Aggressive cyst stripping strips healthy ovarian cortex, permanently depleting egg reserve, while diffuse adenomyosis lacks clear surgical margins and risks uterine rupture. For these women, <strong className="text-white font-semibold">embryo banking first</strong>, followed by medical suppression, is the clinical standard.
             </p>
@@ -115,13 +115,13 @@ const leftFaqs: FaqItem[] = [
         <p>Timeline guidelines depend on clinical stage and age:</p>
         <ul className="space-y-2 pl-1">
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>
               <strong className="text-white font-semibold">Women under 35 with Stage I/II Endometriosis:</strong> Can attempt natural conception or 2 to 3 cycles of ovulation induction + IUI for <strong className="text-white">6 to 12 months</strong> if fallopian tubes are confirmed open and the semen analysis is normal.
             </p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>
               <strong className="text-white font-semibold">Women 35 and older, or with Stage III/IV Endometriosis, Endometriomas, or Adenomyosis:</strong> Should move to <strong className="text-white font-semibold">IVF after 6 months</strong> of unassisted attempts. Prolonged waiting allows progressive endometriotic cysts to destroy remaining follicles and increases surgical recurrence risks.
             </p>
@@ -138,13 +138,13 @@ const rightFaqs: FaqItem[] = [
     answer: (
       <ul className="space-y-2.5 pl-1">
         <li className="flex items-start gap-2">
-          <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+          <span className="text-rose select-none text-[13px] pt-1">•</span>
           <p>
             <strong className="text-white font-semibold">Endometriosis Clues:</strong> Severe secondary dysmenorrhea (painful periods unresponsive to routine painkillers), deep dyspareunia (pain during intercourse), chronic non-menstrual pelvic pain, and painful bowel movements during periods (dyschezia).
           </p>
         </li>
         <li className="flex items-start gap-2">
-          <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+          <span className="text-rose select-none text-[13px] pt-1">•</span>
           <p>
             <strong className="text-white font-semibold">Adenomyosis Clues:</strong> Menorrhagia (prolonged, heavy menstrual flow with blood clots), severe uterine cramping, a sensation of lower pelvic heaviness, and a diffusely enlarged, &quot;globular,&quot; tender uterus on clinical examination.
           </p>
@@ -157,19 +157,19 @@ const rightFaqs: FaqItem[] = [
     answer: (
       <ul className="space-y-2 pl-1">
         <li className="flex items-start gap-2">
-          <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+          <span className="text-rose select-none text-[13px] pt-1">•</span>
           <p>
             <strong className="text-white font-semibold">High-Resolution Transvaginal Ultrasound (TVS):</strong> Identifies ovarian endometriomas (&quot;ground-glass&quot; cyst appearance) and classic adenomyosis signs (asymmetrical myometrial wall thickening, myometrial cysts, and linear striations).
           </p>
         </li>
         <li className="flex items-start gap-2">
-          <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+          <span className="text-rose select-none text-[13px] pt-1">•</span>
           <p>
             <strong className="text-white font-semibold">Pelvic MRI:</strong> The definitive non-invasive imaging method to map deep infiltrating endometriosis (DIE) nodules and quantify uterine junctional zone thickness for adenomyosis.
           </p>
         </li>
         <li className="flex items-start gap-2">
-          <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+          <span className="text-rose select-none text-[13px] pt-1">•</span>
           <p>
             <strong className="text-white font-semibold">Diagnostic Laparoscopy:</strong> The gold standard for direct visual confirmation and histopathological staging of superficial peritoneal endometriosis.
           </p>
@@ -202,19 +202,19 @@ const rightFaqs: FaqItem[] = [
         </p>
         <ul className="space-y-1.5 pl-1">
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-0.5">•</span>
+            <span className="text-rose select-none text-[13px] pt-0.5">•</span>
             <p>
               <strong className="text-white font-semibold">First-trimester miscarriage</strong> (reduced to baseline when transfers follow GnRH agonist downregulation).
             </p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-0.5">•</span>
+            <span className="text-rose select-none text-[13px] pt-0.5">•</span>
             <p>
               <strong className="text-white font-semibold">Late-pregnancy complications:</strong> Preterm labor, fetal growth restriction (FGR), and placental malposition.
             </p>
           </li>
         </ul>
-        <p className="text-[12.5px] text-slate-300">
+        <p className="text-[12.5px] text-black">
           High-risk obstetric surveillance, early cervical length screening, and prolonged luteal progesterone support throughout the first trimester manage these risks.
         </p>
       </div>

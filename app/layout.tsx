@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins, Playfair_Display } from "next/font/google";
+import { Poppins } from "next/font/google";
 import ScrollToTop from "@/components/layout/ScrollToTop";
 import HeaderHeightSync from "@/components/layout/HeaderHeightSync";
 import TopBar from "@/components/layout/TopBar";
@@ -11,14 +11,8 @@ import "./globals.css";
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-});
-
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  style: ["normal", "italic"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -36,7 +30,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${poppins.variable} ${playfair.variable} antialiased`}
+      className={`${poppins.variable} antialiased`}
     >
       <head>
         {/* Disable browser scroll restore so pages always open from top */}

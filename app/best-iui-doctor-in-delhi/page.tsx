@@ -25,11 +25,11 @@ export const metadata: Metadata = {
 
 export default function BestIuiDoctorInDelhiPage() {
   return (
-    <main className="flex min-h-screen flex-col bg-[#061532]">
+    <main className="flex min-h-screen flex-col bg-pink">
       <IuiDelhiHero />
 
       <SectionReveal>
-        <MedicalRegistration dark={true} />
+        <MedicalRegistration />
       </SectionReveal>
 
       <SectionReveal delay={0.04}>
@@ -75,9 +75,9 @@ export default function BestIuiDoctorInDelhiPage() {
       <SectionReveal delay={0.04}>
         <AboutConsultation
           sectionId="book-consultation"
-          eyebrow="Book an appointment"
-          title="Schedule your fertility consultation in Delhi"
-          subtitle="Meet Dr. Mona Dahiya to evaluate your options and plan your care. Choose an in-clinic or online consultation, or call or write directly."
+          eyebrow="Consultation"
+          title="Book Consultation For IUI In Delhi"
+          subtitle="Consult Dr. Mona Dahiya in Lajpat Nagar IV or book an online consultation. We can help you evaluate your reports and see if IUI is the right step for you."
           appendContacts={false}
           consultationDuration=""
         />

@@ -31,17 +31,17 @@ export default function BestIvfDelhiReviews() {
   return (
     <section
       id="reviews"
-      className="relative overflow-hidden bg-[#061532] px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12"
+      className="relative overflow-hidden bg-pink px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12"
     >
       <div className="mx-auto w-full max-w-[1440px]">
         <Reveal variant="fadeUp">
-          <p className="text-[12px] font-semibold tracking-wide text-[#e83e74] sm:text-[13px]">
+          <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">
             Patient reviews
           </p>
-          <h2 className="font-serif mt-1 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-white sm:text-[2.2rem] lg:text-[2.45rem]">
+          <h2 className="font-serif mt-1 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-black sm:text-[2.2rem] lg:text-[2.45rem]">
             What Patients in Delhi Say
           </h2>
-          <p className="mt-2 text-[14px] leading-relaxed text-slate-300 sm:text-[15px]">
+          <p className="mt-2 text-[14px] leading-relaxed text-black sm:text-[15px]">
             Reviews from patients who mention Delhi. These are individual
             experiences in patients&apos; own words.
           </p>
@@ -53,19 +53,19 @@ export default function BestIvfDelhiReviews() {
         >
           {reviews.map((item) => (
             <StaggerItem key={item.name} className="h-full">
-              <div className="relative flex h-full flex-col justify-between rounded-2xl border border-white/10 bg-[#091a3c]/70 p-6 backdrop-blur-md transition-all duration-300 hover:border-[#0047ca]/50 hover:bg-[#0c224e]/85 sm:p-7">
-                <p className="text-[13.5px] leading-relaxed text-slate-300 sm:text-[14px]">
+              <div className="relative flex h-full flex-col justify-between rounded-2xl border border-[#fde2ec] bg-white p-6 backdrop-blur-md transition-all duration-300 hover:border-blue/50 hover:bg-[#fff0f5] sm:p-7">
+                <p className="text-[13.5px] leading-relaxed text-black sm:text-[14px]">
                   &ldquo;{item.review}&rdquo;
                 </p>
-                <div className="mt-6 flex items-center gap-3 border-t border-white/10 pt-4">
-                  <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#e83e74] text-[13px] font-bold text-white shadow-[0_2px_8px_rgba(232,62,116,0.35)]">
+                <div className="mt-6 flex items-center gap-3 border-t border-[#fde2ec] pt-4">
+                  <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-rose text-[13px] font-bold text-white shadow-[0_2px_8px_rgba(232,62,116,0.35)]">
                     {item.initial}
                   </span>
                   <div>
-                    <p className="text-[13.5px] leading-tight font-bold text-white">
+                    <p className="text-[13.5px] leading-tight font-bold text-black">
                       {item.name}
                     </p>
-                    <p className="text-[11.5px] text-slate-400">{item.source}</p>
+                    <p className="text-[11.5px] text-black">{item.source}</p>
                   </div>
                 </div>
               </div>
@@ -76,7 +76,7 @@ export default function BestIvfDelhiReviews() {
         <Reveal variant="fadeUp" delay={0.2} className="mt-8 flex justify-center">
           <Link
             href="/best-ivf-patient-reviews"
-            className="inline-flex items-center justify-center rounded-full bg-[#0047ca] px-6 py-2.5 text-[13px] font-semibold text-white shadow-[0_4px_16px_rgba(0,71,202,0.35)] transition-all hover:bg-[#0037a3] hover:shadow-[0_6px_20px_rgba(0,71,202,0.45)] sm:text-[14px]"
+            className="inline-flex items-center justify-center rounded-full bg-blue px-6 py-2.5 text-[13px] font-semibold text-white shadow-[0_4px_16px_rgba(0,71,202,0.35)] transition-all hover:bg-blue-dark hover:shadow-[0_6px_20px_rgba(0,71,202,0.45)] sm:text-[14px]"
           >
             Read All Patient Reviews
           </Link>

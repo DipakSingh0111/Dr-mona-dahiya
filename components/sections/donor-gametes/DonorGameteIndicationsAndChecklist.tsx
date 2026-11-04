@@ -34,7 +34,7 @@ const indications: {
         No sperm found even with micro-TESE. See{" "}
         <Link
           href="/azoospermia-treatment"
-          className="font-medium text-[#93c5fd] underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-white"
         >
           Azoospermia Treatment
         </Link>

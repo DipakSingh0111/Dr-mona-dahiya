@@ -19,7 +19,7 @@ const indications: { number: string; title: string; description: ReactNode }[] =
           Removal of endometriotic cysts and adhesions. See{" "}
           <Link
             href="/endometriosis-fertility-treatment"
-            className="font-medium text-[#93c5fd] underline underline-offset-2 hover:text-white"
+            className="font-medium text-blue underline underline-offset-2 hover:text-white"
           >
             Endometriosis Treatment
           </Link>
@@ -36,7 +36,7 @@ const indications: { number: string; title: string; description: ReactNode }[] =
           before IVF. See{" "}
           <Link
             href="/fallopian-tube-blockage-treatment"
-            className="font-medium text-[#93c5fd] underline underline-offset-2 hover:text-white"
+            className="font-medium text-blue underline underline-offset-2 hover:text-white"
           >
             Fallopian Tube Blockage
           </Link>
@@ -119,7 +119,7 @@ export default function LaparoscopyIndicationsAndChecklist() {
             {checklist.map((item, idx) => (
               <Reveal key={item.title} variant="fadeUp" delay={idx * 0.04}>
                 <ChecklistRow>
-                  <strong className="font-semibold text-white">{item.title}:</strong>{" "}
+                  <strong className="font-semibold text-black">{item.title}:</strong>{" "}
                   {item.text}
                 </ChecklistRow>
               </Reveal>

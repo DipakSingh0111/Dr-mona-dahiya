@@ -15,15 +15,15 @@ export default function Affiliations() {
           <div className="mb-6 flex flex-col gap-3 sm:mb-7 lg:mb-8 lg:flex-row lg:items-end lg:justify-between lg:gap-6">
             <div className="shrink-0">
               <div className="mb-3.5 flex items-center gap-2.5 sm:gap-3">
-                <span className="h-px w-6 shrink-0 bg-[#e83e74] sm:w-10" />
-                <span className="text-[11.5px] font-semibold tracking-wide text-[#e83e74] sm:whitespace-nowrap sm:text-[13px]">
+                <span className="h-px w-6 shrink-0 bg-rose sm:w-10" />
+                <span className="text-[11.5px] font-semibold tracking-wide text-rose sm:whitespace-nowrap sm:text-[13px]">
                   {data.eyebrow}
                 </span>
-                <span className="h-px w-6 shrink-0 bg-[#e83e74] sm:w-10" />
+                <span className="h-px w-6 shrink-0 bg-rose sm:w-10" />
               </div>
-              <h2 className="font-display text-[1.65rem] leading-tight font-bold tracking-tight text-[#0f2438] sm:whitespace-nowrap sm:text-[2rem] lg:text-[2.1rem] xl:text-[2.55rem]">
+              <h2 className="font-display text-[1.65rem] leading-tight font-bold tracking-tight text-ink sm:whitespace-nowrap sm:text-[2rem] lg:text-[2.1rem] xl:text-[2.55rem]">
                 {data.title}{" "}
-                <span className="text-[#e83e74]">{data.titleAccent}</span>
+                <span className="text-rose">{data.titleAccent}</span>
               </h2>
             </div>
             <p className="max-w-none text-[12px] leading-relaxed text-[#64748b] sm:text-[13px] lg:whitespace-nowrap lg:text-right xl:text-[14.5px]">
@@ -49,19 +49,19 @@ export default function Affiliations() {
               />
               <FaBuilding
                 aria-hidden
-                className="pointer-events-none absolute top-5 right-5 size-[68px] text-[#e83e74]/[0.14] sm:size-20"
+                className="pointer-events-none absolute top-5 right-5 size-[68px] text-rose/[0.14] sm:size-20"
               />
 
               <div className="relative mb-2 flex flex-wrap items-center gap-3 border-b border-[#f5b8cb]/80 pb-4">
                 <span className="inline-flex items-center gap-2 rounded-full border border-[#f5a3bd] bg-[#ffdce8] px-3.5 py-1.5 shadow-sm">
-                  <span className="flex size-5 items-center justify-center rounded-full bg-[#e83e74] text-white">
+                  <span className="flex size-5 items-center justify-center rounded-full bg-rose text-white">
                     <FaHospital className="size-2.5" />
                   </span>
                   <span className="text-[11px] font-bold tracking-[0.12em] text-[#b02252] uppercase">
                     {data.present.badge}
                   </span>
                 </span>
-                <h3 className="font-display text-[1.35rem] font-bold text-[#0f2438] sm:text-[1.55rem]">
+                <h3 className="font-display text-[1.35rem] font-bold text-ink sm:text-[1.55rem]">
                   {data.present.title}
                 </h3>
               </div>
@@ -77,7 +77,7 @@ export default function Affiliations() {
                         isLast ? "pb-1" : "border-b border-[#f5b8cb]/70"
                       }`}
                     >
-                      <p className="text-[16px] font-bold text-[#0f2438] sm:text-[17.5px]">
+                      <p className="text-[16px] font-bold text-ink sm:text-[17.5px]">
                         {item.name}
                       </p>
 
@@ -109,10 +109,10 @@ export default function Affiliations() {
           {/* Past — Darker / Muted Theme Card */}
           <StaggerItem variant="slideRight">
             <article
-              className="relative h-full overflow-hidden rounded-[22px] border border-white/15 p-5 text-white shadow-[0_16px_40px_rgba(0,35,110,0.22)] sm:rounded-[24px] sm:p-7"
+              className="relative h-full overflow-hidden rounded-[22px] border border-[#fde2ec] p-5 text-white shadow-[0_16px_40px_rgba(0,35,110,0.22)] sm:rounded-[24px] sm:p-7"
               style={{
                 background:
-                  "linear-gradient(145deg, #061e52 0%, #08296f 60%, #0047ca 100%)",
+                  "linear-gradient(145deg, var(--navy) 0%, var(--navy-mid) 60%, var(--blue) 100%)",
               }}
             >
               <FaBuilding
@@ -120,9 +120,9 @@ export default function Affiliations() {
                 className="pointer-events-none absolute top-5 right-5 size-[68px] text-white/[0.08] sm:size-20"
               />
 
-              <div className="relative mb-2 flex flex-wrap items-center gap-3 border-b border-white/15 pb-4">
-                <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3.5 py-1.5 shadow-xs">
-                  <span className="flex size-5 items-center justify-center rounded-full bg-[#e83e74] text-white">
+              <div className="relative mb-2 flex flex-wrap items-center gap-3 border-b border-[#fde2ec] pb-4">
+                <span className="inline-flex items-center gap-2 rounded-full border border-[#fbcfe0] bg-white/10 px-3.5 py-1.5 shadow-xs">
+                  <span className="flex size-5 items-center justify-center rounded-full bg-rose text-white">
                     <FaClock className="size-2.5" />
                   </span>
                   <span className="text-[11px] font-bold tracking-[0.12em] text-[#ffb3c7] uppercase">
@@ -141,7 +141,7 @@ export default function Affiliations() {
                     <li
                       key={item.id}
                       className={`flex items-center gap-4 py-4 sm:py-5 ${
-                        isLast ? "pb-1" : "border-b border-white/10"
+                        isLast ? "pb-1" : "border-b border-[#fde2ec]"
                       }`}
                     >
                       <span className="relative flex h-12 w-28 shrink-0 items-center justify-center overflow-hidden rounded-[12px] bg-white px-2 py-1 shadow-sm sm:h-14 sm:w-32">

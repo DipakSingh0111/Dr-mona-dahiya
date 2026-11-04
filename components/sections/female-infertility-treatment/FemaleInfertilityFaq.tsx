@@ -17,25 +17,25 @@ const leftFaqs: FaqItem[] = [
         </p>
         <ul className="space-y-2 pl-1">
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>
               <strong className="text-white font-semibold">Metabolic &amp; Lifestyle Calibration:</strong> Addressing insulin resistance, thyroid fluctuations, or hyperprolactinemia often restores spontaneous ovulatory cycles.
             </p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>
               <strong className="text-white font-semibold">Targeted Ovulation Induction (OI):</strong> Oral aromatase inhibitors (such as Letrozole) paired with ultrasound tracking achieve successful conception in a large portion of anovulatory women.
             </p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>
               <strong className="text-white font-semibold">Intrauterine Insemination (IUI):</strong> Concentrated, highly motile sperm is placed directly past the cervix at peak ovulation, bypassing mild male-factor or cervical barriers.
             </p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>
               <strong className="text-white font-semibold">Minimally Invasive Endoscopic Surgery:</strong> Office hysteroscopy or laparoscopy to resect endometrial polyps, clear intrauterine synechiae (Asherman&apos;s), or treat mild endometriosis.
             </p>
@@ -69,25 +69,25 @@ const leftFaqs: FaqItem[] = [
         </p>
         <ul className="space-y-2 pl-1">
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>
               <strong className="text-white font-semibold">Under 35:</strong> High monthly fecundity (~20%–25% natural conception per cycle); IVF cumulative live birth rates often surpass 50%–60%.
             </p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>
               <strong className="text-white font-semibold">35 to 37:</strong> Accelerated follicular atresia begins; medical evaluation is advised after just 6 months of unsuccessful attempts.
             </p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>
               <strong className="text-white font-semibold">38 to 40:</strong> Over 50% to 60% of remaining oocytes carry chromosomal segregation errors (aneuploidy), translating to lower implantation rates and elevated spontaneous loss risks.
             </p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>
               <strong className="text-white font-semibold">Above 40:</strong> Focus shifts toward rapid-intervention strategies, including embryo pooling/banking and Preimplantation Genetic Testing for Aneuploidies (PGT-A) to bypass maternal age-related genetic risks.
             </p>
@@ -105,31 +105,31 @@ const leftFaqs: FaqItem[] = [
         </p>
         <ol className="space-y-2 pl-1">
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] font-bold text-[13px] pt-0.5">1.</span>
+            <span className="text-rose font-bold text-[13px] pt-0.5">1.</span>
             <p>
               <strong className="text-white font-semibold">Ovarian Biomarker Profile:</strong> Serum Anti-Müllerian Hormone (AMH) combined with an early follicular (Cycle Day 2–4) transvaginal ultrasound to measure Antral Follicle Count (AFC).
             </p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] font-bold text-[13px] pt-0.5">2.</span>
+            <span className="text-rose font-bold text-[13px] pt-0.5">2.</span>
             <p>
               <strong className="text-white font-semibold">Basal Pituitary-Ovarian Hormones:</strong> Day 2/3 FSH, LH, and Estradiol, along with TSH and Prolactin.
             </p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] font-bold text-[13px] pt-0.5">3.</span>
+            <span className="text-rose font-bold text-[13px] pt-0.5">3.</span>
             <p>
               <strong className="text-white font-semibold">Tubal Evaluation:</strong> Hysterosalpingography (HSG) or high-definition Sono-Salpingography (SSG) to verify bilateral patency.
             </p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] font-bold text-[13px] pt-0.5">4.</span>
+            <span className="text-rose font-bold text-[13px] pt-0.5">4.</span>
             <p>
               <strong className="text-white font-semibold">Cavity Screening:</strong> 3D pelvic sonography or diagnostic hysteroscopy to check for submucosal fibroids, polyps, or cavity distortions.
             </p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] font-bold text-[13px] pt-0.5">5.</span>
+            <span className="text-rose font-bold text-[13px] pt-0.5">5.</span>
             <p>
               <strong className="text-white font-semibold">Partner Semen Evaluation:</strong> Complete semen analysis and Sperm DNA Fragmentation Index (DFI), since male-factor contributions account for 40% to 50% of fertility challenges.
             </p>
@@ -147,19 +147,19 @@ const leftFaqs: FaqItem[] = [
         </p>
         <ul className="space-y-1.5 pl-1">
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p><strong className="text-white font-semibold">Hormonal &amp; AMH Blood Panel:</strong> ₹3,500 to ₹6,500</p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p><strong className="text-white font-semibold">High-Resolution Transvaginal Ultrasound (TVS &amp; AFC):</strong> ₹1,500 to ₹2,500</p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p><strong className="text-white font-semibold">Tubal Patency Test (HSG / Contrast Ultrasound):</strong> ₹2,500 to ₹4,500</p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p><strong className="text-white font-semibold">Comprehensive Partner Semen Analysis:</strong> ₹1,000 to ₹2,000</p>
           </li>
         </ul>
@@ -194,13 +194,13 @@ const rightFaqs: FaqItem[] = [
         </p>
         <ul className="space-y-2 pl-1">
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>
               <strong className="text-white font-semibold">Proximal Obstruction (junction of uterus and tube):</strong> Often opened without IVF via fluoroscopic transcervical tubal recanalization or hysteroscopic cannulation, achieving patency in over 50% to 60% of cases.
             </p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>
               <strong className="text-white font-semibold">Distal Occlusion / Hydrosalpinx (fluid accumulation at the fimbrial end):</strong> Tubal reconstructive surgery yields poor spontaneous pregnancy rates because the delicate microscopic cilia required to propel eggs are permanently scarred. In these situations, IVF is the safest, most definitive path. Fluid-filled hydrosalpinges must be clipped or excised prior to transfer to prevent inflammatory back-flow into the endometrial cavity.
             </p>
@@ -218,13 +218,13 @@ const rightFaqs: FaqItem[] = [
         </p>
         <ul className="space-y-2 pl-1">
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>
               <strong className="text-white font-semibold">Elevated BMI (≥ 28–30 kg/m²):</strong> Adipose-driven peripheral estrone production and hyperinsulinemia increase ovarian androgen synthesis. This impairs follicular maturation and reduces endometrial receptivity. A modest weight reduction of 5% to 10% can restore spontaneous, ovulatory cycles in over 60% of affected women.
             </p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>
               <strong className="text-white font-semibold">Low BMI (&lt; 18.5 kg/m²):</strong> Triggers functional hypothalamic amenorrhea; insufficient energy availability suppresses GnRH pulsation, preventing the pituitary from releasing adequate FSH and LH to develop follicles.
             </p>
@@ -245,15 +245,15 @@ const rightFaqs: FaqItem[] = [
         </p>
         <ul className="space-y-2 pl-1">
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>Distorting pelvic anatomy with fibrous adhesions that physically trap the ovaries or prevent tubal pick-up.</p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>Producing inflammatory cytokines that compromise egg quality and early embryonic development.</p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>Forming ovarian endometriomas (&quot;chocolate cysts&quot;) that damage healthy ovarian cortex and deplete reserve.</p>
           </li>
         </ul>
@@ -285,11 +285,11 @@ const rightFaqs: FaqItem[] = [
         </p>
         <ol className="space-y-2 pl-1">
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] font-bold text-[13px] pt-0.5">1.</span>
+            <span className="text-rose font-bold text-[13px] pt-0.5">1.</span>
             <p>2 to 3 cycles of Superovulation paired with Intrauterine Insemination (IUI).</p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] font-bold text-[13px] pt-0.5">2.</span>
+            <span className="text-rose font-bold text-[13px] pt-0.5">2.</span>
             <p>
               If pregnancy is not achieved, moving to IVF/ICSI with extended blastocyst culture, which serves as both a diagnostic checkpoint (confirming fertilization and cleavage mechanics) and a therapeutic solution.
             </p>
@@ -307,19 +307,19 @@ const rightFaqs: FaqItem[] = [
         </p>
         <ul className="space-y-2 pl-1">
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>
               <strong className="text-white font-semibold">Noida Center:</strong> 3rd Floor, K-06, above FirstCry, Baraula, Sector 49, Noida, Uttar Pradesh 201301
             </p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>
               <strong className="text-white font-semibold">Ghaziabad Center:</strong> 2nd Floor, RDC, C-53A, near Bikanerwala, Sector 15, Sector 10, Raj Nagar, Ghaziabad, Uttar Pradesh 201002
             </p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-[#e83e74] select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">•</span>
             <p>
               <strong className="text-white font-semibold">South Delhi Center:</strong> Building Number 41, First Floor, Ring Road, Block Q, Lajpat Nagar IV, Lajpat Nagar, New Delhi 110024
             </p>

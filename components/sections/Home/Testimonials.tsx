@@ -9,11 +9,11 @@ import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
 const categoryStyles = {
   pink: {
-    circle: "bg-[#e83e74]",
+    circle: "bg-rose",
     glow: "shadow-[0_0_22px_rgba(232,62,116,0.55)]",
   },
   teal: {
-    circle: "bg-[#0d9488]",
+    circle: "bg-blue",
     glow: "shadow-[0_0_22px_rgba(13,148,136,0.55)]",
   },
   purple: {
@@ -112,16 +112,16 @@ export default function Testimonials() {
         <div className="mb-6 flex flex-col justify-between gap-6 lg:mb-8 lg:flex-row lg:items-start lg:gap-8">
           <Reveal variant="slideLeft" className="min-w-0 shrink-0 lg:max-w-[440px] xl:max-w-[500px]">
             <div className="mb-4 inline-flex max-w-full items-center gap-2.5 sm:gap-3">
-              <span className="h-px w-6 shrink-0 bg-[#e83e74] sm:w-10" />
-              <span className="rounded-full border border-[#e83e74]/50 px-3 py-1 text-[10.5px] font-bold tracking-[0.12em] text-[#e83e74] uppercase sm:whitespace-nowrap sm:px-3.5 sm:text-[12px] sm:tracking-[0.14em]">
+              <span className="h-px w-6 shrink-0 bg-rose sm:w-10" />
+              <span className="rounded-full border border-rose/50 px-3 py-1 text-[10.5px] font-bold tracking-[0.12em] text-rose uppercase sm:whitespace-nowrap sm:px-3.5 sm:text-[12px] sm:tracking-[0.14em]">
                 {eyebrow}
               </span>
-              <span className="h-px w-6 shrink-0 bg-[#e83e74] sm:w-10" />
+              <span className="h-px w-6 shrink-0 bg-rose sm:w-10" />
             </div>
 
-            <h2 className="font-display text-2xl leading-[1.14] font-bold tracking-tight text-[#0f2438] sm:text-3xl lg:text-[2.15rem] xl:text-[2.75rem]">
+            <h2 className="font-display text-2xl leading-[1.14] font-bold tracking-tight text-ink sm:text-3xl lg:text-[2.15rem] xl:text-[2.75rem]">
               {titlePrefix}{" "}
-              <span className="text-[#e83e74]">{titleHighlight}</span>
+              <span className="text-rose">{titleHighlight}</span>
             </h2>
 
             <p className="mt-3 max-w-md text-xs text-[#64748b] sm:text-sm xl:text-base">
@@ -133,7 +133,7 @@ export default function Testimonials() {
             variant="slideRight"
             className="w-full min-w-0 flex-1 p-0 lg:max-w-[780px] lg:pr-14 xl:max-w-[840px]"
           >
-            <h3 className="font-display mb-3.5 text-[17px] font-bold whitespace-nowrap text-[#0f2438] sm:text-[18px]">
+            <h3 className="font-display mb-3.5 text-[17px] font-bold whitespace-nowrap text-ink sm:text-[18px]">
               Filter By Treatment
             </h3>
             <Stagger
@@ -152,7 +152,7 @@ export default function Testimonials() {
                       onClick={() => setActiveCategory(cat.id)}
                       className={`flex h-[112px] w-full cursor-pointer flex-col items-center justify-center gap-2 rounded-[16px] border bg-white px-2 py-2.5 text-center transition-all duration-300 ease-out hover:-translate-y-0.5 sm:h-[118px] xl:px-2.5 ${
                         isActive
-                          ? "border-[#e83e74]/40 shadow-[0_8px_20px_rgba(232,62,116,0.12)] ring-1 ring-[#e83e74]/20"
+                          ? "border-rose/40 shadow-[0_8px_20px_rgba(232,62,116,0.12)] ring-1 ring-rose/20"
                           : "border-slate-200 shadow-sm hover:border-slate-300"
                       }`}
                     >
@@ -161,7 +161,7 @@ export default function Testimonials() {
                       >
                         <CategoryIcon type={cat.icon} className="size-[20px] xl:size-[22px]" />
                       </span>
-                      <span className="line-clamp-2 text-[10px] leading-tight font-bold text-[#0f2438] xl:text-[11px]">
+                      <span className="line-clamp-2 text-[10px] leading-tight font-bold text-ink xl:text-[11px]">
                         {cat.label}
                       </span>
                     </button>
@@ -182,7 +182,7 @@ export default function Testimonials() {
             type="button"
             onClick={handlePrev}
             aria-label="Previous testimonials"
-            className="absolute top-1/2 left-0 z-20 flex size-[36px] -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-[#e83e74] text-white shadow-[0_8px_22px_rgba(232,62,116,0.35)] transition-all duration-300 hover:scale-110 hover:bg-[#d13266] active:scale-95 sm:size-[44px] lg:size-[48px]"
+            className="absolute top-1/2 left-0 z-20 flex size-[36px] -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-rose text-white shadow-[0_8px_22px_rgba(232,62,116,0.35)] transition-all duration-300 hover:scale-110 hover:bg-[#d13266] active:scale-95 sm:size-[44px] lg:size-[48px]"
           >
             <FaChevronLeft className="size-3.5" />
           </button>
@@ -219,7 +219,7 @@ export default function Testimonials() {
             type="button"
             onClick={handleNext}
             aria-label="Next testimonials"
-            className="absolute top-1/2 right-0 z-20 flex size-[36px] -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-[#e83e74] text-white shadow-[0_8px_22px_rgba(232,62,116,0.35)] transition-all duration-300 hover:scale-110 hover:bg-[#d13266] active:scale-95 sm:size-[44px] lg:size-[48px]"
+            className="absolute top-1/2 right-0 z-20 flex size-[36px] -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-rose text-white shadow-[0_8px_22px_rgba(232,62,116,0.35)] transition-all duration-300 hover:scale-110 hover:bg-[#d13266] active:scale-95 sm:size-[44px] lg:size-[48px]"
           >
             <FaChevronRight className="size-3.5" />
           </button>
@@ -236,7 +236,7 @@ export default function Testimonials() {
                 aria-label={`Go to slide set ${idx + 1}`}
                 className={`h-2.5 cursor-pointer rounded-full transition-all duration-300 ease-out ${
                   page === idx
-                    ? "w-6 bg-[#e83e74]"
+                    ? "w-6 bg-rose"
                     : "w-2.5 bg-[#ffd1e0] hover:bg-[#fca5c2]"
                 }`}
               />
@@ -262,7 +262,7 @@ function TestimonialCard({ item }: { item: Testimonial }) {
           “
         </span>
 
-        <p className="font-display -mt-1 line-clamp-4 text-[15px] leading-snug font-bold tracking-tight text-[#0f2438] sm:text-[16px]">
+        <p className="font-display -mt-1 line-clamp-4 text-[15px] leading-snug font-bold tracking-tight text-ink sm:text-[16px]">
           {item.quote.replace(/"$/, "")}
         </p>
       </div>
@@ -271,11 +271,11 @@ function TestimonialCard({ item }: { item: Testimonial }) {
         <div className="my-4 h-px w-full bg-[#f8d7e2]" />
 
         <div className="flex items-center gap-3">
-          <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-[#ffe4ee] text-[12px] font-bold text-[#e83e74]">
+          <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-[#ffe4ee] text-[12px] font-bold text-rose">
             {item.initials}
           </div>
           <div className="min-w-0">
-            <h4 className="truncate text-[14px] font-bold text-[#0f2438] sm:text-[14.5px]">
+            <h4 className="truncate text-[14px] font-bold text-ink sm:text-[14.5px]">
               {item.author}
             </h4>
             <p className="text-[12px] text-[#94a3b8]">{item.type}</p>

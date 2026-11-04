@@ -14,22 +14,22 @@ export default function SecondOpinionWhenAndRecords() {
           Good-grade embryos that did not implant in a lining that looked ready. See{" "}
           <Link
             href="/recurrent-implantation-failure"
-            className="font-medium text-[#0047ca] underline underline-offset-2 hover:text-[#00369e]"
+            className="font-medium text-blue underline underline-offset-2 hover:text-blue-dark"
           >
             Recurrent Implantation Failure
           </Link>
           .
         </>
       ),
-      color: "from-[#e83e74] to-[#f43f5e]",
-      border: "hover:border-[#e83e74]/50",
+      color: "from-rose to-[#f43f5e]",
+      border: "hover:border-rose/50",
     },
     {
       num: "2",
       title: "Embryos stopping between Day 3 and Day 5",
       desc: "Repeated arrest before the blastocyst stage, pointing to sperm DNA damage or embryo genome problems.",
-      color: "from-[#0047ca] to-[#0284c7]",
-      border: "hover:border-[#0047ca]/50",
+      color: "from-blue to-[var(--blue)]",
+      border: "hover:border-blue/50",
     },
     {
       num: "3",
@@ -42,8 +42,8 @@ export default function SecondOpinionWhenAndRecords() {
       num: "4",
       title: "Persistently thin lining",
       desc: "Cycles repeatedly cancelled because the lining stays under 7 mm.",
-      color: "from-[#0d9488] to-[#14b8a6]",
-      border: "hover:border-[#0d9488]/50",
+      color: "from-blue to-[var(--blue)]",
+      border: "hover:border-blue/50",
     },
     {
       num: "5",
@@ -53,7 +53,7 @@ export default function SecondOpinionWhenAndRecords() {
           Told to use donor eggs without trying own-egg options such as DuoStim or micro-dose flare. See{" "}
           <Link
             href="/low-amh"
-            className="font-medium text-[#0047ca] underline underline-offset-2 hover:text-[#00369e]"
+            className="font-medium text-blue underline underline-offset-2 hover:text-blue-dark"
           >
             Low AMH Treatment
           </Link>
@@ -93,7 +93,7 @@ export default function SecondOpinionWhenAndRecords() {
       <div className="relative mx-auto w-full max-w-[1440px]">
         {/* Part A: When Should You Get an Independent Second Opinion? */}
         <Reveal className="mb-6 sm:mb-8">
-          <p className="text-[12px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:text-[13px]">
+          <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
             When to seek one
           </p>
           <h2 className="font-serif mt-1 text-[1.65rem] leading-[1.2] font-normal tracking-tight text-slate-900 sm:text-[2.1rem] lg:text-[2.35rem]">
@@ -112,15 +112,15 @@ export default function SecondOpinionWhenAndRecords() {
               >
                 <div className="flex items-center gap-3">
                   <span
-                    className={`inline-flex size-8 shrink-0 items-center justify-center rounded-lg text-[13px] font-bold text-white shadow-sm bg-gradient-to-r ${item.color}`}
+                    className={`inline-flex size-8 shrink-0 items-center justify-center rounded-lg text-[13px] font-bold text-black shadow-sm bg-gradient-to-r ${item.color}`}
                   >
                     {item.num}
                   </span>
-                  <h3 className="text-[15px] font-bold text-slate-900 group-hover:text-[#0047ca] transition-colors sm:text-[16px]">
+                  <h3 className="text-[15px] font-bold text-slate-900 group-hover:text-blue transition-colors sm:text-[16px]">
                     {item.title}
                   </h3>
                 </div>
-                <div className="mt-3 text-[13.5px] leading-relaxed text-slate-600">
+                <div className="mt-3 text-[13.5px] leading-relaxed text-black">
                   {item.desc}
                 </div>
               </div>
@@ -131,13 +131,13 @@ export default function SecondOpinionWhenAndRecords() {
         {/* Part B: What to Bring for Your Second-Opinion Review */}
         <div className="mt-12 sm:mt-16">
           <Reveal className="mb-6 sm:mb-8">
-            <p className="text-[12px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:text-[13px]">
+            <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
               Before your review
             </p>
             <h2 className="font-serif mt-1 text-[1.65rem] leading-[1.2] font-normal tracking-tight text-slate-900 sm:text-[2.1rem] lg:text-[2.35rem]">
               What to Bring for Your Second-Opinion Review
             </h2>
-            <p className="mt-2 text-[14px] leading-relaxed text-slate-600 sm:text-[15px]">
+            <p className="mt-2 text-[14px] leading-relaxed text-black sm:text-[15px]">
               Bringing these records lets Dr. Dahiya review your past cycles without repeating tests.
             </p>
           </Reveal>
@@ -145,8 +145,8 @@ export default function SecondOpinionWhenAndRecords() {
           <Stagger stagger={0.06} className="space-y-3.5 sm:space-y-4">
             {checklistItems.map((item, idx) => (
               <StaggerItem key={idx}>
-                <div className="flex items-start gap-3.5 rounded-[16px] border border-slate-200/90 bg-white p-4.5 sm:p-5 shadow-[0_4px_14px_rgba(0,20,60,0.03)] transition-all duration-300 hover:border-[#0047ca]/40 hover:shadow-[0_8px_22px_rgba(0,71,202,0.07)]">
-                  <FaCheckCircle className="mt-1 size-5 shrink-0 text-[#0d9488]" />
+                <div className="flex items-start gap-3.5 rounded-[16px] border border-slate-200/90 bg-white p-4.5 sm:p-5 shadow-[0_4px_14px_rgba(0,20,60,0.03)] transition-all duration-300 hover:border-blue/40 hover:shadow-[0_8px_22px_rgba(0,71,202,0.07)]">
+                  <FaCheckCircle className="mt-1 size-5 shrink-0 text-blue" />
                   <div className="text-[13.5px] leading-relaxed text-slate-700 sm:text-[14.5px]">
                     <strong className="font-bold text-slate-900">{item.title}:</strong>{" "}
                     {item.desc}

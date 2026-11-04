@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import { FaCheck } from "react-icons/fa";
@@ -14,16 +14,16 @@ const tests = [
 
 export default function BestIvfDelhiDiagnostic() {
   return (
-    <section className="relative overflow-hidden bg-[#061532] px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
+    <section className="relative overflow-hidden bg-pink px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
       <div className="mx-auto w-full max-w-[1440px]">
         <Reveal variant="fadeUp">
-          <p className="text-[12px] font-semibold tracking-wide text-[#e83e74] sm:text-[13px]">
+          <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">
             What to expect
           </p>
-          <h2 className="font-serif mt-1 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-white sm:text-[2.2rem] lg:text-[2.45rem]">
+          <h2 className="font-serif mt-1 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-black sm:text-[2.2rem] lg:text-[2.45rem]">
             Tests required before IVF
           </h2>
-          <p className="mt-2 text-[14px] leading-relaxed text-slate-300 sm:text-[15px]">
+          <p className="mt-2 text-[14px] leading-relaxed text-black sm:text-[15px]">
             You may or may not need all these tests. These will help us diagnose
             and formulate a plan.
           </p>
@@ -33,11 +33,11 @@ export default function BestIvfDelhiDiagnostic() {
           <Stagger className="flex flex-col gap-3 lg:col-span-7" stagger={0.06}>
             {tests.map((text) => (
               <StaggerItem key={text}>
-                <div className="flex items-center gap-3.5 rounded-xl border border-white/10 bg-[#0a1f45]/80 px-4 py-3.5 backdrop-blur-md sm:px-5 sm:py-4">
-                  <span className="flex size-6 shrink-0 items-center justify-center rounded-full bg-[#0047ca] text-white">
+                <div className="flex items-center gap-3.5 rounded-xl border border-[#fde2ec] bg-white/80 px-4 py-3.5 backdrop-blur-md sm:px-5 sm:py-4">
+                  <span className="flex size-6 shrink-0 items-center justify-center rounded-full bg-blue text-white">
                     <FaCheck className="size-3" />
                   </span>
-                  <p className="text-[13.5px] leading-relaxed text-white/90 sm:text-[14px]">
+                  <p className="text-[13.5px] leading-relaxed text-slate-700 sm:text-[14px]">
                     {text}
                   </p>
                 </div>
@@ -46,9 +46,9 @@ export default function BestIvfDelhiDiagnostic() {
           </Stagger>
 
           <Reveal variant="scaleIn" className="lg:col-span-5">
-            <div className="relative mx-auto max-w-[420px] overflow-hidden rounded-[22px] border border-white/15 shadow-[0_20px_50px_rgba(0,10,40,0.4)]">
+            <div className="relative mx-auto max-w-[420px] overflow-hidden rounded-[22px] border border-[#fde2ec] shadow-[0_20px_50px_rgba(0,10,40,0.4)]">
               <Image
-                src="/images/best-ivf-doctor-in-delhi/tests-doctor.jpg"
+                src="/images/Confident-Doctor.png"
                 alt="Dr. Mona Dahiya - Tests required before IVF"
                 width={600}
                 height={600}

@@ -10,8 +10,8 @@ export default function PgtIndicationsAndChecklist() {
       num: "1",
       title: "Advanced Maternal Age (≥35 Years)",
       desc: "As maternal age rises, oocyte chromosomal segregation errors increase significantly; over 50% to 70% of blastocysts at age 38+ can be aneuploid despite excellent physical morphology.",
-      color: "from-[#e83e74] to-[#f43f5e]",
-      border: "hover:border-[#e83e74]/50",
+      color: "from-rose to-[#f43f5e]",
+      border: "hover:border-rose/50",
     },
     {
       num: "2",
@@ -21,15 +21,15 @@ export default function PgtIndicationsAndChecklist() {
           Couples who have endured two or more unsuccessful IVF cycles with seemingly high-grade embryos. See{" "}
           <Link
             href="/recurrent-implantation-failure-rif"
-            className="font-medium text-[#0047ca] underline underline-offset-2 hover:text-[#00369e]"
+            className="font-medium text-blue underline underline-offset-2 hover:text-blue-dark"
           >
             Recurrent Implantation Failure
           </Link>
           .
         </>
       ),
-      color: "from-[#0047ca] to-[#0284c7]",
-      border: "hover:border-[#0047ca]/50",
+      color: "from-blue to-[var(--blue)]",
+      border: "hover:border-blue/50",
     },
     {
       num: "3",
@@ -39,7 +39,7 @@ export default function PgtIndicationsAndChecklist() {
           Women with a history of two or more consecutive miscarriages, where unnoticed embryonic chromosomal anomalies are the leading etiology. See{" "}
           <Link
             href="/miscarriage-treatment-in-noida"
-            className="font-medium text-[#0047ca] underline underline-offset-2 hover:text-[#00369e]"
+            className="font-medium text-blue underline underline-offset-2 hover:text-blue-dark"
           >
             Recurrent Miscarriage
           </Link>
@@ -57,15 +57,15 @@ export default function PgtIndicationsAndChecklist() {
           Elevated sperm DNA fragmentation index (DFI above 25%) or severe oligoasthenoteratozoospermia, which increases paternal aneuploidy contribution. See{" "}
           <Link
             href="/sperm-dna-fragmentation-test"
-            className="font-medium text-[#0047ca] underline underline-offset-2 hover:text-[#00369e]"
+            className="font-medium text-blue underline underline-offset-2 hover:text-blue-dark"
           >
             Sperm DNA Fragmentation
           </Link>
           .
         </>
       ),
-      color: "from-[#0d9488] to-[#14b8a6]",
-      border: "hover:border-[#0d9488]/50",
+      color: "from-blue to-[var(--blue)]",
+      border: "hover:border-blue/50",
     },
     {
       num: "5",
@@ -78,15 +78,15 @@ export default function PgtIndicationsAndChecklist() {
       num: "6",
       title: "Known Balanced Translocations",
       desc: "Chromosomal inversions or translocations diagnosed via parental karyotyping.",
-      color: "from-[#0284c7] to-[#0047ca]",
-      border: "hover:border-[#0284c7]/50",
+      color: "from-blue to-[var(--blue)]",
+      border: "hover:border-blue/50",
     },
     {
       num: "7",
       title: "Desire for Elective Single Embryo Transfer (eSET)",
       desc: "Maximizing singleton pregnancy rates while eliminating the twin/triplet medical risks of multi-embryo transfers.",
-      color: "from-[#e83e74] to-[#f43f5e]",
-      border: "hover:border-[#e83e74]/50",
+      color: "from-rose to-[#f43f5e]",
+      border: "hover:border-rose/50",
     },
   ];
 
@@ -122,13 +122,13 @@ export default function PgtIndicationsAndChecklist() {
       <div className="relative mx-auto w-full max-w-[1440px]">
         {/* Top: Indications */}
         <Reveal className="mb-6 sm:mb-8">
-          <p className="text-[12px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:text-[13px]">
+          <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
             Clinical breakdown
           </p>
           <h2 className="font-serif mt-1 text-[1.65rem] leading-[1.2] font-normal tracking-tight text-slate-900 sm:text-[2.1rem] lg:text-[2.35rem]">
             Indications: Who Needs PGT Testing?
           </h2>
-          <p className="mt-2 text-[14px] leading-relaxed text-slate-600 sm:text-[15px]">
+          <p className="mt-2 text-[14px] leading-relaxed text-black sm:text-[15px]">
             PGT transforms unpredictable IVF outcomes into targeted, evidence-based transfers. Dr. Mona Dahiya recommends PGT evaluation for couples facing:
           </p>
         </Reveal>
@@ -144,15 +144,15 @@ export default function PgtIndicationsAndChecklist() {
               >
                 <div className="flex items-center gap-3">
                   <span
-                    className={`inline-flex size-8 shrink-0 items-center justify-center rounded-lg text-[13px] font-bold text-white shadow-sm bg-gradient-to-r ${item.color}`}
+                    className={`inline-flex size-8 shrink-0 items-center justify-center rounded-lg text-[13px] font-bold text-black shadow-sm bg-gradient-to-r ${item.color}`}
                   >
                     {item.num}
                   </span>
-                  <h3 className="text-[15px] font-bold text-slate-900 group-hover:text-[#0047ca] transition-colors sm:text-[16px]">
+                  <h3 className="text-[15px] font-bold text-slate-900 group-hover:text-blue transition-colors sm:text-[16px]">
                     {item.title}
                   </h3>
                 </div>
-                <div className="mt-3 text-[13.5px] leading-relaxed text-slate-600">
+                <div className="mt-3 text-[13.5px] leading-relaxed text-black">
                   {item.desc}
                 </div>
               </div>
@@ -163,13 +163,13 @@ export default function PgtIndicationsAndChecklist() {
         {/* Bottom: Diagnostic Checklist */}
         <div className="mt-12 sm:mt-16">
           <Reveal className="mb-6 sm:mb-8">
-            <p className="text-[12px] font-bold tracking-[0.14em] text-[#e83e74] uppercase sm:text-[13px]">
+            <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
               Before treatment
             </p>
             <h2 className="font-serif mt-1 text-[1.65rem] leading-[1.2] font-normal tracking-tight text-slate-900 sm:text-[2.1rem] lg:text-[2.35rem]">
               Diagnostic Checklist: Tests Required Before Starting PGT
             </h2>
-            <p className="mt-2 text-[14px] leading-relaxed text-slate-600 sm:text-[15px]">
+            <p className="mt-2 text-[14px] leading-relaxed text-black sm:text-[15px]">
               Before embarking on an IVF-PGT cycle, Dr. Mona Dahiya prescribes a targeted, step-by-step diagnostic workup:
             </p>
           </Reveal>
@@ -177,13 +177,13 @@ export default function PgtIndicationsAndChecklist() {
           <Stagger stagger={0.06} className="space-y-3.5 sm:space-y-4">
             {checklistItems.map((item, idx) => (
               <StaggerItem key={idx}>
-                <div className="flex items-start gap-3.5 rounded-[16px] border border-slate-200/90 bg-white p-4.5 sm:p-5 shadow-[0_4px_14px_rgba(0,20,60,0.03)] transition-all duration-300 hover:border-[#0047ca]/40 hover:shadow-[0_8px_22px_rgba(0,71,202,0.07)]">
-                  <FaCheckCircle className="mt-1 size-5 shrink-0 text-[#0d9488]" />
+                <div className="flex items-start gap-3.5 rounded-[16px] border border-slate-200/90 bg-white p-4.5 sm:p-5 shadow-[0_4px_14px_rgba(0,20,60,0.03)] transition-all duration-300 hover:border-blue/40 hover:shadow-[0_8px_22px_rgba(0,71,202,0.07)]">
+                  <FaCheckCircle className="mt-1 size-5 shrink-0 text-blue" />
                   <div>
                     <h3 className="text-[14.5px] font-bold text-slate-900 sm:text-[15.5px]">
                       {item.title}
                     </h3>
-                    <p className="mt-1 text-[13px] leading-relaxed text-slate-600 sm:text-[13.5px]">
+                    <p className="mt-1 text-[13px] leading-relaxed text-black sm:text-[13.5px]">
                       {item.desc}
                     </p>
                   </div>

@@ -38,7 +38,7 @@ const indications: IndicationCard[] = [
         Biochemical pregnancies and early losses. See{" "}
         <Link
           href="/recurrent-implantation-failure-rif"
-          className="text-[#f9a8d4] underline hover:text-white transition-colors"
+          className="text-rose underline hover:text-white transition-colors"
         >
           Recurrent Implantation Failure
         </Link>
@@ -70,7 +70,7 @@ const checklistItems: ChecklistItem[] = [
         Uterine imaging: 3D saline sonography or{" "}
         <Link
           href="/hysteroscopy-treatment"
-          className="text-[#f9a8d4] underline hover:text-white transition-colors"
+          className="text-rose underline hover:text-white transition-colors"
         >
           Hysteroscopy
         </Link>{" "}
@@ -98,7 +98,7 @@ const checklistItems: ChecklistItem[] = [
         Partner&apos;s{" "}
         <Link
           href="/sperm-dna-fragmentation-test"
-          className="text-[#f9a8d4] underline hover:text-white transition-colors"
+          className="text-rose underline hover:text-white transition-colors"
         >
           Sperm DNA Fragmentation Test
         </Link>{" "}

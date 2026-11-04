@@ -74,28 +74,28 @@ export default function FemaleFertilityIndications() {
                 <div
                   className={`relative flex h-full flex-col justify-between rounded-2xl border p-5 sm:p-6 transition-all duration-300 hover:-translate-y-1 ${
                     isPink
-                      ? "border-[#e83e74]/40 bg-gradient-to-b from-[#141b36] to-[#0a1024] shadow-[0_0_24px_rgba(232,62,116,0.12)] hover:border-[#e83e74]/70 hover:shadow-[0_0_32px_rgba(232,62,116,0.22)]"
-                      : "border-cyan-500/35 bg-gradient-to-b from-[#0e223d] to-[#0a1024] shadow-[0_0_24px_rgba(6,182,212,0.1)] hover:border-cyan-400/60 hover:shadow-[0_0_32px_rgba(6,182,212,0.2)]"
+                      ? "border-rose/40 bg-gradient-to-b from-white to-[#fff8fa] shadow-[0_8px_24px_rgba(232,62,116,0.06)] hover:border-rose/70 hover:shadow-[0_0_32px_rgba(232,62,116,0.22)]"
+                      : "border-[#fde2ec] bg-gradient-to-b from-white to-[#fff8fa] shadow-[0_8px_24px_rgba(232,62,116,0.06)] hover:border-rose/70 hover:shadow-[0_0_32px_rgba(232,62,116,0.22)]"
                   }`}
                 >
                   <div>
                     {/* Header with Number Pill + Title */}
                     <div className="flex items-center gap-3">
-                      <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-[#e83e74] text-[15px] font-bold text-white shadow-[0_2px_8px_rgba(232,62,116,0.4)]">
+                      <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-rose text-[15px] font-bold text-white shadow-[0_2px_8px_rgba(232,62,116,0.4)]">
                         {item.number}
                       </span>
-                      <h3 className="font-serif text-[1.05rem] font-semibold text-white sm:text-[1.15rem]">
+                      <h3 className="font-serif text-[1.05rem] font-semibold text-black sm:text-[1.15rem]">
                         {item.title}
                       </h3>
                     </div>
 
                     {/* Description */}
-                    <p className="mt-3.5 text-[13px] leading-relaxed text-slate-300 sm:text-[14px]">
+                    <p className="mt-3.5 text-[13px] leading-relaxed text-black sm:text-[14px]">
                       {item.description}
                       {item.linkText && item.linkHref && (
                         <Link
                           href={item.linkHref}
-                          className="font-medium text-emerald-300 underline decoration-emerald-400/50 underline-offset-2 transition-colors hover:text-emerald-200 hover:decoration-emerald-300"
+                          className="font-medium text-teal underline decoration-teal/40 underline-offset-2 transition-colors hover:text-teal-dark hover:decoration-teal"
                         >
                           {item.linkText}
                         </Link>
