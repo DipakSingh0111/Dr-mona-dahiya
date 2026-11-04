@@ -1,6 +1,6 @@
-﻿"use client";
-import HeroBannerImage from "@/components/ui/HeroBannerImage";
+"use client";
 
+import HeroBannerImage from "@/components/ui/HeroBannerImage";
 import Link from "next/link";
 import { FaHome, FaChevronRight } from "react-icons/fa";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
@@ -17,8 +17,7 @@ export default function BestIvfDelhiHero() {
     <section
       className="relative overflow-hidden pt-3 pb-6 sm:pt-4 sm:pb-8 lg:pt-5 lg:pb-9"
       style={{
-        background:
-          "var(--pink)",
+        background: "var(--pink)",
       }}
     >
       {/* Decorative Radial Glow matching theme */}
@@ -39,7 +38,7 @@ export default function BestIvfDelhiHero() {
         }}
       />
 
-      <div className="page-container relative grid grid-cols-1 items-start gap-6 sm:gap-7 lg:grid-cols-12 lg:items-start lg:gap-6 xl:gap-8">
+      <div className="page-container relative grid grid-cols-1 items-start gap-6 sm:gap-7 lg:grid-cols-12 lg:items-center lg:gap-6 xl:gap-8">
         <div className="min-w-0 lg:col-span-7">
           <nav aria-label="Breadcrumb" className="mb-4 sm:mb-5">
             <ol className="inline-flex max-w-full flex-wrap items-center gap-1.5 rounded-full border border-rose/25 bg-white px-3 py-1.5 shadow-sm backdrop-blur-md sm:gap-2 sm:px-3.5 sm:py-2">
@@ -116,8 +115,10 @@ export default function BestIvfDelhiHero() {
         </div>
 
         <HeroBannerImage
-          src="/images/about-mona-dahiya/online-ivf-consultation.jpg"
+          src="/images/best-ivf-doctor-in-delhi.jpg"
           alt="Dr. Mona Dahiya - Best IVF Doctor in Delhi"
+          aspectClassName="aspect-[3/2] bg-white"
+          objectPosition="object-center"
         />
       </div>
     </section>

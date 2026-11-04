@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import { FaCheck } from "react-icons/fa";
@@ -46,13 +46,14 @@ export default function BestIvfDelhiDiagnostic() {
           </Stagger>
 
           <Reveal variant="scaleIn" className="lg:col-span-5">
-            <div className="relative mx-auto max-w-[420px] overflow-hidden rounded-[22px] border border-[#fde2ec] shadow-[0_20px_50px_rgba(0,10,40,0.4)]">
+            <div className="relative mx-auto aspect-[10/9] w-full max-w-[440px] overflow-hidden rounded-[22px] border-4 border-white shadow-[0_18px_40px_rgba(232,62,116,0.12)]">
               <Image
-                src="/images/about-mona-dahiya/follicular.jpg"
+                src="/images/what-to-expect.jpg"
                 alt="Dr. Mona Dahiya - Tests required before IVF"
-                width={600}
-                height={600}
-                className="h-auto w-full object-cover object-center"
+                fill
+                sizes="(max-width: 1024px) 90vw, 440px"
+                quality={95}
+                className="object-cover object-[62%_top]"
               />
             </div>
           </Reveal>

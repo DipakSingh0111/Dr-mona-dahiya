@@ -42,13 +42,14 @@ export default function BestIvfGhaziabadDiagnostic() {
         </Stagger>
 
         <Reveal variant="scaleIn" className="lg:col-span-5">
-          <div className="relative mx-auto max-w-[420px] overflow-hidden rounded-[22px] border border-[#fde2ec] shadow-[0_20px_50px_rgba(0,10,40,0.4)]">
+          <div className="relative mx-auto aspect-[4/4.6] w-full max-w-[440px] overflow-hidden rounded-[22px] border-4 border-white shadow-[0_18px_40px_rgba(232,62,116,0.12)]">
             <Image
-              src="/images/about-mona-dahiya/dr-mona-dahiya.jpg"
-              alt="Dr. Mona Dahiya"
-              width={500}
-              height={560}
-              className="h-auto w-full object-cover object-top"
+              src="/images/about-mona-dahiya/IVF-FAq.jpg"
+              alt="Dr. Mona Dahiya - Diagnostic checklist"
+              fill
+              sizes="(max-width: 1024px) 90vw, 440px"
+              quality={95}
+              className="object-cover object-top"
             />
           </div>
         </Reveal>

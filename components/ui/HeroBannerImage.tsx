@@ -9,6 +9,10 @@ interface HeroBannerImageProps {
   priority?: boolean;
   className?: string;
   /**
+   * Aspect/background classes for the inner frame. Defaults to `aspect-[4/5]`.
+   */
+  aspectClassName?: string;
+  /**
    * Object position for the image. Defaults to centering toward the upper
    * body so heads stay in frame without harsh side cropping.
    */
@@ -20,6 +24,7 @@ export default function HeroBannerImage({
   alt,
   priority = true,
   className = "",
+  aspectClassName = "aspect-[4/5]",
   objectPosition = "object-top",
 }: HeroBannerImageProps) {
   return (
@@ -36,7 +41,9 @@ export default function HeroBannerImage({
             "radial-gradient(circle, rgba(232,62,116,0.28) 0%, rgba(232,62,116,0.12) 50%, transparent 75%)",
         }}
       />
-      <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[24px] border-4 border-white bg-[#fff8fb] shadow-[0_18px_40px_rgba(232,62,116,0.12)] sm:rounded-[28px]">
+      <div
+        className={`relative w-full overflow-hidden rounded-[24px] border-4 border-white bg-[#fff8fb] shadow-[0_18px_40px_rgba(232,62,116,0.12)] sm:rounded-[28px] ${aspectClassName}`}
+      >
         <Image
           src={src}
           alt={alt}
