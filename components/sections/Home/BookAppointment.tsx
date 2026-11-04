@@ -38,9 +38,10 @@ export default function BookAppointment() {
   return (
     <section
       id="book-appointment"
-      className="relative overflow-hidden px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8"
+      className="relative overflow-hidden py-6 sm:py-7 lg:py-8"
     >
-      <div className="relative mx-auto w-full max-w-[1440px] overflow-hidden rounded-[28px] min-h-[640px] sm:min-h-[680px]">
+      <div className="page-container">
+      <div className="relative min-h-[640px] overflow-hidden rounded-[28px] sm:min-h-[680px]">
         {/* Background couple photo — visible on right like reference */}
         <div className="absolute inset-0">
           <Image
@@ -326,6 +327,7 @@ export default function BookAppointment() {
             </div>
           </Reveal>
         </div>
+      </div>
       </div>
     </section>
   );

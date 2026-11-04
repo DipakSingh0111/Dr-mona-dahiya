@@ -57,7 +57,7 @@ export default function Navbar() {
               "radial-gradient(ellipse 70% 100% at 90% 50%, rgba(140,200,255,0.35) 0%, transparent 65%)",
           }}
         />
-        <div className="relative z-10 mx-auto flex max-w-[1440px] items-center gap-3 px-4 py-1.5 sm:px-6 sm:py-1.5 lg:px-8 xl:py-2">
+        <div className="relative z-10 page-container flex items-center gap-3 py-1.5 sm:py-1.5 xl:py-2">
           <a href={brand.href} className="min-w-0 shrink-0 text-left">
             <span className="font-display block text-left text-[1.35rem] leading-none font-bold tracking-tight whitespace-nowrap text-white sm:text-[1.5rem] lg:text-[1.55rem] xl:text-[1.85rem]">
               {brand.name}
@@ -144,7 +144,7 @@ export default function Navbar() {
             "linear-gradient(90deg, var(--navy) 0%, var(--navy-mid) 50%, var(--navy) 100%)",
         }}
       >
-        <div className="mx-auto flex max-w-[1440px] items-center gap-2 px-4 py-0.5 sm:px-6 lg:gap-3 lg:px-8 xl:py-1">
+        <div className="page-container flex items-center gap-2 py-0.5 lg:gap-3 xl:py-1">
           <nav
             className="hidden items-center justify-start gap-0.5 lg:flex xl:gap-1.5"
             aria-label="Primary"

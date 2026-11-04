@@ -47,9 +47,9 @@ export default function AboutConsultation({
   return (
     <section
       id={sectionId}
-      className="relative overflow-hidden bg-pink px-4 py-8 text-ink sm:px-6 sm:py-10 lg:px-8 lg:py-12 border-t border-[#fde2ec]"
+      className="relative overflow-hidden bg-pink py-8 text-ink sm:py-10 lg:py-12 border-t border-[#fde2ec]"
     >
-      <div className="mx-auto w-full max-w-[1440px]">
+      <div className="page-container relative">
         <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-14">
           <div className="lg:col-span-7">
             <Reveal>

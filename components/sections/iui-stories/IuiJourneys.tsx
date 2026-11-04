@@ -26,8 +26,8 @@ const reviews = [
 
 export default function IuiJourneys() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#fff8fb] via-white to-[#fff5f8] px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
-      <div className="relative mx-auto w-full max-w-[1440px]">
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#fff8fb] via-white to-[#fff5f8] py-6 sm:py-7 lg:py-8">
+      <div className="page-container relative">
         <Reveal className="max-w-3xl">
           <span className="text-[12px] font-semibold tracking-wider text-rose uppercase">
             Patient stories

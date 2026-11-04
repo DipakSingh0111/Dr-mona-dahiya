@@ -9,7 +9,7 @@ export default function LatestBlog() {
     siteData.latestBlog;
 
   return (
-    <section className="relative overflow-hidden bg-white px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
+    <section className="relative overflow-hidden bg-white py-6 sm:py-7 lg:py-8">
       {/* Soft pink organic blobs — reference style */}
       <div
         aria-hidden
@@ -28,7 +28,7 @@ export default function LatestBlog() {
         }}
       />
 
-      <div className="mx-auto w-full max-w-[1440px]">
+      <div className="page-container">
         {/* Header */}
         <div className="mb-6 flex flex-col items-start justify-between gap-5 sm:mb-8 sm:flex-row sm:items-end">
           <div className="w-full text-center sm:max-w-xl sm:text-left">

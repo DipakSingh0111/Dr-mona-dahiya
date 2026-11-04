@@ -34,8 +34,8 @@ export default function IuiDelhiRelated() {
   ];
 
   return (
-    <section className="relative overflow-hidden border-t border-[#fde2ec] bg-pink px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-14">
-      <div className="relative mx-auto w-full max-w-[1440px]">
+    <section className="relative overflow-hidden border-t border-[#fde2ec] bg-pink py-8 sm:py-10 lg:py-14">
+      <div className="page-container relative">
         <Reveal variant="fadeUp">
           <span className="text-[12px] font-semibold tracking-wider text-rose sm:text-[13px]">
             Keep reading

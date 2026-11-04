@@ -14,14 +14,14 @@ import AboutParenthoodCta from "@/components/sections/about-mona-dahiya/AboutPar
 import { SectionReveal } from "@/components/ui/Reveal";
 
 export const metadata: Metadata = {
-  title: "Real Low AMH Success Stories | Dr. Mona Dahiya Fertility Specialist",
+  title: "Low AMH Success Stories | Dr. Mona Dahiya",
   description:
-    "Read real patient stories of women with low AMH (<1.0 ng/mL) who conceived with their own eggs under Dr. Mona Dahiya in Noida, Delhi and Ghaziabad.",
+    "Real patient success stories of women with low AMH who conceived with their own eggs using DuoStim, Mini IVF and priming protocols with Dr. Mona Dahiya.",
 };
 
 export default function LowAmhSuccessStoriesPage() {
   return (
-    <main className="flex min-h-screen flex-col">
+    <main className="flex min-h-screen flex-col bg-pink">
       <LowAmhHero />
 
       <SectionReveal>
@@ -45,7 +45,11 @@ export default function LowAmhSuccessStoriesPage() {
       </SectionReveal>
 
       <SectionReveal delay={0.04}>
-        <IvfSuccessClinics />
+        <IvfSuccessClinics
+          eyebrow="Book an appointment"
+          title="Book a Consultation at Our Clinics"
+          subtitle="Come to one of our clinics and meet Dr. Mona Dahiya. We have three clinics that Dr. Mona will see you in. If you cannot make it to one of our locations, you can schedule an online appointment as well."
+        />
       </SectionReveal>
 
       <SectionReveal delay={0.04}>
@@ -54,16 +58,11 @@ export default function LowAmhSuccessStoriesPage() {
 
       <SectionReveal delay={0.04}>
         <AboutConsultation
+          sectionId="book-consultation"
           eyebrow="Next step"
-          title={
-            <>
-              Book a Low
-              <br />
-              AMH Consultation
-            </>
-          }
-          subtitle="Book an in-clinic consultation or an online review of your AMH and scan reports. Call"
-          appendContacts={true}
+          title="Book a Low AMH Consultation"
+          subtitle="Book an in-clinic consultation or an online review of your AMH and scan reports. Call +91 92679 82924."
+          appendContacts={false}
         />
       </SectionReveal>
 

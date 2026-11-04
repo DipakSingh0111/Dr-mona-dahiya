@@ -79,7 +79,14 @@ function MaleAvatar() {
             fill="#ffffff"
           />
 
-          <rect x="29.3" y="37.5" width="5.4" height="12" rx="2" fill="#ffffff" />
+          <rect
+            x="29.3"
+            y="37.5"
+            width="5.4"
+            height="12"
+            rx="2"
+            fill="#ffffff"
+          />
 
           <path
             d="M14 64 C15.5 51.5 22.5 47.5 32 47.5 C41.5 47.5 48.5 51.5 50 64 Z"
@@ -119,11 +126,11 @@ export default function AdvancedCare() {
   } as const;
 
   return (
-    <section className="bg-white px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
-      <div className="mx-auto w-full max-w-[1440px]">
+    <section className="bg-white py-6 sm:py-7 lg:py-8">
+      <div className="page-container relative">
         <Reveal>
           <div className="mb-6 flex flex-wrap items-center gap-2.5 sm:flex-nowrap">
-            <span className="text-[11px] font-extrabold tracking-[0.11em] text-[#e11d48] uppercase sm:whitespace-nowrap sm:text-[13px] sm:tracking-[0.14em]">
+            <span className="text-[15px] font-semibold tracking-[0.11em] text-[#e11d48] uppercase sm:whitespace-nowrap sm:text-[13px] sm:tracking-[0.14em]">
               {eyebrow}
             </span>
             <span className="hidden h-[2.5px] w-10 shrink-0 rounded-full bg-[#e11d48] sm:inline-block sm:w-11" />
@@ -217,4 +224,3 @@ export default function AdvancedCare() {
     </section>
   );
 }
-

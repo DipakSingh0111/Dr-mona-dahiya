@@ -15,8 +15,8 @@ export default function IuiDelhiWhy() {
   ];
 
   return (
-    <section className="relative overflow-hidden border-t border-[#fde2ec] bg-pink px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-14">
-      <div className="relative mx-auto w-full max-w-[1440px]">
+    <section className="relative overflow-hidden border-t border-[#fde2ec] bg-pink py-8 sm:py-10 lg:py-14">
+      <div className="page-container relative">
         <div className="grid grid-cols-1 items-stretch gap-8 lg:grid-cols-12 lg:gap-10 xl:gap-12">
           <div className="flex min-w-0 flex-col justify-between lg:col-span-7">
             <Reveal variant="fadeUp">

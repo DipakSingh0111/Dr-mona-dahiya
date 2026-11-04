@@ -95,7 +95,7 @@ export default function FemaleFertilityIndications() {
                       {item.linkText && item.linkHref && (
                         <Link
                           href={item.linkHref}
-                          className="font-medium text-teal underline decoration-teal/40 underline-offset-2 transition-colors hover:text-teal-dark hover:decoration-teal"
+                          className="font-medium text-rose underline decoration-rose/40 underline-offset-2 transition-colors hover:text-rose-dark hover:decoration-rose"
                         >
                           {item.linkText}
                         </Link>

@@ -13,7 +13,7 @@ const reviews = [
     review:
       "We consulted Dr. Mona Dahiya for fertility treatment at Noida Extension. Her skills in diagnosing our infertility was evident and she immediately put us on a personalized path which is her USP. Her special attention to our emotions made us trust her completely. We are overjoyed with the positive outcome she helped us achieve.",
     initial: "R",
-    name: "Rinkussaini001 Saini",
+    name: "Rinkusaini001 Saini",
   },
   {
     review:
@@ -40,10 +40,10 @@ export default function BestIvfDoctorReviews() {
 
       <Stagger
         delay={0.05}
-        className="mt-7 grid grid-cols-1 gap-5 lg:grid-cols-3"
+        className="mt-7 grid grid-cols-1 items-stretch gap-5 lg:grid-cols-3"
       >
         {reviews.map((rev) => (
-          <StaggerItem key={rev.name}>
+          <StaggerItem key={rev.name} className="h-full">
             <ReviewCard {...rev} />
           </StaggerItem>
         ))}
@@ -52,7 +52,7 @@ export default function BestIvfDoctorReviews() {
       <Reveal variant="fadeUp" delay={0.1} className="mt-8">
         <Link
           href="/best-ivf-patient-reviews"
-          className="inline-flex items-center justify-center rounded-full border border-blue/40 bg-white px-5 py-2.5 text-[13px] font-semibold text-blue transition-all hover:border-blue hover:bg-blue/5 hover:text-blue-dark"
+          className="inline-flex items-center justify-center rounded-full border border-rose/40 bg-white px-5 py-2.5 text-[13px] font-semibold text-ink transition-all hover:border-rose hover:bg-rose hover:text-white"
         >
           Read All Patient Reviews
         </Link>

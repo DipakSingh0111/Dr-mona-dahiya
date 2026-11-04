@@ -19,7 +19,7 @@
         "type": "text",
         "icon": "globe",
         "label": "International Desk",
-        "href": "/international-patients"
+        "href": "/international-ivf-patient"
       },
       {
         "type": "email",
@@ -184,7 +184,7 @@
               },
               {
                 "label": "PCOS & PCOD Management",
-                "href": "/best-pcos-prod-treatment-centre-in-noida"
+                "href": "/best-pcos-pcod-treatment-centre-in-noida"
               },
               {
                 "label": "Endometriosis & Adenomyosis",
@@ -526,11 +526,7 @@
   "ourServices": {
     "eyebrow": "Services we provide",
     "titlePrefix": "Infertility Treatment at",
-    "titleLocations": [
-      "Noida",
-      "Delhi",
-      "Ghaziabad"
-    ],
+    "titleLocations": ["Noida", "Delhi", "Ghaziabad"],
     "description": "Starting from simple IUI to advance lab procedures will be decided based on couple's investigation.",
     "cta": {
       "label": "View More Services",
@@ -641,7 +637,7 @@
       {
         "id": "fertility-testing",
         "title": "Fertility Test",
-        "description": "Fertility tests to know about your chances of having a child.",
+        "description": "Fertility Tests to know about your chances of having a child.",
         "icon": "sperm",
         "theme": "rose"
       },
@@ -676,7 +672,7 @@
       "title": "What we treat for males",
       "tags": [
         "Azoospermia",
-        "Low Sperm Count",
+        "Less Sperm Count",
         "DNA Fragmentation Test",
         "TESA/PESA",
         "All Types of Infertility"
@@ -1111,11 +1107,7 @@
           "name": "Little Angel IVF",
           "icon": "/images/affiliations/icon-baby-heart.jpg",
           "tone": "pink",
-          "tags": [
-            "Noida",
-            "Delhi",
-            "Ghaziabad"
-          ]
+          "tags": ["Noida", "Delhi", "Ghaziabad"]
         }
       ]
     },
@@ -1361,7 +1353,7 @@
     ],
     "primaryCta": {
       "label": "International patient desk",
-      "href": "/international-patients"
+      "href": "/international-ivf-patient"
     },
     "secondaryCta": {
       "label": "Schedule Online Consultation",
@@ -1463,11 +1455,7 @@
       "subtitle": "Fill in your details and we will get back to you shortly.",
       "submitLabel": "Book Consultation",
       "disclaimer": "",
-      "clinics": [
-        "Noida",
-        "Ghaziabad",
-        "Delhi"
-      ]
+      "clinics": ["Noida", "Ghaziabad", "Delhi"]
     }
   },
   "footer": {
@@ -1559,7 +1547,7 @@
       },
       {
         "label": "PGT Testing Center in Noida",
-        "href": "#"
+        "href": "/preimplantation-genetic-testing-pgt-center-in-noida"
       },
       {
         "label": "PRP Fertility Therapy in Noida",
@@ -1571,15 +1559,15 @@
       },
       {
         "label": "PCOS & PCOD Clinic Noida",
-        "href": "#"
+        "href": "/best-pcos-pcod-treatment-centre-in-noida"
       },
       {
         "label": "Low AMH Treatment in Noida",
-        "href": "#"
+        "href": "/low-amh-stories "
       },
       {
         "label": "Miscarriage Specialist in Noida",
-        "href": "#"
+        "href": "/miscarriage-treatment-in-noida"
       }
     ],
     "delhiGhaziabad": {
@@ -1651,11 +1639,11 @@
       "items": [
         {
           "label": "Privacy Policy & Patient Data Security",
-          "href": "#"
+          "href": "/privacy-policy"
         },
         {
           "label": "Terms of Medical Consultation",
-          "href": "#",
+          "href": "/terms-of-service",
           "isNew": true
         },
         {
@@ -2021,7 +2009,7 @@
     "breadcrumb": "Online IVF Consultation",
     "eyebrow": "Online fertility consultation",
     "title": "Online IVF Consultation with Dr. Mona Dahiya",
-    "image": "/images/Confident-Doctor.png",
+    "image": "/images/about-mona-dahiya/online-ivf-consultation.jpg",
     "primaryCta": {
       "label": "Book In-Clinic Consultation",
       "href": "#schedule-consultation"

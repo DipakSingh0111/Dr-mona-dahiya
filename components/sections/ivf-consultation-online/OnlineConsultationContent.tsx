@@ -38,8 +38,8 @@ export default function OnlineConsultationContent() {
   return (
     <div className="bg-pink text-ink">
       {/* Who benefits */}
-      <section className="px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
-        <div className="mx-auto w-full max-w-[1440px]">
+      <section className="py-6 sm:py-7 lg:py-8">
+        <div className="page-container relative">
           <Reveal className="mb-7 sm:mb-9">
             <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
               {benefits.eyebrow}
@@ -75,8 +75,8 @@ export default function OnlineConsultationContent() {
       </section>
 
       {/* Prepare */}
-      <section className="px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
-        <div className="mx-auto w-full max-w-[1440px]">
+      <section className="py-6 sm:py-7 lg:py-8">
+        <div className="page-container relative">
           <Reveal className="mb-7 sm:mb-9">
             <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
               {prepare.eyebrow}
@@ -107,8 +107,8 @@ export default function OnlineConsultationContent() {
       </section>
 
       {/* Steps */}
-      <section className="px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
-        <div className="mx-auto w-full max-w-[1440px]">
+      <section className="py-6 sm:py-7 lg:py-8">
+        <div className="page-container relative">
           <Reveal className="mb-7 sm:mb-9">
             <h2 className="font-serif max-w-3xl text-[1.9rem] leading-tight font-bold tracking-tight sm:text-[2.4rem]">
               {steps.title}
@@ -141,8 +141,8 @@ export default function OnlineConsultationContent() {
       </section>
 
       {/* Why */}
-      <section className="px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
-        <div className="mx-auto w-full max-w-[1440px]">
+      <section className="py-6 sm:py-7 lg:py-8">
+        <div className="page-container relative">
           <Reveal className="mb-7 sm:mb-9">
             <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
               {why.eyebrow}
@@ -173,8 +173,8 @@ export default function OnlineConsultationContent() {
       </section>
 
       {/* Fees */}
-      <section className="px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
-        <div className="mx-auto w-full max-w-[1440px]">
+      <section className="py-6 sm:py-7 lg:py-8">
+        <div className="page-container relative">
           <Reveal className="mb-7 sm:mb-9">
             <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
               {fees.eyebrow}
@@ -230,8 +230,8 @@ export default function OnlineConsultationContent() {
       </section>
 
       {/* FAQ */}
-      <section className="px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
-        <div className="mx-auto w-full max-w-[1440px]">
+      <section className="py-6 sm:py-7 lg:py-8">
+        <div className="page-container relative">
           <Reveal className="mb-7 sm:mb-9">
             <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
               {faq.eyebrow}
@@ -317,8 +317,8 @@ export default function OnlineConsultationContent() {
       </section>
 
       {/* Reviews */}
-      <section className="px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
-        <div className="mx-auto w-full max-w-[1440px]">
+      <section className="py-6 sm:py-7 lg:py-8">
+        <div className="page-container relative">
           <Reveal className="mb-7 sm:mb-9">
             <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
               {reviews.eyebrow}

@@ -38,8 +38,8 @@ export default function IuiCycleSteps() {
   ];
 
   return (
-    <section id="iui-steps" className="relative overflow-hidden bg-[#f5f6f8] px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-14 border-t border-slate-100">
-      <div className="relative mx-auto w-full max-w-[1440px]">
+    <section id="iui-steps" className="relative overflow-hidden bg-[#f5f6f8] py-8 sm:py-10 lg:py-14 border-t border-slate-100">
+      <div className="page-container relative">
         <Reveal variant="fadeUp">
           <span className="text-[12px] font-semibold tracking-wider text-rose uppercase sm:text-[13px]">
             IUI Steps

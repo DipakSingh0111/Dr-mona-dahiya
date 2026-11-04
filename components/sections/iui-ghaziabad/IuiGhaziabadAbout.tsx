@@ -14,8 +14,8 @@ export default function IuiGhaziabadAbout() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-pink px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-14 border-t border-[#fde2ec]">
-      <div className="relative mx-auto w-full max-w-[1440px]">
+    <section className="relative overflow-hidden bg-pink py-8 sm:py-10 lg:py-14 border-t border-[#fde2ec]">
+      <div className="page-container relative">
         <div className="grid grid-cols-1 items-stretch gap-8 lg:grid-cols-12 lg:gap-12">
           {/* Left Column: Content */}
           <div className="flex flex-col justify-between min-w-0 lg:col-span-7">
@@ -85,7 +85,7 @@ export default function IuiGhaziabadAbout() {
               />
               <div className="relative h-full min-h-[380px] w-full overflow-hidden rounded-[24px] border-4 border-white bg-white shadow-[0_18px_40px_rgba(232,62,116,0.12)] sm:rounded-[28px] sm:min-h-[460px] lg:min-h-0">
                 <Image
-                  src="/images/Confident-Doctor.png"
+                  src="/images/about-mona-dahiya/iui-benefits-doctor.jpg"
                   alt="Dr. Mona Dahiya — IUI in simple words"
                   fill
                   sizes="(max-width: 1024px) 420px, 480px"

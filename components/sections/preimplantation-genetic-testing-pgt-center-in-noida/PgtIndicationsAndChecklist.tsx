@@ -8,128 +8,105 @@ export default function PgtIndicationsAndChecklist() {
   const indications = [
     {
       num: "1",
-      title: "Advanced Maternal Age (≥35 Years)",
-      desc: "As maternal age rises, oocyte chromosomal segregation errors increase significantly; over 50% to 70% of blastocysts at age 38+ can be aneuploid despite excellent physical morphology.",
-      color: "from-rose to-[#f43f5e]",
-      border: "hover:border-rose/50",
+      title: "If you are above 35 years of age",
+      desc: "Your eggs start to have increased amount of chromosomal error as you age. From age 35 onwards around 50-70% of embryos may be chromosomally abnormal even if they look normal on the outside.",
     },
     {
       num: "2",
-      title: "Recurrent Implantation Failure (RIF)",
+      title: "Repeated Failed IVF cycles (Failed Implantations)",
       desc: (
         <>
-          Couples who have endured two or more unsuccessful IVF cycles with seemingly high-grade embryos. See{" "}
+          If you have gone through 2 or more failed IVF cycles despite having
+          good grade embryos.{" "}
           <Link
             href="/recurrent-implantation-failure-rif"
             className="font-medium text-blue underline underline-offset-2 hover:text-blue-dark"
           >
-            Recurrent Implantation Failure
+            Read More on Failed Implantations
           </Link>
           .
         </>
       ),
-      color: "from-blue to-[var(--blue)]",
-      border: "hover:border-blue/50",
     },
     {
       num: "3",
-      title: "Recurrent Pregnancy Loss (RPL)",
-      desc: (
-        <>
-          Women with a history of two or more consecutive miscarriages, where unnoticed embryonic chromosomal anomalies are the leading etiology. See{" "}
-          <Link
-            href="/miscarriage-treatment-in-noida"
-            className="font-medium text-blue underline underline-offset-2 hover:text-blue-dark"
-          >
-            Recurrent Miscarriage
-          </Link>
-          .
-        </>
-      ),
-      color: "from-[#8b5cf6] to-[#a855f7]",
-      border: "hover:border-[#8b5cf6]/50",
+      title: "Male Factor Infertility",
+      desc: "If you have very high level of DNA Fragmentation (above 30%) or low motility of sperm. There are increased chances of sperm being aneuploid as well.",
     },
     {
       num: "4",
-      title: "Severe Male Factor Infertility",
-      desc: (
-        <>
-          Elevated sperm DNA fragmentation index (DFI above 25%) or severe oligoasthenoteratozoospermia, which increases paternal aneuploidy contribution. See{" "}
-          <Link
-            href="/sperm-dna-fragmentation-test"
-            className="font-medium text-blue underline underline-offset-2 hover:text-blue-dark"
-          >
-            Sperm DNA Fragmentation
-          </Link>
-          .
-        </>
-      ),
-      color: "from-blue to-[var(--blue)]",
-      border: "hover:border-blue/50",
+      title: "Genetic Disorder",
+      desc: "If you both are found to be carriers for any known genetic disease by pre-conception screening.",
     },
     {
       num: "5",
-      title: "Carriers of Inherited Genetic Disorders",
-      desc: "Monogenic single-gene inheritance risks identified through pre-conceptional genetic carrier screening.",
-      color: "from-[#ea580c] to-[#f97316]",
-      border: "hover:border-[#ea580c]/50",
+      title: "Translocation/Inversion",
+      desc: "If one of the couple is found to be having inversion or translocation of chromosome by Karyotyping.",
     },
     {
       num: "6",
-      title: "Known Balanced Translocations",
-      desc: "Chromosomal inversions or translocations diagnosed via parental karyotyping.",
-      color: "from-blue to-[var(--blue)]",
-      border: "hover:border-blue/50",
-    },
-    {
-      num: "7",
-      title: "Desire for Elective Single Embryo Transfer (eSET)",
-      desc: "Maximizing singleton pregnancy rates while eliminating the twin/triplet medical risks of multi-embryo transfers.",
-      color: "from-rose to-[#f43f5e]",
-      border: "hover:border-rose/50",
+      title: "Want to do Single Embryo Transfer",
+      desc: "Doing a single embryo transfer with PGT gives you better chances of having one baby rather than twins.",
     },
   ];
 
   const checklistItems = [
     {
-      title: "High-Resolution Parental Karyotyping",
-      desc: "Peripheral blood tests for both partners to detect structural chromosomal rearrangements, balanced translocations, or mosaicism.",
+      title: "Karyotyping of both Partners",
+      desc: "To check if there is any inversion/translocation or other chromosomal error.",
     },
     {
-      title: "Couples Expanded Genetic Carrier Screening (Next-Gen Sequencing)",
-      desc: "Identifies autosomal recessive and X-linked genetic variants (essential for custom PGT-M probe design).",
+      title: "Couples Carrier Screen by NGSs",
+      desc: "To see if you are both are carriers for any autosomal or X linked disorders. (Needed to make probes for PGT-M)",
     },
     {
-      title: "Ovarian Reserve Assessment",
-      desc: "Serum Anti-Müllerian Hormone (AMH) and Baseline Antral Follicle Count (AFC) to calculate expected blastocyst conversion numbers.",
+      title: "Check Your Ovarian Reserve",
+      desc: "By doing your AMH and counting your baseline follicle count we can predict how many blastocysts you will likely form.",
     },
     {
-      title: "Advanced Semen Analysis & Sperm DFI",
-      desc: "Morphological examination and Sperm DNA Fragmentation Index testing.",
+      title: "Semen Analysis + Sperm DFI",
+      desc: "To check shape and DNA fragmentation of your sperm.",
     },
     {
-      title: "Uterine Cavity Evaluation",
-      desc: "3D Saline Infusion Sonohysterography (SIS) or diagnostic hysteroscopy to ensure an optimal uterine environment for future thawed euploid transfer.",
+      title: "Evaluate Your Uterus",
+      desc: (
+        <>
+          By doing a 3D SIS or Hysteroscopy we can ensure that your uterus will
+          accept a frozen embryo in future. Read more about{" "}
+          <Link
+            href="/frozen-embryo-transfer"
+            className="font-medium text-blue underline underline-offset-2 hover:text-blue-dark"
+          >
+            Embryo transfer
+          </Link>{" "}
+          here.
+        </>
+      ),
     },
     {
-      title: "PGT-M Feasibility & Pre-Clinical Workup (For Single-Gene Cases)",
-      desc: "Custom molecular probe and genetic primer design using parental and family DNA samples (takes 3 to 6 weeks prior to IVF stimulation).",
+      title: "If you want to do PGT-M",
+      desc: "We need to collect your and your partner's samples to create genetic probes. It takes approx. 3 to 6 weeks to make custom probes for single gene disease.",
     },
   ];
 
   return (
-    <section className="relative overflow-hidden bg-slate-50/70 px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
-      <div className="relative mx-auto w-full max-w-[1440px]">
-        {/* Top: Indications */}
+    <section
+      className="relative overflow-hidden py-8 sm:py-10 lg:py-12"
+      style={{ background: "var(--pink)" }}
+    >
+      <div className="page-container relative">
         <Reveal className="mb-6 sm:mb-8">
           <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
-            Clinical breakdown
+            When to opt for PGT?
           </p>
-          <h2 className="font-serif mt-1 text-[1.65rem] leading-[1.2] font-normal tracking-tight text-slate-900 sm:text-[2.1rem] lg:text-[2.35rem]">
+          <h2 className="font-serif mt-1 text-[1.65rem] leading-[1.2] font-normal tracking-tight text-ink sm:text-[2.1rem] lg:text-[2.35rem]">
             Indications: Who Needs PGT Testing?
           </h2>
-          <p className="mt-2 text-[14px] leading-relaxed text-black sm:text-[15px]">
-            PGT transforms unpredictable IVF outcomes into targeted, evidence-based transfers. Dr. Mona Dahiya recommends PGT evaluation for couples facing:
+          <p className="mt-2 max-w-4xl text-[14px] leading-relaxed text-ink/75 sm:text-[15px]">
+            With the help of PGT we can increase the success rate of your IVF
+            treatment by selecting the best embryo. Dr Mona Dahiya advises her
+            patients to consider doing PGT if you fall in any of these
+            categories.
           </p>
         </Reveal>
 
@@ -137,22 +114,18 @@ export default function PgtIndicationsAndChecklist() {
           stagger={0.06}
           className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
         >
-          {indications.map((item, idx) => (
-            <StaggerItem key={idx}>
-              <div
-                className={`group flex h-full flex-col justify-start rounded-[18px] border border-slate-200/90 bg-white p-5 shadow-[0_4px_18px_rgba(0,20,60,0.04)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_28px_rgba(0,30,80,0.08)] ${item.border}`}
-              >
+          {indications.map((item) => (
+            <StaggerItem key={item.num}>
+              <div className="group flex h-full flex-col rounded-[20px] border border-[#fde2ec] bg-white p-5.5 shadow-[0_8px_24px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-rose/40 hover:shadow-[0_14px_36px_rgba(232,62,116,0.1)]">
                 <div className="flex items-center gap-3">
-                  <span
-                    className={`inline-flex size-8 shrink-0 items-center justify-center rounded-lg text-[13px] font-bold text-black shadow-sm bg-gradient-to-r ${item.color}`}
-                  >
+                  <span className="inline-flex size-8 shrink-0 items-center justify-center rounded-lg bg-rose text-[13px] font-bold text-white shadow-[0_4px_12px_rgba(232,62,116,0.35)]">
                     {item.num}
                   </span>
-                  <h3 className="text-[15px] font-bold text-slate-900 group-hover:text-blue transition-colors sm:text-[16px]">
+                  <h3 className="text-[15px] font-bold text-ink transition-colors group-hover:text-rose sm:text-[16px]">
                     {item.title}
                   </h3>
                 </div>
-                <div className="mt-3 text-[13.5px] leading-relaxed text-black">
+                <div className="mt-3 text-[13.5px] leading-relaxed text-ink/75">
                   {item.desc}
                 </div>
               </div>
@@ -160,32 +133,31 @@ export default function PgtIndicationsAndChecklist() {
           ))}
         </Stagger>
 
-        {/* Bottom: Diagnostic Checklist */}
         <div className="mt-12 sm:mt-16">
           <Reveal className="mb-6 sm:mb-8">
             <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
-              Before treatment
+              What tests do you need before starting?
             </p>
-            <h2 className="font-serif mt-1 text-[1.65rem] leading-[1.2] font-normal tracking-tight text-slate-900 sm:text-[2.1rem] lg:text-[2.35rem]">
+            <h2 className="font-serif mt-1 text-[1.65rem] leading-[1.2] font-normal tracking-tight text-ink sm:text-[2.1rem] lg:text-[2.35rem]">
               Diagnostic Checklist: Tests Required Before Starting PGT
             </h2>
-            <p className="mt-2 text-[14px] leading-relaxed text-black sm:text-[15px]">
-              Before embarking on an IVF-PGT cycle, Dr. Mona Dahiya prescribes a targeted, step-by-step diagnostic workup:
+            <p className="mt-2 text-[14px] leading-relaxed text-ink/75 sm:text-[15px]">
+              Dr Mona Dahiya follows following protocol before you begin PGT.
             </p>
           </Reveal>
 
           <Stagger stagger={0.06} className="space-y-3.5 sm:space-y-4">
-            {checklistItems.map((item, idx) => (
-              <StaggerItem key={idx}>
-                <div className="flex items-start gap-3.5 rounded-[16px] border border-slate-200/90 bg-white p-4.5 sm:p-5 shadow-[0_4px_14px_rgba(0,20,60,0.03)] transition-all duration-300 hover:border-blue/40 hover:shadow-[0_8px_22px_rgba(0,71,202,0.07)]">
-                  <FaCheckCircle className="mt-1 size-5 shrink-0 text-blue" />
+            {checklistItems.map((item) => (
+              <StaggerItem key={item.title}>
+                <div className="flex items-start gap-3.5 rounded-[18px] border border-[#fde2ec] bg-white p-4.5 shadow-[0_8px_24px_rgba(232,62,116,0.06)] transition-all duration-300 hover:border-rose/35 hover:shadow-[0_14px_36px_rgba(232,62,116,0.1)] sm:p-5">
+                  <FaCheckCircle className="mt-1 size-5 shrink-0 text-rose" />
                   <div>
-                    <h3 className="text-[14.5px] font-bold text-slate-900 sm:text-[15.5px]">
+                    <h3 className="text-[14.5px] font-bold text-ink sm:text-[15.5px]">
                       {item.title}
                     </h3>
-                    <p className="mt-1 text-[13px] leading-relaxed text-black sm:text-[13.5px]">
+                    <div className="mt-1 text-[13px] leading-relaxed text-ink/75 sm:text-[13.5px]">
                       {item.desc}
-                    </p>
+                    </div>
                   </div>
                 </div>
               </StaggerItem>
@@ -196,4 +168,3 @@ export default function PgtIndicationsAndChecklist() {
     </section>
   );
 }
-

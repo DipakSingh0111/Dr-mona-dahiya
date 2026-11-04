@@ -55,7 +55,7 @@ const solutions = [
 
 export default function ComplexIVFSolutions() {
   return (
-    <section className="relative overflow-hidden bg-pink px-4 py-8 text-ink sm:px-6 sm:py-10 lg:px-8 lg:py-12">
+    <section className="relative overflow-hidden bg-pink py-8 text-ink sm:py-10 lg:py-12">
       <div
         aria-hidden
         className="pointer-events-none absolute -top-32 left-1/4 h-[440px] w-[500px] rounded-full opacity-25 blur-3xl"
@@ -73,7 +73,7 @@ export default function ComplexIVFSolutions() {
         }}
       />
 
-      <div className="relative mx-auto w-full max-w-[1440px]">
+      <div className="page-container relative">
         <Reveal className="mb-7 sm:mb-9">
           <span className="text-[12px] font-bold tracking-[0.14em] text-[#ff7fa9] uppercase sm:text-[13px]">
             What makes the difference

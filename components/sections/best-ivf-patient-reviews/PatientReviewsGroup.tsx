@@ -62,8 +62,8 @@ export default function PatientReviewsGroup({
   );
 
   return (
-    <section id={id} className="relative overflow-hidden bg-pink px-4 py-6 text-ink sm:px-6 sm:py-7 lg:px-8 lg:py-8 scroll-mt-24">
-      <div className="relative mx-auto w-full max-w-[1440px]">
+    <section id={id} className="relative overflow-hidden bg-pink py-6 text-ink sm:py-7 lg:py-8 scroll-mt-24">
+      <div className="page-container relative">
         <Reveal className="max-w-3xl">
           <span className="text-[12px] font-semibold tracking-wider text-rose uppercase">
             {eyebrow}

@@ -5,103 +5,104 @@ import {
   TreatmentSection,
   TreatmentSectionHeader,
   ProtocolCard,
-  WhyPointRow
+  WhyPointRow,
 } from "@/components/ui/treatment";
+
 const protocols = [
   {
     number: "1",
-    title: "Anaesthesia and preparation",
+    title: "Anaesthetize and prepare your cervix",
     bullets: [
-      "Light general anaesthesia",
-      "Gentle cervical softening with misoprostol",
+      "Light general anesthesia",
+      "Cervical ripening with Misoprostol",
     ],
   },
   {
     number: "2",
-    title: "Combined diagnostic survey",
+    title: "Perform Diagnostic Laparoscopy and Hysteroscopy",
     bullets: [
-      "Hysteroscopy: a 2.9 mm scope checks the canal, cavity and tube openings",
-      "Laparoscopy: a 5 mm camera below the navel, with small 5 mm ports above the pubic bone",
+      "Hysteroscopy: Using a 2.9mm telescope we inspect your endocervical canal, uterine cavity and ostia of your fallopian tubes.",
+      "Laparoscopy: We place a camera 5mm telescope in your abdomen just below your umbilicus. We place 5mm ports just above your symphysis.",
     ],
   },
   {
     number: "3",
-    title: "Hysteroscopic correction",
+    title: "Operate via hysteroscopy",
     bullets: [
-      "Polyp or fibroid removal with bipolar or cold scissors",
-      "Septum division until both tube openings are level",
-      "Adhesion release, then anti-adhesion gel",
+      "We can remove endometrial polyps and sub mucous fibroid using bipolar forceps or cold scissor.",
+      "We divide your septum till both ostia of your tubes are equidistant from each other.",
+      "Release adhesions and apply antiadhesive barrier.",
     ],
   },
   {
     number: "4",
-    title: "Laparoscopic correction",
+    title: "Operate via laparoscopy",
     bullets: [
-      "Dye test (chromopertubation) to check the tubes",
-      "Clipping or removal of a hydrosalpinx before IVF",
-      "Ovary-sparing removal of endometriosis",
+      "Chromopertubation (dye test) to identify patent fallopian tubes.",
+      "Clip or remove hydrosalpinx if you plan for IVF treatment.",
+      "Ovary sparing excision of endometriomas.",
     ],
   },
   {
     number: "5",
-    title: "Recovery and discharge",
+    title: "Antiadhesive and discharge",
     bullets: [
-      "Hyaluronic acid anti-adhesion barrier applied",
-      "Home in 6 to 12 hours",
+      "Place hyaluronic acid gel to prevent recurrence of adhesions.",
+      "You will be discharged between 6-12 hours post surgery.",
     ],
   },
 ];
 
 const whyPoints = [
   {
-    title: "Protecting ovarian reserve",
-    desc: "Cold-scissor dissection and fine bipolar cautery avoid heavy burning of healthy ovarian tissue.",
+    title: "Ovarian Reserve Sparing Surgeries",
+    desc: "We use cold scissor technique and careful bipolar diathermy to remove pathology with minimal damage to normal ovarian tissue.",
   },
   {
-    title: "Two procedures, one anaesthetic",
-    desc: "Hysteroscopy and laparoscopy are combined so uterine and pelvic problems are fixed together.",
+    title: "Simultaneous hysteroscopy and laparoscopy",
+    desc: "Both these procedures can be performed in one setting to treat your uterine and pelvic pathology simultaneously.",
   },
   {
-    title: "25+ years of endoscopic surgery",
-    desc: "A Singapore General Hospital fellow with long experience in minimally invasive reproductive surgery.",
+    title: "Experience of more than 25 Years",
+    desc: "Fellowship from Singapore General Hospital and trained in advanced endoscopic surgeries.",
   },
 ];
 
 export default function LaparoscopyProtocolAndWhy() {
   return (
     <TreatmentSection>
-        <div className="mb-14 sm:mb-16 lg:mb-20">
-          <TreatmentSectionHeader
-          eyebrow="How it works"
+      <div className="mb-14 sm:mb-16 lg:mb-20">
+        <TreatmentSectionHeader
+          eyebrow="Laparoscopic and Hysteroscopic Surgery procedure"
           title="Step-by-Step Surgical Protocol"
         />
 
-          <Stagger
-            delay={0.05}
-            className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
-          >
-            {protocols.map((item) => (
-              <StaggerItem key={item.number}>
+        <Stagger
+          delay={0.05}
+          className="mt-7 grid grid-cols-1 items-stretch gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
+        >
+          {protocols.map((item) => (
+            <StaggerItem key={item.number} className="h-full">
               <ProtocolCard {...item} />
             </StaggerItem>
-            ))}
-          </Stagger>
-        </div>
+          ))}
+        </Stagger>
+      </div>
 
-        <div>
-          <TreatmentSectionHeader
-          eyebrow="Expertise & authority"
+      <div>
+        <TreatmentSectionHeader
+          eyebrow="Why Dr Mona Dahiya?"
           title="Why Choose Dr. Mona Dahiya for Reproductive Surgery?"
         />
 
-          <div className="mt-6 flex flex-col gap-3.5 sm:mt-7 sm:gap-4">
-            {whyPoints.map((point, idx) => (
-              <Reveal key={point.title} variant="fadeUp" delay={idx * 0.05}>
+        <div className="mt-6 flex flex-col gap-3.5 sm:mt-7 sm:gap-4">
+          {whyPoints.map((point, idx) => (
+            <Reveal key={point.title} variant="fadeUp" delay={idx * 0.05}>
               <WhyPointRow {...point} />
             </Reveal>
-            ))}
-          </div>
+          ))}
         </div>
-      </TreatmentSection>
+      </div>
+    </TreatmentSection>
   );
 }

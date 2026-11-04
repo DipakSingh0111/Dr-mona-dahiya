@@ -45,7 +45,7 @@ export default function ParenthoodCta() {
         }}
       />
 
-      <div className="relative z-10 mx-auto flex min-h-[240px] w-full max-w-[1440px] items-center px-4 py-6 sm:min-h-[280px] sm:px-6 sm:py-8 lg:min-h-[300px] lg:px-8 lg:py-9">
+      <div className="page-container relative z-10 flex min-h-[240px] items-center py-6 sm:min-h-[280px] sm:py-8 lg:min-h-[300px] lg:py-9">
         <Reveal variant="slideLeft" className="w-full max-w-[740px]">
           <span className="mb-5 block h-[3px] w-11 rounded-full bg-rose" />
 

@@ -8,13 +8,13 @@ export default function FertilityPreservation() {
 
   return (
     <section
-      className="relative overflow-hidden px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8"
+      className="relative overflow-hidden py-6 sm:py-7 lg:py-8"
       style={{
         background:
           "linear-gradient(90deg, var(--navy) 0%, var(--navy-mid) 50%, var(--navy) 100%)",
       }}
     >
-      <div className="mx-auto w-full max-w-[1440px]">
+      <div className="page-container">
         <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1fr_1.15fr] lg:gap-12 xl:gap-14">
           <Reveal variant="slideLeft">
             <div className="max-w-[540px]">

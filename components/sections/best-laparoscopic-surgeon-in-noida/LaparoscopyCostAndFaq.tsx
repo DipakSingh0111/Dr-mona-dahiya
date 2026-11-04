@@ -1,38 +1,38 @@
 "use client";
 
 import { FaCheck, FaFlask } from "react-icons/fa";
-import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
+import { Stagger, StaggerItem } from "@/components/ui/Reveal";
 import {
   TreatmentSection,
   TreatmentSectionHeader,
   FaqAccordion,
   type FaqItem,
-  CostFactorCard
+  CostFactorCard,
 } from "@/components/ui/treatment";
+
 const costCards = [
   {
     icon: <FaCheck className="size-3.5" />,
-    title: "Diagnostic office hysteroscopy",
+    title: "Diagnostic hysteroscopy in clinic",
     description:
-      "Day-care cavity check under local block: ₹15,000 to ₹25,000.",
+      "This will be done under local anesthesia at our office. Cost is between 15,000-25,000 INR.",
   },
   {
     icon: <FaCheck className="size-3.5" />,
     title: "Operative hysteroscopy",
     description:
-      "Septum, fibroid or adhesion surgery under general anaesthesia: ₹35,000 to ₹65,000.",
+      "To remove septum, fibroids and adhesions under general anesthesia. Cost is between 35,000-65,000 INR.",
   },
   {
     icon: <FaCheck className="size-3.5" />,
-    title: "Reproductive laparoscopy",
+    title: "Fertility Laparoscopy",
     description:
-      "Cystectomy, tube removal or myomectomy: ₹55,000 to ₹1,10,000.",
+      "Removal of endometrioma, Fallopian tube clipping and myomectomies cost between 55,000-1,10,000 INR.",
   },
   {
     icon: <FaFlask className="size-3.5" />,
-    title: "Anti-adhesion products",
-    description:
-      "Hyaluronic acid gel or intrauterine stents: ₹8,000 to ₹15,000.",
+    title: "Antiadhesive Gel and Stents",
+    description: "These cost between 8,000-15,000 INR.",
   },
 ];
 
@@ -40,27 +40,27 @@ const leftFaqs: FaqItem[] = [
   {
     question: "How does operative hysteroscopy improve IVF success?",
     answer:
-      "It removes 4 common cavity problems (polyps, submucosal fibroids, adhesions and septa), restoring a normal shape and blood flow so the embryo has a receptive surface.",
+      "There are 4 major pathologies within uterine cavity which can cause infertility. Polyps, fibroid, adhesions and septum. All these can be removed by operative hysteroscopy.",
   },
   {
     question: "What is the recovery time after laparoscopy?",
     answer:
-      "Short. Cuts are only 5 to 10 mm, most women go home the same day or next morning, and desk work resumes in 3 to 5 days.",
+      "As all our incisions are 5-10 mm long you can expect to return to normal activities after 3-5 days. Most patients are discharged on the same day.",
   },
   {
     question: "Why must a hydrosalpinx be clipped before IVF?",
     answer:
-      "The blocked tube fills with inflamed fluid that leaks into the uterus, washing embryos away and harming them. Untreated, it can cut IVF success roughly in half.",
+      "Hydrosalpinx is filled with inflammatory fluids which can leak out of tube into uterine cavity. This can wash off your embryo or even be toxic to it. Your chance of success with IVF decreases by almost 50%.",
   },
   {
     question: "Where does Dr. Mona Dahiya perform surgery?",
     answer:
-      "Consultations and procedures are arranged across 3 clinics: Noida (3rd Floor, K-06, above FirstCry, Baraula, Sector 49, Noida, Uttar Pradesh 201301), Ghaziabad (2nd Floor, RDC, C-53A, near Bikanerwala, Sector 15, Sector 10, Raj Nagar, Ghaziabad, Uttar Pradesh 201002) and Delhi (Building Number 41, First Floor, Ring Road, Block Q, Lajpat Nagar IV, Lajpat Nagar, New Delhi 110024).",
+      "Dr. Mona sees her patients at her 3 clinics located in Noida, Ghaziabad and Delhi. For detailed addresses please scroll down.",
   },
   {
     question: "How much does fertility surgery cost?",
     answer:
-      "Diagnostic hysteroscopy ₹15,000 to ₹25,000, operative hysteroscopy ₹35,000 to ₹65,000 and laparoscopy ₹55,000 to ₹1,10,000, plus ₹8,000 to ₹15,000 for anti-adhesion products if used.",
+      "Diagnostic hysteroscopy between 15,000-25,000. Operative hysteroscopy between 35,000-65,000. Laparoscopy between 55,000-1,10,000. Antiadhesive products between 8,000-15,000.",
   },
 ];
 
@@ -68,55 +68,55 @@ const rightFaqs: FaqItem[] = [
   {
     question: "How soon can I try to conceive after surgery?",
     answer:
-      "Usually after 1 to 3 months: about 1 cycle after hysteroscopy and 2 to 3 months after laparoscopic myomectomy.",
+      "You can start trying to conceive after 1 month from hysteroscopy and 2-3 months from laparoscopy and myomectomy.",
   },
   {
     question: "Will surgery reduce my ovarian reserve?",
     answer:
-      "It can if done aggressively. Ovary-sparing cold-scissor techniques are used to protect healthy follicles, and AMH is checked before surgery.",
+      "Yes. So we make sure to do our surgery in an ovary sparing technique. You should get an AMH done before surgery.",
   },
   {
     question: "Is hysteroscopy painful?",
     answer:
-      "Office diagnostic hysteroscopy takes 10 to 15 minutes under a local block. Operative hysteroscopy is done under short general anaesthesia.",
+      "Diagnostic hysteroscopy can be performed in clinic under local anesthesia. It takes 10-15 mins to complete. Operative hysteroscopy is done under light general anesthesia.",
   },
   {
     question: "Can surgery avoid the need for IVF?",
     answer:
-      "Sometimes. Removing a septum, polyp or adhesions, or opening tubes, lets many women conceive naturally or with IUI.",
+      "Yes. Sometimes removing your septum, polyps, adhesions and clearing your tubes can allow you to achieve natural pregnancy or pregnancy with IUI.",
   },
 ];
 
 export default function LaparoscopyCostAndFaq() {
-return (
+  return (
     <TreatmentSection>
-        <div className="mb-14 sm:mb-16 lg:mb-20">
-          <TreatmentSectionHeader
-          eyebrow="Transparency"
+      <div className="mb-14 sm:mb-16 lg:mb-20">
+        <TreatmentSectionHeader
+          eyebrow="Cost of Laparoscopy and Hysteroscopy"
           title="What Affects the Cost of Laparoscopy and Hysteroscopy"
-          subtitle="Costs depend on which procedure you need. Each is a day-care procedure, itemised before surgery."
+          subtitle="Cost depends upon what type of surgery you require. All our surgeries are day care procedures. The costs are as follows"
         />
 
-          <Stagger
-            delay={0.05}
-            className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4"
-          >
-            {costCards.map((card) => (
-              <StaggerItem key={card.title}>
+        <Stagger
+          delay={0.05}
+          className="mt-8 grid grid-cols-1 items-stretch gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4"
+        >
+          {costCards.map((card) => (
+            <StaggerItem key={card.title} className="h-full">
               <CostFactorCard {...card} />
             </StaggerItem>
-            ))}
-          </Stagger>
-        </div>
+          ))}
+        </Stagger>
+      </div>
 
-        <div>
-          <TreatmentSectionHeader
-          eyebrow="Patient questions"
+      <div>
+        <TreatmentSectionHeader
+          eyebrow="Frequently Asked Questions"
           title="Top FAQs About Fertility Laparoscopy and Hysteroscopy"
         />
 
-          <FaqAccordion leftItems={leftFaqs} rightItems={rightFaqs} />
-        </div>
-      </TreatmentSection>
+        <FaqAccordion leftItems={leftFaqs} rightItems={rightFaqs} />
+      </div>
+    </TreatmentSection>
   );
 }

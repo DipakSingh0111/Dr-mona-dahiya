@@ -12,9 +12,9 @@ export function TreatmentSection({
 }) {
   return (
     <section
-      className={`relative overflow-hidden bg-pink px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12 ${className}`}
+      className={`relative overflow-hidden bg-pink py-8 sm:py-10 lg:py-12 ${className}`}
     >
-      <div className="mx-auto w-full max-w-[1440px]">{children}</div>
+      <div className="page-container relative">{children}</div>
     </section>
   );
 }

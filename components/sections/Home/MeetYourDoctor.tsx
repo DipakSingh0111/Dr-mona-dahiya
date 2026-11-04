@@ -50,7 +50,7 @@ export default function MeetYourDoctor() {
   return (
     <section
       id="about"
-      className="relative overflow-hidden px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8"
+      className="relative overflow-hidden py-6 sm:py-7 lg:py-8"
       style={{
         background:
           "linear-gradient(165deg, #ffffff 0%, #fff8fb 28%, #fff5f9 55%, #ffffff 100%)",
@@ -73,7 +73,7 @@ export default function MeetYourDoctor() {
         }}
       />
 
-      <div className="relative mx-auto w-full max-w-[1440px]">
+      <div className="page-container relative">
         <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-10 xl:gap-14">
           <Reveal variant="slideLeft" className="relative z-10 w-full min-w-0">
             <span className="inline-flex items-center gap-2 rounded-full border border-[#f9c5d4]/60 bg-gradient-to-r from-[#ffe8f0] to-[#fff5f8] px-3.5 py-1.5 text-[12px] font-semibold whitespace-nowrap text-rose shadow-[0_4px_14px_rgba(232,62,116,0.08)]">

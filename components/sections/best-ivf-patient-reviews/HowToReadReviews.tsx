@@ -4,8 +4,8 @@ import { Reveal } from "@/components/ui/Reveal";
 
 export default function HowToReadReviews() {
   return (
-    <section className="relative overflow-hidden bg-pink border-t border-[#fde2ec] px-4 py-6 text-ink sm:px-6 sm:py-7 lg:px-8 lg:py-8">
-      <div className="relative mx-auto w-full max-w-[1440px]">
+    <section className="relative overflow-hidden bg-pink border-t border-[#fde2ec] py-6 text-ink sm:py-7 lg:py-8">
+      <div className="page-container relative">
         <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-12 lg:gap-10">
           <Reveal className="lg:col-span-5">
             <span className="text-[12px] font-semibold tracking-wider text-rose uppercase">

@@ -16,8 +16,8 @@ export default function IuiNotSuitable() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-white px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-14 border-t border-slate-100">
-      <div className="relative mx-auto w-full max-w-[1440px]">
+    <section className="relative overflow-hidden bg-white py-8 sm:py-10 lg:py-14 border-t border-slate-100">
+      <div className="page-container relative">
         <div className="grid grid-cols-1 items-stretch gap-8 lg:grid-cols-12 lg:gap-10 xl:gap-12">
           {/* Left Column: Heading, Subtitle & Checklist */}
           <div className="min-w-0 lg:col-span-7 flex flex-col justify-between">

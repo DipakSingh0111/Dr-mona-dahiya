@@ -89,9 +89,9 @@ export default function ClinicsAppointmentCards({
   return (
     <section
       id={sectionId}
-      className={`relative overflow-hidden bg-white px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12 border-t border-slate-100 ${className}`}
+      className={`relative overflow-hidden bg-white py-8 sm:py-10 lg:py-12 border-t border-slate-100 ${className}`}
     >
-      <div className="relative mx-auto w-full max-w-[1440px]">
+      <div className="page-container relative">
         {(eyebrow || title || subtitle) && (
           <Reveal variant="fadeUp" className="mb-7 sm:mb-8">
             {eyebrow ? (

@@ -108,7 +108,7 @@ export default function Publications() {
 
   return (
     <section
-      className="relative overflow-hidden px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8"
+      className="relative overflow-hidden py-6 sm:py-7 lg:py-8"
       style={{
         background:
           "linear-gradient(90deg, #fff8fb 0%, #fff0f5 42%, #ffe4ee 78%, #ffdce8 100%)",
@@ -124,7 +124,7 @@ export default function Publications() {
         }}
       />
 
-      <div className="relative z-10 mx-auto w-full max-w-[1440px]">
+      <div className="page-container relative z-10">
         <Reveal>
           <header className="mb-7 max-w-none sm:mb-8">
             <p className="text-[13px] font-semibold text-rose sm:text-[14px]">

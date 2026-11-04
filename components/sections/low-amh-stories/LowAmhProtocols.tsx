@@ -1,105 +1,58 @@
 "use client";
 
-import Link from "next/link";
-import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
+import { Stagger, StaggerItem } from "@/components/ui/Reveal";
+import {
+  TreatmentSection,
+  TreatmentSectionHeader,
+  NumberedCard,
+} from "@/components/ui/treatment";
 
-interface ProtocolCard {
-  step: string;
-  title: string;
-  description: string;
-  linkText?: string;
-  linkHref?: string;
-}
-
-const protocols: ProtocolCard[] = [
+const protocols = [
   {
-    step: "1",
-    title: "Priming",
+    number: "1",
+    title: "Priming your body",
     description:
-      "6 to 8 weeks of supplements such as CoQ10 and, where suitable, DHEA before stimulation.",
+      "By taking supplements such as CoQ10, DHEA and more for at least 6 weeks before stimulation, if your body allows it.",
   },
   {
-    step: "2",
-    title: "DuoStim",
+    number: "2",
+    title: "Perform DuoStim",
     description:
-      "Two stimulations and egg collections in one cycle, banking more embryos in half the time.",
+      "By performing DuoStim we can collect more eggs from your ovaries and get you more embryos frozen in less time. Doing two stimulations in one month.",
   },
   {
-    step: "3",
-    title: "Minimal stimulation",
+    number: "3",
+    title: "Mini stimulation cycle",
     description:
-      "Gentle Mini IVF with Letrozole and low-dose injections when high doses have failed.",
-    linkText: "Mini IVF",
-    linkHref: "/treatments",
+      "If your previous stimulations did not allow you to grow many eggs, we can perform milder stimulation with medications such as Letrozole. This allows you to do mini IVF using lower doses of injections.",
   },
   {
-    step: "4",
-    title: "Embryo banking",
+    number: "4",
+    title: "Bank your embryos",
     description:
-      "Freezing embryos over 2 to 3 cycles before a single planned transfer.",
+      "We want to make sure we bank your extra embryos over 2-3 months of cycles so you can have an embryo transfer with good odds of success.",
   },
 ];
 
 export default function LowAmhProtocols() {
   return (
-    <section className="relative overflow-hidden bg-[#f8fafc] px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute top-0 left-[20%] h-[260px] w-[320px] rounded-full opacity-40 blur-3xl"
-        style={{
-          background:
-            "radial-gradient(circle, rgba(0,71,202,0.1) 0%, transparent 70%)",
-        }}
+    <TreatmentSection>
+      <TreatmentSectionHeader
+        eyebrow="How we are different"
+        title="Own-Egg Protocols for Low AMH"
+        subtitle="How do we help you achieve pregnancies with your own eggs when you have low AMH?"
       />
 
-      <div className="relative mx-auto w-full max-w-[1440px]">
-        <Reveal className="max-w-3xl">
-          <span className="text-[12px] font-semibold tracking-wider text-rose uppercase">
-            What makes the difference
-          </span>
-          <h2 className="font-serif mt-1 text-[2rem] leading-[1.18] font-normal tracking-tight text-black sm:text-[2.4rem] lg:text-[2.65rem]">
-            Own-Egg Protocols for Low AMH
-          </h2>
-        </Reveal>
-
-        <Stagger
-          className="mt-7 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4"
-          stagger={0.08}
-        >
-          {protocols.map((card) => (
-            <StaggerItem key={card.step}>
-              <div className="group relative flex h-full flex-col justify-start rounded-2xl border border-slate-200/90 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue/35 hover:shadow-[0_14px_32px_rgba(0,71,202,0.1)]">
-                <div className="relative mb-3 flex items-center gap-3">
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue to-blue-dark text-[15px] font-bold text-white shadow-[0_4px_14px_rgba(0,71,202,0.35)]">
-                    {card.step}
-                  </div>
-                  <h3 className="font-serif text-[17px] font-normal text-black">
-                    {card.title}
-                  </h3>
-                </div>
-
-                <p className="mt-1 text-[13px] leading-relaxed text-black">
-                  {card.linkText && card.linkHref ? (
-                    <>
-                      Gentle{" "}
-                      <Link
-                        href={card.linkHref}
-                        className="font-semibold text-rose underline decoration-rose/40 underline-offset-2 hover:text-rose"
-                      >
-                        {card.linkText}
-                      </Link>{" "}
-                      with Letrozole and low-dose injections when high doses
-                      have failed.
-                    </>
-                  ) : (
-                    card.description
-                  )}
-                </p>
-              </div>
-            </StaggerItem>
-          ))}
-        </Stagger>
-      </div>
-    </section>
+      <Stagger
+        delay={0.05}
+        className="mt-7 grid grid-cols-1 items-stretch gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4"
+      >
+        {protocols.map((item) => (
+          <StaggerItem key={item.number} className="h-full">
+            <NumberedCard {...item} />
+          </StaggerItem>
+        ))}
+      </Stagger>
+    </TreatmentSection>
   );
 }

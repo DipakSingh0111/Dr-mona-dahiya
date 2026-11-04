@@ -32,8 +32,8 @@ export default function IuiDiagnosticTesting() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-white px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-14 border-t border-slate-100">
-      <div className="relative mx-auto w-full max-w-[1440px]">
+    <section className="relative overflow-hidden bg-white py-8 sm:py-10 lg:py-14 border-t border-slate-100">
+      <div className="page-container relative">
         <Reveal variant="fadeUp">
           <span className="text-[12px] font-semibold tracking-wider text-rose uppercase sm:text-[13px]">
             IUI Treatment Plan

@@ -106,9 +106,9 @@ export default function Testimonials() {
   return (
     <section
       id="success-stories"
-      className="relative overflow-hidden bg-white px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8"
+      className="relative overflow-hidden bg-white py-6 sm:py-7 lg:py-8"
     >
-      <div className="mx-auto w-full max-w-[1440px]">
+      <div className="page-container">
         <div className="mb-6 flex flex-col justify-between gap-6 lg:mb-8 lg:flex-row lg:items-start lg:gap-8">
           <Reveal variant="slideLeft" className="min-w-0 shrink-0 lg:max-w-[440px] xl:max-w-[500px]">
             <div className="mb-4 inline-flex max-w-full items-center gap-2.5 sm:gap-3">

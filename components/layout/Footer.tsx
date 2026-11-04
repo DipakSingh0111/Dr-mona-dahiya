@@ -101,7 +101,7 @@ export default function Footer() {
         />
       </div>
 
-      <div className="relative z-10 mx-auto w-full max-w-[1440px] px-4 pt-7 pb-7 sm:px-6 sm:pt-8 lg:px-8 lg:pt-9">
+      <div className="relative z-10 page-container pt-7 pb-7 sm:pt-8 lg:pt-9">
         <Stagger
           className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-12 lg:gap-6"
           stagger={0.08}

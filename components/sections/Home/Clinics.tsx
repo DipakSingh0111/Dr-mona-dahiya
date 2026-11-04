@@ -11,7 +11,7 @@ export default function Clinics() {
     siteData.clinicsSection;
 
   return (
-    <section className="relative overflow-hidden bg-white px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
+    <section className="relative overflow-hidden bg-white py-6 sm:py-7 lg:py-8">
       <div
         aria-hidden
         className="pointer-events-none absolute -top-16 right-0 -z-10 h-[440px] w-[520px] rounded-full"
@@ -21,7 +21,7 @@ export default function Clinics() {
         }}
       />
 
-      <div className="mx-auto w-full max-w-[1440px]">
+      <div className="page-container">
         <div className="mb-6 flex flex-col justify-between gap-5 md:mb-8 md:flex-row md:items-end">
           <div className="shrink-0">
             <div className="mb-3 flex items-center gap-2.5 sm:gap-3">

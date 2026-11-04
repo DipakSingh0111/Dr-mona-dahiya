@@ -31,7 +31,7 @@ export default function GalleryHero() {
         }}
       />
 
-      <div className="relative mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8">
+      <div className="page-container relative">
         <nav aria-label="Breadcrumb" className="mb-5 sm:mb-6">
           <ol className="inline-flex max-w-full flex-wrap items-center gap-1.5 rounded-full border border-rose/25 bg-white px-3 py-1.5 shadow-sm backdrop-blur-md sm:gap-2 sm:px-3.5 sm:py-2">
             <li>

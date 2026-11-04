@@ -47,7 +47,7 @@ const indications: { number: string; title: string; description: ReactNode }[] =
           Spotting slow growth, follicle arrest or luteinised unruptured follicle (LUF).
           See{" "}
           <Link
-            href="/best-pcos-prod-treatment-centre-in-noida"
+            href="/best-pcos-pcod-treatment-centre-in-noida"
             className="font-medium text-blue underline underline-offset-2 hover:text-white"
           >
             PCOS Treatment

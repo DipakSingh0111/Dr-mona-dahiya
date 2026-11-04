@@ -111,7 +111,7 @@ export default function FAQ() {
   }, [openId]);
 
   return (
-    <section className="relative isolate overflow-hidden bg-white px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
+    <section className="relative isolate overflow-hidden bg-white py-6 sm:py-7 lg:py-8">
       <div
         aria-hidden
         className="pointer-events-none absolute -top-24 left-1/2 -z-10 h-[420px] w-[120%] -translate-x-1/2 rounded-full"
@@ -121,7 +121,7 @@ export default function FAQ() {
         }}
       />
 
-      <div className="mx-auto w-full max-w-[1440px]">
+      <div className="page-container">
         <Reveal>
           <header className="mb-7 flex flex-col items-start justify-between gap-4 sm:mb-9 sm:flex-row sm:items-center">
             <div>

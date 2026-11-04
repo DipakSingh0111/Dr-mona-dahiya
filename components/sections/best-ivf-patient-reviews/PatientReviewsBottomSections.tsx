@@ -131,8 +131,8 @@ export default function PatientReviewsBottomSections() {
         subtitle="Dr. Mona sees patients in Noida, Ghaziabad and Delhi, and offers online consultation."
       />
 
-      <section className="px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
-        <div className="mx-auto w-full max-w-[1440px]">
+      <section className="py-6 sm:py-7 lg:py-8">
+        <div className="page-container relative">
           <Reveal className="mb-6">
             <span className="text-[12px] font-semibold tracking-wider text-rose uppercase">
               Keep reading
@@ -168,8 +168,8 @@ export default function PatientReviewsBottomSections() {
         </div>
       </section>
 
-      <section className="px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
-        <div className="mx-auto w-full max-w-[1440px]">
+      <section className="py-6 sm:py-7 lg:py-8">
+        <div className="page-container relative">
           <Reveal className="mb-6">
             <span className="text-[12px] font-semibold tracking-wider text-rose uppercase">
               FAQ

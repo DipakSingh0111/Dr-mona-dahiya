@@ -229,7 +229,7 @@ export default function AboutCredentials() {
   return (
     <section
       id="credentials"
-      className="relative overflow-hidden bg-[#f5f6f8] px-4 py-8 text-ink sm:px-6 sm:py-10 lg:px-8 lg:py-12 border-t border-slate-100"
+      className="relative overflow-hidden bg-[#f5f6f8] py-8 text-ink sm:py-10 lg:py-12 border-t border-slate-100"
     >
       <div
         aria-hidden
@@ -248,7 +248,7 @@ export default function AboutCredentials() {
         }}
       />
 
-      <div className="relative mx-auto w-full max-w-[1440px]">
+      <div className="page-container relative">
         <Reveal>
           <header className="mb-7 sm:mb-8">
             <p className="text-[12px] font-semibold tracking-wider text-rose uppercase sm:text-[13px]">

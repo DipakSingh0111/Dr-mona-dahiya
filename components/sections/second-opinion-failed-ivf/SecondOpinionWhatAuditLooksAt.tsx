@@ -115,8 +115,8 @@ export default function SecondOpinionWhatAuditLooksAt() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-white px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
-      <div className="relative mx-auto w-full max-w-[1440px]">
+    <section className="relative overflow-hidden bg-white py-8 sm:py-10 lg:py-12">
+      <div className="page-container relative">
         <Reveal className="mb-6 sm:mb-8">
           <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
             Root-cause framework

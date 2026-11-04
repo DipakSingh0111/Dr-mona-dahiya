@@ -1,74 +1,140 @@
 "use client";
 
-import {
-  TreatmentSection,
-  TreatmentSectionHeader,
-  FaqAccordion,
-  type FaqItem,
-} from "@/components/ui/treatment";
+import { useState } from "react";
+import { FaChevronDown } from "react-icons/fa";
+import { Reveal } from "@/components/ui/Reveal";
 
-const faqs: FaqItem[] = [
+export default function PgtFaq() {
+  const [openIdx, setOpenIdx] = useState<number | null>(0);
+
+  const faqs = [
     {
-      question: "What is PGT in IVF and how does it work?",
-      answer: "PGT is genetic screening of IVF embryos before transfer. Embryos are grown to the Day 5 or 6 blastocyst stage; 4 to 6 cells are taken from the outer trophectoderm layer by laser biopsy; and the embryos are frozen while the cells are analyzed by Next-Generation Sequencing. Only embryos reported as chromosomally normal (euploid) are then thawed and transferred.",
+      q: "What is PGT in IVF and how does it work?",
+      a: "As mentioned above we biopsy embryos formed during your IVF cycle and test them by NGS. This helps us know which of your embryos are Normal (Euploid) and which are Abnormal (Aneuploid). You can then choose to do FET of only Euploid embryos.",
     },
     {
-      question: "What is the difference between PGT-A, PGT-M, and PGT-SR?",
-      answer: "PGT-A checks for overall numerical chromosome errors (such as Down syndrome). PGT-M targets specific single-gene genetic disorders passed down from carrier parents (such as Thalassemia or Cystic Fibrosis). PGT-SR detects structural chromosome rearrangements in parents with balanced translocations.",
+      q: "What is the difference between PGT-A, PGT-M, and PGT-SR?",
+      a: "PGT-A is used to check if embryo is chromosomally normal or not. PGT-M is used to find if embryo has a genetic mutation that can lead to single gene disorder. And PGT-SR is used to check if there is any translocation in the embryos.",
     },
     {
-      question: "What is the cost of PGT testing in Delhi NCR?",
-      answer: "The total depends on the IVF/ICSI cycle, the laser biopsy fee, the number of embryos sent for NGS testing (billed per embryo), custom probe design for PGT-M, freezing and storage, and the later frozen embryo transfer. Dr. Mona Dahiya gives an itemized estimate after your consultation.",
+      q: "What is the cost of PGT testing in Delhi NCR?",
+      a: "You can expect to pay for IVF cycle + biopsy cost + genetics lab. (Depends on number of embryos sent). If you want to do PGT-M there is a charge to design probes. Then you will pay for your Embryo Freezing cost + Frozen Embryo transfer. We will let you know after consulting with you.",
     },
     {
-      question: "Does laser biopsy during PGT damage the developing embryo?",
-      answer: "When performed by an experienced embryologist at the Day 5/6 blastocyst stage, PGT biopsy carries a damage risk of under 1%. The biopsy takes only 4 to 6 cells strictly from the outer trophectoderm layer (which forms the placenta), leaving the inner cell mass (which forms the fetus) untouched.",
+      q: "Does laser biopsy during PGT damage the developing embryo?",
+      a: "As we only pick 4-6 cells from the outside of the embryo (which will later become your placenta) it has less than 1% chance of harming the embryo. Most embryo survive after biopsy as well.",
     },
     {
-      question: "Can PGT guarantee a 100% successful pregnancy?",
-      answer: "While PGT cannot guarantee a 100% live birth rate, transferring a confirmed chromosomally normal (euploid) embryo increases clinical pregnancy rates to 65%–70% per transfer and reduces miscarriage rates from 30%+ down to below 8%–10%.",
+      q: "Can PGT guarantee a 100% successful pregnancy?",
+      a: "Though it cannot guarantee you will get a 100% success rate. But it increases your chances of pregnancy from normal IVF to 65-70%. It also decreases your chances of miscarriage from 30% to less than 8-10%.",
     },
     {
-      question: "Can PGT test for autism, gender, or all genetic diseases?",
-      answer: "No. PGT-A looks at chromosome numbers; PGT-M looks only for the specific gene change already known in the family; and PGT-SR looks for a known parental rearrangement. It cannot screen for autism or every possible disease. Sex selection is prohibited in India under the PC-PNDT Act, and the embryo's sex is never disclosed.",
+      q: "Can PGT test for autism, gender, or all genetic diseases?",
+      a: "No you cannot. PGT-A will only tell you if you have normal number of chromosomes. PGT-M will only test for that particular mutation. It won't test for all diseases. Also in India it is illegal to know gender of the embryo. We will never disclose the gender.",
     },
     {
-      question: "How long does it take to get PGT genetic test results?",
-      answer: "Following biopsy and vitrification, Next-Generation Sequencing (NGS) analysis typically takes 2 to 3 weeks. During this window, the patient's uterine lining rests and recovers, setting up an optimal frozen embryo transfer (FET) in the subsequent menstrual cycle.",
+      q: "How long does it take to get PGT genetic test results?",
+      a: "It takes around 2 to 3 weeks for us to receive your embryo results from genetics. During this time your uterus will heal and you can do Frozen Embryo transfer next cycle.",
     },
     {
-      question: "What is an embryo mosaicism result in PGT-A?",
-      answer: "A mosaic embryo contains a mixture of normal and abnormal cells. Depending on the percentage and specific chromosome involved (low-level vs. high-level mosaic), some mosaic embryos can self-correct, implant successfully, and result in completely healthy live births. Dr. Mona Dahiya provides thorough genetic counseling regarding mosaic transfer protocols.",
+      q: "What is an embryo mosaicism result in PGT-A?",
+      a: "Some embryos will be normal and some can have few cells that are abnormal. If they have low percentage of cells that are abnormal then they can self correct. And lead to healthy babies. We will discuss in detail with you what options you have with Mosaic Embryos.",
     },
     {
-      question: "Can you do PGT testing on already frozen embryos?",
-      answer: "Yes. Previously frozen embryos that were not biopsied can be thawed, biopsied and re-frozen while the results are awaited. Survival after this second vitrification is high in an experienced laboratory, though slightly lower than for embryos biopsied before their first freeze.",
+      q: "Can you do PGT testing on already frozen embryos?",
+      a: "Yes if you have previously done IVF and your embryos weren't biopsied. Then we can thaw them and biopsy them and wait for results. Though the chance of your embryo surviving is lesser than those biopsied before freezing.",
     },
     {
-      question: "Does PGT-A prevent miscarriages?",
-      answer: "It reduces miscarriages caused by embryo chromosome errors, the most common cause of early pregnancy loss. Transferring a euploid embryo lowers the miscarriage rate to below 8%–10%. It does not treat uterine, hormonal, clotting or immune causes, which Dr. Mona Dahiya checks separately.",
+      q: "Does PGT-A prevent miscarriages?",
+      a: "Yes it can reduce your chance of miscarriages due to chromosomal errors. As most miscarriages happen because of this reason. But we will also evaluate you for other causes that can lead to miscarriage.",
     },
     {
-      question: "Is PGT testing worth it for women under 35?",
-      answer: "Not for everyone. Younger women have fewer chromosomally abnormal embryos, so routine PGT-A adds less benefit. It is still worth considering under 35 with recurrent miscarriage, repeated implantation failure, a known genetic disorder or translocation, severe male factor, or when a single embryo transfer is planned.",
+      q: "Is PGT testing worth it for women under 35?",
+      a: "If you don't have any problem and are young. Then we don't advise doing PGT. Because there will be less abnormal embryos anyway. But if you have had failed implantations, miscarriages, know that you are carrier for any disease or have male factor infertility. Then yes it can help.",
     },
     {
-      question: "Where does Dr. Mona Dahiya offer PGT?",
-      answer: "3 centres: Noida (3rd Floor, K-06, above FirstCry, Baraula, Sector 49, Noida, UP 201301), Ghaziabad (2nd Floor, RDC, C-53A, near Bikanerwala, Sector 15, Sector 10, Raj Nagar, Ghaziabad, UP 201002) and Delhi (Building Number 41, First Floor, Ring Road, Block Q, Lajpat Nagar IV, Lajpat Nagar, New Delhi 110024). Clinic hours are 10:00 AM to 5:00 PM, with online consultations also available.",
+      q: "Where does Dr. Mona Dahiya offer PGT?",
+      a: "We do PGT at our clinics located in Noida 3rd floor, K-06 above FirstCry, Baraula, Sector 49, Noida, Uttar Pradesh - 201301, Ghaziabad 2nd Floor, RDC, C-53A near Bikanerwala, Sector 15, Sector 10 Raj Nagar, Ghaziabad, Uttar Pradesh - 201002 and Delhi Building No- 41, 1st Floor, Ring Road, Block Q, Lajpat Nagar IV, Lajpat Nagar, New Delhi - 110024. Mon- Sat from 10am - 5pm. We also do online consultation.",
     },
   ];
 
-const leftFaqs = faqs.filter((_, i) => i % 2 === 0);
-const rightFaqs = faqs.filter((_, i) => i % 2 !== 0);
+  const leftFaqs = faqs.slice(0, 6);
+  const rightFaqs = faqs.slice(6, 12);
 
-export default function PgtFaq() {
+  const toggleFaq = (idx: number) => {
+    setOpenIdx(openIdx === idx ? null : idx);
+  };
+
+  const renderCard = (faq: { q: string; a: string }, originalIdx: number) => {
+    const isOpen = openIdx === originalIdx;
+    return (
+      <div
+        key={originalIdx}
+        className={`group rounded-[18px] border transition-all duration-300 ${
+          isOpen
+            ? "border-rose/40 bg-white shadow-[0_8px_24px_rgba(232,62,116,0.08)]"
+            : "border-[#fde2ec] bg-white hover:border-rose/30 hover:shadow-sm"
+        }`}
+      >
+        <button
+          type="button"
+          onClick={() => toggleFaq(originalIdx)}
+          className="flex w-full items-start justify-between gap-4 p-5 text-left sm:p-6"
+          aria-expanded={isOpen}
+        >
+          <span className="text-[14.5px] font-bold text-ink transition-colors group-hover:text-rose sm:text-[15.5px]">
+            {faq.q}
+          </span>
+          <span
+            className={`inline-flex size-7 shrink-0 items-center justify-center rounded-full transition-transform duration-300 ${
+              isOpen
+                ? "rotate-180 bg-rose text-white"
+                : "bg-rose/10 text-rose group-hover:bg-rose/20"
+            }`}
+          >
+            <FaChevronDown className="size-3" />
+          </span>
+        </button>
+
+        <div
+          className={`grid transition-[grid-template-rows] duration-300 ease-out ${
+            isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+          }`}
+        >
+          <div className="overflow-hidden">
+            <div className="px-5 pb-5 pt-0 text-[13px] leading-relaxed text-ink/75 sm:px-6 sm:pb-6 sm:text-[13.5px]">
+              {faq.a}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   return (
-    <TreatmentSection>
-      <TreatmentSectionHeader
-        eyebrow="Patient questions"
-        title="Top FAQs About PGT in Delhi | Noida | Ghaziabad"
-      />
-      <FaqAccordion leftItems={leftFaqs} rightItems={rightFaqs} />
-    </TreatmentSection>
+    <section
+      className="relative overflow-hidden py-8 sm:py-10 lg:py-12"
+      style={{ background: "var(--pink)" }}
+    >
+      <div className="page-container relative">
+        <Reveal className="mb-6 sm:mb-8">
+          <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
+            Questions Patients Ask Us
+          </p>
+          <h2 className="font-serif mt-1 text-[1.65rem] leading-[1.2] font-normal tracking-tight text-ink sm:text-[2.1rem] lg:text-[2.35rem]">
+            Top FAQs About PGT in Delhi | Noida | Ghaziabad
+          </h2>
+        </Reveal>
+
+        <div className="grid grid-cols-1 items-start gap-4 lg:grid-cols-2">
+          <div className="flex flex-col gap-4">
+            {leftFaqs.map((faq, i) => renderCard(faq, i))}
+          </div>
+          <div className="flex flex-col gap-4">
+            {rightFaqs.map((faq, i) => renderCard(faq, i + 6))}
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }

@@ -1,161 +1,135 @@
 "use client";
 
+import type { ReactNode } from "react";
 import Link from "next/link";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 import {
   TreatmentSection,
   TreatmentSectionHeader,
   NumberedCard,
-  ChecklistRow
+  ChecklistRow,
 } from "@/components/ui/treatment";
-interface IndicationCard {
-  number: string;
-  title: string;
-  description: React.ReactNode;
-}
 
-const indications: IndicationCard[] = [
-  {
-    number: "1",
-    title: "2 or more miscarriages",
-    description: "Early pregnancy losses before 20 weeks.",
-  },
-  {
-    number: "2",
-    title: "Unexplained early loss",
-    description: "A blighted ovum or loss of heartbeat after earlier positive scans.",
-  },
-  {
-    number: "3",
-    title: "Age over 35 with losses",
-    description: "Repeated miscarriages linked to age-related chromosomal errors.",
-  },
-  {
-    number: "4",
-    title: "Failed implantation with early losses",
-    description: (
-      <span>
-        Biochemical pregnancies and early losses. See{" "}
-        <Link
-          href="/recurrent-implantation-failure-rif"
-          className="text-rose underline hover:text-white transition-colors"
-        >
-          Recurrent Implantation Failure
-        </Link>
-      </span>
-    ),
-  },
-  {
-    number: "5",
-    title: "Known autoimmune or clotting history",
-    description: "Lupus (SLE) or a past deep vein thrombosis.",
-  },
-];
+const indications: { number: string; title: string; description: ReactNode }[] =
+  [
+    {
+      number: "1",
+      title: "2 or more miscarriages",
+      description: "If you have lost a pregnancy before 20 weeks twice.",
+    },
+    {
+      number: "2",
+      title: "Loss of heartbeat after early scan",
+      description: "Blighted ovum or loss of heart beat in subsequent scan.",
+    },
+    {
+      number: "3",
+      title: "Over 35 years of age",
+      description:
+        "Recurrent miscarriages due to chromosomal abnormality of fetus.",
+    },
+    {
+      number: "4",
+      title: "Failures of implantation with early miscarriages",
+      description: (
+        <>
+          Biochemical pregnancies or early pregnancy losses. Read more on{" "}
+          <Link
+            href="/recurrent-implantation-failure-rif"
+            className="font-medium text-blue underline underline-offset-2 hover:text-blue-dark"
+          >
+            Recurrent Implantation Failures
+          </Link>
+          .
+        </>
+      ),
+    },
+    {
+      number: "5",
+      title:
+        "Previous history of clotting disorder or Autoimmune disease",
+      description:
+        "Systemic lupus erythematosus or previous Deep Vein Thrombosis.",
+    },
+  ];
 
-interface ChecklistItem {
-  text: React.ReactNode;
-}
-
-const checklistItems: ChecklistItem[] = [
-  {
-    text: (
-      <span>
-        Karyotype of both partners to find balanced or Robertsonian translocations.
-      </span>
-    ),
-  },
-  {
-    text: (
-      <span>
-        Uterine imaging: 3D saline sonography or{" "}
-        <Link
-          href="/hysteroscopy-treatment"
-          className="text-rose underline hover:text-white transition-colors"
-        >
-          Hysteroscopy
-        </Link>{" "}
-        for septum, fibroids, polyps or adhesions.
-      </span>
-    ),
-  },
-  {
-    text: (
-      <span>
-        Antiphospholipid and thrombophilia panel: lupus anticoagulant, anti-cardiolipin, anti-β2-glycoprotein I, protein C and S, and Factor V Leiden.
-      </span>
-    ),
-  },
-  {
-    text: (
-      <span>
-        Hormonal and metabolic screen: TSH, anti-TPO, HbA1c, prolactin and luteal progesterone.
-      </span>
-    ),
-  },
-  {
-    text: (
-      <span>
-        Partner&apos;s{" "}
-        <Link
-          href="/sperm-dna-fragmentation-test"
-          className="text-rose underline hover:text-white transition-colors"
-        >
-          Sperm DNA Fragmentation Test
-        </Link>{" "}
-        to check the sperm contribution.
-      </span>
-    ),
-  },
+const checklist: ReactNode[] = [
+  <>
+    Both partners are sent for <strong>Karyotyping</strong> to see if there is a
+    Balanced or Robertsonian Translocation.
+  </>,
+  <>
+    Uterine evaluation: <strong>3D Saline Sonogram</strong> or{" "}
+    <Link
+      href="/hysteroscopy-treatment"
+      className="font-medium text-blue underline underline-offset-2 hover:text-blue-dark"
+    >
+      Diagnostic Hysteroscopy
+    </Link>{" "}
+    to identify any Septum, Fibroid, Polyp or Adhesions.
+  </>,
+  <>
+    Blood work for Clotting:{" "}
+    <strong>
+      Antiphospholipid profile, Lupus Anticoagulant, Anti-cardiolipin Antibody,
+      Anti-Beta2 glycoprotein-1, Protein C &amp; S Deficiency, Factor V Leiden.
+    </strong>
+  </>,
+  <>
+    Profile for Thyroid and Diabetes:{" "}
+    <strong>
+      TSH, Anti-TPO antibodies, HbA1c, Prolactin and Progesterone levels in
+      luteal phase.
+    </strong>
+  </>,
+  <>
+    Send partner for a{" "}
+    <Link
+      href="/sperm-dna-fragmentation-test"
+      className="font-medium text-blue underline underline-offset-2 hover:text-blue-dark"
+    >
+      Sperm DNA Fragmentation Test
+    </Link>{" "}
+    to evaluate contribution from male.
+  </>,
 ];
 
 export default function RecurrentMiscarriageIndicationsAndChecklist() {
   return (
     <TreatmentSection>
-        {/* ================= SECTION 1: Indications ================= */}
-        <div className="mb-14 sm:mb-16 lg:mb-20">
-          <TreatmentSectionHeader
-          eyebrow="Clinical breakdown"
-          title={<>Indications: Who Needs a
-              <br className="hidden sm:inline" /> Recurrent Miscarriage Evaluation?</>}
+      <div className="mb-14 sm:mb-16 lg:mb-20">
+        <TreatmentSectionHeader
+          eyebrow="Know more about this condition"
+          title="Causes of Recurrent Miscarriage : When do you need an evaluation?"
         />
 
-          {/* Row 1: 3 Cards */}
-          <Stagger delay={0.05} className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-5">
-            {indications.slice(0, 3).map((item, idx) => (
-              <StaggerItem key={idx}>
-                <NumberedCard {...item} />
-              </StaggerItem>
-            ))}
-          </Stagger>
+        <Stagger
+          delay={0.05}
+          className="mt-7 grid grid-cols-1 items-stretch gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
+        >
+          {indications.map((item) => (
+            <StaggerItem key={item.number} className="h-full">
+              <NumberedCard {...item} />
+            </StaggerItem>
+          ))}
+        </Stagger>
+      </div>
 
-          {/* Row 2: 2 Cards (centered or 2-col) */}
-          <Stagger delay={0.05} className="mt-4 sm:mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-2 sm:gap-5 max-w-4xl">
-            {indications.slice(3, 5).map((item, idx) => (
-              <StaggerItem key={idx}>
-                <NumberedCard {...item} />
-              </StaggerItem>
-            ))}
-          </Stagger>
-        </div>
-
-        {/* ================= SECTION 2: Diagnostic Checklist: The 5-Pillar Investigation ================= */}
-        <div>
-          <TreatmentSectionHeader
-          eyebrow="Before treatment"
-          title="Diagnostic Checklist: The 5-Pillar Investigation"
-          subtitle="Five groups of tests look for every treatable cause."
+      <div>
+        <TreatmentSectionHeader
+          eyebrow="Evaluation"
+          title="Tests we perform : 5 Pillar Investigation for Recurrent Miscarriage"
+          subtitle="We investigate under 5 heads to rule out all correctable causes of miscarriage."
         />
 
-          {/* Checklist Full-Width Bars */}
-          <div className="mt-6 flex flex-col gap-3 sm:mt-7 sm:gap-3.5">
-            {checklistItems.map((item, idx) => (
-              <Reveal key={idx} variant="fadeUp" delay={idx * 0.04}>
-              <ChecklistRow>{item.text}</ChecklistRow>
+        <div className="mt-6 flex flex-col gap-3.5 sm:mt-7 sm:gap-4">
+          {checklist.map((item, idx) => (
+            <Reveal key={idx} variant="fadeUp" delay={idx * 0.04}>
+              <ChecklistRow>{item}</ChecklistRow>
             </Reveal>
-            ))}
-          </div>
+          ))}
         </div>
-      </TreatmentSection>
+      </div>
+    </TreatmentSection>
   );
 }
-

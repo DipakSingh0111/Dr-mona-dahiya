@@ -143,7 +143,7 @@ export default function Hero() {
         style={{ background: activeVeil }}
       />
 
-      <div className="hero-content relative z-20 mx-auto flex w-full max-w-[1440px] flex-1 items-center px-4 pt-5 pb-7 sm:px-6 lg:px-8">
+      <div className="page-container hero-content relative z-20 flex flex-1 items-center pt-5 pb-7">
         <div className="hero-copy flex w-full max-w-[430px] flex-col gap-4.5 sm:max-w-[460px] xl:max-w-[490px] xl:gap-5">
           <HeroReveal key={`eyebrow-${activeSlide}`} delay={0.05}>
             <p className="hero-eyebrow text-[12.5px] font-semibold tracking-[0.14em] text-white/90 uppercase transition-all duration-500 sm:text-[13.5px] sm:tracking-[0.16em] lg:text-[14px] xl:text-[15px] xl:tracking-[0.18em]">

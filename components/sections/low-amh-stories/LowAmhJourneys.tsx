@@ -1,113 +1,94 @@
 "use client";
 
-import Link from "next/link";
-import { FaQuoteLeft } from "react-icons/fa";
-import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
+import { Stagger, StaggerItem } from "@/components/ui/Reveal";
+import {
+  TreatmentSection,
+  TreatmentSectionHeader,
+  NumberedCard,
+} from "@/components/ui/treatment";
 
-interface JourneyReview {
-  title?: string;
-  body: string;
-  author: string;
-  source: string;
-  avatarLetter: string;
-}
-
-const reviews: JourneyReview[] = [
+const stories = [
   {
-    body: "We are immensely grateful to Dr. Mona Dahiya for her expertise in treating my wife's infertility due to low AMH levels. Despite the challenges, Dr. Mona guided us through the IVF process with remarkable care and precision. Thanks to her, we achieved success. She truly is the best doctor for IVF with low AMH in India. 🙏 1",
-    author: "Ashok Yadav",
-    source: "Google patient review",
-    avatarLetter: "A",
+    number: "1",
+    title:
+      "Was Advised Donor Eggs but Got Pregnant With Own Egg with 0.35 AMH",
+    description:
+      "Her doctor informed her that with such a low AMH level of 0.35 she has no chance to get pregnant with her own egg. So she contacted Dr. Mona Dahiya for a second opinion. Based on her current status, Dr. Mona created a custom protocol for ovarian stimulation. The woman got pregnant with her first try and is now the proud mother of her little baby girl.",
   },
   {
-    body: "After 3 years of trying to conceive naturally my wife was diagnosed with diminished ovarian reserve (DOR) and low AMH levels. Our journey was emotionally challenging but Dr. Mona Dahiya sorted it for us. With her guidance, we decided to ... More 🙏 1",
-    author: "Ganesh Kumar",
-    source: "Google patient review",
-    avatarLetter: "G",
+    number: "2",
+    title: "Got Pregnant With Baby Boy With Low AMH of 0.18",
+    description:
+      "Sharmila thought there were almost no chances of her getting pregnant with her own egg as her AMH levels were really low of 0.18. Dr. Mona Dahiya suggested an ovarian priming protocol of taking DHEA and right nutrition. This protocol was able to produce enough good quality eggs for embryo transfer which resulted in a healthy pregnancy and baby boy.",
   },
   {
-    title: "Tailored Treatment Plan",
-    body: "Facing IVF with low AMH was daunting, but Dr. Mona Dahiya's tailored treatment plan worked wonders. Her unwavering support and positivity helped us achieve a successful pregnancy. She truly is the best IVF doctor.",
-    author: "Vikram Gupta",
-    source: "Patient review",
-    avatarLetter: "V",
+    number: "3",
+    title: "Got Pregnant Through Mild Stimulation At the Age of 32 with 0.40 AMH",
+    description:
+      "She had her AMH done and it was at 0.40 at the age of 32 which was very low. If you have low AMH levels you want to stimulate less because if you stimulate high you will get lower quality eggs. Dr. Mona stimulated mild for Archana and she had a beautiful baby girl.",
+  },
+  {
+    number: "4",
+    title: "Got Pregnant on a Modified Natural Cycle With AMH of 0.12",
+    description:
+      "After trying multiple IVF cycles Vandana sought help from Dr. Mona Dahiya. Dr. Mona decided to perform a modified natural cycle by lowering her medication dosages. She retrieved her one dominant best egg which matured into an embryo and gave birth to a baby boy.",
+  },
+  {
+    number: "5",
+    title: "Became Biological Mother With Low AMH of 0.28",
+    description:
+      "She thought there was no way she could have her own child due to her low AMH levels and amount of antral follicles. Dr. Mona didn't jump right into egg retrieval. She worked to raise her AMH levels for a few weeks and allowed her follicles to grow to become a blastocyst. She became the mother of a baby girl.",
+  },
+  {
+    number: "6",
+    title: "Gave Birth To A Baby Boy With AMH of 38 Weeks",
+    description:
+      "Due to her age and low ovarian reserve she felt hopeless. Dr. Mona helped her along with her low AMH Protocol and allowed her to have healthy embryos. She successfully gave birth to a healthy baby boy.",
+  },
+  {
+    number: "7",
+    title: "Got Pregnant From 1 Good Egg With Low AMH",
+    description:
+      "After seeing that she only had 2 follicles she panicked. Dr. Mona reassured her and said sometimes all you need is 1 good quality egg. She received one egg that grew to be an embryo and she is now the mom of a beautiful baby girl.",
+  },
+  {
+    number: "8",
+    title: "Had A Healthy Pregnancy With AMH of 0.19 After Cyst Surgery",
+    description:
+      "After having her bilateral cysts removed her AMH dropped down to 0.19. Dr. Mona decided to keep her dose of medication low and focus on growing healthy follicles. After her second attempt of transferring an embryo she became pregnant with a healthy baby.",
+  },
+  {
+    number: "9",
+    title: "Did Not Have To Use Donor Eggs With Low AMH Levels",
+    description:
+      "Others had advised her to go with donor eggs or adopt but she wanted to try with her own egg. Dr. Mona was able to get her pregnant on her last try of becoming biologically pregnant with her baby.",
+  },
+  {
+    number: "10",
+    title: "Conceived A Baby Boy With Low AMH Levels of 0.14",
+    description:
+      "Ritu and Sunil tried various doctors but were unsuccessful. They decided to try Dr. Mona Dahiya and with the help of her daily injections of hormones she was able to find the perfect day to give the trigger shot for when the eggs would mature. Later on, Ritu and Sunil gave birth to a baby boy.",
   },
 ];
 
 export default function LowAmhJourneys() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#fff8fb] via-white to-[#fff5f8] px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -top-20 right-[12%] h-[280px] w-[280px] rounded-full opacity-50 blur-3xl"
-        style={{
-          background:
-            "radial-gradient(circle, rgba(232,62,116,0.14) 0%, transparent 70%)",
-        }}
+    <TreatmentSection>
+      <TreatmentSectionHeader
+        eyebrow="Below are some success stories from our patients"
+        title="Patient Success Stories"
       />
 
-      <div className="relative mx-auto w-full max-w-[1440px]">
-        <Reveal className="max-w-3xl">
-          <span className="text-[12px] font-semibold tracking-wider text-rose uppercase">
-            Patient stories
-          </span>
-          <h2 className="font-serif mt-1 text-[2rem] leading-[1.18] font-normal tracking-tight text-black sm:text-[2.4rem] lg:text-[2.65rem]">
-            Low AMH Journeys in
-            <br />
-            Patients&apos; Own Words
-          </h2>
-          <p className="mt-2 text-[14px] leading-relaxed text-black sm:text-[15px]">
-            Reviews from women who were treated for low ovarian reserve by Dr.
-            Mona Dahiya.
-          </p>
-        </Reveal>
-
-        <Stagger
-          className="mt-7 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3"
-          stagger={0.08}
-        >
-          {reviews.map((rev, idx) => (
-            <StaggerItem key={idx}>
-              <div className="group flex h-full flex-col justify-between rounded-2xl border border-[#f5c9d6]/70 bg-white p-6 shadow-[0_8px_28px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-rose/40 hover:shadow-[0_14px_36px_rgba(232,62,116,0.12)]">
-                <div>
-                  <div className="mb-3 text-rose/50">
-                    <FaQuoteLeft className="h-4 w-4" />
-                  </div>
-                  {rev.title ? (
-                    <h3 className="font-serif mb-2 text-[18px] font-normal text-black">
-                      {rev.title}
-                    </h3>
-                  ) : null}
-                  <p className="text-[13.5px] leading-relaxed text-black">
-                    {rev.body}
-                  </p>
-                </div>
-
-                <div className="mt-6 flex items-center gap-3 border-t border-[#fde2ec] pt-4">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-rose text-[15px] font-bold text-white shadow-md">
-                    {rev.avatarLetter}
-                  </div>
-                  <div>
-                    <p className="text-[14px] font-bold text-black">
-                      {rev.author}
-                    </p>
-                    <p className="text-[11.5px] text-black">{rev.source}</p>
-                  </div>
-                </div>
-              </div>
-            </StaggerItem>
-          ))}
-        </Stagger>
-
-        <div className="mt-7">
-          <Link
-            href="/about-mona-dahiya#reviews"
-            className="inline-flex items-center justify-center rounded-full border border-rose/40 bg-white px-6 py-2.5 text-[13px] font-semibold text-black transition-all duration-200 hover:border-rose hover:bg-rose-dark hover:text-white hover:shadow-lg active:scale-95"
-          >
-            Read All Patient Reviews
-          </Link>
-        </div>
-      </div>
-    </section>
+      <Stagger
+        delay={0.05}
+        className="mt-7 grid grid-cols-1 items-stretch gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
+      >
+        {stories.map((story) => (
+          <StaggerItem key={story.number} className="h-full">
+            <NumberedCard {...story} />
+          </StaggerItem>
+        ))}
+      </Stagger>
+    </TreatmentSection>
   );
 }

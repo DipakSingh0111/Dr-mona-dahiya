@@ -15,7 +15,7 @@ const conditions = [
       <>
         Letrozole-based ovulation induction and OHSS-safe protocols. See{" "}
         <Link
-          href="/best-pcos-prod-treatment-centre-in-noida"
+          href="/best-pcos-pcod-treatment-centre-in-noida"
           className="font-medium text-blue underline underline-offset-2 hover:text-white"
         >
           PCOS Treatment

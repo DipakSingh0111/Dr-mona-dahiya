@@ -39,7 +39,7 @@ export default function LocationsHero({ query, onQueryChange }: Props) {
         }}
       />
 
-      <div className="relative mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8">
+      <div className="page-container relative">
         <nav
           aria-label="Breadcrumb"
           className="mb-6 flex items-center gap-2 text-xs font-medium sm:mb-8 sm:text-[13px]"

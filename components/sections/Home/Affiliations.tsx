@@ -9,8 +9,8 @@ export default function Affiliations() {
   const data = siteData.affiliations;
 
   return (
-    <section className="relative overflow-hidden bg-white px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
-      <div className="mx-auto w-full max-w-[1440px]">
+    <section className="relative overflow-hidden bg-white py-6 sm:py-7 lg:py-8">
+      <div className="page-container">
         <Reveal>
           <div className="mb-6 flex flex-col gap-3 sm:mb-7 lg:mb-8 lg:flex-row lg:items-end lg:justify-between lg:gap-6">
             <div className="shrink-0">

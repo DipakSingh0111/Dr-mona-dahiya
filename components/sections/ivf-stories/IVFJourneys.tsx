@@ -69,7 +69,7 @@ const reviews: JourneyReview[] = [
 
 export default function IVFJourneys() {
   return (
-    <section className="relative overflow-hidden bg-slate-50/70 px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
+    <section className="relative overflow-hidden bg-slate-50/70 py-6 sm:py-7 lg:py-8">
       <div
         aria-hidden
         className="pointer-events-none absolute -top-24 right-1/4 h-[340px] w-[460px] rounded-full opacity-40 blur-3xl"
@@ -79,7 +79,7 @@ export default function IVFJourneys() {
         }}
       />
 
-      <div className="relative mx-auto w-full max-w-[1440px]">
+      <div className="page-container relative">
         <Reveal className="mb-8 sm:mb-10">
           <span className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
             Patient stories

@@ -1,8 +1,13 @@
 "use client";
 
-import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
+import {
+  TreatmentSection,
+  TreatmentSectionHeader,
+  FaqAccordion,
+  type FaqItem,
+} from "@/components/ui/treatment";
 
-const leftFaqs = [
+const leftFaqs: FaqItem[] = [
   {
     question: "How do I choose the right IVF doctor in Delhi?",
     answer:
@@ -40,7 +45,7 @@ const leftFaqs = [
   },
 ];
 
-const rightFaqs = [
+const rightFaqs: FaqItem[] = [
   {
     question: "How successful is IVF with Dr. Mona Dahiya?",
     answer:
@@ -62,7 +67,8 @@ const rightFaqs = [
       "We are located at Building No. 41, 1st floor, Ring Road, Block Q Lajpat Nagar IV, Lajpat Nagar, New Delhi - 110024. You can take an online consultation to check your reports.",
   },
   {
-    question: "Which Delhi IVF clinic has the highest take-home baby success rate?",
+    question:
+      "Which Delhi IVF clinic has the highest take-home baby success rate?",
     answer:
       "Always ask the clinic about their live birth rates divided into 3 age groups i.e. <35, 35-39 and >40. Dr. Mona Dahiya's IVF success rates are greater than 90%. We can tell you more about it when you come for your first visit.",
   },
@@ -72,7 +78,8 @@ const rightFaqs = [
       "Look for a full time embryologist. Read some patient reviews. Dr. Mona Dahiya has a rating of 4.9 on Google. Check if they have an in-house diagnostic lab and proper plan is given to you before starting.",
   },
   {
-    question: "Does the location of the clinic matter during an IVF cycle in Delhi?",
+    question:
+      "Does the location of the clinic matter during an IVF cycle in Delhi?",
     answer:
       "Yes, there are multiple visits required in one IVF cycle. Around 4-6 times in 10-12 days you have to come for scans and bloods. So make sure the clinic is close to you but don't compromise with the quality of the lab.",
   },
@@ -80,49 +87,13 @@ const rightFaqs = [
 
 export default function BestIvfDelhiFAQ() {
   return (
-    <section className="relative overflow-hidden bg-pink px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
-      <div className="mx-auto w-full max-w-[1440px]">
-        <Reveal variant="fadeUp">
-          <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">
-            FAQ&apos;s
-          </p>
-          <h2 className="font-serif mt-1 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-black sm:text-[2.2rem] lg:text-[2.45rem]">
-            Top FAQs About fertility Treatment in Delhi
-          </h2>
-        </Reveal>
+    <TreatmentSection>
+      <TreatmentSectionHeader
+        eyebrow="FAQ's"
+        title="Top FAQs About fertility Treatment in Delhi"
+      />
 
-        <div className="mt-7 grid grid-cols-1 gap-4 md:grid-cols-2 lg:gap-5">
-          <Stagger className="flex flex-col gap-4" stagger={0.05}>
-            {leftFaqs.map((faq) => (
-              <StaggerItem key={faq.question}>
-                <div className="rounded-2xl border border-[#fde2ec] bg-white p-5 backdrop-blur-md transition-all duration-200 hover:border-blue/40 hover:bg-[#fff0f5] sm:p-6">
-                  <h3 className="font-serif text-[1rem] font-semibold leading-snug text-black sm:text-[1.08rem]">
-                    {faq.question}
-                  </h3>
-                  <p className="mt-2.5 text-[13px] leading-relaxed text-black sm:text-[13.5px]">
-                    {faq.answer}
-                  </p>
-                </div>
-              </StaggerItem>
-            ))}
-          </Stagger>
-
-          <Stagger className="flex flex-col gap-4" stagger={0.05}>
-            {rightFaqs.map((faq) => (
-              <StaggerItem key={faq.question}>
-                <div className="rounded-2xl border border-[#fde2ec] bg-white p-5 backdrop-blur-md transition-all duration-200 hover:border-blue/40 hover:bg-[#fff0f5] sm:p-6">
-                  <h3 className="font-serif text-[1rem] font-semibold leading-snug text-black sm:text-[1.08rem]">
-                    {faq.question}
-                  </h3>
-                  <p className="mt-2.5 text-[13px] leading-relaxed text-black sm:text-[13.5px]">
-                    {faq.answer}
-                  </p>
-                </div>
-              </StaggerItem>
-            ))}
-          </Stagger>
-        </div>
-      </div>
-    </section>
+      <FaqAccordion leftItems={leftFaqs} rightItems={rightFaqs} />
+    </TreatmentSection>
   );
 }

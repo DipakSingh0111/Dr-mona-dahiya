@@ -4,8 +4,8 @@ import { FaCalendarAlt, FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
 
 export default function BestIvfDelhiParenthoodCta() {
   return (
-    <section className="relative overflow-hidden bg-pink px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
-      <div className="relative z-10 mx-auto w-full max-w-[1440px]">
+    <section className="relative overflow-hidden bg-pink py-6 sm:py-7 lg:py-8">
+      <div className="page-container relative z-10">
         <div className="flex flex-col items-start justify-between gap-7 rounded-[24px] bg-blue px-5 py-6 shadow-[0_12px_36px_rgba(0,71,202,0.28)] sm:px-7 sm:py-7 lg:flex-row lg:items-center lg:gap-10 lg:px-8">
           <h2 className="font-display max-w-[36rem] text-[1.75rem] leading-[1.28] font-medium tracking-tight text-white sm:text-[2.15rem] lg:text-[2.35rem]">
             <span className="block">

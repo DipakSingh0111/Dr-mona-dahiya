@@ -26,8 +26,8 @@ export default function LocationsDirectory({ query }: Props) {
   const q = query.trim();
 
   return (
-    <section className="relative overflow-hidden bg-pink px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
-      <div className="relative mx-auto w-full max-w-[1440px] space-y-12 sm:space-y-16">
+    <section className="relative overflow-hidden bg-pink py-6 sm:py-7 lg:py-8">
+      <div className="page-container relative space-y-12 sm:space-y-16">
         {cities.map((city) => {
           const groupsToShow = city.groups
             .map((group) => ({

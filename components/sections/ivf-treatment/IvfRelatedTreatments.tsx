@@ -11,7 +11,7 @@ const relatedTreatments = [
   { title: "ICSI Treatment", href: "/treatments" },
   { title: "IUI Treatment", href: "/iui-stories" },
   { title: "Low AMH", href: "/best-low-amh-treatment-in-noida" },
-  { title: "PCOS Treatment", href: "/best-pcos-prod-treatment-centre-in-noida" },
+  { title: "PCOS Treatment", href: "/best-pcos-pcod-treatment-centre-in-noida" },
   { title: "Endometriosis", href: "/endometriosis-fertility-treatment" },
   { title: "Fallopian Tube Blockage", href: "/fallopian-tube-blockage-treatment" },
   { title: "Male Infertility", href: "/male-infertility-treatment" },

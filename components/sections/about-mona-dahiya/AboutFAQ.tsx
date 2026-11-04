@@ -133,7 +133,7 @@ export default function AboutFAQ() {
           Yes, you can consult us online for US$25. We will evaluate your
           previous records and tell you how we can treat you. Visit{" "}
           <Link
-            href="/international-patients"
+            href="/international-ivf-patient"
             className="text-blue underline decoration-[var(--blue)]/40 underline-offset-2 hover:text-rose"
           >
             International Patients
@@ -243,8 +243,8 @@ export default function AboutFAQ() {
   };
 
   return (
-    <section id="faqs" className="relative overflow-hidden bg-white px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12 border-t border-slate-100">
-      <div className="mx-auto w-full max-w-[1440px]">
+    <section id="faqs" className="relative overflow-hidden bg-white py-8 sm:py-10 lg:py-12 border-t border-slate-100">
+      <div className="page-container relative">
         <Reveal className="mb-8">
           <span className="text-[12px] font-semibold tracking-wider text-rose uppercase sm:text-[13px]">
             Patient questions

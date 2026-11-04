@@ -15,8 +15,8 @@ export default function IuiDelhiAbout() {
   ];
 
   return (
-    <section className="relative overflow-hidden border-t border-[#fde2ec] bg-pink px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-14">
-      <div className="relative mx-auto w-full max-w-[1440px]">
+    <section className="relative overflow-hidden border-t border-[#fde2ec] bg-pink py-8 sm:py-10 lg:py-14">
+      <div className="page-container relative">
         <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-12 lg:gap-12">
           <div className="min-w-0 lg:col-span-7">
             <Reveal variant="fadeUp">
@@ -82,7 +82,7 @@ export default function IuiDelhiAbout() {
               />
               <div className="relative aspect-[4/5] overflow-hidden rounded-[24px] border-4 border-white bg-white shadow-[0_16px_36px_rgba(0,0,0,0.4)]">
                 <Image
-                  src="/images/Confident-Doctor.png"
+                  src="/images/about-mona-dahiya/iui-about-doctor.jpg"
                   alt="Dr. Mona Dahiya — IUI and Why it is done"
                   fill
                   sizes="(max-width: 1024px) 400px, 500px"

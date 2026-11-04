@@ -1,124 +1,77 @@
 "use client";
 
-import { FaAward, FaHospital, FaBarcode, FaComments } from "react-icons/fa";
+import { FaCheck } from "react-icons/fa";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
 export default function PgtProtocolAndWhy() {
   const steps = [
     {
       step: "1",
-      title: "Controlled Ovarian Stimulation (Cycle Days 2/3 to 12)",
-      bullets: [
-        "Personalized gonadotropin stimulation protocols to develop multiple mature follicles",
-        "Monitored via serial high-resolution follicular ultrasound and serum estradiol (E2) levels",
-      ],
-      color: "from-rose to-[#f43f5e]",
-      border: "hover:border-rose/50",
+      title: "Stimulation of your Ovaries",
+      desc: "Between Day 2-3 and Day 12 of your cycle we start you on IVF Stimulation medication to grow multiple eggs. You will be monitored with USG scan and Blood Estrogen levels.",
     },
     {
       step: "2",
-      title: "Egg Retrieval & ICSI Fertilization (Cycle Day 13/14)",
-      bullets: [
-        "Transvaginal ultrasound-guided egg collection under light IV sedation",
-        "ICSI is exclusively utilized—rather than conventional IVF—to avoid extraneous sperm cell DNA contamination on the outer embryo shell during genetic testing",
-      ],
-      color: "from-blue to-[var(--blue)]",
-      border: "hover:border-blue/50",
+      title: "Collection of Eggs + ICSI",
+      desc: "Once we feel your eggs are mature enough. We will collect them with transvaginal USG guidance. After collection ICSI will be done on each egg. Instead of doing normal IVF we do ICSI as there may be contamination from other sperms attached to the embryo.",
     },
     {
       step: "3",
-      title: "Extended Blastocyst Culture (Cycle Days 14–19 • Culture Days 1 to 5/6)",
-      bullets: [
-        "Embryos develop in Class 10,000 cleanroom benchtop incubators to the multi-cellular blastocyst stage (100–150 cells)",
-      ],
-      color: "from-[#8b5cf6] to-[#a855f7]",
-      border: "hover:border-[#8b5cf6]/50",
+      title: "Grow Embryos for 5 to 6 Days",
+      desc: "Embryos develop in Class 10,000 cleanroom benchtop incubators to the multi-cellular blastocyst stage (100-150 cells)",
     },
     {
       step: "4",
-      title: "Laser-Assisted Trophectoderm Biopsy (Day 5/6)",
-      bullets: [
-        "Using a non-contact infrared diode laser, an expert embryologist breaches the zona pellucida and aspirates 4 to 6 cells from the trophectoderm layer",
-      ],
-      color: "from-blue to-[var(--blue)]",
-      border: "hover:border-blue/50",
+      title: "Biopsy of the Embryo (On Day 5/6)",
+      desc: "Once the embryo reaches blastocyst stage the embryologist will biopsy the embryo using a non contact laser. 4-6 cells will be removed from the outside layer of the embryo.",
     },
     {
       step: "5",
-      title: "Ultra-Rapid Vitrification (Day 5/6)",
-      bullets: [
-        "Biopsied blastocysts are instantly flash-frozen at -196°C in liquid nitrogen tanks with 100% electronic traceability",
-        "They remain safely cryopreserved while genetic testing proceeds",
-      ],
-      color: "from-[#ea580c] to-[#f97316]",
-      border: "hover:border-[#ea580c]/50",
+      title: "Freeze the Embryos (On Day 5/6)",
+      desc: "After removing cells the blastocysts will be frozen using Ultra rapid vitrification method. These embryos will stay in liquid nitrogen tank while waiting for their results.",
     },
     {
       step: "6",
-      title: "Genomic Analysis by NGS (2 to 3 Weeks)",
-      bullets: [
-        "Biopsied cell DNA is amplified and analyzed using high-resolution Next-Generation Sequencing (NGS)",
-        "Embryos are categorised as Euploid (chromosomally normal), Aneuploid (abnormal), or Mosaic (mixed normal/abnormal cell populations)",
-      ],
-      color: "from-blue to-[var(--blue)]",
-      border: "hover:border-blue/50",
+      title: "Wait for Genetic Results",
+      desc: "The biopsied cells will take 2 to 3 weeks to come back with results. Your embryos can be classified as Euploid (Normal), Aneuploid (Abnormal) or Mosaics.",
     },
     {
       step: "7",
-      title: "Personalized Frozen Embryo Transfer (Subsequent Cycle)",
-      bullets: [
-        "A single euploid blastocyst is thawed and transferred into a prepared, receptive endometrium",
-        "Done during a subsequent hormone replacement or natural cycle",
-      ],
-      color: "from-rose to-[#f43f5e]",
-      border: "hover:border-rose/50",
+      title: "Frozen Embryo Transfer",
+      desc: "You can then choose to do Frozen Embryo transfer of only those that are Euploid (Normal). This can be done in your next cycle with HRT or Natural protocol.",
     },
   ];
 
   const whyPoints = [
     {
-      title: "25+ Years of Clinical Reproductive Mastery",
-      desc: "Dr. Mona Dahiya is an acclaimed fertility specialist, holding an MBBS (Gold Medalist) from Lady Hardinge Medical College, MD from Maulana Azad Medical College (MAMC), and an advanced Fellowship in Reproductive Medicine from Singapore General Hospital. Over her career, she has guided more than 10,000 families to parenthood.",
-      icon: FaAward,
-      iconColor: "text-rose",
-      iconBg: "bg-rose/10",
-      border: "hover:border-rose/40",
+      title: "25 Years of Experience in Reproductive Medicine",
+      desc: "With a background of MBBS Gold Medalist from LHMC, MD from MAMC and Fellow in Reproductive Medicine from Singapore. Dr Mona Dahiya has helped over 10000+ families become parents.",
     },
     {
-      title: "Dedicated High-Complexity Cleanroom Embryology Labs",
-      desc: "Operating with modern benchtop incubators, 1.48 µm non-contact lasers, and micro-vibration-free micromanipulation systems, our labs minimize cellular stress and maintain high post-biopsy survival rates (>98%).",
-      icon: FaHospital,
-      iconColor: "text-blue",
-      iconBg: "bg-blue/10",
-      border: "hover:border-blue/40",
+      title: "Modern Embryology Lab",
+      desc: "We use latest technology in our lab such as bench top incubators and Non contact lasers. This helps reduce trauma to embryos and achieve better survival rate.",
     },
     {
-      title: "Stringent Double-Witness & Barcode Security",
-      desc: "Eliminates sample mix-ups through an unbroken electronic verification chain from cell biopsy to cryogenic storage and warming.",
-      icon: FaBarcode,
-      iconColor: "text-blue",
-      iconBg: "bg-blue/10",
-      border: "hover:border-blue/40",
+      title: "Sample Tracking System",
+      desc: "Our lab uses double witness system with barcodes. So we can keep track of your cells from biopsy to freezing and warming.",
     },
     {
-      title: "Transparent Genetic Counseling",
-      desc: "Every PGT report is interpreted directly with patients to explain mosaicism thresholds, segmental anomalies, and individual implantation probabilities clearly and honestly.",
-      icon: FaComments,
-      iconColor: "text-[#ea580c]",
-      iconBg: "bg-[#ea580c]/10",
-      border: "hover:border-[#ea580c]/40",
+      title: "Honest Genetic Counselling",
+      desc: "We believe in providing our patients with the best possible information. Whether your embryos are mosaic or have segmental abnormality. We will provide you with a clear picture of your chances.",
     },
   ];
 
   return (
-    <section className="relative overflow-hidden bg-white px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
-      <div className="relative mx-auto w-full max-w-[1440px]">
-        {/* Step-by-Step PGT Treatment Protocol */}
+    <section
+      className="relative overflow-hidden py-8 sm:py-10 lg:py-12"
+      style={{ background: "var(--pink)" }}
+    >
+      <div className="page-container relative">
         <Reveal className="mb-6 sm:mb-8">
           <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
-            How it works
+            Steps involved in PGT
           </p>
-          <h2 className="font-serif mt-1 text-[1.65rem] leading-[1.2] font-normal tracking-tight text-slate-900 sm:text-[2.1rem] lg:text-[2.35rem]">
+          <h2 className="font-serif mt-1 text-[1.65rem] leading-[1.2] font-normal tracking-tight text-ink sm:text-[2.1rem] lg:text-[2.35rem]">
             Step-by-Step PGT Treatment Protocol
           </h2>
         </Reveal>
@@ -127,75 +80,56 @@ export default function PgtProtocolAndWhy() {
           stagger={0.05}
           className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
         >
-          {steps.map((st, idx) => (
-            <StaggerItem key={idx}>
-              <div
-                className={`group flex h-full flex-col justify-start rounded-[18px] border border-slate-200/90 bg-slate-50/60 p-5 shadow-[0_4px_18px_rgba(0,20,60,0.03)] transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-[0_12px_28px_rgba(0,30,80,0.08)] ${st.border}`}
-              >
+          {steps.map((st) => (
+            <StaggerItem key={st.step}>
+              <div className="group flex h-full flex-col rounded-[20px] border border-[#fde2ec] bg-white p-5.5 shadow-[0_8px_24px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-rose/40 hover:shadow-[0_14px_36px_rgba(232,62,116,0.1)]">
                 <div className="flex items-center gap-3">
-                  <span
-                    className={`inline-flex size-8 shrink-0 items-center justify-center rounded-lg text-[13px] font-bold text-black shadow-sm bg-gradient-to-r ${st.color}`}
-                  >
+                  <span className="inline-flex size-8 shrink-0 items-center justify-center rounded-full bg-rose text-[13px] font-bold text-white shadow-[0_4px_12px_rgba(232,62,116,0.35)]">
                     {st.step}
                   </span>
-                  <h3 className="text-[15px] font-bold text-slate-900 group-hover:text-blue transition-colors sm:text-[16px]">
+                  <h3 className="text-[15px] font-bold text-ink transition-colors group-hover:text-rose sm:text-[16px]">
                     {st.title}
                   </h3>
                 </div>
-
-                <ul className="mt-3.5 space-y-2 text-[13px] text-black sm:text-[13.5px]">
-                  {st.bullets.map((b, bIdx) => (
-                    <li key={bIdx} className="flex items-start gap-2">
-                      <span className="mt-1 size-1.5 shrink-0 rounded-full bg-slate-400" />
-                      <span className="leading-snug">{b}</span>
-                    </li>
-                  ))}
-                </ul>
+                <p className="mt-3.5 text-[13px] leading-relaxed text-ink/75 sm:text-[13.5px]">
+                  {st.desc}
+                </p>
               </div>
             </StaggerItem>
           ))}
         </Stagger>
 
-        {/* Why Consult Dr. Mona Dahiya for PGT */}
         <div className="mt-12 sm:mt-16">
           <Reveal className="mb-6 sm:mb-8">
             <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
-              Expertise &amp; authority
+              Why choose us?
             </p>
-            <h2 className="font-serif mt-1 text-[1.65rem] leading-[1.2] font-normal tracking-tight text-slate-900 sm:text-[2.1rem] lg:text-[2.35rem]">
+            <h2 className="font-serif mt-1 text-[1.65rem] leading-[1.2] font-normal tracking-tight text-ink sm:text-[2.1rem] lg:text-[2.35rem]">
               Why Consult Dr. Mona Dahiya for PGT in Delhi | Noida | Ghaziabad?
             </h2>
           </Reveal>
 
           <Stagger stagger={0.06} className="space-y-3.5 sm:space-y-4">
-            {whyPoints.map((item, idx) => {
-              const Icon = item.icon;
-              return (
-                <StaggerItem key={idx}>
-                  <div
-                    className={`group flex flex-col gap-3 rounded-[18px] border border-slate-200/90 bg-gradient-to-br from-slate-50/60 to-white p-5 shadow-[0_4px_16px_rgba(0,20,60,0.03)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_10px_24px_rgba(0,30,80,0.07)] sm:flex-row sm:items-start sm:p-6 ${item.border}`}
-                  >
-                    <div
-                      className={`inline-flex size-10 shrink-0 items-center justify-center rounded-xl ${item.iconBg} ${item.iconColor}`}
-                    >
-                      <Icon className="size-5" />
-                    </div>
-                    <div className="min-w-0 flex-1">
-                      <h3 className="text-[15px] font-bold text-slate-900 group-hover:text-blue transition-colors sm:text-[16px]">
-                        {item.title}
-                      </h3>
-                      <p className="mt-1.5 text-[13.5px] leading-relaxed text-black sm:text-[14px]">
-                        {item.desc}
-                      </p>
-                    </div>
+            {whyPoints.map((item) => (
+              <StaggerItem key={item.title}>
+                <div className="group flex flex-col gap-3.5 rounded-[20px] border border-[#fde2ec] bg-white p-5.5 shadow-[0_8px_24px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-0.5 hover:border-rose/40 hover:shadow-[0_14px_36px_rgba(232,62,116,0.1)] sm:flex-row sm:items-start sm:p-6">
+                  <div className="inline-flex size-10 shrink-0 items-center justify-center rounded-xl bg-rose text-white shadow-[0_4px_14px_rgba(232,62,116,0.35)]">
+                    <FaCheck className="size-4" />
                   </div>
-                </StaggerItem>
-              );
-            })}
+                  <div className="min-w-0 flex-1">
+                    <h3 className="text-[15px] font-bold text-ink transition-colors group-hover:text-rose sm:text-[16px]">
+                      {item.title}
+                    </h3>
+                    <p className="mt-1.5 text-[13.5px] leading-relaxed text-ink/75 sm:text-[14px]">
+                      {item.desc}
+                    </p>
+                  </div>
+                </div>
+              </StaggerItem>
+            ))}
           </Stagger>
         </div>
       </div>
     </section>
   );
 }
-

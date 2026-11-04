@@ -130,8 +130,8 @@ export default function IuiFaq() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#fff8fb] via-[#f8fafc] to-white px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
-      <div className="relative mx-auto w-full max-w-[1440px]">
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#fff8fb] via-[#f8fafc] to-white py-6 sm:py-7 lg:py-8">
+      <div className="page-container relative">
         <div className="max-w-3xl">
           <span className="text-[12px] font-semibold tracking-wider text-rose uppercase">
             Patient questions

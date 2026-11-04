@@ -49,7 +49,7 @@ const accentStyles = {
 
 export default function LocationsRegistration() {
   return (
-    <section className="relative overflow-hidden bg-pink px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
+    <section className="relative overflow-hidden bg-pink py-6 sm:py-7 lg:py-8">
       <div
         aria-hidden
         className="pointer-events-none absolute -top-20 right-1/4 h-[300px] w-[400px] rounded-full opacity-40 blur-3xl"
@@ -59,7 +59,7 @@ export default function LocationsRegistration() {
         }}
       />
 
-      <div className="relative mx-auto w-full max-w-[1440px]">
+      <div className="page-container relative">
         <Reveal className="mb-7 sm:mb-9">
           <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
             Registered medical practitioner

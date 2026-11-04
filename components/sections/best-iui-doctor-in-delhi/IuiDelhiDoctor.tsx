@@ -27,8 +27,8 @@ export default function IuiDelhiDoctor() {
   ];
 
   return (
-    <section className="relative overflow-hidden border-t border-[#fde2ec] bg-pink px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-14">
-      <div className="relative mx-auto w-full max-w-[1440px]">
+    <section className="relative overflow-hidden border-t border-[#fde2ec] bg-pink py-8 sm:py-10 lg:py-14">
+      <div className="page-container relative">
         <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-12 lg:gap-12">
           <div className="relative mx-auto w-full max-w-[340px] sm:max-w-[400px] lg:col-span-5 lg:max-w-none">
             <Reveal variant="slideLeft" delay={0.1}>

@@ -129,9 +129,9 @@ export default function OurServices() {
   return (
     <section
       id="our-services"
-      className="relative overflow-hidden bg-[#f5f6f8] px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8"
+      className="relative overflow-hidden bg-[#f5f6f8] py-6 sm:py-7 lg:py-8"
     >
-      <div className="mx-auto w-full max-w-[1440px]">
+      <div className="page-container">
         <Reveal>
           <div className="mb-6 sm:mb-8">
             <div className="mb-4 flex flex-wrap items-center gap-2.5 sm:flex-nowrap sm:gap-3">

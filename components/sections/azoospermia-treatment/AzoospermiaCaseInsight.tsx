@@ -4,8 +4,8 @@ import { Reveal } from "@/components/ui/Reveal";
 
 export default function AzoospermiaCaseInsight() {
   return (
-    <section className="relative overflow-hidden bg-pink px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
-      <div className="mx-auto w-full max-w-[1440px]">
+    <section className="relative overflow-hidden bg-pink py-8 sm:py-10 lg:py-12">
+      <div className="page-container relative">
         <Reveal variant="fadeUp">
           <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
             From the clinic

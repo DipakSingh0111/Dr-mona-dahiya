@@ -39,7 +39,7 @@ export default function DfiHero() {
         }}
       />
 
-      <div className="relative mx-auto grid w-full max-w-[1440px] grid-cols-1 items-start gap-6 px-4 sm:gap-7 sm:px-6 lg:grid-cols-12 lg:items-start lg:gap-6 lg:px-8 xl:gap-8">
+      <div className="page-container relative grid grid-cols-1 items-start gap-6 sm:gap-7 lg:grid-cols-12 lg:items-start lg:gap-6 xl:gap-8">
         <div className="min-w-0 lg:col-span-7">
           {/* Breadcrumb matching exact design */}
           <nav aria-label="Breadcrumb" className="mb-4 sm:mb-5">
@@ -124,7 +124,7 @@ export default function DfiHero() {
         </div>
 
         <HeroBannerImage
-          src="/images/Confident-Doctor.png"
+          src="/images/why-choose/dr-mona-dahiya.jpg"
           alt="Dr. Mona Dahiya - Sperm DNA Fragmentation Specialist"
         />
       </div>

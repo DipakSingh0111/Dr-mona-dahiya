@@ -151,13 +151,13 @@ export default function IvfSuccessFaq() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-pink px-4 py-6 text-ink sm:px-6 sm:py-7 lg:px-8 lg:py-8">
+    <section className="relative overflow-hidden bg-pink py-6 text-ink sm:py-7 lg:py-8">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -bottom-20 right-0 h-80 w-80 rounded-full bg-blue/15 blur-[120px]"
       />
 
-      <div className="relative mx-auto w-full max-w-[1440px]">
+      <div className="page-container relative">
         <div className="max-w-3xl">
           <span className="text-[12px] font-semibold tracking-wider text-rose uppercase">
             Patient questions

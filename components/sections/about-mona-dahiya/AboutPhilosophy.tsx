@@ -62,8 +62,8 @@ export default function AboutPhilosophy() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-white px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12 border-t border-slate-100">
-      <div className="mx-auto w-full max-w-[1440px]">
+    <section className="relative overflow-hidden bg-white py-8 sm:py-10 lg:py-12 border-t border-slate-100">
+      <div className="page-container relative">
         {/* Header */}
         <Reveal className="mb-8 flex flex-col justify-between gap-3 sm:mb-10 md:flex-row md:items-end md:gap-6">
           <div>

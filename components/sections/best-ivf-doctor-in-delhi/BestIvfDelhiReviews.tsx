@@ -31,9 +31,9 @@ export default function BestIvfDelhiReviews() {
   return (
     <section
       id="reviews"
-      className="relative overflow-hidden bg-pink px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12"
+      className="relative overflow-hidden bg-pink py-8 sm:py-10 lg:py-12"
     >
-      <div className="mx-auto w-full max-w-[1440px]">
+      <div className="page-container relative">
         <Reveal variant="fadeUp">
           <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">
             Patient reviews

@@ -17,7 +17,7 @@ export default function NotFoundHero() {
         }}
       />
 
-      <div className="relative mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8">
+      <div className="page-container relative">
         {/* Breadcrumb */}
         <nav
           aria-label="Breadcrumb"

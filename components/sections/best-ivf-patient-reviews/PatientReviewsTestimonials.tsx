@@ -153,8 +153,8 @@ export default function PatientReviewsTestimonials() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-pink px-4 py-5 text-ink sm:px-6 sm:py-6 lg:px-8 lg:py-7">
-      <div className="relative mx-auto w-full max-w-[1440px]">
+    <section className="relative overflow-hidden bg-pink py-5 text-ink sm:py-6 lg:py-7">
+      <div className="page-container relative">
         {/* Horizontal scroll track */}
         <div
           ref={scrollRef}

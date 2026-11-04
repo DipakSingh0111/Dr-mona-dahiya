@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import {
@@ -89,25 +89,25 @@ function FeatureCard({ item }: { item: FeatureCardData }) {
 
   return (
     <article
-      className={`group relative flex items-center gap-3.5 overflow-hidden rounded-[22px] border ${theme.border} ${theme.cardBg} p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 xl:gap-5 xl:rounded-[24px] xl:p-6 ${theme.hoverGlow}`}
+      className={`group relative flex w-full items-center gap-3.5 overflow-hidden rounded-[20px] border ${theme.border} ${theme.cardBg} px-3.5 py-3 shadow-sm transition-all duration-300 hover:-translate-y-0.5 sm:px-4 sm:py-3.5 xl:gap-4 xl:rounded-[22px] xl:px-5 xl:py-4 ${theme.hoverGlow}`}
     >
       <div
-        className={`relative z-10 flex size-[52px] shrink-0 items-center justify-center rounded-[16px] text-white xl:size-[68px] xl:rounded-[18px] ${theme.iconBg} ${theme.iconShadow} transition-transform duration-300 group-hover:scale-105`}
+        className={`relative z-10 flex size-[44px] shrink-0 items-center justify-center rounded-[14px] text-white sm:size-[48px] sm:rounded-[15px] xl:size-[56px] xl:rounded-[16px] ${theme.iconBg} ${theme.iconShadow} transition-transform duration-300 group-hover:scale-105`}
       >
-        {Icon ? <Icon className="size-[22px] xl:size-[30px]" /> : null}
+        {Icon ? <Icon className="size-[20px] sm:size-[22px] xl:size-[26px]" /> : null}
       </div>
 
-      <div className="relative z-10 min-w-0 flex-1 pr-6 xl:pr-8">
-        <h3 className="font-display text-[15.5px] leading-snug font-bold tracking-tight text-[#0f2038] xl:text-[18.5px]">
+      <div className="relative z-10 min-w-0 flex-1 pr-6 xl:pr-7">
+        <h3 className="font-display text-[14.5px] leading-snug font-bold tracking-tight text-[#0f2038] sm:text-[15px] xl:text-[17px]">
           {item.title}
         </h3>
-        <p className="mt-1 text-[12px] leading-relaxed text-[#64748b] xl:mt-1.5 xl:text-[14px]">
+        <p className="mt-0.5 line-clamp-2 text-[11.5px] leading-relaxed text-[#64748b] sm:text-[12px] xl:mt-1 xl:text-[13px]">
           {item.description}
         </p>
       </div>
 
       <span
-        className={`absolute top-3 right-4 font-display text-[19px] leading-none font-bold xl:top-3.5 xl:right-5 xl:text-[25px] ${theme.numColor}`}
+        className={`absolute top-2.5 right-3.5 font-display text-[17px] leading-none font-bold sm:top-3 sm:right-4 xl:top-3.5 xl:right-4.5 xl:text-[21px] ${theme.numColor}`}
       >
         {item.number}
       </span>
@@ -122,7 +122,7 @@ export default function WhyChooseUs() {
   return (
     <section
       id="why-choose"
-      className="relative isolate overflow-hidden bg-white px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8"
+      className="relative isolate overflow-hidden bg-white py-6 sm:py-7 lg:py-8"
     >
       <div
         aria-hidden
@@ -133,7 +133,7 @@ export default function WhyChooseUs() {
         }}
       />
 
-      <div className="mx-auto w-full max-w-[1440px]">
+      <div className="page-container">
         <header className="mb-7 text-center sm:mb-9">
           <div className="mb-3.5 inline-flex max-w-full items-center justify-center gap-2 sm:gap-3">
             <span className="hidden h-[2px] w-8 shrink-0 rounded-full bg-rose sm:inline-block" />
@@ -155,10 +155,16 @@ export default function WhyChooseUs() {
           ) : null}
         </header>
 
-        <div className="grid grid-cols-1 items-center gap-5 lg:grid-cols-[1fr_minmax(300px,380px)_1fr] lg:gap-6 xl:grid-cols-[1fr_minmax(360px,420px)_1fr] xl:gap-10">
-          <Stagger className="flex flex-col gap-4 sm:gap-5" stagger={0.1}>
+        <div className="grid grid-cols-1 items-center gap-4 lg:grid-cols-[1fr_minmax(280px,350px)_1fr] lg:gap-5 xl:grid-cols-[1fr_minmax(320px,390px)_1fr] xl:gap-8">
+          <Stagger
+            className="flex flex-col justify-center gap-3 sm:gap-3.5 xl:gap-4"
+            stagger={0.08}
+          >
             {leftCards.map((item) => (
-              <StaggerItem key={item.number} variant="slideLeft">
+              <StaggerItem
+                key={item.number}
+                variant="slideLeft"
+              >
                 <FeatureCard item={item} />
               </StaggerItem>
             ))}
@@ -167,7 +173,7 @@ export default function WhyChooseUs() {
           {/* Center doctor portrait */}
           <Reveal
             variant="scaleIn"
-            className="relative order-first mx-auto flex h-[420px] w-[300px] shrink-0 items-center justify-center overflow-visible sm:h-[500px] sm:w-[360px] lg:order-none lg:h-[540px] lg:w-[360px] xl:h-[580px] xl:w-[400px]"
+            className="relative order-first mx-auto flex h-[380px] w-[270px] shrink-0 items-center justify-center overflow-visible sm:h-[440px] sm:w-[320px] lg:order-none lg:h-[470px] lg:w-[330px] xl:h-[500px] xl:w-[360px]"
           >
             {/* Soft pink circle */}
             <div
@@ -188,7 +194,7 @@ export default function WhyChooseUs() {
               }}
             />
 
-            <div className="relative z-10 aspect-[3/4] h-[88%] max-h-[520px] w-auto overflow-hidden rounded-[28px] shadow-[0_18px_40px_rgba(232,62,116,0.18)] ring-4 ring-white sm:rounded-[32px]">
+            <div className="relative z-10 aspect-[3/4] h-[88%] max-h-[500px] w-auto overflow-hidden rounded-[28px] shadow-[0_18px_40px_rgba(232,62,116,0.18)] ring-4 ring-white sm:rounded-[32px]">
               <Image
                 src={image}
                 alt="Dr. Mona Dahiya - Fertility & IVF Specialist"
@@ -200,9 +206,15 @@ export default function WhyChooseUs() {
             </div>
           </Reveal>
 
-          <Stagger className="flex flex-col gap-4 sm:gap-5" stagger={0.1}>
+          <Stagger
+            className="flex flex-col justify-center gap-3 sm:gap-3.5 xl:gap-4"
+            stagger={0.08}
+          >
             {rightCards.map((item) => (
-              <StaggerItem key={item.number} variant="slideRight">
+              <StaggerItem
+                key={item.number}
+                variant="slideRight"
+              >
                 <FeatureCard item={item} />
               </StaggerItem>
             ))}
@@ -212,4 +224,3 @@ export default function WhyChooseUs() {
     </section>
   );
 }
-

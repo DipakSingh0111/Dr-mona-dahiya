@@ -57,8 +57,8 @@ const themes = [
 
 export default function ReviewsByTheme() {
   return (
-    <section className="relative overflow-hidden bg-pink border-t border-[#fde2ec] px-4 py-6 text-ink sm:px-6 sm:py-7 lg:px-8 lg:py-8">
-      <div className="relative mx-auto w-full max-w-[1440px]">
+    <section className="relative overflow-hidden bg-pink border-t border-[#fde2ec] py-6 text-ink sm:py-7 lg:py-8">
+      <div className="page-container relative">
         <Reveal className="max-w-3xl">
           <span className="text-[12px] font-semibold tracking-wider text-rose uppercase">
             Genuine patient reviews

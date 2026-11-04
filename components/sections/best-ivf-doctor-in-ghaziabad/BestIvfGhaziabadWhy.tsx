@@ -64,7 +64,7 @@ export default function BestIvfGhaziabadWhy() {
         >
           <div className="relative h-full min-h-[360px] overflow-hidden rounded-[22px] border border-[#fde2ec] shadow-[0_20px_50px_rgba(0,10,40,0.4)] lg:absolute lg:inset-0 lg:min-h-0">
             <Image
-              src="/images/Confident-Doctor.png"
+              src="/images/about-mona-dahiya/online-ivf-consultation.jpg"
               alt="Dr. Mona Dahiya"
               fill
               sizes="(max-width: 1024px) 90vw, 420px"

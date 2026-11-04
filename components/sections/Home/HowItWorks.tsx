@@ -49,8 +49,8 @@ export default function HowItWorks() {
   const { badge, title, steps } = siteData.howItWorks;
 
   return (
-    <section className="relative bg-white px-4 pt-10 pb-6 sm:px-6 sm:pt-12 sm:pb-7 lg:px-8 lg:pt-14 lg:pb-8">
-      <div className="relative mx-auto w-full max-w-[1440px]">
+    <section className="relative bg-white pt-10 pb-6 sm:pt-12 sm:pb-7 lg:pt-14 lg:pb-8">
+      <div className="page-container relative">
         <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-12 lg:gap-10 xl:gap-16">
           {/* Left sticky heading */}
           <div className="relative lg:sticky lg:top-52 lg:col-span-4 lg:self-start">

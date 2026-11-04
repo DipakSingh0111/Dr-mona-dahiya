@@ -195,12 +195,22 @@ const nextConfig: NextConfig = {
       },
       {
         "source": "/pcos-treatment",
-        "destination": "/best-pcos-prod-treatment-centre-in-noida",
+        "destination": "/best-pcos-pcod-treatment-centre-in-noida",
         "permanent": true
       },
       {
         "source": "/pcos-treatment/:path*",
-        "destination": "/best-pcos-prod-treatment-centre-in-noida/:path*",
+        "destination": "/best-pcos-pcod-treatment-centre-in-noida/:path*",
+        "permanent": true
+      },
+      {
+        "source": "/best-pcos-prod-treatment-centre-in-noida",
+        "destination": "/best-pcos-pcod-treatment-centre-in-noida",
+        "permanent": true
+      },
+      {
+        "source": "/best-pcos-prod-treatment-centre-in-noida/:path*",
+        "destination": "/best-pcos-pcod-treatment-centre-in-noida/:path*",
         "permanent": true
       },
       {
@@ -372,6 +382,16 @@ const nextConfig: NextConfig = {
         "source": "/preimplantation-genetic-testing/:path*",
         "destination": "/preimplantation-genetic-testing-pgt-center-in-noida/:path*",
         "permanent": true
+      },
+      {
+        source: "/international-patients",
+        destination: "/international-ivf-patient",
+        permanent: true,
+      },
+      {
+        source: "/international-patients/:path*",
+        destination: "/international-ivf-patient/:path*",
+        permanent: true,
       }
     ];
   },

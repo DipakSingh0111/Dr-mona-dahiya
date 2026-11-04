@@ -27,9 +27,9 @@ export default function SuccessStoriesContent() {
     <>
       <section
         id="stories-by-diagnosis"
-        className="relative overflow-hidden bg-gradient-to-b from-[#fff8fb] via-white to-[#fff5f8] px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8"
+        className="relative overflow-hidden bg-gradient-to-b from-[#fff8fb] via-white to-[#fff5f8] py-6 sm:py-7 lg:py-8"
       >
-        <div className="relative mx-auto w-full max-w-[1440px]">
+        <div className="page-container relative">
           <Reveal className="mb-7 sm:mb-9">
             <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">
               {diagnosis.eyebrow}
@@ -78,9 +78,9 @@ export default function SuccessStoriesContent() {
 
       <section
         id="patient-stories"
-        className="relative overflow-hidden bg-[#f8fafc] px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8"
+        className="relative overflow-hidden bg-[#f8fafc] py-6 sm:py-7 lg:py-8"
       >
-        <div className="relative mx-auto w-full max-w-[1440px]">
+        <div className="page-container relative">
           <Reveal className="mb-7 max-w-3xl sm:mb-9">
             <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">
               {stories.eyebrow}
@@ -141,8 +141,8 @@ export default function SuccessStoriesContent() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-pink px-4 py-6 text-ink sm:px-6 sm:py-7 lg:px-8 lg:py-8">
-        <div className="relative mx-auto w-full max-w-[1440px]">
+      <section className="relative overflow-hidden bg-pink py-6 text-ink sm:py-7 lg:py-8">
+        <div className="page-container relative">
           <Reveal className="mb-7 sm:mb-9">
             <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">
               {trust.eyebrow}
@@ -174,8 +174,8 @@ export default function SuccessStoriesContent() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-gradient-to-b from-[#fff8fb] via-white to-[#fff5f8] px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
-        <div className="relative mx-auto w-full max-w-[1440px]">
+      <section className="relative overflow-hidden bg-gradient-to-b from-[#fff8fb] via-white to-[#fff5f8] py-6 sm:py-7 lg:py-8">
+        <div className="page-container relative">
           <Reveal className="mb-7 sm:mb-9">
             <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">
               {journey.eyebrow}

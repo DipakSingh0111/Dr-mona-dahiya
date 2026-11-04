@@ -104,8 +104,8 @@ export default function IvfFaqsContent() {
   return (
     <div className="bg-pink text-black">
       {/* Categories */}
-      <section className="px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
-        <div className="mx-auto w-full max-w-[1440px]">
+      <section className="py-10 sm:py-12 lg:py-14">
+        <div className="page-container relative">
           <Reveal className="mb-7 sm:mb-9">
             <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
               Browse by topic
@@ -141,9 +141,9 @@ export default function IvfFaqsContent() {
         <section
           key={section.id}
           id={section.id}
-          className="scroll-mt-36 px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-14"
+          className="scroll-mt-36 py-10 sm:py-12 lg:py-14"
         >
-          <div className="mx-auto w-full max-w-[1440px]">
+          <div className="page-container relative">
             <Reveal className="mb-7 sm:mb-9">
               <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
                 {section.categoryLabel}

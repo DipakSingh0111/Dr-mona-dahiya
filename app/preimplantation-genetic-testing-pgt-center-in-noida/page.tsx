@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 
 export default function PgtPage() {
   return (
-    <main className="flex min-h-screen flex-col bg-white">
+    <main className="flex min-h-screen flex-col bg-pink">
       <PgtHero />
 
       <SectionReveal>
@@ -61,4 +61,3 @@ export default function PgtPage() {
     </main>
   );
 }
-

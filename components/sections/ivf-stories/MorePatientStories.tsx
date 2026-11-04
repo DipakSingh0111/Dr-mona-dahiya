@@ -29,8 +29,8 @@ const stories = [
 
 export default function MorePatientStories() {
   return (
-    <section className="relative overflow-hidden bg-slate-50/70 px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
-      <div className="relative mx-auto w-full max-w-[1440px]">
+    <section className="relative overflow-hidden bg-slate-50/70 py-6 sm:py-7 lg:py-8">
+      <div className="page-container relative">
         <Reveal className="mb-6 sm:mb-8">
           <span className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
             Browse by diagnosis

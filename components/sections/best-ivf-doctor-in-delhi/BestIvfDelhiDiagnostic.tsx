@@ -14,8 +14,8 @@ const tests = [
 
 export default function BestIvfDelhiDiagnostic() {
   return (
-    <section className="relative overflow-hidden bg-pink px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
-      <div className="mx-auto w-full max-w-[1440px]">
+    <section className="relative overflow-hidden bg-pink py-8 sm:py-10 lg:py-12">
+      <div className="page-container relative">
         <Reveal variant="fadeUp">
           <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">
             What to expect
@@ -48,7 +48,7 @@ export default function BestIvfDelhiDiagnostic() {
           <Reveal variant="scaleIn" className="lg:col-span-5">
             <div className="relative mx-auto max-w-[420px] overflow-hidden rounded-[22px] border border-[#fde2ec] shadow-[0_20px_50px_rgba(0,10,40,0.4)]">
               <Image
-                src="/images/Confident-Doctor.png"
+                src="/images/about-mona-dahiya/follicular.jpg"
                 alt="Dr. Mona Dahiya - Tests required before IVF"
                 width={600}
                 height={600}

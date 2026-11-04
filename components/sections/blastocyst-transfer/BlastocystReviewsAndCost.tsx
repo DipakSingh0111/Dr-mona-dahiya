@@ -73,8 +73,8 @@ const reviews: PatientReview[] = [
 
 export default function BlastocystReviewsAndCost() {
   return (
-    <section className="relative overflow-hidden bg-white px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-14 border-t border-slate-100">
-      <div className="mx-auto w-full max-w-[1440px]">
+    <section className="relative overflow-hidden bg-white py-8 sm:py-10 lg:py-14 border-t border-slate-100">
+      <div className="page-container relative">
         {/* ================= SECTION 1: What Patients Say About Blastocyst Transfer with Dr. Mona ================= */}
         <div id="patient-reviews" className="mb-14 sm:mb-16 lg:mb-20">
           <Reveal variant="fadeUp">

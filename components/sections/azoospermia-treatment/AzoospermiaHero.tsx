@@ -30,7 +30,7 @@ export default function AzoospermiaHero() {
         }}
       />
 
-      <div className="relative mx-auto grid w-full max-w-[1440px] grid-cols-1 items-start gap-6 px-4 sm:gap-7 sm:px-6 lg:grid-cols-12 lg:items-start lg:gap-6 lg:px-8 xl:gap-8">
+      <div className="page-container relative grid grid-cols-1 items-start gap-6 sm:gap-7 lg:grid-cols-12 lg:items-start lg:gap-6 xl:gap-8">
         <div className="min-w-0 lg:col-span-7">
           <nav aria-label="Breadcrumb" className="mb-4 sm:mb-5">
             <ol className="inline-flex max-w-full flex-wrap items-center gap-1.5 rounded-full border border-rose/25 bg-white px-3 py-1.5 shadow-sm backdrop-blur-md sm:gap-2 sm:px-3.5 sm:py-2">
@@ -114,7 +114,7 @@ export default function AzoospermiaHero() {
         </div>
 
         <HeroBannerImage
-          src="/images/Confident-Doctor.png"
+          src="/images/about-mona-dahiya/hysteroscopy.jpg"
           alt="Dr. Mona Dahiya - Azoospermia Treatment in Delhi NCR"
         />
       </div>

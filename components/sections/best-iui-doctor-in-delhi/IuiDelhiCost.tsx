@@ -30,9 +30,9 @@ export default function IuiDelhiCost() {
   return (
     <section
       id="iui-cost"
-      className="relative overflow-hidden border-t border-[#fde2ec] bg-pink px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-14"
+      className="relative overflow-hidden border-t border-[#fde2ec] bg-pink py-8 sm:py-10 lg:py-14"
     >
-      <div className="relative mx-auto w-full max-w-[1440px]">
+      <div className="page-container relative">
         <Reveal variant="fadeUp">
           <span className="text-[12px] font-semibold tracking-wider text-rose uppercase sm:text-[13px]">
             Cost and Schedule of IUI

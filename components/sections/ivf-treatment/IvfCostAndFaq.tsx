@@ -99,7 +99,7 @@ const rightFaqs: FaqItem[] = [
         Yes. PCOS needs careful stimulation to avoid OHSS; low AMH needs tailored dosing
         and realistic counselling. See also{" "}
         <Link
-          href="/best-pcos-prod-treatment-centre-in-noida"
+          href="/best-pcos-pcod-treatment-centre-in-noida"
           className="font-medium text-blue underline underline-offset-2 hover:text-white"
         >
           PCOS treatment

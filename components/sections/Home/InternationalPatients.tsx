@@ -37,9 +37,9 @@ export default function InternationalPatients() {
   return (
     <section
       id="international"
-      className="relative overflow-hidden bg-white px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8"
+      className="relative overflow-hidden bg-white py-6 sm:py-7 lg:py-8"
     >
-      <div className="mx-auto w-full max-w-[1440px]">
+      <div className="page-container">
         <div className="relative isolate overflow-hidden rounded-[26px] bg-navy shadow-xl sm:rounded-[32px]">
           <div className="absolute inset-0">
             <Image

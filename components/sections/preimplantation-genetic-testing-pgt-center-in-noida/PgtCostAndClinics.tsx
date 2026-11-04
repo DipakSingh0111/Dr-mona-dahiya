@@ -1,87 +1,109 @@
 "use client";
 
 import Link from "next/link";
-import { FaMicroscope, FaDna, FaCheck, FaVial, FaSnowflake, FaCalendarCheck } from "react-icons/fa";
+import {
+  FaSyringe,
+  FaMicroscope,
+  FaDna,
+  FaVial,
+  FaSnowflake,
+  FaCalendarCheck,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
-import ClinicsAppointmentCards from "@/components/sections/ClinicsAppointmentCards";
 
 export default function PgtCostAndClinics() {
   const costFactors = [
     {
-      title: "IVF/ICSI Clinical Phase",
-      desc: "Ovarian stimulation medications, cycle monitoring, egg retrieval anesthesia, and extended blastocyst culture.",
-      icon: FaCheck,
-      color: "from-rose to-[#f43f5e]",
-      iconBg: "bg-rose/10 text-rose",
-      border: "hover:border-rose/50",
+      title: "Cost of IVF/ICSI cycle",
+      desc: "Which includes your stimulation meds, monitoring, egg collection and culture till day 5/6.",
+      icon: FaSyringe,
     },
     {
-      title: "Laser Biopsy Fee",
-      desc: "Technical embryology fee for laser perforation and cellular extraction (typically calculated per cycle).",
+      title: "Cost of Biopsy",
+      desc: "There is a fee charged by our lab to biopsy your embryos using laser. It varies based on cycle.",
       icon: FaMicroscope,
-      color: "from-blue to-[var(--blue)]",
-      iconBg: "bg-blue/10 text-blue",
-      border: "hover:border-blue/50",
     },
     {
-      title: "Genomic NGS Lab Testing",
-      desc: "Genetic laboratory sequencing costs, billed per individual embryo tested (e.g., batch of 4 to 8 embryos).",
+      title: "Cost of Genetics Lab",
+      desc: "This can vary based on how many embryos you are sending. If you send 4 to 8 it will be more expensive.",
       icon: FaDna,
-      color: "from-[#8b5cf6] to-[#a855f7]",
-      iconBg: "bg-[#8b5cf6]/10 text-[#8b5cf6]",
-      border: "hover:border-[#8b5cf6]/50",
     },
     {
-      title: "PGT-M Custom Probe Design",
-      desc: "Required for single-gene disorders to engineer family-specific molecular primers prior to the clinical cycle.",
+      title: "Custom Probes for PGT-M",
+      desc: "If you want to do PGT-M we need to design probes specific to your family. So this will add to your cost.",
       icon: FaVial,
-      color: "from-blue to-[var(--blue)]",
-      iconBg: "bg-blue/10 text-blue",
-      border: "hover:border-blue/50",
     },
     {
-      title: "Vitrification & Storage",
+      title: "Embryo Freezing Cost",
       desc: (
         <>
-          Liquid nitrogen cryo-maintenance for frozen blastocysts while awaiting genetic reports. See{" "}
+          Since you will need to freeze your blastocysts until you receive your
+          result. You will pay for embryo freezing and storage. Read more about{" "}
           <Link
-            href="/treatments"
+            href="/embryo-cryopreservation"
             className="font-medium text-blue underline underline-offset-2 hover:text-blue-dark"
           >
-            Embryo Freezing &amp; Banking
+            Embryo Freezing
           </Link>
           .
         </>
       ),
       icon: FaSnowflake,
-      color: "from-[#ea580c] to-[#f97316]",
-      iconBg: "bg-[#ea580c]/10 text-[#ea580c]",
-      border: "hover:border-[#ea580c]/50",
     },
     {
-      title: "Downstream FET Cycle",
-      desc: "Uterine priming medications, lining scans, embryo thawing, and soft catheter transfer.",
+      title: "Frozen Embryo Transfer Cost",
+      desc: "Finally you will need to do your Frozen Embryo transfer. This involves lining meds, scan and transferring the embryo.",
       icon: FaCalendarCheck,
-      color: "from-blue to-[var(--blue)]",
-      iconBg: "bg-blue/10 text-blue",
-      border: "hover:border-blue/50",
+    },
+  ];
+
+  const clinics = [
+    {
+      sector: "SECTOR 49",
+      city: "Noida",
+      address:
+        "3rd Floor, K-06, above FirstCry, Baraula, Sector 49, Noida, Uttar Pradesh 201301",
+      mapUrl:
+        "https://maps.google.com/?q=3rd+Floor+K-06+Sector+49+Noida+201301",
+      clinicUrl: "/best-ivf-doctor-in-noida",
+    },
+    {
+      sector: "RAJ NAGAR",
+      city: "Ghaziabad",
+      address:
+        "2nd Floor, RDC, C-53A, near Bikanervala, Sector 15, Sector 10, Raj Nagar, Ghaziabad, Uttar Pradesh 201002",
+      mapUrl:
+        "https://maps.google.com/?q=RDC+C-53A+Raj+Nagar+Ghaziabad+201002",
+      clinicUrl: "/best-ivf-doctor-in-ghaziabad",
+    },
+    {
+      sector: "LAJPAT NAGAR",
+      city: "Delhi",
+      address:
+        "Building Number 41, First Floor, Ring Road, Block Q, Lajpat Nagar IV, Lajpat Nagar, New Delhi 110024",
+      mapUrl:
+        "https://maps.google.com/?q=Building+41+Lajpat+Nagar+IV+New+Delhi+110024",
+      clinicUrl: "/best-ivf-doctor-in-delhi",
     },
   ];
 
   return (
-    <>
-      <section className="relative overflow-hidden bg-slate-50/70 px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
-      <div className="relative mx-auto w-full max-w-[1440px]">
-        {/* Cost Factors & Pricing Variables */}
+    <section
+      className="relative overflow-hidden py-8 sm:py-10 lg:py-12"
+      style={{ background: "var(--pink)" }}
+    >
+      <div className="page-container relative">
         <Reveal className="mb-6 sm:mb-8">
           <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
-            Transparency
+            Cost of Preimplantation Genetic Testing
           </p>
-          <h2 className="font-serif mt-1 text-[1.65rem] leading-[1.2] font-normal tracking-tight text-slate-900 sm:text-[2.1rem] lg:text-[2.35rem]">
-            PGT Cost Factors &amp; Pricing Variables in Delhi | Noida | Ghaziabad
+          <h2 className="font-serif mt-1 text-[1.65rem] leading-[1.2] font-normal tracking-tight text-ink sm:text-[2.1rem] lg:text-[2.35rem]">
+            PGT Cost Factors &amp; Pricing Variables in Delhi | Noida |
+            Ghaziabad
           </h2>
-          <p className="mt-2 text-[14px] leading-relaxed text-black sm:text-[15px]">
-            The cost of an IVF cycle with PGT testing depends on clinical and laboratory variables:
+          <p className="mt-2 text-[14px] leading-relaxed text-ink/75 sm:text-[15px]">
+            IVF with PGT has various cost component. These include-
           </p>
         </Reveal>
 
@@ -89,22 +111,18 @@ export default function PgtCostAndClinics() {
           stagger={0.05}
           className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
         >
-          {costFactors.map((item, idx) => {
+          {costFactors.map((item) => {
             const Icon = item.icon;
             return (
-              <StaggerItem key={idx}>
-                <div
-                  className={`group flex h-full flex-col justify-start rounded-[18px] border border-slate-200/90 bg-white p-5 shadow-[0_4px_16px_rgba(0,20,60,0.03)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_28px_rgba(0,30,80,0.08)] ${item.border}`}
-                >
-                  <div
-                    className={`inline-flex size-10 shrink-0 items-center justify-center rounded-xl ${item.iconBg}`}
-                  >
-                    <Icon className="size-5" />
+              <StaggerItem key={item.title}>
+                <div className="group flex h-full flex-col rounded-[20px] border border-[#fde2ec] bg-white p-5.5 shadow-[0_8px_24px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-rose/40 hover:shadow-[0_14px_36px_rgba(232,62,116,0.1)]">
+                  <div className="inline-flex size-10 shrink-0 items-center justify-center rounded-xl bg-rose text-white shadow-[0_4px_14px_rgba(232,62,116,0.35)]">
+                    <Icon className="size-4.5" />
                   </div>
-                  <h3 className="mt-3.5 text-[15px] font-bold text-slate-900 group-hover:text-blue transition-colors sm:text-[16px]">
+                  <h3 className="mt-3.5 text-[15px] font-bold text-ink transition-colors group-hover:text-rose sm:text-[16px]">
                     {item.title}
                   </h3>
-                  <div className="mt-2 text-[13px] leading-relaxed text-black sm:text-[13.5px]">
+                  <div className="mt-2 text-[13px] leading-relaxed text-ink/75 sm:text-[13.5px]">
                     {item.desc}
                   </div>
                 </div>
@@ -113,15 +131,69 @@ export default function PgtCostAndClinics() {
           })}
         </Stagger>
 
+        <div className="mt-12 sm:mt-16">
+          <Reveal className="mb-6 sm:mb-8">
+            <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
+              Visit Dr. Mona
+            </p>
+            <h2 className="font-serif mt-1 text-[1.65rem] leading-[1.2] font-normal tracking-tight text-ink sm:text-[2.1rem] lg:text-[2.35rem]">
+              Book a Consultation at Our Clinics
+            </h2>
+            <p className="mt-2 text-[14px] leading-relaxed text-ink/75 sm:text-[15px]">
+              Dr. Mona sees patients in Noida, Ghaziabad and Delhi, and offers
+              online consultations.
+            </p>
+          </Reveal>
+
+          <Stagger
+            stagger={0.06}
+            className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
+          >
+            {clinics.map((c) => (
+              <StaggerItem key={c.city}>
+                <div className="flex h-full flex-col justify-between rounded-[20px] border border-[#fde2ec] bg-white p-6 shadow-[0_8px_24px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-rose/35 hover:shadow-[0_14px_36px_rgba(232,62,116,0.1)]">
+                  <div>
+                    <span className="text-[11.5px] font-bold tracking-wider text-rose uppercase">
+                      {c.sector}
+                    </span>
+                    <h3 className="font-serif mt-1 text-[1.4rem] font-bold text-ink">
+                      {c.city}
+                    </h3>
+                    <p className="mt-2 text-[13px] leading-relaxed text-ink/75">
+                      {c.address}
+                    </p>
+                  </div>
+
+                  <div className="mt-6 flex flex-wrap items-center gap-3 border-t border-[#fde2ec] pt-4">
+                    <a
+                      href={c.mapUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-[12.5px] font-semibold text-blue hover:underline"
+                    >
+                      <FaMapMarkerAlt className="size-3" />
+                      Get directions
+                    </a>
+                    <span className="text-ink/30">•</span>
+                    <Link
+                      href={c.clinicUrl}
+                      className="text-[12.5px] font-semibold text-ink/75 hover:text-rose"
+                    >
+                      Clinic page
+                    </Link>
+                    <a
+                      href="#book-consultation"
+                      className="mt-2 w-full rounded-full border border-rose/30 bg-white py-2 text-center text-[13px] font-semibold text-ink transition-colors hover:border-rose hover:bg-rose hover:text-white"
+                    >
+                      Book appointment
+                    </a>
+                  </div>
+                </div>
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </div>
       </div>
     </section>
-
-    <ClinicsAppointmentCards
-      eyebrow="Visit Dr. Mona"
-      title="Book a Consultation at Our Clinics"
-      subtitle="Dr. Mona sees patients in Noida, Ghaziabad and Delhi, and offers online consultations."
-    />
-  </>
-);
+  );
 }
-

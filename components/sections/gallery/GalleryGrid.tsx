@@ -63,8 +63,8 @@ const galleryItems: GalleryItem[] = [
 
 export default function GalleryGrid() {
   return (
-    <section className="relative overflow-hidden bg-white px-4 py-6 sm:px-6 sm:py-7 lg:px-8 lg:py-8">
-      <div className="mx-auto w-full max-w-[1440px]">
+    <section className="relative overflow-hidden bg-white py-6 sm:py-7 lg:py-8">
+      <div className="page-container relative">
         {/* Gallery Grid */}
         <Stagger
           className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6.5"
