@@ -28,22 +28,22 @@ const registrations = [
 
 const accentStyles = {
   blue: {
-    badge: "bg-gradient-to-br from-[#3b82f6] to-blue-dark",
+    badge: "bg-gradient-to-br from-blue to-blue-dark",
     number: "text-blue",
-    border: "border-[#3b82f6]/45 hover:border-[#60a5fa]/80",
-    glow: "hover:shadow-[0_14px_36px_rgba(59,130,246,0.22)]",
+    border: "border-blue/30 hover:border-blue/65",
+    glow: "shadow-[0_4px_20px_rgba(0,71,202,0.08)] hover:shadow-[0_14px_36px_rgba(0,71,202,0.18)]",
   },
   rose: {
     badge: "bg-gradient-to-br from-rose to-rose-dark",
     number: "text-rose",
-    border: "border-rose/50 hover:border-rose/80",
-    glow: "hover:shadow-[0_14px_36px_rgba(232,62,116,0.25)]",
+    border: "border-rose/35 hover:border-rose/70",
+    glow: "shadow-[0_4px_20px_rgba(232,62,116,0.08)] hover:shadow-[0_14px_36px_rgba(232,62,116,0.18)]",
   },
   navy: {
     badge: "bg-gradient-to-br from-blue to-blue-dark",
-    number: "text-[#bfdbfe]",
-    border: "border-blue/50 hover:border-[#60a5fa]/70",
-    glow: "hover:shadow-[0_14px_36px_rgba(0,71,202,0.28)]",
+    number: "text-blue",
+    border: "border-blue/30 hover:border-blue/65",
+    glow: "shadow-[0_4px_20px_rgba(0,71,202,0.08)] hover:shadow-[0_14px_36px_rgba(0,71,202,0.18)]",
   },
 };
 
@@ -64,10 +64,10 @@ export default function LocationsRegistration() {
           <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
             Registered medical practitioner
           </p>
-          <h2 className="font-serif mt-2 text-[2rem] leading-tight font-bold tracking-tight text-black sm:text-[2.5rem] lg:text-[2.75rem]">
+          <h2 className="font-serif mt-2 text-[2rem] leading-tight font-normal tracking-tight text-ink sm:text-[2.5rem] lg:text-[2.75rem]">
             Medical Registration
           </h2>
-          <p className="mt-2 text-[13.5px] leading-relaxed text-black sm:text-[14.5px]">
+          <p className="mt-2 text-[13.5px] leading-relaxed text-ink sm:text-[14.5px]">
             Dr. Mona Dahiya is registered with the following medical councils.
           </p>
         </Reveal>
@@ -81,7 +81,7 @@ export default function LocationsRegistration() {
             return (
               <StaggerItem key={item.code}>
                 <article
-                  className={`flex h-full flex-col rounded-[22px] border bg-white/90 p-5 shadow-[0_8px_28px_rgba(0,10,40,0.35)] transition-all duration-300 sm:p-6 ${styles.border} ${styles.glow}`}
+                  className={`flex h-full flex-col rounded-[22px] border bg-white p-5 transition-all duration-300 hover:-translate-y-1 sm:p-6 ${styles.border} ${styles.glow}`}
                 >
                   <div className="flex items-start gap-4">
                     <span
@@ -90,7 +90,7 @@ export default function LocationsRegistration() {
                       {item.code}
                     </span>
                     <div className="min-w-0">
-                      <h3 className="text-[15px] font-semibold text-black sm:text-[16px]">
+                      <h3 className="text-[15px] font-semibold text-ink sm:text-[16px]">
                         {item.councilName}
                       </h3>
                       <p
@@ -98,7 +98,7 @@ export default function LocationsRegistration() {
                       >
                         {item.regNumber}
                       </p>
-                      <p className="mt-1 text-[12px] text-white/50 sm:text-[12.5px]">
+                      <p className="mt-1 text-[12px] text-ink/75 sm:text-[12.5px]">
                         {item.regLabel}
                       </p>
                     </div>

@@ -29,10 +29,16 @@ export default function IvfFaqsReviews() {
           {reviews.items.map((item) => (
             <StaggerItem key={item.name} className="h-full">
               <article className="flex h-full flex-col rounded-[22px] border border-[#fde2ec] bg-white p-5 shadow-[0_10px_28px_rgba(232,62,116,0.06)] sm:p-6">
-                <h3 className="text-[15.5px] font-bold tracking-tight text-black sm:text-[16px]">
-                  {item.title}
-                </h3>
-                <p className="mt-3 flex-1 text-[13.5px] leading-relaxed text-black">
+                {"title" in item && item.title ? (
+                  <h3 className="text-[15.5px] font-bold tracking-tight text-black sm:text-[16px]">
+                    {item.title}
+                  </h3>
+                ) : null}
+                <p
+                  className={`flex-1 text-[13.5px] leading-relaxed text-black ${
+                    "title" in item && item.title ? "mt-3" : ""
+                  }`}
+                >
                   {item.body}
                 </p>
                 <div className="mt-5 flex items-center gap-3 border-t border-[#fde2ec] pt-4">

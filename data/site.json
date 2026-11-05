@@ -526,7 +526,11 @@
   "ourServices": {
     "eyebrow": "Services we provide",
     "titlePrefix": "Infertility Treatment at",
-    "titleLocations": ["Noida", "Delhi", "Ghaziabad"],
+    "titleLocations": [
+      "Noida",
+      "Delhi",
+      "Ghaziabad"
+    ],
     "description": "Starting from simple IUI to advance lab procedures will be decided based on couple's investigation.",
     "cta": {
       "label": "View More Services",
@@ -1107,7 +1111,11 @@
           "name": "Little Angel IVF",
           "icon": "/images/affiliations/icon-baby-heart.jpg",
           "tone": "pink",
-          "tags": ["Noida", "Delhi", "Ghaziabad"]
+          "tags": [
+            "Noida",
+            "Delhi",
+            "Ghaziabad"
+          ]
         }
       ]
     },
@@ -1455,7 +1463,11 @@
       "subtitle": "Fill in your details and we will get back to you shortly.",
       "submitLabel": "Book Consultation",
       "disclaimer": "",
-      "clinics": ["Noida", "Ghaziabad", "Delhi"]
+      "clinics": [
+        "Noida",
+        "Ghaziabad",
+        "Delhi"
+      ]
     }
   },
   "footer": {
@@ -2270,18 +2282,17 @@
           "body": "I had a fantastic experience with Dr. Mona Dahiya. From the moment we entered their IVF centre, I felt welcome and at ease. Dr. Mona was attentive, listened to my concerns, and explained my condition and treatment options clearly. Her professionalism and expertise shone through. I highly recommend Dr. Mona for her compassionate approach and dedication to patient care.",
           "initial": "R",
           "name": "Rajesh Shakya",
-          "source": "Google patient review"
+          "source": "Patient review"
         },
         {
           "title": "Compassion & Care",
           "body": "Dr. Mona Dahiya's expertise and compassionate care made our IVF journey a truly positive one. Her guidance throughout ovarian stimulation was exceptional. She clearly explained each step, addressed our concerns with patience, and her constant encouragement made all the difference. Thank you, Dr. Dahiya, for helping make our dream of parenthood a reality.",
           "initial": "F",
           "name": "Firoj khan",
-          "source": "Google patient review"
+          "source": "Patient review"
         },
         {
-          "title": "Top IVF Doctor",
-          "body": "Dr. Mona Dahiya's reputation as a top IVF doctor is so well-deserved. Her clear guidance, ethical approach and genuine care gave us confidence throughout treatment. We are deeply grateful for her support.",
+          "body": "Dr. Mona Dahiya's reputation as a top IVF doctor is so well-deserved. Her expertise, combined with her genuine care and compassion, sets her apart. She treated us with respect, listened to our concerns, and empowered us to make informed decisions. Thanks to her, we're now proud parents, and our hearts are overflowing with gratitude.",
           "initial": "M",
           "name": "Manjesh Rajput",
           "source": "Google patient review"

@@ -60,6 +60,7 @@ export default function IvfFaqsPage() {
             </>
           }
           appendContacts={false}
+          consultationDuration="30 minutes"
         />
       </SectionReveal>
 
