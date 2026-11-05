@@ -10,67 +10,63 @@ import {
 const conditions = [
   {
     number: "1",
-    title: "Low count, motility or shape (OATS)",
+    title: "Oligo/Astheno/Teratozoospermi (OATS)",
     description: (
       <>
-        Count under 15 million/mL, motility under 30% or abnormal shape. See{" "}
+        If your sperm count is less than 15 million/ml, motility less than 30%
+        or you have teratozoospermia.{" "}
         <Link
           href="/low-sperm-count-oligospermia"
-          className="font-medium text-blue underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-rose"
         >
-          Low Sperm Count
+          Read More
         </Link>
-        .
       </>
     ),
   },
   {
     number: "2",
-    title: "High DNA fragmentation (DFI over 25%)",
+    title: "DNA Fragmentation greater than 25% (DFI > 25%)",
     description: (
       <>
-        Antioxidants and microfluidic sorting. See{" "}
+        Antioxidants and microfluidic method of sperm selection.{" "}
         <Link
           href="/sperm-dna-fragmentation-test"
-          className="font-medium text-blue underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-rose"
         >
-          Sperm DNA Fragmentation Test
+          Read More
         </Link>
-        .
       </>
     ),
   },
   {
     number: "3",
-    title: "Azoospermia (no sperm)",
+    title: "Azoospermia",
     description: (
       <>
-        Telling obstructive from non-obstructive cases and planning retrieval.
-        See{" "}
+        Find out whether you have obstructive or non-obstructive azoospermia and
+        plan for sperm retrieval.{" "}
         <Link
           href="/azoospermia-treatment"
-          className="font-medium text-blue underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-rose"
         >
-          Azoospermia Treatment
+          Read More
         </Link>
-        .
       </>
     ),
   },
   {
     number: "4",
-    title: "Surgical retrieval candidates",
+    title: "Blockage or Ejaculatory Problems",
     description: (
       <>
-        PESA, TESA or micro-TESE for blockages, past vasectomy or ejaculation
-        problems. See{" "}
+        Retrieving sperm from the body using PESA/TESE/micro TESE technique.{" "}
         <Link
           href="/surgical-sperm-retrieval-tesa-pesa"
-          className="font-medium text-blue underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-rose"
         >
-          Surgical Sperm Retrieval
+          Read More
         </Link>
-        .
       </>
     ),
   },
@@ -78,7 +74,7 @@ const conditions = [
     number: "5",
     title: "Varicocele",
     description:
-      "Swollen scrotal veins that can steadily lower semen quality.",
+      "Veins that swell up around the testis, reducing your sperm quality.",
   },
 ];
 
@@ -86,7 +82,7 @@ export default function MaleInfertilityNoidaConditions() {
   return (
     <TreatmentSection>
       <TreatmentSectionHeader
-        eyebrow="Conditions treated"
+        eyebrow="Male Fertility Issues Treated in Noida"
         title="Male Fertility Conditions Treated in Noida"
       />
 
@@ -101,11 +97,11 @@ export default function MaleInfertilityNoidaConditions() {
                 <span className="flex size-7 shrink-0 items-center justify-center rounded-lg bg-rose text-[13px] font-bold text-white shadow-[0_2px_10px_rgba(232,62,116,0.35)]">
                   {item.number}
                 </span>
-                <h3 className="text-[15px] font-bold text-black sm:text-[16px]">
+                <h3 className="text-[15px] font-bold text-ink sm:text-[16px]">
                   {item.title}
                 </h3>
               </div>
-              <p className="mt-3 text-[13px] leading-relaxed text-black sm:text-[13.5px]">
+              <p className="mt-3 text-[13px] leading-relaxed text-ink/80 sm:text-[13.5px]">
                 {item.description}
               </p>
             </div>

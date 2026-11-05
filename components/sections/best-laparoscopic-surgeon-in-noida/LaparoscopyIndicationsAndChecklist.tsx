@@ -51,7 +51,7 @@ const indications: { number: string; title: string; description: ReactNode }[] =
       number: "3",
       title: "Defects in the uterine cavity",
       description:
-        "Removal of septum and T shaped cavity or correction of Ashermans syndrome (adhesions within uterine cavity)",
+        "Removal of septum and T shaped cavity or correction of Ashermans syndrome (adhesions within uterine cavity).",
     },
     {
       number: "4",
@@ -81,11 +81,12 @@ const checklist = [
     text: "CBC, PT/ INR, APTT, renal and liver profile, ECG.",
   },
   {
-    title: "Cycle day 6-10th day of your menstrual cycle for better visualization",
+    title:
+      "Cycle day 6-10th day of your menstrual cycle for better visualization.",
     text: "",
   },
   {
-    title: "HIV, HBsAg, HCV and VDRL as per ART act of India",
+    title: "HIV, HBsAg, HCV and VDRL as per ART act of India.",
     text: "",
   },
 ];

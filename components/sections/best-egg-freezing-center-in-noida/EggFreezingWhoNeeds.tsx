@@ -10,32 +10,32 @@ import {
 const items = [
   {
     number: "1",
-    title: "Young women wanting to delay pregnancy.",
+    title: "Young women wanting to delay pregnancy",
     description:
       "Most women come to us between 28 and 35 years of age wanting to store their better quality eggs for when they decide to start a family. They may be busy completing their degree or career, or have personal reasons.",
   },
   {
     number: "2",
-    title: "History of early menopause.",
+    title: "History of early menopause",
     description:
       "If someone in your family has suffered from early menopause/premature ovarian failure, it is recommended that you consider freezing your eggs.",
   },
   {
     number: "3",
-    title: "Advanced Endometriosis.",
+    title: "Advanced Endometriosis",
     description:
       "If you suffer from advanced endometriosis with repeated episodes of chocolate cysts, or have had surgery on your ovary to remove cysts, then you should consider egg freezing.",
   },
   {
     number: "4",
-    title: "Chemo or Radiotherapy.",
+    title: "Chemo or Radiotherapy",
     description: (
       <>
         Certain types of chemo or radiotherapy can damage the eggs. Speak to
         your doctor about starting an{" "}
         <Link
           href="/oncofertility-cancer-fertility-preservation"
-          className="font-medium text-blue underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-rose"
         >
           Oncofertility Program
         </Link>{" "}
@@ -45,7 +45,7 @@ const items = [
   },
   {
     number: "5",
-    title: "Prefer not to freeze embryos.",
+    title: "Prefer not to freeze embryos",
     description:
       "If you don't want to store extra embryos during your IVF cycle, you can opt to store your eggs instead.",
   },

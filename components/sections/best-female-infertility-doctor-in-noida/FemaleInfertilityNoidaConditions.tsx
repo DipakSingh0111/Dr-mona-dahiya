@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Stagger, StaggerItem } from "@/components/ui/Reveal";
+import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 import {
   TreatmentSection,
   TreatmentSectionHeader,
@@ -10,15 +10,17 @@ import {
 const conditions = [
   {
     number: "1",
-    title: "PCOS and irregular ovulation",
+    title: "PCOD / Not ovulating",
     description: (
       <>
-        Letrozole-based ovulation induction and OHSS-safe protocols. See{" "}
+        Letrozole can be used to get you to ovulate. Keep you protected with IVF
+        protocols of lower dosing. Read more about what you should know when
+        treating{" "}
         <Link
           href="/best-pcos-pcod-treatment-centre-in-noida"
-          className="font-medium text-blue underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-rose"
         >
-          PCOS Treatment
+          PCOD
         </Link>
         .
       </>
@@ -26,31 +28,31 @@ const conditions = [
   },
   {
     number: "2",
-    title: "Low ovarian reserve (low AMH)",
+    title: "Low AMH / Ovarian reserve",
     description: (
       <>
-        DuoStim and micro-flare protocols focused on own-egg success. See{" "}
+        Read more about what to know if you have{" "}
         <Link
           href="/best-low-amh-treatment-in-noida"
-          className="font-medium text-blue underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-rose"
         >
-          Low AMH Treatment
-        </Link>
-        .
+          Low AMH
+        </Link>{" "}
+        and want to have a baby.
       </>
     ),
   },
   {
     number: "3",
-    title: "Blocked tubes and hydrosalpinx",
+    title: "Blocked tubes",
     description: (
       <>
-        Assessment, tubal cannulation or laparoscopic clipping. See{" "}
+        Blocked tubes and hydrosalpinx. Do your tubes need testing? Read more.{" "}
         <Link
           href="/fallopian-tube-blockage-treatment"
-          className="font-medium text-blue underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-rose"
         >
-          Fallopian Tube Blockage
+          Blocked tubes treatment
         </Link>
         .
       </>
@@ -58,16 +60,15 @@ const conditions = [
   },
   {
     number: "4",
-    title: "Endometriosis and adenomyosis",
+    title: "Endometriosis",
     description: (
       <>
-        Egg-sparing embryo banking with targeted suppression before a frozen
-        transfer. See{" "}
+        Learn about mild endo suppression and egg harvesting to get pregnant.{" "}
         <Link
           href="/endometriosis-fertility-treatment"
-          className="font-medium text-blue underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-rose"
         >
-          Endometriosis
+          Endo treatment
         </Link>
         .
       </>
@@ -75,17 +76,15 @@ const conditions = [
   },
   {
     number: "5",
-    title: "Uterine problems",
+    title: "Septum / Fibroids in uterus",
     description: (
       <>
-        Hysteroscopy for septa, polyps or adhesions. See{" "}
         <Link
           href="/best-laparoscopic-surgeon-in-noida"
-          className="font-medium text-blue underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-rose"
         >
-          Laparoscopy &amp; Hysteroscopy
+          When should you see a doctor?
         </Link>
-        .
       </>
     ),
   },
@@ -95,13 +94,19 @@ export default function FemaleInfertilityNoidaConditions() {
   return (
     <TreatmentSection>
       <TreatmentSectionHeader
-        eyebrow="Conditions treated"
+        eyebrow="Things we can treat"
         title="Female Fertility Conditions Treated in Noida"
       />
 
+      <Reveal variant="fadeUp" delay={0.04}>
+        <h3 className="mt-6 border-b border-ink/15 pb-2 text-[1.05rem] font-semibold text-ink sm:text-[1.15rem]">
+          Treatments for Women
+        </h3>
+      </Reveal>
+
       <Stagger
-        delay={0.04}
-        className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-5"
+        delay={0.06}
+        className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-5"
       >
         {conditions.map((item) => (
           <StaggerItem key={item.number} className="h-full">
@@ -110,11 +115,11 @@ export default function FemaleInfertilityNoidaConditions() {
                 <span className="flex size-7 shrink-0 items-center justify-center rounded-lg bg-rose text-[13px] font-bold text-white shadow-[0_2px_10px_rgba(232,62,116,0.35)]">
                   {item.number}
                 </span>
-                <h3 className="text-[15px] font-bold text-black sm:text-[16px]">
+                <h3 className="text-[15px] font-bold text-ink sm:text-[16px]">
                   {item.title}
                 </h3>
               </div>
-              <p className="mt-3 text-[13px] leading-relaxed text-black sm:text-[13.5px]">
+              <p className="mt-3 text-[13px] leading-relaxed text-ink/80 sm:text-[13.5px]">
                 {item.description}
               </p>
             </div>

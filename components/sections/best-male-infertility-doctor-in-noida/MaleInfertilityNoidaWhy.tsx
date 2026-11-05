@@ -9,19 +9,19 @@ import {
 
 const reasons = [
   {
-    title: "Couple-first approach",
+    title: "We Treat the Couple Together",
     description:
-      "Both partners are evaluated together, avoiding delays from treating one in isolation.",
+      "Both male and female partners are evaluated to make sure they are not wasting time in getting treated separately.",
   },
   {
-    title: "Microfluidic sperm sorting",
+    title: "Microfluidics",
     description:
-      "Selects sperm with low DNA damage without high-speed centrifugation.",
+      "Technique of selecting sperm with less DNA damage without subjecting them to high speed spins.",
   },
   {
-    title: "Coordinated retrieval and ICSI",
+    title: "Coordinated Retrieval and ICSI",
     description:
-      "Fresh testicular or epididymal sperm is injected straight into mature eggs on the same day.",
+      "If need be we can retrieve sperm from the testis or epididymis and do ICSI using fresh sperm on the same day.",
   },
 ];
 
@@ -29,7 +29,7 @@ export default function MaleInfertilityNoidaWhy() {
   return (
     <TreatmentSection>
       <TreatmentSectionHeader
-        eyebrow="Expertise & authority"
+        eyebrow="What do our male fertility patients like about us?"
         title="Why Male Infertility Patients in Noida Consult Dr. Mona Dahiya"
       />
 
@@ -41,10 +41,10 @@ export default function MaleInfertilityNoidaWhy() {
                 <FaCheck className="size-3.5" />
               </span>
               <div className="min-w-0">
-                <h3 className="text-[15px] font-bold text-black sm:text-[16px]">
+                <h3 className="text-[15px] font-bold text-ink sm:text-[16px]">
                   {item.title}
                 </h3>
-                <p className="mt-1.5 text-[13.5px] leading-relaxed text-black sm:text-[14px]">
+                <p className="mt-1.5 text-[13.5px] leading-relaxed text-ink/80 sm:text-[14px]">
                   {item.description}
                 </p>
               </div>

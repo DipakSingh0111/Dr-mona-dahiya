@@ -114,7 +114,7 @@ export default function PcosHero() {
         </div>
 
         <HeroBannerImage
-          src="/images/about-mona-dahiya/pcos-doctor.jpg"
+          src="/images/ivf-noida-01.jpg"
           alt="Dr. Mona Dahiya - PCOS & PCOD Specialist"
         />
       </div>

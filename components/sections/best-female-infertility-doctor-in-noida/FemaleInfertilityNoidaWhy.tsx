@@ -9,19 +9,19 @@ import {
 
 const reasons = [
   {
-    title: "Gold-medalist training",
+    title: "Achievements",
     description:
-      "MBBS (Gold Medalist, Lady Hardinge), MD (Gold Medalist, Maulana Azad Medical College), DNB and Singapore General Hospital ART Fellow.",
+      "She has won Gold medals throughout her course. From MBBS to MD she was always first.",
   },
   {
-    title: "Conservative approach",
+    title: "IVF May Not Be Required",
     description:
-      "Simpler, affordable options such as medicines, lifestyle changes, ovulation induction or IUI come before IVF.",
+      "Only 1/3rd of our patients require IVF. Some can fall pregnant with lifestyle changes, medications, trying at the right times, IUI or simple surgery.",
   },
   {
-    title: "Direct physician care",
+    title: "Honest Medical Care",
     description:
-      "Consultations, scans, egg retrievals and embryo transfers are done by Dr. Dahiya herself.",
+      "All your consults, scans, retrieval and transfers will be performed by Dr Mona Dahiya herself.",
   },
 ];
 
@@ -29,7 +29,7 @@ export default function FemaleInfertilityNoidaWhy() {
   return (
     <TreatmentSection>
       <TreatmentSectionHeader
-        eyebrow="Expertise & authority"
+        eyebrow="What makes us different?"
         title="Why Fertility Patients in Noida Choose Dr. Mona Dahiya"
       />
 
@@ -41,10 +41,10 @@ export default function FemaleInfertilityNoidaWhy() {
                 <FaCheck className="size-3.5" />
               </span>
               <div className="min-w-0">
-                <h3 className="text-[15px] font-bold text-black sm:text-[16px]">
+                <h3 className="text-[15px] font-bold text-ink sm:text-[16px]">
                   {item.title}
                 </h3>
-                <p className="mt-1.5 text-[13.5px] leading-relaxed text-black sm:text-[14px]">
+                <p className="mt-1.5 text-[13.5px] leading-relaxed text-ink/80 sm:text-[14px]">
                   {item.description}
                 </p>
               </div>

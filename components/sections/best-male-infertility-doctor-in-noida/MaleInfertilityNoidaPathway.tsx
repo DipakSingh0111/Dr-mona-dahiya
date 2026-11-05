@@ -15,68 +15,70 @@ const steps: {
 }[] = [
   {
     number: "1",
-    title: "Lifestyle and the 74-day sperm cycle",
+    title: "Lifestyle advice and know your Spermatogenesis cycle (74 Days)",
     bullets: [
-      "Remove smoking, heat and toxin exposure",
-      "90 days of antioxidants (CoQ10, L-carnitine, zinc, lycopene)",
+      "Avoid smoking, excess heat and pollution",
+      "Take antioxidants for 90 days like Co Enzyme Q10, L-carnitine, zinc and lycopene.",
     ],
   },
   {
     number: "2",
-    title: "Medical and hormonal treatment",
+    title: "Medication if any problem found",
     bullets: [
-      "Antibiotics for hidden infection (leucocytospermia)",
-      "Hormonal treatment (clomiphene or aromatase inhibitors) for testosterone-estrogen imbalance",
+      "If any occult infection is found (leucocytospermia) we can start oral antibiotics, or use hormones (Clomid or Arimidex) to improve testosterone level if the ratio of testosterone to estrogen is reduced.",
     ],
   },
   {
     number: "3",
-    title: "Varicocele correction",
+    title: "Treatment of Varicocele",
     bullets: [
-      "Referral for microsurgical varicocelectomy where clinically indicated",
+      "If a clinical varicocele is found we will refer you for varicocele repair.",
     ],
   },
   {
     number: "4",
-    title: "IUI",
+    title: "Intra Uterine Insemination (IUI)",
     bullets: [
       <>
-        For mild cases with a post-wash motile count above 5 to 10 million. See{" "}
+        In case of mild oligo asthenozoospermia, if your count after wash is
+        more than 5 to 10 million live moving sperm.{" "}
         <Link
           href="/best-iui-doctor-in-noida"
-          className="font-medium text-blue underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-rose"
         >
-          IUI
+          Read More
         </Link>
       </>,
     ],
   },
   {
     number: "5",
-    title: "ICSI with microfluidics",
+    title: "Intra Cytoplasmic Sperm Injection (ICSI) using microfluidic technique",
     bullets: [
       <>
-        For severe OATS or high DFI. See{" "}
+        This technique helps in selecting good sperm having less DNA
+        fragmentation.{" "}
         <Link
           href="/intracytoplasmic-sperm-injection-icsi-treatment"
-          className="font-medium text-blue underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-rose"
         >
-          ICSI
+          Read More
         </Link>
       </>,
     ],
   },
   {
     number: "6",
-    title: "Surgical sperm retrieval",
+    title: "Retrieval of sperm from body (PESA/TESE/Micro TESE)",
     bullets: [
       <>
-        PESA, TESA or micro-TESE for azoospermia. See{" "}
+        If there is no sperm present in the ejaculated sample we can get sperm
+        from the body to inject directly into ova.{" "}
         <Link
           href="/surgical-sperm-retrieval-tesa-pesa"
-          className="font-medium text-blue underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-rose"
         >
-          Surgical Sperm Retrieval
+          Read More
         </Link>
       </>,
     ],
@@ -87,8 +89,8 @@ export default function MaleInfertilityNoidaPathway() {
   return (
     <TreatmentSection>
       <TreatmentSectionHeader
-        eyebrow="How it works"
-        title="Step-by-Step Treatment Pathway"
+        eyebrow="Treatment For Male Infertility"
+        title="Treatment Protocol for Male Infertility in Noida"
       />
 
       <Stagger
@@ -102,7 +104,7 @@ export default function MaleInfertilityNoidaPathway() {
                 <span className="flex size-7 shrink-0 items-center justify-center rounded-lg bg-rose text-[13px] font-bold text-white shadow-[0_2px_10px_rgba(232,62,116,0.35)]">
                   {item.number}
                 </span>
-                <h3 className="text-[14.5px] font-bold text-black sm:text-[15px]">
+                <h3 className="text-[14.5px] font-bold text-ink sm:text-[15px]">
                   {item.title}
                 </h3>
               </div>
@@ -110,7 +112,7 @@ export default function MaleInfertilityNoidaPathway() {
                 {item.bullets.map((bullet, idx) => (
                   <li
                     key={idx}
-                    className="relative pl-4 text-[13px] leading-relaxed text-black before:absolute before:top-2 before:left-0 before:h-1.5 before:w-1.5 before:rounded-full before:bg-rose sm:text-[13.5px]"
+                    className="relative pl-4 text-[13px] leading-relaxed text-ink/80 before:absolute before:top-2 before:left-0 before:h-1.5 before:w-1.5 before:rounded-full before:bg-rose sm:text-[13.5px]"
                   >
                     {bullet}
                   </li>

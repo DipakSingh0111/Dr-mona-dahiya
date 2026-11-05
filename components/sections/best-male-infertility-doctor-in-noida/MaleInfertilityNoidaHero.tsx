@@ -3,22 +3,21 @@ import HeroBannerImage from "@/components/ui/HeroBannerImage";
 
 import Link from "next/link";
 import { FaHome, FaChevronRight } from "react-icons/fa";
-import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
+import { Stagger, StaggerItem } from "@/components/ui/Reveal";
 
 export default function MaleInfertilityNoidaHero() {
   const badges = [
-    "Couple-first approach",
-    "Sector 49, Noida",
-    "Micro-TESE coordination",
-    "Online or in person",
+    "Treat both partners together",
+    "Sector 49 Noida",
+    "Micro TESE if needed",
+    "Consultation Online / Face to face",
   ];
 
   return (
     <section
       className="relative flex flex-col justify-center overflow-hidden py-8 sm:py-10 lg:min-h-[calc(100svh-var(--site-header-h,8.75rem))] lg:py-8 xl:py-10"
       style={{
-        background:
-          "var(--pink)",
+        background: "var(--pink)",
       }}
     >
       <div className="page-container relative grid grid-cols-1 items-start gap-6 sm:gap-7 lg:grid-cols-12 lg:items-start lg:gap-8 xl:gap-12">
@@ -46,7 +45,7 @@ export default function MaleInfertilityNoidaHero() {
           </nav>
 
           <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">
-            Male fertility care in Noida
+            Male Fertility Noida
           </p>
 
           <h1 className="font-serif mt-1.5 max-w-[40rem] text-[1.75rem] leading-[1.16] font-normal tracking-tight text-ink sm:text-[2.25rem] lg:text-[2.55rem] xl:text-[2.75rem]">
@@ -54,18 +53,18 @@ export default function MaleInfertilityNoidaHero() {
           </h1>
 
           <p className="mt-3.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
-            Male factors contribute to about half of all conception problems,
-            from low count and poor motility to high DNA damage or no sperm at
-            all (azoospermia). From Sector 49, Noida, Dr. Mona Dahiya (Singapore
-            General Hospital fellow, 25+ years&apos; experience) coordinates
-            advanced testing, microfluidic sperm selection and surgical sperm
-            retrieval.
+            Infertility issues can be caused by low sperm count/motility, high
+            DNA fragmentation or complete absence of sperm (azoospermia) in
+            males, which accounts for almost 50% of cases of inability to
+            conceive. Dr Mona Dahiya offers services ranging from male
+            infertility diagnosis to microfluidic techniques for selecting less
+            DNA-damaged spermatozoa and retrieving sperm surgically.
           </p>
 
           <div className="mt-5 flex flex-wrap items-center gap-3 sm:gap-4 lg:mt-6">
             <a
               href="#book-consultation"
-              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-rose to-[#f43f5e] px-5 py-2.5 text-[13px] font-semibold text-ink shadow-[0_4px_16px_rgba(232,62,116,0.35)] transition-all hover:brightness-110 sm:px-6 sm:py-3 sm:text-[14px]"
+              className="inline-flex items-center justify-center rounded-full bg-rose px-5 py-2.5 text-[13px] font-semibold text-white shadow-[0_4px_16px_rgba(232,62,116,0.35)] transition-all hover:bg-rose-dark sm:px-6 sm:py-3 sm:text-[14px]"
             >
               Book In-Clinic Consultation
             </a>
@@ -80,9 +79,9 @@ export default function MaleInfertilityNoidaHero() {
           <div className="mt-4 sm:mt-5">
             <Link
               href="/best-ivf-patient-reviews"
-              className="inline-flex items-center gap-1.5 text-[12.5px] font-medium text-ink/90 transition-colors hover:text-rose-dark sm:text-[13.5px]"
+              className="inline-flex items-center gap-1.5 text-[12.5px] font-medium text-rose transition-colors hover:text-rose-dark sm:text-[13.5px]"
             >
-              Read Dr. Mona&apos;s Google reviews
+              Read Dr Mona Dahiya&apos;s Reviews
               <span aria-hidden>→</span>
             </Link>
           </div>
@@ -93,7 +92,7 @@ export default function MaleInfertilityNoidaHero() {
           >
             {badges.map((badge) => (
               <StaggerItem key={badge}>
-                <span className="inline-flex items-center rounded-full border border-rose/25 bg-white px-3 py-1 text-[11px] font-medium text-ink/90 backdrop-blur-md sm:px-3.5 sm:py-1.5 sm:text-[12px]">
+                <span className="inline-flex items-center rounded-full border border-rose/35 bg-transparent px-4 py-1.5 text-[11.5px] font-semibold text-ink sm:px-5 sm:py-2 sm:text-[12.5px]">
                   {badge}
                 </span>
               </StaggerItem>
@@ -102,7 +101,7 @@ export default function MaleInfertilityNoidaHero() {
         </div>
 
         <HeroBannerImage
-          src="/images/about-mona-dahiya/sperm-freezing-doctor.jpg"
+          src="/images/best-male-infertility.jpg"
           alt="Dr. Mona Dahiya — Best Male Infertility Doctor in Noida"
         />
       </div>

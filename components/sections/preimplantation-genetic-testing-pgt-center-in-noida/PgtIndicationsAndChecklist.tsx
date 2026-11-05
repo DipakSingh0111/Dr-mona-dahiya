@@ -56,8 +56,8 @@ export default function PgtIndicationsAndChecklist() {
       desc: "To check if there is any inversion/translocation or other chromosomal error.",
     },
     {
-      title: "Couples Carrier Screen by NGSs",
-      desc: "To see if you are both are carriers for any autosomal or X linked disorders. (Needed to make probes for PGT-M)",
+      title: "Couples Carrier Screen by NGS",
+      desc: "To see if you are both carriers for any autosomal or X linked disorders. (Needed to make probes for PGT-M)",
     },
     {
       title: "Check Your Ovarian Reserve",
@@ -65,14 +65,32 @@ export default function PgtIndicationsAndChecklist() {
     },
     {
       title: "Semen Analysis + Sperm DFI",
-      desc: "To check shape and DNA fragmentation of your sperm.",
+      desc: (
+        <>
+          To check shape and{" "}
+          <Link
+            href="/sperm-dna-fragmentation-test"
+            className="font-medium text-blue underline underline-offset-2 hover:text-blue-dark"
+          >
+            DNA fragmentation
+          </Link>{" "}
+          of your sperm.
+        </>
+      ),
     },
     {
       title: "Evaluate Your Uterus",
       desc: (
         <>
-          By doing a 3D SIS or Hysteroscopy we can ensure that your uterus will
-          accept a frozen embryo in future. Read more about{" "}
+          By doing a 3D SIS or{" "}
+          <Link
+            href="/hysteroscopy-treatment"
+            className="font-medium text-blue underline underline-offset-2 hover:text-blue-dark"
+          >
+            Hysteroscopy
+          </Link>{" "}
+          we can ensure that your uterus will accept a frozen embryo in future.
+          Read more about{" "}
           <Link
             href="/frozen-embryo-transfer"
             className="font-medium text-blue underline underline-offset-2 hover:text-blue-dark"

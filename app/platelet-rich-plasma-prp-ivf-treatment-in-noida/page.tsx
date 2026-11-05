@@ -58,8 +58,9 @@ export default function PrpTherapyPage() {
           sectionId="book-consultation"
           eyebrow="Next step"
           title="Book an In-Clinic or Online Consultation"
-          subtitle="Call our patient care team or fill out the consultation form to discuss PRP therapy with Dr. Mona Dahiya in Noida, Ghaziabad or Delhi, or schedule an online consultation. Direct line: +91 92679 82924."
+          subtitle="Book an in-clinic consultation with Dr. Mona Dahiya in Noida, Ghaziabad or Delhi, or an online review of your reports. Direct line: +91 92679 82924."
           appendContacts={false}
+          consultationDuration=""
         />
       </SectionReveal>
 

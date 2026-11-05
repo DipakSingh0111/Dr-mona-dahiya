@@ -13,17 +13,17 @@ const costCards = [
   {
     title: "Centrifugation",
     description:
-      "Cost of materials for PRP preparation (closed tube system + gel + catheter): Rs. 10,000 - Rs. 18,000 / instillation",
+      "Cost of materials for PRP preparation (closed tube system + gel + catheter): Rs. 10,000 – Rs. 18,000 / instillation",
   },
   {
     title: "Monitoring with Doppler",
     description:
-      "USG with Doppler to see blood flow and lining: Rs. 3000 - Rs. 5000 for 2-3 scans.",
+      "USG with Doppler to see blood flow and lining: Rs. 3000 – Rs. 5000 for 2-3 scans",
   },
   {
     title: "PRP into Ovaries (If applicable)",
     description:
-      "Rs. 35,000 - Rs. 60,000 for Ovarian injection of PRP under USG guidance with sedation",
+      "Rs. 35,000 – Rs. 60,000 for Ovarian injection of PRP under USG guidance with sedation",
   },
   {
     title: "Frozen Embryo Transfer",

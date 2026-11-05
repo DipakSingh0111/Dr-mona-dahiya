@@ -10,67 +10,68 @@ import {
 const steps = [
   {
     number: "1",
-    title: "History and diagnostic mapping",
-    description: "Menstrual history, past surgery and baseline tests",
+    title: "History",
+    description:
+      "Ask you about your periods and if you have had any surgeries. Explain what basic work up we will do on you.",
   },
   {
     number: "2",
-    title: "Pathway A: ovulation correction",
+    title: "Test",
     description: (
       <>
-        Lifestyle changes and Letrozole, tracked by{" "}
+        See if you are not{" "}
         <Link
-          href="/follicular-ultrasound"
-          className="font-medium text-blue underline underline-offset-2 hover:text-white"
+          href="/best-pcos-pcod-treatment-centre-in-noida"
+          className="font-medium text-blue underline underline-offset-2 hover:text-rose"
         >
-          Follicular Ultrasound
+          ovulating
         </Link>
+        , tubes are blocked or have endo.
       </>
     ),
   },
   {
     number: "3",
-    title: "Pathway B: insemination",
+    title: "Small surgery",
     description: (
       <>
+        Perform{" "}
         <Link
           href="/best-iui-doctor-in-noida"
-          className="font-medium text-blue underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-rose"
         >
-          IUI
+          insemination
         </Link>{" "}
-        for 3 to 4 cycles for unexplained or mild cervical factors
+        and/or small{" "}
+        <Link
+          href="/best-laparoscopic-surgeon-in-noida"
+          className="font-medium text-blue underline underline-offset-2 hover:text-rose"
+        >
+          key hole surgery
+        </Link>
+        .
       </>
     ),
   },
   {
     number: "4",
-    title: "Pathway C: surgical correction",
-    description: (
-      <>
-        Keyhole surgery by{" "}
-        <Link
-          href="/best-laparoscopic-surgeon-in-noida"
-          className="font-medium text-blue underline underline-offset-2 hover:text-white"
-        >
-          Laparoscopy &amp; Hysteroscopy
-        </Link>
-      </>
-    ),
+    title: "Medications",
+    description: "Medicate you to resolve these issues.",
   },
   {
     number: "5",
-    title: "Pathway D: IVF",
+    title: "IVF",
     description: (
       <>
-        Blocked tubes, severe endometriosis or low reserve treated with{" "}
+        Blocked tubes or endo or have low ovarian reserve. Blastocyst will be
+        cultured using{" "}
         <Link
           href="/ivf-treatment"
-          className="font-medium text-blue underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-rose"
         >
           IVF
-        </Link>{" "}
-        and blastocyst culture
+        </Link>
+        .
       </>
     ),
   },
@@ -80,7 +81,7 @@ export default function FemaleInfertilityNoidaPathway() {
   return (
     <TreatmentSection>
       <TreatmentSectionHeader
-        eyebrow="How it works"
+        eyebrow="What to expect at a consultation"
         title="Step-by-Step Treatment Pathway"
       />
 
@@ -95,11 +96,11 @@ export default function FemaleInfertilityNoidaPathway() {
                 <span className="flex size-7 shrink-0 items-center justify-center rounded-lg bg-rose text-[13px] font-bold text-white shadow-[0_2px_10px_rgba(232,62,116,0.35)]">
                   {item.number}
                 </span>
-                <h3 className="text-[14.5px] font-bold text-black sm:text-[15px]">
+                <h3 className="text-[14.5px] font-bold text-ink sm:text-[15px]">
                   {item.title}
                 </h3>
               </div>
-              <p className="mt-3 flex items-start gap-2 text-[13px] leading-relaxed text-black sm:text-[13.5px]">
+              <p className="mt-3 flex items-start gap-2 text-[13px] leading-relaxed text-ink/80 sm:text-[13.5px]">
                 <span
                   aria-hidden
                   className="mt-1.5 inline-block size-1.5 shrink-0 rounded-full bg-rose"

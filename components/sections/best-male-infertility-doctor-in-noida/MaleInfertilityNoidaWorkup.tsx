@@ -8,20 +8,20 @@ import {
 } from "@/components/ui/treatment";
 
 const tests = [
-  "Computer-assisted semen analysis (CASA): count, progressive motility and strict Kruger morphology after 2 to 3 days of abstinence.",
-  "Halosperm DNA fragmentation test: measures single- and double-strand DNA breaks.",
-  "Hormones: morning testosterone, LH, FSH, prolactin and TSH.",
-  "Scrotal Doppler ultrasound: testicular volume and varicocele.",
-  "Genetic tests: karyotype and Y-chromosome microdeletion for very low count or azoospermia.",
+  "Semen analysis on computer assisted semen analysis (CASA) machine after an abstinence period of 2-3 days to assess count, motility and morphology (Kruger Strict).",
+  "DNA fragmentation (Halosperm): single strand and double strand fragmentation of sperm.",
+  "Hormone profile: testosterone, LH, FSH, prolactin and TSH levels in the early morning.",
+  "Ultrasound: scrotal USG done to find out the size of the testis and presence of varicocele.",
+  "Genetic tests: if count is very low or no sperm (karyotyping and Y chromosome microdeletion).",
 ];
 
 export default function MaleInfertilityNoidaWorkup() {
   return (
     <TreatmentSection>
       <TreatmentSectionHeader
-        eyebrow="Before treatment"
+        eyebrow="What do we test?"
         title="Male Fertility Workup"
-        subtitle="These tests show exactly what is affecting sperm, so treatment is targeted."
+        subtitle="Below tests will give us an idea about what is going wrong with your sperm count."
       />
 
       <Stagger className="mt-7 flex flex-col gap-3" stagger={0.05}>
@@ -31,7 +31,7 @@ export default function MaleInfertilityNoidaWorkup() {
               <span className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-blue/20 text-blue ring-1 ring-blue/40">
                 <FaCheck className="size-2.5" />
               </span>
-              <p className="text-[13.5px] leading-relaxed text-black sm:text-[14px]">
+              <p className="text-[13.5px] leading-relaxed text-ink/80 sm:text-[14px]">
                 {text}
               </p>
             </div>

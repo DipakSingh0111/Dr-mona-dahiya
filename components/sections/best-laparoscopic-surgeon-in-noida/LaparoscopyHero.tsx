@@ -116,7 +116,7 @@ export default function LaparoscopyHero() {
         </div>
 
         <HeroBannerImage
-          src="/images/VID00018.jpeg"
+          src="/images/best-male-infertility.jpg"
           alt="Dr. Mona Dahiya - Laparoscopy & Hysteroscopy"
         />
       </div>

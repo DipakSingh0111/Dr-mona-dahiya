@@ -13,6 +13,7 @@ const reviews: {
   review: string;
   initial: string;
   name: string;
+  source?: string;
 }[] = [
   {
     title: "Superb Infertility Specialist",
@@ -20,18 +21,21 @@ const reviews: {
       "Dr. Mona Dahiya is superb infertility specialist. She expertly diagnosed and treated our uterine issues, including polyps and fibroids, because of which we were not able to conceive. Her thorough approach and attention to detail, especially in managing adhesions from past surgeries, was incredible. I highly recommend her as the best infertility doctor.",
     initial: "S",
     name: "Sachin Upadhyay",
+    source: "Patient review",
   },
   {
     review:
       "We are immensely grateful to Dr. Mona Dahiya for her expertise in treating my wife's infertility due to low AMH levels. Despite the challenges, Dr. Mona guided us through the IVF process with remarkable care and precision. Thanks to her, we achieved success. She truly is the best doctor for IVF with low AMH in India. 🙏",
     initial: "A",
     name: "Ashok Yadav",
+    source: "Google patient review",
   },
   {
     review:
-      "Her fertility clinic is a boon for patients with complex infertility problems. Dr Mona is really good is what we can say. Her experience and success rates are one of the best in india. Her team is very friendly and cooperative. Our recommendation is that you should obviously meet her for the right guidance.",
+      "Her fertility clinic is a boon for patients with complex infertility problems. Dr. Mona is really good is what we can say. Her experience and success rates are one of the best in india. Her team is very friendly and cooperative. Our recommendation is that you should obviously meet her for the right guidance.",
     initial: "A",
     name: "Anand Kumar",
+    source: "Google patient review",
   },
 ];
 

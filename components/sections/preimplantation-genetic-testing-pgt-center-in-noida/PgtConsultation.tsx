@@ -154,11 +154,8 @@ export default function PgtConsultation() {
             <Reveal variant="slideRight">
               <div className="rounded-[24px] border border-rose/20 bg-white p-6 shadow-md sm:p-8">
                 <h3 className="font-serif text-[1.4rem] font-bold tracking-tight text-ink sm:text-[1.6rem]">
-                  Request an Appointment
+                  Request an appointment
                 </h3>
-                <p className="mt-1 text-[13px] text-ink/70">
-                  Fill in your details and our team will get back to you shortly.
-                </p>
 
                 {submitted ? (
                   <div className="my-8 rounded-2xl border border-rose/20 bg-rose/5 p-6 text-center">

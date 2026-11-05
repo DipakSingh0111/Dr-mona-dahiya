@@ -13,9 +13,9 @@ const leftFaqs: FaqItem[] = [
     question: "Can a man with zero sperm count have a biological child?",
     answer: (
       <p>
-        Often, yes. Azoospermia means no sperm in the semen, but sperm is
-        frequently still made in the testes and can be retrieved by PESA, TESA
-        or micro-TESE for ICSI.
+        Yes, in most cases there is sperm production happening inside the testes
+        which we can retrieve through surgery (PESA/TESE/Micro TESE) and use for
+        doing ICSI.
       </p>
     ),
   },
@@ -23,18 +23,19 @@ const leftFaqs: FaqItem[] = [
     question: "How long do male fertility treatments take to work?",
     answer: (
       <p>
-        At least 3 months. Sperm takes about 72 to 74 days to form, plus 10 to
-        14 days to mature, so a repeat semen test is done after about 90 days.
+        Minimum 3 months, because sperm take 72-74 days to develop and 10-14 days
+        to get ready for ejaculation. So we generally repeat the test after 90
+        days.
       </p>
     ),
   },
   {
-    question: "Where is Dr. Mona Dahiya's male fertility clinic in Noida?",
+    question: "Where is Dr. Mona Dahiya’s male fertility clinic in Noida?",
     answer: (
       <p>
-        At 3rd Floor, K-06, above FirstCry, Baraula, Sector 49, Noida, Uttar
-        Pradesh 201301, reached via Dadri Main Road and the Aqua Line (Sector 50
-        station).
+        We are at 3rd Floor, K-06, above FirstCry, Baraula, Sector 49, Noida,
+        U.P. 201301. You can reach us via Dadri Main Road or Aqua Line Metro
+        station at Sector 50, Noida.
       </p>
     ),
   },
@@ -42,8 +43,8 @@ const leftFaqs: FaqItem[] = [
     question: "What is a normal sperm count?",
     answer: (
       <p>
-        At least 15 million per mL, with 40% or more total motility and 4% or
-        more normal forms (WHO reference values).
+        Your count should be more than 15 million/ml with at least 40% total
+        motility and more than 4% normal morphology.
       </p>
     ),
   },
@@ -51,8 +52,9 @@ const leftFaqs: FaqItem[] = [
     question: "What is sperm DNA fragmentation and why does it matter?",
     answer: (
       <p>
-        It is damage to the sperm&apos;s genetic material. A DFI above 25% to
-        30% is linked to poor embryo growth, failed implantation and miscarriage.
+        These are damage caused to your sperm DNA. If your sperm has more than
+        25-30% DNA fragmented, its chances of giving a healthy embryo are lower
+        and it can lead to abortion as well.
       </p>
     ),
   },
@@ -60,9 +62,9 @@ const leftFaqs: FaqItem[] = [
     question: "Does lifestyle really affect sperm?",
     answer: (
       <p>
-        Yes. Smoking, heavy drinking, heat (saunas, laptops on the lap) and
-        obesity all lower sperm quality, and changes show results in about 3
-        months.
+        Yes. If you quit smoking, alcohol and avoid exposure to heat (sitting
+        with a laptop on your lap and baths in hot water) and reduce your weight,
+        it will help in improving your sperm quality in 3 months’ time.
       </p>
     ),
   },
@@ -73,8 +75,8 @@ const rightFaqs: FaqItem[] = [
     question: "Can varicocele cause infertility?",
     answer: (
       <p>
-        It can lower count and motility. Repair is considered when a varicocele
-        is clinically significant and semen quality is affected.
+        Yes, it can reduce your count and motility. We will treat you for
+        varicocele if it is of clinical significance.
       </p>
     ),
   },
@@ -82,8 +84,9 @@ const rightFaqs: FaqItem[] = [
     question: "Is surgical sperm retrieval painful?",
     answer: (
       <p>
-        It is done under local or short general anaesthesia; most men have mild
-        soreness for 2 to 3 days.
+        You will feel some pain after the procedure but we use either local
+        anaesthetic or a small dose of general anaesthesia to keep you
+        comfortable.
       </p>
     ),
   },
@@ -91,8 +94,8 @@ const rightFaqs: FaqItem[] = [
     question: "Which tests should men do first?",
     answer: (
       <p>
-        A semen analysis (CASA), then DNA fragmentation, hormone tests and a
-        scrotal scan as needed.
+        Semen analysis + DNA fragmentation, followed by hormonal work up and USG
+        depending on findings of the initial semen analysis.
       </p>
     ),
   },
@@ -100,8 +103,8 @@ const rightFaqs: FaqItem[] = [
     question: "Should both partners be tested together?",
     answer: (
       <p>
-        Yes. Male factors are involved in about half of cases, and testing
-        together saves months.
+        Yes, almost 50% of the time the issue is because of male factor. It’s
+        always better to diagnose the couple together to save time.
       </p>
     ),
   },
@@ -109,12 +112,13 @@ const rightFaqs: FaqItem[] = [
     question: "Can I consult online about a semen report?",
     answer: (
       <p>
-        Yes. An online consultation costs ₹1,000. See{" "}
+        Yes, you can schedule an online consultation and we will evaluate your
+        semen reports. Price is ₹1,000.{" "}
         <Link
           href="/ivf-consultation-online"
           className="underline decoration-[var(--blue)]/50 underline-offset-2 text-blue"
         >
-          Online Consultation
+          Click here
         </Link>
         .
       </p>
@@ -126,7 +130,7 @@ export default function MaleInfertilityNoidaFaq() {
   return (
     <TreatmentSection>
       <TreatmentSectionHeader
-        eyebrow="Patient questions"
+        eyebrow="Some common questions asked by our male infertility patients"
         title="Frequently Asked Questions: Male Infertility in Noida"
       />
 

@@ -13,8 +13,10 @@ const leftFaqs: FaqItem[] = [
     question: "When should I see a female infertility doctor in Noida?",
     answer: (
       <p>
-        After 12 months of trying (6 months if you are 35 or older), or sooner
-        with irregular periods, severe period pain or past miscarriages.
+        One year if you have normal cycles. If your cycles are irregular see a
+        doctor sooner. If you are over 35 years old you should see a doctor after
+        6 months of trying. If you have extremely painful periods, or you know
+        you have blocked tubes, you should see a doctor earlier.
       </p>
     ),
   },
@@ -32,9 +34,16 @@ const leftFaqs: FaqItem[] = [
     question: "Can blocked fallopian tubes be treated without surgery?",
     answer: (
       <p>
-        Not usually. Medicines cannot clear true blockages or scar tissue. Minor
-        mucus plugs sometimes clear during an HSG, but true blockages on both
-        sides are usually bypassed with IVF.
+        No. If you have blocked tubes on both sides you will have to do IVF. You
+        can also have your tubes repaired with Tubal Cannulation or Laparoscopy
+        to clip them open.{" "}
+        <Link
+          href="/fallopian-tube-blockage-treatment"
+          className="underline decoration-[var(--blue)]/50 underline-offset-2 text-blue"
+        >
+          Learn more about repairing blocked fallopian tubes
+        </Link>
+        .
       </p>
     ),
   },
@@ -42,8 +51,16 @@ const leftFaqs: FaqItem[] = [
     question: "Does every woman with infertility need IVF?",
     answer: (
       <p>
-        No. More than half conceive with simpler steps such as Letrozole, timed
-        intercourse or IUI.
+        No. Only about 1/3 of our patients require IVF to get pregnant. IUI
+        stands for Intra Uterine Insemination, and many call it artificial
+        insemination. IUI can help many women become pregnant.{" "}
+        <Link
+          href="/best-iui-doctor-in-noida"
+          className="underline decoration-[var(--blue)]/50 underline-offset-2 text-blue"
+        >
+          Read about IUI and how it can get you pregnant
+        </Link>
+        .
       </p>
     ),
   },
@@ -60,8 +77,14 @@ const leftFaqs: FaqItem[] = [
     question: "Can PCOS be treated in Noida without IVF?",
     answer: (
       <p>
-        Often, yes. Lifestyle changes, inositol or metformin and Letrozole
-        restore ovulation for many women.
+        Yes, many women with PCOD can get pregnant on fertility medication.{" "}
+        <Link
+          href="/best-pcos-pcod-treatment-centre-in-noida"
+          className="underline decoration-[var(--blue)]/50 underline-offset-2 text-blue"
+        >
+          Read about how medication can help you get pregnant
+        </Link>
+        .
       </p>
     ),
   },
@@ -72,8 +95,14 @@ const rightFaqs: FaqItem[] = [
     question: "Can I get pregnant with low AMH?",
     answer: (
       <p>
-        Yes. Low AMH means fewer eggs, not poor quality. Tailored protocols help
-        many women conceive with their own eggs.
+        Yes you can. Women with low AMH have eggs, just less of them. See{" "}
+        <Link
+          href="/best-low-amh-treatment-in-noida"
+          className="underline decoration-[var(--blue)]/50 underline-offset-2 text-blue"
+        >
+          Low AMH Treatment
+        </Link>
+        .
       </p>
     ),
   },
@@ -81,8 +110,9 @@ const rightFaqs: FaqItem[] = [
     question: "How much does a female fertility workup cost?",
     answer: (
       <p>
-        ₹8,000 to ₹16,000 for the initial tests; ovulation induction then costs
-        ₹3,000 to ₹6,000 a cycle.
+        Female infertility evaluations will range from ₹8,000 to ₹16,000, based
+        on how many tests you need to have done. Medications to help you ovulate
+        will be around ₹3,500 a cycle.
       </p>
     ),
   },
@@ -90,8 +120,8 @@ const rightFaqs: FaqItem[] = [
     question: "Is hysteroscopy painful?",
     answer: (
       <p>
-        Office hysteroscopy takes 10 to 15 minutes under a local block; operative
-        hysteroscopy is done under short anaesthesia.
+        No. We use local anesthesia to perform hysteroscopies, so you will feel
+        no pain. If you need general anesthesia you will be asleep.
       </p>
     ),
   },
@@ -99,7 +129,7 @@ const rightFaqs: FaqItem[] = [
     question: "Can I consult online before visiting the Noida clinic?",
     answer: (
       <p>
-        Yes. An online consultation costs ₹1,000. See{" "}
+        Yes, we offer a teleconsultation for ₹999 to start your treatment. See{" "}
         <Link
           href="/ivf-consultation-online"
           className="underline decoration-[var(--blue)]/50 underline-offset-2 text-blue"
@@ -114,8 +144,9 @@ const rightFaqs: FaqItem[] = [
     question: "Does age affect female fertility?",
     answer: (
       <p>
-        Yes. Egg numbers and quality fall after 35, so early evaluation helps
-        protect your options.
+        Yes. Once you reach the age of 35 you start to lose fertility. Don&apos;t
+        wait to get pregnant until it&apos;s too late. Schedule an appointment
+        today.
       </p>
     ),
   },
@@ -125,7 +156,7 @@ export default function FemaleInfertilityNoidaFaq() {
   return (
     <TreatmentSection>
       <TreatmentSectionHeader
-        eyebrow="Patient questions"
+        eyebrow="FAQs"
         title="Frequently Asked Questions: Female Infertility in Noida"
       />
 

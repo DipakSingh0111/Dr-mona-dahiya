@@ -18,7 +18,7 @@ export default function PgtProtocolAndWhy() {
     {
       step: "3",
       title: "Grow Embryos for 5 to 6 Days",
-      desc: "Embryos develop in Class 10,000 cleanroom benchtop incubators to the multi-cellular blastocyst stage (100-150 cells)",
+      desc: "Embryos develop in Class 10,000 cleanroom benchtop incubators to the multi-cellular blastocyst stage (100–150 cells).",
     },
     {
       step: "4",
@@ -69,7 +69,7 @@ export default function PgtProtocolAndWhy() {
       <div className="page-container relative">
         <Reveal className="mb-6 sm:mb-8">
           <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
-            Steps involved in PGT
+            Steps Involved in PGT
           </p>
           <h2 className="font-serif mt-1 text-[1.65rem] leading-[1.2] font-normal tracking-tight text-ink sm:text-[2.1rem] lg:text-[2.35rem]">
             Step-by-Step PGT Treatment Protocol

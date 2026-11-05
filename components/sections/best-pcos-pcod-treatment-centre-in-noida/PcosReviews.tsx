@@ -23,7 +23,7 @@ const reviews = [
   },
   {
     review:
-      "Nobody knows as much about ART and reproductive medicine than her. Our story is about 5 years of struggle and we completely lost trust in assisted reproductive technology (ART) after 3 failed cycles of IUI and 2 failed IVF cycles. our ...",
+      "Nobody knows as much about ART and reproductive medicine than her. Our story is about 5 years of struggle and we completely lost trust in assisted reproductive technology (ART) after 3 failed cycles of IUI and 2 failed IVF cycles. our ... More 🔥 1",
     initial: "A",
     name: "Ajay Shakya",
   },

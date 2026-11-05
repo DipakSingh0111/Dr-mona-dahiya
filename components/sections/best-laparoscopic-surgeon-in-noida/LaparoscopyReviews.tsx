@@ -11,7 +11,7 @@ import {
 const reviews = [
   {
     review:
-      "Unlike other fertility doctors who seem to have major Ego issues, Dr Mona Dahiya is so lovable and approachable. She provides individualized attention so that couples feel heard and supported. We were always well-informed for the medicines, tests and costs involved. We will rate her as simply exceptional. 🔥 1",
+      "Unlike other fertility doctors who seem to have major Ego issues,Dr Mona Dahiya is so lovable and approachable. She provides individualized attention so that couples feel heard and supported. We were always well-informed for the medicines,tests and costs involved.We will rate her as simply exceptional. 🔥 1",
     initial: "S",
     name: "Shivam Singh",
   },
@@ -23,7 +23,7 @@ const reviews = [
   },
   {
     review:
-      "Choosing IVF procedure was an emotional journey, but Dr. Mona Dahiya's compassionate guidance made all the difference. Her ethical approach and high moral values gave us peace of mind. Today, we hold our healthy baby boy in our arms, forever grateful for the selfless gift of Dr. Dahiya's expertise.",
+      "Choosing IVF procedure was an emotional journey, but Dr. Mona Dahiya’s compassionate guidance made all the difference. Her ethical approach and high moral values gave us peace of mind. Today, we hold our healthy baby boy in our arms, forever grateful for the selfless gift of Dr. Dahiya’s expertise.",
     initial: "A",
     name: "Atul Rajput",
   },

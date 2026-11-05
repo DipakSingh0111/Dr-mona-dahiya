@@ -13,17 +13,17 @@ const protocols: { number: string; title: string; description: ReactNode }[] = [
   {
     number: "1",
     title: "Collection of blood on the day of procedure",
-    description: "20 to 30 ml of blood will be collected in ACD-A vials",
+    description: "20 to 30 ml of blood will be collected in ACD-A vials.",
   },
   {
     number: "2",
     title: "Centrifugation in clean room",
     description: (
       <>
-        First spin @1200 rpm for 10 mins (soft spin) to get rid of RBC
+        First spin @ 1200 rpm for 10 mins (soft spin) to get rid of RBC.
         <br />
-        Second spin @3000 rpm for 10 mins (hard spin) to concentrate platelets
-        4-6 fold (1.5 – 2.0 ml of PRP will be obtained)
+        Second spin @ 3000 rpm for 10 mins (hard spin) to concentrate platelets
+        4-6 fold (1.5 – 2.0 ml of PRP will be obtained).
       </>
     ),
   },
@@ -32,7 +32,7 @@ const protocols: { number: string; title: string; description: ReactNode }[] = [
     title:
       "Instillation into uterus on day 10 to 12 of cycle with exogenous estrogen (Estradiol valerate 6mg – 8mg)",
     description:
-      "Intracavitary placement of 0.5 to 1 ml of PRP via soft catheter. Repeat after 48 hrs if lining is <7mm",
+      "Intracavitary placement of 0.5 to 1 ml of PRP via soft catheter. Repeat after 48 hrs if lining is < 7mm.",
   },
   {
     number: "4",
@@ -45,7 +45,7 @@ const protocols: { number: string; title: string; description: ReactNode }[] = [
     title: "Follow up with FET after 48 – 72 hrs",
     description: (
       <>
-        Start Progesterone once lining is ≥7.5 mm and trilaminer and proceed
+        Start Progesterone once lining is ≥ 7.5 mm and trilaminar and proceed
         with{" "}
         <Link
           href="/frozen-embryo-transfer"

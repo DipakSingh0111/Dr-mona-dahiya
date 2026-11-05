@@ -92,7 +92,7 @@ const rightFaqs: FaqItem[] = [
   {
     question: "Is metformin necessary for PCOS?",
     answer:
-      "If you have insulin resistance you should definitely take Metformin. Calculate your HOMA-IR if it is high take Metformin with Inositol for 4 to 8 weeks before starting treatment.",
+      "If you have Insulin resistance you should definitely take Metformin. Calculate your HOMA-IR if it is high take Metformin with Inositol for 4 to 8 weeks before starting treatment.",
   },
 ];
 

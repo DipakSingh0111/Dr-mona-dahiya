@@ -60,9 +60,9 @@ const indications: { number: string; title: string; description: ReactNode }[] =
   ];
 
 const checklist = [
-  "Doppler of Endometrium – Blood flow below the lining and trilaminer pattern seen on trans vaginal ultrasound (PI and RI)",
+  "Doppler of Endometrium – Blood flow below the lining and trilaminar pattern seen on trans vaginal ultrasound (PI and RI)",
   "Chronic endometritis – CD138 should be negative",
-  "Platelets > 1.5 Lakh with normal PT INR and APTT",
+  "Platelets >1.5 Lakh with normal PT INR and APTT",
   "Estradiol and Progesterone level",
   "HIV 1&2, Hep B, Hep C, VDRL as mandated by Indian ART Act",
 ];
@@ -72,7 +72,7 @@ export default function PrpIndicationsAndChecklist() {
     <TreatmentSection>
       <div className="mb-14 sm:mb-16 lg:mb-20">
         <TreatmentSectionHeader
-          eyebrow="PRP indications in IVF"
+          eyebrow="PRP Indications in IVF"
           title="Indications: Who Needs PRP Therapy in IVF?"
         />
 

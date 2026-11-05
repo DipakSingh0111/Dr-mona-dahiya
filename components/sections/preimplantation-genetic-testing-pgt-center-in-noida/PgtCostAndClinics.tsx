@@ -72,7 +72,7 @@ export default function PgtCostAndClinics() {
       sector: "RAJ NAGAR",
       city: "Ghaziabad",
       address:
-        "2nd Floor, RDC, C-53A, near Bikanervala, Sector 15, Sector 10, Raj Nagar, Ghaziabad, Uttar Pradesh 201002",
+        "2nd Floor, RDC, C-53A, near Bikanerwala, Sector 15, Sector 10, Raj Nagar, Ghaziabad, Uttar Pradesh 201002",
       mapUrl:
         "https://maps.google.com/?q=RDC+C-53A+Raj+Nagar+Ghaziabad+201002",
       clinicUrl: "/best-ivf-doctor-in-ghaziabad",
@@ -103,7 +103,7 @@ export default function PgtCostAndClinics() {
             Ghaziabad
           </h2>
           <p className="mt-2 text-[14px] leading-relaxed text-ink/75 sm:text-[15px]">
-            IVF with PGT has various cost component. These include-
+            IVF with PGT has various cost component. These include–
           </p>
         </Reveal>
 

@@ -12,7 +12,7 @@ const comparisons = [
   {
     title: "What is PCOS?",
     description:
-      "Polycystic Ovary Syndrome is a endocrine metabolic disorder. If a female has any 2 out of 3 of the following symptoms then she has PCOS. Ovulation doesn't happen regularly or is absent, elevated androgens and polycystic ovaries on ultrasound. Insulin resistance can lead to type 2 diabetes and cardiovascular problems if untreated. So it must be medically managed along with lifestyle modifications.",
+      "Polycystic Ovary Syndrome is a endocrine metabolic disorder. If a female has any 2 out of 3 of the following symptoms then she has PCOS. Ovulation doesn't happen regularly or is absent, elevated androgens and polycystic ovaries on ultrasound. Insulin resistance can lead to type 2 diabetes and cardio vascular problems if untreated. So it must be medically managed along with lifestyle modifications.",
   },
   {
     title: "What is PCOD?",
@@ -26,31 +26,31 @@ const criteria = [
     number: "1",
     title: "Anovulation",
     description:
-      "Irregular / absent periods. Menstrual cycle >35 days or absent.",
+      "Irregular / absent periods. Menstrual cycle > 35 days or absent",
   },
   {
     number: "2",
     title: "Elevated Androgens",
     description:
-      "Increased free testosterone. Causes unwanted hair growth / acne / hair fall.",
+      "Increased free testosterone. Causes unwanted hair growth / acne / hair fall",
   },
   {
     number: "3",
     title: "Polycystic ovaries on USG",
     description:
-      "Multiple follicles measuring 2mm to 9mm in diameter ≥20 follicles per ovary and increased stromal volume.",
+      "Multiple follicles measuring 2mm to 9mm in diameter ≥20 follicles per ovary and increased stromal volume",
   },
   {
     number: "4",
     title: "Insulin Resistance",
     description:
-      "Acanthosis Nigricans (Dark patches on skin), Increased Fasting Insulin and altered Glucose:Insulin ratio.",
+      "Acanthosis Nigricans (Dark patches on skin), Increased Fasting Insulin and altered Glucose:Insulin ratio",
   },
   {
     number: "5",
     title: "Female Infertility",
     description:
-      "Due to absence of ovulation. As follicles don't grow to maturity and don't release an egg.",
+      "Due to absence of ovulation. As follicles don't grow to maturity and don't release an egg",
   },
 ];
 
