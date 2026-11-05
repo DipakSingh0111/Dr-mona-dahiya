@@ -234,10 +234,9 @@ export default function AboutConsultation({
                       </label>
                       <div className="mt-1.5 flex rounded-xl border border-slate-200 bg-[#f8fafc] focus-within:border-rose focus-within:bg-white focus-within:ring-1 focus-within:ring-rose/30 transition-all">
                         <div className="flex items-center gap-1.5 border-r border-slate-200 px-3 text-[13px] text-slate-600">
-                          <span className="font-semibold text-ink">
-                            IN
-                          </span>
-                          <span>+91</span>
+                          <span className="text-[15px] leading-none">🇮🇳</span>
+                          <span className="font-semibold text-ink">+91</span>
+                          <FaChevronDown className="size-2 text-slate-400" />
                         </div>
                         <input
                           type="tel"

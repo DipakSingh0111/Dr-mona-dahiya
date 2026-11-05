@@ -26,7 +26,7 @@ const reviews = [
   },
   {
     review:
-      "Her fertility clinic is a boon for patients with complex infertility problems. Dr Mona is really good is what we can say. Her experience and success rates are one of the best in india. Her team is very friendly and cooperative. Our recommendation is that you should obviously meet her for the right guidance.",
+      "Her fertility clinic is a boon for patients with complex infertility problems.Dr Mona is really good is what we can say.Her experience and success rates are one of the best in india.Her team is very friendly and cooperative.Our recommendation is that you should obviously meet her for the right guidance.",
     initial: "A",
     name: "Anand Kumar",
     source: "Google patient review",

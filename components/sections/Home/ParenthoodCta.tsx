@@ -4,7 +4,6 @@ import Image from "next/image";
 import {
   FaWhatsapp,
   FaPhoneAlt,
-  FaArrowRight,
   FaCalendarAlt,
 } from "react-icons/fa";
 import siteData from "@/data/site.json";
@@ -57,27 +56,25 @@ export default function ParenthoodCta() {
           <div className="mt-8 flex flex-wrap items-center gap-2.5 sm:flex-nowrap sm:gap-3">
             <a
               href={data.book.href}
-              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-blue px-3.5 py-2.5 text-[12px] font-semibold whitespace-nowrap text-white shadow-[0_10px_24px_rgba(0,71,202,0.28)] transition hover:bg-blue-dark sm:gap-2.5 sm:px-5 sm:py-3.5 sm:text-[13.5px]"
+              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-rose px-4 py-2.5 text-[12px] font-semibold whitespace-nowrap text-white shadow-[0_10px_24px_rgba(232,62,116,0.28)] transition hover:bg-rose-dark sm:gap-2.5 sm:px-5 sm:py-3.5 sm:text-[13.5px]"
             >
               <FaCalendarAlt className="size-3.5" />
               {data.book.label}
-              <FaArrowRight className="size-3.5" />
             </a>
 
             <a
               href={data.whatsapp.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-blue px-3.5 py-2.5 text-[12px] font-semibold whitespace-nowrap text-white shadow-[0_10px_24px_rgba(0,71,202,0.28)] transition hover:bg-blue-dark sm:gap-2.5 sm:px-5 sm:py-3.5 sm:text-[13.5px]"
+              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-[#0f6f56] px-4 py-2.5 text-[12px] font-semibold whitespace-nowrap text-white shadow-[0_10px_24px_rgba(15,111,86,0.28)] transition hover:bg-[#0c5945] sm:gap-2.5 sm:px-5 sm:py-3.5 sm:text-[13.5px]"
             >
               <FaWhatsapp className="size-[18px]" />
               {data.whatsapp.label}
-              <FaArrowRight className="size-3.5" />
             </a>
 
             <a
               href={data.phone.href}
-              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full border border-[#1a2b4b]/40 bg-transparent px-3.5 py-2.5 text-[12px] font-semibold whitespace-nowrap text-[#1a2b4b] transition hover:bg-white/60 sm:gap-2.5 sm:px-5 sm:py-3.5 sm:text-[13.5px]"
+              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full border border-[#1a2b4b]/40 bg-transparent px-4 py-2.5 text-[12px] font-semibold whitespace-nowrap text-[#1a2b4b] transition hover:bg-white/60 sm:gap-2.5 sm:px-5 sm:py-3.5 sm:text-[13.5px]"
             >
               <FaPhoneAlt className="size-3.5" />
               {data.phone.label}

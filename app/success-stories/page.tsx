@@ -40,8 +40,9 @@ export default function SuccessStoriesPage() {
           sectionId="book-consultation"
           eyebrow="Next step"
           title="Start Your Own Journey"
-          subtitle="Book an in-clinic consultation or an online review of your previous reports with Dr. Mona Dahiya. Call"
-          appendContacts={true}
+          subtitle="Book an in-clinic consultation or an online review of your previous reports with Dr. Mona Dahiya. Call +91 92679 82924."
+          appendContacts={false}
+          consultationDuration=""
         />
       </SectionReveal>
 
