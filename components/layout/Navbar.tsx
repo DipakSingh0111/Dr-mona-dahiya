@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type MouseEvent } from "react";
+import { useState, useEffect, type MouseEvent } from "react";
 import siteData from "@/data/site.json";
 import {
   CalendarIcon,
@@ -38,6 +38,27 @@ export default function Navbar() {
     setOpen(false);
     setOpenDropdown(null);
   };
+
+  useEffect(() => {
+    if (!open) {
+      document.body.style.overflow = "";
+      return;
+    }
+    document.body.style.overflow = "hidden";
+
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setOpen(false);
+        setOpenDropdown(null);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [open]);
 
   return (
     <header className="relative z-40 bg-transparent">
@@ -107,13 +128,13 @@ export default function Navbar() {
             </div>
           </div>
 
-          <div className="ml-auto flex items-center gap-2 md:hidden">
+          <div className="ml-auto flex items-center gap-2 lg:hidden">
             <a
               href="https://wa.me/919267982924"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Chat on WhatsApp"
-              className="flex size-8 items-center justify-center rounded-full bg-[#25d366] text-white shadow-sm"
+              className="flex size-8 items-center justify-center rounded-full bg-[#25d366] text-white shadow-sm md:hidden"
             >
               <FaWhatsapp className="size-4" />
             </a>
@@ -309,7 +330,7 @@ export default function Navbar() {
       {open ? (
         <div
           id="mobile-menu"
-          className="border-t border-white/10 bg-[rgba(6,21,50,0.96)] px-4 py-4 backdrop-blur-md lg:hidden"
+          className="absolute inset-x-0 top-full z-50 max-h-[calc(100vh-5.25rem)] max-h-[calc(100dvh-var(--site-header-h,5.25rem))] overflow-y-auto overscroll-contain border-t border-white/10 bg-[rgba(6,21,50,0.98)] px-4 pt-4 pb-8 shadow-2xl backdrop-blur-md [-webkit-overflow-scrolling:touch] lg:hidden"
         >
           <nav className="flex flex-col gap-1" aria-label="Mobile">
             {menu.map((item) => {
