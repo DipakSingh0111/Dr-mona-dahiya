@@ -526,11 +526,7 @@
   "ourServices": {
     "eyebrow": "Services we provide",
     "titlePrefix": "Infertility Treatment at",
-    "titleLocations": [
-      "Noida",
-      "Delhi",
-      "Ghaziabad"
-    ],
+    "titleLocations": ["Noida", "Delhi", "Ghaziabad"],
     "description": "Starting from simple IUI to advance lab procedures will be decided based on couple's investigation.",
     "cta": {
       "label": "View More Services",
@@ -933,7 +929,7 @@
       "stat": {
         "value": "100+",
         "label": "Publications",
-        "description": "Research papers in national and international journals on infertility treatment."
+        "description": "Published research papers in National & International Journals for Infertility treatment."
       },
       "items": [
         {
@@ -1111,11 +1107,7 @@
           "name": "Little Angel IVF",
           "icon": "/images/affiliations/icon-baby-heart.jpg",
           "tone": "pink",
-          "tags": [
-            "Noida",
-            "Delhi",
-            "Ghaziabad"
-          ]
+          "tags": ["Noida", "Delhi", "Ghaziabad"]
         }
       ]
     },
@@ -1463,11 +1455,7 @@
       "subtitle": "Fill in your details and we will get back to you shortly.",
       "submitLabel": "Book Consultation",
       "disclaimer": "",
-      "clinics": [
-        "Noida",
-        "Ghaziabad",
-        "Delhi"
-      ]
+      "clinics": ["Noida", "Ghaziabad", "Delhi"]
     }
   },
   "footer": {
