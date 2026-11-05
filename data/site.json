@@ -2019,9 +2019,9 @@
   },
   "onlineConsultationPage": {
     "breadcrumb": "Online IVF Consultation",
-    "eyebrow": "Online fertility consultation",
+    "eyebrow": "Online Consultation with Dr Mona Dahiya",
     "title": "Online IVF Consultation with Dr. Mona Dahiya",
-    "image": "/images/about-mona-dahiya/online-ivf-consultation.jpg",
+    "image": "/images/best-ivf-doctor-in-ghaziabad.jpg",
     "primaryCta": {
       "label": "Book In-Clinic Consultation",
       "href": "#schedule-consultation"
@@ -2031,189 +2031,184 @@
       "href": "#schedule-consultation"
     },
     "reviewsLink": {
-      "label": "Read Dr. Mona's Google reviews",
-      "href": "/about-mona-dahiya#reviews"
+      "label": "Read Dr Mona Dahiya's Reviews",
+      "href": "/best-ivf-patient-reviews"
     },
-    "badges": [
-      "30-minute slots",
-      "₹1,000 in India · US$25 abroad",
-      "Written plan after the call"
-    ],
+    "badges": [],
     "benefits": {
-      "eyebrow": "Who it helps",
+      "eyebrow": "Who is the Online Fertility Consultation for?",
       "title": "Who Benefits from an Online Fertility Consultation?",
       "items": [
         {
-          "title": "Couples seeking a second opinion",
-          "description": "After failed IUI or IVF cycles elsewhere — get a clear Second Opinion before the next attempt."
+          "title": "Second opinion after IVF failure",
+          "description": "Get an objective review of your stimulation charts, embryology logs and transfer timing.",
+          "linkLabel": "Click here to read more about Second Opinions.",
+          "linkHref": "/second-opinion-failed-ivf"
         },
         {
-          "title": "International patients",
-          "description": "Plan travel, protocols and timelines with Dr. Mona before you fly — ideal for International Patients."
+          "title": "Low AMH",
+          "description": "Patients that have been told to use donor eggs but want consultation for own egg IVF treatments such as DuoStim or micro flare protocols."
         },
         {
-          "title": "Outstation couples",
-          "description": "Live outside Delhi NCR and cannot visit weekly — start with records review online."
+          "title": "Bad sperm or severe male factor infertility",
+          "description": "Men with high DNA fragmentation, severe oligospermia or azoospermia who want consultation on micro-TESE before investing in travel/flying expenses."
         },
         {
-          "title": "Busy professionals",
-          "description": "Need flexible timing without taking a full day off for a clinic visit."
+          "title": "Couples living out-of-state or abroad",
+          "description": "Learn everything you can before you visit India or our clinic to avoid trips during your treatment.",
+          "linkLabel": "Click here to read more about patients traveling from overseas.",
+          "linkHref": "/international-ivf-patient"
         },
         {
-          "title": "Couples starting fertility care",
-          "description": "Want an honest plan and next tests before committing to treatment."
+          "title": "Busy doctors/professionals who don't have time for appointments to be fragmented by consulting doctors",
+          "description": "Things to do before you book your Online Consultation...",
+          "linkLabel": "Click Here",
+          "linkHref": "#what-to-prepare"
         }
       ]
     },
     "prepare": {
-      "eyebrow": "Before your call",
+      "eyebrow": "How do I prep for my Online Consultation?",
       "title": "What to Prepare Before Your Online Consultation",
-      "subtitle": "Sharing these in advance means the full 30 minutes is spent on your plan.",
+      "subtitle": "",
       "items": [
-        "Past treatment charts and discharge summaries",
-        "Recent hormone tests (AMH, FSH, LH, TSH, prolactin)",
-        "Ultrasound reports and semen analysis",
-        "List of medicines and protocols already tried"
+        {
+          "label": "Charts from previous treatments:",
+          "text": "Please include a summary of IUIs or IVFs done, including embryo grades (Day 3 or Day 5), along with doctor's notes from the day of transfer."
+        },
+        {
+          "label": "Recent hormone levels (past 6 months):",
+          "text": "AMH, Day 2/3 FSH, LH, Estradiol, Thyroid (TSH) and Prolactin."
+        },
+        {
+          "label": "Copy of semen analysis reports:",
+          "text": "If semen analysis has been done at a government hospital or lesser known lab, please send us the Computer Aided Semen Analysis (CASA) report along with the DNA fragmentation (DFI) result. Patients can get these tests done at our Sundeep Medical Lab in-house."
+        },
+        {
+          "label": "Ultrasound reports/results:",
+          "text": "Ultrasound files or doctor's notes regarding ovarian & pelvic anatomy. Patients can also send us their HSG or tubal study reports along with notes from any surgeries they have had (laparoscopy or hysteroscopy)."
+        }
       ]
     },
     "steps": {
+      "eyebrow": "Step-by-Step Guide",
       "title": "Step-by-Step Online Consultation Process",
       "items": [
         {
-          "title": "Request a slot",
-          "description": "Choose a convenient time via WhatsApp or the online form on this page."
+          "title": "Reserved appointment slot",
+          "bullets": [
+            "Schedule a time that works best for you. Call us or WhatsApp your time preferences to (+91 92679 82924) or fill our secure scheduling form on our website."
+          ]
         },
         {
-          "title": "Send your records",
-          "description": "Email reports to info@drmonadahiya.com so Dr. Mona can review them before the call."
+          "title": "You send us records",
+          "bullets": [
+            "Upload scanned documents to info@drmonadahiya.com before your appointment."
+          ]
         },
         {
-          "title": "Pay securely",
-          "description": "India: ₹1,000 via UPI or net banking. International: US$25 online transfer."
+          "title": "Payment (Secure)",
+          "bullets": [
+            "Patients pay Dr Mona ₹1000 (via UPI, bank transfer or credit card payment)",
+            "International patients pay $25 USD (via PayPal link)"
+          ]
         },
         {
-          "title": "30-minute online consultation",
-          "description": "Review history, understand previous failures, and receive a personal treatment plan."
+          "title": "Online Consultation",
+          "bullets": [
+            "Explanation of why you may not have succeeded in the past",
+            "Customised treatment plan with medicines needed, tests recommended and/or treatment suggested"
+          ]
         },
         {
-          "title": "Receive your written plan",
-          "description": "Medical summary, digital prescription and test roadmap by email or WhatsApp within 2 hours."
+          "title": "You receive report",
+          "bullets": [
+            "Consultation summary report and digital prescriptions are delivered to you via WhatsApp or email. This usually takes 2 hours."
+          ]
         }
       ]
     },
     "why": {
-      "eyebrow": "Expertise & authority",
+      "eyebrow": "Why Should I Choose Online Consultation?",
       "title": "Why Book an Online Consultation with Dr. Mona Dahiya?",
       "items": [
         {
-          "title": "Direct doctor access",
-          "description": "You speak with Dr. Mona herself — not a coordinator reading a script."
+          "title": "Appointment directly with the Doctor",
+          "description": "Patients have the rare opportunity to consult directly with Dr Mona Dahiya."
         },
         {
-          "title": "Honest, evidence-based advice",
-          "description": "Candid views that are medically justified, including when not to rush into IVF."
+          "title": "Honest, truthful answers to your fertility questions",
+          "description": "Our recommendation will give you a truthful look at whether continuing treatment makes medical sense for you."
         },
         {
-          "title": "Smooth move to in-clinic care",
-          "description": "When you are ready, continue at Noida, Delhi or Ghaziabad with the same plan."
+          "title": "Transition smoothly into visiting clinic for treatments",
+          "description": "Experience hassle-free transition from your online consultation to express face-to-face care at our clinics in Delhi, Noida or Ghaziabad."
         }
       ]
     },
     "fees": {
-      "eyebrow": "Transparency",
+      "eyebrow": "Online Fertility Consultation Fees",
       "title": "Online Consultation Fees",
       "items": [
         {
-          "title": "Indian patients",
-          "price": "₹1,000",
-          "note": "30-min call + written summary"
+          "title": "Indian Nationals",
+          "description": "₹1000. This includes an online consultation with Dr Mona Dahiya followed by a report emailed to you."
         },
         {
           "title": "International patients",
-          "price": "US$25",
-          "note": "Records review, 30-min call & medical visa letters when needed"
+          "description": "$25 USD. Our international fee includes review of documents you provide before consultation, a private consultation plus embassy visa recommendation letter if required."
         }
       ]
     },
     "faq": {
-      "eyebrow": "Patient questions",
+      "eyebrow": "FAQs",
       "title": "Frequently Asked Questions: Online IVF Consultation",
       "items": [
         {
-          "q": "Is the online consultation with Dr. Mona personally?",
-          "a": "Yes. The video call is conducted by Dr. Mona Dahiya herself after she has reviewed your records."
+          "q": "How are online consultations conducted?",
+          "a": "Our consultations are completed through secure video platforms such as Zoom, Google Meet or WhatsApp video. Once you book your timeslot & upload any records on our scheduling page, one of our admin team will email you a link to join the video conference."
         },
         {
-          "q": "How long is the online consultation?",
-          "a": "Each slot is 30 minutes, focused on history, reports and a clear next-step plan."
+          "q": "Can Dr. Dahiya prescribe medicines online?",
+          "a": "Yes. Dr Mona can prescribe you supplements, medicine to stimulate ovulation, and recommend tests that you can complete at home. However, actual procedures cannot be recommended over video, and you would need to be present at clinic to complete them."
         },
         {
-          "q": "What do I need before the call?",
-          "a": "Past treatment charts, recent hormone tests, ultrasound or semen reports, and a list of medicines already tried."
+          "q": "What if I do not have recent test reports?",
+          "a": "Yes. Dr Mona will ask you about your symptoms as well as past pregnancies or births. Based on those she will recommend the most important tests required to evaluate your fertility. Treatment plans are ONLY recommended by Dr. Mona after these tests have been evaluated."
         },
         {
-          "q": "How do I send my medical reports?",
-          "a": "Email them to info@drmonadahiya.com or share clearly labelled PDFs / photos on WhatsApp."
+          "q": "Can my spouse join from a different location?",
+          "a": "Yes. Zoom or Google Meet allow for multiple people to join the same call. If you and your partner live in different cities or are busy with work, you both can attend the consultation."
         },
         {
-          "q": "What is the fee for Indian patients?",
-          "a": "₹1,000 for a 30-minute consultation including a written summary after the call."
+          "q": "How much does an online consultation cost?",
+          "a": "Online Consultation costs ₹1000 for Indian patients and $25 USD for international patients. Payment is securely processed through PayPal before the consultation takes place."
         },
         {
-          "q": "What is the fee for international patients?",
-          "a": "US$25 covering records review, the call, and support letters when required for travel."
+          "q": "How long is the consultation?",
+          "a": "A half hour private virtual consultation with Dr Dahiya followed by a consultation report via email. Consultation reports are emailed to you or sent via WhatsApp message. This usually takes 2 hours."
         },
         {
-          "q": "Will I get a written plan after the consultation?",
-          "a": "Yes. A medical summary, digital prescription and test roadmap are shared by email or WhatsApp within about 2 hours."
+          "q": "When will I receive my treatment plan?",
+          "a": "Usually within 2 hours of the call, by email or WhatsApp."
         },
         {
-          "q": "Can online consultation replace an in-clinic visit?",
-          "a": "It is ideal for second opinions and planning. Physical exams, scans and procedures still need a clinic visit."
+          "q": "What are the booking hours?",
+          "a": "Consultation hours are Monday to Saturday from 10AM-5PM IST."
         },
         {
-          "q": "Which platforms are used for the video call?",
-          "a": "You receive a secure video link (commonly WhatsApp or a standard teleconsult link) after your slot is confirmed."
+          "q": "Can an online consultation replace in-clinic tests?",
+          "a": "No. While we can answer questions regarding your fertility and give you a customized treatment plan moving forward, you will still need to be present in clinic to complete procedures. IVF medications, scans, egg retrieval and embryo transfer all need to be done in person."
         },
         {
-          "q": "Can we book for both partners together?",
-          "a": "Yes. Couples are encouraged to join the same call so the plan covers both partners."
+          "q": "Is my information kept confidential?",
+          "a": "No. Only staff and doctors that are involved with your treatment will have access to your records.",
+          "linkLabel": "Click here to read our Privacy Policy.",
+          "linkHref": "/privacy-policy"
         },
         {
-          "q": "How soon can we start treatment after the online consult?",
-          "a": "Many couples schedule an in-clinic visit within days; timelines depend on tests and your cycle."
-        }
-      ]
-    },
-    "reviews": {
-      "eyebrow": "Patient reviews",
-      "title": "What Patients Say About Dr. Mona",
-      "subtitle": "Individual experiences in patients' own words.",
-      "cta": {
-        "label": "Read All Patient Reviews",
-        "href": "/about-mona-dahiya#reviews"
-      },
-      "items": [
-        {
-          "title": "Compassion & Dedication",
-          "body": "Dr. Mona listens patiently and explains every option. Our online consult gave us clarity before we travelled for IVF.",
-          "initial": "A",
-          "name": "Ananya",
-          "source": "Patient review"
-        },
-        {
-          "title": "Clear second opinion",
-          "body": "After two failed cycles elsewhere, her honest online review changed our protocol. We finally understood what was missing.",
-          "initial": "R",
-          "name": "Rohan & Meera",
-          "source": "Patient review"
-        },
-        {
-          "title": "Worth every minute",
-          "body": "From WhatsApp booking to the written plan in our inbox — organised, ethical and genuinely personal care.",
-          "initial": "S",
-          "name": "Sneha",
-          "source": "Patient review"
+          "q": "Can I book a follow-up online consultation?",
+          "a": "Yes. Follow-up appointments can be booked in the same way as your initial consultation. Many of our patients review their new test results with Dr Mona over video before they fly into India for their treatment."
         }
       ]
     }
