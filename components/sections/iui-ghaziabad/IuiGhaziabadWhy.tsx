@@ -60,13 +60,14 @@ export default function IuiGhaziabadWhy() {
                     "radial-gradient(circle, rgba(232,62,116,0.25) 0%, rgba(0,71,202,0.15) 60%, transparent 75%)",
                 }}
               />
-              <div className="relative aspect-[4/5] sm:aspect-[1] min-h-[360px] sm:min-h-[420px] w-full overflow-hidden rounded-[24px] border border-[#fde2ec] bg-white shadow-[0_12px_32px_rgba(232,62,116,0.1)] lg:aspect-auto lg:h-full lg:min-h-0">
+              <div className="relative aspect-[1.06/1] min-h-[340px] w-full overflow-hidden rounded-[24px] border-4 border-white bg-white shadow-[0_18px_40px_rgba(232,62,116,0.12)] sm:min-h-[400px] lg:aspect-auto lg:h-full lg:min-h-0">
                 <Image
-                  src="/images/about-mona-dahiya/iui-benefits-doctor.jpg"
+                  src="/images/best-iui-benefits.jpg"
                   alt="Dr. Mona Dahiya — Why choose Dr. Mona Dahiya for IUI"
                   fill
-                  sizes="(max-width: 1024px) 400px, (max-width: 1280px) 500px, 600px"
-                  className="object-cover object-top"
+                  quality={95}
+                  sizes="(max-width: 1024px) 420px, (max-width: 1280px) 520px, 600px"
+                  className="object-cover object-[68%_center]"
                   priority
                 />
               </div>

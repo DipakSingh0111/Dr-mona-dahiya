@@ -1,6 +1,6 @@
-﻿"use client";
-import HeroBannerImage from "@/components/ui/HeroBannerImage";
+"use client";
 
+import HeroBannerImage from "@/components/ui/HeroBannerImage";
 import Link from "next/link";
 import { FaHome, FaChevronRight } from "react-icons/fa";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
@@ -16,8 +16,7 @@ export default function IntlHero() {
     <section
       className="relative flex flex-col justify-center overflow-hidden py-8 sm:py-10 lg:min-h-[calc(100svh-var(--site-header-h,8.75rem))] lg:py-8 xl:py-10"
       style={{
-        background:
-          "var(--pink)",
+        background: "var(--pink)",
       }}
     >
       <div
@@ -64,7 +63,7 @@ export default function IntlHero() {
           <div className="mt-5 flex flex-wrap items-center gap-3 sm:gap-4 lg:mt-6">
             <a
               href="#book-consultation"
-              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-rose to-[#f43f5e] px-5 py-2.5 text-[13px] font-semibold text-ink shadow-[0_4px_16px_rgba(232,62,116,0.35)] transition-all hover:brightness-110 sm:px-6 sm:py-3 sm:text-[14px]"
+              className="inline-flex items-center justify-center rounded-full bg-rose px-5 py-2.5 text-[13px] font-semibold text-white shadow-[0_4px_16px_rgba(232,62,116,0.35)] transition-all hover:bg-rose-dark sm:px-6 sm:py-3 sm:text-[14px]"
             >
               Book An Appointment At Clinic
             </a>
@@ -101,8 +100,9 @@ export default function IntlHero() {
         </div>
 
         <HeroBannerImage
-          src="/images/about-mona-dahiya/book-a-appointment.jpg"
+          src="/images/international-ivf-patients.jpg"
           alt="Dr. Mona Dahiya — International IVF Patients in India"
+          objectPosition="object-center"
         />
       </div>
     </section>

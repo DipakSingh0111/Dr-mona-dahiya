@@ -31,7 +31,7 @@ export default function HeroBannerImage({
     <Reveal
       delay={0.1}
       variant="slideRight"
-      className={`relative mx-auto w-full max-w-[340px] justify-self-center sm:max-w-[400px] lg:col-span-5 lg:mx-0 lg:max-w-[450px] lg:justify-self-end xl:max-w-[480px] ${className}`}
+      className={`hero-banner-card relative mx-auto w-full max-w-[340px] justify-self-center sm:max-w-[400px] lg:col-span-5 lg:mx-0 lg:max-w-[440px] lg:justify-self-end xl:max-w-[450px] ${className}`}
     >
       <div
         aria-hidden

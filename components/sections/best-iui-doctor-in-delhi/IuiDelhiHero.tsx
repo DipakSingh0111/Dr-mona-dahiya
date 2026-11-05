@@ -1,6 +1,6 @@
-﻿"use client";
-import HeroBannerImage from "@/components/ui/HeroBannerImage";
+"use client";
 
+import HeroBannerImage from "@/components/ui/HeroBannerImage";
 import Link from "next/link";
 import { FaHome, FaChevronRight } from "react-icons/fa";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
@@ -17,8 +17,7 @@ export default function IuiDelhiHero() {
     <section
       className="relative flex flex-col justify-center overflow-hidden py-8 sm:py-10 lg:min-h-[calc(100svh-var(--site-header-h,8.75rem))] lg:py-8 xl:py-10"
       style={{
-        background:
-          "var(--pink)",
+        background: "var(--pink)",
       }}
     >
       <div
@@ -73,19 +72,21 @@ export default function IuiDelhiHero() {
             </ol>
           </nav>
 
-          <p className="text-[12px] font-bold tracking-[0.12em] text-rose uppercase sm:text-[13px] lg:text-[13.5px]">
-            Fertility Specialist In Delhi | Best IUI Doctor In Delhi
-          </p>
+          <Reveal variant="slideLeft">
+            <p className="text-[12px] font-bold tracking-[0.12em] text-rose uppercase sm:text-[13px] lg:text-[13.5px]">
+              Fertility Specialist In Delhi | Best IUI Doctor In Delhi
+            </p>
 
-          <h1 className="font-serif mt-1.5 max-w-[42rem] text-[2.1rem] leading-[1.14] font-normal tracking-tight text-ink sm:text-[2.75rem] lg:text-[3.3rem] xl:text-[3.65rem]">
-            IUI Treatment Delhi
-          </h1>
+            <h1 className="font-serif mt-1.5 max-w-[42rem] text-[2.1rem] leading-[1.14] font-normal tracking-tight text-ink sm:text-[2.75rem] lg:text-[3.3rem] xl:text-[3.65rem]">
+              IUI Treatment Delhi
+            </h1>
 
-          <p className="mt-3.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px] lg:text-[16px]">
-            Dr. Mona Dahiya with 25+ years of experience offers IUI treatment in
-            Delhi. We can guide you whether you need IUI and plan each IUI cycle
-            based on your reports.
-          </p>
+            <p className="mt-3.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px] lg:text-[16px]">
+              Dr. Mona Dahiya with 25+ years of experience offers IUI treatment in
+              Delhi. We can guide you whether you need IUI and plan each IUI cycle
+              based on your reports.
+            </p>
+          </Reveal>
 
           <div className="mt-5 flex flex-wrap items-center gap-3 sm:gap-4 lg:mt-6">
             <a
@@ -128,7 +129,7 @@ export default function IuiDelhiHero() {
         </div>
 
         <HeroBannerImage
-          src="/images/IUI-treatment.jpg"
+          src="/images/best-iui-banner.jpg"
           alt="Dr. Mona Dahiya — IUI Treatment Delhi"
         />
       </div>

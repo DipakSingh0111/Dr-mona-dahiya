@@ -144,9 +144,13 @@ export default function Hero() {
       />
 
       <div className="page-container hero-content relative z-20 flex flex-1 items-center pt-5 pb-7">
-        <div className="hero-copy flex w-full max-w-[430px] flex-col gap-4.5 sm:max-w-[460px] xl:max-w-[490px] xl:gap-5">
-          <HeroReveal key={`eyebrow-${activeSlide}`} delay={0.05}>
-            <p className="hero-eyebrow text-[12.5px] font-semibold tracking-[0.14em] text-white/90 uppercase transition-all duration-500 sm:text-[13.5px] sm:tracking-[0.16em] lg:text-[14px] xl:text-[15px] xl:tracking-[0.18em]">
+        <div className="hero-copy flex w-full min-w-0 max-w-[430px] flex-col gap-4 sm:max-w-[460px] sm:gap-4.5 xl:max-w-[490px] xl:gap-5">
+          <HeroReveal
+            key={`eyebrow-${activeSlide}`}
+            delay={0.05}
+            className="w-full min-w-0"
+          >
+            <p className="hero-eyebrow text-[12px] font-semibold tracking-[0.13em] text-white/90 uppercase transition-all duration-500 sm:text-[13.5px] sm:tracking-[0.16em] lg:text-[14px] xl:text-[15px] xl:tracking-[0.18em]">
               {currentSlide.eyebrow || eyebrow}
             </p>
             <h1 className="hero-title font-display font-bold tracking-tight text-white transition-all duration-500">
@@ -154,28 +158,28 @@ export default function Hero() {
             </h1>
           </HeroReveal>
 
-          <HeroReveal delay={0.22}>
+          <HeroReveal delay={0.22} className="w-full min-w-0">
             <div className="hero-stats w-full max-w-[420px] sm:max-w-[450px] xl:max-w-[480px]">
               <StatsCards stats={stats} />
             </div>
           </HeroReveal>
 
-          <HeroReveal delay={0.32}>
-            <div className="hero-ctas grid w-full max-w-[420px] grid-cols-2 gap-3.5 sm:max-w-[450px] xl:max-w-[480px] xl:gap-4">
+          <HeroReveal delay={0.32} className="w-full min-w-0">
+            <div className="hero-ctas flex w-full max-w-[420px] flex-col gap-2.5 min-[350px]:flex-row sm:grid sm:max-w-[450px] sm:grid-cols-2 sm:gap-3.5 xl:max-w-[480px] xl:gap-4">
               <a
                 href={primaryCta.href}
-                className="hero-cta inline-flex h-11 w-full items-center justify-center gap-2 rounded-full bg-rose px-3.5 text-[13.5px] font-bold whitespace-nowrap text-white shadow-[0_10px_24px_rgba(232,62,116,0.35)] transition-all hover:bg-rose-dark sm:h-12.5 sm:gap-2.5 sm:px-4 sm:text-[14.5px] xl:h-[3.45rem] xl:text-[15.5px]"
+                className="hero-cta inline-flex h-11 w-full items-center justify-center gap-1.5 rounded-full bg-rose px-3.5 text-[12.5px] font-bold whitespace-nowrap text-white shadow-[0_10px_24px_rgba(232,62,116,0.35)] transition-all hover:bg-rose-dark min-[350px]:w-auto min-[350px]:flex-auto min-[390px]:gap-2 min-[390px]:text-[13.5px] sm:h-12.5 sm:w-full sm:gap-2.5 sm:px-4 sm:text-[14.5px] xl:h-[3.45rem] xl:text-[15.5px]"
               >
-                <CalendarIcon className="size-4 shrink-0 sm:size-4.5 xl:size-5" />
+                <CalendarIcon className="size-3.5 shrink-0 min-[390px]:size-4 sm:size-4.5 xl:size-5" />
                 {primaryCta.label}
               </a>
               <a
                 href={secondaryCta.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hero-cta inline-flex h-11 w-full items-center justify-center gap-2 rounded-full border border-white/55 bg-transparent px-3.5 text-[13.5px] font-bold whitespace-nowrap text-white transition-all hover:bg-white/10 sm:h-12.5 sm:gap-2.5 sm:px-4 sm:text-[14.5px] xl:h-[3.45rem] xl:text-[15.5px]"
+                className="hero-cta inline-flex h-11 w-full items-center justify-center gap-1.5 rounded-full border border-white/55 bg-transparent px-3.5 text-[12.5px] font-bold whitespace-nowrap text-white transition-all hover:bg-white/10 min-[350px]:w-auto min-[350px]:flex-auto min-[390px]:gap-2 min-[390px]:text-[13.5px] sm:h-12.5 sm:w-full sm:gap-2.5 sm:px-4 sm:text-[14.5px] xl:h-[3.45rem] xl:text-[15.5px]"
               >
-                <span className="inline-flex h-[15px] w-[21px] shrink-0 items-center justify-center rounded-[4px] bg-[#e50914] text-white sm:h-[17px] sm:w-[23px] xl:h-[19px] xl:w-[25px]">
+                <span className="inline-flex h-[15px] w-[20px] shrink-0 items-center justify-center rounded-[4px] bg-[#e50914] text-white sm:h-[17px] sm:w-[23px] xl:h-[19px] xl:w-[25px]">
                   <PlayIcon className="ml-0.5 size-2.5 fill-white text-white sm:size-3 xl:size-3" />
                 </span>
                 {secondaryCta.label}
@@ -183,19 +187,19 @@ export default function Hero() {
             </div>
           </HeroReveal>
 
-          <HeroReveal delay={0.4}>
-            <div className="hero-review-badge flex w-fit items-center gap-2.5 rounded-full border border-[#fed7aa] bg-[#fffbf2] px-4 py-2 whitespace-nowrap shadow-sm backdrop-blur-md xl:px-5 xl:py-2.5">
-              <div className="flex items-center gap-0.5 text-[#f59e0b]">
-                <FaStar className="size-4 fill-current xl:size-4.5" />
-                <FaStar className="size-4 fill-current xl:size-4.5" />
-                <FaStar className="size-4 fill-current xl:size-4.5" />
-                <FaStar className="size-4 fill-current xl:size-4.5" />
-                <FaStar className="size-4 fill-current xl:size-4.5" />
+          <HeroReveal delay={0.4} className="w-full min-w-0">
+            <div className="hero-review-badge flex w-full max-w-[420px] items-center justify-center gap-1.5 rounded-2xl border border-[#fed7aa] bg-[#fffbf2] px-3 py-2 shadow-sm backdrop-blur-md min-[360px]:rounded-full sm:w-fit sm:max-w-none sm:justify-start sm:gap-2.5 sm:rounded-full sm:px-4 sm:whitespace-nowrap xl:px-5 xl:py-2.5">
+              <div className="flex shrink-0 items-center gap-0.5 text-[#f59e0b]">
+                <FaStar className="size-3 fill-current min-[390px]:size-3.5 sm:size-4 xl:size-4.5" />
+                <FaStar className="size-3 fill-current min-[390px]:size-3.5 sm:size-4 xl:size-4.5" />
+                <FaStar className="size-3 fill-current min-[390px]:size-3.5 sm:size-4 xl:size-4.5" />
+                <FaStar className="size-3 fill-current min-[390px]:size-3.5 sm:size-4 xl:size-4.5" />
+                <FaStar className="size-3 fill-current min-[390px]:size-3.5 sm:size-4 xl:size-4.5" />
               </div>
-              <span className="text-[14px] font-bold text-ink xl:text-[15px]">
+              <span className="shrink-0 text-[12px] font-bold text-ink min-[390px]:text-[13px] sm:text-[14px] xl:text-[15px]">
                 4.9
               </span>
-              <span className="text-[13px] font-medium text-gray-700 xl:text-[14px]">
+              <span className="min-w-0 text-[11px] leading-tight font-medium text-ink/80 min-[375px]:text-[11.5px] min-[400px]:text-[12px] sm:text-[13px] sm:whitespace-nowrap xl:text-[14px]">
                 {siteData.hero.googleReviewsLabel ??
                   "Read Dr. Mona Dahiya's Google reviews"}
               </span>

@@ -83,9 +83,10 @@ export default function IuiNotSuitable() {
               />
               <div className="relative aspect-[4/5] sm:aspect-[1] min-h-[360px] sm:min-h-[420px] w-full overflow-hidden rounded-[24px] border-4 border-white bg-white shadow-[0_18px_40px_rgba(232,62,116,0.12)] sm:rounded-[28px] lg:aspect-auto lg:h-full lg:min-h-0">
                 <Image
-                  src="/images/about-mona-dahiya/book-a-appointment.jpg"
+                  src="/images/best-iui-procedures.jpg"
                   alt="Dr. Mona Dahiya — When is IUI not suitable?"
                   fill
+                  quality={95}
                   sizes="(max-width: 1024px) 400px, (max-width: 1280px) 500px, 600px"
                   className="object-cover object-top"
                   priority

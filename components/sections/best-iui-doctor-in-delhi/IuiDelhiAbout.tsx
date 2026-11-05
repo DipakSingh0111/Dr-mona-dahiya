@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -80,12 +80,13 @@ export default function IuiDelhiAbout() {
                     "radial-gradient(circle, rgba(232,62,116,0.3) 0%, rgba(0,71,202,0.2) 60%, transparent 75%)",
                 }}
               />
-              <div className="relative aspect-[4/5] overflow-hidden rounded-[24px] border-4 border-white bg-white shadow-[0_16px_36px_rgba(0,0,0,0.4)]">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-[24px] border-4 border-white bg-white shadow-[0_18px_40px_rgba(232,62,116,0.12)]">
                 <Image
-                  src="/images/about-mona-dahiya/iui-about-doctor.jpg"
+                  src="/images/best-IUI.jpg"
                   alt="Dr. Mona Dahiya — IUI and Why it is done"
                   fill
-                  sizes="(max-width: 1024px) 400px, 500px"
+                  quality={95}
+                  sizes="(max-width: 1024px) 400px, 520px"
                   className="object-cover object-top"
                 />
               </div>

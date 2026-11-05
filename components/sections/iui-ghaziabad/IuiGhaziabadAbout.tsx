@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import { FaCheck } from "react-icons/fa";
@@ -83,12 +83,13 @@ export default function IuiGhaziabadAbout() {
                     "radial-gradient(circle, rgba(232,62,116,0.25) 0%, rgba(59,130,246,0.15) 50%, transparent 75%)",
                 }}
               />
-              <div className="relative h-full min-h-[380px] w-full overflow-hidden rounded-[24px] border-4 border-white bg-white shadow-[0_18px_40px_rgba(232,62,116,0.12)] sm:rounded-[28px] sm:min-h-[460px] lg:min-h-0">
+              <div className="relative aspect-[4/4.5] h-full min-h-[380px] w-full overflow-hidden rounded-[24px] border-4 border-white bg-white shadow-[0_18px_40px_rgba(232,62,116,0.12)] sm:min-h-[460px] sm:rounded-[28px] lg:aspect-auto lg:min-h-0">
                 <Image
-                  src="/images/about-mona-dahiya/iui-benefits-doctor.jpg"
+                  src="/images/best-iui-doctor.jpg"
                   alt="Dr. Mona Dahiya — IUI in simple words"
                   fill
-                  sizes="(max-width: 1024px) 420px, 480px"
+                  quality={95}
+                  sizes="(max-width: 1024px) 420px, 520px"
                   className="object-cover object-top"
                 />
               </div>

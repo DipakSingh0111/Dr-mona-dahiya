@@ -89,7 +89,7 @@ function FeatureCard({ item }: { item: FeatureCardData }) {
 
   return (
     <article
-      className={`group relative flex w-full items-center gap-3.5 overflow-hidden rounded-[20px] border ${theme.border} ${theme.cardBg} px-3.5 py-3 shadow-sm transition-all duration-300 hover:-translate-y-0.5 sm:px-4 sm:py-3.5 xl:gap-4 xl:rounded-[22px] xl:px-5 xl:py-4 ${theme.hoverGlow}`}
+      className={`group relative flex h-full w-full items-center gap-3.5 overflow-hidden rounded-[20px] border ${theme.border} ${theme.cardBg} px-3.5 py-3 shadow-sm transition-all duration-300 hover:-translate-y-0.5 sm:px-4 sm:py-3.5 xl:gap-4 xl:rounded-[22px] xl:px-5 xl:py-4 ${theme.hoverGlow}`}
     >
       <div
         className={`relative z-10 flex size-[44px] shrink-0 items-center justify-center rounded-[14px] text-white sm:size-[48px] sm:rounded-[15px] xl:size-[56px] xl:rounded-[16px] ${theme.iconBg} ${theme.iconShadow} transition-transform duration-300 group-hover:scale-105`}
@@ -97,11 +97,11 @@ function FeatureCard({ item }: { item: FeatureCardData }) {
         {Icon ? <Icon className="size-[20px] sm:size-[22px] xl:size-[26px]" /> : null}
       </div>
 
-      <div className="relative z-10 min-w-0 flex-1 pr-6 xl:pr-7">
-        <h3 className="font-display text-[14.5px] leading-snug font-bold tracking-tight text-[#0f2038] sm:text-[15px] xl:text-[17px]">
+      <div className="relative z-10 min-w-0 flex-1">
+        <h3 className="font-display pr-7 text-[14.5px] leading-snug font-bold tracking-tight text-[#0f2038] sm:text-[15px] xl:pr-8 xl:text-[17px]">
           {item.title}
         </h3>
-        <p className="mt-0.5 line-clamp-2 text-[11.5px] leading-relaxed text-[#64748b] sm:text-[12px] xl:mt-1 xl:text-[13px]">
+        <p className="mt-0.5 text-[11.5px] leading-relaxed text-[#64748b] sm:text-[12px] xl:mt-1 xl:text-[13px]">
           {item.description}
         </p>
       </div>
@@ -155,65 +155,58 @@ export default function WhyChooseUs() {
           ) : null}
         </header>
 
-        <div className="grid grid-cols-1 items-center gap-4 lg:grid-cols-[1fr_minmax(280px,350px)_1fr] lg:gap-5 xl:grid-cols-[1fr_minmax(320px,390px)_1fr] xl:gap-8">
+        <div className="grid grid-cols-1 items-center gap-5 lg:grid-cols-[1fr_276px_1fr] lg:items-stretch lg:gap-5 xl:grid-cols-[1fr_304px_1fr] xl:gap-7">
           <Stagger
-            className="flex flex-col justify-center gap-3 sm:gap-3.5 xl:gap-4"
+            className="flex h-full flex-col justify-between gap-3 sm:gap-3.5 lg:gap-4 xl:gap-4.5"
             stagger={0.08}
           >
             {leftCards.map((item) => (
               <StaggerItem
                 key={item.number}
                 variant="slideLeft"
+                className="flex flex-1"
               >
                 <FeatureCard item={item} />
               </StaggerItem>
             ))}
           </Stagger>
 
-          {/* Center doctor portrait */}
+          {/* Center doctor portrait — top & bottom aligned with cards */}
           <Reveal
             variant="scaleIn"
-            className="relative order-first mx-auto flex h-[380px] w-[270px] shrink-0 items-center justify-center overflow-visible sm:h-[440px] sm:w-[320px] lg:order-none lg:h-[470px] lg:w-[330px] xl:h-[500px] xl:w-[360px]"
+            className="relative order-first mx-auto aspect-[4/5] w-full max-w-[290px] sm:max-w-[330px] lg:order-none lg:mx-0 lg:aspect-auto lg:h-full lg:min-h-[345px] lg:max-w-none xl:min-h-[380px]"
           >
-            {/* Soft pink circle */}
-            <div
-              aria-hidden
-              className="pointer-events-none absolute top-1/2 left-1/2 z-0 aspect-square w-[96%] -translate-x-1/2 -translate-y-1/2 rounded-full"
-              style={{
-                background:
-                  "radial-gradient(circle at 50% 46%, #f7b7cd 0%, #f9c5d8 28%, #fbd5e5 52%, #feeaf2 70%, rgba(255,245,249,0.35) 82%, transparent 90%)",
-              }}
-            />
             {/* Outer soft bloom */}
             <div
               aria-hidden
-              className="pointer-events-none absolute top-1/2 left-1/2 z-0 aspect-square w-[110%] -translate-x-1/2 -translate-y-1/2 rounded-full blur-2xl"
+              className="pointer-events-none absolute -inset-3 z-0 rounded-[32px] blur-2xl"
               style={{
                 background:
-                  "radial-gradient(circle at 50% 48%, rgba(249,180,205,0.55) 0%, rgba(251,205,222,0.28) 40%, transparent 68%)",
+                  "radial-gradient(circle at 50% 50%, rgba(249,180,205,0.5) 0%, rgba(251,205,222,0.25) 50%, transparent 75%)",
               }}
             />
 
-            <div className="relative z-10 aspect-[3/4] h-[88%] max-h-[500px] w-auto overflow-hidden rounded-[28px] shadow-[0_18px_40px_rgba(232,62,116,0.18)] ring-4 ring-white sm:rounded-[32px]">
+            <div className="relative z-10 h-full w-full overflow-hidden rounded-[22px] border-4 border-white shadow-[0_18px_40px_rgba(232,62,116,0.18)] sm:rounded-[24px]">
               <Image
                 src={image}
                 alt="Dr. Mona Dahiya - Fertility & IVF Specialist"
                 fill
                 priority
                 className="object-cover object-top select-none"
-                sizes="(max-width: 1024px) 320px, 380px"
+                sizes="(max-width: 1024px) 330px, 320px"
               />
             </div>
           </Reveal>
 
           <Stagger
-            className="flex flex-col justify-center gap-3 sm:gap-3.5 xl:gap-4"
+            className="flex h-full flex-col justify-between gap-3 sm:gap-3.5 lg:gap-4 xl:gap-4.5"
             stagger={0.08}
           >
             {rightCards.map((item) => (
               <StaggerItem
                 key={item.number}
                 variant="slideRight"
+                className="flex flex-1"
               >
                 <FeatureCard item={item} />
               </StaggerItem>

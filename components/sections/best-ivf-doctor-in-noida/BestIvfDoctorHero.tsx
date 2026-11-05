@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import HeroBannerImage from "@/components/ui/HeroBannerImage";
 import Link from "next/link";
@@ -113,7 +113,7 @@ export default function BestIvfDoctorHero() {
         </div>
 
         <HeroBannerImage
-          src="/images/Confident-Doctor.png"
+          src="/images/ivf-noida.jpg"
           alt="Dr. Mona Dahiya - Best IVF Doctor in Noida"
         />
       </div>

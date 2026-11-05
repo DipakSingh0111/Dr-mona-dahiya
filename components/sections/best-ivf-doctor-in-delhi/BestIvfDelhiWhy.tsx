@@ -56,7 +56,7 @@ export default function BestIvfDelhiWhy() {
           <Reveal variant="scaleIn" className="lg:col-span-5">
             <div className="relative mx-auto max-w-[420px] overflow-hidden rounded-[22px] border border-[#fde2ec] shadow-[0_20px_50px_rgba(0,10,40,0.4)]">
               <Image
-                src="/images/about-mona-dahiya/iui-benefits-doctor.jpg"
+                src="/images/best-doctor.jpg"
                 alt="Dr. Mona Dahiya - IVF in Delhi"
                 width={600}
                 height={587}

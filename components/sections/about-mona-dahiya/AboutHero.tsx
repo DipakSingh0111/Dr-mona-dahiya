@@ -115,7 +115,7 @@ export default function AboutHero() {
         </div>
 
         <HeroBannerImage
-          src="/images/Confident-Doctor.png"
+          src="/images/ivf-noida-01.jpg"
           alt="Dr. Mona Dahiya - Senior Reproductive Endocrinologist & Fertility Specialist"
         />
       </div>

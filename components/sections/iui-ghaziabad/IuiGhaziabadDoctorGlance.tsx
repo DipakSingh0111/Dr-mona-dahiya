@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -40,13 +40,14 @@ export default function IuiGhaziabadDoctorGlance() {
                     "radial-gradient(circle, rgba(0,71,202,0.2) 0%, rgba(232,62,116,0.15) 60%, transparent 75%)",
                 }}
               />
-              <div className="relative aspect-[4/3] sm:aspect-[1.1] overflow-hidden rounded-[24px] border-4 border-white bg-white shadow-[0_18px_40px_rgba(232,62,116,0.12)]">
+              <div className="relative aspect-[3/2] overflow-hidden rounded-[24px] rounded-br-[88px] border-4 border-white bg-white shadow-[0_18px_40px_rgba(232,62,116,0.12)]">
                 <Image
-                  src="/images/about-mona-dahiya/dr-mona-dahiya.jpg"
+                  src="/images/best-iui-about.jpg"
                   alt="Dr. Mona Dahiya — Fertility Specialist"
                   fill
-                  sizes="(max-width: 1024px) 400px, 500px"
-                  className="object-cover object-top"
+                  quality={95}
+                  sizes="(max-width: 1024px) 440px, 560px"
+                  className="object-cover object-center"
                 />
               </div>
             </Reveal>
