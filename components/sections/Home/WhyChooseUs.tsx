@@ -171,10 +171,10 @@ export default function WhyChooseUs() {
             ))}
           </Stagger>
 
-          {/* Center doctor portrait — top & bottom aligned with cards */}
+          {/* Center doctor portrait — top & bottom aligned with cards on desktop, after cards on mobile */}
           <Reveal
             variant="scaleIn"
-            className="relative order-first mx-auto aspect-[4/5] w-full max-w-[290px] sm:max-w-[330px] lg:order-none lg:mx-0 lg:aspect-auto lg:h-full lg:min-h-[345px] lg:max-w-none xl:min-h-[380px]"
+            className="relative order-last mx-auto aspect-[4/5] w-full max-w-[290px] sm:max-w-[330px] lg:order-none lg:mx-0 lg:aspect-auto lg:h-full lg:min-h-[345px] lg:max-w-none xl:min-h-[380px]"
           >
             {/* Outer soft bloom */}
             <div

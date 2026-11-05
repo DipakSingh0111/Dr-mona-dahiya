@@ -30,7 +30,7 @@ export default function IuiDelhiDoctor() {
     <section className="relative overflow-hidden border-t border-[#fde2ec] bg-pink py-8 sm:py-10 lg:py-14">
       <div className="page-container relative">
         <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-12 lg:gap-12">
-          <div className="relative mx-auto w-full max-w-[340px] sm:max-w-[400px] lg:col-span-5 lg:max-w-none">
+          <div className="relative order-2 mx-auto w-full max-w-[340px] sm:max-w-[400px] lg:order-1 lg:col-span-5 lg:max-w-none">
             <Reveal variant="slideLeft" delay={0.1}>
               <div
                 aria-hidden
@@ -53,7 +53,7 @@ export default function IuiDelhiDoctor() {
             </Reveal>
           </div>
 
-          <div className="min-w-0 lg:col-span-7">
+          <div className="order-1 min-w-0 lg:order-2 lg:col-span-7">
             <Reveal variant="fadeUp">
               <span className="text-[12px] font-semibold tracking-wider text-rose uppercase sm:text-[13px]">
                 Meet Your IUI Doctor

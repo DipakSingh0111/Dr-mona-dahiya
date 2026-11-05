@@ -29,8 +29,8 @@ export default function IuiGhaziabadDoctorGlance() {
     <section className="relative overflow-hidden bg-white py-8 sm:py-10 lg:py-14 border-t border-slate-100">
       <div className="page-container relative">
         <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-12 lg:gap-12">
-          {/* Left Column: Doctor Photo */}
-          <div className="relative mx-auto w-full max-w-[340px] sm:max-w-[400px] lg:col-span-5 lg:max-w-none">
+          {/* Left Column: Doctor Photo (after content on mobile, left on desktop) */}
+          <div className="relative order-2 mx-auto w-full max-w-[340px] sm:max-w-[400px] lg:order-1 lg:col-span-5 lg:max-w-none">
             <Reveal variant="slideLeft" delay={0.1}>
               <div
                 aria-hidden
@@ -54,7 +54,7 @@ export default function IuiGhaziabadDoctorGlance() {
           </div>
 
           {/* Right Column: Bio & Credentials */}
-          <div className="min-w-0 lg:col-span-7">
+          <div className="order-1 min-w-0 lg:order-2 lg:col-span-7">
             <Reveal variant="fadeUp">
               <span className="text-[12px] font-semibold tracking-wider text-rose uppercase sm:text-[13px]">
                 Doctor you will meet

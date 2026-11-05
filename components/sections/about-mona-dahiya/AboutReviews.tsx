@@ -3,14 +3,29 @@
 import Link from "next/link";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
-export default function AboutReviews() {
+type AboutReviewsProps = {
+  eyebrow?: string;
+  title?: string;
+  subtitle?: string;
+  ctaLabel?: string;
+  sectionBg?: string;
+};
+
+export default function AboutReviews({
+  eyebrow = "Reviews",
+  title = "Feedback From Our Patients.",
+  subtitle = "Here are some of the feedback from our patients.",
+  ctaLabel = "View More Reviews",
+  sectionBg = "bg-white border-t border-rose/15",
+}: AboutReviewsProps = {}) {
   const reviews = [
     {
       initial: "S",
       name: "Shivam Singh",
       source: "Google patient review",
       comment:
-        "Unlike other fertility doctors who seem to have major Ego issues,Dr Mona Dahiya is so lovable and approachable. She provides individualized attention so that couples feel heard and supported. We were always well-informed for the medicines,tests and costs involved.We will rate her as simply exceptional. 🔥 1",
+        "Unlike other fertility doctors who seem to have major Ego issues,Dr Mona Dahiya is so lovable and approachable. She provides individualized attention so that couples feel heard and supported. We were always well-informed for the medicines,tests and costs involved.We will rate her as simply exceptional.",
+      reaction: "🔥 1",
       avatarBg: "bg-rose",
     },
     {
@@ -32,19 +47,22 @@ export default function AboutReviews() {
   ];
 
   return (
-    <section id="reviews" className="relative overflow-hidden bg-white py-8 sm:py-10 lg:py-12 border-t border-slate-100">
+    <section
+      id="reviews"
+      className={`relative overflow-hidden py-8 sm:py-10 lg:py-12 ${sectionBg}`}
+    >
       <div className="page-container relative">
         <Reveal className="mb-8">
-          <span className="text-[12px] font-semibold tracking-wider text-rose uppercase sm:text-[13px]">
-            Reviews
-          </span>
+          <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">
+            {eyebrow}
+          </p>
 
-          <h2 className="font-serif mt-2 text-[1.85rem] leading-[1.2] font-bold tracking-tight text-ink sm:text-[2.2rem] lg:text-[2.45rem]">
-            Feedback From Our Patients.
+          <h2 className="font-serif mt-1.5 text-[1.95rem] leading-[1.2] font-normal tracking-tight text-ink sm:text-[2.35rem] lg:text-[2.6rem]">
+            {title}
           </h2>
 
-          <p className="mt-2.5 max-w-2xl text-[13.5px] leading-relaxed text-slate-600 sm:text-[14.5px]">
-            Here are some of the feedback from our patients.
+          <p className="mt-2.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/80 sm:text-[14.5px]">
+            {subtitle}
           </p>
         </Reveal>
 
@@ -54,14 +72,19 @@ export default function AboutReviews() {
         >
           {reviews.map((rev) => (
             <StaggerItem key={rev.name} variant="scaleIn" className="h-full">
-              <article className="group relative flex h-full flex-col justify-between overflow-hidden rounded-[22px] border border-[#fde2ec] bg-white p-6 shadow-sm transition-all duration-300 hover:border-rose/40 hover:bg-[#fff0f5] hover:shadow-md sm:p-7">
+              <article className="group relative flex h-full flex-col justify-between overflow-hidden rounded-[22px] border border-rose/20 bg-white p-6 shadow-[0_4px_18px_rgba(232,62,116,0.06)] transition-all duration-300 hover:border-rose/40 hover:shadow-[0_12px_28px_rgba(232,62,116,0.12)] sm:p-7">
                 <div>
-                  <p className="text-[13.5px] leading-relaxed text-slate-700 sm:text-[14px]">
+                  <p className="text-[13.5px] leading-relaxed text-ink/85 sm:text-[14px]">
                     {rev.comment}
                   </p>
+                  {rev.reaction ? (
+                    <p className="mt-2 text-[13px] text-ink/85">
+                      {rev.reaction}
+                    </p>
+                  ) : null}
                 </div>
 
-                <div className="mt-6 flex items-center gap-3.5 border-t border-[#fde2ec] pt-5">
+                <div className="mt-6 flex items-center gap-3.5 border-t border-rose/15 pt-5">
                   <div
                     className={`flex size-10 shrink-0 items-center justify-center rounded-full text-[14px] font-bold text-white shadow-sm ${rev.avatarBg}`}
                   >
@@ -71,7 +94,7 @@ export default function AboutReviews() {
                     <h3 className="text-[14.5px] font-bold text-ink">
                       {rev.name}
                     </h3>
-                    <p className="text-[12px] text-slate-500">{rev.source}</p>
+                    <p className="text-[12px] text-ink/65">{rev.source}</p>
                   </div>
                 </div>
               </article>
@@ -82,9 +105,9 @@ export default function AboutReviews() {
         <div className="mt-8">
           <Link
             href="/best-ivf-patient-reviews"
-            className="inline-flex items-center justify-center rounded-full border border-rose/40 bg-white px-6 py-2.5 text-[13px] font-semibold text-ink shadow-sm transition-all duration-200 hover:border-rose hover:bg-[#fff0f5] hover:text-rose active:scale-95 sm:text-[13.5px]"
+            className="inline-flex items-center justify-center rounded-full border border-rose/40 bg-white px-6 py-2.5 text-[13px] font-semibold text-ink shadow-sm transition-all duration-200 hover:border-rose hover:bg-pink hover:text-rose active:scale-95 sm:text-[13.5px]"
           >
-            View More Reviews
+            {ctaLabel}
           </Link>
         </div>
       </div>
