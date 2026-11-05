@@ -1,114 +1,29 @@
 "use client";
 
-import { useState, type ReactNode } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { FaChevronDown } from "react-icons/fa";
 import { Reveal } from "@/components/ui/Reveal";
+import siteData from "@/data/site.json";
 
-interface FaqItem {
-  question: string;
-  answer: ReactNode;
+interface FaqItemData {
+  q: string;
+  a: string;
+  linkText?: string;
+  linkHref?: string;
 }
 
 const linkClass =
-  "font-semibold text-rose underline decoration-rose/40 underline-offset-2 hover:text-rose";
-
-const faqList: FaqItem[] = [
-  {
-    question: "Are these stories from real patients?",
-    answer:
-      "Yes. They are reviews written by Dr. Mona Dahiya's patients, shared in their own words. Individual results vary.",
-  },
-  {
-    question: "What is Dr. Mona Dahiya's IVF success rate?",
-    answer:
-      "The clinic reports IVF success rates above 90%; exact chances depend on age, egg reserve and the cause of infertility.",
-  },
-  {
-    question: "Can I succeed after failed IVF elsewhere?",
-    answer: (
-      <>
-        Many couples do. A root-cause review often finds a fixable reason, such
-        as a uterine problem or sperm DNA damage. See{" "}
-        <Link href="/ivf-consultation-online" className={linkClass}>
-          Second Opinion
-        </Link>
-        .
-      </>
-    ),
-  },
-  {
-    question: "Is pregnancy possible with low AMH?",
-    answer: (
-      <>
-        Yes. Low AMH means fewer eggs, not poor quality. See{" "}
-        <Link href="/low-amh-stories" className={linkClass}>
-          Low AMH Stories
-        </Link>
-        .
-      </>
-    ),
-  },
-  {
-    question: "Do women with PCOS always need IVF?",
-    answer: (
-      <>
-        No. Many conceive with lifestyle change and Letrozole. See{" "}
-        <Link href="/success-stories#pcos" className={linkClass}>
-          PCOS Stories
-        </Link>
-        .
-      </>
-    ),
-  },
-  {
-    question: "How many IUI cycles are usually tried?",
-    answer: (
-      <>
-        3 to 4 well-timed cycles before moving to IVF. See{" "}
-        <Link href="/iui-stories" className={linkClass}>
-          IUI Stories
-        </Link>
-        .
-      </>
-    ),
-  },
-  {
-    question: "How long does a typical journey take?",
-    answer:
-      "From first visit to transfer, an IVF cycle usually takes 4 to 8 weeks, depending on tests and protocol.",
-  },
-  {
-    question: "Can I share my story?",
-    answer:
-      "Yes. Patients can leave a review on Google or send it to info@drmonadahiya.com.",
-  },
-  {
-    question: "Where can I consult Dr. Mona Dahiya?",
-    answer:
-      "At 3 clinics: Noida (Sector 49), Ghaziabad (Raj Nagar) and Delhi (Lajpat Nagar IV), Monday to Saturday, 10:00 AM to 5:00 PM.",
-  },
-  {
-    question: "Can I share my reports online first?",
-    answer: (
-      <>
-        Yes. A 30-minute online consultation costs ₹1,000 in India or US$25
-        abroad. See{" "}
-        <Link href="/ivf-consultation-online" className={linkClass}>
-          Online Consultation
-        </Link>
-        .
-      </>
-    ),
-  },
-];
+  "font-semibold text-rose underline decoration-rose/40 underline-offset-2 hover:text-rose-dark transition-colors";
 
 export default function SuccessStoriesFaq() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const leftCol = faqList.slice(0, 5);
-  const rightCol = faqList.slice(5, 10);
+  const { eyebrow, title, items } = siteData.successStoriesPage.faq;
 
-  const renderFaqCard = (item: FaqItem, index: number) => {
+  const leftCol = items.slice(0, 5);
+  const rightCol = items.slice(5, 10);
+
+  const renderFaqCard = (item: FaqItemData, index: number) => {
     const isOpen = openIndex === index;
     return (
       <div
@@ -132,10 +47,10 @@ export default function SuccessStoriesFaq() {
               isOpen ? "text-rose" : "text-black"
             }`}
           >
-            {item.question}
+            {item.q}
           </h3>
           <span
-            className={`flex size-7 shrink-0 items-center justify-center rounded-full border transition-all duration-300 ${
+            className={`flex size-7 shrink-0 items-center justify-center rounded-full border transition-transform duration-300 ${
               isOpen
                 ? "rotate-180 border-rose bg-rose text-white"
                 : "border-slate-200 bg-slate-50 text-black"
@@ -150,8 +65,22 @@ export default function SuccessStoriesFaq() {
           }`}
         >
           <div className="overflow-hidden">
-            <div className="border-t border-slate-100 px-5 pt-3 pb-5 text-[13.5px] leading-relaxed text-black">
-              {item.answer}
+            <div className="border-t border-slate-100 px-5 pt-3 pb-5 text-[13.5px] leading-relaxed text-slate-700">
+              {item.a}
+              {item.linkText && item.linkHref && (
+                <>
+                  {" "}
+                  {item.linkHref.startsWith("mailto:") ? (
+                    <a href={item.linkHref} className={linkClass}>
+                      {item.linkText}
+                    </a>
+                  ) : (
+                    <Link href={item.linkHref} className={linkClass}>
+                      {item.linkText}
+                    </Link>
+                  )}
+                </>
+              )}
             </div>
           </div>
         </div>
@@ -160,14 +89,14 @@ export default function SuccessStoriesFaq() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#fff8fb] via-white to-[#fff5f8] py-6 sm:py-7 lg:py-8">
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#fff8fb] via-white to-[#fff5f8] py-8 sm:py-10 lg:py-12 border-t border-slate-100">
       <div className="page-container relative">
         <Reveal className="mb-7 sm:mb-9">
           <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">
-            Patient questions
+            {eyebrow}
           </p>
           <h2 className="font-serif mt-2 max-w-3xl text-[1.75rem] leading-tight font-normal tracking-tight text-black sm:text-[2.2rem] lg:text-[2.45rem]">
-            Frequently Asked Questions: Success Stories
+            {title}
           </h2>
         </Reveal>
 

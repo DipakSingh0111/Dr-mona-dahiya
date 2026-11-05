@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import SuccessStoriesHero from "@/components/sections/success-stories/SuccessStoriesHero";
 import MedicalRegistration from "@/components/sections/MedicalRegistration";
 import SuccessStoriesContent from "@/components/sections/success-stories/SuccessStoriesContent";
-import IvfSuccessClinics from "@/components/sections/ivf-stories/IvfSuccessClinics";
+import SuccessStoriesClinics from "@/components/sections/success-stories/SuccessStoriesClinics";
 import SuccessStoriesFaq from "@/components/sections/success-stories/SuccessStoriesFaq";
 import AboutConsultation from "@/components/sections/about-mona-dahiya/AboutConsultation";
 import AboutParenthoodCta from "@/components/sections/about-mona-dahiya/AboutParenthoodCta";
@@ -28,7 +28,7 @@ export default function SuccessStoriesPage() {
       <SuccessStoriesContent />
 
       <SectionReveal delay={0.04}>
-        <IvfSuccessClinics />
+        <SuccessStoriesClinics />
       </SectionReveal>
 
       <SectionReveal delay={0.04}>

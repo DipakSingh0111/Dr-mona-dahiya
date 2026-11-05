@@ -1857,25 +1857,25 @@
   },
   "successStoriesPage": {
     "breadcrumb": "Fertility Success Stories",
-    "eyebrow": "Patient success stories",
-    "title": "Fertility Success Stories: Over 25,000 Parenthood Journeys",
-    "subtitle": "Every fertility journey is different. Guided by Dr. Mona Dahiya across Noida, Delhi and Ghaziabad, couples have overcome failed IVF cycles, low AMH, PCOS and male factor infertility with personalised care. Read their experiences in their own words and explore stories by treatment below.",
+    "eyebrow": "Success Story of Patients: How More Than 25,000 Became Parents",
+    "title": "Fertility Success Stories",
+    "subtitle": "Your experience may vary but many patients became successful with Dr Mona Dahiya at her fertility clinic in Noida, Delhi & Ghaziabad after failures at other places. These could be Failed IVF, Low AMH, PCOS, Male factor etc.",
     "image": "/images/about-mona-dahiya/success-stories.jpg",
     "primaryCta": {
-      "label": "Book In-Clinic Consultation",
+      "label": "Book an appointment at clinic",
       "href": "#book-consultation"
     },
     "secondaryCta": {
-      "label": "Schedule Online Consultation",
+      "label": "Book Online Consultation",
       "href": "/ivf-consultation-online"
     },
     "reviewsLink": {
-      "label": "Read Dr. Mona's Google reviews",
+      "label": "Read Dr Mona Dahiya's Reviews",
       "href": "/best-ivf-patient-reviews"
     },
     "badges": [
-      "25,000+ families guided",
-      "Stories in patients' own words",
+      "25,000+",
+      "Patient's success stories",
       "IVF · Low AMH · PCOS · IUI"
     ],
     "diagnosis": {
@@ -1900,7 +1900,7 @@
           "id": "pcos",
           "title": "PCOS & PCOD Success Stories",
           "description": "Safe ovulation and OHSS-free IVF",
-          "href": "#pcos",
+          "href": "/success-stories#pcos",
           "accent": "magenta"
         },
         {
@@ -1912,91 +1912,120 @@
         }
       ]
     },
-    "stories": {
-      "eyebrow": "Patient stories",
-      "title": "Parenthood Journeys in Patients' Own Words",
-      "subtitle": "Reviews shared by couples treated by Dr. Mona Dahiya. Names are shown as the patients posted them.",
-      "cta": {
-        "label": "Read All Patient Reviews",
-        "href": "/best-ivf-patient-reviews"
-      },
-      "columns": [
-        [
-          {
-            "title": "Pregnancy in the 1st IVF Cycle",
-            "body": "After extensive online research for the Best IVF doctor in Ghaziabad, we consulted Dr. Mona Dahiya. We were amazed with her complete knowledge of IVF treatment. Her IVF clinic in Ghaziabad has very good fertility testing facilities. Her team is also very knowledge and supportive. The care that we got though the entire IVF process were incredible. The frozen embryo transfer done by her was spot on and we had a healthy pregnancy in the first IVF Cycle. We are forever grateful to her for helping us expand our family.",
-            "initial": "V",
-            "name": "Viresh",
-            "source": "Patient review"
-          }
-        ],
-        [
-          {
-            "title": "Best IVF Success Rates.",
-            "body": "Dr Mona did our Egg retrieval herself and that too on a holiday. She is very good with ultrasound check-ups to find out any deviations. We did not feel any unease in the embryo transfer process. We had amazing results and a successful first transfer. My wife is 12 weeks pregnant and we would highly recommend Dr Mona's IVF Clinic in Delhi for best IVF success rates.",
-            "initial": "G",
-            "name": "Gaurav Baghel",
-            "source": "Patient review"
-          },
-          {
-            "title": "",
-            "body": "Dr Mona is a really good fertility doctor in Delhi. She has a very patient focussed approach which is unheard of these days with such famous doctors in Delhi. She came across as very genuine in every consultation. Her treatment was precise and it has resulted in a positive result in the First IVF Cycle.",
-            "initial": "B",
-            "name": "Brahm Prakash",
-            "source": "Google patient review"
-          }
-        ],
-        [
-          {
-            "title": "",
-            "body": "Dr. Dahiya doesn't believe in a general approach for fertility treatment. She analyzed our case deeply and designed a tailored IVF plan that worked in the first IVF cycle. Her dedication makes her the Best Fertility Doctor in Ghaziabad. Thank you for our precious blessing and wish you infinite success.",
-            "initial": "A",
-            "name": "Arbaj khan",
-            "source": "Google patient review"
-          },
-          {
-            "title": "Incredibly Talented IVF Doctor",
-            "body": "I sincerely thank Dr Mona Dahiya and her Medical Team for being very supportive in our infertility journey. She is an incredibly talented IVF Doctor in Ghaziabad with magical hands. She diagnosed our infertility problems and did the best possible IVF procedure to make us parents in the first IVF Cycle.",
-            "initial": "U",
-            "name": "Udaryaj Saroj",
-            "source": "Patient review"
-          },
-          {
-            "title": "",
-            "body": "We got excellent fertility counselling at her IVF centre in noida.we became pregnant in the 1st IVF cycle.",
-            "initial": "A",
-            "name": "Aman goswami123",
-            "source": "Google patient review"
-          }
-        ]
-      ]
-    },
     "trust": {
-      "eyebrow": "Expertise & authority",
+      "eyebrow": "About Dr Mona Dahiya",
       "title": "Why Couples Trust Dr. Mona Dahiya",
       "items": [
         {
-          "title": "Honest, measurable care",
-          "description": "Plans are built on test results such as AMH, embryo grades and lining thickness, not generic promises."
+          "title": "Based on facts",
+          "description": "We follow your medical history and test reports. Whether its your AMH value, Embryo grade, Endometrium etc, you will understand the next steps."
         },
         {
-          "title": "Gold-medalist training",
-          "description": "MBBS Gold Medalist (Lady Hardinge), MD Gold Medalist (Maulana Azad Medical College), DNB and Singapore General Hospital fellowship, with 25+ years' experience."
+          "title": "Achievements",
+          "description": "Gold Medalist MBBS(Lady Hardinge), Gold Medalist MD(Maulana Azad), DNB & Fellowship at SGH, Singapore. 25+ Years Experienced Doctor"
         },
         {
-          "title": "Rated 4.9 on Google",
-          "description": "Consistently strong patient reviews for ethical, patient-first fertility care."
+          "title": "Happy Patients",
+          "description": "She has received multiple google ratings averaging at 4.9 and has helped over 25000+ families."
         }
       ]
     },
     "journey": {
-      "eyebrow": "Before treatment",
+      "eyebrow": "What happens before we start?",
       "title": "How Every Journey Begins",
-      "subtitle": "An objective first assessment sets realistic expectations before any treatment starts.",
+      "subtitle": "Before starting we want to know what was done wrong so that we can help you achieve pregnancy faster.",
       "items": [
-        "Full review of earlier stimulation charts, embryology records and surgery notes.",
-        "Baseline transvaginal scan of ovarian reserve and the uterus.",
-        "Semen analysis and DNA fragmentation test after 2 to 3 days of abstinence."
+        "Previous stimulation chart will be studied",
+        "TV Scan for Ovarian Reserve and Uterus",
+        "Sperm Analysis & DNA Fragmentation Index Test. Patient will have to abstain from ejaculation for 2 - 3 days prior to test."
+      ]
+    },
+    "clinics": {
+      "eyebrow": "Fertility clinic locations",
+      "title": "Book a Consultation at Our Clinics",
+      "subtitle": "Consult Dr. Mona at our Noida, Ghaziabad & Delhi Clinics or Book Online",
+      "items": [
+        {
+          "city": "Noida",
+          "tag": "SECTOR 49",
+          "image": "/images/clinics/noida.jpg",
+          "address": "3rd Floor, K-06, above FirstCry, Baraula, Sector 49, Noida, Uttar Pradesh 201301",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=3rd+Floor+K-06+above+FirstCry+Baraula+Sector+49+Noida",
+          "clinicUrl": "/best-ivf-doctor-in-noida"
+        },
+        {
+          "city": "Ghaziabad",
+          "tag": "RAJ NAGAR",
+          "image": "/images/clinics/ghaziabad.jpg",
+          "address": "2nd Floor, RDC, C-53A, near Bikanerwala, Sector 15, Sector 10, Raj Nagar, Ghaziabad, Uttar Pradesh 201002",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=2nd+Floor+RDC+C-53A+near+Bikanerwala+Raj+Nagar+Ghaziabad",
+          "clinicUrl": "/best-ivf-doctor-in-ghaziabad"
+        },
+        {
+          "city": "Delhi",
+          "tag": "LAJPAT NAGAR",
+          "image": "/images/clinics/delhi.jpg",
+          "address": "Building Number 41, First Floor, Ring Road, Block Q, Lajpat Nagar IV, Lajpat Nagar, New Delhi 110024",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Building+Number+41+First+Floor+Ring+Road+Block+Q+Lajpat+Nagar+IV+New+Delhi",
+          "clinicUrl": "/best-ivf-doctor-in-delhi"
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "Questions Asked By Patients",
+      "title": "Frequently Asked Questions: Success Stories",
+      "items": [
+        {
+          "q": "Are these stories from real patients?",
+          "a": "We wanted to show some happy patients who became successful with Dr Mona Dahiya. These are Google Reviews. Your experience can be different."
+        },
+        {
+          "q": "What is Dr. Mona Dahiya's IVF success rate?",
+          "a": "Our success rate is greater than 90% for IVF but every case is different so your success rate may vary."
+        },
+        {
+          "q": "Can I succeed after failed IVF elsewhere?",
+          "a": "Most likely yes. There is almost always a reason you can solve if you look deeper. Like a uterine issue or Sperm DNA Damage. Read Our",
+          "linkLabel": "Second Opinion Article.",
+          "linkHref": "/second-opinion-failed-ivf"
+        },
+        {
+          "q": "Is pregnancy possible with low AMH?",
+          "a": "Yes you can have good quality eggs even with low AMH. Read Our",
+          "linkLabel": "Articles Here.",
+          "linkHref": "/low-amh-stories"
+        },
+        {
+          "q": "Do women with PCOS always need IVF?",
+          "a": "You can try with Lifestyle Changes & medication like Letrozole. Read Our",
+          "linkLabel": "Articles here.",
+          "linkHref": "/pcos-pcod-diet-lifestyle-noida"
+        },
+        {
+          "q": "How many IUI cycles are usually tried?",
+          "a": "We generally recommend 3-4 attempts then go for IVF. Read",
+          "linkLabel": "Iui Articles.",
+          "linkHref": "/iui-stories"
+        },
+        {
+          "q": "How long does a typical journey take?",
+          "a": "Depending on your tests it can take anywhere from 4 to 8 weeks. From Initial Visit to Embryo Transfer."
+        },
+        {
+          "q": "Can I share my story?",
+          "a": "Absolutely! Write us a google review or email us your story at info@drmonadahiya.com",
+          "email": "info@drmonadahiya.com"
+        },
+        {
+          "q": "Where can I consult Dr. Mona Dahiya?",
+          "a": "We have 3 Locations, in Noida, Ghaziabad & Delhi. All locations timings are Mon-Sat 10am – 5pm."
+        },
+        {
+          "q": "Can I share my reports online first?",
+          "a": "You can book our Online Consult in India for ₹1000 or 25$ if you're from Abroad.",
+          "linkLabel": "Click here.",
+          "linkHref": "/ivf-consultation-online"
+        }
       ]
     }
   },

@@ -97,7 +97,7 @@ export default function FemaleInfertilityNoidaHero() {
         </div>
 
         <HeroBannerImage
-          src="/images/about-mona-dahiya/ghaziabad-why-doctor.jpg"
+          src="/images/about-mona-dahiya/female-infertility.jpg"
           alt="Dr. Mona Dahiya — Best Female Infertility Doctor in Noida"
         />
       </div>
