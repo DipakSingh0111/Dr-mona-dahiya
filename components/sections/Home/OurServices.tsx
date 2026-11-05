@@ -182,7 +182,7 @@ export default function OurServices() {
                   }}
                 >
                   <div>
-                    <div className="mb-5 flex items-center justify-between">
+                    <div className="mb-5 flex items-center">
                       <div
                         className="inline-flex size-[56px] items-center justify-center rounded-2xl shadow-sm transition-transform duration-300 group-hover:scale-105 sm:size-[62px]"
                         style={{
@@ -194,16 +194,6 @@ export default function OurServices() {
                           <MdPregnantWoman className="size-[30px] sm:size-[34px]" />
                         )}
                       </div>
-
-                      <span
-                        className="flex size-8 items-center justify-center rounded-full opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                        style={{
-                          backgroundColor: theme.badgeBg,
-                          color: theme.color,
-                        }}
-                      >
-                        <FaArrowRight className="size-3" />
-                      </span>
                     </div>
 
                     <h3 className="font-display text-[18px] leading-snug font-bold tracking-tight text-[#0f2038] sm:text-[20px]">

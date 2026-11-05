@@ -526,7 +526,11 @@
   "ourServices": {
     "eyebrow": "Services we provide",
     "titlePrefix": "Infertility Treatment at",
-    "titleLocations": ["Noida", "Delhi", "Ghaziabad"],
+    "titleLocations": [
+      "Noida",
+      "Delhi",
+      "Ghaziabad"
+    ],
     "description": "Starting from simple IUI to advance lab procedures will be decided based on couple's investigation.",
     "cta": {
       "label": "View More Services",
@@ -576,7 +580,7 @@
       {
         "id": "mini-ivf",
         "title": "Mini IVF",
-        "description": "Mini ivf or Micro-ivf is a modified form of IVF where less amount of fertility medication is used.",
+        "description": "Mini ivf or Micro ivf is a modified form of IVF where less amount of fertility medication is used.",
         "icon": "cells",
         "image": "/images/services/service-mini-ivf-soft.png",
         "videoHref": "https://www.youtube.com/@drmonadahiya"
@@ -584,7 +588,7 @@
       {
         "id": "laparoscopy",
         "title": "Laparoscopy & Hysteroscopy",
-        "description": "Procedure to find and cure problems like Endometriosis, blocked tubes, etc.",
+        "description": "Procedure to find and cure problems like Endometriosis, Blocked tubes etc.",
         "icon": "uterus",
         "image": "/images/services/service-laparoscopy-soft.png",
         "videoHref": "https://www.youtube.com/@drmonadahiya"
@@ -1107,7 +1111,11 @@
           "name": "Little Angel IVF",
           "icon": "/images/affiliations/icon-baby-heart.jpg",
           "tone": "pink",
-          "tags": ["Noida", "Delhi", "Ghaziabad"]
+          "tags": [
+            "Noida",
+            "Delhi",
+            "Ghaziabad"
+          ]
         }
       ]
     },
@@ -1455,7 +1463,11 @@
       "subtitle": "Fill in your details and we will get back to you shortly.",
       "submitLabel": "Book Consultation",
       "disclaimer": "",
-      "clinics": ["Noida", "Ghaziabad", "Delhi"]
+      "clinics": [
+        "Noida",
+        "Ghaziabad",
+        "Delhi"
+      ]
     }
   },
   "footer": {
