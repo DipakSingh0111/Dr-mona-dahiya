@@ -24,7 +24,7 @@ export default function IuiDelhiReviews() {
         <div className="mt-8 grid grid-cols-1 gap-5 lg:grid-cols-2 lg:gap-6">
           <div className="flex flex-col gap-5">
             <Reveal variant="fadeUp">
-              <div className="flex h-full flex-col justify-between rounded-2xl border border-[#fde2ec] bg-white p-6 backdrop-blur-md">
+              <div className="card-highlight flex h-full flex-col justify-between rounded-2xl border border-[#fde2ec] bg-white p-6 backdrop-blur-md">
                 <p className="text-[13px] leading-relaxed text-black sm:text-[13.5px]">
                   We have got our little Angel and we are elated. Dr Mona Maam
                   thanks for your warmth and encouragement. Grateful forever.
@@ -46,7 +46,7 @@ export default function IuiDelhiReviews() {
             </Reveal>
 
             <Reveal variant="fadeUp" delay={0.05}>
-              <div className="flex h-full flex-col justify-between rounded-2xl border border-[#fde2ec] bg-white p-6 backdrop-blur-md">
+              <div className="card-highlight flex h-full flex-col justify-between rounded-2xl border border-[#fde2ec] bg-white p-6 backdrop-blur-md">
                 <div>
                   <h3 className="font-serif text-[1.1rem] font-medium text-black sm:text-[1.2rem]">
                     Compassionate Approach
@@ -64,7 +64,7 @@ export default function IuiDelhiReviews() {
                   </p>
                 </div>
                 <div className="mt-6 flex items-center gap-3 border-t border-[#fde2ec] pt-4">
-                  <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-rose text-[13px] font-bold text-white">
+                  <span className="card-badge flex size-9 shrink-0 items-center justify-center rounded-full bg-rose text-[13px] font-bold text-white">
                     S
                   </span>
                   <div>
@@ -81,7 +81,7 @@ export default function IuiDelhiReviews() {
           </div>
 
           <Reveal variant="fadeUp" delay={0.08}>
-            <div className="flex h-full flex-col justify-between rounded-2xl border border-[#fde2ec] bg-white p-6 backdrop-blur-md sm:p-7">
+            <div className="card-highlight flex h-full flex-col justify-between rounded-2xl border border-[#fde2ec] bg-white p-6 backdrop-blur-md sm:p-7">
               <div>
                 <h3 className="font-serif text-[1.1rem] font-medium text-black sm:text-[1.2rem]">
                   Exceptional Knowledge &amp; Patience
@@ -105,7 +105,7 @@ export default function IuiDelhiReviews() {
                 </p>
               </div>
               <div className="mt-6 flex items-center gap-3 border-t border-[#fde2ec] pt-4">
-                <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-rose text-[13px] font-bold text-white">
+                <span className="card-badge flex size-9 shrink-0 items-center justify-center rounded-full bg-rose text-[13px] font-bold text-white">
                   S
                 </span>
                 <div>

@@ -61,6 +61,7 @@ export interface ClinicsAppointmentCardsProps {
   primaryCity?: "delhi" | "noida" | "ghaziabad";
   clinics?: ClinicCardData[];
   className?: string;
+  sectionBg?: "bg-pink" | "bg-white";
   /** @deprecated Kept for callers; Home-style cards no longer render a book button. */
   showBookButton?: boolean;
 }
@@ -73,6 +74,7 @@ export default function ClinicsAppointmentCards({
   primaryCity,
   clinics,
   className = "",
+  sectionBg,
 }: ClinicsAppointmentCardsProps) {
   let list = clinics ?? defaultClinics;
 
@@ -86,10 +88,13 @@ export default function ClinicsAppointmentCards({
     }
   }
 
+  const bgClass = sectionBg ?? (className.includes("bg-pink") ? "bg-pink" : "bg-white");
+  const borderClass = bgClass === "bg-pink" ? "border-t border-[#fde2ec]" : "border-t border-slate-100";
+
   return (
     <section
       id={sectionId}
-      className={`relative overflow-hidden bg-white py-8 sm:py-10 lg:py-12 border-t border-slate-100 ${className}`}
+      className={`relative overflow-hidden ${bgClass} py-8 sm:py-10 lg:py-12 ${borderClass} ${className}`}
     >
       <div className="page-container relative">
         {(eyebrow || title || subtitle) && (

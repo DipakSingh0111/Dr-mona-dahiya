@@ -124,20 +124,21 @@ export default function PatientReviewsBottomSections() {
   };
 
   return (
-    <div className="flex flex-col bg-pink text-ink">
+    <div className="flex flex-col text-ink">
       <ClinicsAppointmentCards
         eyebrow="Visit Dr. Mona"
         title="Book a consultation at a clinic near you"
         subtitle="Dr. Mona sees patients in Noida, Ghaziabad and Delhi, and offers online consultation."
+        sectionBg="bg-pink"
       />
 
-      <section className="py-6 sm:py-7 lg:py-8">
+      <section className="bg-white border-y border-[#fde2ec]/70 py-8 sm:py-10 lg:py-12 text-ink">
         <div className="page-container relative">
           <Reveal className="mb-6">
             <span className="text-[12px] font-semibold tracking-wider text-rose uppercase">
               Keep reading
             </span>
-            <h2 className="font-serif mt-1 text-[2.2rem] leading-[1.18] font-normal tracking-tight text-black sm:text-[2.6rem] lg:text-[2.9rem]">
+            <h2 className="font-serif mt-1 text-[2.2rem] leading-[1.18] font-normal tracking-tight text-ink sm:text-[2.6rem] lg:text-[2.9rem]">
               Related pages
             </h2>
           </Reveal>
@@ -147,13 +148,13 @@ export default function PatientReviewsBottomSections() {
               <Link
                 key={page.title}
                 href={page.href}
-                className="group relative flex flex-col justify-between rounded-2xl border border-[#fde2ec] bg-white p-5 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-rose/50 hover:bg-pink"
+                className="group relative flex flex-col justify-between rounded-2xl border border-[#fde2ec] bg-pink p-5 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-rose/50 hover:bg-white"
               >
                 <div>
-                  <h3 className="font-bold text-[15px] text-black transition-colors group-hover:text-rose">
+                  <h3 className="font-bold text-[15px] text-ink transition-colors group-hover:text-rose">
                     {page.title}
                   </h3>
-                  <p className="mt-1 text-[12.5px] text-black">
+                  <p className="mt-1 text-[12.5px] text-slate-600">
                     {page.description}
                   </p>
                 </div>
@@ -168,13 +169,13 @@ export default function PatientReviewsBottomSections() {
         </div>
       </section>
 
-      <section className="py-6 sm:py-7 lg:py-8">
+      <section className="bg-pink py-8 sm:py-10 lg:py-12 text-ink">
         <div className="page-container relative">
           <Reveal className="mb-6">
             <span className="text-[12px] font-semibold tracking-wider text-rose uppercase">
               FAQ
             </span>
-            <h2 className="font-serif mt-1 text-[2.2rem] leading-[1.18] font-normal tracking-tight text-black sm:text-[2.6rem] lg:text-[2.9rem]">
+            <h2 className="font-serif mt-1 text-[2.2rem] leading-[1.18] font-normal tracking-tight text-ink sm:text-[2.6rem] lg:text-[2.9rem]">
               Review Info
             </h2>
           </Reveal>

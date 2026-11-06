@@ -1,6 +1,6 @@
 "use client";
+import Breadcrumb from "@/components/ui/Breadcrumb";
 
-import Link from "next/link";
 import { FaSearch } from "react-icons/fa";
 import { Reveal } from "@/components/ui/Reveal";
 import siteData from "@/data/site.json";
@@ -40,19 +40,12 @@ export default function LocationsHero({ query, onQueryChange }: Props) {
       />
 
       <div className="page-container relative">
-        <nav
-          aria-label="Breadcrumb"
-          className="mb-6 flex items-center gap-2 text-xs font-medium sm:mb-8 sm:text-[13px]"
-        >
-          <Link
-            href="/"
-            className="text-ink/70 transition-colors hover:text-rose"
-          >
-            Home
-          </Link>
-          <span className="text-ink/40">/</span>
-          <span className="font-semibold text-ink">{breadcrumb}</span>
-        </nav>
+        <Breadcrumb className="mb-6 sm:mb-8"
+          items={[
+            { label: "Patient Resources", href: "/location" },
+            { label: "Clinic Locations & Contact" }
+          ]}
+        />
 
         <Reveal variant="slideLeft">
           <h1 className="font-serif max-w-3xl text-[2.35rem] leading-[1.15] font-normal tracking-tight text-ink sm:text-[3.1rem] lg:text-[3.6rem]">

@@ -63,7 +63,7 @@ export default function IuiRelatedBlogs() {
             <StaggerItem key={idx}>
               <Link
                 href={item.href}
-                className="group flex h-full flex-col justify-between rounded-2xl border border-[#fde2ec] bg-white p-5 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-[#fbcfe0] hover:bg-[#fff0f5] hover:shadow-md sm:p-6"
+                className="card-highlight group flex h-full flex-col justify-between rounded-2xl border border-[#fde2ec] bg-white p-5 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-[#fbcfe0] hover:bg-[#fff0f5] hover:shadow-md sm:p-6"
               >
                 <div>
                   <h3 className="font-serif text-[1.1rem] font-bold text-ink transition-colors group-hover:text-rose sm:text-[1.2rem]">

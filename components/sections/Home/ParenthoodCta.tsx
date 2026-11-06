@@ -13,7 +13,7 @@ export default function ParenthoodCta() {
   const data = siteData.parenthoodCta;
 
   return (
-    <section className="relative overflow-hidden bg-[#f4f0ea]">
+    <section className="parenthood-cta relative overflow-hidden bg-[#f4f0ea]">
       {/* Full-width background image */}
       <div className="absolute inset-0">
         <Image

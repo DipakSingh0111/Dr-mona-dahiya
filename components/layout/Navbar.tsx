@@ -62,12 +62,12 @@ export default function Navbar() {
 
   return (
     <header className="relative z-40 bg-transparent">
-      {/* Brand row — light gradient, minimal glow (no heavy blur) */}
+      {/* Brand row — matched to footer navy palette */}
       <div
-        className="relative overflow-hidden"
+        className="relative overflow-hidden border-b border-white/10"
         style={{
           background:
-            "linear-gradient(105deg, #003db8 0%, var(--blue) 50%, #0d55d0 100%)",
+            "linear-gradient(90deg, var(--navy) 0%, var(--navy-mid) 50%, var(--navy) 100%)",
         }}
       >
         <div
@@ -108,11 +108,7 @@ export default function Navbar() {
             </a>
 
             <div
-              className="flex shrink-0 items-center gap-1.5 rounded-xl border border-white/35 px-2.5 py-0.5 whitespace-nowrap shadow-sm xl:px-3 xl:py-1"
-              style={{
-                background:
-                  "linear-gradient(135deg, rgba(0,30,100,0.55) 0%, rgba(0,50,140,0.35) 100%)",
-              }}
+              className="flex shrink-0 items-center gap-1.5 rounded-xl border border-white/20 bg-white/10 px-2.5 py-0.5 whitespace-nowrap shadow-sm backdrop-blur-sm xl:px-3 xl:py-1"
             >
               <div className="flex items-center gap-0.5 text-[#f5a524]">
                 <FaStar className="size-2.5 fill-current xl:size-3" />

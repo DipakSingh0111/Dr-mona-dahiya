@@ -7,10 +7,10 @@ const registrations = [
     code: "DMC",
     councilName: "Delhi Medical Council",
     regNumber: "DMC-7795",
-    badgeBg: "bg-gradient-to-br from-blue to-[#0369a1]",
-    badgeRing: "ring-sky-400/40",
-    numColor: "text-[#38bdf8]",
-    glow: "border-sky-400/35 hover:border-sky-400/70 shadow-[0_0_24px_rgba(14,165,233,0.12)]",
+    badgeBg: "bg-gradient-to-br from-navy to-navy-mid",
+    badgeRing: "ring-navy/30",
+    numColor: "text-navy",
+    glow: "border-navy/20 hover:border-navy/50 shadow-[0_0_24px_rgba(6,21,50,0.08)]",
   },
   {
     code: "MCI",
@@ -25,16 +25,16 @@ const registrations = [
     code: "UPMC",
     councilName: "Uttar Pradesh Medical Council",
     regNumber: "UPMC-110541",
-    badgeBg: "bg-gradient-to-br from-blue to-blue-dark",
-    badgeRing: "ring-blue/40",
-    numColor: "text-blue",
-    glow: "border-blue/35 hover:border-blue/70 shadow-[0_0_24px_rgba(0,71,202,0.14)]",
+    badgeBg: "bg-gradient-to-br from-navy to-navy-mid",
+    badgeRing: "ring-navy/30",
+    numColor: "text-navy",
+    glow: "border-navy/20 hover:border-navy/50 shadow-[0_0_24px_rgba(6,21,50,0.08)]",
   },
 ];
 
 export default function BestIvfDelhiMedicalRegistration() {
   return (
-    <section className="relative overflow-hidden bg-pink py-8 sm:py-10 lg:py-12">
+    <section className="relative overflow-hidden bg-white py-8 sm:py-10 lg:py-12 border-y border-[#fde2ec]/70">
       <div className="page-container relative">
         <Reveal variant="fadeUp">
           <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">
@@ -55,7 +55,7 @@ export default function BestIvfDelhiMedicalRegistration() {
           {registrations.map((item) => (
             <StaggerItem key={item.code} variant="scaleIn" className="h-full">
               <article
-                className={`flex h-full items-center gap-4 rounded-2xl border bg-white p-5 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 sm:p-6 ${item.glow}`}
+                className={`card-highlight flex h-full items-center gap-4 rounded-2xl border bg-white p-5 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 sm:p-6 ${item.glow}`}
               >
                 <span
                   className={`flex size-14 shrink-0 items-center justify-center rounded-full text-[13px] font-bold tracking-wide text-white ring-2 shadow-lg sm:size-16 sm:text-[14px] ${item.badgeBg} ${item.badgeRing}`}

@@ -83,7 +83,7 @@ export default function HowItWorks() {
                   style={{ zIndex: index + 1 }}
                 >
                   <article
-                    className={`flex w-full flex-col overflow-hidden rounded-[28px] bg-white transition-all duration-300 sm:flex-row sm:items-stretch ${
+                    className={`card-highlight flex w-full flex-col overflow-hidden rounded-[28px] bg-white transition-all duration-300 sm:flex-row sm:items-stretch ${
                       isLast
                         ? "min-h-[180px] sm:min-h-[200px] lg:min-h-[210px]"
                         : "min-h-[175px] sm:min-h-[195px] lg:min-h-[205px]"

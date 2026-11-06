@@ -49,7 +49,7 @@ export default function IuiDelhiCost() {
         </Reveal>
 
         <Reveal variant="fadeUp" delay={0.1} className="mt-7">
-          <div className="relative overflow-hidden rounded-2xl border border-[#fde2ec] bg-white p-6 sm:p-8">
+          <div className="card-highlight relative overflow-hidden rounded-2xl border border-[#fde2ec] bg-white p-6 sm:p-8">
             <div
               aria-hidden
               className="pointer-events-none absolute top-0 right-0 h-64 w-64 translate-x-1/2 -translate-y-1/2 rounded-full opacity-20 blur-3xl"
@@ -88,7 +88,7 @@ export default function IuiDelhiCost() {
           >
             {costFactors.map((item) => (
               <StaggerItem key={item.title} className="h-full">
-                <div className="flex h-full flex-col rounded-2xl border border-rose/30 bg-white p-5 shadow-[0_0_20px_rgba(232,62,116,0.1)] backdrop-blur-md transition-all duration-300 hover:border-rose/55 hover:bg-[#fff0f5] sm:p-6">
+                <div className="card-highlight flex h-full flex-col rounded-2xl border border-rose/30 bg-white p-5 shadow-[0_0_20px_rgba(232,62,116,0.1)] backdrop-blur-md transition-all duration-300 hover:border-rose/55 hover:bg-[#fff0f5] sm:p-6">
                   <div className="flex items-center gap-3">
                     <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-rose/20 ring-1 ring-rose/35">
                       {item.icon}

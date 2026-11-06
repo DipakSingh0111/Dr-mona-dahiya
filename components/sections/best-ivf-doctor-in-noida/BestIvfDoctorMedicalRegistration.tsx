@@ -7,28 +7,31 @@ const registrations = [
     code: "DMC",
     councilName: "Delhi Medical Council",
     regNumber: "DMC-7795",
-    badgeBg: "bg-gradient-to-br from-blue to-[#0369a1]",
-    glow: "border-sky-400/35 shadow-[0_0_24px_rgba(14,165,233,0.12)]",
+    badgeBg: "bg-gradient-to-br from-navy to-navy-mid",
+    numColor: "text-navy",
+    glow: "border-navy/20 shadow-[0_0_24px_rgba(6,21,50,0.08)]",
   },
   {
     code: "MCI",
     councilName: "Medical Council of India",
     regNumber: "MCI-09/6820",
     badgeBg: "bg-gradient-to-br from-rose to-rose-dark",
+    numColor: "text-rose",
     glow: "border-rose/40 shadow-[0_0_24px_rgba(232,62,116,0.14)]",
   },
   {
     code: "UPMC",
     councilName: "Uttar Pradesh Medical Council",
     regNumber: "UPMC-110541",
-    badgeBg: "bg-gradient-to-br from-blue to-blue-dark",
-    glow: "border-blue/35 shadow-[0_0_24px_rgba(0,71,202,0.14)]",
+    badgeBg: "bg-gradient-to-br from-navy to-navy-mid",
+    numColor: "text-navy",
+    glow: "border-navy/20 shadow-[0_0_24px_rgba(6,21,50,0.08)]",
   },
 ];
 
 export default function BestIvfDoctorMedicalRegistration() {
   return (
-    <section className="relative overflow-hidden bg-pink py-8 sm:py-10 lg:py-12">
+    <section className="relative overflow-hidden bg-white py-8 sm:py-10 lg:py-12 border-y border-[#fde2ec]/70">
       <div className="page-container relative">
         <Reveal variant="fadeUp">
           <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">
@@ -49,7 +52,7 @@ export default function BestIvfDoctorMedicalRegistration() {
           {registrations.map((item) => (
             <StaggerItem key={item.code} variant="scaleIn" className="h-full">
               <article
-                className={`flex h-full items-center gap-4 rounded-2xl border bg-white p-5 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 sm:p-6 ${item.glow}`}
+                className={`card-highlight flex h-full items-center gap-4 rounded-2xl border bg-white p-5 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 sm:p-6 ${item.glow}`}
               >
                 <span
                   className={`flex size-14 shrink-0 items-center justify-center rounded-full text-[13px] font-bold tracking-wide text-white shadow-lg sm:size-16 sm:text-[14px] ${item.badgeBg}`}
@@ -60,7 +63,7 @@ export default function BestIvfDoctorMedicalRegistration() {
                   <h3 className="text-[15px] font-semibold text-black sm:text-[16px]">
                     {item.councilName}
                   </h3>
-                  <p className="mt-1 font-serif text-[1.25rem] font-bold tracking-tight text-black sm:text-[1.35rem]">
+                  <p className={`mt-1 font-serif text-[1.25rem] font-bold tracking-tight sm:text-[1.35rem] ${item.numColor}`}>
                     {item.regNumber}
                   </p>
                   <p className="mt-0.5 text-[12px] text-black">

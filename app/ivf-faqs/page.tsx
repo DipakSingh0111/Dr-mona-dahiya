@@ -38,6 +38,7 @@ export default function IvfFaqsPage() {
       <SectionReveal delay={0.04}>
         <AboutConsultation
           sectionId="book-consultation"
+          sectionBg="bg-white"
           eyebrow="Next step"
           title="Have More Questions?"
           subtitle={

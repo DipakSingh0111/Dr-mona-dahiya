@@ -46,7 +46,7 @@ export default function AzoospermiaRelated() {
             <StaggerItem key={item.title}>
               <Link
                 href={item.href}
-                className="group relative flex items-center justify-between gap-3 rounded-xl border border-[#fde2ec] bg-white p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-blue/60 hover:bg-[#fff0f5] sm:p-5"
+                className="card-highlight group relative flex items-center justify-between gap-3 rounded-xl border border-[#fde2ec] bg-white p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-blue/60 hover:bg-[#fff0f5] sm:p-5"
               >
                 <div className="min-w-0">
                   <h3 className="font-serif text-[1rem] font-semibold text-black transition-colors group-hover:text-sky-300 sm:text-[1.08rem]">

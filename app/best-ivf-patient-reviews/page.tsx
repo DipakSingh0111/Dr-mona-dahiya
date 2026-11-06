@@ -48,6 +48,7 @@ export default function PatientReviewsPage() {
       <SectionReveal delay={0.04}>
         <AboutConsultation
           sectionId="book-consultation"
+          sectionBg="bg-white"
           eyebrow="Book an appointment"
           title="Schedule your fertility consultation"
           subtitle="Meet Dr. Mona Dahiya to review your options and plan your care. Choose an in-clinic or online consultation, or call or write directly."

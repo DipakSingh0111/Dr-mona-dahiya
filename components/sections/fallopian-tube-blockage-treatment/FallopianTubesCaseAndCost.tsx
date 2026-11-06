@@ -41,7 +41,7 @@ export default function FallopianTubesCaseAndCost() {
         />
 
           <Reveal variant="fadeUp" delay={0.06} className="mt-6">
-            <div className="rounded-2xl border border-[#fde2ec] bg-white p-6 sm:p-7 shadow-[0_8px_24px_rgba(232,62,116,0.06)]">
+            <div className="card-highlight rounded-2xl border border-[#fde2ec] bg-white p-6 sm:p-7 shadow-[0_8px_24px_rgba(232,62,116,0.06)]">
               <p className="text-[14px] leading-relaxed font-medium text-ink sm:text-[15.5px]">
                 A patient with a year of unexplained delay was found to have a blocked tube on one side and a hydrosalpinx on the other. After the damaged tube was dealt with surgically, she proceeded to IVF with a better outlook.
               </p>

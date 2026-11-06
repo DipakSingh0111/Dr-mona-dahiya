@@ -38,7 +38,7 @@ export default function FertilityPreservation() {
           >
             {data.cards.map((card) => (
               <StaggerItem key={card.id} variant="fadeUp" className="h-full">
-                <div className="group flex h-full flex-col justify-center rounded-2xl border border-[#fde2ec] bg-white/[0.06] px-6 py-5 transition-all duration-300 hover:-translate-y-1 hover:border-rose/55 hover:bg-white/[0.1] hover:shadow-[0_12px_30px_rgba(0,10,40,0.35)]">
+                <div className="group flex h-full flex-col justify-center rounded-2xl border border-white/20 bg-white/[0.06] px-6 py-5 transition-all duration-300 hover:-translate-y-1 hover:border-rose/55 hover:bg-white/[0.1] hover:shadow-[0_12px_30px_rgba(0,10,40,0.35)]">
                   <h3 className="text-[16px] font-bold tracking-tight text-white transition-colors duration-300 group-hover:text-rose sm:text-[17px]">
                     {card.title}
                   </h3>

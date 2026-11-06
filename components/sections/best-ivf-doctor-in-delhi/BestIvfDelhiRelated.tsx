@@ -76,7 +76,7 @@ export default function BestIvfDelhiRelated() {
             <StaggerItem key={item.title}>
               <Link
                 href={item.href}
-                className="group relative flex items-center justify-between rounded-xl border border-[#fde2ec] bg-white p-4 backdrop-blur-md transition-all duration-200 hover:-translate-y-0.5 hover:border-blue/60 hover:bg-[#fff0f5]"
+                className="card-highlight group relative flex items-center justify-between rounded-xl border border-[#fde2ec] bg-white p-4 backdrop-blur-md transition-all duration-200 hover:-translate-y-0.5 hover:border-blue/60 hover:bg-[#fff0f5]"
               >
                 <div>
                   <h3 className="font-serif text-[1rem] font-semibold text-black transition-colors group-hover:text-sky-300 sm:text-[1.05rem]">

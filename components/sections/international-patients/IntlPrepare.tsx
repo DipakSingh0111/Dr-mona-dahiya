@@ -39,7 +39,7 @@ export default function IntlPrepare() {
         {items.map((item) => (
           <StaggerItem key={item.title}>
             <div className="flex items-start gap-3 rounded-2xl border border-[#fde2ec] bg-white px-4 py-3.5 backdrop-blur-md sm:px-5 sm:py-4">
-              <span className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-blue/20 text-blue ring-1 ring-blue/40">
+              <span className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-rose/15 text-rose ring-1 ring-rose/35">
                 <FaCheck className="size-2.5" />
               </span>
               <p className="text-[13.5px] leading-relaxed text-black sm:text-[14px]">

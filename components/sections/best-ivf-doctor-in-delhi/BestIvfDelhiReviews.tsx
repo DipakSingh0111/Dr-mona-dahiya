@@ -53,12 +53,12 @@ export default function BestIvfDelhiReviews() {
         >
           {reviews.map((item) => (
             <StaggerItem key={item.name} className="h-full">
-              <div className="relative flex h-full flex-col justify-between rounded-2xl border border-[#fde2ec] bg-white p-6 backdrop-blur-md transition-all duration-300 hover:border-blue/50 hover:bg-[#fff0f5] sm:p-7">
+              <div className="card-highlight relative flex h-full flex-col justify-between rounded-2xl border border-[#fde2ec] bg-white p-6 backdrop-blur-md transition-all duration-300 hover:border-blue/50 hover:bg-[#fff0f5] sm:p-7">
                 <p className="text-[13.5px] leading-relaxed text-black sm:text-[14px]">
                   &ldquo;{item.review}&rdquo;
                 </p>
                 <div className="mt-6 flex items-center gap-3 border-t border-[#fde2ec] pt-4">
-                  <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-rose text-[13px] font-bold text-white shadow-[0_2px_8px_rgba(232,62,116,0.35)]">
+                  <span className="card-badge flex size-9 shrink-0 items-center justify-center rounded-full bg-rose text-[13px] font-bold text-white shadow-[0_2px_8px_rgba(232,62,116,0.35)]">
                     {item.initial}
                   </span>
                   <div>

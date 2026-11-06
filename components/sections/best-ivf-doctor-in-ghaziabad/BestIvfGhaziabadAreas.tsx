@@ -55,7 +55,7 @@ export default function BestIvfGhaziabadAreas() {
           <StaggerItem key={area.title}>
             <Link
               href="#book-consultation"
-              className="group relative flex min-h-[96px] flex-col justify-between rounded-2xl border border-[#fde2ec] bg-white/80 p-5 transition-all hover:border-rose/40 hover:bg-pink"
+              className="card-highlight group relative flex min-h-[96px] flex-col justify-between rounded-2xl border border-[#fde2ec] bg-white/80 p-5 transition-all hover:border-rose/40 hover:bg-pink"
             >
               <div>
                 <h3 className="text-[15px] leading-snug font-bold text-black sm:text-[15.5px]">

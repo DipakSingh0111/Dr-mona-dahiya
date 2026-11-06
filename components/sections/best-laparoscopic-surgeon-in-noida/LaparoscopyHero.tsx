@@ -1,8 +1,9 @@
 ﻿"use client";
+import Breadcrumb from "@/components/ui/Breadcrumb";
 
 import HeroBannerImage from "@/components/ui/HeroBannerImage";
 import Link from "next/link";
-import { FaHome, FaChevronRight } from "react-icons/fa";
+
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
 export default function LaparoscopyHero() {
@@ -36,27 +37,12 @@ export default function LaparoscopyHero() {
 
       <div className="page-container relative grid grid-cols-1 items-start gap-6 sm:gap-7 lg:grid-cols-12 lg:gap-6 xl:gap-8">
         <div className="min-w-0 lg:col-span-7">
-          <nav aria-label="Breadcrumb" className="mb-4 sm:mb-5">
-            <ol className="inline-flex max-w-full flex-wrap items-center gap-1.5 rounded-full border border-rose/25 bg-white px-3 py-1.5 shadow-sm sm:gap-2 sm:px-3.5 sm:py-2">
-              <li>
-                <Link
-                  href="/"
-                  className="inline-flex items-center gap-1.5 rounded-full px-1.5 py-0.5 text-[12px] font-medium text-ink/70 transition-colors hover:text-rose sm:text-[13px]"
-                >
-                  <FaHome className="size-3 shrink-0 sm:size-3.5" />
-                  Home
-                </Link>
-              </li>
-              <li aria-hidden className="text-ink/35">
-                <FaChevronRight className="size-2.5 sm:size-3" />
-              </li>
-              <li>
-                <span className="inline-flex items-center rounded-full bg-rose/20 px-2.5 py-0.5 text-[12px] font-semibold text-rose ring-1 ring-rose/35 sm:px-3 sm:text-[13px]">
-                  Best Laparoscopic Surgeon in Noida
-                </span>
-              </li>
-            </ol>
-          </nav>
+          <Breadcrumb
+          items={[
+            { label: "Treatments", href: "/our-services" },
+            { label: "Laparoscopic Fertility Surgery" }
+          ]}
+        />
 
           <Reveal variant="slideLeft">
             <p className="text-[12px] font-bold tracking-[0.12em] text-rose uppercase sm:text-[13px]">

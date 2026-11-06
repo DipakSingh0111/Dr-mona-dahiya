@@ -89,9 +89,9 @@ export default function PrpProtocolAndWhy() {
         >
           {protocols.map((item) => (
             <StaggerItem key={item.number} className="h-full">
-              <div className="relative flex h-full flex-col rounded-2xl border border-[#fde2ec] bg-white p-5 shadow-[0_8px_24px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-rose/45 hover:shadow-[0_14px_36px_rgba(232,62,116,0.1)] sm:p-6">
+              <div className="card-highlight relative flex h-full flex-col rounded-2xl border border-[#fde2ec] bg-white p-5 shadow-[0_8px_24px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-rose/45 hover:shadow-[0_14px_36px_rgba(232,62,116,0.1)] sm:p-6">
                 <div className="flex items-start gap-3">
-                  <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-rose text-[15px] font-bold text-white shadow-[0_2px_8px_rgba(232,62,116,0.4)]">
+                  <span className="card-badge flex size-8 shrink-0 items-center justify-center rounded-lg bg-rose text-[15px] font-bold text-white shadow-[0_2px_8px_rgba(232,62,116,0.4)]">
                     {item.number}
                   </span>
                   <h3 className="font-serif pt-0.5 text-[1.05rem] leading-snug font-semibold text-ink sm:text-[1.12rem]">

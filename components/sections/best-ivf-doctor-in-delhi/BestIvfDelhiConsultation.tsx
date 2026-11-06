@@ -140,7 +140,7 @@ export default function BestIvfDelhiConsultation() {
 
           {/* Right Column: Appointment Form */}
           <div className="lg:col-span-5" id="request-appointment-form">
-            <div className="rounded-2xl border border-[#fde2ec] bg-white p-6 shadow-2xl backdrop-blur-md sm:p-8">
+            <div className="card-highlight rounded-2xl border border-[#fde2ec] bg-white p-6 shadow-2xl backdrop-blur-md sm:p-8">
               <h3 className="font-serif text-[22px] font-normal tracking-tight text-black sm:text-[24px]">
                 Request an appointment
               </h3>

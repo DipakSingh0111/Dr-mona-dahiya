@@ -43,22 +43,31 @@ export default function IntlPricing() {
       />
 
       <Reveal variant="fadeUp" delay={0.08} className="mt-7">
-        <div className="overflow-hidden rounded-2xl border border-[#fde2ec] bg-white backdrop-blur-md">
+        <div className="card-highlight overflow-hidden rounded-2xl border border-[#fde2ec] bg-white backdrop-blur-md">
           <div className="overflow-x-auto">
             <table className="w-full min-w-[640px] border-collapse text-left">
-              <thead>
-                <tr className="border-b border-[#fde2ec]">
-                  <th className="px-4 py-3.5 text-[11px] font-semibold tracking-wider text-black uppercase sm:px-5 sm:text-[12px]">
-                    Procedure
+              <thead className="border-b-2 border-rose/30 bg-[#fff0f5]">
+                <tr>
+                  <th className="px-4 py-4 text-[12px] font-bold tracking-wider text-ink uppercase sm:px-6 sm:text-[13px]">
+                    <span className="inline-flex items-center gap-2 rounded-lg border border-[#fde2ec] bg-white px-3 py-1.5 font-bold text-ink shadow-[0_2px_6px_rgba(232,62,116,0.06)]">
+                      <span className="size-2 rounded-full bg-rose shrink-0" />
+                      Procedure
+                    </span>
                   </th>
-                  <th className="px-4 py-3.5 text-[11px] font-semibold tracking-wider text-black uppercase sm:px-5 sm:text-[12px]">
-                    US Price
+                  <th className="px-4 py-4 text-[12px] font-bold tracking-wider text-ink uppercase sm:px-6 sm:text-[13px]">
+                    <span className="inline-flex items-center rounded-lg border border-[#fde2ec] bg-white px-3 py-1.5 font-bold text-ink shadow-[0_2px_6px_rgba(232,62,116,0.06)]">
+                      US Price
+                    </span>
                   </th>
-                  <th className="px-4 py-3.5 text-[11px] font-semibold tracking-wider text-black uppercase sm:px-5 sm:text-[12px]">
-                    UK Price
+                  <th className="px-4 py-4 text-[12px] font-bold tracking-wider text-ink uppercase sm:px-6 sm:text-[13px]">
+                    <span className="inline-flex items-center rounded-lg border border-[#fde2ec] bg-white px-3 py-1.5 font-bold text-ink shadow-[0_2px_6px_rgba(232,62,116,0.06)]">
+                      UK Price
+                    </span>
                   </th>
-                  <th className="px-4 py-3.5 text-[11px] font-semibold tracking-wider text-black uppercase sm:px-5 sm:text-[12px]">
-                    Price With Dr. Mona Dahiya
+                  <th className="px-4 py-4 text-[12px] font-bold tracking-wider uppercase sm:px-6 sm:text-[13px]">
+                    <span className="inline-flex items-center gap-1.5 rounded-lg bg-rose px-3.5 py-1.5 font-bold text-white shadow-[0_4px_14px_rgba(232,62,116,0.35)]">
+                      Price With Dr. Mona Dahiya
+                    </span>
                   </th>
                 </tr>
               </thead>
@@ -66,19 +75,24 @@ export default function IntlPricing() {
                 {rows.map((row) => (
                   <tr
                     key={row.procedure}
-                    className="border-b border-[#fde2ec] last:border-b-0"
+                    className="border-b border-[#fde2ec] transition-colors hover:bg-[#fff0f5]/40 last:border-b-0"
                   >
-                    <td className="px-4 py-4 text-[13.5px] font-semibold text-black sm:px-5 sm:text-[14px]">
-                      {row.procedure}
+                    <td className="px-4 py-4 text-[13.5px] font-bold text-ink sm:px-6 sm:text-[14px]">
+                      <div className="flex items-center gap-2">
+                        <span className="size-1.5 rounded-full bg-rose shrink-0" />
+                        <span>{row.procedure}</span>
+                      </div>
                     </td>
-                    <td className="px-4 py-4 text-[13px] text-black sm:px-5 sm:text-[13.5px]">
+                    <td className="px-4 py-4 text-[13px] text-ink/85 sm:px-6 sm:text-[13.5px]">
                       {row.us}
                     </td>
-                    <td className="px-4 py-4 text-[13px] text-black sm:px-5 sm:text-[13.5px]">
+                    <td className="px-4 py-4 text-[13px] text-ink/85 sm:px-6 sm:text-[13.5px]">
                       {row.uk}
                     </td>
-                    <td className="px-4 py-4 text-[13.5px] font-semibold text-rose sm:px-5 sm:text-[14px]">
-                      {row.mona}
+                    <td className="px-4 py-4 sm:px-6">
+                      <span className="inline-flex items-center rounded-lg border border-rose/25 bg-[#fff0f5] px-3 py-1 text-[13.5px] font-bold text-rose shadow-xs sm:text-[14px]">
+                        {row.mona}
+                      </span>
                     </td>
                   </tr>
                 ))}

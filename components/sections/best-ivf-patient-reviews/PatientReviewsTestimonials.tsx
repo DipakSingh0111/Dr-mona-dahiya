@@ -164,7 +164,7 @@ export default function PatientReviewsTestimonials() {
           {testimonials.map((item) => (
             <article
               key={item.id}
-              className="flex w-[86vw] shrink-0 snap-start flex-col justify-between rounded-2xl border border-[#fde2ec] bg-white p-6 backdrop-blur-md transition-all duration-300 hover:border-[#fbcfe0] hover:bg-[#fff0f5] sm:w-[calc(50%-8px)] sm:min-w-[320px] lg:w-[calc(33.333%-11px)] lg:min-w-[360px]"
+              className="card-highlight flex w-[86vw] shrink-0 snap-start flex-col justify-between rounded-2xl border border-[#fde2ec] bg-white p-6 backdrop-blur-md transition-all duration-300 hover:border-[#fbcfe0] hover:bg-[#fff0f5] sm:w-[calc(50%-8px)] sm:min-w-[320px] lg:w-[calc(33.333%-11px)] lg:min-w-[360px]"
             >
               <div>
                 <p className="font-serif text-[1.12rem] font-bold leading-snug text-black sm:text-[1.18rem] lg:text-[1.22rem]">

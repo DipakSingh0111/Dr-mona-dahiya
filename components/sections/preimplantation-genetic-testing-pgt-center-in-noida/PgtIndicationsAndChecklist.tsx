@@ -134,9 +134,9 @@ export default function PgtIndicationsAndChecklist() {
         >
           {indications.map((item) => (
             <StaggerItem key={item.num}>
-              <div className="group flex h-full flex-col rounded-[20px] border border-[#fde2ec] bg-white p-5.5 shadow-[0_8px_24px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-rose/40 hover:shadow-[0_14px_36px_rgba(232,62,116,0.1)]">
+              <div className="card-highlight group flex h-full flex-col rounded-[20px] border border-[#fde2ec] bg-white p-5.5 shadow-[0_8px_24px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-rose/40 hover:shadow-[0_14px_36px_rgba(232,62,116,0.1)]">
                 <div className="flex items-center gap-3">
-                  <span className="inline-flex size-8 shrink-0 items-center justify-center rounded-lg bg-rose text-[13px] font-bold text-white shadow-[0_4px_12px_rgba(232,62,116,0.35)]">
+                  <span className="card-badge inline-flex size-8 shrink-0 items-center justify-center rounded-lg bg-rose text-[13px] font-bold text-white shadow-[0_4px_12px_rgba(232,62,116,0.35)]">
                     {item.num}
                   </span>
                   <h3 className="text-[15px] font-bold text-ink transition-colors group-hover:text-rose sm:text-[16px]">

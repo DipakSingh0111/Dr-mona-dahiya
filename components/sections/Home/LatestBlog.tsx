@@ -58,7 +58,7 @@ export default function LatestBlog() {
         <Stagger className="grid grid-cols-1 gap-5 md:grid-cols-3 lg:gap-6" stagger={0.1}>
           {articles.map((item) => (
             <StaggerItem key={item.id} variant="scaleIn" className="h-full">
-              <article className="group flex h-full min-h-[210px] flex-col justify-between rounded-[22px] border border-[#fde2ec] bg-white p-6 shadow-[0_10px_30px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-[#f8b4cb] hover:shadow-[0_18px_40px_rgba(232,62,116,0.12)] sm:p-7">
+              <article className="card-highlight group flex h-full min-h-[210px] flex-col justify-between rounded-[22px] border border-[#fde2ec] bg-white p-6 shadow-[0_10px_30px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-[#f8b4cb] hover:shadow-[0_18px_40px_rgba(232,62,116,0.12)] sm:p-7">
                 <div>
                   <p className="text-[13px] font-bold tracking-wide text-rose">
                     {item.category} • {item.date}

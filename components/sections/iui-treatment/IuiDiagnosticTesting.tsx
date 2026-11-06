@@ -56,7 +56,7 @@ export default function IuiDiagnosticTesting() {
         <Stagger className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5" stagger={0.06}>
           {tests.map((item) => (
             <StaggerItem key={item.num} className="h-full">
-              <div className="flex h-full flex-col rounded-2xl border border-[#fde2ec] bg-gradient-to-br from-[#fff7fa] to-[#fff0f5] p-5 shadow-sm transition-all duration-300 hover:border-[#fbcfe0] hover:shadow-md sm:p-6">
+              <div className="card-highlight flex h-full flex-col rounded-2xl border border-[#fde2ec] bg-gradient-to-br from-[#fff7fa] to-[#fff0f5] p-5 shadow-sm transition-all duration-300 hover:border-[#fbcfe0] hover:shadow-md sm:p-6">
                 <div className="flex items-center gap-3">
                   <span className="flex size-7 shrink-0 items-center justify-center rounded-lg bg-rose text-[13px] font-bold text-white shadow-[0_2px_10px_rgba(232,62,116,0.35)]">
                     {item.num}

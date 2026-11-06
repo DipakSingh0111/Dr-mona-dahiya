@@ -72,7 +72,7 @@ export default function AboutReviews({
         >
           {reviews.map((rev) => (
             <StaggerItem key={rev.name} variant="scaleIn" className="h-full">
-              <article className="group relative flex h-full flex-col justify-between overflow-hidden rounded-[22px] border border-rose/20 bg-white p-6 shadow-[0_4px_18px_rgba(232,62,116,0.06)] transition-all duration-300 hover:border-rose/40 hover:shadow-[0_12px_28px_rgba(232,62,116,0.12)] sm:p-7">
+              <article className="card-highlight group relative flex h-full flex-col justify-between overflow-hidden rounded-[22px] border border-rose/20 bg-white p-6 shadow-[0_4px_18px_rgba(232,62,116,0.06)] transition-all duration-300 hover:border-rose/40 hover:shadow-[0_12px_28px_rgba(232,62,116,0.12)] sm:p-7">
                 <div>
                   <p className="text-[13.5px] leading-relaxed text-ink/85 sm:text-[14px]">
                     {rev.comment}

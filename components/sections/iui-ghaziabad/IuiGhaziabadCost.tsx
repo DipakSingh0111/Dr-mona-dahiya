@@ -46,7 +46,7 @@ export default function IuiGhaziabadCost() {
 
         {/* Highlight Price Banner */}
         <Reveal variant="fadeUp" delay={0.1} className="mt-7">
-          <div className="relative overflow-hidden rounded-2xl border border-[#fde2ec] bg-gradient-to-br from-[#fff7fa] to-[#fff0f5] p-6 shadow-sm sm:p-8">
+          <div className="card-highlight relative overflow-hidden rounded-2xl border border-[#fde2ec] bg-gradient-to-br from-[#fff7fa] to-[#fff0f5] p-6 shadow-sm sm:p-8">
             <div
               aria-hidden
               className="pointer-events-none absolute top-0 right-0 h-64 w-64 -translate-y-1/2 translate-x-1/2 rounded-full opacity-20 blur-3xl"
@@ -80,7 +80,7 @@ export default function IuiGhaziabadCost() {
           <Stagger className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5" stagger={0.06}>
             {costFactors.map((item, idx) => (
               <StaggerItem key={idx} className="h-full">
-                <div className="flex h-full flex-col rounded-2xl border border-[#fde2ec] bg-white p-5 shadow-sm transition-all duration-300 hover:border-[#fbcfe0] hover:bg-[#fff0f5] hover:shadow-md sm:p-6">
+                <div className="card-highlight flex h-full flex-col rounded-2xl border border-[#fde2ec] bg-white p-5 shadow-sm transition-all duration-300 hover:border-[#fbcfe0] hover:bg-[#fff0f5] hover:shadow-md sm:p-6">
                   <div className="flex items-center gap-3">
                     <span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-rose/15 text-rose">
                       {item.icon}

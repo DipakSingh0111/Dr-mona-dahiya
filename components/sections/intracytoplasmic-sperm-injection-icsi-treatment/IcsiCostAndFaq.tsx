@@ -78,7 +78,7 @@ const rightFaqs: FaqItem[] = [
         and antioxidants can lower DNA fragmentation. A repeat{" "}
         <Link
           href="/sperm-dna-fragmentation-test"
-          className="font-medium text-blue underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-rose transition-colors"
         >
           DNA fragmentation test
         </Link>{" "}

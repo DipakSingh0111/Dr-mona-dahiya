@@ -78,7 +78,7 @@ const sections: FaqSection[] = [
     left: [
       {
         q: "Is strict bed rest needed after embryo transfer?",
-        a: "NO! Studies have proven that resting does not help your embryos implant, and you also cannot \"drop\" your embryos 🥰 Take some rest after your transfer at our clinic and return home to do normal activities. Just don't lift anything heavy for minimum 1 week.",
+        a: 'NO! Studies have proven that resting does not help your embryos implant, and you also cannot "drop" your embryos Take some rest after your transfer at our clinic and return home to do normal activities. Just don\'t lift anything heavy for minimum 1 week.',
       },
       {
         q: "How many embryos should be transferred?",
@@ -137,13 +137,10 @@ const sections: FaqSection[] = [
         q: "Can I have IVF with my own eggs if my AMH is below 0.5 ng/mL?",
         a: (
           <>
-            Yes we do. We test your egg reserve by doing a blood test called AMH.
-            We can perform egg enhancement techniques such as DuoStim protocol
-            or{" "}
-            <Link
-              href="/minimal-stimulation-mini-ivf"
-              className={linkClass}
-            >
+            Yes we do. We test your egg reserve by doing a blood test called
+            AMH. We can perform egg enhancement techniques such as DuoStim
+            protocol or{" "}
+            <Link href="/minimal-stimulation-mini-ivf" className={linkClass}>
               mini IVF
             </Link>{" "}
             to help you conceive with your own eggs.
@@ -289,8 +286,9 @@ export default function IvfFaqsContent() {
   };
 
   return (
-    <div className="bg-pink text-black">
-      <section className="py-10 sm:py-12 lg:py-14">
+    <div className="text-black">
+      {/* Category Navigation (Pink) */}
+      <section className="relative overflow-hidden bg-pink py-10 sm:py-12 lg:py-14">
         <div className="page-container relative">
           <Reveal className="mb-7 sm:mb-9">
             <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
@@ -307,7 +305,7 @@ export default function IvfFaqsContent() {
                 key={cat.id}
                 type="button"
                 onClick={() => scrollTo(cat.id)}
-                className="group flex h-full flex-col rounded-[20px] border border-[#fde2ec] bg-white p-5 text-left shadow-[0_8px_24px_rgba(232,62,116,0.05)] transition-all duration-300 hover:-translate-y-0.5 hover:border-rose/45 hover:shadow-[0_14px_32px_rgba(232,62,116,0.15)]"
+                className="card-highlight group flex h-full flex-col rounded-[20px] border border-[#fde2ec] bg-white p-5 text-left shadow-[0_8px_24px_rgba(232,62,116,0.05)] transition-all duration-300 hover:-translate-y-0.5 hover:border-rose/45 hover:shadow-[0_14px_32px_rgba(232,62,116,0.15)]"
               >
                 <h3 className="font-serif text-[1.15rem] font-semibold leading-snug text-black sm:text-[1.25rem]">
                   {cat.label}
@@ -321,35 +319,43 @@ export default function IvfFaqsContent() {
         </div>
       </section>
 
-      {sections.map((section) => (
-        <section
-          key={section.id}
-          id={section.id}
-          className="scroll-mt-36 py-10 sm:py-12 lg:py-14"
-        >
-          <div className="page-container relative">
-            <Reveal className="mb-7 sm:mb-9">
-              <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
-                {section.categoryLabel}
-              </p>
-              <h2 className="font-serif mt-2 max-w-3xl text-[1.9rem] leading-tight font-bold tracking-tight text-black sm:text-[2.4rem]">
-                {section.title}
-              </h2>
-            </Reveal>
+      {/* Alternating FAQ Categories: Even index = White, Odd index = Pink */}
+      {sections.map((section, idx) => {
+        const isWhite = idx % 2 === 0;
+        return (
+          <section
+            key={section.id}
+            id={section.id}
+            className={`scroll-mt-36 py-10 sm:py-12 lg:py-14 ${
+              isWhite
+                ? "bg-white border-y border-[#fde2ec]/70"
+                : "bg-pink"
+            }`}
+          >
+            <div className="page-container relative">
+              <Reveal className="mb-7 sm:mb-9">
+                <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
+                  {section.categoryLabel}
+                </p>
+                <h2 className="font-serif mt-2 max-w-3xl text-[1.9rem] leading-tight font-bold tracking-tight text-black sm:text-[2.4rem]">
+                  {section.title}
+                </h2>
+              </Reveal>
 
-            <FaqAccordion
-              leftItems={section.left.map((item) => ({
-                question: item.q,
-                answer: item.a,
-              }))}
-              rightItems={section.right.map((item) => ({
-                question: item.q,
-                answer: item.a,
-              }))}
-            />
-          </div>
-        </section>
-      ))}
+              <FaqAccordion
+                leftItems={section.left.map((item) => ({
+                  question: item.q,
+                  answer: item.a,
+                }))}
+                rightItems={section.right.map((item) => ({
+                  question: item.q,
+                  answer: item.a,
+                }))}
+              />
+            </div>
+          </section>
+        );
+      })}
     </div>
   );
 }

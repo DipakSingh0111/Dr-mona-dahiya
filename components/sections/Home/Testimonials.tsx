@@ -253,7 +253,7 @@ export default function Testimonials() {
 
 function TestimonialCard({ item }: { item: Testimonial }) {
   return (
-    <article className="flex h-full flex-col justify-between overflow-hidden rounded-[22px] border border-[#fde2ec] bg-white p-5 shadow-[0_12px_32px_rgba(232,62,116,0.07)] transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(232,62,116,0.14)] sm:p-6">
+    <article className="card-highlight flex h-full flex-col justify-between overflow-hidden rounded-[22px] border border-[#fde2ec] bg-white p-5 shadow-[0_12px_32px_rgba(232,62,116,0.07)] transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(232,62,116,0.14)] sm:p-6">
       <div>
         <span
           aria-hidden

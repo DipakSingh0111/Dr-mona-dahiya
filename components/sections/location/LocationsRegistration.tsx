@@ -28,10 +28,10 @@ const registrations = [
 
 const accentStyles = {
   blue: {
-    badge: "bg-gradient-to-br from-blue to-blue-dark",
-    number: "text-blue",
-    border: "border-blue/30 hover:border-blue/65",
-    glow: "shadow-[0_4px_20px_rgba(0,71,202,0.08)] hover:shadow-[0_14px_36px_rgba(0,71,202,0.18)]",
+    badge: "bg-gradient-to-br from-navy to-navy-mid",
+    number: "text-navy",
+    border: "border-navy/25 hover:border-navy/60",
+    glow: "shadow-[0_4px_20px_rgba(6,21,50,0.06)] hover:shadow-[0_14px_36px_rgba(6,21,50,0.14)]",
   },
   rose: {
     badge: "bg-gradient-to-br from-rose to-rose-dark",
@@ -40,16 +40,16 @@ const accentStyles = {
     glow: "shadow-[0_4px_20px_rgba(232,62,116,0.08)] hover:shadow-[0_14px_36px_rgba(232,62,116,0.18)]",
   },
   navy: {
-    badge: "bg-gradient-to-br from-blue to-blue-dark",
-    number: "text-blue",
-    border: "border-blue/30 hover:border-blue/65",
-    glow: "shadow-[0_4px_20px_rgba(0,71,202,0.08)] hover:shadow-[0_14px_36px_rgba(0,71,202,0.18)]",
+    badge: "bg-gradient-to-br from-navy to-navy-mid",
+    number: "text-navy",
+    border: "border-navy/25 hover:border-navy/60",
+    glow: "shadow-[0_4px_20px_rgba(6,21,50,0.06)] hover:shadow-[0_14px_36px_rgba(6,21,50,0.14)]",
   },
 };
 
 export default function LocationsRegistration() {
   return (
-    <section className="relative overflow-hidden bg-pink py-6 sm:py-7 lg:py-8">
+    <section className="relative overflow-hidden bg-white py-6 sm:py-7 lg:py-8 border-y border-[#fde2ec]/70">
       <div
         aria-hidden
         className="pointer-events-none absolute -top-20 right-1/4 h-[300px] w-[400px] rounded-full opacity-40 blur-3xl"
@@ -81,7 +81,7 @@ export default function LocationsRegistration() {
             return (
               <StaggerItem key={item.code}>
                 <article
-                  className={`flex h-full flex-col rounded-[22px] border bg-white p-5 transition-all duration-300 hover:-translate-y-1 sm:p-6 ${styles.border} ${styles.glow}`}
+                  className={`card-highlight flex h-full flex-col rounded-[22px] border bg-white p-5 transition-all duration-300 hover:-translate-y-1 sm:p-6 ${styles.border} ${styles.glow}`}
                 >
                   <div className="flex items-start gap-4">
                     <span

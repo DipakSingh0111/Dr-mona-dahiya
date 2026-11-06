@@ -25,7 +25,7 @@ export default function LocationsCityCards() {
                 <button
                   type="button"
                   onClick={() => scrollToCity(city.id)}
-                  className="group flex h-full w-full flex-col rounded-[22px] border border-[#fde2ec] bg-white p-5 text-left shadow-[0_8px_24px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-rose/45 hover:shadow-[0_16px_36px_rgba(232,62,116,0.12)] sm:p-6"
+                  className="card-highlight group flex h-full w-full flex-col rounded-[22px] border border-[#fde2ec] bg-white p-5 text-left shadow-[0_8px_24px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-rose/45 hover:shadow-[0_16px_36px_rgba(232,62,116,0.12)] sm:p-6"
                 >
                   <div className="flex items-start justify-between gap-3">
                     <h3 className="font-serif text-[1.65rem] font-semibold tracking-tight text-ink sm:text-[1.85rem]">

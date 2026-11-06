@@ -54,7 +54,7 @@ export default function IuiDelhiRelated() {
             <StaggerItem key={item.title}>
               <Link
                 href={item.href}
-                className="group relative flex h-full flex-col justify-between rounded-2xl border border-[#fde2ec] bg-white p-5 backdrop-blur-md transition-all duration-200 hover:-translate-y-0.5 hover:border-blue/50 hover:bg-[#fff0f5] sm:p-6"
+                className="card-highlight group relative flex h-full flex-col justify-between rounded-2xl border border-[#fde2ec] bg-white p-5 backdrop-blur-md transition-all duration-200 hover:-translate-y-0.5 hover:border-blue/50 hover:bg-[#fff0f5] sm:p-6"
               >
                 <span className="absolute top-4 right-4 text-rose transition-transform duration-200 group-hover:translate-x-0.5">
                   <FaArrowRight className="size-3" />

@@ -51,7 +51,7 @@ export default function EndometriosisRelatedTreatments() {
             <StaggerItem key={idx}>
               <Link
                 href={item.href}
-                className="group relative flex h-full flex-col justify-between rounded-2xl border border-[#fde2ec] bg-white p-5 sm:p-6 backdrop-blur-md transition-all duration-200 hover:-translate-y-1 hover:border-blue/60 hover:bg-[#fff0f5]"
+                className="card-highlight group relative flex h-full flex-col justify-between rounded-2xl border border-[#fde2ec] bg-white p-5 sm:p-6 backdrop-blur-md transition-all duration-200 hover:-translate-y-1 hover:border-blue/60 hover:bg-[#fff0f5]"
               >
                 <div>
                   <div className="flex items-start justify-between gap-3">

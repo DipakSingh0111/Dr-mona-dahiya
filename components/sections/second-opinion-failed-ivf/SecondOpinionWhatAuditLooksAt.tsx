@@ -142,9 +142,9 @@ export default function SecondOpinionWhatAuditLooksAt() {
               >
                 {grp.cards.map((c, cIdx) => (
                   <StaggerItem key={cIdx}>
-                    <div className="group flex h-full flex-col justify-start rounded-[18px] border border-slate-200/90 bg-gradient-to-br from-slate-50/70 to-white p-5 shadow-[0_4px_16px_rgba(0,20,60,0.03)] transition-all duration-300 hover:-translate-y-1 hover:border-blue/40 hover:shadow-[0_12px_28px_rgba(0,30,80,0.08)]">
+                    <div className="card-highlight group flex h-full flex-col justify-start rounded-[18px] border border-slate-200/90 bg-gradient-to-br from-slate-50/70 to-white p-5 shadow-[0_4px_16px_rgba(0,20,60,0.03)] transition-all duration-300 hover:-translate-y-1 hover:border-blue/40 hover:shadow-[0_12px_28px_rgba(0,30,80,0.08)]">
                       <div className="flex items-center gap-2.5">
-                        <span className="inline-flex size-7 shrink-0 items-center justify-center rounded-lg bg-gradient-to-r from-rose to-[#f43f5e] text-white shadow-xs">
+                        <span className="signature-tick inline-flex size-7 shrink-0 items-center justify-center rounded-lg text-white shadow-xs">
                           <FaCheck className="size-3" />
                         </span>
                         <h4 className="text-[14.5px] font-bold text-slate-900 group-hover:text-blue transition-colors sm:text-[15px]">

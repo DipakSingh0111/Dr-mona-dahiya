@@ -18,6 +18,7 @@ interface ReviewSectionProps {
   col1: ReviewCard[];
   col2: ReviewCard[];
   col3: ReviewCard[];
+  sectionBg?: "bg-pink" | "bg-white";
 }
 
 export default function PatientReviewsGroup({
@@ -28,11 +29,12 @@ export default function PatientReviewsGroup({
   col1,
   col2,
   col3,
+  sectionBg = "bg-pink",
 }: ReviewSectionProps) {
   const renderCard = (rev: ReviewCard, idx: number) => (
     <div
       key={idx}
-      className="group flex flex-col justify-between rounded-[20px] border border-[#fde2ec] bg-white p-5 backdrop-blur-md transition-all duration-300 hover:border-rose/40 hover:bg-pink hover:shadow-[0_12px_32px_rgba(0,0,0,0.35)]"
+      className="card-highlight group flex flex-col justify-between rounded-[20px] border border-[#fde2ec] bg-white p-5 backdrop-blur-md transition-all duration-300 hover:border-rose/40 hover:bg-pink hover:shadow-[0_12px_32px_rgba(0,0,0,0.35)]"
     >
       <div>
         {rev.title ? (
@@ -62,7 +64,12 @@ export default function PatientReviewsGroup({
   );
 
   return (
-    <section id={id} className="relative overflow-hidden bg-pink py-6 text-ink sm:py-7 lg:py-8 scroll-mt-24">
+    <section
+      id={id}
+      className={`relative overflow-hidden ${sectionBg} py-8 text-ink sm:py-10 lg:py-12 scroll-mt-24 ${
+        sectionBg === "bg-white" ? "border-y border-[#fde2ec]/70" : ""
+      }`}
+    >
       <div className="page-container relative">
         <Reveal className="max-w-3xl">
           <span className="text-[12px] font-semibold tracking-wider text-rose uppercase">

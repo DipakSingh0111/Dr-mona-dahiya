@@ -48,7 +48,7 @@ export default function IuiPatientTestimonials() {
         >
           {testimonials.map((t, idx) => (
             <StaggerItem key={idx}>
-              <div className="flex h-full flex-col justify-between rounded-2xl border border-[#fde2ec] bg-white p-6 shadow-sm transition-all duration-300 hover:border-rose/30 hover:bg-[#fff0f5] hover:shadow-md">
+              <div className="card-highlight flex h-full flex-col justify-between rounded-2xl border border-[#fde2ec] bg-white p-6 shadow-sm transition-all duration-300 hover:border-rose/30 hover:bg-[#fff0f5] hover:shadow-md">
                 <div>
                   <h3 className="font-serif text-[1.1rem] font-bold text-ink sm:text-[1.2rem]">
                     {t.title}

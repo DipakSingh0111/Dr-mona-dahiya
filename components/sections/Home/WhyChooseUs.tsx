@@ -27,48 +27,54 @@ const cardColorThemes = {
     cardBg: "bg-gradient-to-br from-[#fff5f8] via-white to-[#ffe8f0]",
     iconBg: "bg-gradient-to-br from-rose to-rose-dark",
     iconShadow: "shadow-[0_8px_20px_rgba(248,95,143,0.35)]",
-    numColor: "text-[#f8b4cd]",
+    numColor: "text-rose",
     hoverGlow: "hover:shadow-[0_16px_36px_rgba(230,53,110,0.15)]",
+    topLine: "#e83e74",
   },
   teal: {
     border: "border-[#b8ebe2]",
     cardBg: "bg-gradient-to-br from-[#f0fbf9] via-white to-[#e6f8f5]",
     iconBg: "bg-gradient-to-br from-[#3ec4b0] to-[#20a38f]",
     iconShadow: "shadow-[0_8px_20px_rgba(32,163,143,0.35)]",
-    numColor: "text-[#9ee3d6]",
+    numColor: "text-[#0d9488]",
     hoverGlow: "hover:shadow-[0_16px_36px_rgba(32,163,143,0.15)]",
+    topLine: "#0d9488",
   },
   purple: {
     border: "border-[#dfd3fa]",
     cardBg: "bg-gradient-to-br from-[#f7f4fe] via-white to-[#f0eaff]",
     iconBg: "bg-gradient-to-br from-[#9274f4] to-[#764de8]",
     iconShadow: "shadow-[0_8px_20px_rgba(118,77,232,0.35)]",
-    numColor: "text-[#cfbef8]",
+    numColor: "text-[#7c3aed]",
     hoverGlow: "hover:shadow-[0_16px_36px_rgba(118,77,232,0.15)]",
+    topLine: "#7c3aed",
   },
   orange: {
     border: "border-[#fedab7]",
     cardBg: "bg-gradient-to-br from-[#fff7f0] via-white to-[#feefe2]",
     iconBg: "bg-gradient-to-br from-[#fb9956] to-[#eb7629]",
     iconShadow: "shadow-[0_8px_20px_rgba(235,118,41,0.35)]",
-    numColor: "text-[#fdc89a]",
+    numColor: "text-[#ea580c]",
     hoverGlow: "hover:shadow-[0_16px_36px_rgba(235,118,41,0.15)]",
+    topLine: "#ea580c",
   },
   blue: {
     border: "border-[#c4e1fd]",
     cardBg: "bg-gradient-to-br from-[#f2f8fe] via-white to-[#e6f2fd]",
     iconBg: "bg-gradient-to-br from-[#4ea5f5] to-[#2583e3]",
     iconShadow: "shadow-[0_8px_20px_rgba(37,131,227,0.35)]",
-    numColor: "text-[#aed4fb]",
+    numColor: "text-blue",
     hoverGlow: "hover:shadow-[0_16px_36px_rgba(37,131,227,0.15)]",
+    topLine: "#0047ca",
   },
   rose: {
     border: "border-[#ffc7d5]",
     cardBg: "bg-gradient-to-br from-[#fff4f7] via-white to-[#ffe9ef]",
     iconBg: "bg-gradient-to-br from-[#fc587e] to-[#ea315e]",
     iconShadow: "shadow-[0_8px_20px_rgba(234,49,94,0.35)]",
-    numColor: "text-[#ffb3c5]",
+    numColor: "text-rose",
     hoverGlow: "hover:shadow-[0_16px_36px_rgba(234,49,94,0.15)]",
+    topLine: "#e83e74",
   },
 } as const;
 
@@ -91,6 +97,13 @@ function FeatureCard({ item }: { item: FeatureCardData }) {
     <article
       className={`group relative flex h-full w-full items-center gap-3.5 overflow-hidden rounded-[20px] border ${theme.border} ${theme.cardBg} px-3.5 py-3 shadow-sm transition-all duration-300 hover:-translate-y-0.5 sm:px-4 sm:py-3.5 xl:gap-4 xl:rounded-[22px] xl:px-5 xl:py-4 ${theme.hoverGlow}`}
     >
+      {/* Top Accent Line — Solid & dark across, exactly like the left */}
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 top-0 h-[3px] z-10"
+        style={{ background: theme.topLine }}
+      />
+
       <div
         className={`relative z-10 flex size-[44px] shrink-0 items-center justify-center rounded-[14px] text-white sm:size-[48px] sm:rounded-[15px] xl:size-[56px] xl:rounded-[16px] ${theme.iconBg} ${theme.iconShadow} transition-transform duration-300 group-hover:scale-105`}
       >
@@ -107,7 +120,7 @@ function FeatureCard({ item }: { item: FeatureCardData }) {
       </div>
 
       <span
-        className={`absolute top-2.5 right-3.5 font-display text-[17px] leading-none font-bold sm:top-3 sm:right-4 xl:top-3.5 xl:right-4.5 xl:text-[21px] ${theme.numColor}`}
+        className={`absolute top-2.5 right-3.5 font-display text-[19px] leading-none font-extrabold tracking-tight transition-transform duration-200 group-hover:scale-110 sm:top-3 sm:right-4 sm:text-[21px] xl:top-3.5 xl:right-4.5 xl:text-[24px] ${theme.numColor}`}
       >
         {item.number}
       </span>

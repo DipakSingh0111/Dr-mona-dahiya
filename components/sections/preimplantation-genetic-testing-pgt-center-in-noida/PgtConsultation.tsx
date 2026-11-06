@@ -89,7 +89,7 @@ export default function PgtConsultation() {
                   <p className="text-[11.5px] text-ink/75">30 minutes</p>
                 </div>
 
-                <div className="w-[170px] rounded-[18px] border border-rose/30 bg-white p-4 shadow-sm">
+                <div className="card-highlight w-[170px] rounded-[18px] border border-rose/30 bg-white p-4 shadow-sm">
                   <span className="text-[10.5px] font-bold tracking-wider text-rose uppercase">
                     Foreign Patients
                   </span>
@@ -152,7 +152,7 @@ export default function PgtConsultation() {
           {/* Right Column: Appointment Form */}
           <div id="request-appointment-form" className="lg:col-span-5">
             <Reveal variant="slideRight">
-              <div className="rounded-[24px] border border-rose/20 bg-white p-6 shadow-md sm:p-8">
+              <div className="card-highlight rounded-[24px] border border-rose/20 bg-white p-6 shadow-md sm:p-8">
                 <h3 className="font-serif text-[1.4rem] font-bold tracking-tight text-ink sm:text-[1.6rem]">
                   Request an appointment
                 </h3>

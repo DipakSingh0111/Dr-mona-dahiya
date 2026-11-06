@@ -74,7 +74,7 @@ const whyPoints = [
     desc: (
       <span>
         IUI is advised only when tubes are open and sperm parameters support it, so you avoid repeat cycles when{" "}
-        <Link href="/ivf-treatment" className="text-rose underline hover:text-white transition-colors">
+        <Link href="/ivf-treatment" className="text-rose underline hover:text-rose transition-colors transition-colors">
           IVF Treatment
         </Link>{" "}
         is the better route.

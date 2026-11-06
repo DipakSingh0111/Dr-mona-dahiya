@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import { FaCheck } from "react-icons/fa";
@@ -37,10 +37,10 @@ export default function BestIvfDelhiWhy() {
             {whyPoints.map((item) => (
               <StaggerItem key={item.title}>
                 <div className="flex items-start gap-3.5 rounded-xl border border-[#fde2ec] bg-white px-4 py-3.5 backdrop-blur-md transition-all duration-200 hover:border-blue/50 hover:bg-[#fff0f5] sm:px-5 sm:py-4">
-                  <span className="mt-0.5 flex size-7 shrink-0 items-center justify-center rounded-lg bg-rose text-white shadow-[0_2px_8px_rgba(232,62,116,0.4)]">
+                  <span className="signature-tick mt-0.5 flex size-7 shrink-0 items-center justify-center rounded-lg text-white">
                     <FaCheck className="size-3" />
                   </span>
-                  <div>
+                  <div className="min-w-0 flex-1">
                     <h3 className="font-serif text-[1rem] font-semibold text-black sm:text-[1.05rem]">
                       {item.title}
                     </h3>

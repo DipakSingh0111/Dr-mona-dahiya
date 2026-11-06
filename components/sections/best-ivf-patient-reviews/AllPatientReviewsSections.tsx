@@ -5,6 +5,7 @@ export default function AllPatientReviewsSections() {
     <div className="flex flex-col">
       <PatientReviewsGroup
         id="first-cycle"
+        sectionBg="bg-white"
         eyebrow="First cycle"
         title="Pregnant in my first cycle"
         subtitle="Our patients have mentioned becoming pregnant in their first cycle. Every case is different."
@@ -154,6 +155,7 @@ export default function AllPatientReviewsSections() {
 
       <PatientReviewsGroup
         id="clear-explanations"
+        sectionBg="bg-white"
         eyebrow="Clear explanations"
         title="Took time to listen & explain things clearly"
         subtitle="Many of our patients love how we take the time to explain everything."
@@ -310,6 +312,7 @@ export default function AllPatientReviewsSections() {
 
       <PatientReviewsGroup
         id="staff-support"
+        sectionBg="bg-white"
         eyebrow="Staff support"
         title="Love our Nurses/Staff"
         subtitle="Patients mention our nurses, front desk, counsellor and staff that are always there for them."
@@ -467,6 +470,7 @@ export default function AllPatientReviewsSections() {
 
       <PatientReviewsGroup
         id="icsi"
+        sectionBg="bg-white"
         eyebrow="ICSI"
         title="Patients who mentioned ICSI"
         subtitle="Patients have mentioned how we perform ICSI."
@@ -606,6 +610,7 @@ export default function AllPatientReviewsSections() {
 
       <PatientReviewsGroup
         id="iui"
+        sectionBg="bg-white"
         eyebrow="IUI"
         title="Patients who mentioned IUI"
         subtitle="Patients who have mentioned that we perform IUI."
@@ -695,6 +700,7 @@ export default function AllPatientReviewsSections() {
 
       <PatientReviewsGroup
         id="expertise"
+        sectionBg="bg-white"
         eyebrow="Expertise"
         title="Dr. Mona's experience & knowledge"
         subtitle="Some of our patients love that Dr. Mona knows her stuff. Knows how to diagnose and help you."
@@ -848,6 +854,7 @@ export default function AllPatientReviewsSections() {
 
       <PatientReviewsGroup
         id="best-ghaziabad"
+        sectionBg="bg-white"
         eyebrow="Best IVF doctor in Ghaziabad"
         title="Mentioned Ghaziabad"
         subtitle="Our patients have mentioned Ghaziabad in their reviews."
@@ -995,6 +1002,7 @@ export default function AllPatientReviewsSections() {
 
       <PatientReviewsGroup
         id="best-india"
+        sectionBg="bg-white"
         eyebrow="Best IVF doctor in India"
         title="Mentioned India"
         subtitle="Our patients have mentioned India in their reviews."

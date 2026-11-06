@@ -39,10 +39,10 @@ export default function TopBar() {
 
   return (
     <div
-      className="relative z-50 text-[11px] text-white/90 xl:text-[12px]"
+      className="relative z-50 text-[11px] text-white/90 xl:text-[12px] border-b border-white/10"
       style={{
         background:
-          "linear-gradient(105deg, #0039b8 0%, var(--blue) 42%, #1a5fd4 72%, #2b7de8 100%)",
+          "linear-gradient(90deg, var(--navy) 0%, var(--navy-mid) 50%, var(--navy) 100%)",
       }}
     >
       <div className="page-container flex h-7 items-center gap-2 sm:h-8 sm:gap-4">

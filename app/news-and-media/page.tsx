@@ -34,7 +34,7 @@ export default function NewsMediaPage() {
           title="What Patients Say About Dr. Mona"
           subtitle="Individual experiences in patients' own words."
           ctaLabel="Read All Patient Reviews"
-          sectionBg="bg-pink"
+          sectionBg="bg-white"
         />
       </SectionReveal>
 

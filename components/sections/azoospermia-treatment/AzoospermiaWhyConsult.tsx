@@ -53,8 +53,8 @@ export default function AzoospermiaWhyConsult() {
         <Stagger className="mt-7 flex flex-col gap-4" stagger={0.08}>
           {reasons.map((item) => (
             <StaggerItem key={item.title}>
-              <div className="group flex flex-col gap-4 rounded-2xl border border-rose/25 bg-white/80 p-5 transition-all duration-300 hover:border-rose/45 sm:flex-row sm:items-center sm:p-6">
-                <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-rose to-rose-dark text-white shadow-[0_4px_14px_rgba(232,62,116,0.35)]">
+              <div className="group flex flex-row items-start gap-3.5 rounded-2xl border border-rose/25 bg-white/80 p-5 transition-all duration-300 hover:border-rose/45 sm:gap-4 sm:p-6">
+                <div className="signature-tick mt-0.5 flex size-10 shrink-0 items-center justify-center rounded-xl text-white">
                   <FaCheck className="size-4" />
                 </div>
                 <div className="min-w-0 flex-1">

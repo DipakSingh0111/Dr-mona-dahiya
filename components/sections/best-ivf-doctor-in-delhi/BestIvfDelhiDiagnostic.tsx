@@ -34,8 +34,8 @@ export default function BestIvfDelhiDiagnostic() {
             {tests.map((text) => (
               <StaggerItem key={text}>
                 <div className="flex items-center gap-3.5 rounded-xl border border-[#fde2ec] bg-white/80 px-4 py-3.5 backdrop-blur-md sm:px-5 sm:py-4">
-                  <span className="flex size-6 shrink-0 items-center justify-center rounded-full bg-blue text-white">
-                    <FaCheck className="size-3" />
+                  <span className="flex size-6 shrink-0 items-center justify-center rounded-full bg-rose/15 text-rose ring-1 ring-rose/35">
+                    <FaCheck className="size-2.5 sm:size-3" />
                   </span>
                   <p className="text-[13.5px] leading-relaxed text-slate-700 sm:text-[14px]">
                     {text}

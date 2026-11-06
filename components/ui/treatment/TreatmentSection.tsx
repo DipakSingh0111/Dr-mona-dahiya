@@ -12,7 +12,7 @@ export function TreatmentSection({
 }) {
   return (
     <section
-      className={`relative overflow-hidden bg-pink py-8 sm:py-10 lg:py-12 ${className}`}
+      className={`treatment-section relative overflow-hidden py-8 sm:py-10 lg:py-12 ${className}`}
     >
       <div className="page-container relative">{children}</div>
     </section>

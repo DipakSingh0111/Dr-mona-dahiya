@@ -41,11 +41,11 @@ export default function BestIvfGhaziabadWhy() {
         >
           {reasons.map((item) => (
             <StaggerItem key={item.title}>
-              <div className="flex gap-4 rounded-2xl border border-rose/25 bg-white/80 p-5 sm:p-6">
-                <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-rose to-rose-dark text-white">
+              <div className="flex items-start gap-4 rounded-2xl border border-rose/25 bg-white/80 p-5 sm:p-6">
+                <span className="signature-tick mt-0.5 flex size-9 shrink-0 items-center justify-center rounded-lg text-white">
                   <FaCheck className="size-3.5" />
                 </span>
-                <div className="min-w-0">
+                <div className="min-w-0 flex-1">
                   <h3 className="text-[15.5px] font-bold text-black sm:text-[16.5px]">
                     {item.title}
                   </h3>

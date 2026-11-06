@@ -37,7 +37,7 @@ const indications: { number: string; title: string; description: ReactNode }[] =
           Chemotherapy, pelvic radiation or orchiectomy, with urgent{" "}
           <Link
             href="/treatments"
-            className="font-medium text-blue underline underline-offset-2 hover:text-white"
+            className="font-medium text-blue underline underline-offset-2 hover:text-rose transition-colors"
           >
             Semen Freezing
           </Link>

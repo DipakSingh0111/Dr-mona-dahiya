@@ -181,6 +181,14 @@ export default function OurServices() {
                     boxShadow: `0 10px 30px ${theme.glow}`,
                   }}
                 >
+                  {/* Top Accent Line — Solid & dark across, exactly like the left */}
+                  <span
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-x-0 top-0 h-[2.5px] z-10"
+                    style={{
+                      background: theme.color,
+                    }}
+                  />
                   <div>
                     <div className="mb-5 flex items-center">
                       <div

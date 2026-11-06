@@ -37,11 +37,11 @@ export default function IuiWhyTrust() {
         <Stagger className="mt-7 flex flex-col gap-3.5 sm:gap-4" stagger={0.08}>
           {items.map((item) => (
             <StaggerItem key={item.title}>
-              <article className="flex w-full items-center gap-4 rounded-[18px] border border-rose/25 bg-white/80 px-4 py-4 transition-colors hover:border-rose/45 sm:gap-5 sm:px-5 sm:py-5">
-                <span className="flex size-11 shrink-0 items-center justify-center rounded-[14px] bg-gradient-to-br from-rose to-rose-dark text-white shadow-[0_8px_20px_rgba(232,62,116,0.35)]">
+              <article className="flex w-full items-start gap-4 rounded-[18px] border border-rose/25 bg-white/80 px-4 py-4 transition-colors hover:border-rose/45 sm:gap-5 sm:px-5 sm:py-5">
+                <span className="signature-tick mt-0.5 flex size-10 shrink-0 items-center justify-center rounded-[14px] text-white">
                   <FaCheck className="size-4" />
                 </span>
-                <div className="min-w-0">
+                <div className="min-w-0 flex-1">
                   <h3 className="text-[15px] font-bold text-black sm:text-[16px]">
                     {item.title}
                   </h3>

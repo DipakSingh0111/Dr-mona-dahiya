@@ -16,7 +16,7 @@ export default function AzoospermiaCaseInsight() {
         </Reveal>
 
         <Reveal variant="fadeUp" delay={0.06} className="mt-6">
-          <div className="rounded-2xl border border-[#fde2ec] border-l-4 border-l-[var(--rose)] bg-white p-5 shadow-[0_8px_24px_rgba(232,62,116,0.06)] sm:p-7">
+          <div className="card-highlight rounded-2xl border border-[#fde2ec] border-l-4 border-l-[var(--rose)] bg-white p-5 shadow-[0_8px_24px_rgba(232,62,116,0.06)] sm:p-7">
             <p className="text-[14.5px] leading-relaxed font-semibold text-ink sm:text-[16px]">
               A man with zero sperm on two semen tests and normal hormones was
               found to have an obstruction. Sperm was retrieved by a minor

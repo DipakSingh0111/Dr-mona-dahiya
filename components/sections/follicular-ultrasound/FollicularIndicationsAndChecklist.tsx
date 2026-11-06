@@ -31,7 +31,7 @@ const indications: { number: string; title: string; description: ReactNode }[] =
           Insemination 36 hours after trigger. See{" "}
           <Link
             href="/best-iui-doctor-in-noida"
-            className="font-medium text-blue underline underline-offset-2 hover:text-white"
+            className="font-medium text-blue underline underline-offset-2 hover:text-rose transition-colors"
           >
             IUI Treatment
           </Link>
@@ -48,7 +48,7 @@ const indications: { number: string; title: string; description: ReactNode }[] =
           See{" "}
           <Link
             href="/best-pcos-pcod-treatment-centre-in-noida"
-            className="font-medium text-blue underline underline-offset-2 hover:text-white"
+            className="font-medium text-blue underline underline-offset-2 hover:text-rose transition-colors"
           >
             PCOS Treatment
           </Link>

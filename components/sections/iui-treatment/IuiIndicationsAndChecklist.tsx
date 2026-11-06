@@ -184,8 +184,8 @@ export default function IuiIndicationsAndChecklist() {
             {checklistItems.map((text, idx) => (
               <Reveal key={idx} variant="fadeUp" delay={idx * 0.04}>
                 <div className="flex items-center gap-3.5 rounded-xl border border-slate-200 bg-slate-50/70 px-4 py-3.5 transition-all duration-200 hover:border-blue/40 hover:bg-white hover:shadow-sm sm:px-5 sm:py-4">
-                  <span className="flex size-6 shrink-0 items-center justify-center rounded-md bg-blue text-white shadow-[0_2px_8px_rgba(20,184,166,0.35)]">
-                    <FaCheck className="size-3" />
+                  <span className="flex size-6 shrink-0 items-center justify-center rounded-full bg-rose/15 text-rose ring-1 ring-rose/35">
+                    <FaCheck className="size-2.5" />
                   </span>
                   <p className="text-[13px] leading-relaxed text-slate-700 sm:text-[14px]">
                     {text}

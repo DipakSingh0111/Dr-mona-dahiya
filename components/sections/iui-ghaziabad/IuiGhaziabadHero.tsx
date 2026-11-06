@@ -1,9 +1,11 @@
 "use client";
+import Breadcrumb from "@/components/ui/Breadcrumb";
 
 import Link from "next/link";
-import { FaHome, FaChevronRight } from "react-icons/fa";
+
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 import HeroBannerImage from "@/components/ui/HeroBannerImage";
+import HeroCounterBar from "@/components/ui/HeroCounterBar";
 
 export default function IuiGhaziabadHero() {
   const badges = [
@@ -44,35 +46,12 @@ export default function IuiGhaziabadHero() {
         {/* Left Column */}
         <div className="min-w-0 lg:col-span-7">
           {/* Breadcrumb */}
-          <nav aria-label="Breadcrumb" className="mb-4 sm:mb-5">
-            <ol className="inline-flex max-w-full flex-wrap items-center gap-1.5 rounded-full border border-rose/25 bg-white px-3 py-1.5 shadow-sm backdrop-blur-md sm:gap-2 sm:px-3.5 sm:py-2">
-              <li>
-                <Link
-                  href="/"
-                  className="inline-flex items-center gap-1.5 rounded-full px-1.5 py-0.5 text-[12px] font-medium text-ink/70 transition-colors hover:bg-white hover:text-rose sm:text-[13px]"
-                >
-                  <FaHome className="size-3 shrink-0 sm:size-3.5" />
-                  Home
-                </Link>
-              </li>
-              <li aria-hidden className="text-ink/35">
-                <FaChevronRight className="size-2.5 sm:size-3" />
-              </li>
-              <li>
-                <span className="inline-flex items-center rounded-full px-1.5 py-0.5 text-[12px] font-medium text-ink/70 sm:text-[13px]">
-                  Our Services
-                </span>
-              </li>
-              <li aria-hidden className="text-ink/35">
-                <FaChevronRight className="size-2.5 sm:size-3" />
-              </li>
-              <li>
-                <span className="inline-flex items-center rounded-full bg-rose/20 px-2.5 py-0.5 text-[12px] font-semibold text-rose ring-1 ring-rose/35 sm:px-3 sm:text-[13px]">
-                  IUI Doctor in Ghaziabad
-                </span>
-              </li>
-            </ol>
-          </nav>
+          <Breadcrumb
+          items={[
+            { label: "Treatments", href: "/our-services" },
+            { label: "IUI Doctor in Ghaziabad" }
+          ]}
+        />
 
           {/* Eyebrow */}
           <p className="text-[12px] font-bold tracking-[0.12em] text-rose uppercase sm:text-[13px] lg:text-[13.5px]">
@@ -133,6 +112,17 @@ export default function IuiGhaziabadHero() {
         <HeroBannerImage
           src="/images/IUI-treatment.jpg"
           alt="Dr. Mona Dahiya — IUI Treatment in Ghaziabad"
+        />
+      </div>
+
+      <div className="page-container relative">
+        <HeroCounterBar
+          items={[
+            { target: 25, suffix: "+", label: "years of experience" },
+            { target: 10000, label: "IUI Cycles" },
+            { target: 50, suffix: "%+", label: "Success Rates" },
+            { target: 4.9, decimals: 1, label: "Stars Rating On Google" },
+          ]}
         />
       </div>
     </section>

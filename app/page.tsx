@@ -21,7 +21,7 @@ import { SectionReveal } from "@/components/ui/Reveal";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col">
+    <main className="home-main flex min-h-screen flex-col">
       <div className="home-first-screen">
         <div className="home-hero-wrap relative isolate flex flex-1 flex-col bg-transparent">
           <Hero />

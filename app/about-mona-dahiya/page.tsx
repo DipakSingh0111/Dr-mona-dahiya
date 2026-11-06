@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 
 import AboutHero from "@/components/sections/about-mona-dahiya/AboutHero";
-import AboutScrollTop from "@/components/sections/about-mona-dahiya/AboutScrollTop";
 import MedicalRegistration from "@/components/sections/MedicalRegistration";
 import AboutDoctorGlance from "@/components/sections/about-mona-dahiya/AboutDoctorGlance";
 import AboutCredentials from "@/components/sections/about-mona-dahiya/AboutCredentials";
@@ -23,8 +22,6 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main className="flex min-h-screen flex-col">
-      <AboutScrollTop />
-
       {/* Hero Section */}
       <AboutHero />
 

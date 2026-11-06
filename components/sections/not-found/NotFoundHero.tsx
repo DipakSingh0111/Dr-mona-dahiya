@@ -1,4 +1,5 @@
 "use client";
+import Breadcrumb from "@/components/ui/Breadcrumb";
 
 import Link from "next/link";
 import { FaHome, FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
@@ -19,16 +20,12 @@ export default function NotFoundHero() {
 
       <div className="page-container relative">
         {/* Breadcrumb */}
-        <nav
-          aria-label="Breadcrumb"
-          className="mb-8 flex items-center justify-center gap-2 text-xs font-medium text-slate-500 sm:text-[13px]"
-        >
-          <Link href="/" className="transition-colors hover:text-blue">
-            Home
-          </Link>
-          <span className="text-slate-300">/</span>
-          <span className="font-semibold text-ink">404 Not Found</span>
-        </nav>
+        <Breadcrumb className="mb-8 flex justify-center"
+          items={[
+            { label: "Error" },
+            { label: "Page Not Found" }
+          ]}
+        />
 
         {/* Central 404 Hero Card */}
         <div className="mx-auto max-w-2xl text-center">

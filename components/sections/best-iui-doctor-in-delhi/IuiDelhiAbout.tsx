@@ -49,7 +49,7 @@ export default function IuiDelhiAbout() {
               {requirements.map((item) => (
                 <StaggerItem key={item}>
                   <div className="flex items-center gap-3 rounded-xl border-4 border-white bg-white px-4 py-3 backdrop-blur-md transition-all duration-200 hover:border-[#fbcfe0] hover:bg-[#fff0f5] sm:px-5 sm:py-3.5">
-                    <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-blue/20 text-blue ring-1 ring-blue/40">
+                    <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-rose/15 text-rose ring-1 ring-rose/35">
                       <FaCheck className="size-2.5" />
                     </span>
                     <span className="text-[13px] font-medium text-black sm:text-[14px]">

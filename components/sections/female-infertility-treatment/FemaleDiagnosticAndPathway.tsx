@@ -143,7 +143,7 @@ export default function FemaleDiagnosticAndPathway() {
               <Reveal key={idx} variant="fadeUp" delay={idx * 0.05}>
                 <div className="flex items-center gap-3.5 rounded-xl border border-[#fde2ec] bg-white px-4 py-3.5 backdrop-blur-md transition-all duration-200 hover:border-blue/50 hover:bg-[#fff0f5] sm:px-5 sm:py-4">
                   {/* Cyan / Teal circle checkmark */}
-                  <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-blue/20 text-blue ring-1 ring-blue/40 sm:size-6">
+                  <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-rose/15 text-rose ring-1 ring-rose/35 sm:size-6">
                     <FaCheck className="size-2.5 sm:size-3" />
                   </span>
 
@@ -153,7 +153,7 @@ export default function FemaleDiagnosticAndPathway() {
                     {item.linkText && item.linkHref && (
                       <Link
                         href={item.linkHref}
-                        className="font-medium text-emerald-300 underline decoration-emerald-400/50 underline-offset-2 transition-colors hover:text-emerald-200 hover:decoration-emerald-300"
+                        className="font-medium text-blue underline underline-offset-2 transition-colors hover:text-rose"
                       >
                         {item.linkText}
                       </Link>

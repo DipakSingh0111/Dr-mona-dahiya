@@ -38,6 +38,7 @@ export default function SuccessStoriesPage() {
       <SectionReveal delay={0.04}>
         <AboutConsultation
           sectionId="book-consultation"
+          sectionBg="bg-white"
           eyebrow="Next step"
           title="Start Your Own Journey"
           subtitle="Book an in-clinic consultation or an online review of your previous reports with Dr. Mona Dahiya. Call +91 92679 82924."

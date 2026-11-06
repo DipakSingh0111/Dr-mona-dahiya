@@ -30,15 +30,25 @@ export default function FloatingActions() {
         href="#book-appointment"
         aria-label="Take Fertility Assessment"
         tabIndex={visible ? 0 : -1}
-        className={`group inline-flex items-center gap-2.5 rounded-full border border-white/25 bg-gradient-to-r from-rose via-[#ea4c80] to-[var(--rose)] px-3.5 py-2.5 text-white shadow-[0_8px_26px_rgba(232,62,116,0.4)] backdrop-blur-md transition-all duration-200 hover:-translate-y-0.5 hover:brightness-105 hover:shadow-[0_12px_32px_rgba(232,62,116,0.55)] sm:gap-3 sm:px-4 sm:py-3 ${
+        style={{
+          background:
+            "linear-gradient(90deg, var(--navy) 0%, var(--navy-mid) 50%, var(--navy) 100%)",
+        }}
+        className={`group inline-flex items-center gap-2 rounded-full border border-white/25 px-3.5 py-2.5 text-white shadow-[0_8px_26px_rgba(6,21,50,0.45)] backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-rose/60 hover:shadow-[0_12px_32px_rgba(232,62,116,0.35)] sm:gap-2.5 sm:px-4 sm:py-3 ${
           visible ? "pointer-events-auto" : "pointer-events-none"
         }`}
       >
-        <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-white text-rose shadow-sm transition-transform duration-200 group-hover:scale-110 sm:size-5.5">
-          <FaCheck className="size-2.5 sm:size-3" />
+        {/* Highlighted Badge: Shows "N" at rest, expands into glowing "New" highlight on hover */}
+        <span className="relative flex shrink-0 items-center justify-center overflow-hidden rounded-full bg-rose text-white text-[11px] font-extrabold shadow-sm transition-all duration-300 ease-out group-hover:scale-105 group-hover:shadow-[0_0_16px_rgba(232,62,116,0.95)] group-hover:ring-2 group-hover:ring-white/70 h-5.5 min-w-[22px] px-1.5 group-hover:px-2.5">
+          <span className="group-hover:hidden flex items-center justify-center">
+            N
+          </span>
+          <span className="hidden group-hover:inline uppercase tracking-wider font-extrabold">
+            New
+          </span>
         </span>
 
-        <span className="text-[12.5px] font-bold tracking-[0.01em] whitespace-nowrap text-white sm:text-[13.5px]">
+        <span className="text-[12.5px] font-bold tracking-[0.01em] whitespace-nowrap text-white transition-colors duration-200 group-hover:text-white sm:text-[13.5px]">
           Fertility assessment
         </span>
       </a>

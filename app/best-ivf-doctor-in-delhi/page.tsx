@@ -13,7 +13,7 @@ import BestIvfDelhiCost from "@/components/sections/best-ivf-doctor-in-delhi/Bes
 import BestIvfDelhiFAQ from "@/components/sections/best-ivf-doctor-in-delhi/BestIvfDelhiFAQ";
 import BestIvfDelhiConsultation from "@/components/sections/best-ivf-doctor-in-delhi/BestIvfDelhiConsultation";
 import BestIvfDelhiAreas from "@/components/sections/best-ivf-doctor-in-delhi/BestIvfDelhiAreas";
-import BestIvfDelhiParenthoodCta from "@/components/sections/best-ivf-doctor-in-delhi/BestIvfDelhiParenthoodCta";
+import AboutParenthoodCta from "@/components/sections/about-mona-dahiya/AboutParenthoodCta";
 
 import { SectionReveal } from "@/components/ui/Reveal";
 
@@ -57,6 +57,7 @@ export default function BestIvfDoctorInDelhiPage() {
           eyebrow="Consult Dr. Mona"
           title="Book Appointment with us"
           subtitle="We have centres at Noida, Ghaziabad and Delhi. Also offer online consultations."
+          primaryCity="delhi"
         />
       </SectionReveal>
 
@@ -81,7 +82,7 @@ export default function BestIvfDoctorInDelhiPage() {
       </SectionReveal>
 
       <SectionReveal delay={0.04}>
-        <BestIvfDelhiParenthoodCta />
+        <AboutParenthoodCta />
       </SectionReveal>
     </main>
   );

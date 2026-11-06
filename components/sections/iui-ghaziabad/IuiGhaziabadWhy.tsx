@@ -36,10 +36,10 @@ export default function IuiGhaziabadWhy() {
                 {reasons.map((text, idx) => (
                   <StaggerItem key={idx}>
                     <div className="flex h-full items-start gap-3 rounded-2xl border border-[#fde2ec] bg-white p-4.5 shadow-sm transition-all duration-200 hover:border-[#fbcfe0] hover:bg-[#fff0f5] sm:p-5">
-                      <span className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-md bg-rose/20 text-rose ring-1 ring-rose/35">
+                      <span className="signature-tick mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-md text-white">
                         <FaCheck className="size-2.5" />
                       </span>
-                      <p className="text-[13px] leading-relaxed text-ink font-medium sm:text-[13.5px]">
+                      <p className="min-w-0 flex-1 text-[13px] leading-relaxed text-ink font-medium sm:text-[13.5px]">
                         {text}
                       </p>
                     </div>

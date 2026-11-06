@@ -57,9 +57,9 @@ export default function RifWhatAndIndications() {
 
           {/* Single large card from screenshot */}
           <Reveal variant="fadeUp" delay={0.06} className="mt-6">
-            <div className="rounded-2xl border border-[#fde2ec] bg-white p-6 sm:p-7 shadow-[0_8px_24px_rgba(232,62,116,0.06)]">
+            <div className="card-highlight rounded-2xl border border-[#fde2ec] bg-white p-6 sm:p-7 shadow-[0_8px_24px_rgba(232,62,116,0.06)]">
               <div className="flex items-center gap-3">
-                <span className="flex size-7 shrink-0 items-center justify-center rounded-lg bg-rose text-white shadow-[0_2px_8px_rgba(232,62,116,0.4)]">
+                <span className="card-badge flex size-7 shrink-0 items-center justify-center rounded-lg bg-rose text-white shadow-[0_2px_8px_rgba(232,62,116,0.4)]">
                   <FaCheck className="size-3" />
                 </span>
                 <h3 className="font-serif text-[1.05rem] font-semibold text-black sm:text-[1.12rem]">

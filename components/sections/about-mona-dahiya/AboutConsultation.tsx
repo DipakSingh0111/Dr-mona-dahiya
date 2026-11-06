@@ -14,6 +14,8 @@ type Props = {
   appendContacts?: boolean;
   /** Online consultation duration label shown on pricing cards. Empty hides the line. */
   consultationDuration?: string;
+  className?: string;
+  sectionBg?: string;
 };
 
 export default function AboutConsultation({
@@ -29,6 +31,8 @@ export default function AboutConsultation({
   subtitle = "Book an in-clinic consultation or an online record review. Appointment line:",
   appendContacts = true,
   consultationDuration = "30 minutes",
+  className = "",
+  sectionBg = "bg-pink",
 }: Props) {
   const [formData, setFormData] = useState({
     name: "",
@@ -47,7 +51,7 @@ export default function AboutConsultation({
   return (
     <section
       id={sectionId}
-      className="relative overflow-hidden bg-pink py-8 text-ink sm:py-10 lg:py-12 border-t border-[#fde2ec]"
+      className={`relative overflow-hidden ${sectionBg} py-8 text-ink sm:py-10 lg:py-12 border-t border-[#fde2ec] ${className}`}
     >
       <div className="page-container relative">
         <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-14">

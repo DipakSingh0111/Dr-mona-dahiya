@@ -38,14 +38,14 @@ const reasons = [
         Special protocols for high-grade male factor/
         <Link
           href="/azoospermia-treatment"
-          className="font-medium text-blue underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-rose transition-colors"
         >
           Azoospermia
         </Link>{" "}
         patients, failed IVF cycles and{" "}
         <Link
           href="/best-low-amh-treatment-in-noida"
-          className="font-medium text-blue underline underline-offset-2 hover:text-white"
+          className="font-medium text-blue underline underline-offset-2 hover:text-rose transition-colors"
         >
           Low AMH
         </Link>
@@ -79,7 +79,7 @@ export default function IntlWhyIndia() {
       >
         {reasons.map((item) => (
           <StaggerItem key={item.number} className="h-full">
-            <div className="flex h-full flex-col rounded-2xl border border-rose/25 bg-white p-5 shadow-[0_0_20px_rgba(232,62,116,0.08)] backdrop-blur-md transition-all duration-300 hover:border-rose/45 hover:bg-[#fff0f5] sm:p-6">
+            <div className="card-highlight flex h-full flex-col rounded-2xl border border-rose/25 bg-white p-5 shadow-[0_0_20px_rgba(232,62,116,0.08)] backdrop-blur-md transition-all duration-300 hover:border-rose/45 hover:bg-[#fff0f5] sm:p-6">
               <div className="flex items-center gap-3">
                 <span className="flex size-7 shrink-0 items-center justify-center rounded-lg bg-rose text-[13px] font-bold text-white shadow-[0_2px_10px_rgba(232,62,116,0.35)]">
                   {item.number}

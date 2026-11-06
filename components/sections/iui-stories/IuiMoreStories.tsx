@@ -52,7 +52,7 @@ export default function IuiMoreStories() {
             <StaggerItem key={story.title}>
               <Link
                 href={story.href}
-                className={`group relative flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-[#fbcfe0] bg-gradient-to-br p-5 text-white shadow-[0_10px_28px_rgba(0,20,60,0.18)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_36px_rgba(232,62,116,0.22)] ${story.accent}`}
+                className={`card-highlight group relative flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-[#fbcfe0] bg-gradient-to-br p-5 text-white shadow-[0_10px_28px_rgba(0,20,60,0.18)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_36px_rgba(232,62,116,0.22)] ${story.accent}`}
               >
                 <div>
                   <h3 className="text-[15px] leading-snug font-bold">

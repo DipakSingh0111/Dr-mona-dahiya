@@ -30,8 +30,8 @@ export default function BestIvfGhaziabadDiagnostic() {
           {tests.map((text) => (
             <StaggerItem key={text}>
               <div className="flex items-start gap-3 rounded-2xl border border-[#fde2ec] bg-white/80 px-4 py-3.5 sm:px-5 sm:py-4">
-                <span className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-blue text-white">
-                  <FaCheck className="size-3" />
+                <span className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-rose/15 text-rose ring-1 ring-rose/35">
+                  <FaCheck className="size-2.5" />
                 </span>
                 <p className="text-[13.5px] leading-relaxed text-slate-700 sm:text-[14px]">
                   {text}
@@ -42,14 +42,14 @@ export default function BestIvfGhaziabadDiagnostic() {
         </Stagger>
 
         <Reveal variant="scaleIn" className="lg:col-span-5">
-          <div className="relative mx-auto aspect-[4/4.6] w-full max-w-[440px] overflow-hidden rounded-[22px] border-4 border-white shadow-[0_18px_40px_rgba(232,62,116,0.12)]">
+          <div className="relative mx-auto aspect-[4/5] w-full max-w-[420px] overflow-hidden rounded-[22px] border-4 border-white shadow-[0_18px_40px_rgba(232,62,116,0.12)]">
             <Image
-              src="/images/about-mona-dahiya/IVF-FAq.jpg"
+              src="/images/best-ivf-work-treatment.jpg"
               alt="Dr. Mona Dahiya - Diagnostic checklist"
               fill
-              sizes="(max-width: 1024px) 90vw, 440px"
+              sizes="(max-width: 1024px) 90vw, 420px"
               quality={95}
-              className="object-cover object-top"
+              className="object-cover object-[center_22%]"
             />
           </div>
         </Reveal>

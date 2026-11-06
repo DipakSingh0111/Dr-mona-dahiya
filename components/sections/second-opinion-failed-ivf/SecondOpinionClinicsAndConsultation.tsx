@@ -151,7 +151,7 @@ export default function SecondOpinionClinicsAndConsultation() {
             {/* Right Column: Request an appointment form */}
             <div id="request-appointment-form" className="w-full lg:col-span-5">
               <Reveal variant="scaleIn">
-                <div className="rounded-[24px] border border-[#fde2ec] bg-white/[0.04] p-6 shadow-[0_20px_50px_rgba(0,10,40,0.5)] backdrop-blur-md sm:p-7">
+                <div className="card-highlight rounded-[24px] border border-[#fde2ec] bg-white/[0.04] p-6 shadow-[0_20px_50px_rgba(0,10,40,0.5)] backdrop-blur-md sm:p-7">
                   <h3 className="font-serif text-[1.4rem] font-bold text-black sm:text-[1.55rem]">
                     Request an appointment
                   </h3>

@@ -19,7 +19,7 @@ const indications: { number: string; title: string; description: ReactNode }[] =
           2 or more failed transfers of good blastocysts. See{" "}
           <Link
             href="/recurrent-implantation-failure-rif"
-            className="font-medium text-blue underline underline-offset-2 hover:text-white"
+            className="font-medium text-blue underline underline-offset-2 hover:text-rose transition-colors"
           >
             Recurrent Implantation Failure
           </Link>

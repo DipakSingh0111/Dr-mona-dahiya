@@ -1,8 +1,10 @@
 "use client";
+import Breadcrumb from "@/components/ui/Breadcrumb";
 import HeroBannerImage from "@/components/ui/HeroBannerImage";
+import HeroCounterBar from "@/components/ui/HeroCounterBar";
 
 import Link from "next/link";
-import { FaHome, FaChevronRight } from "react-icons/fa";
+
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
 export default function FemaleInfertilityNoidaHero() {
@@ -21,27 +23,12 @@ export default function FemaleInfertilityNoidaHero() {
     >
       <div className="page-container relative grid grid-cols-1 items-start gap-6 sm:gap-7 lg:grid-cols-12 lg:items-start lg:gap-8 xl:gap-12">
         <div className="min-w-0 lg:col-span-7">
-          <nav aria-label="Breadcrumb" className="mb-4 sm:mb-5">
-            <ol className="inline-flex max-w-full flex-wrap items-center gap-1.5 rounded-full border border-rose/25 bg-white px-3 py-1.5 backdrop-blur-md sm:gap-2 sm:px-3.5 sm:py-2">
-              <li>
-                <Link
-                  href="/"
-                  className="inline-flex items-center gap-1.5 rounded-full px-1.5 py-0.5 text-[12px] font-medium text-ink/70 transition-colors hover:bg-white hover:text-rose sm:text-[13px]"
-                >
-                  <FaHome className="size-3 text-rose" />
-                  <span>Home</span>
-                </Link>
-              </li>
-              <li className="text-ink/40" aria-hidden="true">
-                <FaChevronRight className="size-2.5" />
-              </li>
-              <li className="truncate">
-                <span className="rounded-full bg-rose/20 px-2.5 py-0.5 text-[12px] font-semibold text-rose ring-1 ring-rose/35 sm:px-3 sm:text-[13px]">
-                  Best Female Infertility Doctor in Noida
-                </span>
-              </li>
-            </ol>
-          </nav>
+          <Breadcrumb
+          items={[
+            { label: "Conditions Treated", href: "/female-infertility-treatment" },
+            { label: "Female Infertility Doctor Noida" }
+          ]}
+        />
 
           <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">
             Female Infertility Doctor Noida
@@ -99,6 +86,17 @@ export default function FemaleInfertilityNoidaHero() {
         <HeroBannerImage
           src="/images/about-mona-dahiya/female-infertility.jpg"
           alt="Dr. Mona Dahiya — Best Female Infertility Doctor in Noida"
+        />
+      </div>
+
+      <div className="page-container relative">
+        <HeroCounterBar
+          items={[
+            { target: 25000, suffix: "+", label: "families treated" },
+            { target: 25, suffix: "+", label: "years' expertise" },
+            { target: 90, suffix: "%+", label: "IVF success rates" },
+            { target: 15000, suffix: "+", label: "IVF cycles" },
+          ]}
         />
       </div>
     </section>

@@ -54,10 +54,12 @@ export default function IVFSuccessStoriesPage() {
 
       <SectionReveal delay={0.04}>
         <AboutConsultation
+          sectionId="book-consultation"
           eyebrow="Next step"
           title="Book an IVF Consultation"
-          subtitle="Book an in-clinic consultation or an online review of your previous cycles. Call"
-          appendContacts={true}
+          subtitle="Book an in-clinic consultation or an online review of your previous cycles. Call +91 92679 82924 or email info@drmonadahiya.com."
+          appendContacts={false}
+          consultationDuration="30 minutes"
         />
       </SectionReveal>
 

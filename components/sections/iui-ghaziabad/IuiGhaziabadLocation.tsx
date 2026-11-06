@@ -1,8 +1,6 @@
 "use client";
 
-import ClinicsAppointmentCards, {
-  defaultClinics,
-} from "@/components/sections/ClinicsAppointmentCards";
+import ClinicsAppointmentCards from "@/components/sections/ClinicsAppointmentCards";
 
 export default function IuiGhaziabadLocation() {
   return (
@@ -11,7 +9,7 @@ export default function IuiGhaziabadLocation() {
       eyebrow="Meet Dr Mona"
       title="Consult Dr Mona in Ghaziabad"
       subtitle="You can meet Dr Mona at her center in Raj Nagar Extension Ghaziabad. You can also meet her via video call. She is also available in Noida and Delhi."
-      clinics={[defaultClinics[1]]}
+      primaryCity="ghaziabad"
     />
   );
 }

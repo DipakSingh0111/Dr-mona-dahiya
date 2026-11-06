@@ -35,7 +35,7 @@ export default function PgtWhatAndModalities() {
         </Reveal>
 
         <Reveal variant="fadeUp">
-          <div className="rounded-[22px] border border-[#fde2ec] bg-white p-6 shadow-[0_8px_24px_rgba(232,62,116,0.06)] sm:p-8">
+          <div className="card-highlight rounded-[22px] border border-[#fde2ec] bg-white p-6 shadow-[0_8px_24px_rgba(232,62,116,0.06)] sm:p-8">
             <p className="text-[14.5px] leading-relaxed text-ink/80 sm:text-[15.5px]">
               Preimplantation Genetic Testing or PGT allows us to combine the
               art of IVF and science of genetics. During a standard IVF cycle
@@ -72,8 +72,8 @@ export default function PgtWhatAndModalities() {
           >
             {modalities.map((item) => (
               <StaggerItem key={item.title}>
-                <div className="group flex h-full flex-col rounded-[20px] border border-[#fde2ec] bg-white p-5.5 shadow-[0_8px_24px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-rose/40 hover:shadow-[0_14px_36px_rgba(232,62,116,0.1)]">
-                  <div className="inline-flex size-10 shrink-0 items-center justify-center rounded-xl bg-rose text-white shadow-[0_4px_14px_rgba(232,62,116,0.35)]">
+                <div className="card-highlight group flex h-full flex-col rounded-[20px] border border-[#fde2ec] bg-white p-5.5 shadow-[0_8px_24px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-rose/40 hover:shadow-[0_14px_36px_rgba(232,62,116,0.1)]">
+                  <div className="card-badge inline-flex size-10 shrink-0 items-center justify-center rounded-xl bg-rose text-white shadow-[0_4px_14px_rgba(232,62,116,0.35)]">
                     <FaFlask className="size-4" />
                   </div>
                   <h3 className="mt-3.5 text-[15px] font-bold text-ink transition-colors group-hover:text-rose sm:text-[16px]">

@@ -57,7 +57,7 @@ export default function BestIvfDoctorAreas() {
           <StaggerItem key={area.title}>
             <Link
               href="#book-consultation"
-              className="group relative flex items-center justify-between rounded-xl border border-[#fde2ec] bg-white p-4 shadow-[0_8px_24px_rgba(232,62,116,0.05)] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#f8b4cb] hover:shadow-[0_14px_32px_rgba(232,62,116,0.1)]"
+              className="card-highlight group relative flex items-center justify-between rounded-xl border border-[#fde2ec] bg-white p-4 shadow-[0_8px_24px_rgba(232,62,116,0.05)] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#f8b4cb] hover:shadow-[0_14px_32px_rgba(232,62,116,0.1)]"
             >
               <div>
                 <h3 className="font-serif text-[1rem] font-semibold text-black transition-colors group-hover:text-rose sm:text-[1.08rem]">

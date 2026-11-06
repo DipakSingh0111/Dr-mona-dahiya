@@ -150,21 +150,22 @@ export default function AboutDoctorGlance() {
           <Reveal variant="slideRight" className="w-full">
             <div
               ref={cardRef}
-              className="rounded-[28px] border border-[#fde2ec] bg-gradient-to-br from-[#fff7fa] to-[#fff0f5] p-6 shadow-xl backdrop-blur-md sm:p-8"
+              className="card-highlight rounded-[28px] border-2 border-[#fbcfe0] bg-white p-6 shadow-[0_20px_50px_rgba(232,62,116,0.12)] backdrop-blur-md sm:p-8"
             >
-              <h3 className="text-[12.5px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
-                Quick Facts About Dr. Mona Dahiya
-              </h3>
+              <div className="flex items-center gap-2.5">
+                <span className="size-2 rounded-full bg-rose animate-pulse" />
+                <h3 className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
+                  Quick Facts About Dr. Mona Dahiya
+                </h3>
+              </div>
 
-              <div className="mt-6 grid grid-cols-2 gap-x-6 gap-y-7 border-t border-[#fde2ec] pt-6 sm:gap-x-8 sm:gap-y-8">
+              <div className="mt-6 grid grid-cols-2 gap-3.5 sm:gap-4.5">
                 {stats.map((s, idx) => (
                   <div
                     key={s.label}
-                    className={`pb-2 ${
-                      idx < 4 ? "border-b border-[#fde2ec] pb-5" : ""
-                    }`}
+                    className="group rounded-2xl border border-[#fde2ec] bg-[#fff5f8]/60 p-4 transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:border-rose/50 hover:shadow-[0_10px_28px_rgba(232,62,116,0.14)] sm:p-5"
                   >
-                    <p className="font-serif text-[2.1rem] leading-none font-bold tracking-tight text-ink tabular-nums sm:text-[2.5rem]">
+                    <p className="font-serif text-[2.1rem] leading-none font-bold tracking-tight text-rose tabular-nums transition-transform duration-300 group-hover:scale-105 sm:text-[2.5rem]">
                       <AnimatedStat
                         target={s.target}
                         suffix={s.suffix}
@@ -172,7 +173,7 @@ export default function AboutDoctorGlance() {
                         duration={1500 + idx * 100}
                       />
                     </p>
-                    <p className="mt-2 text-[12px] leading-snug font-medium text-slate-600 sm:text-[13px]">
+                    <p className="mt-2 text-[12px] leading-snug font-semibold text-ink sm:text-[13px]">
                       {s.label}
                     </p>
                   </div>

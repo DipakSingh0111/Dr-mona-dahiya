@@ -9,13 +9,13 @@ export default function MedicalRegistration({ dark = false }: { dark?: boolean }
       councilName: "Delhi Medical Council",
       regNumber: "DMC-7795",
       regLabel: "Registration number",
-      badgeBg: "bg-gradient-to-br from-blue to-[#0369a1]",
-      numColor: "text-blue",
-      borderColor: "border-[#bae6fd] hover:border-blue/70",
-      cardBg: "bg-gradient-to-br from-[#f0f9ff] via-[#f8fafc] to-white",
+      badgeBg: "bg-gradient-to-br from-navy to-navy-mid",
+      numColor: "text-navy",
+      borderColor: "border-navy/20 hover:border-navy/60",
+      cardBg: "bg-gradient-to-br from-[#f8fafc] via-white to-white",
       glowShadow:
-        "shadow-[0_4px_20px_rgba(2,132,199,0.08)] hover:shadow-[0_14px_36px_rgba(2,132,199,0.18)]",
-      ringColor: "ring-[#bae6fd]",
+        "shadow-[0_4px_20px_rgba(6,21,50,0.06)] hover:shadow-[0_14px_36px_rgba(6,21,50,0.14)]",
+      ringColor: "ring-navy/20",
     },
     {
       code: "MCI",
@@ -35,19 +35,19 @@ export default function MedicalRegistration({ dark = false }: { dark?: boolean }
       councilName: "Uttar Pradesh Medical Council",
       regNumber: "UPMC-110541",
       regLabel: "Registration number",
-      badgeBg: "bg-gradient-to-br from-blue to-blue-dark",
-      numColor: "text-blue",
-      borderColor: "border-[#bfdbfe] hover:border-blue/70",
-      cardBg: "bg-gradient-to-br from-[#eff6ff] via-[#f8fafc] to-white",
+      badgeBg: "bg-gradient-to-br from-navy to-navy-mid",
+      numColor: "text-navy",
+      borderColor: "border-navy/20 hover:border-navy/60",
+      cardBg: "bg-gradient-to-br from-[#f8fafc] via-white to-white",
       glowShadow:
-        "shadow-[0_4px_20px_rgba(0,71,202,0.08)] hover:shadow-[0_14px_36px_rgba(0,71,202,0.18)]",
-      ringColor: "ring-[#bfdbfe]",
+        "shadow-[0_4px_20px_rgba(6,21,50,0.06)] hover:shadow-[0_14px_36px_rgba(6,21,50,0.14)]",
+      ringColor: "ring-navy/20",
     },
   ];
 
   return (
     <section
-      className="relative overflow-hidden bg-pink py-6 sm:py-7 lg:py-8"
+      className="relative overflow-hidden bg-white py-6 sm:py-7 lg:py-8 border-y border-[#fde2ec]/70"
     >
       <div
         aria-hidden
@@ -80,7 +80,7 @@ export default function MedicalRegistration({ dark = false }: { dark?: boolean }
           {registrations.map((item) => (
             <StaggerItem key={item.code} variant="scaleIn" className="h-full">
               <article
-                className={`group relative flex h-full min-h-[120px] items-center overflow-hidden rounded-[22px] border p-5 transition-all duration-300 hover:-translate-y-1 sm:p-6 ${item.cardBg} ${item.borderColor} ${item.glowShadow}`}
+                className={`card-highlight group relative flex h-full min-h-[120px] items-center overflow-hidden rounded-[22px] border p-5 transition-all duration-300 hover:-translate-y-1 sm:p-6 ${item.cardBg} ${item.borderColor} ${item.glowShadow}`}
               >
                 <div className="relative z-10 flex w-full items-center gap-4 sm:gap-5">
                   <div

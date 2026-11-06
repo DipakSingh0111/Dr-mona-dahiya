@@ -46,7 +46,7 @@ export default function EndometriosisCaseAndCost() {
         />
 
           <Reveal variant="fadeUp" delay={0.06} className="mt-6">
-            <div className="rounded-2xl border border-[#fde2ec] bg-white p-6 sm:p-7 shadow-[0_8px_24px_rgba(232,62,116,0.06)]">
+            <div className="card-highlight rounded-2xl border border-[#fde2ec] bg-white p-6 sm:p-7 shadow-[0_8px_24px_rgba(232,62,116,0.06)]">
               <p className="text-[14px] leading-relaxed font-medium text-ink sm:text-[15.5px]">
                 A woman with painful periods, an endometrioma and a falling AMH was counselled against repeated surgery. A short, planned IVF cycle with freeze-all and a prepared frozen transfer was chosen to protect her remaining reserve.
               </p>

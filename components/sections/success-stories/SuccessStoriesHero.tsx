@@ -1,8 +1,10 @@
 "use client";
+import Breadcrumb from "@/components/ui/Breadcrumb";
 
 import Link from "next/link";
-import { FaHome, FaChevronRight } from "react-icons/fa";
+
 import HeroBannerImage from "@/components/ui/HeroBannerImage";
+import HeroCounterBar from "@/components/ui/HeroCounterBar";
 import siteData from "@/data/site.json";
 import { Reveal } from "@/components/ui/Reveal";
 
@@ -35,27 +37,12 @@ export default function SuccessStoriesHero() {
 
       <div className="page-container relative grid grid-cols-1 items-start gap-7 sm:gap-8 lg:grid-cols-12 lg:items-center lg:gap-8 xl:gap-10">
         <div className="min-w-0 lg:col-span-7">
-          <nav aria-label="Breadcrumb" className="mb-5 sm:mb-6">
-            <ol className="inline-flex max-w-full flex-wrap items-center gap-1.5 rounded-full border border-rose/25 bg-white px-3 py-1.5 shadow-sm backdrop-blur-md sm:gap-2 sm:px-3.5 sm:py-2">
-              <li>
-                <Link
-                  href="/"
-                  className="inline-flex items-center gap-1.5 rounded-full px-1.5 py-0.5 text-[12px] font-medium text-ink/70 transition-colors hover:bg-white hover:text-rose sm:text-[13px]"
-                >
-                  <FaHome className="size-3 shrink-0 text-rose sm:size-3.5" />
-                  <span>Home</span>
-                </Link>
-              </li>
-              <li aria-hidden className="text-ink/35">
-                <FaChevronRight className="size-2.5 sm:size-3" />
-              </li>
-              <li>
-                <span className="inline-flex items-center rounded-full bg-rose/20 px-2.5 py-0.5 text-[12px] font-semibold text-rose ring-1 ring-rose/35 sm:px-3 sm:text-[13px]">
-                  {data.breadcrumb}
-                </span>
-              </li>
-            </ol>
-          </nav>
+          <Breadcrumb
+          items={[
+            { label: "Success Stories", href: "/success-stories" },
+            { label: "All Success Stories" }
+          ]}
+        />
 
           <Reveal variant="slideLeft">
             <p className="text-[12.5px] font-semibold tracking-wide text-rose sm:text-[13.5px]">
@@ -110,6 +97,29 @@ export default function SuccessStoriesHero() {
           src={data.image}
           alt="Dr. Mona Dahiya — Fertility Success Stories"
           objectPosition="object-top"
+        />
+      </div>
+
+      <div className="page-container relative">
+        <HeroCounterBar
+          items={[
+            {
+              target: 25000,
+              suffix: "+",
+              label: "More than 25,000 patients treated",
+            },
+            {
+              target: 25,
+              suffix: "+",
+              label: "Years Experienced Fertility Expert",
+            },
+            {
+              target: 90,
+              suffix: "%+",
+              label: "Success Rate over 90% in IVF",
+            },
+            { target: 15000, suffix: "+", label: "IVF Cycles Completed" },
+          ]}
         />
       </div>
     </section>

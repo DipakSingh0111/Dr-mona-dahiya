@@ -45,7 +45,7 @@ export default function PgtProtocolAndWhy() {
   const whyPoints = [
     {
       title: "25 Years of Experience in Reproductive Medicine",
-      desc: "With a background of MBBS Gold Medalist from LHMC, MD from MAMC and Fellow in Reproductive Medicine from Singapore. Dr Mona Dahiya has helped over 10000+ families become parents.",
+      desc: "With a background of MBBS Gold Medalist from LHMC, MD from MAMC and Fellow in Reproductive Medicine from Singapore. Dr Mona Dahiya has helped over 25000+ families become parents.",
     },
     {
       title: "Modern Embryology Lab",
@@ -82,9 +82,9 @@ export default function PgtProtocolAndWhy() {
         >
           {steps.map((st) => (
             <StaggerItem key={st.step}>
-              <div className="group flex h-full flex-col rounded-[20px] border border-[#fde2ec] bg-white p-5.5 shadow-[0_8px_24px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-rose/40 hover:shadow-[0_14px_36px_rgba(232,62,116,0.1)]">
+              <div className="card-highlight group flex h-full flex-col rounded-[20px] border border-[#fde2ec] bg-white p-5.5 shadow-[0_8px_24px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-rose/40 hover:shadow-[0_14px_36px_rgba(232,62,116,0.1)]">
                 <div className="flex items-center gap-3">
-                  <span className="inline-flex size-8 shrink-0 items-center justify-center rounded-full bg-rose text-[13px] font-bold text-white shadow-[0_4px_12px_rgba(232,62,116,0.35)]">
+                  <span className="card-badge inline-flex size-8 shrink-0 items-center justify-center rounded-full bg-rose text-[13px] font-bold text-white shadow-[0_4px_12px_rgba(232,62,116,0.35)]">
                     {st.step}
                   </span>
                   <h3 className="text-[15px] font-bold text-ink transition-colors group-hover:text-rose sm:text-[16px]">
@@ -112,8 +112,8 @@ export default function PgtProtocolAndWhy() {
           <Stagger stagger={0.06} className="space-y-3.5 sm:space-y-4">
             {whyPoints.map((item) => (
               <StaggerItem key={item.title}>
-                <div className="group flex flex-col gap-3.5 rounded-[20px] border border-[#fde2ec] bg-white p-5.5 shadow-[0_8px_24px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-0.5 hover:border-rose/40 hover:shadow-[0_14px_36px_rgba(232,62,116,0.1)] sm:flex-row sm:items-start sm:p-6">
-                  <div className="inline-flex size-10 shrink-0 items-center justify-center rounded-xl bg-rose text-white shadow-[0_4px_14px_rgba(232,62,116,0.35)]">
+                <div className="group flex flex-row items-start gap-3.5 rounded-[20px] border border-[#fde2ec] bg-white p-5 shadow-[0_8px_24px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-0.5 hover:border-rose/40 hover:shadow-[0_14px_36px_rgba(232,62,116,0.1)] sm:gap-4 sm:p-6">
+                  <div className="signature-tick mt-0.5 inline-flex size-10 shrink-0 items-center justify-center rounded-xl text-white">
                     <FaCheck className="size-4" />
                   </div>
                   <div className="min-w-0 flex-1">

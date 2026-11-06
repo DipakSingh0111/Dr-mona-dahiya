@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import { FaCheck } from "react-icons/fa";
@@ -41,11 +41,11 @@ export default function EggFreezingWhy() {
         >
           {reasons.map((item) => (
             <StaggerItem key={item.title}>
-              <div className="flex gap-4 rounded-2xl border border-[#fde2ec] bg-white p-5 backdrop-blur-md transition-all duration-200 hover:border-rose/35 hover:bg-[#fff0f5] sm:p-6">
-                <span className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-rose text-white shadow-[0_2px_10px_rgba(232,62,116,0.35)]">
+              <div className="flex items-start gap-4 rounded-2xl border border-[#fde2ec] bg-white p-5 backdrop-blur-md transition-all duration-200 hover:border-rose/35 hover:bg-[#fff0f5] sm:p-6">
+                <span className="signature-tick mt-0.5 flex size-9 shrink-0 items-center justify-center rounded-lg text-white">
                   <FaCheck className="size-3.5" />
                 </span>
-                <div className="min-w-0">
+                <div className="min-w-0 flex-1">
                   <h3 className="text-[15px] font-bold text-ink sm:text-[16px]">
                     {item.title}
                   </h3>

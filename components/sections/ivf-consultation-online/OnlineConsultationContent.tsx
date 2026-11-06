@@ -31,7 +31,7 @@ type FaqItem = {
 };
 
 const cardClass =
-  "rounded-[22px] border border-rose/20 bg-white p-5 shadow-[0_6px_24px_rgba(232,62,116,0.08)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(232,62,116,0.14)] sm:p-6";
+  "card-highlight rounded-[22px] border border-rose/20 bg-white p-5 shadow-[0_6px_24px_rgba(232,62,116,0.08)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(232,62,116,0.14)] sm:p-6";
 
 export default function OnlineConsultationContent() {
   const { benefits, prepare, steps, why, fees, faq } =
@@ -46,9 +46,9 @@ export default function OnlineConsultationContent() {
   const faqColumns = [faqItems.slice(0, faqMid), faqItems.slice(faqMid)];
 
   return (
-    <div className="bg-pink text-ink">
-      {/* Who Benefits */}
-      <section className="py-6 sm:py-8 lg:py-10">
+    <div className="text-ink">
+      {/* 1. Who Benefits (Pink) */}
+      <section className="relative overflow-hidden bg-pink py-8 sm:py-10 lg:py-12">
         <div className="page-container relative">
           <Reveal className="mb-7 sm:mb-9">
             <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">
@@ -69,7 +69,7 @@ export default function OnlineConsultationContent() {
                   className={`${cardClass} flex h-full flex-col border-t-2 border-t-rose`}
                 >
                   <div className="flex items-center gap-3.5">
-                    <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-rose text-[14px] font-bold text-white shadow-sm">
+                    <span className="card-badge flex size-10 shrink-0 items-center justify-center rounded-xl bg-rose text-[14px] font-bold text-white shadow-sm">
                       {i + 1}
                     </span>
                     <h3 className="font-serif text-[15.5px] leading-snug font-semibold tracking-tight text-ink sm:text-[16.5px]">
@@ -107,8 +107,8 @@ export default function OnlineConsultationContent() {
         </div>
       </section>
 
-      {/* What to Prepare */}
-      <section id="what-to-prepare" className="scroll-mt-28 py-6 sm:py-8 lg:py-10">
+      {/* 2. What to Prepare (White) */}
+      <section id="what-to-prepare" className="relative overflow-hidden bg-white py-8 sm:py-10 lg:py-12 border-y border-[#fde2ec]/70 scroll-mt-28">
         <div className="page-container relative">
           <Reveal className="mb-7 sm:mb-9">
             <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">
@@ -122,11 +122,11 @@ export default function OnlineConsultationContent() {
           <div className="space-y-3.5">
             {prepareItems.map((item) => (
               <Reveal key={item.label}>
-                <div className="flex items-start gap-3.5 rounded-[18px] border border-rose/20 bg-white px-4 py-4 shadow-[0_4px_18px_rgba(232,62,116,0.06)] sm:px-5 sm:py-4.5">
-                  <span className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-rose text-white shadow-xs">
+                <div className="flex items-start gap-3.5 rounded-[18px] border border-[#fde2ec] bg-[#fff8fa] px-4 py-4 shadow-[0_4px_18px_rgba(232,62,116,0.06)] sm:px-5 sm:py-4.5">
+                  <span className="signature-tick mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full text-white shadow-xs">
                     <FaCheck className="size-2.5" />
                   </span>
-                  <p className="text-[13.5px] leading-relaxed text-ink/85 sm:text-[14.5px]">
+                  <p className="min-w-0 flex-1 text-[13.5px] leading-relaxed text-ink/85 sm:text-[14.5px]">
                     <strong className="font-semibold text-ink">
                       {item.label}
                     </strong>{" "}
@@ -139,8 +139,8 @@ export default function OnlineConsultationContent() {
         </div>
       </section>
 
-      {/* Step-by-Step Process */}
-      <section className="py-6 sm:py-8 lg:py-10">
+      {/* 3. Step-by-Step Process (Pink) */}
+      <section className="relative overflow-hidden bg-pink py-8 sm:py-10 lg:py-12">
         <div className="page-container relative">
           <Reveal className="mb-7 sm:mb-9">
             <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">
@@ -161,7 +161,7 @@ export default function OnlineConsultationContent() {
                   className={`${cardClass} flex h-full flex-col border-t-2 border-t-rose`}
                 >
                   <div className="flex items-center gap-3.5">
-                    <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-rose text-[14px] font-bold text-white shadow-sm">
+                    <span className="card-badge flex size-10 shrink-0 items-center justify-center rounded-xl bg-rose text-[14px] font-bold text-white shadow-sm">
                       {i + 1}
                     </span>
                     <h3 className="font-serif text-[15.5px] leading-snug font-semibold tracking-tight text-ink sm:text-[16.5px]">
@@ -186,8 +186,8 @@ export default function OnlineConsultationContent() {
         </div>
       </section>
 
-      {/* Why Book */}
-      <section className="py-6 sm:py-8 lg:py-10">
+      {/* 4. Why Book (White) */}
+      <section className="relative overflow-hidden bg-white py-8 sm:py-10 lg:py-12 border-y border-[#fde2ec]/70">
         <div className="page-container relative">
           <Reveal className="mb-7 sm:mb-9">
             <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">
@@ -201,11 +201,11 @@ export default function OnlineConsultationContent() {
           <div className="space-y-3.5">
             {why.items.map((item) => (
               <Reveal key={item.title}>
-                <div className="flex items-start gap-4 rounded-[20px] border border-rose/20 bg-white px-4 py-4 shadow-[0_4px_18px_rgba(232,62,116,0.06)] sm:px-6 sm:py-5">
-                  <span className="mt-0.5 flex size-10 shrink-0 items-center justify-center rounded-xl bg-rose text-white shadow-sm">
+                <div className="flex items-start gap-4 rounded-[20px] border border-[#fde2ec] bg-[#fff8fa] px-4 py-4 shadow-[0_4px_18px_rgba(232,62,116,0.06)] sm:px-6 sm:py-5">
+                  <span className="signature-tick mt-0.5 flex size-10 shrink-0 items-center justify-center rounded-xl text-white">
                     <FaCheck className="size-3.5" />
                   </span>
-                  <div className="min-w-0">
+                  <div className="min-w-0 flex-1">
                     <h3 className="text-[15.5px] font-bold text-ink sm:text-[16.5px]">
                       {item.title}
                     </h3>
@@ -220,8 +220,8 @@ export default function OnlineConsultationContent() {
         </div>
       </section>
 
-      {/* Fees */}
-      <section className="py-6 sm:py-8 lg:py-10">
+      {/* 5. Fees (Pink) */}
+      <section className="relative overflow-hidden bg-pink py-8 sm:py-10 lg:py-12">
         <div className="page-container relative">
           <Reveal className="mb-7 sm:mb-9">
             <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">
@@ -235,21 +235,50 @@ export default function OnlineConsultationContent() {
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-5">
             {fees.items.map((item, i) => {
               const Icon = i === 0 ? FaCalendarAlt : FaCheck;
+              const isInternational =
+                i === 1 || item.title.toLowerCase().includes("international");
+
               return (
                 <Reveal key={item.title} delay={i * 0.06} className="h-full">
                   <article
-                    className={`${cardClass} flex h-full flex-col border-t-2 border-t-rose`}
+                    className={`card-highlight flex h-full flex-col rounded-[22px] p-5 transition-all duration-300 hover:-translate-y-0.5 sm:p-6 ${
+                      isInternational
+                        ? "border border-white/15 text-white shadow-[0_14px_36px_rgba(6,21,50,0.32)]"
+                        : "border border-rose/20 bg-white text-ink shadow-[0_6px_24px_rgba(232,62,116,0.08)] hover:shadow-[0_12px_30px_rgba(232,62,116,0.14)]"
+                    }`}
+                    style={
+                      isInternational
+                        ? {
+                            background:
+                              "linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%)",
+                          }
+                        : undefined
+                    }
                   >
                     <div className="flex items-center gap-3.5">
-                      <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-rose text-white shadow-sm">
+                      <span
+                        className={`inline-flex size-11 shrink-0 items-center justify-center rounded-xl text-white shadow-sm ${
+                          isInternational
+                            ? "bg-rose shadow-[0_4px_14px_rgba(232,62,116,0.4)]"
+                            : "card-badge bg-rose"
+                        }`}
+                      >
                         <Icon className="size-4" aria-hidden />
                       </span>
-                      <h3 className="font-serif text-[16.5px] font-semibold text-ink sm:text-[17.5px]">
+                      <h3
+                        className={`font-serif text-[16.5px] font-semibold sm:text-[17.5px] ${
+                          isInternational ? "text-white" : "text-ink"
+                        }`}
+                      >
                         {item.title}
                       </h3>
                     </div>
 
-                    <p className="mt-3.5 text-[13.5px] leading-relaxed text-ink/80 sm:text-[14.5px]">
+                    <p
+                      className={`mt-3.5 text-[13.5px] leading-relaxed sm:text-[14.5px] ${
+                        isInternational ? "text-white/80" : "text-ink/80"
+                      }`}
+                    >
                       {item.description}
                     </p>
                   </article>
@@ -260,8 +289,8 @@ export default function OnlineConsultationContent() {
         </div>
       </section>
 
-      {/* FAQs */}
-      <section className="py-6 sm:py-8 lg:py-10">
+      {/* 6. FAQs (White) */}
+      <section className="relative overflow-hidden bg-white py-8 sm:py-10 lg:py-12 border-y border-[#fde2ec]/70">
         <div className="page-container relative">
           <Reveal>
             <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">

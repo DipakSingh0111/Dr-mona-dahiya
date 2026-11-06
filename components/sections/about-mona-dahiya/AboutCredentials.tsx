@@ -122,7 +122,7 @@ function FeatureStat({
   description: string;
 }) {
   return (
-    <article className="flex h-full flex-col justify-center rounded-[22px] border border-[#fde2ec] bg-gradient-to-br from-[#fff7fa] to-[#fff0f5] px-6 py-7 text-ink shadow-sm sm:px-7 sm:py-8">
+    <article className="card-highlight flex h-full flex-col justify-center rounded-[22px] border border-[#fde2ec] bg-gradient-to-br from-[#fff7fa] to-[#fff0f5] px-6 py-7 text-ink shadow-sm sm:px-7 sm:py-8">
       <p className="font-serif text-[2.1rem] leading-[1.1] font-bold text-rose sm:text-[2.5rem]">
         {value}
       </p>
@@ -138,7 +138,7 @@ function FeatureStat({
 
 function EducationCard({ badge, title, institution }: QualCard) {
   return (
-    <article className="flex h-full items-start gap-3.5 rounded-[20px] border border-[#fde2ec] bg-white p-4.5 shadow-[0_8px_24px_rgba(232,62,116,0.05)] transition-all duration-200 hover:border-[#f8b4cb] hover:bg-[#fff0f5] sm:gap-4 sm:p-5">
+    <article className="card-highlight flex h-full items-start gap-3.5 rounded-[20px] border border-[#fde2ec] bg-white p-4.5 shadow-[0_8px_24px_rgba(232,62,116,0.05)] transition-all duration-200 hover:border-[#f8b4cb] hover:bg-[#fff0f5] sm:gap-4 sm:p-5">
       <span className="flex size-11 shrink-0 items-center justify-center rounded-[14px] bg-gradient-to-br from-blue to-blue-dark text-[11.5px] font-bold tracking-wide text-white shadow-[0_8px_18px_rgba(0,71,202,0.35)] sm:size-12 sm:rounded-2xl sm:text-[12.5px]">
         {badge}
       </span>

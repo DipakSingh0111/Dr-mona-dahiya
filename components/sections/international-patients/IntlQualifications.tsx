@@ -36,7 +36,7 @@ export default function IntlQualifications() {
       <Stagger className="mt-7 flex flex-col gap-3.5 sm:gap-4" stagger={0.06}>
         {items.map((item) => (
           <StaggerItem key={item.title}>
-            <div className="flex gap-4 rounded-2xl border border-[#fde2ec] bg-white p-5 backdrop-blur-md transition-all duration-200 hover:border-[#fbcfe0] hover:bg-[#fff0f5] sm:p-6">
+            <div className="card-highlight flex gap-4 rounded-2xl border border-[#fde2ec] bg-white p-5 backdrop-blur-md transition-all duration-200 hover:border-[#fbcfe0] hover:bg-[#fff0f5] sm:p-6">
               <span className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-rose text-white shadow-[0_2px_10px_rgba(232,62,116,0.35)]">
                 <FaCheck className="size-3.5" />
               </span>

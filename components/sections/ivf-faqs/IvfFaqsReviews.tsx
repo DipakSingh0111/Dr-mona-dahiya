@@ -28,7 +28,7 @@ export default function IvfFaqsReviews() {
         >
           {reviews.items.map((item) => (
             <StaggerItem key={item.name} className="h-full">
-              <article className="flex h-full flex-col rounded-[22px] border border-[#fde2ec] bg-white p-5 shadow-[0_10px_28px_rgba(232,62,116,0.06)] sm:p-6">
+              <article className="card-highlight flex h-full flex-col rounded-[22px] border border-[#fde2ec] bg-white p-5 shadow-[0_10px_28px_rgba(232,62,116,0.06)] sm:p-6">
                 {"title" in item && item.title ? (
                   <h3 className="text-[15.5px] font-bold tracking-tight text-black sm:text-[16px]">
                     {item.title}

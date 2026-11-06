@@ -39,7 +39,7 @@ export default function PgtRelatedTreatments() {
             <StaggerItem key={idx}>
               <Link
                 href={item.href}
-                className="group flex items-center justify-between rounded-[18px] border border-[#fde2ec] bg-white p-4.5 shadow-[0_8px_24px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-0.5 hover:border-rose/40 hover:shadow-[0_14px_36px_rgba(232,62,116,0.1)]"
+                className="card-highlight group flex items-center justify-between rounded-[18px] border border-[#fde2ec] bg-white p-4.5 shadow-[0_8px_24px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-0.5 hover:border-rose/40 hover:shadow-[0_14px_36px_rgba(232,62,116,0.1)]"
               >
                 <div>
                   <h3 className="text-[14.5px] font-bold text-ink group-hover:text-rose transition-colors sm:text-[15px]">

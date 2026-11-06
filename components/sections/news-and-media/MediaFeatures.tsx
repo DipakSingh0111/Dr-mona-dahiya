@@ -276,7 +276,7 @@ export default function MediaFeatures() {
         >
           {mediaArticles.map((article, idx) => (
             <StaggerItem key={idx} variant="scaleIn" className="h-full">
-              <article className="group relative flex h-full flex-col justify-between overflow-hidden rounded-[20px] border border-rose/20 bg-white shadow-[0_4px_18px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-rose/45 hover:shadow-[0_12px_28px_rgba(232,62,116,0.14)]">
+              <article className="card-highlight group relative flex h-full flex-col justify-between overflow-hidden rounded-[20px] border border-rose/20 bg-white shadow-[0_4px_18px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-rose/45 hover:shadow-[0_12px_28px_rgba(232,62,116,0.14)]">
                 <div>
                   <div
                     className={`flex h-20 w-full items-center justify-center bg-gradient-to-r px-4 text-center ${bannerToneClass[article.tone]}`}

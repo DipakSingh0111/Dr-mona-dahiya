@@ -127,7 +127,7 @@ export default function EmbryoFreezingProtocolWhyAndCase() {
         />
 
           <Reveal variant="fadeUp" delay={0.06} className="mt-6">
-            <div className="rounded-2xl border border-[#fde2ec] bg-white p-6 shadow-[0_8px_24px_rgba(232,62,116,0.06)] sm:p-7">
+            <div className="card-highlight rounded-2xl border border-[#fde2ec] bg-white p-6 shadow-[0_8px_24px_rgba(232,62,116,0.06)] sm:p-7">
               <p className="text-[14px] leading-relaxed font-medium text-ink sm:text-[15.5px]">
                 A patient at risk of OHSS had all her embryos vitrified and waited a
                 cycle. The prepared frozen transfer that followed led to a healthy

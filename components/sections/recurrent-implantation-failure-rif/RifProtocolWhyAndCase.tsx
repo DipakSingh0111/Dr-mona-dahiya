@@ -139,7 +139,7 @@ export default function RifProtocolWhyAndCase() {
         />
 
           <Reveal variant="fadeUp" delay={0.06} className="mt-6">
-            <div className="rounded-2xl border border-[#fde2ec] bg-white p-6 sm:p-7 shadow-[0_8px_24px_rgba(232,62,116,0.06)]">
+            <div className="card-highlight rounded-2xl border border-[#fde2ec] bg-white p-6 sm:p-7 shadow-[0_8px_24px_rgba(232,62,116,0.06)]">
               <p className="text-[14px] leading-relaxed font-medium text-ink sm:text-[15.5px]">
                 A couple with three unsuccessful transfers had a hysteroscopy that showed a uterine septum. After correction and a prepared frozen transfer of a single blastocyst, they achieved an ongoing pregnancy.
               </p>

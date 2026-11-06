@@ -115,8 +115,8 @@ export default function PgtCostAndClinics() {
             const Icon = item.icon;
             return (
               <StaggerItem key={item.title}>
-                <div className="group flex h-full flex-col rounded-[20px] border border-[#fde2ec] bg-white p-5.5 shadow-[0_8px_24px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-rose/40 hover:shadow-[0_14px_36px_rgba(232,62,116,0.1)]">
-                  <div className="inline-flex size-10 shrink-0 items-center justify-center rounded-xl bg-rose text-white shadow-[0_4px_14px_rgba(232,62,116,0.35)]">
+                <div className="card-highlight group flex h-full flex-col rounded-[20px] border border-[#fde2ec] bg-white p-5.5 shadow-[0_8px_24px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-rose/40 hover:shadow-[0_14px_36px_rgba(232,62,116,0.1)]">
+                  <div className="card-badge inline-flex size-10 shrink-0 items-center justify-center rounded-xl bg-rose text-white shadow-[0_4px_14px_rgba(232,62,116,0.35)]">
                     <Icon className="size-4.5" />
                   </div>
                   <h3 className="mt-3.5 text-[15px] font-bold text-ink transition-colors group-hover:text-rose sm:text-[16px]">
@@ -151,7 +151,7 @@ export default function PgtCostAndClinics() {
           >
             {clinics.map((c) => (
               <StaggerItem key={c.city}>
-                <div className="flex h-full flex-col justify-between rounded-[20px] border border-[#fde2ec] bg-white p-6 shadow-[0_8px_24px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-rose/35 hover:shadow-[0_14px_36px_rgba(232,62,116,0.1)]">
+                <div className="card-highlight flex h-full flex-col justify-between rounded-[20px] border border-[#fde2ec] bg-white p-6 shadow-[0_8px_24px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-rose/35 hover:shadow-[0_14px_36px_rgba(232,62,116,0.1)]">
                   <div>
                     <span className="text-[11.5px] font-bold tracking-wider text-rose uppercase">
                       {c.sector}
