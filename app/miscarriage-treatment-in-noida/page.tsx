@@ -69,6 +69,7 @@ export default function RecurrentMiscarriagePage() {
           title="Book an In-Clinic or Online Consultation"
           subtitle="Book an in-clinic consultation with Dr. Mona Dahiya in Noida, Ghaziabad or Delhi, or an online review of your reports. Direct line: +91 92679 82924."
           appendContacts={false}
+          consultationDuration=""
         />
       </SectionReveal>
 

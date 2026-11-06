@@ -1,54 +1,53 @@
 "use client";
 
-import { FaCheck, FaPills } from "react-icons/fa";
-import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
+import { Stagger, StaggerItem } from "@/components/ui/Reveal";
 import {
   TreatmentSection,
   TreatmentSectionHeader,
-  CostFactorCard
+  CostFactorCard,
 } from "@/components/ui/treatment";
+
 const costCards = [
   {
-    icon: <FaCheck className="size-4 text-white sm:size-[18px]" />,
-    title: "Work-up",
-    description: "Hormones, scans and genetic tests.",
+    title: "Workup",
+    description:
+      "Medicines, Scans and Karyotyping/Micro Deletion.",
   },
   {
-    icon: <FaPills className="size-4 text-white sm:size-[18px]" />,
-    title: "Retrieval procedure",
-    description: "TESA, PESA or Micro-TESE, with anaesthesia.",
+    title: "Procedure to Extract Sperm",
+    description:
+      "If surgery is required we will perform TESA/PESA or Micro TESE with anesthesia.",
   },
   {
-    icon: <FaCheck className="size-4 text-white sm:size-[18px]" />,
-    title: "Laboratory sperm processing and freezing",
-    description: "Search, preparation and cryopreservation.",
+    title: "Lab Processing of sperm and freezing",
+    description: "Looking for sperms and processing them if found.",
   },
   {
-    icon: <FaCheck className="size-4 text-white sm:size-[18px]" />,
-    title: "ICSI cycle",
-    description: "Partner stimulation, ICSI and embryo transfer.",
+    title: "IVF/ICSI Procedure",
+    description:
+      "IVF Procedure on your partner along with ICSI and Embryo Transfer.",
   },
 ];
 
 export default function AzoospermiaCost() {
   return (
     <TreatmentSection>
-        <TreatmentSectionHeader
-          eyebrow="Transparency"
-          title="Cost Factors Breakdown"
-          subtitle="Cost depends on the pathway: medicines, a retrieval procedure and ICSI are billed separately. A staged estimate is given after the work-up."
-        />
+      <TreatmentSectionHeader
+        eyebrow="How much does Azoospermia treatment cost?"
+        title="Cost Factors Breakdown"
+        subtitle="There are multiple cost components when it comes to azoospermia treatment. These can be medicines and/or surgeries along with ICSI procedure. We will help you estimate your costs once we are done diagnosing you."
+      />
 
-        <Stagger
-          delay={0.05}
-          className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 sm:gap-5"
-        >
-          {costCards.map((card) => (
-            <StaggerItem key={card.title}>
-              <CostFactorCard {...card} />
-            </StaggerItem>
-          ))}
-        </Stagger>
-      </TreatmentSection>
+      <Stagger
+        delay={0.05}
+        className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 sm:gap-5"
+      >
+        {costCards.map((card) => (
+          <StaggerItem key={card.title}>
+            <CostFactorCard {...card} />
+          </StaggerItem>
+        ))}
+      </Stagger>
+    </TreatmentSection>
   );
 }

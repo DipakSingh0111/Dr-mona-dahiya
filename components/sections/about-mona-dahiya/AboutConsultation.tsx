@@ -14,6 +14,7 @@ type Props = {
   appendContacts?: boolean;
   /** Online consultation duration label shown on pricing cards. Empty hides the line. */
   consultationDuration?: string;
+  defaultClinic?: string;
   className?: string;
   sectionBg?: string;
 };
@@ -31,13 +32,14 @@ export default function AboutConsultation({
   subtitle = "Book an in-clinic consultation or an online record review. Appointment line:",
   appendContacts = true,
   consultationDuration = "30 minutes",
+  defaultClinic = "Noida",
   className = "",
   sectionBg = "bg-pink",
 }: Props) {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
-    clinic: "Noida",
+    clinic: defaultClinic,
     notes: "",
   });
   const [submitted, setSubmitted] = useState(false);

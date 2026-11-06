@@ -18,9 +18,9 @@ export function WhyPointRow({ title, desc }: WhyPointItem) {
         <h3 className="font-serif text-[1rem] font-semibold text-black sm:text-[1.05rem]">
           {title}
         </h3>
-        <p className="mt-1 text-[13px] leading-relaxed text-black sm:text-[13.5px]">
+        <div className="mt-1 text-[13px] leading-relaxed text-black sm:text-[13.5px]">
           {desc}
-        </p>
+        </div>
       </div>
     </div>
   );

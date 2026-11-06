@@ -1,73 +1,61 @@
 "use client";
 
-import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
+import { Stagger, StaggerItem } from "@/components/ui/Reveal";
 import {
   TreatmentSection,
-  TreatmentSectionHeader
+  TreatmentSectionHeader,
+  NumberedCard,
 } from "@/components/ui/treatment";
+
 const indications = [
   {
     number: "1",
-    title: "Diminished ovarian reserve",
-    description:
-      "AMH below 1.1 ng/mL with antral follicle count under 5 to 6.",
+    title: "Amh < 1.1 ng/ml",
+    description: "Antral Follicle Count of 5-6 or less.",
   },
   {
     number: "2",
-    title: "Age 35 or over",
+    title: "Female > 36 yrs of age",
     description:
-      "Natural follicle loss, needing protocols that put less stress on the eggs.",
+      "Due to natural attrition of follicles require low stress protocol for retrieval of eggs.",
   },
   {
     number: "3",
-    title: "Previous poor response",
-    description:
-      "Earlier IVF cycles giving 3 or fewer eggs despite maximum doses.",
+    title: "Low Response in IVF Cycles",
+    description: "Fewer than 3 eggs with maximum dose medications.",
   },
   {
     number: "4",
-    title: "Premature ovarian insufficiency",
-    description: "Early decline in reserve before 35.",
+    title: "Premature Ovarian Failure",
+    description: "Diminished reserve < 35 yrs of age.",
   },
   {
     number: "5",
-    title: "After ovarian surgery",
+    title: "Endometrioma / Surgery done",
     description:
-      "Reduced reserve after removal of endometriomas from both ovaries.",
+      "Loss of follicle bank due to removal of endometriomas from bilateral ovaries.",
   },
 ];
 
 export default function LowAmhIndications() {
   return (
     <TreatmentSection>
-        <TreatmentSectionHeader
-          eyebrow="Clinical breakdown"
-          title={<>Indications: Who Needs Specialised
-            <br className="hidden sm:inline" /> Low AMH Care?</>}
-        />
+      <TreatmentSectionHeader
+        eyebrow="Low Amh Causes"
+        title="Indications: Who Needs Specialised Low AMH Care?"
+        subtitle="Diminished Ovarian Reserve (DOR) is diagnosed with following signs"
+      />
 
-        <Stagger
-          delay={0.06}
-          className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-5"
-        >
-          {indications.map((item) => (
-            <StaggerItem key={item.number}>
-              <div className="relative flex h-full flex-col rounded-2xl border border-rose/40 bg-gradient-to-b from-white to-[#fff8fa] p-5 shadow-[0_8px_24px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-rose/70 hover:shadow-[0_0_32px_rgba(232,62,116,0.22)] sm:p-6">
-                <div className="flex items-center gap-3">
-                  <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-rose text-[15px] font-bold text-white shadow-[0_2px_8px_rgba(232,62,116,0.4)]">
-                    {item.number}
-                  </span>
-                  <h3 className="font-serif text-[1.05rem] font-semibold text-black sm:text-[1.15rem]">
-                    {item.title}
-                  </h3>
-                </div>
-                <p className="mt-3.5 text-[13px] leading-relaxed text-black sm:text-[14px]">
-                  {item.description}
-                </p>
-              </div>
-            </StaggerItem>
-          ))}
-        </Stagger>
-      </TreatmentSection>
+      <Stagger
+        delay={0.06}
+        className="mt-7 grid grid-cols-1 items-stretch gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
+      >
+        {indications.map((item) => (
+          <StaggerItem key={item.number} className="h-full">
+            <NumberedCard {...item} />
+          </StaggerItem>
+        ))}
+      </Stagger>
+    </TreatmentSection>
   );
 }

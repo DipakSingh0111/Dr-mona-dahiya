@@ -1,152 +1,124 @@
 "use client";
 
-import Link from "next/link";
-import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
+import { FaFlask, FaPills, FaCalendarAlt } from "react-icons/fa";
+
+import { Stagger, StaggerItem } from "@/components/ui/Reveal";
 import {
   TreatmentSection,
   TreatmentSectionHeader,
   FaqAccordion,
   type FaqItem,
-  CostFactorCard
+  CostFactorCard,
 } from "@/components/ui/treatment";
+
 const costCards = [
   {
-    title: "Ovarian stimulation medicines",
+    title: "Medications",
+    icon: <FaPills className="size-3.5" />,
     description:
-      "Dose and duration vary with age, AMH and response — the largest variable in most cycles.",
+      "Will depend on the amount of drugs you require to stimulate your ovaries. Can cost anywhere between 45,000-75,000 rupees. Based on Age, BMI and Ovarian Reserve.",
   },
   {
-    title: "Laboratory and cleanroom fees",
+    title: "Lab Cost",
+    icon: <FaFlask className="size-3.5" />,
     description:
-      "Egg retrieval, fertilisation, culture and embryologist time in a controlled lab environment.",
+      "This includes Anaesthesia, Incubator charges and Micro tools used during Egg Retrieval and Embryo Culture.",
   },
   {
-    title: "Advanced laboratory technologies",
+    title: "Other Lab Procedures",
+    icon: <FaFlask className="size-3.5 rotate-12" />,
     description:
-      "ICSI, assisted hatching or genetic testing when indicated — priced only if used.",
+      "Can include Micro fluidic sperm processing or Laser Assisted Hatching and/or PGT-A if needed.",
   },
   {
-    title: "Vitrification and storage",
+    title: "Embryo Freezing",
+    icon: <FaCalendarAlt className="size-3.5" />,
     description:
-      "Freezing surplus embryos and annual storage, if you bank embryos for later transfer.",
+      "If you wish to store extra Embryos they will be frozen in Liquid Nitrogen.",
   },
 ];
 
 const leftFaqs: FaqItem[] = [
   {
-    question: "What is the success rate of IVF?",
+    question: "What is the true success rate of IVF with Dr. Mona Dahiya?",
     answer:
-      "Success depends on age, ovarian reserve, embryo quality and uterine factors. Younger patients with good reserve generally see higher live-birth rates per transfer. Dr. Mona shares realistic numbers for your profile at consultation — not a one-size clinic average.",
+      "Our success rates are more than 90%. If you are under 35 years of age you have a 65-75% chance of getting pregnant with a single blastocyst transfer. For those who are above 38 or have had unsuccessful IVF in the past. You have a greater than 50% chance of success with Blastocyst Culture and PGT-A with proper Lining preparation.",
   },
   {
-    question: "Is IVF painful?",
+    question: "How painful is the IVF procedure?",
     answer:
-      "Daily injections cause mild discomfort for most people. Egg retrieval is done under sedation, so you should not feel pain during the procedure. Mild cramping afterward is common and settles quickly.",
+      "No there is no pain involved. You will have to take injections to grow your follicles. When we are picking up your eggs we will sedate you through IV line so there is no pain. The procedure to put the Embryo back is just like a normal scan no pain or sedation is required.",
   },
   {
-    question: "How long does one IVF cycle take?",
+    question: "How long does a complete IVF cycle take?",
     answer:
-      "A typical fresh cycle spans about 4–6 weeks from baseline scan to pregnancy test. Freeze-all or deferred transfer cycles may add time for lining preparation.",
+      "It takes about 12-14 days to stimulate your ovaries from Day 2 of your cycle to Egg pick up. Then another 2-3 weeks if you are doing Frozen Embryo Transfer to prepare your lining. After 14 days you will get your pregnancy test. So it takes about 4-6 weeks.",
   },
   {
-    question: "What is included in the IVF cost breakdown?",
+    question: "What is the cost of one IVF cycle?",
     answer:
-      "Estimates usually cover stimulation monitoring, retrieval, lab fertilisation/culture and one transfer. Medicines, ICSI, freezing, PGT and anaesthesia are itemised separately so you know what you are paying for.",
+      "Anywhere between 1.5-2.5 lakhs. It all depends on what medicines you need, if you need any additional Lab work such as ICSI, Freezing your Embryos and PGT etc. After your first consultation we will give you a quote.",
   },
   {
-    question: "Where are the clinics located?",
+    question: "Where are Dr. Mona Dahiya's clinics?",
     answer:
-      "Dr. Mona Dahiya consults in Lajpat Nagar (Delhi), Sector 49 (Noida) and Raj Nagar Extension (Ghaziabad). You can book in-clinic or online follow-ups.",
+      "We are located at Sector 49 Noida (3rd Floor K-06 Above First Cry Baraula Sector 49 Noida UP 201301), Raj Nagar Extension Ghaziabad (2nd Floor RDC-C-53A Near Bikanerwala Sector 15 Sector 10 Raj Nagar Ghaziabad UP 201002) and Lajpat Nagar Delhi (Building No. 41 First Floor Ring Road Block Q Lajpat Nagar IV Lajpat Nagar New Delhi 110024).",
   },
 ];
 
 const rightFaqs: FaqItem[] = [
   {
-    question: "IUI vs IVF — which should I choose?",
-    answer: (
-      <>
-        IUI is simpler and suited to selected mild cases. IVF is preferred for tubal
-        factor, significant male factor, low reserve, endometriosis, or after failed
-        IUI. Your age and reports decide the safer first step.
-      </>
-    ),
-  },
-  {
-    question: "When is embryo transfer done?",
+    question: "When should I move from IUI to IVF?",
     answer:
-      "Blastocyst transfer is usually on day 5 after retrieval for fresh cycles. Frozen transfers are scheduled when the lining is ready, often in a later cycle.",
+      "You need IVF if you have tried 3-4 IUIs and didn't get pregnant. Or if you have blocked tubes, Low sperm counts, Low Ovarian reserve or Endometriosis. Also if you are older than 38 years.",
   },
   {
-    question: "IVF vs ICSI — what is the difference?",
-    answer: (
-      <>
-        In IVF, sperm and egg are combined in a dish. In{" "}
-        <Link
-          href="/treatments"
-          className="font-medium text-blue underline underline-offset-2 hover:text-rose transition-colors"
-        >
-          ICSI Treatment
-        </Link>
-        , a single sperm is injected into each mature egg — useful for male factor or
-        prior fertilisation failure.
-      </>
-    ),
+    question: "How many embryos are transferred?",
+    answer:
+      "We only transfer 1 Embryo sometimes 2. We like to do Single Embryo transfer to prevent you from having multiples. Any extra Embryos can be frozen.",
   },
   {
-    question: "Can IVF help with PCOS or low AMH?",
-    answer: (
-      <>
-        Yes. PCOS needs careful stimulation to avoid OHSS; low AMH needs tailored dosing
-        and realistic counselling. See also{" "}
-        <Link
-          href="/best-pcos-pcod-treatment-centre-in-noida"
-          className="font-medium text-blue underline underline-offset-2 hover:text-rose transition-colors"
-        >
-          PCOS treatment
-        </Link>{" "}
-        and{" "}
-        <Link
-          href="/best-low-amh-treatment-in-noida"
-          className="font-medium text-blue underline underline-offset-2 hover:text-rose transition-colors"
-        >
-          Low AMH care
-        </Link>
-        .
-      </>
-    ),
+    question: "What is the difference between IVF and ICSI?",
+    answer:
+      "In IVF we add many Sperms around each egg to increase chances of fertilization. In ICSI we take one Sperm and inject it directly into the egg. We recommend ICSI if you have a bad Male factor or High Sperm DNA Fragmentation or have failed fertilization in past.",
+  },
+  {
+    question: "Can I have IVF if I have PCOS or low AMH?",
+    answer:
+      "Yes we have protocols to prevent this. If you have PCOS we do IVF with lower risk of OHSS. By doing Antagonist protocol and freezing all your embryos. If you have low AMH ( < 1.1ng/ml) we can do Micro Dose Flare Protocol or DuoStim to get more eggs.",
   },
 ];
 
 export default function IvfCostAndFaq() {
-return (
+  return (
     <TreatmentSection>
-        <div className="mb-14 sm:mb-16 lg:mb-20">
-          <TreatmentSectionHeader
-          eyebrow="Transparency"
-          title="What Affects the Cost of IVF"
-          subtitle="Most cycles in Delhi NCR fall between roughly ₹1.5 lakh and ₹2.5 lakh, depending on medicines and lab add-ons. A written estimate is shared before you start."
+      <div className="mb-14 sm:mb-16 lg:mb-20">
+        <TreatmentSectionHeader
+          eyebrow="Cost"
+          title="What determines your cost of IVF Treatment?"
+          subtitle="Depending on your case your IVF Treatment with Dr. Mona Dahiya can cost anywhere between 1.5-2.5 lakhs. There are 4 main things that will determine your cost. You will be quoted an approximate amount after your first visit."
         />
 
-          <Stagger
-            delay={0.05}
-            className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4"
-          >
-            {costCards.map((card) => (
-              <StaggerItem key={card.title}>
+        <Stagger
+          delay={0.05}
+          className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4"
+        >
+          {costCards.map((card) => (
+            <StaggerItem key={card.title}>
               <CostFactorCard {...card} />
             </StaggerItem>
-            ))}
-          </Stagger>
-        </div>
+          ))}
+        </Stagger>
+      </div>
 
-        <div>
-          <TreatmentSectionHeader
+      <div>
+        <TreatmentSectionHeader
           eyebrow="Patient questions"
           title="Top FAQs About IVF Treatment in Delhi NCR"
         />
 
-          <FaqAccordion leftItems={leftFaqs} rightItems={rightFaqs} />
-        </div>
-      </TreatmentSection>
+        <FaqAccordion leftItems={leftFaqs} rightItems={rightFaqs} />
+      </div>
+    </TreatmentSection>
   );
 }

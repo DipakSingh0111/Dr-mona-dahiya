@@ -1,66 +1,42 @@
 "use client";
 
-import { FaCheck } from "react-icons/fa";
-import { Stagger, StaggerItem } from "@/components/ui/Reveal";
+import { Reveal } from "@/components/ui/Reveal";
 import {
   TreatmentSection,
   TreatmentSectionHeader,
+  WhyPointRow,
 } from "@/components/ui/treatment";
 
-const reasons = [
+const whyPoints = [
   {
-    title: "Own-Egg First Philosophy & Embryo Banking",
-    description:
-      "Care focuses on biological options first. Tailored mild stimulation and banking across cycles preserve up to 90%+ cumulative pregnancy potential before donor eggs are considered.",
+    title: "Philosophy Of Using Your Own Eggs And Embryo Banking",
+    desc: "We Always Encourage The Use Of Your Own Eggs. For Low Amh Patients We Can Achieve Pregnancy Potential of > 90% By Your Own Eggs By Giving Mild Protocol and Doing Embryo Banking.",
   },
   {
-    title: "DuoStim & Growth Hormone (hGH) Priming",
-    description:
-      "Double stimulation in one cycle (follicular and luteal) can yield 30% to 40% more mature oocytes. Growth hormone priming supports follicle response when reserve is low.",
+    title: "Usage Of Duostim and hgh",
+    desc: "We Use Both Follicular And Luteal Phase For Duostim Which Gives Us Higher Number Of Matured Oocytes By Around 30% To 40% Than Conventional Methods. We Also Use Additional Adjuvant hgh Which Gives Better Oocyte Yield From Dormant Follicle Waves.",
   },
   {
-    title: "Advanced Benchtop Tri-Gas Incubation for Fragile Oocytes",
-    description:
-      "Mini incubators with a tri-gas mix (5% O₂) give every retrieved egg the best culture environment, boosting Day 5 blastocyst conversion by about 10% to 15%.",
+    title: "Mini Incubator With Tri Gas Mix",
+    desc: "Low Amh patients have fragile oocytes. We take good care of them by incubating them on Benchtop incubator using 5% Oxygen (tri gas mix). This improves blastocyst yield by 10% to 15 % more from your limited eggs.",
   },
 ];
 
 export default function LowAmhWhyConsult() {
   return (
     <TreatmentSection>
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -top-16 right-[10%] h-[240px] w-[240px] rounded-full opacity-40 blur-3xl"
-        style={{
-          background:
-            "radial-gradient(circle, rgba(232,62,116,0.22) 0%, transparent 70%)",
-        }}
-      />
-
       <TreatmentSectionHeader
-        eyebrow="Expertise & authority"
+        eyebrow="What Dr Mona does Different From Others ?"
         title="Why Consult Dr. Mona Dahiya for Low AMH?"
       />
 
-      <Stagger className="mt-7 flex flex-col gap-4" stagger={0.08}>
-        {reasons.map((item) => (
-          <StaggerItem key={item.title}>
-            <div className="group flex flex-row items-start gap-3.5 rounded-2xl border border-rose/25 bg-white/80 p-5 transition-all duration-300 hover:border-rose/45 sm:gap-4 sm:p-6">
-              <div className="signature-tick mt-0.5 flex size-10 shrink-0 items-center justify-center rounded-xl text-white">
-                <FaCheck className="size-4" />
-              </div>
-              <div className="min-w-0 flex-1">
-                <h3 className="text-[15.5px] font-bold text-black transition-colors group-hover:text-rose sm:text-[16.5px]">
-                  {item.title}
-                </h3>
-                <p className="mt-1.5 text-[13.5px] leading-relaxed text-black sm:text-[14px]">
-                  {item.description}
-                </p>
-              </div>
-            </div>
-          </StaggerItem>
+      <div className="mt-6 flex flex-col gap-3.5 sm:mt-7 sm:gap-4">
+        {whyPoints.map((point, idx) => (
+          <Reveal key={point.title} variant="fadeUp" delay={idx * 0.05}>
+            <WhyPointRow {...point} />
+          </Reveal>
         ))}
-      </Stagger>
+      </div>
     </TreatmentSection>
   );
 }

@@ -119,7 +119,7 @@ export default function RecurrentMiscarriageIndicationsAndChecklist() {
         <TreatmentSectionHeader
           eyebrow="Evaluation"
           title="Tests we perform : 5 Pillar Investigation for Recurrent Miscarriage"
-          subtitle="We investigate under 5 heads to rule out all correctable causes of miscarriage."
+          subtitle="We Investigate under 5 heads to rule out all correctable causes of miscarriage."
         />
 
         <div className="mt-6 flex flex-col gap-3.5 sm:mt-7 sm:gap-4">

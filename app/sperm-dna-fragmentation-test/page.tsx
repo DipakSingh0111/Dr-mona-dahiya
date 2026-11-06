@@ -5,7 +5,6 @@ import MedicalRegistration from "@/components/sections/MedicalRegistration";
 import DfiIndicationsAndChecklist from "@/components/sections/sperm-dna-fragmentation-test/DfiIndicationsAndChecklist";
 import DfiProtocolAndWhy from "@/components/sections/sperm-dna-fragmentation-test/DfiProtocolAndWhy";
 import DfiCaseAndCost from "@/components/sections/sperm-dna-fragmentation-test/DfiCaseAndCost";
-import IvfSuccessClinics from "@/components/sections/ivf-stories/IvfSuccessClinics";
 import DfiFaq from "@/components/sections/sperm-dna-fragmentation-test/DfiFaq";
 import DfiRelatedTreatments from "@/components/sections/sperm-dna-fragmentation-test/DfiRelatedTreatments";
 import AboutConsultation from "@/components/sections/about-mona-dahiya/AboutConsultation";
@@ -17,51 +16,38 @@ export const metadata: Metadata = {
   title:
     "Sperm DNA Fragmentation Index (DFI) Testing in Delhi, Noida & Ghaziabad | Dr. Mona Dahiya",
   description:
-    "Sperm DNA fragmentation testing (DFI), interpretation of Halosperm assay results, varicocele treatment, antioxidant therapy, and ICSI by Dr. Mona Dahiya.",
+    "Sperm DNA Fragmentation Index (DFI) testing in Delhi NCR: indications, diagnostic checklist, treatment protocol, and consultation with Dr. Mona Dahiya.",
 };
 
 export default function SpermDfiPage() {
   return (
     <main className="flex min-h-screen flex-col bg-pink">
-      {/* 1. DFI Hero */}
       <DfiHero />
 
-      {/* 2. Medical Registration Councils */}
       <SectionReveal>
         <MedicalRegistration />
       </SectionReveal>
 
-      {/* 3. Indications & Diagnostic Checklist */}
       <SectionReveal delay={0.04}>
         <DfiIndicationsAndChecklist />
       </SectionReveal>
 
-      {/* 4. Step-by-Step Protocol & Why Consult Dr. Mona */}
       <SectionReveal delay={0.04}>
         <DfiProtocolAndWhy />
       </SectionReveal>
 
-      {/* 5. Clinical Case Insight & Cost Factors Breakdown */}
       <SectionReveal delay={0.04}>
         <DfiCaseAndCost />
       </SectionReveal>
 
-      {/* 6. Book a Consultation at Our Clinics */}
-      <SectionReveal delay={0.04}>
-        <IvfSuccessClinics />
-      </SectionReveal>
-
-      {/* 7. Frequently Asked Questions about Sperm DNA Fragmentation */}
       <SectionReveal delay={0.04}>
         <DfiFaq />
       </SectionReveal>
 
-      {/* 8. Related Treatments */}
       <SectionReveal delay={0.04}>
         <DfiRelatedTreatments />
       </SectionReveal>
 
-      {/* 9. Book an In-Clinic or Online Consultation Form */}
       <SectionReveal delay={0.04}>
         <AboutConsultation
           sectionId="book-consultation"
@@ -72,11 +58,9 @@ export default function SpermDfiPage() {
         />
       </SectionReveal>
 
-      {/* 10. Take your first step towards parenthood CTA */}
       <SectionReveal delay={0.04}>
         <AboutParenthoodCta />
       </SectionReveal>
     </main>
   );
 }
-

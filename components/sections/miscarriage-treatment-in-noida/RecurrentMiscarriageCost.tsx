@@ -14,14 +14,14 @@ const costCards = [
     icon: <FaFlask className="size-3.5" />,
     title: "Workup for Recurrent Miscarriage",
     description:
-      "Antiphospholipid Panel, Karyotype of both partners and 3D Ultrasound. Cost : 18000 – 35000 INR",
+      "Antiphospholipid Panel, Karyotype of both partners and 3D Ultrasound. Cost: 18000 – 35000 INR",
   },
   {
     icon: <FaCheck className="size-3.5" />,
     title: "Hysteroscopic Procedure",
     description: (
       <>
-        In case a uterine septum needs correction. Cost : 35000 – 60000 INR. Read
+        In case a uterine septum needs correction. Cost: 35000 – 60000 INR. Read
         More On{" "}
         <Link
           href="/best-laparoscopic-surgeon-in-noida"
@@ -52,7 +52,7 @@ export default function RecurrentMiscarriageCost() {
     <TreatmentSection>
       <TreatmentSectionHeader
         eyebrow="Costs"
-        title="How Much Does Treatment For Miscarriages Cost ?"
+        title="How Much Does Treatment For Miscarriages Cost?"
         subtitle="Workup typically costs between 18000 – 35000 INR. Subsequent treatment will vary depending on results."
       />
 

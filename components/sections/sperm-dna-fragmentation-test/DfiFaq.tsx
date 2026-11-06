@@ -10,26 +10,43 @@ import {
 const leftFaqs: FaqItem[] = [
   {
     question: "What is a good DFI value?",
-    answer:
-      "Below 15% is generally considered good. Between 15% and 25% is borderline, and above 25 to 30% is high.",
+    answer: (
+      <p>
+        DFI should be less than 15%. From 15%-25% it is moderate and above
+        25%-30% it is high.
+      </p>
+    ),
   },
   {
-    question: "Can DFI be improved?",
-    answer:
-      "Often yes. Treating infection or varicocele, stopping smoking, avoiding heat and a course of antioxidants may help, and the test is repeated after about three months.",
+    question: "Does a high DFI mean I cannot have a baby?",
+    answer: (
+      <p>
+        There are chances that you won&apos;t conceive easily. Also you may face
+        miscarriages. But you can still go ahead with your treatment.
+      </p>
+    ),
   },
 ];
 
 const rightFaqs: FaqItem[] = [
   {
-    question: "Does a high DFI mean I cannot have a baby?",
-    answer:
-      "No. It lowers the chance of natural conception and can raise miscarriage risk, but there are effective treatment routes.",
+    question: "Can DFI be improved?",
+    answer: (
+      <p>
+        We can cure infections or varicocele if you have one. Try reducing bad
+        habits and taking antioxidants. Avoid exposure to heat. Get your self
+        retested after 3 months.
+      </p>
+    ),
   },
   {
     question: "How do I prepare for the test?",
-    answer:
-      "Abstain for the period your doctor advises, usually 2 to 5 days, and tell us about any recent fever or medicines.",
+    answer: (
+      <p>
+        Keep in mind that you should be on abstinence and inform if you had
+        fever or any medication.
+      </p>
+    ),
   },
 ];
 
@@ -37,13 +54,8 @@ export default function DfiFaq() {
   return (
     <TreatmentSection>
       <TreatmentSectionHeader
-        eyebrow="Patient questions"
-        title={
-          <>
-            Frequently Asked Questions
-            <br className="hidden sm:inline" /> about Sperm DNA Fragmentation
-          </>
-        }
+        eyebrow="FAQs"
+        title="Frequently Asked Questions about Sperm DNA Fragmentation"
       />
       <FaqAccordion leftItems={leftFaqs} rightItems={rightFaqs} />
     </TreatmentSection>

@@ -1,80 +1,96 @@
 "use client";
 
+import type { ReactNode } from "react";
+import { FaCapsules } from "react-icons/fa";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 import {
   TreatmentSection,
   TreatmentSectionHeader,
-  CostFactorCard
+  CostFactorCard,
 } from "@/components/ui/treatment";
-interface CostCard {
-  iconType: "check" | "pills";
-  title: string;
-  description: string;
-}
 
-const costCards: CostCard[] = [
+const costCards: { title: string; description: string; icon?: ReactNode }[] = [
   {
-    iconType: "check",
-    title: "Investigations",
-    description: "Scans, MRI where needed and hormone tests.",
+    title: "Workup",
+    description:
+      "Tests that we may need to do to diagnose you. Ultrasound, scans, blood work etc",
   },
   {
-    iconType: "pills",
-    title: "Medical therapy",
-    description: "Hormonal medicines and pain management.",
+    title: "Medications",
+    description: "If you require medications to manage your pain and periods.",
+    icon: <FaCapsules className="size-3.5" />,
   },
   {
-    iconType: "check",
-    title: "Surgery",
-    description: "Laparoscopy or hysteroscopy, when advised.",
+    title: "Procedure",
+    description:
+      "If we need to do any surgery on you. Laparoscopy/Hysteroscopy etc.",
   },
   {
-    iconType: "check",
-    title: "Assisted reproduction",
-    description: "IUI or IVF with embryo freezing and frozen transfer.",
+    title: "Infertility Procedures",
+    description:
+      "IUI/IVF may be required. In case of IVF there will be additional charges for Embryo freezing and Frozen Embryo transfer.",
   },
 ];
 
-export default function EndometriosisCaseAndCost() {
+export function EndometriosisCase() {
   return (
     <TreatmentSection>
-        {/* ================= SECTION 1: Clinical Case Insight ================= */}
-        <div className="mb-14 sm:mb-16 lg:mb-20">
-          <TreatmentSectionHeader
-          eyebrow="From the clinic"
-          title="Clinical Case Insight"
-        />
+      <TreatmentSectionHeader
+        eyebrow="Case Studies"
+        title="Clinical Case Insight"
+      />
 
-          <Reveal variant="fadeUp" delay={0.06} className="mt-6">
-            <div className="card-highlight rounded-2xl border border-[#fde2ec] bg-white p-6 sm:p-7 shadow-[0_8px_24px_rgba(232,62,116,0.06)]">
-              <p className="text-[14px] leading-relaxed font-medium text-ink sm:text-[15.5px]">
-                A woman with painful periods, an endometrioma and a falling AMH was counselled against repeated surgery. A short, planned IVF cycle with freeze-all and a prepared frozen transfer was chosen to protect her remaining reserve.
-              </p>
-              <p className="mt-3 text-[12px] text-ink/65">
-                Details changed to protect patient privacy. Individual results vary.
-              </p>
-            </div>
-          </Reveal>
+      <Reveal variant="fadeUp" delay={0.06} className="mt-6">
+        <div className="card-highlight rounded-2xl border border-[#fde2ec] bg-white p-6 shadow-[0_8px_24px_rgba(232,62,116,0.06)] sm:p-7">
+          <p className="font-serif text-[14.5px] leading-relaxed font-semibold text-ink sm:text-[16px]">
+            She came to us with pain during periods. We diagnosed that she had
+            low AMH and Endometriomas. She was told not to undergo surgery due
+            to low reserve. We planned her for IVF and froze all embryos and did
+            a prepared FET.
+          </p>
+          <p className="mt-3 text-[12px] text-ink/65">
+            *Details have been changed to maintain anonymity of our patient.
+            Results vary from patient to patient.
+          </p>
         </div>
-
-        {/* ================= SECTION 2: Cost Factors Breakdown ================= */}
-        <div>
-          <TreatmentSectionHeader
-          eyebrow="Transparency"
-          title="Cost Factors Breakdown"
-          subtitle="Cost varies with whether medicines, surgery or IVF is needed. A phased estimate is shared after investigations."
-        />
-
-          {/* 4 Cards Grid */}
-          <Stagger delay={0.05} className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 sm:gap-5">
-            {costCards.map((card, idx) => (
-              <StaggerItem key={idx}>
-              <CostFactorCard {...card} />
-            </StaggerItem>
-            ))}
-          </Stagger>
-        </div>
-      </TreatmentSection>
+      </Reveal>
+    </TreatmentSection>
   );
 }
 
+export function EndometriosisCost() {
+  return (
+    <TreatmentSection>
+      <TreatmentSectionHeader
+        eyebrow="How much will it cost me?"
+        title={
+          <>
+            Cost Factors Affecting
+            <br className="hidden sm:inline" /> Endometriosis Treatment
+          </>
+        }
+        subtitle="It will depend on whether you need medications/procedures or IVF. Some costs you can expect are mentioned below."
+      />
+
+      <Stagger
+        delay={0.05}
+        className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4"
+      >
+        {costCards.map((card) => (
+          <StaggerItem key={card.title}>
+            <CostFactorCard {...card} />
+          </StaggerItem>
+        ))}
+      </Stagger>
+    </TreatmentSection>
+  );
+}
+
+export default function EndometriosisCaseAndCost() {
+  return (
+    <>
+      <EndometriosisCase />
+      <EndometriosisCost />
+    </>
+  );
+}

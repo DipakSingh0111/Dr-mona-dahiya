@@ -1,9 +1,11 @@
 "use client";
 
+import type { ReactNode } from "react";
+
 export type ProtocolCardItem = {
   number: string;
   title: string;
-  bullets: string[];
+  bullets: ReactNode[];
 };
 
 export function ProtocolCard({ number, title, bullets }: ProtocolCardItem) {
@@ -18,15 +20,15 @@ export function ProtocolCard({ number, title, bullets }: ProtocolCardItem) {
         </h3>
       </div>
       <div className="mt-4 flex flex-col gap-2.5 pl-2 sm:pl-3">
-        {bullets.map((bullet) => (
+        {bullets.map((bullet, idx) => (
           <div
-            key={bullet}
+            key={idx}
             className="flex items-start gap-2.5 text-[13px] leading-relaxed text-black sm:text-[13.5px]"
           >
             <span className="pt-0.5 text-[14px] leading-none text-rose select-none">
               ↳
             </span>
-            <p className="flex-1">{bullet}</p>
+            <div className="flex-1">{bullet}</div>
           </div>
         ))}
       </div>

@@ -10,139 +10,101 @@ import {
 const leftFaqs: FaqItem[] = [
   {
     question: "What are the normal ranges for sperm count and motility?",
-    answer: (
-      <p>
-        According to WHO guidelines, normal semen parameters require a sperm concentration of at least 15 million sperm/mL (or 39 million per ejaculate), at least 40% total motility, and a minimum of 32% progressive motility (sperm moving forward in straight lines or large circles).
-      </p>
-    ),
+    answer:
+      "As per World Health Organisation Values: Your semen sample must contain at least 15 million sperm/ml or 39 million sperm per ejaculation. The total motility should be greater than 40 percent and progressive motility of sperm (straight or big circle movement) should be at least 32 percent.",
   },
   {
-    question: "What is the difference between oligospermia and asthenozoospermia?",
-    answer: (
-      <p>
-        Oligospermia refers specifically to a low sperm concentration (fewer than 15 million/mL). Asthenozoospermia indicates poor sperm motility (fewer than 32% progressively moving). When low count, sluggish motility, and abnormal morphology occur simultaneously, the condition is diagnosed as Oligoasthenoteratozoospermia (OAT).
-      </p>
-    ),
+    question:
+      "What is the difference between oligospermia and asthenozoospermia?",
+    answer:
+      "If only your sperm concentration is low i.e less than 15 million it's called as Oligospermia. When motility is lower than 32 percent progressive we call it as Asthenozoospermia. If you have all the above 3 values low then it's called as Oligoasthenoteratozoospermia (OAT)",
   },
   {
-    question: "Can I get my partner pregnant naturally with low count and motility?",
-    answer: (
-      <p>
-        Yes, spontaneous conception is possible because only one viable sperm fertilizes an egg. However, natural monthly odds decline sharply when total motile sperm counts fall below 10 million. If unassisted pregnancy does not occur within 6 to 12 months, assisted reproductive treatments are recommended.
-      </p>
-    ),
+    question:
+      "Can I get my partner pregnant naturally with low count and motility?",
+    answer:
+      "Yes it is possible. Only one good Sperm can fertilise the egg. But chances go down if your total motile count is less than 10 million. If you don't get pregnant within 6-12 months then you can start on ART procedures.",
   },
   {
     question: "Can low sperm count and motility be improved naturally?",
     answer: (
-      <div className="space-y-2.5">
+      <div className="space-y-3">
         <p>
-          Yes. Adopting targeted lifestyle corrections can raise parameters within 72 to 90 days (one full spermatogenesis cycle):
+          Yes. By correcting some things in your life style you can increase
+          your count and motility in 72-90 days (One sperm cycle):
         </p>
-        <ul className="space-y-1.5 pl-1">
-          <li className="flex items-start gap-2">
-            <span className="text-rose select-none text-[13px] pt-0.5">•</span>
-            <p>Take daily antioxidants (CoQ10, L-Carnitine, Zinc, Vitamin E).</p>
+        <ul className="list-disc space-y-2 pl-5">
+          <li>
+            Take Anti-oxidants - CoQ10, L-carnitine, Zinc and Vitamin E.
           </li>
-          <li className="flex items-start gap-2">
-            <span className="text-rose select-none text-[13px] pt-0.5">•</span>
-            <p>Avoid excessive scrotal heat (saunas, hot tubs, tight underwear, laptops on laps).</p>
+          <li>
+            Avoid heat from groin (Hot water bath, saunas, too tight clothes,
+            keeping laptop on lap)
           </li>
-          <li className="flex items-start gap-2">
-            <span className="text-rose select-none text-[13px] pt-0.5">•</span>
-            <p>Eliminate smoking and limit alcohol.</p>
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="text-rose select-none text-[13px] pt-0.5">•</span>
-            <p>Maintain a healthy BMI.</p>
-          </li>
+          <li>Avoid smoking and drinking</li>
+          <li>Reduce your weight to healthy BMI.</li>
         </ul>
       </div>
     ),
   },
   {
-    question: "What are the leading medical causes of low sperm count and motility?",
+    question:
+      "What are the leading medical causes of low sperm count and motility?",
     answer: (
-      <div className="space-y-2.5">
-        <p>Key etiologies include:</p>
-        <ul className="space-y-1.5 pl-1">
-          <li className="flex items-start gap-2">
-            <span className="text-rose select-none text-[13px] pt-0.5">•</span>
-            <p><strong className="text-white font-semibold">Varicocele:</strong> Enlarged scrotal veins causing testicular overheating and hypoxia.</p>
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="text-rose select-none text-[13px] pt-0.5">•</span>
-            <p><strong className="text-white font-semibold">Genital Infections:</strong> Epididymitis or prostatitis triggering oxidative stress.</p>
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="text-rose select-none text-[13px] pt-0.5">•</span>
-            <p><strong className="text-white font-semibold">Hormonal Imbalances:</strong> Low testosterone, elevated prolactin, or thyroid dysfunction.</p>
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="text-rose select-none text-[13px] pt-0.5">•</span>
-            <p><strong className="text-white font-semibold">Genetic Factors:</strong> Y-chromosome microdeletions or Klinefelter syndrome.</p>
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="text-rose select-none text-[13px] pt-0.5">•</span>
-            <p><strong className="text-white font-semibold">Environmental Toxins:</strong> Exposure to heavy metals, pesticides, or radiation.</p>
-          </li>
-        </ul>
-      </div>
+      <ul className="list-disc space-y-2 pl-5">
+        <li>
+          Varicocele - Most common cause. Increase testicular temperature and
+          lack of Oxygen
+        </li>
+        <li>
+          Genital infection - Can result in Oxidative damage to sperm
+          (Epididymis and Prostate Infection)
+        </li>
+        <li>
+          Endocrine Disorders – Low Testosterone, High Prolactin levels and
+          Thyroid dysfunction.
+        </li>
+        <li>
+          Genetics - May be due to genes on Y Chromosome or Klinefelters
+          Syndrome
+        </li>
+        <li>
+          Toxins - Can be due to certain environmental factors like Heavy Metals
+          etc.
+        </li>
+      </ul>
     ),
   },
 ];
 
 const rightFaqs: FaqItem[] = [
   {
-    question: "When should couples choose IUI vs. IVF/ICSI for male factor infertility?",
-    answer: (
-      <ul className="space-y-2 pl-1">
-        <li className="flex items-start gap-2">
-          <span className="text-rose select-none text-[13px] pt-0.5">•</span>
-          <p>
-            <strong className="text-white font-semibold">Intrauterine Insemination (IUI):</strong> Viable if the post-wash Total Motile Sperm Count (TMSC) is ≥ 5–10 million with normal female tubes.
-          </p>
-        </li>
-        <li className="flex items-start gap-2">
-          <span className="text-rose select-none text-[13px] pt-0.5">•</span>
-          <p>
-            <strong className="text-white font-semibold">IVF with ICSI:</strong> Strongly indicated if TMSC is &lt; 5 million, motility is severe (&lt; 10%), or previous IUI cycles failed, ensuring direct egg micro-injection.
-          </p>
-        </li>
-      </ul>
-    ),
+    question:
+      "When should couples choose IUI vs. IVF/ICSI for male factor infertility?",
+    answer:
+      "If after sperm wash your values are greater than 5-10 million you can opt for IUI. But if your values are less than 5 million you should consider doing ICSI or if you have low motility or morphology.",
   },
   {
     question: "How does a varicocele impact sperm count and motility?",
-    answer: (
-      <p>
-        A varicocele causes retrograde pooling of venous blood, raising intratesticular temperatures and generating toxic reactive oxygen species (ROS). This disrupts spermatogenesis, lowering count, stripping progressive motility, and elevating DNA fragmentation. Microsurgical varicocelectomy successfully improves semen parameters in over 60% to 70% of affected men.
-      </p>
-    ),
+    answer:
+      "Varicocele is an increase in the veins of your scrotum that pushes blood backwards into your testes. It raises the temperature inside testicular and produces free radicals. Due to this your sperm production decreases, Motility reduces and DNA Damage increases. With microsurgery 60%-70% men can improve their values.",
   },
   {
-    question: "How long does it take for medical treatments or supplements to show results?",
-    answer: (
-      <p>
-        Spermatogenesis takes approximately 74 days, plus 10 to 14 days for epididymal transit. Therefore, any lifestyle modifications, hormonal treatments (like Clomiphene or hCG), or antioxidant therapy require a minimum of 3 full months (90 days) before improvements appear on a follow-up semen analysis.
-      </p>
-    ),
+    question:
+      "How long does it take for medical treatments or supplements to show results?",
+    answer:
+      "It takes 74 days for sperm to form and it takes another 10-14 days for it to pass through epididymis. So if you have started any lifestyle changes, medications or any surgery. It will take at least 3 months for you to see an improvement on your semen report.",
   },
   {
     question: "How does low motility affect fertilization during IVF?",
-    answer: (
-      <p>
-        Sluggish or non-motile sperm often fail to penetrate the egg&apos;s outer shell (zona pellucida) in standard IVF. Using Intracytoplasmic Sperm Injection (ICSI), embryologists bypass motility issues entirely by selecting a single viable sperm under high magnification and injecting it directly into the egg, achieving 70%–80% fertilization rates.
-      </p>
-    ),
+    answer:
+      "If there is poor sperm motility the chances of them penetrating through Egg are low. By doing IVF and using a technique called ICSI we can make sure fertilization happens. Embryologist under microscope picks up good sperm and inject it in the egg. With ICSI you can get fertilization rates of 70%-80%",
   },
   {
-    question: "Does low sperm count or poor motility cause miscarriages or birth defects?",
-    answer: (
-      <p>
-        Low count alone does not cause pregnancy loss, but severe poor motility is frequently linked to elevated Sperm DNA Fragmentation (DFI &gt; 30%). High DFI can trigger early embryonic arrest and first-trimester miscarriages, but it does not increase congenital birth defect rates in babies carried to term.
-      </p>
-    ),
+    question:
+      "Does low sperm count or poor motility cause miscarriages or birth defects?",
+    answer:
+      "No your child will not be affected by birth defects. However studies have shown that Men with Low sperm Motility tend to have higher DNA Fragmentation Index (DFI > 30%) which can lead to early abortion or missed abortion.",
   },
 ];
 
@@ -150,13 +112,8 @@ export default function LowSpermFaq() {
   return (
     <TreatmentSection>
       <TreatmentSectionHeader
-        eyebrow="Patient questions"
-        title={
-          <>
-            Top FAQs About Low
-            <br className="hidden sm:inline" /> Sperm Count & Motility
-          </>
-        }
+        eyebrow="Frequently Asked Questions"
+        title="Top FAQs About Low Sperm Count & Motility"
       />
       <FaqAccordion leftItems={leftFaqs} rightItems={rightFaqs} />
     </TreatmentSection>

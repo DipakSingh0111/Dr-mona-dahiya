@@ -1,157 +1,88 @@
 "use client";
 
-import { useState, type ReactNode } from "react";
 import Link from "next/link";
-import { FaChevronDown } from "react-icons/fa";
+import {
+  TreatmentSection,
+  TreatmentSectionHeader,
+  FaqAccordion,
+  type FaqItem,
+} from "@/components/ui/treatment";
 
-interface FaqItem {
-  question: string;
-  answer: ReactNode;
-}
+const linkClass =
+  "font-medium text-blue underline underline-offset-2 hover:text-blue-dark";
 
-const faqList: FaqItem[] = [
+const leftFaqs: FaqItem[] = [
   {
     question: "Are these stories from real patients?",
     answer:
-      "Yes. They are reviews written by Dr. Mona Dahiya's patients, shared in their own words. Individual results vary.",
+      "Yes, all of these pregnancy stories are from real patients of Dr. Mona. The results we give are from our IVF center where we follow the patients' embryos from start to finish.",
   },
   {
     question: "How many IUI attempts before IVF?",
     answer:
-      "Usually 3 to 4 well-timed cycles are tried before considering IVF, depending on age and reports.",
+      "We recommend our patients take 3-4 IUIs. After that we recommend taking IVF/ICSI to prevent loss of time and money.",
   },
   {
     question: "Is IUI painful?",
     answer:
-      "Most women feel mild cramping similar to a Pap smear. The procedure takes a few minutes and no anaesthesia is needed.",
+      "IUIs don't hurt at all. They feel like you just had a pap test. 10 seconds and you're done, also no anesthesia.",
   },
   {
     question: "When is IUI done?",
     answer:
-      "Around ovulation, timed by serial follicular ultrasound and, when needed, an hCG trigger — typically 36 hours after the trigger.",
+      "36 hours after you take your trigger shot is the ideal time to perform your IUI. You want to make sure your follicle has reached 18mm-20mm.",
   },
   {
     question: "Do I need tests before IUI?",
     answer:
-      "Yes. Tubal patency (HSG or similar), semen analysis, ovarian reserve and basic infection screening are reviewed first.",
+      "We advise all patients to get an HSG to check your tubes are open. Get a sperm report done and an ultrasound to make sure you're able to get pregnant.",
   },
+];
+
+const rightFaqs: FaqItem[] = [
   {
     question: "Can IUI work with low sperm count?",
     answer:
-      "It can help mild male factor when the post-wash motile count is above about 5 to 10 million. Severe male factor usually needs IVF/ICSI.",
+      "Yes, you can use IUIs if you have mild male factor infertility. As long as your sperm count after the wash is 5-10 million you can use IUI.",
   },
   {
     question: "Should I rest after IUI?",
     answer:
-      "Brief rest at the clinic is enough. Bed rest at home does not improve pregnancy rates; normal light activity is fine.",
+      "You can hang out at our office for 10-15 minutes, then you can go on about your day.",
   },
   {
     question: "How much does IUI cost?",
     answer:
-      "Cost varies with medicines and monitoring. A personalised estimate is given after your consultation and baseline tests.",
+      "Please email us or ask below about pricing. Prices vary if you need ultrasounds done during your treatment or if you need medications.",
   },
   {
     question: "Where can I consult Dr. Mona Dahiya?",
     answer:
-      "At 3 clinics: Noida (Sector 49), Ghaziabad (Raj Nagar) and Delhi (Lajpat Nagar IV), Monday to Saturday, 10:00 AM to 5:00 PM.",
+      "We have three locations. Two in Noida, One in Ghaziabad and Delhi. Mon-Saturday from 10am-5pm.",
   },
   {
     question: "Can I share my reports online first?",
     answer: (
       <>
-        Yes. A 30-minute online consultation costs ₹1,000 in India or US$25
-        abroad. See{" "}
-        <Link
-          href="/ivf-consultation-online"
-          className="font-semibold text-rose underline decoration-rose/40 underline-offset-2 hover:text-rose"
-        >
-          Online Consultation
+        Yes, you can send us your reports and talk to Dr. Mona online. The cost
+        of an online consultation is 1000 Rupees for Indian nationals and $25
+        for foreign nationals.{" "}
+        <Link href="/ivf-consultation-online" className={linkClass}>
+          Click here for Online Consultation.
         </Link>
-        .
       </>
     ),
   },
 ];
 
 export default function IuiFaq() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const leftCol = faqList.slice(0, 5);
-  const rightCol = faqList.slice(5, 10);
-
-  const renderFaqCard = (item: FaqItem, index: number) => {
-    const isOpen = openIndex === index;
-    return (
-      <div
-        key={index}
-        className={`overflow-hidden rounded-2xl border transition-all duration-300 ${
-          isOpen
-            ? "border-rose/45 bg-white shadow-[0_10px_28px_rgba(232,62,116,0.1)]"
-            : "border-slate-200/90 bg-white hover:border-rose/30"
-        }`}
-      >
-        <button
-          type="button"
-          onClick={() =>
-            setOpenIndex((prev) => (prev === index ? null : index))
-          }
-          aria-expanded={isOpen}
-          className="flex w-full cursor-pointer items-center justify-between gap-3 p-5 text-left"
-        >
-          <h3
-            className={`text-[15px] font-bold transition-colors ${
-              isOpen ? "text-rose" : "text-black"
-            }`}
-          >
-            {item.question}
-          </h3>
-          <span
-            className={`flex size-7 shrink-0 items-center justify-center rounded-full border transition-all duration-300 ${
-              isOpen
-                ? "rotate-180 border-rose bg-rose text-white"
-                : "border-slate-200 bg-slate-50 text-black"
-            }`}
-          >
-            <FaChevronDown className="size-3" />
-          </span>
-        </button>
-        <div
-          className={`grid transition-[grid-template-rows,opacity] duration-300 ease-in-out ${
-            isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
-          }`}
-        >
-          <div className="overflow-hidden">
-            <p className="border-t border-slate-100 px-5 pt-3 pb-5 text-[13.5px] leading-relaxed text-black">
-              {item.answer}
-            </p>
-          </div>
-        </div>
-      </div>
-    );
-  };
-
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#fff8fb] via-[#f8fafc] to-white py-6 sm:py-7 lg:py-8">
-      <div className="page-container relative">
-        <div className="max-w-3xl">
-          <span className="text-[12px] font-semibold tracking-wider text-rose uppercase">
-            Patient questions
-          </span>
-          <h2 className="font-serif mt-1 text-[2rem] leading-[1.18] font-normal tracking-tight text-black sm:text-[2.4rem] lg:text-[2.65rem]">
-            Frequently Asked Questions:
-            <br />
-            IUI Success Stories
-          </h2>
-        </div>
-
-        <div className="mt-7 grid grid-cols-1 items-start gap-4 md:grid-cols-2">
-          <div className="flex flex-col gap-4">
-            {leftCol.map((item, idx) => renderFaqCard(item, idx))}
-          </div>
-          <div className="flex flex-col gap-4">
-            {rightCol.map((item, idx) => renderFaqCard(item, idx + 5))}
-          </div>
-        </div>
-      </div>
-    </section>
+    <TreatmentSection>
+      <TreatmentSectionHeader
+        eyebrow="FAQs"
+        title="Frequently Asked Questions: IUI Success Stories"
+      />
+      <FaqAccordion leftItems={leftFaqs} rightItems={rightFaqs} />
+    </TreatmentSection>
   );
 }

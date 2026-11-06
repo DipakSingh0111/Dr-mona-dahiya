@@ -3,7 +3,7 @@
 import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaArrowRight, FaMapMarkerAlt } from "react-icons/fa";
+import { FaArrowRight, FaExternalLinkAlt, FaMapMarkerAlt } from "react-icons/fa";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
 export interface ClinicCardData {
@@ -143,23 +143,64 @@ export default function ClinicsAppointmentCards({
                   </div>
                 </div>
 
-                <div className="relative z-10 mt-9 flex flex-1 items-end justify-between gap-3">
-                  <div className="flex min-w-0 flex-1 flex-col justify-between self-stretch pr-2 pl-1">
-                    <h3 className="font-display text-[22px] font-bold tracking-tight text-ink sm:text-[24px]">
-                      {clinic.city}
-                    </h3>
-                    <p className="mt-2 min-h-[58px] text-[12.5px] leading-relaxed text-gray-500 sm:min-h-[62px] sm:text-[13px]">
-                      {clinic.address}
-                    </p>
+                <div className="relative z-10 mt-9 flex flex-1 flex-col gap-3 pr-2 pl-1">
+                  <div className="flex min-w-0 flex-1 items-start justify-between gap-3">
+                    <div className="min-w-0 flex-1">
+                      {clinic.tag ? (
+                        <p className="text-[10.5px] font-bold tracking-[0.12em] text-rose uppercase sm:text-[11px]">
+                          {clinic.tag}
+                        </p>
+                      ) : null}
+                      <h3 className="font-display text-[22px] font-bold tracking-tight text-ink sm:text-[24px]">
+                        {clinic.city}
+                      </h3>
+                      <p className="mt-2 min-h-[58px] text-[12.5px] leading-relaxed text-gray-500 sm:min-h-[62px] sm:text-[13px]">
+                        {clinic.address}
+                      </p>
+                    </div>
+
+                    <Link
+                      href={clinic.secondaryHref}
+                      aria-label={`Open ${clinic.city} clinic details`}
+                      className="pointer-events-auto flex size-[44px] shrink-0 items-center justify-center rounded-full border border-[#fde2ec] bg-[#fff0f5] text-rose transition-all duration-300 hover:scale-105 hover:bg-rose hover:text-white sm:size-[48px]"
+                    >
+                      <FaArrowRight className="size-3.5 sm:size-4" />
+                    </Link>
                   </div>
 
-                  <Link
-                    href={clinic.secondaryHref}
-                    aria-label={`Open ${clinic.city} clinic details`}
-                    className="pointer-events-auto flex size-[44px] shrink-0 items-center justify-center rounded-full border border-[#fde2ec] bg-[#fff0f5] text-rose transition-all duration-300 hover:scale-105 hover:bg-rose hover:text-white sm:size-[48px]"
+                  {(clinic.mapsUrl || clinic.secondaryHref) && (
+                    <div className="flex flex-wrap items-center justify-between gap-2 border-t border-slate-100 pt-3 text-[12px] font-semibold text-rose sm:text-[12.5px]">
+                      {clinic.mapsUrl ? (
+                        <a
+                          href={clinic.mapsUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 transition-colors hover:text-rose-dark hover:underline"
+                        >
+                          Directions
+                          <FaExternalLinkAlt className="size-2.5 opacity-70" />
+                        </a>
+                      ) : (
+                        <span />
+                      )}
+                      {clinic.secondaryHref ? (
+                        <Link
+                          href={clinic.secondaryHref}
+                          className="inline-flex items-center gap-1 transition-colors hover:text-rose-dark hover:underline"
+                        >
+                          {clinic.secondaryLabel ?? `${clinic.city} Clinic`}
+                          <FaArrowRight className="size-2.5" />
+                        </Link>
+                      ) : null}
+                    </div>
+                  )}
+
+                  <a
+                    href="#book-consultation"
+                    className="inline-flex w-full items-center justify-center rounded-full border border-rose bg-white py-2.5 text-[13px] font-semibold text-rose shadow-sm transition-all hover:bg-[#fff0f5]"
                   >
-                    <FaArrowRight className="size-3.5 sm:size-4" />
-                  </Link>
+                    Book Appointment
+                  </a>
                 </div>
               </article>
             </StaggerItem>

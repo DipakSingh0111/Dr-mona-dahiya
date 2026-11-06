@@ -1,49 +1,57 @@
 "use client";
 
-import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
+import { Stagger, StaggerItem } from "@/components/ui/Reveal";
 import {
   TreatmentSection,
   TreatmentSectionHeader,
-  RelatedTreatmentCompactCard
+  RelatedTreatmentCompactCard,
 } from "@/components/ui/treatment";
-interface RelatedTreatmentItem {
-  title: string;
-  href: string;
-}
 
-const relatedTreatments: RelatedTreatmentItem[] = [
-  { title: "Frozen Embryo Transfer", href: "/treatments" },
-  { title: "Sperm DNA Fragmentation", href: "/treatments" },
-  { title: "Hysteroscopy", href: "/treatments" },
-  { title: "Endometriosis", href: "/treatments" },
-  { title: "Fallopian Tube Blockage", href: "/treatments" },
-  { title: "Recurrent Implantation Failure", href: "/treatments" },
-  { title: "Azoospermia", href: "/treatments" },
-  { title: "Low Sperm Count", href: "/treatments" },
-  { title: "Surgical Sperm Retrieval", href: "/treatments" },
-  { title: "Sperm Freezing", href: "/treatments" },
-  { title: "Embryo Freezing", href: "/treatments" },
-  { title: "Oncofertility", href: "/treatments" },
+const relatedTreatments = [
+  { title: "Frozen Embryo Transfer", href: "/frozen-embryo-transfer" },
+  { title: "Sperm DNA Fragmentation", href: "/sperm-dna-fragmentation-test" },
+  { title: "Hysteroscopy", href: "/hysteroscopy-treatment" },
+  { title: "Endometriosis", href: "/endometriosis-fertility-treatment" },
+  {
+    title: "Fallopian Tube Blockage",
+    href: "/fallopian-tube-blockage-treatment",
+  },
+  {
+    title: "Recurrent Implantation Failure",
+    href: "/recurrent-implantation-failure-rif",
+  },
+  { title: "Azoospermia", href: "/azoospermia-treatment" },
+  { title: "Low Sperm Count", href: "/low-sperm-count-oligospermia" },
+  {
+    title: "Surgical Sperm Retrieval",
+    href: "/surgical-sperm-retrieval-tesa-pesa",
+  },
+  { title: "Sperm Freezing", href: "/semen-sperm-freezing" },
+  { title: "Embryo Freezing", href: "/embryo-cryopreservation" },
+  {
+    title: "Oncofertility",
+    href: "/oncofertility-cancer-fertility-preservation",
+  },
 ];
 
 export default function FemaleRelatedTreatments() {
   return (
     <TreatmentSection>
-        {/* Eyebrow & Title */}
-        <TreatmentSectionHeader
-          eyebrow="Treatments"
-          title="Related Fertility Treatments"
-        />
+      <TreatmentSectionHeader
+        eyebrow="Treatments"
+        title="Related Fertility Treatments"
+      />
 
-        {/* 3 Column Grid of 12 Treatments */}
-        <Stagger delay={0.03} className="mt-7 grid grid-cols-1 gap-3.5 sm:grid-cols-2 lg:grid-cols-3 sm:gap-4">
-          {relatedTreatments.map((item, idx) => (
-            <StaggerItem key={idx}>
+      <Stagger
+        delay={0.03}
+        className="mt-7 grid grid-cols-1 gap-3.5 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3"
+      >
+        {relatedTreatments.map((item) => (
+          <StaggerItem key={item.title}>
             <RelatedTreatmentCompactCard {...item} />
           </StaggerItem>
-          ))}
-        </Stagger>
-      </TreatmentSection>
+        ))}
+      </Stagger>
+    </TreatmentSection>
   );
 }
-

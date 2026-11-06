@@ -1,42 +1,41 @@
 "use client";
 
-import { Reveal } from "@/components/ui/Reveal";
 import {
   TreatmentSection,
   TreatmentSectionHeader,
   FaqAccordion,
-  type FaqItem
+  type FaqItem,
 } from "@/components/ui/treatment";
+
 const leftFaqs: FaqItem[] = [
   {
     question: "How long does it take to improve sperm count and motility?",
     answer:
-      "At least 3 months. Sperm takes 72 to 74 days to form plus 10 to 14 days to mature, so a repeat semen test is done after about 90 days.",
+      "At least 3 months. Sperm takes 72-74 days to form so we will repeat your semen analysis after 90 days.",
   },
   {
     question: "Can a man with zero sperm count father a biological child?",
     answer:
-      "Often, yes. Sperm is frequently still made in the testes and can be retrieved by PESA, TESA or micro-TESE for ICSI.",
+      "Yes if you have Azoospermia. We can try to retrieve sperm from your testes and use it for IVF.",
   },
   {
     question: "Does abnormal sperm shape cause birth defects?",
-    answer:
-      "No. Abnormal shape mainly affects swimming and egg penetration; it is not linked to birth defects.",
+    answer: "No it only affects your sperm ability to swim and fertilise the egg.",
   },
   {
     question: "What is a normal sperm count?",
     answer:
-      "At least 16 million per mL, with 30% or more progressive motility and 4% or more normal forms (WHO reference values).",
+      "Count > 15 million/ml with good motility > 30% and morphology > 4% is considered normal.",
   },
   {
     question: "What is sperm DNA fragmentation?",
     answer:
-      "Damage to the sperm's genetic material. A DFI above 25% is linked to poor embryo growth, failed implantation and miscarriage.",
+      "DNA Fragmentation is damage to your sperms DNA. High DNA Fragmentation can cause poor embryo growth and non implantation. Miscarriage may occur if DFI is >25%.",
   },
   {
     question: "Can varicocele cause infertility?",
     answer:
-      "It can lower count and motility. Repair is considered when it is clinically significant and semen quality is falling.",
+      "It can cause low sperm count and motility. If clinically significant we will advise you to repair varicocele.",
   },
 ];
 
@@ -44,52 +43,39 @@ const rightFaqs: FaqItem[] = [
   {
     question: "Is surgical sperm retrieval painful?",
     answer:
-      "It is done under local anaesthesia or short sedation; most men have mild soreness for 2 to 3 days.",
+      "No PESA/TESE can be done under local anesthesia/sedation. Some discomfort may be felt for 2-3 days.",
   },
   {
     question: "How much does male fertility testing cost?",
     answer:
-      "₹4,000 to ₹9,000 for semen analysis, DFI and a scrotal Doppler scan.",
+      "Around Rs. 4000-9000 depending on what tests we would like to do.",
   },
   {
     question: "Should both partners be tested together?",
     answer:
-      "Yes. Male factors are involved in about half of cases, and testing together saves months.",
+      "Yes since 50% of infertility can be caused by males and the balance 50% by females, its best to see both partners.",
   },
   {
     question: "Where can I consult Dr. Mona Dahiya?",
     answer:
-      "At 3 clinics: Noida (Sector 49), Ghaziabad (Raj Nagar) and Delhi (Lajpat Nagar IV), Monday to Saturday, 10:00 AM to 5:00 PM.",
+      "She is available in 3 locations: Noida, Ghaziabad and Delhi. Mon-Sat from 10am-5pm.",
   },
   {
     question: "Can I share my reports online first?",
-    answer: (
-      <>
-        Yes. A 30-minute online consultation costs ₹1,000 in India or US$25 abroad. See{" "}
-        <a
-          href="#book-consultation"
-          className="font-medium text-blue underline underline-offset-2 hover:text-rose transition-colors"
-        >
-          Online Consultation
-        </a>
-        .
-      </>
-    ),
+    answer:
+      "Yes you can share your reports on whatsapp/mail before your visit or while you are at the clinic.",
   },
 ];
 
 export default function MaleInfertilityFaq() {
   return (
     <TreatmentSection>
-        {/* Eyebrow & Title */}
-        <TreatmentSectionHeader
-          eyebrow="Patient questions"
-          title={<>Frequently Asked
-            <br className="hidden sm:inline" /> Questions: Male Infertility</>}
-        />
+      <TreatmentSectionHeader
+        eyebrow="Frequently Asked Questions"
+        title="Frequently Asked Questions: Male Infertility"
+      />
 
-        <FaqAccordion leftItems={leftFaqs} rightItems={rightFaqs} />
-      </TreatmentSection>
+      <FaqAccordion leftItems={leftFaqs} rightItems={rightFaqs} />
+    </TreatmentSection>
   );
 }
-

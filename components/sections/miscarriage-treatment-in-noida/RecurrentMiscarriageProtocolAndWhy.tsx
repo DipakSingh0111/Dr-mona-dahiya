@@ -36,7 +36,7 @@ const protocols = [
     number: "4",
     title: "If Antiphospholipid Syndrome or Clotting disorder found",
     bullets: [
-      "Start Low dose aspirin 75 mg/150mg pre-conception",
+      "Start Low dose aspirin 75 mg / 150mg pre-conception",
       "Start Enoxaparin 40mg sc once positive for pregnancy.",
     ],
   },
@@ -96,7 +96,7 @@ export default function RecurrentMiscarriageProtocolAndWhy() {
       <div>
         <TreatmentSectionHeader
           eyebrow="About Us"
-          title="Why choose Dr Mona Dahiya for Recurrent Pregnancy Loss?"
+          title="Why choose Dr Mona Dahiya for Recurrent Pregnancy Loss ?"
         />
 
         <div className="mt-6 flex flex-col gap-3.5 sm:mt-7 sm:gap-4">

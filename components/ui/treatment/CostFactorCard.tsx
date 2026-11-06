@@ -21,9 +21,9 @@ export function CostFactorCard({ title, description, icon }: CostFactorItem) {
             {title}
           </h3>
         </div>
-        <p className="mt-4 text-[13px] leading-relaxed text-black sm:text-[13.5px]">
+        <div className="mt-4 text-[13px] leading-relaxed text-black sm:text-[13.5px]">
           {description}
-        </p>
+        </div>
       </div>
     </div>
   );

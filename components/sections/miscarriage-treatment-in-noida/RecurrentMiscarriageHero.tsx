@@ -2,6 +2,7 @@
 import Breadcrumb from "@/components/ui/Breadcrumb";
 
 import HeroBannerImage from "@/components/ui/HeroBannerImage";
+import HeroCounterBar from "@/components/ui/HeroCounterBar";
 import Link from "next/link";
 
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
@@ -94,6 +95,17 @@ export default function RecurrentMiscarriageHero() {
         <HeroBannerImage
           src="/images/about-mona-dahiya/rpl-doctor.jpg"
           alt="Dr. Mona Dahiya - Miscarriage Treatment in Noida"
+        />
+      </div>
+
+      <div className="page-container relative">
+        <HeroCounterBar
+          items={[
+            { target: 25000, suffix: "+", label: "happy families" },
+            { target: 25, suffix: "+", label: "years experience" },
+            { target: 4.9, decimals: 1, label: "Google rating" },
+            { target: 15000, suffix: "+", label: "IVF Cycles" },
+          ]}
         />
       </div>
     </section>

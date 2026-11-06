@@ -21,12 +21,14 @@
   --color-pink: var(--pink);
   --color-ink: var(--ink);
 
-  /* Fonts: Globally defined — strictly Poppins and Tahoma only */
-  --font-sans: var(--font-poppins), Tahoma, sans-serif;
-  --font-serif: var(--font-poppins), Tahoma, sans-serif;
-  --font-display: var(--font-poppins), Tahoma, sans-serif;
-  --font-poppins-family: var(--font-poppins), Tahoma, sans-serif;
-  --font-tahoma-family: var(--font-poppins), Tahoma, sans-serif;
+  /* Fonts: Globally defined — strictly Open Sans and Tahoma only */
+  --font-sans: var(--font-open-sans), Tahoma, sans-serif;
+  --font-serif: var(--font-open-sans), Tahoma, sans-serif;
+  --font-display: var(--font-open-sans), Tahoma, sans-serif;
+  --font-open-sans-family: var(--font-open-sans), Tahoma, sans-serif;
+  --font-poppins: var(--font-open-sans), Tahoma, sans-serif;
+  --font-poppins-family: var(--font-open-sans), Tahoma, sans-serif;
+  --font-tahoma-family: var(--font-open-sans), Tahoma, sans-serif;
 }
 
 @theme inline {
@@ -39,12 +41,13 @@
   --color-pink: var(--pink);
   --color-ink: var(--ink);
 
-  /* Tailwind font utilities strictly mapping to Poppins and Tahoma */
-  --font-sans: var(--font-poppins), Tahoma, sans-serif;
-  --font-serif: var(--font-poppins), Tahoma, sans-serif;
-  --font-display: var(--font-poppins), Tahoma, sans-serif;
-  --font-poppins: var(--font-poppins), Tahoma, sans-serif;
-  --font-tahoma: var(--font-poppins), Tahoma, sans-serif;
+  /* Tailwind font utilities strictly mapping to Open Sans and Tahoma */
+  --font-sans: var(--font-open-sans), Tahoma, sans-serif;
+  --font-serif: var(--font-open-sans), Tahoma, sans-serif;
+  --font-display: var(--font-open-sans), Tahoma, sans-serif;
+  --font-open-sans: var(--font-open-sans), Tahoma, sans-serif;
+  --font-poppins: var(--font-open-sans), Tahoma, sans-serif;
+  --font-tahoma: var(--font-open-sans), Tahoma, sans-serif;
 }
 
 html {
@@ -77,8 +80,12 @@ body {
   font-family: var(--font-serif) !important;
 }
 
+.font-open-sans {
+  font-family: var(--font-open-sans) !important;
+}
+
 .font-poppins {
-  font-family: var(--font-poppins) !important;
+  font-family: var(--font-open-sans) !important;
 }
 
 .font-tahoma {
@@ -87,7 +94,7 @@ body {
 
 h1,
 h2 {
-  font-family: var(--font-poppins), Tahoma, sans-serif !important;
+  font-family: var(--font-open-sans), Tahoma, sans-serif !important;
   font-weight: 400 !important;
   font-size: 1.65rem !important;
   line-height: 1.18 !important;

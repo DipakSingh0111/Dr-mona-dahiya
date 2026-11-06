@@ -6,117 +6,119 @@ import {
   TreatmentSection,
   TreatmentSectionHeader,
   ProtocolCard,
-  WhyPointRow
+  WhyPointRow,
 } from "@/components/ui/treatment";
+
 const protocols = [
   {
     number: "1",
-    title: "Ovarian stimulation and egg maturation (Cycle Days 2–12)",
+    title: "Stimulation and Egg Maturation (Day 2-12 of Cycle):",
     bullets: [
-      "Targeted gonadotropin injections over 8–10 days to develop multiple mature follicles",
-      "Dual trigger given 35–36 hours prior to retrieval (typically Day 11 or 12)",
+      "Gonadotropins are given for 8-10 days to grow follicles.",
+      "Trigger shot given 35-36 hours before retrieval (usually Day 11 or 12).",
     ],
   },
   {
     number: "2",
-    title: "Egg denudation and maturity grading (Cycle Day 13/14 • Retrieval Day)",
+    title: "Egg Denudation and Selection of Mature Eggs (Day 13/14 of Cycle – Retrieval Day):",
     bullets: [
-      "Cumulus cells removed with hyaluronidase 2–4 hours after retrieval",
-      "Only mature Metaphase II (MII) eggs selected for injection",
+      "Cumulus cells are removed 2-4 hours after retrieval.",
+      "Only mature eggs (Metaphase II) are taken for ICSI.",
     ],
   },
   {
     number: "3",
-    title: "Advanced sperm selection (Cycle Day 13/14 • Day 0)",
+    title: "Selection of Best Sperm (Day 13/14 of Cycle – Day 0):",
     bullets: [
-      "Sperm isolated via microfluidic chips or PICSI dishes",
-      "High-magnification check (400x–6000x) to select the best morphology",
+      "Sperm are sorted on microfluidic chips or PICSI plates.",
+      "The best sperm is selected based on morphology under high magnification (400x-6000x).",
     ],
   },
   {
     number: "4",
-    title: "Micro-injection (Cycle Day 13/14 • Day 0, 4–6 hrs post-retrieval)",
+    title:
+      "Injection of Sperm Inside the Egg (Day 13/14 of Cycle – Day 0, 4-6 hrs after Retrieval):",
     bullets: [
-      "Egg secured with polar body at 12 or 6 o'clock to protect the spindle",
-      "A single immobilised sperm is injected directly into the cytoplasm",
+      "The egg is held with the polar body at the 12 or 6 o’clock position.",
+      "A single sperm is injected inside the egg after immobilizing it.",
     ],
   },
   {
     number: "5",
-    title: "Embryo culture and freezing (Cycle Days 14–19 • Culture Days 1–6)",
+    title: "Embryo Culture and Cryopreservation (Day 14-19 of Cycle – Embryo Culture Days 1-5):",
     bullets: [
-      "Fertilisation (2PN) verified at 16–18 hours post-injection",
-      "Embryos cultured to Day 5/6 blastocyst stage for transfer or vitrification",
+      "Fertilisation is confirmed after 16-18 hours (2 pronuclei seen).",
+      "Embryos are cultured till Day 5/6 for transfer or cryopreservation.",
     ],
   },
 ];
 
 const whyPoints = [
   {
-    title: "Decades of male-factor experience",
-    desc: "25+ years handling severe male-factor and zero-sperm cases, with a Singapore General Hospital fellowship.",
+    title: "Experience With Male Factor Problems",
+    desc: "We have been dealing with male factor infertility for more than 25 years, even with zero sperm cases. Dr. Mona completed her fellowship at Singapore General Hospital.",
   },
   {
-    title: "Coordinated laboratory and surgery",
-    desc: "TESA or PESA runs alongside egg retrieval, so fresh, living sperm can be injected at once.",
+    title: "Lab Procedures & Surgery Under One Roof",
+    desc: "We do TESA/PESA on the same day as egg retrieval, so that we can inject fresh, live sperm.",
   },
   {
-    title: "Minimal egg trauma",
-    desc: "Precision glass micropipettes and micro-injectors keep egg survival after injection above 95%.",
+    title: "Minimal Damage To Egg",
+    desc: "We use glass micropipettes and microinjection, which cause minimal trauma to eggs. Survival rate after ICSI is above 95%.",
   },
 ];
 
 export default function IcsiProtocolAndWhy() {
   return (
     <TreatmentSection>
-        <div className="mb-14 sm:mb-16 lg:mb-20">
-          <TreatmentSectionHeader
+      <div className="mb-14 sm:mb-16 lg:mb-20">
+        <TreatmentSectionHeader
           eyebrow="How it works"
           title="Step-by-Step ICSI Treatment Protocol"
         />
 
-          <Stagger
-            delay={0.05}
-            className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
-          >
-            {protocols.map((item) => (
-              <StaggerItem key={item.number}>
+        <Stagger
+          delay={0.05}
+          className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
+        >
+          {protocols.map((item) => (
+            <StaggerItem key={item.number}>
               <ProtocolCard {...item} />
             </StaggerItem>
-            ))}
-          </Stagger>
-        </div>
+          ))}
+        </Stagger>
+      </div>
 
-        <div>
-          <TreatmentSectionHeader
-          eyebrow="Expertise & authority"
-          title="Why Consult Dr. Mona Dahiya for ICSI?"
+      <div>
+        <TreatmentSectionHeader
+          eyebrow="Our Expertise"
+          title="Reasons To Choose Dr. Mona For ICSI"
         />
 
-          <div className="mt-7 grid grid-cols-1 items-start gap-6 lg:grid-cols-12 lg:gap-8">
-            <div className="flex flex-col gap-3.5 sm:gap-4 lg:col-span-7">
-              {whyPoints.map((point, idx) => (
-                <Reveal key={point.title} variant="fadeUp" delay={idx * 0.05}>
-              <WhyPointRow {...point} />
-            </Reveal>
-              ))}
-            </div>
-
-            <div className="relative mx-auto w-full max-w-[380px] lg:col-span-5 lg:mx-0 lg:max-w-none">
-              <Reveal variant="scaleIn" delay={0.08}>
-                <div className="relative overflow-hidden rounded-[20px] border-[3px] border-white/70 shadow-[0_20px_50px_rgba(0,10,40,0.45)] sm:rounded-[24px]">
-                  <Image
-                    src="/images/about-mona-dahiya/dr-mona-dahiya.jpg"
-                    alt="Dr. Mona Dahiya - ICSI specialist"
-                    width={480}
-                    height={560}
-                    className="max-h-[420px] w-full object-cover object-top sm:max-h-[480px]"
-                  />
-                </div>
+        <div className="mt-7 grid grid-cols-1 items-start gap-6 lg:grid-cols-12 lg:gap-8">
+          <div className="flex flex-col gap-3.5 sm:gap-4 lg:col-span-7">
+            {whyPoints.map((point, idx) => (
+              <Reveal key={point.title} variant="fadeUp" delay={idx * 0.05}>
+                <WhyPointRow {...point} />
               </Reveal>
-            </div>
+            ))}
+          </div>
+
+          <div className="relative mx-auto w-full max-w-[380px] lg:col-span-5 lg:mx-0 lg:max-w-none">
+            <Reveal variant="scaleIn" delay={0.08}>
+              <div className="relative overflow-hidden rounded-[20px] border-[3px] border-white/70 shadow-[0_20px_50px_rgba(0,10,40,0.45)] sm:rounded-[24px]">
+                <Image
+                  src="/images/about-mona-dahiya/dr-mona-dahiya.jpg"
+                  alt="Dr. Mona Dahiya - ICSI specialist"
+                  width={480}
+                  height={560}
+                  className="max-h-[420px] w-full object-cover object-top sm:max-h-[480px]"
+                />
+              </div>
+            </Reveal>
           </div>
         </div>
-      </TreatmentSection>
+      </div>
+    </TreatmentSection>
   );
 }

@@ -1,101 +1,82 @@
 "use client";
 
+import type { ReactNode } from "react";
 import Link from "next/link";
-import { FaCheck } from "react-icons/fa";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 import {
   TreatmentSection,
   TreatmentSectionHeader,
-  ProtocolCard
+  ProtocolCard,
+  ChecklistRow,
 } from "@/components/ui/treatment";
-interface ChecklistItem {
-  text: string;
-  linkText?: string;
-  linkHref?: string;
-  suffix?: string;
-}
 
-const checklist: ChecklistItem[] = [
-  { text: "High-sensitivity AMH (ECLIA) for an accurate baseline." },
-  { text: "Day 2 or 3 scan counting antral follicles (2 to 9 mm)." },
-  {
-    text: "Day 2 FSH and estradiol to understand how hard the ovaries are being pushed.",
-  },
-  {
-    text: "DHEA-S, vitamin D3 and free testosterone to guide priming.",
-  },
-  {
-    text: "Partner's ",
-    linkText: "Sperm DNA Fragmentation Test",
-    linkHref: "/treatments",
-    suffix:
-      ", so sperm quality does not add to the challenge of fewer eggs.",
-  },
+const checklist = [
+  "AMH High Sensitivity (ECLIA Method). Gives you idea about your reserve.",
+  "Usg scan Day 2/3 For AFC (Antral Follicle Count) of size 2-9 mm.",
+  "Day 2 Fsh And Estrogen To Find Out What You're Pushing Your Ovary With.",
+  "DHEA-S , Vit D3 And Free Testosterone Levels For Dhea Priming.",
 ];
 
-interface ProtocolCard {
+const linkClass =
+  "font-medium text-blue underline underline-offset-2 hover:text-blue-dark";
+
+const protocols: {
   number: string;
   title: string;
-  bullets: Array<{
-    text: string;
-    linkText?: string;
-    linkHref?: string;
-    suffix?: string;
-  }>;
-}
-
-const protocols: ProtocolCard[] = [
+  bullets: ReactNode[];
+}[] = [
   {
     number: "1",
-    title: "Ovarian priming (6-8 weeks before)",
+    title: "Dhea Priming",
     bullets: [
-      { text: "Micronized DHEA" },
-      { text: "CoQ10" },
-      { text: "Vitamin D" },
+      "For 6 - 8 Weeks Prior To Your First Treatment Plan Start Taking Micronised Dhea 25mg x3 Times A Day And Coq 600 mg x1. Top Up Vitamin D3 Level If Required.",
     ],
   },
   {
     number: "2",
-    title: "Protocol selection and stimulation",
+    title: "Stimulate With Low Dose Flare Or Mini Ivf.",
     bullets: [
-      { text: "Micro-dose flare" },
-      {
-        text: "",
-        linkText: "Mini IVF",
-        linkHref: "/treatments",
-      },
+      <>
+        By Using Low Dose Flare Method You Can Give Your Body A Boost In Its Own
+        Fsh Level. We Will Use The Mild Low Dose Method To Get Quality Eggs.{" "}
+        <Link href="/minimal-stimulation-mini-ivf" className={linkClass}>
+          Mini IVF
+        </Link>
+      </>,
     ],
   },
   {
     number: "3",
-    title: "DuoStim: two stimulations in one cycle",
+    title: "Duostim (2 Stimulations In One Cycle)",
     bullets: [
-      { text: "Wave 1 (follicular)" },
-      { text: "Wave 2 (luteal)" },
+      "Stimulation and Retrieval in first wave (follicular phase). Followed by 5 days and stimulation in Second Wave (Luteal Phase).",
     ],
   },
   {
     number: "4",
-    title: "ICSI and extended culture",
+    title: "In Vitro Fertilisation With Icsi.",
     bullets: [
-      {
-        text: "Fertilisation by ",
-        linkText: "ICSI",
-        linkHref: "/treatments",
-      },
-      { text: "Benchtop culture to blastocyst" },
+      <>
+        We Will Do{" "}
+        <Link href="/ivf-treatment" className={linkClass}>
+          In Vitro Fertilisation
+        </Link>{" "}
+        With Extended Culturing To Obtain Maximum No Of Blastocyst From Lower No
+        Of Eggs.
+      </>,
     ],
   },
   {
     number: "5",
-    title: "Embryo banking and frozen transfer",
+    title: "Embryo Banking / Frozen Embryo Transfer",
     bullets: [
-      { text: "Blastocysts banked across cycles" },
-      {
-        text: "",
-        linkText: "Frozen Embryo Transfer",
-        linkHref: "/treatments",
-      },
+      <>
+        Bank Your Blastocyst and Undergo{" "}
+        <Link href="/frozen-embryo-transfer" className={linkClass}>
+          Frozen Embryo Transfer
+        </Link>{" "}
+        after preparation.
+      </>,
     ],
   },
 ];
@@ -103,64 +84,52 @@ const protocols: ProtocolCard[] = [
 export default function LowAmhDiagnosticAndProtocol() {
   return (
     <TreatmentSection>
-        <div className="mb-14 sm:mb-16 lg:mb-20">
-          <TreatmentSectionHeader
-          eyebrow="Before treatment"
-          title={<>Diagnostic Checklist: Assessing True
-              <br className="hidden sm:inline" /> Functional Reserve</>}
-          subtitle="These tests show how much reserve is really there and how to prime it."
+      <div className="mb-14 sm:mb-16 lg:mb-20">
+        <TreatmentSectionHeader
+          eyebrow="Before Treatment"
+          title="Diagnostic Checklist: Assessing True Functional Reserve"
+          subtitle="Test Required To Find Out How Much Functional Reserve You Have and How To Improve It"
         />
 
-          <div className="mt-6 flex flex-col gap-3 sm:mt-7 sm:gap-3.5">
-            {checklist.map((item, idx) => (
-              <Reveal key={idx} variant="fadeUp" delay={idx * 0.05}>
-                <div className="flex items-center gap-3.5 rounded-xl border border-[#fde2ec] bg-white px-4 py-3.5 backdrop-blur-md transition-all duration-200 hover:border-blue/50 hover:bg-[#fff0f5] sm:px-5 sm:py-4">
-                  <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-rose/15 text-rose ring-1 ring-rose/35 sm:size-6">
-                    <FaCheck className="size-2.5 sm:size-3" />
-                  </span>
-                  <p className="text-[13.5px] leading-relaxed text-black sm:text-[14.5px]">
-                    {item.text}
-                    {item.linkText && item.linkHref && (
-                      <Link
-                        href={item.linkHref}
-                        className="font-medium text-blue underline decoration-[var(--blue)]/50 underline-offset-2 transition-colors hover:text-blue-dark hover:decoration-[var(--blue-dark)]"
-                      >
-                        {item.linkText}
-                      </Link>
-                    )}
-                    {item.suffix || ""}
-                  </p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
+        <div className="mt-6 flex flex-col gap-3.5 sm:mt-7 sm:gap-4">
+          {checklist.map((item, idx) => (
+            <Reveal key={item} variant="fadeUp" delay={idx * 0.04}>
+              <ChecklistRow>{item}</ChecklistRow>
+            </Reveal>
+          ))}
+          <Reveal variant="fadeUp" delay={0.2}>
+            <ChecklistRow>
+              <Link href="/sperm-dna-fragmentation-test" className={linkClass}>
+                Sperm DNA Fragmentation
+              </Link>{" "}
+              Of Partner To Make Sure Sperm is Not An Issue When You Already
+              Have Limited Number Of Eggs.
+            </ChecklistRow>
+          </Reveal>
         </div>
+      </div>
 
-        <div>
-          <TreatmentSectionHeader
-          eyebrow="How it works"
+      <div>
+        <TreatmentSectionHeader
+          eyebrow="Steps For Treatment For Low Amh Patient"
           title="Step-by-Step Low AMH Protocol"
         />
 
-          <Stagger
-            delay={0.05}
-            className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-5"
-          >
-            {protocols.map((item) => (
-              <StaggerItem key={item.number}>
+        <Stagger
+          delay={0.05}
+          className="mt-7 grid grid-cols-1 items-stretch gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
+        >
+          {protocols.map((item) => (
+            <StaggerItem key={item.number} className="h-full">
               <ProtocolCard
                 number={item.number}
                 title={item.title}
-                bullets={item.bullets.map((b) =>
-                  typeof b === "string"
-                    ? b
-                    : `${b.text}${b.linkText ?? ""}${b.suffix ?? ""}`,
-                )}
+                bullets={item.bullets}
               />
             </StaggerItem>
-            ))}
-          </Stagger>
-        </div>
-      </TreatmentSection>
+          ))}
+        </Stagger>
+      </div>
+    </TreatmentSection>
   );
 }

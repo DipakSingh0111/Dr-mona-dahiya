@@ -47,7 +47,11 @@ export default function MaleInfertilityPage() {
 
       {/* 6. Book a Consultation at Our Clinics */}
       <SectionReveal delay={0.04}>
-        <IvfSuccessClinics />
+        <IvfSuccessClinics
+          eyebrow="Consultation for Male Infertility"
+          title="Book a Consultation at Our Clinics"
+          subtitle="We have clinics in Noida, Ghaziabad and Delhi. Can also consult you online."
+        />
       </SectionReveal>
 
       {/* 7. Frequently Asked Questions: Male Infertility */}
@@ -59,7 +63,7 @@ export default function MaleInfertilityPage() {
       <SectionReveal delay={0.04}>
         <AboutConsultation
           sectionId="book-consultation"
-          eyebrow="Next step"
+          eyebrow="Next steps"
           title="Book a Male Fertility Consultation"
           subtitle="Book an in-clinic consultation or an online review of your semen reports. Call +91 92679 82924 or email info@drmonadahiya.com."
           appendContacts={false}

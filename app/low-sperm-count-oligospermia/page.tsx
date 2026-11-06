@@ -5,7 +5,6 @@ import MedicalRegistration from "@/components/sections/MedicalRegistration";
 import LowSpermIndicationsAndChecklist from "@/components/sections/low-sperm-count-oligospermia/LowSpermIndicationsAndChecklist";
 import LowSpermProtocolAndWhy from "@/components/sections/low-sperm-count-oligospermia/LowSpermProtocolAndWhy";
 import LowSpermCaseAndCost from "@/components/sections/low-sperm-count-oligospermia/LowSpermCaseAndCost";
-import IvfSuccessClinics from "@/components/sections/ivf-stories/IvfSuccessClinics";
 import LowSpermFaq from "@/components/sections/low-sperm-count-oligospermia/LowSpermFaq";
 import LowSpermRelatedTreatments from "@/components/sections/low-sperm-count-oligospermia/LowSpermRelatedTreatments";
 import AboutConsultation from "@/components/sections/about-mona-dahiya/AboutConsultation";
@@ -46,22 +45,17 @@ export default function LowSpermTreatmentPage() {
         <LowSpermCaseAndCost />
       </SectionReveal>
 
-      {/* 6. Book a Consultation at Our Clinics */}
-      <SectionReveal delay={0.04}>
-        <IvfSuccessClinics />
-      </SectionReveal>
-
-      {/* 7. Top FAQs About Low Sperm Count & Motility */}
+      {/* 6. Top FAQs About Low Sperm Count & Motility */}
       <SectionReveal delay={0.04}>
         <LowSpermFaq />
       </SectionReveal>
 
-      {/* 8. Related Fertility Treatments */}
+      {/* 7. Related Fertility Treatments */}
       <SectionReveal delay={0.04}>
         <LowSpermRelatedTreatments />
       </SectionReveal>
 
-      {/* 9. Book an In-Clinic or Online Consultation Form */}
+      {/* 8. Book an In-Clinic or Online Consultation Form */}
       <SectionReveal delay={0.04}>
         <AboutConsultation
           sectionId="book-consultation"
@@ -72,7 +66,7 @@ export default function LowSpermTreatmentPage() {
         />
       </SectionReveal>
 
-      {/* 10. Take your first step towards parenthood CTA */}
+      {/* 9. Take your first step towards parenthood CTA */}
       <SectionReveal delay={0.04}>
         <AboutParenthoodCta />
       </SectionReveal>

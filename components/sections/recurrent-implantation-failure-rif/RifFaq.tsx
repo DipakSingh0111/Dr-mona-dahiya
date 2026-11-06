@@ -9,105 +9,58 @@ import {
 
 const leftFaqs: FaqItem[] = [
   {
-    question: "What is the clinical definition of Recurrent Implantation Failure (RIF)?",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          RIF is diagnosed when a woman under 40 fails to achieve a clinical pregnancy (gestational sac on ultrasound) after transferring at least <strong className="text-white">3 high-grade cleavage-stage embryos or 2 or more morphologically top-quality blastocysts</strong> across multiple IVF cycles. It affects approximately <strong className="text-white">10% to 15%</strong> of couples undergoing assisted reproductive treatments and warrants an advanced, multi-factorial investigation rather than repeating standard protocols.
-        </p>
-      </div>
-    ),
+    question:
+      "What is the clinical definition of Recurrent Implantation Failure (RIF)?",
+    answer:
+      "RIF is defined as no clinical pregnancy (presence of gestation sac on ultrasound) after transfer of more than 3 good grade embryos (cleavage stage) or 2 or more top quality blastocysts. Approximately 10%-15% of couples will suffer from RIF. Advanced workup is required to find the cause of RIF.",
   },
   {
     question: "What is the single most common cause of RIF?",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          <strong className="text-white">Embryonic chromosomal aneuploidy accounts for over 50% to 60% of all implantation failures</strong>, even when embryos appear physically perfect under standard embryology microscopes. In women over 35, more than half of developing blastocysts carry numerical chromosomal abnormalities. Performing Preimplantation Genetic Testing for Aneuploidies (PGT-A) to verify and transfer a chromosomally normal (euploid) blastocyst elevates implantation rates to <strong className="text-white">65%–70%</strong> and cuts early miscarriage rates below 10%.
-        </p>
-      </div>
-    ),
+    answer:
+      "Embryos that have chromosomal abnormality is responsible for more than 50%-60% of failed implantation. Even if the embryo looks normal under microscope it can be chromosomally abnormal. In females greater than 35 years of age more than 50% of blastocysts can be abnormal. If we can do PGT-A and transfer a euploid blastocyst then we can achieve pregnancy in 65%-70% of cases. Miscarriage will reduce to less than 10%.",
   },
   {
     question: "How does the Endometrial Receptivity Analysis (ERA) help in RIF?",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          Around <strong className="text-white">25% to 30% of women with RIF</strong> have an altered or displaced “Window of Implantation” (WOI), meaning their uterine lining is either pre-receptive (needs 12–24 hours more progesterone) or post-receptive (needs less). The ERA test uses Next-Generation Sequencing across 248 receptivity genes to pinpoint this exact molecular receptive window, allowing a Personalised Frozen Embryo Transfer (pFET) that restores pregnancy rates to <strong className="text-white">55%–65%</strong>.
-        </p>
-      </div>
-    ),
+    answer:
+      "In about 25%-30% of women who fail to get pregnant the window of implantation is shifted. They may be pre receptive (require more time under progesterone exposure 12-24 hrs) or post receptive. ERA test using next generation sequencing on 248 genes will help us find out their exact window of implantation. This allows us to perform personalized FET and achieve pregnancy in 55%-65% of cases.",
   },
   {
     question: "Can chronic endometritis cause repeated implantation failure?",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          Yes. Chronic endometritis—a persistent, asymptomatic inflammation of the endometrial lining—is detected in up to <strong className="text-white">30% to 40% of patients with unexplained RIF</strong>. Often missed on routine scans, it is diagnosed via hysteroscopic biopsy and immunohistochemical staining for <strong className="text-white">CD138 syndecan-1 plasma cells</strong>. Targeted oral antibiotic regimens (such as Doxycycline or Metronidazole) cure the infection in <strong className="text-white">over 85% to 90% of cases</strong>, significantly restoring subsequent embryo implantation rates.
-        </p>
-      </div>
-    ),
+    answer:
+      "Chronic Endometritis is an asymptomatic inflammation of the endometrium that is found in 30%-40% of patients with RIF. This is often overlooked and can be diagnosed by doing biopsy and CD138 stain. Oral antibiotics can treat this infection in 85%-90% of cases which increases the chance of implantation in future transfers.",
   },
   {
-    question: "How does a thin endometrial lining affect implantation, and how is it treated?",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          An endometrial lining measuring <strong className="text-white">under 7 mm</strong> with absent trilaminar architecture on the day of progesterone administration significantly drops implantation rates below <strong className="text-white">20% to 25%</strong>. Management protocols for unresponsive thin linings include:
-        </p>
-        <ul className="space-y-2 pl-1">
-          <li className="flex items-start gap-2">
-            <span className="text-rose select-none text-[13px] pt-1">•</span>
-            <p>Extended high-dose oral or transdermal estradiol priming with micronized vaginal sildenafil.</p>
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="text-rose select-none text-[13px] pt-1">•</span>
-            <p>
-              <strong className="text-white">Intrauterine Platelet-Rich Plasma (PRP) infusions:</strong> Adds <strong className="text-white">1.5 to 2.5 mm of vascularized thickness</strong> within 48–72 hours via concentrated autologous growth factors.
-            </p>
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="text-rose select-none text-[13px] pt-1">•</span>
-            <p>Diagnostic hysteroscopy to lyse intrauterine synechiae or basal scar tissue (Asherman&apos;s syndrome).</p>
-          </li>
-        </ul>
-      </div>
-    ),
+    question:
+      "How does a thin endometrial lining affect implantation, and how is it treated?",
+    answer:
+      "If your endometrial lining is less than 7mm with no trilaminar pattern on the day of progesterone you are less likely to get pregnant. The chance of implantation decreases to 20%-25%. You can treat thin lining by extending the course of oral/trans dermal estrogen and vaginal sildenafil. Another option is PRP infusion which can increase your endometrial thickness by 1.5mm-2.5mm within 48-72 hours. You can also do hysteroscopy to lyse any adhesions or scar tissue that is preventing your lining from growing.",
   },
 ];
 
 const rightFaqs: FaqItem[] = [
   {
-    question: "What tests should a couple complete after multiple failed embryo transfers?",
+    question:
+      "What tests should a couple complete after multiple failed embryo transfers?",
     answer: (
       <div className="space-y-3">
         <p>
-          A structured post-RIF diagnostic workup investigates four primary domains:
+          You should check for the following causes after failing your IVF
+          transfer:
         </p>
-        <ul className="space-y-2 pl-1">
-          <li className="flex items-start gap-2">
-            <span className="text-rose select-none text-[13px] pt-1">•</span>
-            <p>
-              <strong className="text-white">Genetic / Parental:</strong> High-resolution parental karyotyping for balanced translocations; PGT-A for remaining embryos.
-            </p>
+        <ul className="list-disc space-y-2 pl-5">
+          <li>
+            Do Karyotype of both partners. And do PGT-A if you have any leftover
+            embryos.
           </li>
-          <li className="flex items-start gap-2">
-            <span className="text-rose select-none text-[13px] pt-1">•</span>
-            <p>
-              <strong className="text-white">Anatomical / Cavity:</strong> 3D pelvic ultrasound or diagnostic hysteroscopy to rule out polyps, septa, or intrauterine adhesions.
-            </p>
+          <li>
+            Check your uterus with 3d USG or hysteroscopy for any anomalies.
           </li>
-          <li className="flex items-start gap-2">
-            <span className="text-rose select-none text-[13px] pt-1">•</span>
-            <p>
-              <strong className="text-white">Endometrial &amp; Microbiome:</strong> CD138 biopsy for chronic endometritis, and the EndomeTRIO panel (ERA, EMMA for Lactobacillus balance, and ALICE for pathogens).
-            </p>
+          <li>
+            Check for chronic endometritis by biopsy. Do ERA and EndomeTRIO.
           </li>
-          <li className="flex items-start gap-2">
-            <span className="text-rose select-none text-[13px] pt-1">•</span>
-            <p>
-              <strong className="text-white">Systemic &amp; Male Factors:</strong> High-sensitivity Sperm DNA Fragmentation Index (DFI &gt;30% impairs blastocyst viability), alongside antiphospholipid and thrombophilia screenings.
-            </p>
+          <li>
+            Check male factor with sperm dna fragmentation index. And check for
+            clotting profile if indicated.
           </li>
         </ul>
       </div>
@@ -115,60 +68,24 @@ const rightFaqs: FaqItem[] = [
   },
   {
     question: "Does an untreated hydrosalpinx cause implantation failure?",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          Yes. A hydrosalpinx (a distally occluded, fluid-filled fallopian tube) <strong className="text-white">reduces IVF implantation rates by 50%</strong> and doubles early pregnancy loss rates. The stagnant, embryotoxic tubal fluid drains retrograde into the uterine cavity, physically flushing embryos out and downregulating vital endometrial receptivity markers like integrin αvβ3. Laparoscopic clipping (occlusion) or salpingectomy (removal) before frozen transfer fully restores implantation success to baseline levels.
-        </p>
-      </div>
-    ),
+    answer:
+      "Yes. Having a hydrosalpinx decreases your chance of getting pregnant by 50% and can also cause miscarriages. The fluid present inside the tube is toxic to the embryo and will reduce your implantation. This can be fixed by doing clipping or removal of tube before transfer.",
   },
   {
     question: "Can immunological or blood clotting disorders cause RIF?",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          Yes. Autoimmune conditions and thrombophilias contribute to roughly <strong className="text-white">10% to 15% of refractory RIF cases</strong>:
-        </p>
-        <ul className="space-y-2 pl-1">
-          <li className="flex items-start gap-2">
-            <span className="text-rose select-none text-[13px] pt-1">•</span>
-            <p>
-              <strong className="text-white">Thrombophilias (Factor V Leiden, Protein C/S deficiency, Antiphospholipid Syndrome - APLS):</strong> Micro-thrombi obstruct fragile spiral arterioles at the implantation site, starving the early trophoblast.
-            </p>
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="text-rose select-none text-[13px] pt-1">•</span>
-            <p>
-              <strong className="text-white">Elevated Uterine Natural Killer (uNK) Cells:</strong> In rare instances, hyperactive uNK cytotoxicity impedes trophoblast invasion.
-            </p>
-          </li>
-        </ul>
-        <p>
-          Treatment with low-dose aspirin, low-molecular-weight heparin (LMWH), and short courses of corticosteroids or IVIG/Intralipids helps normalize this micro-environment.
-        </p>
-      </div>
-    ),
+    answer:
+      "Approximately 10%-15% of women can have clotting problems or auto immune problems that can cause RIF. These problems can block the small blood vessels which supply your endometrium causing your embryo to fail. By taking aspirin and injections you can increase your chances of implantation.",
   },
   {
-    question: "What is the success rate of a frozen embryo transfer after treating RIF?",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          When an evidence-based diagnosis addresses the specific underlying barrier—transferring a confirmed PGT-A euploid blastocyst into an optimized cavity at an ERA-timed receptive window—cumulative clinical pregnancy rates rebound to <strong className="text-white">60% to 70% per transfer</strong>, with a <strong className="text-white">90%+ cumulative live birth rate</strong> over three targeted euploid transfers.
-        </p>
-      </div>
-    ),
+    question:
+      "What is the success rate of a frozen embryo transfer after treating RIF?",
+    answer:
+      "Once you have identified the cause of your problem. You have a 60%-70% chance of success per transfer. You have more than 90% chance of becoming pregnant after 3 euploid transfers.",
   },
   {
     question: "Does Laser-Assisted Hatching (LAH) improve outcomes in RIF cycles?",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          Yes. In frozen transfer cycles or in older patients with a thick, vitrified, or hardened zona pellucida (&gt;15–18 μm), the embryo may struggle to hatch and break out into the endometrial stroma. Using a precise 1.48 μm non-contact infrared diode laser to thin or create a micro-aperture in the outer shell right before transfer improves hatching mechanics, increasing implantation rates by <strong className="text-white">10% to 15%</strong> in women with prior failed attempts.
-        </p>
-      </div>
-    ),
+    answer:
+      "Laser assisted hatching can be done in case of frozen transfer or in patients with older age group. Sometimes your embryo has difficulty breaking through its outer layer. By doing LAH you can increase your chance of implantation by 10%-15%.",
   },
 ];
 
@@ -176,13 +93,8 @@ export default function RifFaq() {
   return (
     <TreatmentSection>
       <TreatmentSectionHeader
-        eyebrow="Patient questions"
-        title={
-          <>
-            Frequently Asked Questions about
-            <br className="hidden sm:inline" /> Recurrent Implantation Failure
-          </>
-        }
+        eyebrow="Questions About Recurrent Implantation Failure (RIF)"
+        title="Frequently Asked Questions about Recurrent Implantation Failure"
       />
       <FaqAccordion leftItems={leftFaqs} rightItems={rightFaqs} />
     </TreatmentSection>

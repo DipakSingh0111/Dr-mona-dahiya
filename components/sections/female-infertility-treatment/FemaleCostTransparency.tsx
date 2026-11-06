@@ -1,74 +1,70 @@
 "use client";
 
+import Link from "next/link";
 import { FaCheck, FaPills, FaFlask, FaCalendarAlt } from "react-icons/fa";
-import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
+import { Stagger, StaggerItem } from "@/components/ui/Reveal";
 import {
   TreatmentSection,
   TreatmentSectionHeader,
-  CostFactorCard
+  CostFactorCard,
 } from "@/components/ui/treatment";
-interface CostCard {
-  icon: React.ReactNode;
-  title: string;
-  subTitle?: string;
-  description: string;
-  linkText?: string;
-  linkHref?: string;
-  suffix?: string;
-}
 
-const costCards: CostCard[] = [
+const linkClass =
+  "font-medium text-blue underline underline-offset-2 hover:text-blue-dark";
+
+const costCards = [
   {
-    icon: <FaFlask className="size-4 sm:size-5 text-white" />,
-    title: "Initial tests",
-    description:
-      "Hormone panel, HSG and baseline scan: ₹8,000 to ₹16,000.",
+    icon: <FaFlask className="size-4 text-white sm:size-5" />,
+    title: "Tests To Diagnose Infertility",
+    description: "Hormone Profile, HSG & Scan Cost Between 8k-16k",
   },
   {
-    icon: <FaPills className="size-4 sm:size-5 text-white" />,
-    title: "Ovulation",
-    subTitle: "induction",
-    description:
-      "Letrozole and tracking scans: ₹3,000 to ₹6,000 per cycle.",
+    icon: <FaPills className="size-4 text-white sm:size-5" />,
+    title: "Get Yourself To Ovulate",
+    description: "Use Oral Pills To Get Ovulation: 3000-6000 Per Cycle",
   },
   {
-    icon: <FaCalendarAlt className="size-4 sm:size-5 text-white" />,
+    icon: <FaCalendarAlt className="size-4 text-white sm:size-5" />,
     title: "IUI",
-    description:
-      "Sperm preparation and insemination: ₹15,000 per cycle. See ",
-    linkText: "IUI Treatment",
-    linkHref: "/treatments",
+    description: (
+      <>
+        Sperm Preparation &amp; Loading Into Uterus: 15k Per Cycle{" "}
+        <Link href="/best-iui-doctor-in-noida" className={linkClass}>
+          Learn More About IUI
+        </Link>
+      </>
+    ),
   },
   {
-    icon: <FaCheck className="size-4 sm:size-5 text-white" />,
-    title: "IVF, if indicated",
-    description: "Full ",
-    linkText: "IVF Treatment",
-    linkHref: "/treatments",
-    suffix: " cycle planning: ₹1.5 lakh to ₹2.5 lakh.",
+    icon: <FaCheck className="size-4 text-white sm:size-5" />,
+    title: "What Is The Cost Of IVF",
+    description: (
+      <Link href="/ivf-cost-emi" className={linkClass}>
+        Find Out What IVF Costs
+      </Link>
+    ),
   },
 ];
 
 export default function FemaleCostTransparency() {
   return (
     <TreatmentSection>
-        {/* Eyebrow & Title */}
-        <TreatmentSectionHeader
-          eyebrow="Transparency"
-          title={<>What Affects the Cost of
-            <br className="hidden sm:inline" /> Female Infertility Treatment</>}
-          subtitle="Most women start with tests costing ₹8,000 to ₹16,000, and many conceive with low-cost treatment before IVF is needed."
-        />
+      <TreatmentSectionHeader
+        eyebrow="How Much Does Female Infertility Treatment Cost"
+        title="What Affects the Cost of Female Infertility Treatment"
+        subtitle="On Average You Will Spend ₹8,000 to ₹16,000 To Get Tested And Get Pregnant With Affordable Methods."
+      />
 
-        {/* 4 Cards Grid */}
-        <Stagger delay={0.05} className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 sm:gap-5">
-          {costCards.map((card, idx) => (
-            <StaggerItem key={idx}>
-              <CostFactorCard {...card} />
-            </StaggerItem>
-          ))}
-        </Stagger>
-      </TreatmentSection>
+      <Stagger
+        delay={0.05}
+        className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4"
+      >
+        {costCards.map((card) => (
+          <StaggerItem key={card.title}>
+            <CostFactorCard {...card} />
+          </StaggerItem>
+        ))}
+      </Stagger>
+    </TreatmentSection>
   );
 }
-

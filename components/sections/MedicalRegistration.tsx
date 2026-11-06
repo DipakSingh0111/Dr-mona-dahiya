@@ -2,7 +2,14 @@
 
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
-export default function MedicalRegistration({ dark = false }: { dark?: boolean }) {
+export default function MedicalRegistration({
+  dark = false,
+  councilRegLabels,
+}: {
+  dark?: boolean;
+  /** Override the small label under each registration number (e.g. DMC Reg No.) */
+  councilRegLabels?: Partial<Record<"DMC" | "MCI" | "UPMC", string>>;
+}) {
   const registrations = [
     {
       code: "DMC",
@@ -105,7 +112,8 @@ export default function MedicalRegistration({ dark = false }: { dark?: boolean }
                       {item.regNumber}
                     </p>
                     <p className="mt-0.5 text-[11px] text-black sm:text-[11.5px]">
-                      {item.regLabel}
+                      {councilRegLabels?.[item.code as "DMC" | "MCI" | "UPMC"] ??
+                        item.regLabel}
                     </p>
                   </div>
                 </div>

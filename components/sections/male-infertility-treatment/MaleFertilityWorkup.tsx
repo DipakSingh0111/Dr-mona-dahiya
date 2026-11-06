@@ -1,81 +1,94 @@
 "use client";
 
-import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
+import Link from "next/link";
+import { Stagger, StaggerItem } from "@/components/ui/Reveal";
 import {
   TreatmentSection,
   TreatmentSectionHeader,
-  NumberedCard
+  NumberedCard,
 } from "@/components/ui/treatment";
-interface WorkupItem {
-  number: string;
-  title: string;
-  description: string;
-  linkText?: string;
-  linkHref?: string;
-  suffix?: string;
-}
 
-const workupItems: WorkupItem[] = [
-  {
-    number: "1",
-    title: "Low count, motility or shape (OATS)",
-    description:
-      "Count under 16 million/mL, motility under 30% or normal forms under 4%. See ",
-    linkText: "Low Sperm Count & Motility",
-    linkHref: "/treatments",
-    suffix: ".",
-  },
-  {
-    number: "2",
-    title: "High DNA fragmentation (DFI over 25%)",
-    description:
-      "Linked to unexplained infertility and repeated pregnancy loss. See ",
-    linkText: "Sperm DNA Fragmentation Test",
-    linkHref: "/treatments",
-    suffix: ".",
-  },
-  {
-    number: "3",
-    title: "Azoospermia (zero sperm count)",
-    description:
-      "Obstructive and non-obstructive cases, with surgical retrieval. See ",
-    linkText: "Azoospermia Treatment",
-    linkHref: "/treatments",
-    suffix: ".",
-  },
-  {
-    number: "4",
-    title: "Varicocele",
-    description:
-      "Swollen scrotal veins that overheat the testes and damage sperm production.",
-  },
-  {
-    number: "5",
-    title: "Sexual or ejaculatory problems",
-    description:
-      "Retrograde ejaculation, anejaculation or erectile difficulty that prevents timed intercourse.",
-  },
-];
+const linkClass =
+  "font-medium text-blue underline underline-offset-2 hover:text-blue-dark";
 
 export default function MaleFertilityWorkup() {
   return (
     <TreatmentSection>
-        {/* Eyebrow & Title */}
-        <TreatmentSectionHeader
-          eyebrow="Who needs a workup"
-          title={<>Who Needs a Dedicated
-            <br className="hidden sm:inline" /> Male Fertility Workup?</>}
-        />
+      <TreatmentSectionHeader
+        eyebrow="Indications"
+        title="Who Needs a Dedicated Male Fertility Workup?"
+        subtitle="Reasons why you may want to consult us for Male Infertility."
+      />
 
-        {/* Cards Grid */}
-        <Stagger delay={0.06} className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-5">
-          {workupItems.map((item, idx) => (
-            <StaggerItem key={idx}>
-              <NumberedCard {...item} />
-            </StaggerItem>
-          ))}
-        </Stagger>
-      </TreatmentSection>
+      <Stagger
+        delay={0.06}
+        className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-5"
+      >
+        <StaggerItem>
+          <NumberedCard
+            number="1"
+            title="Oligoasthenoteratozoospermia (Decreased count motility and morphology)"
+            description={
+              <>
+                Consult us if you have sperm count &lt; 15 million/ml or sperm
+                motility &lt; 32% or sperm morphology &lt;4%.{" "}
+                <Link href="/low-sperm-count-oligospermia" className={linkClass}>
+                  Click here
+                </Link>{" "}
+                →
+              </>
+            }
+          />
+        </StaggerItem>
+        <StaggerItem>
+          <NumberedCard
+            number="2"
+            title="High Sperm DNA fragmentation"
+            description={
+              <>
+                If your sperm DFI is &gt;25% you may want to read this article.
+                High DFI can cause unexplained infertility and repeated
+                miscarriages. (
+                <Link href="/sperm-dna-fragmentation-test" className={linkClass}>
+                  read this article
+                </Link>
+                )
+              </>
+            }
+          />
+        </StaggerItem>
+        <StaggerItem>
+          <NumberedCard
+            number="3"
+            title="Azoospermia"
+            description={
+              <>
+                When there is no sperm found in your ejaculate. Either it can be
+                blocked or there is no production of sperm. We can retrieve sperm
+                from you surgically.{" "}
+                <Link href="/azoospermia-treatment" className={linkClass}>
+                  Read more
+                </Link>{" "}
+                →
+              </>
+            }
+          />
+        </StaggerItem>
+        <StaggerItem>
+          <NumberedCard
+            number="4"
+            title="Varicocele"
+            description="Varicocele is when there is dilation of veins in your scrotum. This leads to higher temperature in your testes and reduced sperm production."
+          />
+        </StaggerItem>
+        <StaggerItem>
+          <NumberedCard
+            number="5"
+            title="Sexual problems"
+            description='This may include problems with Ejaculation such as retrograde ejaculation no ejaculation and Erectile Dysfunction.'
+          />
+        </StaggerItem>
+      </Stagger>
+    </TreatmentSection>
   );
 }
-

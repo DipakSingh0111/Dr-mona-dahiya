@@ -1,143 +1,157 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+import type { ReactNode } from "react";
+
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 import {
   TreatmentSection,
   TreatmentSectionHeader,
   ProtocolCard,
-  WhyPointRow
+  WhyPointRow,
 } from "@/components/ui/treatment";
-const protocols = [
+
+const protocols: {
+  number: string;
+  title: string;
+  bullets: ReactNode[];
+}[] = [
   {
     number: "1",
-    title: "Baseline assessment (days 1–3)",
+    title: "Start of Cycle",
     bullets: [
-      "Scan and hormone bloods to confirm readiness",
-      "Protocol and medicine plan confirmed",
+      "Do an Ultrasound to check if any cyst is present.",
+      "Check your Blood levels to make sure Progesterone is < 1 ng/ml and Estradiol < 50pg/ml before starting.",
     ],
   },
   {
     number: "2",
-    title: "Controlled ovarian stimulation (days 3–11)",
+    title: "Start Stimulating your Ovaries",
     bullets: [
-      "Daily or tailored gonadotropin injections",
-      "Serial scans and estradiol to track response",
+      "Begin injections of FSH or hMG. These are recombinant drugs that will help grow more follicles.",
+      "Scan and check Estradiol level every other day.",
     ],
   },
   {
     number: "3",
-    title: "Ovulatory trigger (day 11 or 12)",
+    title: "Give Trigger Shot",
     bullets: [
-      "hCG or agonist trigger timed to follicle maturity",
-      "Retrieval scheduled 34–36 hours later",
+      "When 2 or more follicles reach a size of 17-19mm we inject with r-hCG + GnRH Agonist.",
     ],
   },
   {
     number: "4",
-    title: "Egg retrieval and semen processing (day 13 or 14)",
+    title: "Egg Pick up",
     bullets: [
-      "Ultrasound-guided oocyte pickup under sedation",
-      "Partner sample prepared or frozen sperm thawed",
+      "Pick up eggs with minimal sedation and scan. Will take approx 15-20 mins.",
+      "Wash sperm and process them using density gradient method.",
     ],
   },
   {
     number: "5",
-    title: "Fertilisation and extended culture (days 14–19)",
+    title: "Grow Embryos",
     bullets: [
-      "IVF or ICSI based on semen and egg factors",
-      "Culture to day 5 blastocyst when possible",
+      "We will either do IVF or ICSI in our own incubators in a certified class 10000 clean room.",
+      "Grow embryos to Blastocyst stage which is Day 5 or 6.",
     ],
   },
   {
     number: "6",
-    title: "Blastocyst transfer (day 18 or 19)",
+    title: "Transfer Embryo",
     bullets: [
-      "Fresh transfer or freeze-all, as clinically indicated",
-      "Single embryo transfer preferred when suitable",
+      "Transfer blastocyst fresh or frozen using a soft catheter. Will be placed 1.5cm away from fundus. No sedation is needed.",
+      <>
+        Freeze remaining Embryos if any. Know More about{" "}
+        <Link
+          href="/embryo-cryopreservation"
+          className="font-bold text-blue underline underline-offset-2 transition-colors hover:text-rose"
+        >
+          Freezing your Embryos
+        </Link>
+      </>,
     ],
   },
   {
     number: "7",
-    title: "Luteal support and pregnancy test (days 19–33)",
+    title: "Pregnancy Test",
     bullets: [
-      "Progesterone support after transfer",
-      "Serum β-hCG about 10–12 days after transfer",
+      "Start Progesterone tablets/injections after Egg Retrieval.",
+      "Test for pregnancy on Day 9-11 after transfer (Day 14 after Egg pick up).",
     ],
   },
 ];
 
 const whyPoints = [
   {
-    title: "Gold-medalist clinical training",
-    desc: "MBBS gold medalist with MD and DNB — rigorous foundations for complex IVF decisions.",
+    title: "Gold-medalist clinical training:",
+    desc: "MBBS (Gold Medalist, Lady Hardinge Medical College), MD in Obstetrics & Gynaecology (Gold Medalist, Maulana Azad Medical College) and DNB.",
   },
   {
-    title: "International fellowship",
-    desc: "IVF fellowship at Singapore General Hospital, bringing global lab and clinical standards home.",
+    title: "International fellowship:",
+    desc: "Did a Fellowship in ART from Singapore General Hospital.",
   },
   {
-    title: "Laboratory precision",
-    desc: "Protocols tuned for egg quality, ICSI when needed, and careful blastocyst selection.",
+    title: "Latest Lab Practices:",
+    desc: "Using the latest technology like benchtop incubators, Laser Assisted Hatching and Micro fluidic technique to process sperm. Do PGT-A/M if needed.",
   },
   {
-    title: "Direct physician care",
-    desc: "Dr. Mona meets couples herself at key visits — not a hand-off between rotating teams.",
+    title: "Direct physician care:",
+    desc: "Consultations, follicle scans, egg retrievals and embryo transfers are done by Dr. Dahiya herself.",
   },
 ];
 
 export default function IvfProtocolAndWhy() {
   return (
     <TreatmentSection>
-        <div className="mb-14 sm:mb-16 lg:mb-20">
-          <TreatmentSectionHeader
-          eyebrow="How it works"
+      <div className="mb-14 sm:mb-16 lg:mb-20">
+        <TreatmentSectionHeader
+          eyebrow="How is IVF done?"
           title="Step-by-Step IVF Treatment Protocol"
-          subtitle="What to expect at each stage. Exact days are set at your consultation."
         />
 
-          <Stagger
-            delay={0.05}
-            className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
-          >
-            {protocols.map((item) => (
-              <StaggerItem key={item.number}>
+        <Stagger
+          delay={0.05}
+          className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
+        >
+          {protocols.map((item) => (
+            <StaggerItem key={item.number}>
               <ProtocolCard {...item} />
             </StaggerItem>
-            ))}
-          </Stagger>
-        </div>
+          ))}
+        </Stagger>
+      </div>
 
-        <div>
-          <TreatmentSectionHeader
-          eyebrow="Expertise & authority"
-          title="Why Consult Dr. Mona Dahiya for IVF?"
+      <div>
+        <TreatmentSectionHeader
+          eyebrow="Education"
+          title="Why choose Dr. Mona Dahiya for your IVF Treatment"
         />
 
-          <div className="mt-7 grid grid-cols-1 items-start gap-6 lg:grid-cols-12 lg:gap-8">
-            <div className="flex flex-col gap-3.5 sm:gap-4 lg:col-span-7">
-              {whyPoints.map((point, idx) => (
-                <Reveal key={point.title} variant="fadeUp" delay={idx * 0.05}>
-              <WhyPointRow {...point} />
-            </Reveal>
-              ))}
-            </div>
-
-            <div className="relative mx-auto w-full max-w-[380px] lg:col-span-5 lg:mx-0 lg:max-w-none">
-              <Reveal variant="scaleIn" delay={0.08}>
-                <div className="relative overflow-hidden rounded-[20px] border-[3px] border-white/70 shadow-[0_20px_50px_rgba(0,10,40,0.45)] sm:rounded-[24px]">
-                  <Image
-                    src="/images/about-mona-dahiya/female-infertility.jpg"
-                    alt="Dr. Mona Dahiya at clinic consultation"
-                    width={480}
-                    height={560}
-                    className="max-h-[420px] w-full object-cover object-top sm:max-h-[480px]"
-                  />
-                </div>
+        <div className="mt-7 grid grid-cols-1 items-start gap-6 lg:grid-cols-12 lg:gap-8">
+          <div className="flex flex-col gap-3.5 sm:gap-4 lg:col-span-7">
+            {whyPoints.map((point, idx) => (
+              <Reveal key={point.title} variant="fadeUp" delay={idx * 0.05}>
+                <WhyPointRow {...point} />
               </Reveal>
-            </div>
+            ))}
+          </div>
+
+          <div className="relative mx-auto w-full max-w-[380px] lg:col-span-5 lg:mx-0 lg:max-w-none">
+            <Reveal variant="scaleIn" delay={0.08}>
+              <div className="relative overflow-hidden rounded-[20px] border-[3px] border-white/70 shadow-[0_20px_50px_rgba(0,10,40,0.45)] sm:rounded-[24px]">
+                <Image
+                  src="/images/about-mona-dahiya/female-infertility.jpg"
+                  alt="Dr. Mona Dahiya at clinic"
+                  width={480}
+                  height={560}
+                  className="max-h-[420px] w-full object-cover object-top sm:max-h-[480px]"
+                />
+              </div>
+            </Reveal>
           </div>
         </div>
-      </TreatmentSection>
+      </div>
+    </TreatmentSection>
   );
 }

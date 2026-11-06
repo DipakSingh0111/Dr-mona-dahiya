@@ -246,7 +246,7 @@
           },
           {
             "label": "PCOS Success Stories",
-            "href": "/404"
+            "href": "/pcos-stories"
           },
           {
             "label": "IUI Success Stories",
@@ -835,7 +835,7 @@
         {
           "title": "PCOS & PCOD Success Stories",
           "desc": "Safe ovulation and OHSS-free IVF",
-          "href": "/success-stories#pcos"
+          "href": "/pcos-stories"
         },
         {
           "title": "IUI Success Stories",
@@ -864,7 +864,7 @@
         },
         {
           "city": "Ghaziabad",
-          "tag": "RAJ NAGAR",
+          "tag": "RAJ NAGAR EXTENSION",
           "image": "/images/clinics/ghaziabad.jpg",
           "address": "2nd Floor, RDC, C-53A, near Bikanerwala, Sector 15, Sector 10, Raj Nagar, Ghaziabad, Uttar Pradesh 201002",
           "mapsUrl": "https://www.google.com/maps/search/?api=1&query=2nd+Floor+RDC+C-53A+near+Bikanerwala+Raj+Nagar+Ghaziabad",
@@ -2150,7 +2150,7 @@
           "id": "pcos",
           "title": "PCOS & PCOD Success Stories",
           "description": "Safe ovulation and OHSS-free IVF",
-          "href": "/success-stories#pcos",
+          "href": "/pcos-stories",
           "accent": "magenta"
         },
         {

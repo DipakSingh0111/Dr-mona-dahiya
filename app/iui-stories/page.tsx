@@ -14,14 +14,14 @@ import AboutParenthoodCta from "@/components/sections/about-mona-dahiya/AboutPar
 import { SectionReveal } from "@/components/ui/Reveal";
 
 export const metadata: Metadata = {
-  title: "Real IUI Success Stories | Dr. Mona Dahiya Fertility Specialist",
+  title: "Real IUI Success Stories | Dr. Mona Dahiya",
   description:
-    "Read real IUI success stories from couples treated by Dr. Mona Dahiya in Noida, Delhi and Ghaziabad — ultrasound-timed IUI, usually within 2 to 3 cycles.",
+    "Real ultrasound-timed IUI success stories from couples treated by Dr. Mona Dahiya across Noida, Delhi and Ghaziabad.",
 };
 
 export default function IuiSuccessStoriesPage() {
   return (
-    <main className="flex min-h-screen flex-col">
+    <main className="flex min-h-screen flex-col bg-pink">
       <IuiHero />
 
       <SectionReveal>
@@ -45,7 +45,11 @@ export default function IuiSuccessStoriesPage() {
       </SectionReveal>
 
       <SectionReveal delay={0.04}>
-        <IvfSuccessClinics />
+        <IvfSuccessClinics
+          eyebrow="Book Your Appointment Today!"
+          title="Book a Consultation at Our Clinics"
+          subtitle="Click on your city of choice! We have clinics located in Noida, Ghaziabad and Delhi, India. Click to book an online consultation."
+        />
       </SectionReveal>
 
       <SectionReveal delay={0.04}>
@@ -57,8 +61,8 @@ export default function IuiSuccessStoriesPage() {
           sectionId="book-consultation"
           eyebrow="Next step"
           title="Book an IUI Consultation"
-          subtitle="Book an in-clinic consultation or an online review of your reports with Dr. Mona Dahiya. Call"
-          appendContacts={true}
+          subtitle="Book an in-clinic consultation or an online review of your reports. Call +91 92679 82924."
+          appendContacts={false}
         />
       </SectionReveal>
 

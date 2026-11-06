@@ -4,77 +4,72 @@ import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 import {
   TreatmentSection,
   TreatmentSectionHeader,
-  CostFactorCard
+  CostFactorCard,
 } from "@/components/ui/treatment";
-interface CostCard {
-  iconType: "check" | "pills";
-  title: string;
-  description: string;
-}
 
-const costCards: CostCard[] = [
+const costCards = [
   {
-    iconType: "check",
     title: "Evaluation",
-    description: "Repeat semen tests, scans and hormones.",
+    description:
+      "Semens done repeatedly along with Scans and Hormones.",
   },
   {
-    iconType: "pills",
     title: "Treatment of the cause",
-    description: "Medicines or varicocele surgery.",
+    description: "If any medication required or Surgery needed.",
   },
   {
-    iconType: "check",
     title: "IUI cycles",
-    description: "Medicines, monitoring and sperm preparation.",
+    description:
+      "If going for IUI Medications and monitoring and processing of sperm.",
   },
   {
-    iconType: "check",
     title: "IVF or ICSI",
-    description: "Stimulation, ICSI and embryo transfer.",
+    description:
+      "If doing IVF and ICSI Stimulation and ICSI procedure and Transfer.",
   },
 ];
 
 export default function LowSpermCaseAndCost() {
   return (
     <TreatmentSection>
-        {/* ================= SECTION 1: Clinical Case Insight ================= */}
-        <div className="mb-14 sm:mb-16 lg:mb-20">
-          <TreatmentSectionHeader
-          eyebrow="From the clinic"
+      <div className="mb-14 sm:mb-16 lg:mb-20">
+        <TreatmentSectionHeader
+          eyebrow="Articles from our Clinic"
           title="Clinical Case Insight"
         />
 
-          <Reveal variant="fadeUp" delay={0.06} className="mt-6">
-            <div className="card-highlight rounded-2xl border border-[#fde2ec] bg-white p-6 sm:p-7 shadow-[0_8px_24px_rgba(232,62,116,0.06)]">
-              <p className="text-[14px] leading-relaxed font-medium text-ink sm:text-[15.5px]">
-                A man with a low count and poor motility had a varicocele and an unhealthy lifestyle. After correction and three months of follow-up, his semen quality improved enough to move from planned ICSI to a trial of IUI.
-              </p>
-              <p className="mt-3 text-[12px] text-ink/65">
-                Details changed to protect patient privacy. Individual results vary.
-              </p>
-            </div>
-          </Reveal>
-        </div>
+        <Reveal variant="fadeUp" delay={0.06} className="mt-6">
+          <div className="card-highlight rounded-2xl border border-[#fde2ec] bg-white p-6 sm:p-7 shadow-[0_8px_24px_rgba(232,62,116,0.06)]">
+            <p className="text-[14px] leading-relaxed font-medium text-ink sm:text-[15.5px]">
+              A patient came to us with low count and motility. Had varicocele
+              and was living an unhealthy lifestyle. We corrected his varicocele
+              and lifestyle and after 3 months we did a successful IUI Procedure.
+            </p>
+            <p className="mt-3 text-[12px] text-ink/65">
+              * Names have been changed to protect patients identity
+            </p>
+          </div>
+        </Reveal>
+      </div>
 
-        {/* ================= SECTION 2: Cost Factors Breakdown ================= */}
-        <div>
-          <TreatmentSectionHeader
-          eyebrow="Transparency"
+      <div>
+        <TreatmentSectionHeader
+          eyebrow="Prices we offer"
           title="Cost Factors Breakdown"
-          subtitle="Cost depends on whether treatment is medical, surgical or assisted reproduction. We explain the likely route before you commit."
+          subtitle="Different Prices depend upon medical management, surgery and Assisted Reproduction Technique."
         />
 
-          {/* 4 Cards Grid */}
-          <Stagger delay={0.05} className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 sm:gap-5">
-            {costCards.map((card, idx) => (
-              <StaggerItem key={idx}>
+        <Stagger
+          delay={0.05}
+          className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 sm:gap-5"
+        >
+          {costCards.map((card) => (
+            <StaggerItem key={card.title}>
               <CostFactorCard {...card} />
             </StaggerItem>
-            ))}
-          </Stagger>
-        </div>
-      </TreatmentSection>
+          ))}
+        </Stagger>
+      </div>
+    </TreatmentSection>
   );
 }
-

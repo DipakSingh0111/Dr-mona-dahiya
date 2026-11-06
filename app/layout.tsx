@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import ScrollToTop from "@/components/layout/ScrollToTop";
 import HeaderHeightSync from "@/components/layout/HeaderHeightSync";
 import TopBar from "@/components/layout/TopBar";
@@ -8,10 +8,10 @@ import Footer from "@/components/layout/Footer";
 import FloatingActions from "@/components/layout/FloatingActions";
 import "./globals.css";
 
-const poppins = Poppins({
-  variable: "--font-poppins",
+const openSans = Open_Sans({
+  variable: "--font-open-sans",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  weight: ["300", "400", "500", "600", "700", "800"],
   display: "swap",
 });
 
@@ -30,7 +30,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${poppins.variable} antialiased`}
+      className={`${openSans.variable} antialiased`}
     >
       <head>
         {/* Disable browser scroll restore so pages always open from top */}

@@ -14,27 +14,24 @@ const leftFaqs: FaqItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Azoospermia means no measurable spermatozoa in the ejaculate after
-          centrifugation. Two clinical types guide treatment:
+          Azoospermia can be defined as no measurable amount of spermatozoa
+          present in an individual&apos;s ejaculate when examined under
+          centrifugal pellet. Approximately 1% of men have Azoospermia and
+          around 10-15% of infertile men.
         </p>
-        <ul className="space-y-2 pl-1">
-          <li className="flex items-start gap-2">
-            <span className="pt-1 text-[13px] text-rose select-none">•</span>
-            <p>
-              <strong className="font-semibold text-black">
-                Obstructive Azoospermia (OA, ~40% of cases):
-              </strong>{" "}
-              Sperm is produced but blocked from reaching the semen.
-            </p>
+        <p>Azoospermia can be obstructive or non obstructive in nature.</p>
+        <ul className="list-disc space-y-2 pl-5">
+          <li>
+            <span className="font-semibold">Obstructive Azoospermia:</span> When
+            the testes are healthy and are able to produce sperms. However the
+            spermatozoa are blocked from reaching the ejaculate. Can be caused
+            due to previous vasectomy or infection or due to vas deferens not
+            being present.
           </li>
-          <li className="flex items-start gap-2">
-            <span className="pt-1 text-[13px] text-rose select-none">•</span>
-            <p>
-              <strong className="font-semibold text-black">
-                Non-Obstructive Azoospermia (NOA, ~60% of cases):
-              </strong>{" "}
-              Production inside the testis is severely reduced or absent.
-            </p>
+          <li>
+            <span className="font-semibold">Non Obstructive Azoospermia:</span>{" "}
+            Can be caused due to defective genes, Varicocele, hormonal
+            imbalance, cryptorchidism and previous exposure to toxic substances.
           </li>
         </ul>
       </div>
@@ -45,24 +42,23 @@ const leftFaqs: FaqItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          Diagnosis does not mean sterility. Many men still have usable sperm
-          in the testis or epididymis:
+          There are several ways in which we can get sperm from you and perform
+          ICSI. Hence giving you the option to have biological children. Roughly
+          70% - 80% of patients who have obstructive or non obstructive
+          azoospermia are able to have biological children.
         </p>
-        <ul className="space-y-2 pl-1">
-          <li className="flex items-start gap-2">
-            <span className="pt-1 text-[13px] text-rose select-none">•</span>
-            <p>
-              <strong className="font-semibold text-black">OA:</strong> Sperm
-              retrieval success is typically 95%–100% with PESA or TESA.
-            </p>
+        <ul className="list-disc space-y-2 pl-5">
+          <li>
+            <span className="font-semibold">For Obstructive Azoospermia:</span>{" "}
+            We are able to obtain viable sperms 95-100% of the time using simple
+            needle aspiration method (PESA/TESA)
           </li>
-          <li className="flex items-start gap-2">
-            <span className="pt-1 text-[13px] text-rose select-none">•</span>
-            <p>
-              <strong className="font-semibold text-black">NOA:</strong>{" "}
-              Micro-TESE finds sperm in about 50%–60% of carefully selected
-              cases.
-            </p>
+          <li>
+            <span className="font-semibold">
+              For Non Obstructive Azoospermia:
+            </span>{" "}
+            Using advanced technique of Micro TESE we are able to obtain sperms
+            50-60% of the time.
           </li>
         </ul>
       </div>
@@ -73,101 +69,50 @@ const leftFaqs: FaqItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          A thorough clinical workup differentiates obstructive from
-          non-obstructive causes in four steps:
+          Following are some basic tests that can determine the cause of your
+          Azoospermia.
         </p>
-        <ol className="space-y-2 pl-1">
-          <li className="flex items-start gap-2">
-            <span className="pt-0.5 text-[13px] font-bold text-rose">1.</span>
-            <p>
-              <strong className="font-semibold text-black">
-                Centrifuged Semen Analysis:
-              </strong>{" "}
-              Verifies zero sperm in the resuspended pellet alongside semen
-              volume and pH (pH below 7.2 with low volume indicates ejaculatory
-              duct obstruction or CBAVD).
-            </p>
+        <ul className="list-disc space-y-2 pl-5">
+          <li>
+            <span className="font-semibold">
+              Check semen after centrifugation:
+            </span>{" "}
+            Semen pellet should not have any spermatozoa and also check for
+            semen volume and ph. Low ph with low volume can indicate a blockage
+            in ejaculatory duct or absence of vas deferens.
           </li>
-          <li className="flex items-start gap-2">
-            <span className="pt-0.5 text-[13px] font-bold text-rose">2.</span>
-            <p>
-              <strong className="font-semibold text-black">
-                Endocrine Profiling:
-              </strong>{" "}
-              Morning serum Total Testosterone, FSH, LH and Prolactin. Markedly
-              elevated FSH (above 7.6–10 mIU/mL) with small testicular volume
-              strongly indicates primary testicular failure (NOA).
-            </p>
+          <li>
+            <span className="font-semibold">Hormones:</span> Check Total
+            Testosterone in morning, FSH, LH and Prolactin. If your FSH value is
+            significantly higher (&gt;7.6-10 mIU/ml) and you have low testicular
+            volume. There is a high chance of you having NOA.
           </li>
-          <li className="flex items-start gap-2">
-            <span className="pt-0.5 text-[13px] font-bold text-rose">3.</span>
-            <p>
-              <strong className="font-semibold text-black">
-                Genetic Testing:
-              </strong>{" "}
-              Karyotyping to rule out Klinefelter syndrome (47,XXY) and
-              Y-chromosome microdeletion testing (AZF a, b, c regions). Men with
-              complete AZFa or AZFb deletions have virtually no chance of sperm
-              retrieval; AZFc deletions retain about a 50% Micro-TESE retrieval
-              success rate.
-            </p>
+          <li>
+            <span className="font-semibold">Genetics:</span> Check for
+            Klinefelters (47,XXY) by doing a karyotype. Y-Micro Deletion can
+            detect defects in AZF a,b,c region. If you have AZF a/b deletion the
+            chances of finding sperms are very negligible. You still have about
+            50% chance of obtaining sperms if you have AZFc deletion.
           </li>
-          <li className="flex items-start gap-2">
-            <span className="pt-0.5 text-[13px] font-bold text-rose">4.</span>
-            <p>
-              <strong className="font-semibold text-black">
-                Scrotal & Transrectal Ultrasound (TRUS):
-              </strong>{" "}
-              Identifies subclinical varicoceles, epididymal dilation, seminal
-              vesicle cysts, or absent vas deferens.
-            </p>
+          <li>
+            <span className="font-semibold">Ultrasound:</span> Scan for any
+            varicocele or enlargement of epididymis. Trans rectal scan can
+            identify any abnormalities in seminal vesicles and vas deferens.
           </li>
-        </ol>
+        </ul>
       </div>
     ),
   },
   {
     question:
       "What is Micro-TESE, and why is it the gold standard for Non-Obstructive Azoospermia?",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          Microdissection Testicular Sperm Extraction (Micro-TESE) is an
-          advanced microsurgical procedure performed under an operating
-          microscope at 20x to 25x magnification. Unlike blind random needle
-          biopsies (TESA) that hit active tubules only 15%–25% of the time,
-          Micro-TESE allows the surgeon to inspect the seminiferous tubules
-          directly.
-        </p>
-        <p>
-          The surgeon selectively excises only opaque, dilated, sperm-producing
-          tubules while preserving thin, atrophic tubules and delicate
-          testicular blood vessels. This doubles sperm retrieval rates to
-          50%–60% while reducing tissue loss by 70-fold compared to conventional
-          open biopsies.
-        </p>
-      </div>
-    ),
+    answer:
+      "Micro TESE is a technique where sperms can be extracted using a microscope. The magnification used during the procedure is about 20x-25x. The advantage of doing a Micro TESE procedure versus blind picking sperms (TESA) is you increase the chances of finding sperms by almost twice. Where with TESA you have 15% -25% chance of hitting the sperm producing tubules during random biopsy. During Micro TESE we can pick out those tubules that contain sperms and biopsy only those. Reducing damage to the testis by about 70 times.",
   },
   {
     question: "Can azoospermia be cured or treated with medications?",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          Medication is only curative in cases of Hypogonadotropic Hypogonadism
-          (secondary testicular failure), which accounts for roughly 1% to 2% of
-          all azoospermia cases. In these patients, the pituitary gland fails to
-          signal otherwise normal testes.
-        </p>
-        <p>
-          Gonadotropin therapy (hCG paired with recombinant FSH), and in
-          selected men clomiphene citrate or anastrozole, stimulates natural
-          spermatogenesis, restoring viable sperm directly into the ejaculate
-          within 6 to 12 months without surgery. For physical obstructions or
-          intrinsic testicular damage, medications are ineffective.
-        </p>
-      </div>
-    ),
+    answer:
+      "Yes if you have secondary causes of testicular failure (Hypogonadotrophic) which makes up 1-2% of all azoospermia cases. We can stimulate spermatogenesis in these patients with Hcg + Recombinant FSH or Clomid or Anastrozole. Once your sperms have reached your ejaculate they can be used for IVF procedure. If your azoospermia is due to blockage or damage in your testis you will not respond to medicines.",
   },
 ];
 
@@ -175,36 +120,27 @@ const rightFaqs: FaqItem[] = [
   {
     question: "What is the difference between PESA, TESA, and Micro-TESE?",
     answer: (
-      <ul className="space-y-2.5 pl-1">
-        <li className="flex items-start gap-2">
-          <span className="pt-1 text-[13px] text-rose select-none">•</span>
-          <p>
-            <strong className="font-semibold text-black">
-              PESA (Percutaneous Epididymal Sperm Aspiration):
-            </strong>{" "}
-            Needle aspiration from the epididymis — mainly for obstructive
-            cases.
-          </p>
+      <ul className="list-disc space-y-2 pl-5">
+        <li>
+          <span className="font-semibold">
+            PESA (Percutaneous Epididymal Sperm Aspiration):
+          </span>{" "}
+          Uses a butterfly shaped needle to aspirate sperm containing fluid from
+          epididymis. Used when there is a blockage or after Vasectomy.
         </li>
-        <li className="flex items-start gap-2">
-          <span className="pt-1 text-[13px] text-rose select-none">•</span>
-          <p>
-            <strong className="font-semibold text-black">
-              TESA (Testicular Sperm Aspiration):
-            </strong>{" "}
-            Needle aspiration from testicular tissue; useful in selected OA and
-            milder NOA.
-          </p>
+        <li>
+          <span className="font-semibold">
+            TESA (Testicular Sperm Aspiration):
+          </span>{" "}
+          Aspirates spermatogenic tissue from testis. Can be used if you have
+          obstructive azoospermia or unresolvable high DNA fragmentations.
         </li>
-        <li className="flex items-start gap-2">
-          <span className="pt-1 text-[13px] text-rose select-none">•</span>
-          <p>
-            <strong className="font-semibold text-black">
-              Micro-TESE (Microsurgical Testicular Sperm Extraction):
-            </strong>{" "}
-            Microscope-guided search for sperm-producing tubules — the preferred
-            approach for NOA.
-          </p>
+        <li>
+          <span className="font-semibold">
+            Micro TESE (Micro Surgical Testicular Sperm Aspiration):
+          </span>{" "}
+          Micro dissecting the testicular tissue to find sperms. Can be used for
+          patients with testicular failure.
         </li>
       </ul>
     ),
@@ -212,66 +148,39 @@ const rightFaqs: FaqItem[] = [
   {
     question: "What are the common causes and risk factors for azoospermia?",
     answer: (
-      <ul className="space-y-2.5 pl-1">
-        <li className="flex items-start gap-2">
-          <span className="pt-1 text-[13px] text-rose select-none">•</span>
-          <p>
-            <strong className="font-semibold text-black">
-              Genetic Anomalies:
-            </strong>{" "}
-            e.g. Klinefelter syndrome.
-          </p>
-        </li>
-        <li className="flex items-start gap-2">
-          <span className="pt-1 text-[13px] text-rose select-none">•</span>
-          <p>
-            <strong className="font-semibold text-black">
-              Surgical & Medical History:
-            </strong>{" "}
-            undescended testes, chemotherapy, prior genital surgery.
-          </p>
-        </li>
-        <li className="flex items-start gap-2">
-          <span className="pt-1 text-[13px] text-rose select-none">•</span>
-          <p>
-            <strong className="font-semibold text-black">
-              Physical Blockages:
-            </strong>{" "}
-            infections (e.g. Chlamydia), vasectomy, ejaculatory duct stones.
-          </p>
-        </li>
-        <li className="flex items-start gap-2">
-          <span className="pt-1 text-[13px] text-rose select-none">•</span>
-          <p>
-            <strong className="font-semibold text-black">
-              Exogenous Hormone Use:
-            </strong>{" "}
-            Anabolic steroid misuse or testosterone replacement therapy (TRT),
-            which shuts down pituitary LH/FSH signals via negative feedback.
-          </p>
-        </li>
-      </ul>
+      <div className="space-y-3">
+        <p>Azoospermia can be caused due to many factors.</p>
+        <ul className="list-disc space-y-2 pl-5">
+          <li>
+            <span className="font-semibold">Genetics:</span> Klinefelters make
+            up for 10%-12% of all non obstructive azoospermia cases. Micro
+            Deletions (AZF gene), absence of vas deferens due to mutations in
+            CFTR gene.
+          </li>
+          <li>
+            <span className="font-semibold">Past Surgeries/Medical Problems:</span>{" "}
+            Having undescended testes at birth, previous history of Mumps in
+            childhood. Testicular Torsion/Hernia repair, chemo/radiation.
+          </li>
+          <li>
+            <span className="font-semibold">Blockage:</span> Vasectomy or
+            infection from STDs. Chlamydia and Gonorrhea can lead to scar tissue
+            formation in Epididymis.
+          </li>
+          <li>
+            <span className="font-semibold">Hormonal Problems:</span> Taking
+            Testosterone injections or using steroids can also lead to
+            Azoospermia.
+          </li>
+        </ul>
+      </div>
     ),
   },
   {
     question:
       "Does azoospermia affect sexual performance, erection, or semen appearance?",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          In the vast majority of men, no. Over 90% of ejaculate volume is made
-          downstream by the seminal vesicles and prostate gland; sperm
-          contributes less than 2% to 5% of total seminal fluid.
-        </p>
-        <p>
-          Ejaculate colour, consistency, libido and erectile function remain
-          entirely normal unless severe primary hypogonadism is present (low
-          testosterone causing fatigue and reduced sex drive). Men with
-          azoospermia ejaculate normally and rarely suspect any issue until an
-          infertility workup is conducted.
-        </p>
-      </div>
-    ),
+    answer:
+      "No your sexual life should not be impacted by having azoospermia. Sperms make up less than 2%-5% of your ejaculate. Your volume and colour should appear to be normal. Unless you have a significant drop in testosterone due to primary hypogonadism. Which can cause a decrease in your libido and sex drive.",
   },
   {
     question:
@@ -279,44 +188,28 @@ const rightFaqs: FaqItem[] = [
     answer: (
       <div className="space-y-3">
         <p>
-          When viable sperm is retrieved via PESA, TESA or Micro-TESE, it is
-          paired with Intracytoplasmic Sperm Injection (ICSI). Because
-          testicular sperm lack the full progressive motility of ejaculated
-          cells, an embryologist manually selects structurally sound, viable
-          sperm and injects one into each mature egg:
+          Once we extract sperms from your testes they will be used for an ICSI
+          procedure. Since sperms extracted from your testes are not mobile we
+          will need an embryologist to pick good looking sperms. And inject them
+          into your partner&apos;s egg.
         </p>
-        <ul className="space-y-2 pl-1">
-          <li className="flex items-start gap-2">
-            <span className="pt-1 text-[13px] text-rose select-none">•</span>
-            <p>
-              <strong className="font-semibold text-black">
-                Fertilisation Rates:
-              </strong>{" "}
-              65% to 75% per injected mature oocyte.
-            </p>
+        <ul className="list-disc space-y-2 pl-5">
+          <li>
+            <span className="font-semibold">
+              Rates of fertilization with ICSI:
+            </span>{" "}
+            65%-75% per egg
           </li>
-          <li className="flex items-start gap-2">
-            <span className="pt-1 text-[13px] text-rose select-none">•</span>
-            <p>
-              <strong className="font-semibold text-black">
-                Clinical Pregnancy Rates:
-              </strong>{" "}
-              50% to 60% per transfer, primarily dictated by the female
-              partner&apos;s age and ovarian reserve.
-            </p>
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="pt-1 text-[13px] text-rose select-none">•</span>
-            <p>
-              <strong className="font-semibold text-black">
-                Neonatal Health:
-              </strong>{" "}
-              Long-term follow-up data shows children conceived using surgically
-              retrieved testicular sperm have birth defect rates comparable to
-              conventional IVF with ejaculated sperm (~2%–3%).
-            </p>
+          <li>
+            <span className="font-semibold">Rates of pregnancy:</span> 50%-60%
+            per transfer depends on your partner&apos;s age.
           </li>
         </ul>
+        <p>
+          Yes there are no known anomalies if using sperm from the testes.
+          Studies have shown similar outcomes of birth defects using testicular
+          sperms compared to conventional IVF (around 2%-3%).
+        </p>
       </div>
     ),
   },
@@ -325,59 +218,36 @@ const rightFaqs: FaqItem[] = [
       "How much does azoospermia treatment and surgical sperm retrieval cost in India?",
     answer: (
       <div className="space-y-3">
-        <p>
-          Treatment pricing depends on whether the approach involves medical
-          therapy or surgical intervention:
-        </p>
-        <ul className="space-y-2 pl-1">
-          <li className="flex items-start gap-2">
-            <span className="pt-1 text-[13px] text-rose select-none">•</span>
-            <p>
-              <strong className="font-semibold text-black">
-                Diagnostic Workup (Semen Pellet, Hormones, Karyotype, AZF):
-              </strong>{" "}
-              ₹8,000 to ₹16,000
-            </p>
+        <p>Cost depends on the procedure you require.</p>
+        <ul className="list-disc space-y-2 pl-5">
+          <li>
+            Workup - Semen Analysis pellet, Hormones, Karyotype and Micro
+            Deletion - Range between Rs. 8,000 - Rs. 16,000
           </li>
-          <li className="flex items-start gap-2">
-            <span className="pt-1 text-[13px] text-rose select-none">•</span>
-            <p>
-              <strong className="font-semibold text-black">
-                Percutaneous Aspiration (PESA / TESA):
-              </strong>{" "}
-              ₹18,000 to ₹35,000
-            </p>
+          <li>
+            PESA/TESA - Cost range between Rs. 18,000 - 35,000 depending on the
+            procedure and location.
           </li>
-          <li className="flex items-start gap-2">
-            <span className="pt-1 text-[13px] text-rose select-none">•</span>
-            <p>
-              <strong className="font-semibold text-black">
-                Advanced Micro-TESE Surgery:
-              </strong>{" "}
-              ₹65,000 to ₹1,20,000 (reflects operative microscopy, surgical
-              consumables and high-complexity embryologist micro-search)
-            </p>
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="pt-1 text-[13px] text-rose select-none">•</span>
-            <p>
-              <strong className="font-semibold text-black">
-                Subsequent ICSI & Vitrification Cycle:
-              </strong>{" "}
-              ₹1,25,000 to ₹1,85,000 (excluding female stimulation medications)
-            </p>
+          <li>
+            Micro TESE - Will cost you between Rs. 65,000 - 1,20,000 depending
+            on your case.
           </li>
         </ul>
+        <p>
+          Once sperms are found we will proceed to do an IVF/ICSI cycle with
+          your partner. This will cost you about Rs. 1,25,000 - 1,85,000 (does
+          not include medicines for partner).
+        </p>
       </div>
     ),
   },
 ];
 
-export default function remain() {
+export default function AzoospermiaFaq() {
   return (
     <TreatmentSection>
       <TreatmentSectionHeader
-        eyebrow="Patient questions"
+        eyebrow="Some commonly asked questions about Azoospermia."
         title="Top FAQs About Azoospermia"
       />
       <FaqAccordion leftItems={leftFaqs} rightItems={rightFaqs} />

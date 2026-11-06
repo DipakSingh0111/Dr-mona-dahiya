@@ -20,9 +20,9 @@ export function NumberedCard({ number, title, description }: NumberedCardItem) {
             {title}
           </h3>
         </div>
-        <p className="mt-3.5 text-[13px] leading-relaxed text-black sm:text-[13.5px]">
+        <div className="mt-3.5 text-[13px] leading-relaxed text-black sm:text-[13.5px]">
           {description}
-        </p>
+        </div>
       </div>
     </div>
   );

@@ -1,174 +1,177 @@
 "use client";
 
-import { FaCheck } from "react-icons/fa";
+import Link from "next/link";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 import {
   TreatmentSection,
   TreatmentSectionHeader,
-  ProtocolCard
+  ChecklistRow,
+  NumberedCard,
+  WhyPointRow,
 } from "@/components/ui/treatment";
-interface ChecklistItem {
-  prefix: string;
-  text: string;
-}
 
-const checklist: ChecklistItem[] = [
-  {
-    prefix: "Computer-assisted semen analysis (CASA): ",
-    text: "count, progressive motility and strict Kruger morphology after 2 to 3 days of abstinence.",
-  },
-  {
-    prefix: "Sperm DNA fragmentation index (Halosperm / SCD): ",
-    text: "single- and double-strand DNA breaks.",
-  },
-  {
-    prefix: "Hormones: ",
-    text: "total testosterone, morning LH, FSH, prolactin and TSH.",
-  },
-  {
-    prefix: "Scrotal Doppler ultrasound: ",
-    text: "testicular volume and varicocele reflux.",
-  },
-  {
-    prefix: "Karyotype and Y-chromosome microdeletion: ",
-    text: "needed when the count is under 5 million/mL, before surgery.",
-  },
-];
+const linkClass =
+  "font-medium text-blue underline underline-offset-2 hover:text-blue-dark";
 
-interface ProtocolCard {
-  number: string;
-  title: string;
-  bullets: Array<{
-    text: string;
-    linkText?: string;
-    linkHref?: string;
-    suffix?: string;
-  }>;
-}
-
-const protocols: ProtocolCard[] = [
+const diagnosticRows = [
   {
-    number: "1",
-    title: "Step 1: Lifestyle and the 74-day sperm cycle",
-    bullets: [
-      {
-        text: "Stop smoking, excess alcohol and heat exposure (saunas, tight clothing)",
-      },
-      {
-        text: "Antioxidants (CoQ10, L-carnitine, zinc, selenium, lycopene) against oxidative stress",
-      },
-    ],
+    title: "Semen Analysis",
+    text: "After 2-3 days abstinence a computer aided Semen Analysis is done. We check your sperm count, motility and morphology. Strict krugers criteria is used.",
   },
   {
-    number: "2",
-    title: "Step 2: Medical and hormonal therapy",
-    bullets: [
-      {
-        text: "Culture-directed antibiotics for hidden infection (leucocytospermia)",
-      },
-      {
-        text: "Clomiphene or aromatase inhibitors for a low testosterone-to-estrogen ratio",
-      },
-    ],
+    title: "Sperm DNA Fragmentation Index",
+    text: "DFI is measured to know the number of single and double strand breaks in your sperm DNA. Can be done by Halosperm or SCD method.",
   },
   {
-    number: "3",
-    title: "Step 3: Varicocele correction",
-    bullets: [
-      {
-        text: "Referral for microsurgical varicocelectomy when a varicocele is clinically significant and semen quality is falling",
-      },
-    ],
+    title: "Blood Hormones",
+    text: "Hormone profile including total testosterone, LH (early morning fasting sample), FSH, prolactin and thyroid are checked.",
   },
   {
-    number: "4",
-    title: "Step 4: IUI",
-    bullets: [
-      {
-        text: "For mild low count with a post-wash motile count above 5 to 10 million. See ",
-        linkText: "IUI Treatment",
-        linkHref: "/treatments",
-      },
-    ],
+    title: "Scrotal Ultrasound",
+    text: "Size of your testes are noted along with presence/absence of varicocele. Done with Colour Doppler.",
   },
   {
-    number: "5",
-    title: "Step 5: ICSI with microfluidics",
-    bullets: [
-      {
-        text: "For severe OATS or high DFI, single-sperm selection on a microfluidic chip with ",
-        linkText: "ICSI",
-        linkHref: "/treatments",
-      },
-    ],
-  },
-  {
-    number: "6",
-    title: "Step 6: Surgical sperm retrieval",
-    bullets: [
-      {
-        text: "PESA, TESA or micro-TESE for azoospermia. See ",
-        linkText: "Surgical Sperm Retrieval",
-        linkHref: "/surgical-sperm-retrieval-tesa-pesa",
-      },
-    ],
+    title: "Chromosomal karyotyping and Y chromosome micro-deletions",
+    text: "If your sperm count is less than 5 million/ml this test should be done before we try to retrieve sperm from you surgically.",
   },
 ];
 
 export default function MaleDiagnosticAndProtocol() {
   return (
     <TreatmentSection>
-        {/* ================= SECTION 1: Diagnostic Checklist ================= */}
-        <div className="mb-14 sm:mb-16 lg:mb-20">
-          <TreatmentSectionHeader
-          eyebrow="Before treatment"
+      <div className="mb-14 sm:mb-16 lg:mb-20">
+        <TreatmentSectionHeader
+          eyebrow="Tests to be done before treating male infertility"
           title="Diagnostic Checklist"
-          subtitle="These tests show exactly what is affecting sperm, so treatment is targeted from the start."
+          subtitle="Below tests are required to know why your sperm quality is low."
         />
 
-          {/* Checklist Horizontal Bars */}
-          <div className="mt-6 flex flex-col gap-3 sm:mt-7 sm:gap-3.5">
-            {checklist.map((item, idx) => (
-              <Reveal key={idx} variant="fadeUp" delay={idx * 0.04}>
-                <div className="flex items-center gap-3.5 rounded-xl border border-[#fde2ec] bg-white px-4 py-3.5 backdrop-blur-md transition-all duration-200 hover:border-blue/50 hover:bg-[#fff0f5] sm:px-5 sm:py-4">
-                  <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-rose/15 text-rose ring-1 ring-rose/35 sm:size-6">
-                    <FaCheck className="size-2.5 sm:size-3" />
-                  </span>
-
-                  <p className="text-[13.5px] leading-relaxed text-black sm:text-[14.5px]">
-                    <strong className="font-semibold text-black">{item.prefix}</strong>
-                    {item.text}
-                  </p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
+        <div className="mt-6 flex flex-col gap-3 sm:mt-7 sm:gap-3.5">
+          {diagnosticRows.map((item, idx) => (
+            <Reveal key={item.title} variant="fadeUp" delay={idx * 0.04}>
+              <ChecklistRow title={item.title} text={item.text} />
+            </Reveal>
+          ))}
         </div>
+      </div>
 
-        {/* ================= SECTION 2: Step-by-Step Treatment Protocol ================= */}
-        <div>
-          <TreatmentSectionHeader
-          eyebrow="How it works"
-          title="Step-by-Step Treatment Protocol"
+      <div className="mb-14 sm:mb-16 lg:mb-20">
+        <TreatmentSectionHeader
+          eyebrow="How do we treat Male Infertility?"
+          title="Male Infertility Treatment Protocol"
+          subtitle="Below are the treatments offered for male infertility."
         />
 
-          <Stagger delay={0.05} className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-5">
-            {protocols.map((item, idx) => (
-              <StaggerItem key={idx}>
-              <ProtocolCard
-                number={item.number}
-                title={item.title}
-                bullets={item.bullets.map((b) =>
-                  typeof b === "string"
-                    ? b
-                    : `${b.text}${b.linkText ?? ""}${b.suffix ?? ""}`,
-                )}
-              />
-            </StaggerItem>
-            ))}
-          </Stagger>
+        <Stagger
+          delay={0.06}
+          className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-5"
+        >
+          <StaggerItem>
+            <NumberedCard
+              number="1"
+              title="Modify Life style"
+              description="Life style modifications are the first step towards improving your sperm health. Since it takes 74 days for sperm to develop. Try to avoid smoking and excessive alcohol. Keep your testicles away from high temperature. We will give you anti oxidants to improve your sperm health."
+            />
+          </StaggerItem>
+          <StaggerItem>
+            <NumberedCard
+              number="2"
+              title="Medications"
+              description="If you have any infection we will start you on antibiotics. In case of low testosterone and high estrogen ratio we will give you medications like Clomiphene or an aromatase inhibitor."
+            />
+          </StaggerItem>
+          <StaggerItem>
+            <NumberedCard
+              number="3"
+              title="Repair of Varicocele"
+              description="We will recommend surgery for varicocele if you have one and low semen parameters. We can refer you to our urologist to get it done."
+            />
+          </StaggerItem>
+          <StaggerItem>
+            <NumberedCard
+              number="4"
+              title="Intra Uterine Insemination (IUI)"
+              description={
+                <>
+                  IUI can be done if your count is slightly low but after
+                  processing you have greater than 5-10 million/ml good quality
+                  sperm.{" "}
+                  <Link href="/best-iui-doctor-in-noida" className={linkClass}>
+                    Know more
+                  </Link>{" "}
+                  →
+                </>
+              }
+            />
+          </StaggerItem>
+          <StaggerItem>
+            <NumberedCard
+              number="5"
+              title="ICSI by using microfluidics"
+              description={
+                <>
+                  If you have severe OAT or high sperm DFI we will process your
+                  sperm by microfluidics and pick the best sperm for{" "}
+                  <Link
+                    href="/intracytoplasmic-sperm-injection-icsi-treatment"
+                    className={linkClass}
+                  >
+                    ICSI
+                  </Link>
+                  .
+                </>
+              }
+            />
+          </StaggerItem>
+          <StaggerItem>
+            <NumberedCard
+              number="6"
+              title="Surgically retrieve sperm from you."
+              description={
+                <>
+                  PESA, TESA or micro TESE can be done if you don&apos;t have any
+                  sperm in your ejaculate.{" "}
+                  <Link
+                    href="/surgical-sperm-retrieval-tesa-pesa"
+                    className={linkClass}
+                  >
+                    Know more
+                  </Link>{" "}
+                  →
+                </>
+              }
+            />
+          </StaggerItem>
+        </Stagger>
+      </div>
+
+      <div>
+        <TreatmentSectionHeader
+          eyebrow="Why choose us?"
+          title="Why Consult Dr. Mona Dahiya for Male Infertility?"
+        />
+
+        <div className="mt-6 flex flex-col gap-3 sm:mt-7 sm:gap-3.5">
+          <Reveal variant="fadeUp">
+            <WhyPointRow
+              title="Couple first approach"
+              desc="Both partners are treated together and not in isolation."
+            />
+          </Reveal>
+          <Reveal variant="fadeUp" delay={0.04}>
+            <WhyPointRow
+              title="Sperm selection"
+              desc="Use microfluidic device to pick highly motile sperm with less DNA fragmentation. No high speed spinning involved."
+            />
+          </Reveal>
+          <Reveal variant="fadeUp" delay={0.08}>
+            <WhyPointRow
+              title="Retriever + ICSI can happen on same day."
+              desc="Take fresh sperm from testis/epididymis and use for ICSI on top of mature oocyte."
+            />
+          </Reveal>
         </div>
-      </TreatmentSection>
+      </div>
+    </TreatmentSection>
   );
 }
-

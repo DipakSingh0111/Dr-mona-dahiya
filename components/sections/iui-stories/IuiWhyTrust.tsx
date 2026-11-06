@@ -1,59 +1,55 @@
 "use client";
 
-import { FaCheck } from "react-icons/fa";
-import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
+import Link from "next/link";
+import { Reveal } from "@/components/ui/Reveal";
+import {
+  TreatmentSection,
+  TreatmentSectionHeader,
+  WhyPointRow,
+} from "@/components/ui/treatment";
 
-const items = [
+const linkClass =
+  "font-medium text-blue underline underline-offset-2 hover:text-blue-dark";
+
+const whyPoints = [
   {
-    title: "Careful case selection",
-    description:
-      "IUI is advised only when tubes are open and sperm counts support a realistic chance.",
+    title: "Careful Case Selection",
+    desc: "We only perform IUI if you have the assurance of becoming pregnant. If your tubes are open and your husband has a good sperm count you can get pregnant.",
   },
   {
-    title: "Precise timing",
-    description:
-      "Serial ultrasound scans, not home LH strips, time the insemination.",
+    title: "Precise Timing",
+    desc: (
+      <>
+        Make sure you&apos;re having your IUI at the right time. At Dr Mona
+        Dahiya&apos;s clinic we track you with{" "}
+        <Link href="/follicular-ultrasound" className={linkClass}>
+          ultrasound
+        </Link>{" "}
+        so you can predict ovulation right.
+      </>
+    ),
   },
   {
-    title: "Standardised sperm preparation",
-    description:
-      "Density-gradient washing isolates motile sperm and prevents cramping.",
+    title: "Standardised Sperm Preparation",
+    desc: "Make sure your doctor is using a sperm wash during your IUI. Our center uses a density gradient sperm wash. This helps you get the best sperm and reduces cramping.",
   },
 ];
 
 export default function IuiWhyTrust() {
   return (
-    <section className="relative overflow-hidden bg-pink py-6 text-ink sm:py-7 lg:py-8">
-      <div className="page-container relative">
-        <Reveal>
-          <span className="text-[12px] font-semibold tracking-wider text-rose uppercase">
-            Expertise & authority
-          </span>
-          <h2 className="font-serif mt-1 text-[1.75rem] leading-[1.2] font-normal tracking-tight text-black sm:text-[2.2rem] lg:text-[2.45rem]">
-            Why Trust Dr. Mona Dahiya with IUI?
-          </h2>
-        </Reveal>
+    <TreatmentSection>
+      <TreatmentSectionHeader
+        eyebrow="Things To Keep In Mind When Doing IUI"
+        title="Why Trust Dr. Mona Dahiya with IUI?"
+      />
 
-        <Stagger className="mt-7 flex flex-col gap-3.5 sm:gap-4" stagger={0.08}>
-          {items.map((item) => (
-            <StaggerItem key={item.title}>
-              <article className="flex w-full items-start gap-4 rounded-[18px] border border-rose/25 bg-white/80 px-4 py-4 transition-colors hover:border-rose/45 sm:gap-5 sm:px-5 sm:py-5">
-                <span className="signature-tick mt-0.5 flex size-10 shrink-0 items-center justify-center rounded-[14px] text-white">
-                  <FaCheck className="size-4" />
-                </span>
-                <div className="min-w-0 flex-1">
-                  <h3 className="text-[15px] font-bold text-black sm:text-[16px]">
-                    {item.title}
-                  </h3>
-                  <p className="mt-1 text-[13px] leading-relaxed text-black sm:text-[13.5px]">
-                    {item.description}
-                  </p>
-                </div>
-              </article>
-            </StaggerItem>
-          ))}
-        </Stagger>
+      <div className="mt-6 flex flex-col gap-3.5 sm:mt-7 sm:gap-4">
+        {whyPoints.map((point, idx) => (
+          <Reveal key={point.title} variant="fadeUp" delay={idx * 0.05}>
+            <WhyPointRow {...point} />
+          </Reveal>
+        ))}
       </div>
-    </section>
+    </TreatmentSection>
   );
 }

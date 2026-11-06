@@ -26,7 +26,13 @@ export default function IcsiTreatmentPage() {
       <IcsiHero />
 
       <SectionReveal>
-        <MedicalRegistration />
+        <MedicalRegistration
+          councilRegLabels={{
+            DMC: "DMC Reg No.",
+            MCI: "MCI Reg No.",
+            UPMC: "UPMC Reg No.",
+          }}
+        />
       </SectionReveal>
 
       <SectionReveal delay={0.04}>
@@ -42,7 +48,14 @@ export default function IcsiTreatmentPage() {
       </SectionReveal>
 
       <SectionReveal delay={0.04}>
-        <IvfSuccessClinics />
+        <IvfSuccessClinics
+          eyebrow="Visit Us"
+          title="Book An Appointment At Our Clinic Locations"
+          subtitle="Dr. Mona Dahiya practices in Noida, Ghaziabad & Delhi. You can also consult online."
+          directionsLinkText="Directions"
+          clinicLinkText="View Clinic"
+          bookButtonText="Book Appointment"
+        />
       </SectionReveal>
 
       <SectionReveal delay={0.04}>
@@ -58,7 +71,8 @@ export default function IcsiTreatmentPage() {
           sectionId="book-consultation"
           eyebrow="Next step"
           title="Book an In-Clinic or Online Consultation"
-          subtitle="Book an in-clinic consultation with Dr. Mona Dahiya in Noida, Ghaziabad or Delhi, or schedule an online consultation. Appointment line: +91 92679 82924."
+          subtitle="Book an in-clinic consultation with Dr. Mona Dahiya in Noida, Ghaziabad or Delhi, or schedule an online consultation to review your reports. Direct line: +91 92679 82924."
+          appendContacts={false}
         />
       </SectionReveal>
 

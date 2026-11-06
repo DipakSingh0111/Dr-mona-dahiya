@@ -68,8 +68,9 @@ export default function LowAmhPage() {
           sectionId="book-consultation"
           eyebrow="Next step"
           title="Book an In-Clinic or Online Consultation"
-          subtitle="Book an in-clinic consultation with Dr. Mona Dahiya in Noida, Ghaziabad or Delhi, or a video review of your reports. Direct line:"
-          appendContacts={true}
+          subtitle="Book an in-clinic consultation with Dr. Mona Dahiya in Noida, Ghaziabad or Delhi, or an online review of your reports. Direct line: +91 92679 82924."
+          appendContacts={false}
+          consultationDuration=""
         />
       </SectionReveal>
 

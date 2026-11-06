@@ -67,12 +67,12 @@ When looking at any reference design, screenshot, Figma mockup, or third-party t
 
 ## 2. Strict Typography Rules
 
-- **Only Two Fonts Allowed:** **`Poppins`** and **`Tahoma`**.
+- **Only Two Fonts Allowed:** **`Open Sans`** and **`Tahoma`**.
 - Absolutely NO other fonts (no Inter, Roboto, Arial, Times New Roman, Playfair, etc.).
 - Never hardcode font families inline; always use:
-  - `font-sans` (`var(--font-poppins), Tahoma, sans-serif`)
-  - `font-serif` (`var(--font-poppins), Tahoma, sans-serif`)
-  - `font-display` (`var(--font-poppins), Tahoma, sans-serif`)
+  - `font-sans` (`var(--font-open-sans), Tahoma, sans-serif`)
+  - `font-serif` (`var(--font-open-sans), Tahoma, sans-serif`)
+  - `font-display` (`var(--font-open-sans), Tahoma, sans-serif`)
 
 ---
 

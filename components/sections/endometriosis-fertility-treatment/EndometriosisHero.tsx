@@ -1,24 +1,23 @@
-﻿"use client";
+"use client";
+
+import Link from "next/link";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import HeroBannerImage from "@/components/ui/HeroBannerImage";
-
+import HeroCounterBar from "@/components/ui/HeroCounterBar";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
 export default function EndometriosisHero() {
   const badges = [
-    "Endometriosis treatment Delhi",
-    "Adenomyosis and infertility Noida",
-    "Endometriosis IVF Ghaziabad",
-    "Pain and fertility care",
+    "Treat endometriosis Delhi",
+    "Infertility caused by adenomyosis Noida",
+    "IVF for Endometriosis Ghaziabad",
+    "Pain Management & Infertility",
   ];
 
   return (
     <section
       className="relative overflow-hidden pt-3 pb-6 sm:pt-4 sm:pb-8 lg:pt-5 lg:pb-9"
-      style={{
-        background:
-          "var(--pink)",
-      }}
+      style={{ background: "var(--pink)" }}
     >
       {/* Decorative Radial Glows matching Theme */}
       <div
@@ -40,17 +39,16 @@ export default function EndometriosisHero() {
 
       <div className="page-container relative grid grid-cols-1 items-start gap-6 sm:gap-7 lg:grid-cols-12 lg:items-start lg:gap-6 xl:gap-8">
         <div className="min-w-0 lg:col-span-7">
-          {/* Breadcrumb matching exact design */}
           <Breadcrumb
-          items={[
-            { label: "Conditions Treated", href: "/female-infertility-treatment" },
-            { label: "Endometriosis & Adenomyosis" }
-          ]}
-        />
+            items={[
+              { label: "Our Services", href: "/treatments" },
+              { label: "Endometriosis & Adenomyosis Fertility Treatment" },
+            ]}
+          />
 
           <Reveal variant="slideLeft">
-            <p className="text-[12px] font-bold tracking-[0.12em] text-rose uppercase sm:text-[13px]">
-              Pain relief and fertility planning together
+            <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">
+              Living with pain and wanting to get pregnant
             </p>
 
             <h1 className="font-serif mt-1.5 max-w-[38rem] text-[1.65rem] leading-[1.18] font-normal tracking-tight text-ink sm:text-[2.1rem] lg:text-[2.35rem] xl:text-[2.6rem]">
@@ -63,8 +61,11 @@ export default function EndometriosisHero() {
               Noida &amp; Ghaziabad
             </h1>
 
-            <p className="mt-3.5 max-w-[36rem] text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
-              Endometriosis and adenomyosis can cause severe period pain and make conception harder. Dr. Mona Dahiya (25+ years of experience) plans treatment around your age, ovarian reserve and symptoms, balancing surgery, medicines and assisted reproduction.
+            <p className="mt-3.5 max-w-[36rem] text-[13.5px] leading-relaxed text-ink/80 sm:text-[15px]">
+              Suffering from painful periods and wanting to get pregnant. Dr.
+              Mona Dahiya will help you understand what your options are by
+              looking at your age, egg reserve and pain. We can opt for certain
+              procedures. Use medications and even IVF if needed!
             </p>
           </Reveal>
 
@@ -72,23 +73,26 @@ export default function EndometriosisHero() {
           <div className="mt-6 flex flex-wrap items-center gap-3 sm:gap-4">
             <a
               href="#book-consultation"
-              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-rose to-[#f43f5e] px-6 py-2.5 text-[13.5px] font-bold text-ink shadow-[0_8px_20px_rgba(232,62,116,0.35)] transition-all hover:brightness-110 active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"
+              className="inline-flex items-center justify-center rounded-full bg-rose px-6 py-2.5 text-[13.5px] font-semibold text-white shadow-[0_8px_20px_rgba(232,62,116,0.3)] transition-all hover:bg-rose-dark active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"
             >
-              Book In-Clinic Consultation
+              Consult At Clinic
             </a>
-            <a
-              href="#book-consultation"
-              className="inline-flex items-center justify-center rounded-full bg-blue px-6 py-2.5 text-[13.5px] font-semibold text-white shadow-[0_8px_20px_rgba(0,71,202,0.35)] ring-1 ring-blue/20 transition-all hover:bg-blue-dark hover:brightness-110 active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"
+            <Link
+              href="/ivf-consultation-online"
+              className="inline-flex items-center justify-center rounded-full bg-blue px-6 py-2.5 text-[13.5px] font-semibold text-white shadow-[0_8px_20px_rgba(0,71,202,0.3)] ring-1 ring-blue/20 transition-all hover:bg-blue-dark active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"
             >
-              Schedule Online Consultation
-            </a>
+              Book Online
+            </Link>
           </div>
 
           {/* Badges / Chips */}
-          <Stagger delay={0.05} className="mt-5 flex flex-wrap items-center gap-2 sm:gap-2.5">
-            {badges.map((badge, idx) => (
-              <StaggerItem key={idx}>
-                <span className="inline-flex items-center rounded-full border border-rose/25 bg-white px-3 py-1 text-[11.5px] font-medium text-ink shadow-sm backdrop-blur-md sm:text-[12.5px]">
+          <Stagger
+            delay={0.05}
+            className="mt-5 flex flex-wrap items-center gap-2 sm:gap-2.5"
+          >
+            {badges.map((badge) => (
+              <StaggerItem key={badge}>
+                <span className="inline-flex items-center rounded-full border border-rose/25 bg-white px-3 py-1 text-[11.5px] font-medium text-ink shadow-sm sm:text-[12.5px]">
                   {badge}
                 </span>
               </StaggerItem>
@@ -98,10 +102,36 @@ export default function EndometriosisHero() {
 
         <HeroBannerImage
           src="/images/about-mona-dahiya/female-infertility.jpg"
-          alt="Dr. Mona Dahiya - Endometriosis Specialist"
+          alt="Dr. Mona Dahiya - Endometriosis & Adenomyosis Fertility Treatment"
+        />
+      </div>
+
+      <div className="page-container relative">
+        <HeroCounterBar
+          items={[
+            {
+              target: 25000,
+              suffix: "+",
+              label: "Families have conceived with us",
+            },
+            {
+              target: 25,
+              suffix: "+",
+              label: "Years of experience",
+            },
+            {
+              target: 90,
+              suffix: "%+",
+              label: "Success rate",
+            },
+            {
+              target: 15000,
+              suffix: "+",
+              label: "IVF cycles done",
+            },
+          ]}
         />
       </div>
     </section>
   );
 }
-

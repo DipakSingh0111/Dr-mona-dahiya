@@ -5,119 +5,113 @@ import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 import {
   TreatmentSection,
   TreatmentSectionHeader,
-  ChecklistRow,
   NumberedCard,
+  ChecklistRow,
 } from "@/components/ui/treatment";
 
 const indications = [
   {
     number: "1",
-    title: "Multiple failed transfers",
-    description: "Transfers of good-quality embryos that did not implant.",
+    title: "Failure of more than one transfer",
+    description:
+      "Transfer of embryo(s) with good quality that did not result in pregnancy.",
   },
   {
     number: "2",
-    title: "Poor embryo development",
-    description: "Few embryos reaching blastocyst stage.",
+    title: "Embryos failing to grow",
+    description: "Low number of blastocyst formation.",
   },
   {
     number: "3",
-    title: "Suspected uterine factor",
-    description: "Polyps, septum, adhesions or a thin lining.",
+    title: "Possible Uterus factor",
+    description: "Polyp, septum, adhesion or thin lining.",
   },
   {
     number: "4",
-    title: "Advanced maternal age",
-    description: "Where chromosomal abnormalities in embryos are more likely.",
+    title: "High maternal age",
+    description: "Embryos may have chromosomal abnormalities.",
   },
   {
     number: "5",
-    title: "Unexplained failure",
-    description: "No clear cause after a standard work-up.",
+    title: "Unknown cause",
+    description: "No obvious cause found.",
   },
 ];
 
-const checklistItems: string[] = [
-  "Review of previous stimulation, embryo grading and transfer technique",
-  "Hysteroscopy and 3D ultrasound for the cavity",
-  "Screen for chronic endometritis, thyroid and metabolic factors",
-  "Clotting and immune screen only where clinically justified",
-  "Semen and sperm DNA fragmentation assessment",
+const checklistItems = [
+  "Check all the previous data on stimulation, embryo grading and transfer technique",
+  "Cavity study with hysteroscopy and 3d usg",
+  "Test for chronic endometritis, thyroid and other metabolic issues",
+  "Only if required Coagulation and immune workup",
+  "Check sperm parameters and sperm dna fragmentation",
 ];
 
 export default function RifWhatAndIndications() {
   return (
     <TreatmentSection>
-        {/* ================= SECTION 1: What Is Recurrent Implantation Failure (RIF)? ================= */}
-        <div className="mb-14 sm:mb-16 lg:mb-20">
-          <TreatmentSectionHeader
-          eyebrow="Understanding the condition"
+      <div className="mb-14 sm:mb-16 lg:mb-20">
+        <TreatmentSectionHeader
+          eyebrow="About Recurrent Implantation Failure (RIF)"
           title="What Is Recurrent Implantation Failure (RIF)?"
         />
 
-          {/* Single large card from screenshot */}
-          <Reveal variant="fadeUp" delay={0.06} className="mt-6">
-            <div className="card-highlight rounded-2xl border border-[#fde2ec] bg-white p-6 sm:p-7 shadow-[0_8px_24px_rgba(232,62,116,0.06)]">
-              <div className="flex items-center gap-3">
-                <span className="card-badge flex size-7 shrink-0 items-center justify-center rounded-lg bg-rose text-white shadow-[0_2px_8px_rgba(232,62,116,0.4)]">
-                  <FaCheck className="size-3" />
-                </span>
-                <h3 className="font-serif text-[1.05rem] font-semibold text-black sm:text-[1.12rem]">
-                  Recurrent Implantation Failure (RIF)
-                </h3>
-              </div>
-              <p className="mt-4 text-[13.5px] leading-relaxed text-black sm:text-[14.5px]">
-                Recurrent Implantation Failure (RIF) is the failure to achieve pregnancy after transferring ≥2 top-grade blastocysts, affecting 10% to 15% of IVF patients. Roughly 50% of cases stem from embryonic chromosomal abnormalities—where PGT-A screening restores implantation rates to 65%–70%—while 25% to 30% involve a displaced implantation window (identified via ERA) or silent uterine issues like chronic endometritis and thin linings (&lt;7 mm).
-              </p>
+        <Reveal variant="fadeUp" delay={0.06} className="mt-6">
+          <div className="card-highlight rounded-2xl border border-[#fde2ec] bg-white p-6 shadow-[0_8px_24px_rgba(232,62,116,0.06)] sm:p-7">
+            <div className="flex items-center gap-3">
+              <span className="card-badge flex size-7 shrink-0 items-center justify-center rounded-lg bg-rose text-white shadow-[0_2px_8px_rgba(232,62,116,0.4)]">
+                <FaCheck className="size-3" />
+              </span>
+              <h3 className="font-serif text-[1.05rem] font-semibold text-black sm:text-[1.12rem]">
+                Recurrent Implantation Failure (RIF)
+              </h3>
             </div>
-          </Reveal>
-        </div>
-
-        {/* ================= SECTION 2: Indications: Who Needs a RIF Evaluation? ================= */}
-        <div className="mb-14 sm:mb-16 lg:mb-20">
-          <TreatmentSectionHeader
-          eyebrow="Clinical breakdown"
-          title="Indications: Who Needs a RIF Evaluation?"
-          subtitle="Common reasons Dr. Mona Dahiya recommends recurrent implantation failure care."
-        />
-
-          {/* Row 1: 3 Cards */}
-          <Stagger delay={0.05} className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-5">
-            {indications.slice(0, 3).map((item) => (
-              <StaggerItem key={item.number}>
-                <NumberedCard {...item} />
-              </StaggerItem>
-            ))}
-          </Stagger>
-
-          {/* Row 2: 2 Cards (centered or 2-col max-w-4xl) */}
-          <Stagger delay={0.05} className="mt-4 sm:mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-2 sm:gap-5 max-w-4xl">
-            {indications.slice(3, 5).map((item) => (
-              <StaggerItem key={item.number}>
-                <NumberedCard {...item} />
-              </StaggerItem>
-            ))}
-          </Stagger>
-        </div>
-
-        {/* ================= SECTION 3: Diagnostic Checklist ================= */}
-        <div>
-          <TreatmentSectionHeader
-          eyebrow="Before treatment"
-          title="Diagnostic Checklist"
-          subtitle="These tests help confirm the diagnosis and choose the right plan. Not every patient needs every test."
-        />
-
-          {/* 2-column or grid checklist bars */}
-          <div className="mt-6 grid grid-cols-1 gap-3 sm:mt-7 sm:grid-cols-2 sm:gap-3.5">
-            {checklistItems.map((item, idx) => (
-              <Reveal key={idx} variant="fadeUp" delay={idx * 0.04}>
-              <ChecklistRow>{item}</ChecklistRow>
-            </Reveal>
-            ))}
+            <p className="mt-4 text-[13.5px] leading-relaxed text-black sm:text-[14.5px]">
+              RIF is when there is no pregnancy after transfer of more than 2
+              blastocyst of good grade. 10%-15% of patients who undergo IVF will
+              experience RIF. More than 50% are due to chromosomal abnormality
+              in embryo (with PGT-A we can achieve 65%-70% pregnancy) and rest
+              25%-30% are due to shift in window of implantation (can be
+              detected with ERA) or other causes such as chronic endometritis or
+              thin lining less than 7mm.
+            </p>
           </div>
+        </Reveal>
+      </div>
+
+      <div className="mb-14 sm:mb-16 lg:mb-20">
+        <TreatmentSectionHeader
+          eyebrow="Reasons For Recurrent Implantation Failure (RIF)"
+          title="Indications: Who Needs a RIF Evaluation?"
+          subtitle="Some of the common indications to consult Dr Mona Dahiya for recurrent implantation failure (RIF) are."
+        />
+
+        <Stagger
+          delay={0.05}
+          className="mt-7 grid grid-cols-1 items-stretch gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
+        >
+          {indications.map((item) => (
+            <StaggerItem key={item.number} className="h-full">
+              <NumberedCard {...item} />
+            </StaggerItem>
+          ))}
+        </Stagger>
+      </div>
+
+      <div>
+        <TreatmentSectionHeader
+          eyebrow="Test To Diagnose Recurrent Implantation Failure (RIF)"
+          title="Diagnostic Checklist"
+          subtitle="We suggest these tests to diagnose Recurrent Implantation Failure (RIF). Not everyone will require all the tests."
+        />
+
+        <div className="mt-6 grid grid-cols-1 gap-3 sm:mt-7 sm:grid-cols-2 sm:gap-3.5">
+          {checklistItems.map((item, idx) => (
+            <Reveal key={item} variant="fadeUp" delay={idx * 0.04}>
+              <ChecklistRow text={item} />
+            </Reveal>
+          ))}
         </div>
-      </TreatmentSection>
+      </div>
+    </TreatmentSection>
   );
 }
-

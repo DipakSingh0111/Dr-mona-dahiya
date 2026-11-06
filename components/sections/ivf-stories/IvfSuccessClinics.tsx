@@ -9,7 +9,15 @@ import ClinicsAppointmentCards, {
   type ClinicsAppointmentCardsProps,
 } from "@/components/sections/ClinicsAppointmentCards";
 
-export default function IvfSuccessClinics(props: ClinicsAppointmentCardsProps) {
+type IvfSuccessClinicsExtra = {
+  directionsLinkText?: string;
+  clinicLinkText?: string;
+  bookButtonText?: string;
+};
+
+export default function IvfSuccessClinics(
+  props: ClinicsAppointmentCardsProps & IvfSuccessClinicsExtra,
+) {
   if (props && (props.clinics || props.primaryCity)) {
     return <ClinicsAppointmentCards {...props} />;
   }
@@ -19,6 +27,9 @@ export default function IvfSuccessClinics(props: ClinicsAppointmentCardsProps) {
   const displayEyebrow = props?.eyebrow ?? eyebrow;
   const displayTitle = props?.title ?? title;
   const displaySubtitle = props?.subtitle ?? subtitle;
+  const directionsLinkText = props.directionsLinkText ?? "Get directions";
+  const clinicLinkText = props.clinicLinkText ?? "Clinic page";
+  const bookButtonText = props.bookButtonText ?? "Book appointment";
 
   return (
     <section
@@ -82,14 +93,14 @@ export default function IvfSuccessClinics(props: ClinicsAppointmentCardsProps) {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 transition-colors hover:text-rose-dark hover:underline"
                     >
-                      Get directions
+                      {directionsLinkText}
                       <FaExternalLinkAlt className="size-2.5 opacity-70" />
                     </a>
                     <Link
                       href={clinic.clinicUrl}
                       className="inline-flex items-center gap-1.5 transition-colors hover:text-rose-dark hover:underline"
                     >
-                      Clinic page
+                      {clinicLinkText}
                       <FaArrowRight className="size-2.5" />
                     </Link>
                   </div>
@@ -99,7 +110,7 @@ export default function IvfSuccessClinics(props: ClinicsAppointmentCardsProps) {
                       href="#book-consultation"
                       className="inline-flex w-full items-center justify-center rounded-full bg-rose py-2.5 text-[13px] font-semibold text-white shadow-[0_4px_14px_rgba(232,62,116,0.25)] transition-all hover:bg-rose-dark"
                     >
-                      Book appointment
+                      {bookButtonText}
                     </a>
                   </div>
                 </div>

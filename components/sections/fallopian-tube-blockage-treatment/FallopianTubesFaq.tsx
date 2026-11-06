@@ -9,139 +9,196 @@ import {
 
 const leftFaqs: FaqItem[] = [
   {
-    question: "How do I know if my tubes are blocked?",
+    question:
+      "What clinical warning signs indicate blocked fallopian tubes?",
     answer: (
       <div className="space-y-3">
         <p>
-          Most women have no symptoms. A blockage is usually found when investigating why pregnancy has not occurred. An HSG (X-ray dye test) or SSG/HyCoSy (ultrasound dye test) is used to check whether the dye spills freely through each tube into the pelvis.
-        </p>
-      </div>
-    ),
-  },
-  {
-    question: "What is the difference between unilateral and bilateral blockage?",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          <strong className="text-white">Unilateral:</strong> One tube is blocked; the other is open. Natural conception or IUI is still possible from the open side, though it may take longer.
-        </p>
-        <p>
-          <strong className="text-white">Bilateral:</strong> Both tubes are blocked. Eggs and sperm cannot meet naturally, and IVF is usually required unless the blockage is mild and surgically correctable.
-        </p>
-      </div>
-    ),
-  },
-  {
-    question: "Can blocked fallopian tubes be opened without surgery?",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          A proximal blockage (near the uterus) can sometimes be cleared during the dye test itself (tubal flushing or oil-contrast effect) or by selective tubal cannulation. A blockage at the far end (fimbrial) or involving scarring and fluid (hydrosalpinx) generally cannot be resolved without surgical intervention or bypassing the tubes via IVF.
-        </p>
-      </div>
-    ),
-  },
-  {
-    question: "What is a hydrosalpinx, and why does it matter for IVF?",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          A hydrosalpinx is a fallopian tube that is blocked at its outer end and filled with toxic, inflammatory fluid. This fluid can wash back into the uterine cavity, where it is toxic to embryos and significantly reduces IVF implantation rates (often by up to 50%). Doctors typically recommend clipping (tubal occlusion) or removing (salpingectomy) the affected tube before an embryo transfer.
-        </p>
-      </div>
-    ),
-  },
-  {
-    question: "Is laparoscopy or IVF better for tubal factor infertility?",
-    answer: (
-      <div className="space-y-3">
-        <p>
-          It depends on age, ovarian reserve, semen parameters, and the nature of the blockage:
+          Usually women dont know they have blocked tubes. Around 90% of women
+          will not have any symptoms. Your fallopian tubes do not affect your
+          hormone levels so you will not notice anything about your periods.
+          However if you are experiencing pain it could be due to:
         </p>
         <ul className="space-y-2 pl-1">
           <li className="flex items-start gap-2">
-            <span className="text-rose select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">-</span>
             <p>
-              <strong className="text-white font-semibold">Laparoscopy:</strong> Best for young women with mild, single-point distal adhesions or proximal blockages who desire natural conception and have good ovarian reserve and normal semen.
+              If you have a hydrosalpinx you may experience lower abdominal
+              heaviness or pain.
             </p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-rose select-none text-[13px] pt-1">•</span>
+            <span className="text-rose select-none text-[13px] pt-1">-</span>
             <p>
-              <strong className="text-white font-semibold">IVF:</strong> Recommended when woman is &gt;35, has severe tubal damage, bilateral hydrosalpinx, concurrent male factor infertility, or reduced ovarian reserve, because IVF directly bypasses the tubes entirely.
+              If you have had a pelvic infection you may have pain while having
+              sex, bleeding in between your periods or feel a constant pain in
+              your pelvis.
             </p>
           </li>
         </ul>
       </div>
+    ),
+  },
+  {
+    question: "How are obstructed fallopian tubes accurately identified?",
+    answer: (
+      <div className="space-y-3">
+        <p>
+          You can know if your fallopian tubes are blocked by performing one of
+          these tests. Make sure you get it done 7-10 days after your period.
+        </p>
+        <ul className="space-y-2 pl-1">
+          <li className="flex items-start gap-2">
+            <span className="text-rose select-none text-[13px] pt-1">-</span>
+            <p>
+              By doing an HSG. We use x rays to see your uterus and fallopian
+              tubes. The sensitivity of this test is 85% and accuracy of 90%.
+            </p>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-rose select-none text-[13px] pt-1">-</span>
+            <p>
+              Using sonosalpingography. This uses an ultrasound to check if your
+              fallopian tubes are blocked. No radiation is involved in this test.
+            </p>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-rose select-none text-[13px] pt-1">-</span>
+            <p>
+              By performing a laparoscopy and chromopertubation. This allows us
+              to see if your fallopian tubes are blocked. We can also see if you
+              have endometriosis/adhesions.
+            </p>
+          </li>
+        </ul>
+      </div>
+    ),
+  },
+  {
+    question:
+      "Can tubal blockages be resolved without open or laparoscopic surgery?",
+    answer: (
+      <p>
+        If your fallopian tube is blocked at the cornual end yes we can. By
+        inserting a wire through your vagina. If your tubes are blocked
+        distally we cannot open them without doing IVF or surgery.
+      </p>
+    ),
+  },
+  {
+    question:
+      "Is unassisted conception achievable with only one functioning fallopian tube?",
+    answer: (
+      <p>
+        Yes if one of your fallopian tubes is functioning properly you can get
+        pregnant naturally. Your chances will be lowered by about 30%-40% per
+        cycle. If you do not get pregnant after trying for 6-9 cycles we
+        recommend you to go for follicular studies and try to get pregnant via
+        IUI/IVF.
+      </p>
+    ),
+  },
+  {
+    question:
+      "Why must a hydrosalpinx be addressed prior to an IVF embryo transfer?",
+    answer: (
+      <p>
+        A hydrosalpinx is when water collects in your fallopian tube. This can
+        decrease your chances of IVF by 50% and increase your risk of
+        miscarriage. Removing your tube will increase your chances of success
+        during IVF.
+      </p>
     ),
   },
 ];
 
 const rightFaqs: FaqItem[] = [
   {
-    question: "What causes fallopian tubes to get blocked?",
+    question: "What are the leading clinical etiologies behind tubal damage?",
     answer: (
       <div className="space-y-3">
-        <p>Common causes include:</p>
-        <ul className="space-y-1.5 pl-1">
+        <p>
+          Blocked tubes can happen for several reasons but below are the top 4:
+        </p>
+        <ul className="space-y-2 pl-1">
           <li className="flex items-start gap-2">
-            <span className="text-rose select-none text-[13px] pt-1">•</span>
-            <p>Pelvic Inflammatory Disease (PID) from infections such as Chlamydia or Gonorrhoea</p>
+            <span className="text-rose select-none text-[13px] pt-1">-</span>
+            <p>
+              Pelvic infection. If you have had chlamydia or gonorrhea you can
+              develop blocked tubes. Pelvic infection blocks your tubes 12% of
+              the time.
+            </p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-rose select-none text-[13px] pt-1">•</span>
-            <p>Endometriosis causing pelvic adhesions and tubal scarring</p>
+            <span className="text-rose select-none text-[13px] pt-1">-</span>
+            <p>
+              TB. Female genital tb can cause your tubes to get blocked
+              5%-10% of the time.
+            </p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-rose select-none text-[13px] pt-1">•</span>
-            <p>Previous pelvic or abdominal surgeries (e.g., ruptured appendix, ovarian cyst removal)</p>
+            <span className="text-rose select-none text-[13px] pt-1">-</span>
+            <p>
+              Endometriosis. Endometriosis can cause your fallopian tubes to get
+              blocked.
+            </p>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-rose select-none text-[13px] pt-1">•</span>
-            <p>Past ectopic pregnancy or pelvic tuberculosis (common in India)</p>
+            <span className="text-rose select-none text-[13px] pt-1">-</span>
+            <p>
+              Surgery. Any prior surgeries you may have had can cause your
+              tubes to become blocked.
+            </p>
           </li>
         </ul>
       </div>
     ),
   },
   {
-    question: "Is an HSG test painful?",
+    question:
+      "How significantly does tubal compromise elevate ectopic pregnancy risks?",
     answer: (
-      <div className="space-y-3">
-        <p>
-          Most women experience brief cramping (like period cramps) for a few minutes while the dye is being injected into the uterus and tubes. Taking an anti-spasmodic or pain reliever 30–60 minutes prior helps significantly. The entire procedure usually takes under 15 minutes.
-        </p>
-      </div>
+      <p>
+        Yes if your fallopian tubes are blocked/damaged you have a higher risk
+        of ectopic pregnancy. Sperm can get past your tube but your egg may not
+        be able to travel to your womb.
+      </p>
     ),
   },
   {
-    question: "Can I get pregnant with only one fallopian tube?",
+    question:
+      "What are the clinical success rates of tubal reconstructive surgery compared to IVF?",
     answer: (
-      <div className="space-y-3">
-        <p>
-          Yes. If you have one healthy, open tube and normal ovulation, you can conceive naturally. Even when ovulation occurs on the opposite ovary, the healthy tube can sometimes pick up the ovum across the pelvis. If conception does not occur within 6–12 months, assisted reproductive options like IUI or IVF can be considered.
-        </p>
-      </div>
+      <p>
+        If we perform microsurgery to open your fallopian tubes you have a
+        20%-30% chance of conceiving. Also you have an 8%-15% chance of having
+        an ectopic pregnancy after tubal surgery. In comparision to surgery,
+        IVF has far higher success rates.
+      </p>
     ),
   },
   {
-    question: "Does tubal surgery increase the risk of ectopic pregnancy?",
+    question:
+      "Does tubal obstruction disrupt monthly ovulation or alter cycle regularity?",
     answer: (
-      <div className="space-y-3">
-        <p>
-          Yes. Any condition or surgical repair that damages the delicate microscopic cilia lining inside the fallopian tube increases the risk of an embryo getting stuck along its journey to the uterus. If you conceive after tubal surgery, an early ultrasound at 5–6 weeks is essential to confirm an intrauterine pregnancy.
-        </p>
-      </div>
+      <p>
+        The short answer is No since the purpose of fallopian tubes is for
+        transporting the egg to a woman&apos;s womb. In simple words, both your
+        periods and ovulation will remain unaffected.
+      </p>
     ),
   },
   {
-    question: "How long after tubal surgery should I wait before trying for a baby?",
+    question:
+      "What is the approximate cost of managing tubal factor infertility in Delhi NCR?",
     answer: (
-      <div className="space-y-3">
-        <p>
-          Most specialists recommend trying for spontaneous conception starting the cycle following your procedure, once pelvic healing is complete. If pregnancy does not occur within 6 to 12 months post-surgery, moving to IVF without further delay is standard practice to preserve ovarian reserve.
-        </p>
-      </div>
+      <p>
+        The cost depends on what kind of procedure you need. If you just need
+        your tubes flushed it will cost you anywhere from Rs.2000-Rs.4000. If
+        you need a laparoscopy done it will cost you anywhere from
+        Rs.50,000-Rs.100,000. Lastly, if you need to go for IVF it will cost you
+        approximately Rs.150,000.
+      </p>
     ),
   },
 ];
@@ -150,10 +207,9 @@ export default function FallopianTubesFaq() {
   return (
     <TreatmentSection>
       <TreatmentSectionHeader
-          eyebrow="Frequently Asked Questions"
-          title="Questions About Fallopian Tube Blockage"
-          subtitle="Straightforward clinical answers on diagnostics, tubal surgery vs IVF, hydrosalpinx management, and pregnancy outcomes."
-        />
+        eyebrow="FAQs"
+        title="Frequently Asked Questions about Fallopian Tube Blockage"
+      />
       <FaqAccordion leftItems={leftFaqs} rightItems={rightFaqs} />
     </TreatmentSection>
   );

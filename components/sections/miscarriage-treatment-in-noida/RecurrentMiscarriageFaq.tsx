@@ -26,7 +26,7 @@ const leftFaqs: FaqItem[] = [
   {
     question: "Where can I consult Dr. Mona Dahiya for recurrent miscarriage?",
     answer:
-      "Dr. Mona Dahiya is available at 3 locations. In Noida at 3rd Floor, K-06 Above Firstcry, Baraula, Sector 49 Noida, Uttar Pradesh 201301; in Ghaziabad at 2nd Floor RDC C-53A Near Bikanervala, Sector 15 Sector 10 Raj Nagar Ghaziabad, Uttar Pradesh 201002 and in Delhi at Building Number 41, First Floor Ring Road Block Q, Lajpat Nagar IV, Lajpat Nagar New Delhi, 110024.",
+      "Dr. Mona Dahiya is available at 3 locations. In Noida at 3rd Floor, K-06 Above Firstcry, Baraula, Sector 49 Noida, Uttar Pradesh 201301, in Ghaziabad at 2nd Floor RDC C-53A Near Bikanerwala, Sector 15 Sector 10 Raj Nagar Ghaziabad, Uttar Pradesh 201002 and in Delhi at Building Number 41, First Floor Ring Road Block Q, Lajpat Nagar IV, Lajpat Nagar New Delhi, 110024.",
   },
   {
     question: "After how many miscarriages should I get tested?",
@@ -45,7 +45,7 @@ const rightFaqs: FaqItem[] = [
   {
     question: "How much does recurrent miscarriage evaluation cost?",
     answer:
-      "The workup for Recurrent Miscarriage is between 18000 to 35000 INR. If a Hysterescopic procedure is required that would cost an additional 35000 – 60000 INR.",
+      "The workup for Recurrent Miscarriage is between 18000 to 35000 INR. If a Hysteroscopic procedure is required that would cost an additional 35000 – 60000 INR.",
   },
   {
     question: "How soon can I try again after a miscarriage?",

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import AzoospermiaHero from "@/components/sections/azoospermia-treatment/AzoospermiaHero";
-import AzoospermiaMedicalRegistration from "@/components/sections/azoospermia-treatment/AzoospermiaMedicalRegistration";
+import MedicalRegistration from "@/components/sections/MedicalRegistration";
 import AzoospermiaIndications from "@/components/sections/azoospermia-treatment/AzoospermiaIndications";
 import AzoospermiaDiagnosticAndProtocol from "@/components/sections/azoospermia-treatment/AzoospermiaDiagnosticAndProtocol";
 import AzoospermiaWhyConsult from "@/components/sections/azoospermia-treatment/AzoospermiaWhyConsult";
@@ -9,7 +9,6 @@ import AzoospermiaCaseInsight from "@/components/sections/azoospermia-treatment/
 import AzoospermiaCost from "@/components/sections/azoospermia-treatment/AzoospermiaCost";
 import AzoospermiaFaq from "@/components/sections/azoospermia-treatment/AzoospermiaFaq";
 import AzoospermiaRelated from "@/components/sections/azoospermia-treatment/AzoospermiaRelated";
-import ClinicsAppointmentCards from "@/components/sections/ClinicsAppointmentCards";
 import AboutConsultation from "@/components/sections/about-mona-dahiya/AboutConsultation";
 import AboutParenthoodCta from "@/components/sections/about-mona-dahiya/AboutParenthoodCta";
 
@@ -28,7 +27,7 @@ export default function AzoospermiaPage() {
       <AzoospermiaHero />
 
       <SectionReveal>
-        <AzoospermiaMedicalRegistration />
+        <MedicalRegistration />
       </SectionReveal>
 
       <SectionReveal delay={0.04}>
@@ -60,20 +59,12 @@ export default function AzoospermiaPage() {
       </SectionReveal>
 
       <SectionReveal delay={0.04}>
-        <ClinicsAppointmentCards
-          eyebrow="Visit Dr. Mona"
-          title="Book a Consultation at Our Clinics"
-          subtitle="Dr. Mona sees patients in Noida, Ghaziabad and Delhi, and offers online consultations."
-        />
-      </SectionReveal>
-
-      <SectionReveal delay={0.04}>
         <AboutConsultation
           sectionId="book-consultation"
-          eyebrow="Next step"
+          eyebrow="Final step"
           title="Book an In-Clinic or Online Consultation"
-          subtitle="Book an in-clinic consultation with Dr. Mona Dahiya in South Delhi, Noida or Ghaziabad, or schedule an online consultation to review your cycle history. Direct line:"
-          appendContacts={true}
+          subtitle="Book an in-clinic consultation with Dr. Mona Dahiya in South Delhi, Noida or Ghaziabad, or schedule an online consultation to review your cycle history."
+          appendContacts={false}
         />
       </SectionReveal>
 

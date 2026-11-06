@@ -4,77 +4,70 @@ import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 import {
   TreatmentSection,
   TreatmentSectionHeader,
-  CostFactorCard
+  CostFactorCard,
 } from "@/components/ui/treatment";
-interface CostCard {
-  iconType: "check" | "pills";
-  title: string;
-  description: string;
-}
 
-const costCards: CostCard[] = [
+const costCards = [
   {
-    iconType: "check",
-    title: "DFI laboratory test",
-    description: "The assay itself, usually a single sample.",
+    title: "Lab Cost for sperm DNA fragmentation",
+    description: "Sperm DNA fragmentation index test.",
   },
   {
-    iconType: "pills",
-    title: "Consultation and review",
-    description: "Doctor consultation and result counselling.",
+    title: "Doctor's consult",
+    description: "We will educate you on what your DFI levels mean.",
   },
   {
-    iconType: "check",
-    title: "Treatment of the cause",
-    description: "Medicines, antioxidants or varicocele care when advised.",
+    title: "In case you require treatment",
+    description: "Can be treated with medicines or surgery.",
   },
   {
-    iconType: "check",
-    title: "Retest and ART planning",
-    description: "Repeat DFI and any ICSI or sperm retrieval that follows.",
+    title: "What if I don't see improvement",
+    description: "Retest you and perform ICSI using best sperms.",
   },
 ];
 
 export default function DfiCaseAndCost() {
   return (
     <TreatmentSection>
-        {/* ================= SECTION 1: Clinical Case Insight ================= */}
-        <div className="mb-14 sm:mb-16 lg:mb-20">
-          <TreatmentSectionHeader
-          eyebrow="From the clinic"
+      <div className="mb-14 sm:mb-16 lg:mb-20">
+        <TreatmentSectionHeader
+          eyebrow="Case Study"
           title="Clinical Case Insight"
         />
 
-          <Reveal variant="fadeUp" delay={0.06} className="mt-6">
-            <div className="card-highlight rounded-2xl border border-[#fde2ec] bg-white p-6 sm:p-7 shadow-[0_8px_24px_rgba(232,62,116,0.06)]">
-              <p className="text-[14px] leading-relaxed font-medium text-ink sm:text-[15.5px]">
-                A couple with unexplained infertility and a DFI of 38% began a structured three-month programme of lifestyle correction and antioxidant support. A repeat test showed the DFI had fallen to 22%, and they proceeded to treatment with better odds.
-              </p>
-              <p className="mt-3 text-[12px] text-ink/65">
-                Details changed to protect patient privacy. Individual results vary.
-              </p>
-            </div>
-          </Reveal>
-        </div>
+        <Reveal variant="fadeUp" delay={0.06} className="mt-6">
+          <div className="card-highlight rounded-2xl border border-[#fde2ec] bg-white p-6 sm:p-7 shadow-[0_8px_24px_rgba(232,62,116,0.06)]">
+            <p className="text-[14px] leading-relaxed font-medium text-ink sm:text-[15.5px]">
+              Couple who was trying to conceive for sometime. Male partner had
+              DFI levels of 38%. He was advised to take precautions and
+              antioxidants for 3 months. After 3 months his DFI came down to
+              22%. They continued with treatment.
+            </p>
+            <p className="mt-3 text-[12px] text-ink/65">
+              Information may have been changed.
+            </p>
+          </div>
+        </Reveal>
+      </div>
 
-        {/* ================= SECTION 2: Cost Factors Breakdown ================= */}
-        <div>
-          <TreatmentSectionHeader
-          eyebrow="Transparency"
+      <div>
+        <TreatmentSectionHeader
+          eyebrow="Cost"
           title="Cost Factors Breakdown"
-          subtitle="The test is usually a one-time laboratory charge. Treatment cost depends on whether medicines, surgery or ART are needed."
+          subtitle="This will be done only once. Based on your condition you may require more treatment."
         />
 
-          {/* 4 Cards Grid */}
-          <Stagger delay={0.05} className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 sm:gap-5">
-            {costCards.map((card, idx) => (
-              <StaggerItem key={idx}>
+        <Stagger
+          delay={0.05}
+          className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 sm:gap-5"
+        >
+          {costCards.map((card) => (
+            <StaggerItem key={card.title}>
               <CostFactorCard {...card} />
             </StaggerItem>
-            ))}
-          </Stagger>
-        </div>
-      </TreatmentSection>
+          ))}
+        </Stagger>
+      </div>
+    </TreatmentSection>
   );
 }
-
