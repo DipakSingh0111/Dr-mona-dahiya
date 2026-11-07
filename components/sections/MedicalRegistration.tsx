@@ -4,10 +4,16 @@ import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
 export default function MedicalRegistration({
   dark = false,
+  eyebrow = "Registered Medical Practitioner",
+  title = "Medical Council Registration Numbers",
+  subtitle = "Dr. Mona Dahiya is a registered fertility doctor.",
   councilRegLabels,
   councilNames,
 }: {
   dark?: boolean;
+  eyebrow?: string;
+  title?: string;
+  subtitle?: string;
   /** Override the small label under each registration number (e.g. DMC Reg No.) */
   councilRegLabels?: Partial<Record<"DMC" | "MCI" | "UPMC", string>>;
   /** Override council display name (e.g. U.P. Medical Council) */
@@ -71,15 +77,15 @@ export default function MedicalRegistration({
       <div className="page-container relative">
         <Reveal className="mb-7 sm:mb-9">
           <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
-            Registered Medical Practitioner
+            {eyebrow}
           </p>
 
           <h2 className="font-serif mt-2 text-[1.65rem] leading-[1.18] font-normal tracking-tight text-black sm:text-[2.1rem] lg:text-[2.35rem] xl:text-[2.55rem]">
-            Medical Council Registration Numbers
+            {title}
           </h2>
 
           <p className="mt-2 text-[13.5px] leading-relaxed text-black sm:text-[14.5px]">
-            Dr. Mona Dahiya is a registered fertility doctor.
+            {subtitle}
           </p>
         </Reveal>
 

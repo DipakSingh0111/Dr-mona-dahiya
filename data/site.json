@@ -277,7 +277,7 @@
           },
           {
             "label": "ART Ethics & Compliance",
-            "href": "/404"
+            "href": "/art-compliance-ethics"
           }
         ]
       },
@@ -1778,7 +1778,7 @@
         "id": "compliance",
         "label": "ICMR & ART Regulation Compliance",
         "value": "",
-        "href": "#compliance",
+        "href": "/art-compliance-ethics",
         "icon": "badge",
         "isNew": true
       }
