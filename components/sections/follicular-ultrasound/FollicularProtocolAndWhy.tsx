@@ -5,101 +5,101 @@ import {
   TreatmentSection,
   TreatmentSectionHeader,
   ProtocolCard,
-  WhyPointRow
+  WhyPointRow,
 } from "@/components/ui/treatment";
+
 const protocols = [
   {
     number: "1",
-    title: "Baseline scan (cycle days 2–3)",
+    title: "Baseline scan (Day 2-3 of cycle)",
     bullets: [
-      "Ovaries quiet, no cysts, antral follicle count recorded",
-      "Lining baseline under 4 to 5 mm",
+      "Quiescent ovaries without any cysts. Note down AFC",
+      "Note down endometrial thickness (should be less than 4-5mm)",
     ],
   },
   {
     number: "2",
-    title: "Early growth scan (days 8–9)",
+    title: "First response scan (Day 8-9 of cycle)",
     bullets: [
-      "First response check after Letrozole or clomiphene",
-      "Lead follicle usually 10 to 12 mm",
+      "After starting with letrozole/clomiphene see if there is any response.",
+      "Follicle should be 10-12 mm at this stage.",
     ],
   },
   {
     number: "3",
-    title: "Mid-cycle scans (days 10–12)",
+    title: "Continue scanning every 2 days (Day 10-12)",
     bullets: [
-      "Every 48 hours as the follicle reaches 14 to 16 mm",
-      "Lining checked for a triple line of 7 mm or more",
+      "Until follicle reaches 14-16mm in diameter",
+      "Endometrium should be trilaminar of at least 7mm.",
     ],
   },
   {
     number: "4",
-    title: "Peak and trigger (days 12–14)",
+    title: "Final follicular scan (Day 12-14)",
     bullets: [
-      "Lead follicle 18 to 22 mm with a vascular ring",
-      "hCG trigger (5,000 to 10,000 IU) given",
+      "Once follicle reaches 18-22 mm and has good ring around it",
+      "give HCG injection 5000-10000 IU",
     ],
   },
   {
     number: "5",
-    title: "Ovulation confirmation (24–48 hours after trigger)",
+    title: "Confirm ovulation (Day 24-48 hours post trigger)",
     bullets: [
-      "Scan confirms follicle collapse and corpus luteum",
-      "Timed intercourse or IUI scheduled",
+      "Ultrasound to confirm if ovulation has occurred or not. Do intercourse/IUI",
     ],
   },
 ];
 
 const whyPoints = [
   {
-    title: "Specialist-read scans",
-    desc: "Scans are done and read by Dr. Dahiya or senior reproductive sonographers, with no reporting delays.",
+    title: "Readings by specialists",
+    desc: "Dr. Dahiya herself performs the scans and readings.",
   },
   {
-    title: "Preventing multiples",
-    desc: "If 3 or more follicles develop, the cycle is cancelled or converted to IVF to avoid risky multiple pregnancies.",
+    title: "Avoid twin/triplet pregnancy",
+    desc: "If your body reacts to medications and develops more than 3 follicles we either cancel the cycle or convert to IVF.",
   },
   {
-    title: "Smooth next steps",
-    desc: "If ovulation still fails after 3 cycles, you move to the next treatment without repeating basic tests.",
+    title: "Next step without waiting",
+    desc: "If you don't ovulate even after doing follicular monitoring for 3 months. We proceed to next step without wasting your time.",
   },
 ];
 
 export default function FollicularProtocolAndWhy() {
   return (
-    <TreatmentSection>
-        <div className="mb-14 sm:mb-16 lg:mb-20">
-          <TreatmentSectionHeader
-          eyebrow="How it works"
+    <>
+      <TreatmentSection>
+        <TreatmentSectionHeader
+          eyebrow="Protocol for Follicular Monitoring"
           title="Step-by-Step Follicular Monitoring Protocol"
         />
 
-          <Stagger
-            delay={0.05}
-            className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
-          >
-            {protocols.map((item) => (
-              <StaggerItem key={item.number}>
+        <Stagger
+          delay={0.05}
+          className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
+        >
+          {protocols.map((item) => (
+            <StaggerItem key={item.number} className="h-full">
               <ProtocolCard {...item} />
             </StaggerItem>
-            ))}
-          </Stagger>
-        </div>
+          ))}
+        </Stagger>
+      </TreatmentSection>
 
-        <div>
-          <TreatmentSectionHeader
-          eyebrow="Expertise & authority"
+      <TreatmentSection>
+        <TreatmentSectionHeader
+          eyebrow="Benefits of choosing us for Follicular Monitoring"
           title="Why Choose Dr. Mona Dahiya for Follicular Monitoring?"
         />
 
-          <div className="mt-6 flex flex-col gap-3.5 sm:mt-7 sm:gap-4">
-            {whyPoints.map((point, idx) => (
-              <Reveal key={point.title} variant="fadeUp" delay={idx * 0.05}>
+        <div className="mt-6 flex flex-col gap-3.5 sm:mt-7 sm:gap-4">
+          {whyPoints.map((point, idx) => (
+            <Reveal key={point.title} variant="fadeUp" delay={idx * 0.05}>
               <WhyPointRow {...point} />
             </Reveal>
-            ))}
-          </div>
+          ))}
         </div>
       </TreatmentSection>
+    </>
   );
 }

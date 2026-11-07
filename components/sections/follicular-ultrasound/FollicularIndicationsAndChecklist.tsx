@@ -9,33 +9,35 @@ import {
   NumberedCard,
   ChecklistRow,
 } from "@/components/ui/treatment";
+
 const indications: { number: string; title: string; description: ReactNode }[] =
   [
     {
       number: "1",
-      title: "Timed natural intercourse",
+      title: "For Intercourse",
       description:
-        "Couples who want to confirm their exact 24 to 36-hour fertile window.",
+        "To know the perfect 24-36 hours when you can get pregnant by having normal intercourse.",
     },
     {
       number: "2",
-      title: "Ovulation induction",
+      title: "While on ovulation drugs",
       description:
-        "Women on Letrozole, clomiphene or low-dose injections, so doses can be adjusted and twins avoided.",
+        "To monitor if drugs are working or not. Helps to avoid twin pregnancy as well. You can read more about letrozole/clomiphene/injections.",
     },
     {
       number: "3",
-      title: "IUI timing",
+      title: "IUI",
       description: (
         <>
-          Insemination 36 hours after trigger. See{" "}
+          IUI is done 36 hours after triggering the follicle with hcg injection.
+          Read about{" "}
           <Link
             href="/best-iui-doctor-in-noida"
-            className="font-medium text-blue underline underline-offset-2 hover:text-rose transition-colors"
+            className="font-medium text-blue underline underline-offset-2 transition-colors hover:text-rose"
           >
-            IUI Treatment
-          </Link>
-          .
+            IUI
+          </Link>{" "}
+          here.
         </>
       ),
     },
@@ -44,83 +46,72 @@ const indications: { number: string; title: string; description: ReactNode }[] =
       title: "PCOS",
       description: (
         <>
-          Spotting slow growth, follicle arrest or luteinised unruptured follicle (LUF).
-          See{" "}
+          Follicles may grow slowly or stop growing. Follicular scan will tell
+          you if your follicle is arrested or has developed into a LUF
+          (luteinized unruptured follicle). Read more about{" "}
           <Link
             href="/best-pcos-pcod-treatment-centre-in-noida"
-            className="font-medium text-blue underline underline-offset-2 hover:text-rose transition-colors"
+            className="font-medium text-blue underline underline-offset-2 transition-colors hover:text-rose"
           >
-            PCOS Treatment
-          </Link>
-          .
+            PCOS
+          </Link>{" "}
+          here.
         </>
       ),
     },
     {
       number: "5",
-      title: "Luteal phase problems and thin lining",
-      description: "Checking the follicle and lining grow in step.",
+      title: "Luteal phase defects/endometrium too thin",
+      description:
+        "Will help to see if your endometrium is growing in proportion to your follicle.",
     },
   ];
 
 const checklist = [
-  {
-    title: "Lead follicle size",
-    text: "average diameter, growing 1.5 to 2 mm a day.",
-  },
-  {
-    title: "Endometrial thickness and pattern",
-    text: "total thickness and the trilaminar (triple-line) appearance.",
-  },
-  {
-    title: "Follicle blood flow",
-    text: "colour Doppler, with 75% or more ring coverage suggesting maturity.",
-  },
-  {
-    title: "Signs of ovulation",
-    text: "a collapsed follicle, irregular edges and fluid in the pouch of Douglas.",
-  },
+  "Size of dominant follicle. We measure the mean diameter and it increases by 1.5-2mm each day.",
+  "Thickness of endometrium. We measure overall thickness of endometrium and see if it has a trilaminar (3 line) appearance.",
+  "Blood supply to follicle. Using color doppler we assess how much area around the follicle is being supplied with blood. Over 75% area suggests the follicle is matured.",
+  "If you have ovulated. A ruptured follicle will have irregular border and free fluid in Pouch of Douglas.",
 ];
 
 export default function FollicularIndicationsAndChecklist() {
   return (
-    <TreatmentSection>
-        <div className="mb-14 sm:mb-16 lg:mb-20">
-          <TreatmentSectionHeader
-          eyebrow="Clinical breakdown"
+    <>
+      <TreatmentSection>
+        <TreatmentSectionHeader
+          eyebrow="What is Follicular Scan Used For?"
           title="Indications: Who Needs Follicular Tracking?"
         />
 
-          <Stagger
-            delay={0.05}
-            className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
-          >
-            {indications.map((item) => (
-              <StaggerItem key={item.number}>
+        <Stagger
+          delay={0.05}
+          className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
+        >
+          {indications.map((item) => (
+            <StaggerItem key={item.number} className="h-full">
               <NumberedCard {...item} />
             </StaggerItem>
-            ))}
-          </Stagger>
-        </div>
+          ))}
+        </Stagger>
+      </TreatmentSection>
 
-        <div>
-          <TreatmentSectionHeader
-          eyebrow="Before treatment"
+      <TreatmentSection>
+        <TreatmentSectionHeader
+          eyebrow="Things we look at during a Follicular Scan"
           title="What Is Checked at Every Scan?"
-          subtitle="Each 5 to 10-minute scan records 4 things."
+          subtitle="Each scan takes 5-10 minutes and we look at the following things"
         />
 
-          <div className="mt-6 flex flex-col gap-3.5 sm:mt-7 sm:gap-4">
-            {checklist.map((item, idx) => (
-              <Reveal key={item.title} variant="fadeUp" delay={idx * 0.04}>
-                <ChecklistRow>
-                  <strong className="font-semibold text-black">{item.title}:</strong>{" "}
-                  {item.text}
-                </ChecklistRow>
-              </Reveal>
-            ))}
-          </div>
+        <div className="mt-6 flex flex-col gap-3.5 sm:mt-7 sm:gap-4">
+          {checklist.map((text, idx) => (
+            <Reveal key={text} variant="fadeUp" delay={idx * 0.04}>
+              <ChecklistRow>
+                <span>{text}</span>
+              </ChecklistRow>
+            </Reveal>
+          ))}
         </div>
       </TreatmentSection>
+    </>
   );
 }

@@ -11,95 +11,106 @@ import {
 const protocols = [
   {
     number: "1",
-    title: "Consultation",
+    title: "Visit to Clinic",
     bullets: [
-      "Reason for freezing and the number of samples needed",
-      "Consent and storage terms explained",
+      "Understand why you want to freeze sperm",
+      "How many samples we will need to freeze",
     ],
   },
   {
     number: "2",
-    title: "Collection",
+    title: "Sample Collection",
     bullets: [
-      "Sample collected in a private room at the clinic",
-      "Multiple samples may be advised",
+      "Will be collected in a private room",
+      "Can be multiple samples depending on the situation",
     ],
   },
   {
     number: "3",
-    title: "Processing",
+    title: "Sample Processing",
     bullets: [
-      "Sample assessed and mixed with a cryoprotectant",
-      "Divided into labelled vials",
+      "The sample is evaluated and a cryoprotective agent is added",
+      "Split into separate vials and labelled",
     ],
   },
   {
     number: "4",
-    title: "Freezing and storage",
+    title: "Frozen & Stored",
     bullets: [
-      "Vials stored in liquid nitrogen",
-      "Tracked with a secure labelling system",
+      "Vials are stored in a liquid nitrogen tank",
+      "Labelled with a unique ID number",
     ],
   },
   {
     number: "5",
-    title: "Later use",
+    title: "Use Of Frozen Sperm",
     bullets: [
-      "Thawed for IUI, IVF or ICSI",
-      "Post-thaw quality checked before use",
+      "Can be thawed and used in IUI, IVF & ICSI",
+      "Quality is determined after the sample is thawed",
     ],
   },
 ];
 
 const whyPoints = [
   {
-    title: "Rapid Access for Onco-Fertility & Urgent Medical Needs",
-    desc: "Same-day, prioritized appointments ensure fast semen cryopreservation before chemotherapy, radiation, or surgery—avoiding any delay to medical care.",
+    title: "Speed is Important",
+    desc: "For patients who need their sample to be frozen quickly, we provide same-day consultations so you do not have to delay your treatment plan.",
   },
   {
-    title: "Advanced Cryopreservation for Maximum Post-Thaw Viability",
-    desc: "Ultra-low temperature storage at -196°C protects sperm motility, morphology, and DNA integrity for reliable long-term security.",
+    title: "Better Survival Rates",
+    desc: "By storing your sperm at ultra-low temperatures, we can maintain a higher survival rate, allowing us to have a good sample for you after thawing.",
   },
   {
-    title: "Tailored Integration with Future IUI and IVF/ICSI Plans",
-    desc: "Every sample is prepared with clear long-term storage terms and optimized for downstream treatments, from simple IUI to microfluidic ICSI cycles.",
+    title: "Storing For Future Procedures",
+    desc: "We know how you want your sample to be used later on, whether it is for IUI or IVF/ICSI. We make sure your sample meets those standards.",
   },
 ];
 
-export default function SpermFreezingProtocolAndWhy() {
+export function SpermFreezingProtocol() {
   return (
     <TreatmentSection>
-      <div className="mb-14 sm:mb-16 lg:mb-20">
-        <TreatmentSectionHeader
-          eyebrow="How it works"
-          title="Step-by-Step Treatment Protocol"
-          subtitle="What to expect at each stage. The exact plan is set at your consultation."
-        />
-        <Stagger
-          delay={0.05}
-          className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
-        >
-          {protocols.map((item) => (
-            <StaggerItem key={item.number}>
-              <ProtocolCard {...item} />
-            </StaggerItem>
-          ))}
-        </Stagger>
-      </div>
+      <TreatmentSectionHeader
+        eyebrow="About the treatment"
+        title="Step-by-Step Treatment Protocol"
+        subtitle="Here is what happens at every step. The final decision is made at your visit."
+      />
+      <Stagger
+        delay={0.05}
+        className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
+      >
+        {protocols.map((item) => (
+          <StaggerItem key={item.number}>
+            <ProtocolCard {...item} />
+          </StaggerItem>
+        ))}
+      </Stagger>
+    </TreatmentSection>
+  );
+}
 
-      <div>
-        <TreatmentSectionHeader
-          eyebrow="Expertise & authority"
-          title="Why Consult Dr. Mona Dahiya for Semen & Sperm Freezing?"
-        />
-        <div className="mt-6 flex flex-col gap-3.5 sm:mt-7 sm:gap-4">
-          {whyPoints.map((point, idx) => (
-            <Reveal key={point.title} variant="fadeUp" delay={idx * 0.05}>
-              <WhyPointRow {...point} />
-            </Reveal>
-          ))}
-        </div>
+export function SpermFreezingWhy() {
+  return (
+    <TreatmentSection>
+      <TreatmentSectionHeader
+        eyebrow="About The Doctor"
+        title="What makes us different?"
+      />
+      <div className="mt-6 flex flex-col gap-3.5 sm:mt-7 sm:gap-4">
+        {whyPoints.map((point, idx) => (
+          <Reveal key={point.title} variant="fadeUp" delay={idx * 0.05}>
+            <WhyPointRow {...point} />
+          </Reveal>
+        ))}
       </div>
     </TreatmentSection>
+  );
+}
+
+export default function SpermFreezingProtocolAndWhy() {
+  return (
+    <>
+      <SpermFreezingProtocol />
+      <SpermFreezingWhy />
+    </>
   );
 }

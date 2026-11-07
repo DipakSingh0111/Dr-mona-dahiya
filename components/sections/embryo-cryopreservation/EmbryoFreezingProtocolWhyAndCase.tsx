@@ -5,140 +5,139 @@ import {
   TreatmentSection,
   TreatmentSectionHeader,
   ProtocolCard,
-  WhyPointRow
+  WhyPointRow,
 } from "@/components/ui/treatment";
+
 const protocols = [
   {
     number: "1",
-    title: "Stimulation and retrieval",
+    title: "Stimulate the Ovaries",
     bullets: [
-      "Eggs are retrieved after ovarian stimulation",
-      "Embryos are cultured to day 3 or blastocyst",
+      "Retrieve eggs after stimulation",
+      "Embryos are developed till Day 3 or blastocyst",
     ],
   },
   {
     number: "2",
-    title: "Selection",
+    title: "Embryo Selection",
     bullets: [
-      "Best-graded embryos chosen for freezing",
-      "Genetic biopsy if planned",
+      "Select embryos with a good quality grade to freeze",
+      "Biopsy for genetics (if required)",
     ],
   },
   {
     number: "3",
-    title: "Vitrification",
+    title: "Freeze Embryos",
     bullets: [
-      "Embryos are rapidly frozen in cryoprotectant",
-      "Loaded into labelled carriers",
+      "Embryos are placed in vitrification media to freeze quickly",
+      "Put in a carrier and labelled",
     ],
   },
   {
     number: "4",
-    title: "Storage",
+    title: "Store the Embryos",
     bullets: [
-      "Kept in liquid nitrogen tanks",
-      "Regular monitoring and records",
+      "Stored in a liquid nitrogen tank",
+      "Records maintained and checked periodically",
     ],
   },
   {
     number: "5",
-    title: "Frozen embryo transfer",
+    title: "Thaw Embryos",
     bullets: [
-      "Embryos are warmed when you are ready",
-      "Transfer is planned in a prepared cycle",
+      "Once ready to use, embryos are thawed and transferred",
+      "The endometrium is prepared for frozen embryo transfer",
     ],
   },
 ];
 
 const whyPoints = [
   {
-    title: "Personalized Blastocyst-First Planning",
-    desc: "Embryos are cultured to Day 5/6 blastocysts, achieving over 95% post-thaw survival rates through tailored vitrification rather than routine batch freezing.",
+    title: "Focus on Blastocyst Formation and Higher Pregnancy Rate",
+    desc: "Instead of routinely freezing Day 3 embryos, we culture the embryos till the blastocyst stage (Day 5/6), which yields a higher post-thaw survival rate (>95%), with an individualised approach to vitrifying them.",
   },
   {
-    title: "Advanced Cryopreservation & Traceability",
-    desc: "Ultra-rapid vitrification at -196°C prevents ice crystal damage, backed by double-witness protocols ensuring 100% sample traceability and long-term security.",
+    title: "Faster Vitrification Process to ensure no ice crystal formation",
+    desc: "We use the ultra-rapid vitrification technique to freeze the embryos at a temperature of −196°C. Double witnessing is done at every stage to ensure 100% safety of your embryos.",
   },
   {
-    title: "Higher-Success FET Integration",
-    desc: "Decoupling retrieval from transfer allows the uterine lining to recover, boosting implantation rates by 10% to 15% for an optimized transfer window.",
+    title: "Higher Pregnancy Rate with Frozen Embryo Transfer",
+    desc: "As there is no hormonal stimulation during transfer, the endometrium can be prepared for pregnancy rates 10%–15% higher than a fresh embryo transfer.",
   },
 ];
 
-export default function EmbryoFreezingProtocolWhyAndCase() {
+export function EmbryoFreezingProtocol() {
   return (
     <TreatmentSection>
-        <div className="mb-14 sm:mb-16 lg:mb-20">
-          <TreatmentSectionHeader
-          eyebrow="Next 2-3 weeks"
-          title="Step-by-Step Treatment Protocol"
-          subtitle="What to expect at each stage. The exact plan is set at your consultation."
-        />
+      <TreatmentSectionHeader
+        eyebrow="Embryo Freezing (Cryopreservation) Treatment Procedure"
+        title="Step-by-Step Treatment Protocol"
+        subtitle="Understand the different steps involved. This may vary based on your requirements discussed at the clinic."
+      />
 
-          <Stagger
-            delay={0.05}
-            className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
-          >
-            {protocols.map((item) => (
-              <StaggerItem key={item.number}>
-              <ProtocolCard {...item} />
-            </StaggerItem>
-            ))}
-          </Stagger>
-        </div>
+      <Stagger
+        delay={0.05}
+        className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
+      >
+        {protocols.map((item) => (
+          <StaggerItem key={item.number}>
+            <ProtocolCard {...item} />
+          </StaggerItem>
+        ))}
+      </Stagger>
+    </TreatmentSection>
+  );
+}
 
-        <div className="mb-14 sm:mb-16 lg:mb-20">
-          <TreatmentSectionHeader
-          eyebrow="Expertise & authority"
-          title="Why Consult Dr. Mona Dahiya for Embryo Freezing?"
-        />
+export function EmbryoFreezingWhy() {
+  return (
+    <TreatmentSection>
+      <TreatmentSectionHeader
+        eyebrow="Experience and Knowledge"
+        title="Why Choose Dr. Mona Dahiya For Embryo Freezing?"
+      />
 
-          <div className="mt-6 flex flex-col gap-3.5 sm:mt-7 sm:gap-4">
-            {whyPoints.map((point, idx) => (
-              <Reveal key={point.title} variant="fadeUp" delay={idx * 0.05}>
-              <WhyPointRow {...point} />
-            </Reveal>
-            ))}
-          </div>
-
-          <Reveal variant="fadeUp" delay={0.15} className="mt-6">
-            <div className="rounded-xl border border-[#fde2ec] bg-white px-5 py-4 text-[12.5px] leading-relaxed text-ink sm:text-[13px]">
-              <p>
-                <strong className="text-ink">Delhi</strong> · Building Number 41, First
-                Floor, Ring Road, Block Q, Lajpat Nagar IV, Lajpat Nagar, New Delhi 110024
-              </p>
-              <p className="mt-1.5">
-                <strong className="text-ink">Noida</strong> · 3rd Floor, K-06, above
-                FirstCry, Baraula, Sector 49, Noida, Uttar Pradesh 201301
-              </p>
-              <p className="mt-1.5">
-                <strong className="text-ink">Ghaziabad</strong> · 2nd Floor, RDC, C-53A,
-                near Bikanerwala, Sector 15, Sector 10, Raj Nagar, Ghaziabad, Uttar
-                Pradesh 201002
-              </p>
-            </div>
+      <div className="mt-6 flex flex-col gap-3.5 sm:mt-7 sm:gap-4">
+        {whyPoints.map((point, idx) => (
+          <Reveal key={point.title} variant="fadeUp" delay={idx * 0.05}>
+            <WhyPointRow {...point} />
           </Reveal>
-        </div>
+        ))}
+      </div>
+    </TreatmentSection>
+  );
+}
 
-        <div>
-          <TreatmentSectionHeader
-          eyebrow="From the clinic"
-          title="Clinical Case Insight"
-        />
+export function EmbryoFreezingCase() {
+  return (
+    <TreatmentSection>
+      <TreatmentSectionHeader
+        eyebrow="From the clinic"
+        title="Clinical Case Insight"
+      />
 
-          <Reveal variant="fadeUp" delay={0.06} className="mt-6">
-            <div className="card-highlight rounded-2xl border border-[#fde2ec] bg-white p-6 shadow-[0_8px_24px_rgba(232,62,116,0.06)] sm:p-7">
-              <p className="text-[14px] leading-relaxed font-medium text-ink sm:text-[15.5px]">
-                A patient at risk of OHSS had all her embryos vitrified and waited a
-                cycle. The prepared frozen transfer that followed led to a healthy
-                pregnancy.
-              </p>
-              <p className="mt-3 text-[12px] text-ink/65">
-                Details changed to protect patient privacy. Individual results vary.
-              </p>
-            </div>
-          </Reveal>
+      <Reveal variant="fadeUp" delay={0.06} className="mt-6">
+        <div className="card-highlight rounded-2xl border border-[#fde2ec] border-l-4 border-l-rose bg-white p-6 shadow-[0_8px_24px_rgba(232,62,116,0.06)] sm:p-7">
+          <p className="font-serif text-[14.5px] leading-relaxed font-semibold text-ink sm:text-[16px]">
+            A patient at risk of OHSS had all her embryos vitrified and waited a
+            cycle. The prepared frozen transfer that followed led to a healthy
+            pregnancy.
+          </p>
+          <p className="mt-3 text-[12px] text-ink/65">
+            Details changed to protect patient privacy. Individual results vary.
+          </p>
         </div>
-      </TreatmentSection>
+      </Reveal>
+    </TreatmentSection>
+  );
+}
+
+export default function EmbryoFreezingProtocolWhyAndCase() {
+  return (
+    <>
+      <EmbryoFreezingProtocol />
+      <EmbryoFreezingWhy />
+      <EmbryoFreezingCase />
+    </>
   );
 }

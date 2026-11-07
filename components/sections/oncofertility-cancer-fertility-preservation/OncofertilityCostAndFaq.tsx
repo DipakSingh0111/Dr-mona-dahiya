@@ -1,37 +1,87 @@
 "use client";
 
-import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
+import { Stagger, StaggerItem } from "@/components/ui/Reveal";
 import {
   TreatmentSection,
   TreatmentSectionHeader,
   FaqAccordion,
   type FaqItem,
-  CostFactorCard
+  CostFactorCard,
 } from "@/components/ui/treatment";
+
+const pillIcon = (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="size-4 text-white"
+    aria-hidden
+  >
+    <path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z" />
+    <path d="m8.5 8.5 7 7" />
+  </svg>
+);
+
+const checkIcon = (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2.4"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="size-4 text-white"
+    aria-hidden
+  >
+    <path d="M20 6 9 17l-5-5" />
+  </svg>
+);
+
+const flaskIcon = (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="size-4 text-white"
+    aria-hidden
+  >
+    <path d="M10 2v7.31" />
+    <path d="M14 9.3V1.99" />
+    <path d="M8.5 2h7" />
+    <path d="M14 9.3a6.5 6.5 0 1 1-4 0" />
+    <path d="M5.52 16h12.96" />
+  </svg>
+);
+
 const costCards = [
   {
-    title: "Stimulation medicines",
+    icon: pillIcon,
+    title: "Medication to grow eggs",
     description:
-      "Gonadotropins, antagonists and Letrozole: ₹25,000 to ₹65,000.",
+      "Injectable hormones that will grow your eggs, and anti-estrogen medication: ₹35,000 to ₹65,000.",
   },
   {
-    title: "Egg retrieval and anaesthesia",
+    icon: checkIcon,
+    title: "Procedure to retrieve eggs and anaesthesia",
     description:
-      "Retrieval, day-care suite and IV sedation: ₹20,000 to ₹45,000.",
+      "Your egg retrieval procedure will cost ₹30,000 to ₹45,000, which includes a daycare facility and IV anaesthesia.",
   },
   {
-    title: "Emergency vitrification",
-    description: "Freezing straws and media: ₹20,000 to ₹30,000.",
+    icon: flaskIcon,
+    title: "To freeze your eggs",
+    description: "Cost of freezing your eggs: ₹20,000 to ₹30,000.",
   },
   {
-    title: "Emergency semen freezing",
+    icon: flaskIcon,
+    title: "To freeze your semen",
     description:
-      "Processing, screening and multi-vial banking: ₹4,000 to ₹8,000 per sample.",
-  },
-  {
-    title: "Long-term storage",
-    description:
-      "Flexible multi-year storage plans for extended cancer treatment.",
+      "Cost to freeze your semen is ₹4,000 to ₹8,000 per sample. This includes processing and storing in multiple vials. You can store them for a longer period if needed.",
   },
 ];
 
@@ -39,27 +89,27 @@ const leftFaqs: FaqItem[] = [
   {
     question: "Will fertility preservation delay my cancer treatment?",
     answer:
-      "Usually no. Random-start stimulation begins on any day of your cycle, and the whole process takes 10 to 12 days, which typically fits within the staging and planning window before chemotherapy.",
+      "No. Usually you have a few weeks to stage your cancer and decide on treatment. We can start stimulation on any day of your cycle. The whole process will take around 10 to 12 days.",
   },
   {
     question: "Is stimulation safe with estrogen-sensitive breast cancer?",
     answer:
-      "Yes, with an oncology protocol. Adding Letrozole 2.5 to 5 mg keeps estrogen close to natural levels while follicles grow.",
+      "Yes, by using a protocol that oncologists approve. We can add Letrozole (2.5 to 5 mg) to reduce estrogen levels while growing your eggs.",
   },
   {
     question: "Can chemotherapy cause permanent infertility?",
     answer:
-      "It can. Alkylating drugs such as cyclophosphamide can wipe out the ovarian follicle pool and cause early menopause, and in men can damage sperm-producing cells. Freezing eggs, embryos or sperm first gives a biological backup.",
+      "Yes. Certain drugs are known to induce ovarian failure, which can lead to menopause. Men can lose their ability to produce sperm. It's better to store your eggs, embryos or semen before chemotherapy begins.",
   },
   {
     question: "Where can I get emergency oncofertility care with Dr. Mona Dahiya?",
     answer:
-      "Emergency consultations are prioritised at 3 clinics: Noida (3rd Floor, K-06, above FirstCry, Bansal, Sector 48, Noida, Uttar Pradesh 201301), Ghaziabad (2nd Floor, RDC, C-53A, near Bikanervala, Sector 15, Sector 10, Raj Nagar, Ghaziabad, Uttar Pradesh 201002) and Delhi (Building Number 41, First Floor, Ring Road, Block Q, Lajpat Nagar IV, Lajpat Nagar, New Delhi 110024).",
+      "Dr. Mona can see you at our Noida clinic (3rd Floor, K-06, above FirstCry, Baraula, Sector 49, Noida, UP 201301), Ghaziabad clinic (2nd Floor, RDC, C-53A, near Bikanerwala, Sector 15, Sector 10, Raj Nagar, Ghaziabad, UP 201002) and Delhi clinic (Building No. 41, First Floor, Ring Road, Block Q, Lajpat Nagar IV, Lajpat Nagar, Delhi 110024). For urgent cases, please book an appointment online.",
   },
   {
     question: "How quickly can preservation start?",
     answer:
-      "Within 24 to 48 hours of referral. Tests are done the same day, and stimulation can start immediately.",
+      "We can get started within 24 to 48 hours. We can do all your testing within 1–2 days.",
   },
 ];
 
@@ -67,55 +117,55 @@ const rightFaqs: FaqItem[] = [
   {
     question: "How much does oncofertility care cost?",
     answer:
-      "Egg freezing runs about ₹95,000 to ₹1,40,000 in total (medicines ₹25,000 to ₹65,000, retrieval ₹20,000 to ₹45,000, vitrification ₹20,000 to ₹30,000). Semen freezing is ₹4,000 to ₹8,000 per sample.",
+      "To freeze your eggs you will spend around ₹85,000 to ₹1,40,000: medications cost ₹35,000 to ₹65,000, the procedure to retrieve your eggs is ₹30,000 to ₹45,000, and freezing your eggs costs ₹20,000 to ₹30,000. If you want to store your semen, it will cost ₹4,000 to ₹8,000.",
   },
   {
     question: "Should I freeze eggs or embryos?",
     answer:
-      "Eggs if you are single or unsure about a partner; embryos if you have a partner, since they give slightly more information about quality. Both survive warming over 90% of the time.",
+      "If you are single or haven't found someone yet, it's better to store your eggs. If you have a partner, storing embryos might be better as it can tell you about egg quality. Both have a very good survival rate when thawed (>90%).",
   },
   {
     question: "How many sperm samples should men bank?",
     answer:
-      "2 to 3 samples within 24 to 48 hours, ideally before the first chemotherapy dose, because even one cycle can damage sperm DNA.",
+      "Ideally he should store 2 to 3 samples, within 24 to 48 hours before chemotherapy starts.",
   },
   {
     question: "Can I get pregnant after cancer treatment?",
     answer:
-      "Many patients can, often 2 or more years after treatment ends, with oncologist clearance. Stored eggs or embryos are then used through IVF or ICSI.",
+      "Yes, most patients become pregnant after completing treatment. It's recommended to wait at least 2 years. Your oncologist will let you know when it's OK to get pregnant.",
   },
 ];
 
 export default function OncofertilityCostAndFaq() {
-return (
-    <TreatmentSection>
-        <div className="mb-14 sm:mb-16 lg:mb-20">
-          <TreatmentSectionHeader
+  return (
+    <>
+      <TreatmentSection>
+        <TreatmentSectionHeader
           eyebrow="Transparency"
-          title="What Affects the Cost of Oncofertility Care"
-          subtitle="Oncofertility cases are prioritised and priced clearly. The components below are itemised the same day so treatment is not held up."
+          title="Price for Oncofertility"
+          subtitle="Here's what we charge. As these patients are emergent, we will discuss the price on the day itself."
         />
 
-          <Stagger
-            delay={0.05}
-            className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4"
-          >
-            {costCards.map((card) => (
-              <StaggerItem key={card.title}>
+        <Stagger
+          delay={0.05}
+          className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4"
+        >
+          {costCards.map((card) => (
+            <StaggerItem key={card.title}>
               <CostFactorCard {...card} />
             </StaggerItem>
-            ))}
-          </Stagger>
-        </div>
+          ))}
+        </Stagger>
+      </TreatmentSection>
 
-        <div>
-          <TreatmentSectionHeader
+      <TreatmentSection>
+        <TreatmentSectionHeader
           eyebrow="Patient questions"
           title="Top FAQs About Oncofertility in Delhi NCR"
         />
 
-          <FaqAccordion leftItems={leftFaqs} rightItems={rightFaqs} />
-        </div>
+        <FaqAccordion leftItems={leftFaqs} rightItems={rightFaqs} />
       </TreatmentSection>
+    </>
   );
 }

@@ -15,6 +15,7 @@ type Props = {
   /** Online consultation duration label shown on pricing cards. Empty hides the line. */
   consultationDuration?: string;
   defaultClinic?: string;
+  showAddresses?: boolean;
   className?: string;
   sectionBg?: string;
 };
@@ -33,6 +34,7 @@ export default function AboutConsultation({
   appendContacts = true,
   consultationDuration = "30 minutes",
   defaultClinic = "Noida",
+  showAddresses = true,
   className = "",
   sectionBg = "bg-pink",
 }: Props) {
@@ -171,23 +173,25 @@ export default function AboutConsultation({
                 </div>
               </div>
 
-              <div className="mt-7 space-y-3 text-[13px] leading-relaxed text-slate-600">
-                <div>
-                  <strong className="font-bold text-ink">Delhi</strong>{" "}
-                  Building Number 41, First Floor, Ring Road, Block Q, Lajpat
-                  Nagar IV, Lajpat Nagar, New Delhi 110024
+              {showAddresses ? (
+                <div className="mt-7 space-y-3 text-[13px] leading-relaxed text-slate-600">
+                  <div>
+                    <strong className="font-bold text-ink">Delhi</strong>{" "}
+                    Building Number 41, First Floor, Ring Road, Block Q, Lajpat
+                    Nagar IV, Lajpat Nagar, New Delhi 110024
+                  </div>
+                  <div>
+                    <strong className="font-bold text-ink">Noida</strong> 3rd
+                    Floor, K-06, above FirstCry, Baraula, Sector 49, Noida, Uttar
+                    Pradesh 201301
+                  </div>
+                  <div>
+                    <strong className="font-bold text-ink">Ghaziabad</strong>{" "}
+                    2nd Floor, RDC, C-53A, near Bikanerwala, Sector 15, Sector 10,
+                    Raj Nagar, Ghaziabad, Uttar Pradesh 201002
+                  </div>
                 </div>
-                <div>
-                  <strong className="font-bold text-ink">Noida</strong> 3rd
-                  Floor, K-06, above FirstCry, Baraula, Sector 49, Noida, Uttar
-                  Pradesh 201301
-                </div>
-                <div>
-                  <strong className="font-bold text-ink">Ghaziabad</strong>{" "}
-                  2nd Floor, RDC, C-53A, near Bikanerwala, Sector 15, Sector 10,
-                  Raj Nagar, Ghaziabad, Uttar Pradesh 201002
-                </div>
-              </div>
+              ) : null}
             </Reveal>
           </div>
 

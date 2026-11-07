@@ -5,15 +5,11 @@ import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 import {
   TreatmentSection,
   TreatmentSectionHeader,
-  ReviewCard
+  ReviewCard,
+  type ReviewCardItem,
 } from "@/components/ui/treatment";
-const reviews: {
-  title?: string;
-  review: string;
-  initial: string;
-  name: string;
-  source: string;
-}[] = [
+
+const reviews: ReviewCardItem[] = [
   {
     review:
       "Dr. Mona Dahiya is among the best gynecologists for infertility in Delhi. Her clinic offers world-class facilities, and her team provides exceptional support. If you’re looking for high-success IVF in Delhi, she’s the one.",
@@ -41,31 +37,31 @@ const reviews: {
 export default function FollicularReviews() {
   return (
     <TreatmentSection>
-        <TreatmentSectionHeader
-          eyebrow="Patient reviews"
-          title="What Patients Say About Dr. Mona"
-          subtitle="Individual experiences in patients&apos; own words."
-        />
+      <TreatmentSectionHeader
+        eyebrow="Patient reviews"
+        title="What Patients Say About Dr. Mona"
+        subtitle="Individual experiences in patients’ own words."
+      />
 
-        <Stagger
-          delay={0.05}
-          className="mt-7 grid grid-cols-1 gap-5 lg:grid-cols-3"
-        >
-          {reviews.map((rev) => (
-            <StaggerItem key={rev.name}>
+      <Stagger
+        delay={0.05}
+        className="mt-7 grid grid-cols-1 items-stretch gap-5 lg:grid-cols-3"
+      >
+        {reviews.map((rev) => (
+          <StaggerItem key={rev.name} className="h-full">
             <ReviewCard {...rev} />
           </StaggerItem>
-          ))}
-        </Stagger>
+        ))}
+      </Stagger>
 
-        <Reveal variant="fadeUp" delay={0.1} className="mt-8">
-          <Link
-            href="/best-ivf-patient-reviews"
-            className="inline-flex items-center justify-center rounded-full border border-blue/40 bg-white px-5 py-2.5 text-[13px] font-semibold text-blue transition-all hover:border-blue hover:bg-blue/5 hover:text-blue-dark"
-          >
-            Read All Patient Reviews
-          </Link>
-        </Reveal>
-      </TreatmentSection>
+      <Reveal variant="fadeUp" delay={0.1} className="mt-8">
+        <Link
+          href="/best-ivf-patient-reviews"
+          className="inline-flex items-center justify-center rounded-full border border-blue/40 bg-white px-5 py-2.5 text-[13px] font-semibold text-blue transition-all hover:border-blue hover:bg-blue/5 hover:text-blue-dark"
+        >
+          Read All Patient Reviews
+        </Link>
+      </Reveal>
+    </TreatmentSection>
   );
 }

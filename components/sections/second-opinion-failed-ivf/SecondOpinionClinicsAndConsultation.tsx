@@ -64,7 +64,7 @@ export default function SecondOpinionClinicsAndConsultation() {
                 <div className="mt-6 flex flex-wrap items-center gap-3 sm:mt-7">
                   <a
                     href="#request-appointment-form"
-                    className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-rose to-[#f43f5e] px-6 py-2.5 text-[13.5px] font-bold text-white shadow-[0_8px_20px_rgba(232,62,116,0.35)] transition-all hover:brightness-110 active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"
+                    className="inline-flex items-center justify-center rounded-full bg-rose px-6 py-2.5 text-[13.5px] font-semibold text-white shadow-[0_8px_20px_rgba(232,62,116,0.3)] transition-all hover:bg-rose-dark active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"
                   >
                     Book In-Clinic Consultation
                   </a>

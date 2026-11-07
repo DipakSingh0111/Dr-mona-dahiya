@@ -1,79 +1,70 @@
 "use client";
 
 import Image from "next/image";
-import { FaCheck } from "react-icons/fa";
-import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
+import { Reveal } from "@/components/ui/Reveal";
 import {
   TreatmentSection,
   TreatmentSectionHeader,
+  WhyPointRow,
 } from "@/components/ui/treatment";
 
 const reasons = [
   {
     title: "Honest approach",
-    description:
-      "We have been doing IVF for over 25 years, with a fellowship from Singapore General Hospital. We will guide you on how many eggs you need to freeze based on your age and ovarian reserve.",
+    desc: "We have been doing IVF for over 25 years, with a fellowship from Singapore General Hospital. We will guide you on how many eggs you need to freeze based on your age and ovarian reserve.",
   },
   {
     title: "State-of-the-art vitrification",
-    description:
-      "Our vitrification technique helps prevent the formation of ice crystals, ensuring a higher chance of egg survival (>95%).",
+    desc: "Our vitrification technique helps prevent the formation of ice crystals, ensuring a higher chance of egg survival (>95%).",
   },
   {
     title: "Store your eggs as per the ART Act",
-    description:
-      "Your eggs will be stored in accordance with the ART Act. You can choose when to use your eggs in the future.",
+    desc: "Your eggs will be stored in accordance with the ART Act. You can choose when to use your eggs in the future.",
   },
 ];
 
 export default function EggFreezingWhy() {
   return (
     <TreatmentSection>
-      <TreatmentSectionHeader
-        eyebrow="About us"
-        title="Why Choose Dr. Mona Dahiya for Egg Freezing?"
-      />
+      <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-12 lg:gap-10">
+        <div className="lg:col-span-7">
+          <TreatmentSectionHeader
+            eyebrow="About us"
+            title={
+              <>
+                Why Choose Dr. Mona
+                <br className="hidden sm:inline" /> Dahiya for Egg Freezing?
+              </>
+            }
+          />
 
-      <div className="mt-7 grid grid-cols-1 items-start gap-8 lg:grid-cols-12 lg:gap-10">
-        <Stagger
-          className="flex flex-col gap-3.5 sm:gap-4 lg:col-span-7"
-          stagger={0.06}
-        >
-          {reasons.map((item) => (
-            <StaggerItem key={item.title}>
-              <div className="flex items-start gap-4 rounded-2xl border border-[#fde2ec] bg-white p-5 backdrop-blur-md transition-all duration-200 hover:border-rose/35 hover:bg-[#fff0f5] sm:p-6">
-                <span className="signature-tick mt-0.5 flex size-9 shrink-0 items-center justify-center rounded-lg text-white">
-                  <FaCheck className="size-3.5" />
-                </span>
-                <div className="min-w-0 flex-1">
-                  <h3 className="text-[15px] font-bold text-ink sm:text-[16px]">
-                    {item.title}
-                  </h3>
-                  <p className="mt-1.5 text-[13.5px] leading-relaxed text-ink/80 sm:text-[14px]">
-                    {item.description}
-                  </p>
-                </div>
-              </div>
-            </StaggerItem>
-          ))}
-        </Stagger>
-
-        <Reveal
-          variant="scaleIn"
-          className="relative w-full self-start lg:col-span-5"
-        >
-          <div className="relative mx-auto aspect-[4/5] w-full max-w-[380px] overflow-hidden rounded-[22px] border-4 border-white shadow-[0_18px_40px_rgba(232,62,116,0.12)] lg:ml-auto">
-            <Image
-              src="/images/about-us-egg-freezing.jpg"
-              alt="Dr. Mona Dahiya — Why Choose for Egg Freezing"
-              fill
-              sizes="(max-width: 1024px) 90vw, 380px"
-              quality={95}
-              className="object-cover object-[center_18%]"
-              priority={false}
-            />
+          <div className="mt-6 flex flex-col gap-3.5 sm:mt-7 sm:gap-4">
+            {reasons.map((point, idx) => (
+              <Reveal key={point.title} variant="fadeUp" delay={idx * 0.05}>
+                <WhyPointRow {...point} />
+              </Reveal>
+            ))}
           </div>
-        </Reveal>
+        </div>
+
+        <div className="flex justify-center lg:col-span-5 lg:justify-end">
+          <Reveal
+            variant="scaleIn"
+            delay={0.1}
+            className="w-full max-w-[380px] sm:max-w-[440px] lg:max-w-[480px]"
+          >
+            <div className="relative aspect-[10/11] w-full overflow-hidden rounded-[22px] border-4 border-white bg-pink shadow-[0_20px_50px_rgba(232,62,116,0.12)] ring-1 ring-rose/15 sm:rounded-[26px]">
+              <Image
+                src="/images/about-us-egg-freezing.jpg"
+                alt="Dr. Mona Dahiya — Why Choose Dr. Mona Dahiya for Egg Freezing"
+                fill
+                sizes="(max-width: 640px) 380px, (max-width: 1024px) 440px, 480px"
+                quality={95}
+                className="object-cover object-[center_28%]"
+              />
+            </div>
+          </Reveal>
+        </div>
       </div>
     </TreatmentSection>
   );

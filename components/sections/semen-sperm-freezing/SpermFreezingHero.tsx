@@ -1,26 +1,22 @@
-﻿"use client";
-import Breadcrumb from "@/components/ui/Breadcrumb";
-import HeroBannerImage from "@/components/ui/HeroBannerImage";
+"use client";
 
+import Link from "next/link";
+import HeroBannerImage from "@/components/ui/HeroBannerImage";
+import HeroCounterBar from "@/components/ui/HeroCounterBar";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
 export default function SpermFreezingHero() {
   const badges = [
-    "Sperm freezing Delhi",
-    "Semen cryopreservation Noida",
-    "Sperm banking Ghaziabad",
-    "Fertility preservation",
+    "Sperm Freezing in Delhi",
+    "Semen Freezing Noida",
+    "Sperm Storage Ghaziabad",
   ];
 
   return (
     <section
       className="relative overflow-hidden pt-3 pb-6 sm:pt-4 sm:pb-8 lg:pt-5 lg:pb-9"
-      style={{
-        background:
-          "var(--pink)",
-      }}
+      style={{ background: "var(--pink)" }}
     >
-      {/* Decorative Radial Glows matching Theme */}
       <div
         aria-hidden
         className="pointer-events-none absolute top-0 right-[8%] h-[280px] w-[280px] -translate-y-1/4 rounded-full opacity-35 blur-3xl"
@@ -40,57 +36,50 @@ export default function SpermFreezingHero() {
 
       <div className="page-container relative grid grid-cols-1 items-start gap-6 sm:gap-7 lg:grid-cols-12 lg:items-start lg:gap-6 xl:gap-8">
         <div className="min-w-0 lg:col-span-7">
-          {/* Breadcrumb: Home / Our Services / Semen & Sperm Freezing */}
-          <Breadcrumb
-          items={[
-            { label: "Treatments", href: "/our-services" },
-            { label: "Semen & Sperm Freezing" }
-          ]}
-        />
-
           <Reveal variant="slideLeft">
-            <p className="text-[12px] font-bold tracking-[0.12em] text-rose uppercase sm:text-[13px]">
-              Keep your options open
+            <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">
+              Semen/Sperm Freezing in Delhi NCR
             </p>
 
-            <h1 className="font-serif mt-1.5 max-w-[42rem] text-[1.65rem] leading-[1.18] font-normal tracking-tight text-ink sm:text-[2.1rem] lg:text-[2.35rem] xl:text-[2.6rem]">
-              Semen &amp;
+            <h1 className="font-serif mt-1.5 max-w-[40rem] text-[1.85rem] leading-[1.15] font-normal tracking-tight text-ink sm:text-[2.45rem] lg:text-[2.8rem] xl:text-[3.05rem]">
+              Semen &amp; Sperm
               <br />
-              Sperm Freezing
+              Freezing in Delhi,
               <br />
-              (Cryopreservation)
-              <br />
-              in Delhi, Noida
-              <br />
-              &amp; Ghaziabad
+              Noida &amp; Ghaziabad
             </h1>
 
-            <p className="mt-3.5 max-w-[36rem] text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
-              Freezing a semen sample lets you keep fertility options open for medical, work-related or personal reasons. Dr. Mona Dahiya (25+ years of experience) guides you through collection, freezing and storage, and later use in IUI or ICSI.
+            <p className="mt-3.5 max-w-[36rem] text-[13.5px] leading-relaxed text-ink/80 sm:text-[15px]">
+              A semen sample can be frozen so you have a backup for any medical
+              reason, work requirement or personal requirement. From collecting
+              your sample to freezing, storing and later using it in an IUI or
+              ICSI procedure, this is all possible under Dr. Mona Dahiya, who
+              has more than 25 years of experience.
             </p>
           </Reveal>
 
-          {/* Action Buttons */}
           <div className="mt-6 flex flex-wrap items-center gap-3 sm:gap-4">
             <a
               href="#book-consultation"
-              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-rose to-[#f43f5e] px-6 py-2.5 text-[13.5px] font-bold text-ink shadow-[0_8px_20px_rgba(232,62,116,0.35)] transition-all hover:brightness-110 active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"
+              className="inline-flex items-center justify-center rounded-full bg-rose px-6 py-2.5 text-[13.5px] font-semibold text-white shadow-[0_8px_20px_rgba(232,62,116,0.3)] transition-all hover:bg-rose-dark active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"
             >
               Book In-Clinic Consultation
             </a>
-            <a
-              href="#book-consultation"
-              className="inline-flex items-center justify-center rounded-full bg-blue px-6 py-2.5 text-[13.5px] font-semibold text-white shadow-[0_8px_20px_rgba(0,71,202,0.35)] ring-1 ring-blue/20 transition-all hover:bg-blue-dark hover:brightness-110 active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"
+            <Link
+              href="/ivf-consultation-online"
+              className="inline-flex items-center justify-center rounded-full bg-blue px-6 py-2.5 text-[13.5px] font-semibold text-white shadow-[0_8px_20px_rgba(0,71,202,0.3)] ring-1 ring-blue/20 transition-all hover:bg-blue-dark active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"
             >
               Schedule Online Consultation
-            </a>
+            </Link>
           </div>
 
-          {/* Badges / Chips */}
-          <Stagger delay={0.05} className="mt-5 flex flex-wrap items-center gap-2 sm:gap-2.5">
-            {badges.map((badge, idx) => (
-              <StaggerItem key={idx}>
-                <span className="inline-flex items-center rounded-full border border-rose/25 bg-white px-3 py-1 text-[11.5px] font-medium text-ink shadow-sm backdrop-blur-md sm:text-[12.5px]">
+          <Stagger
+            delay={0.05}
+            className="mt-5 flex flex-wrap items-center gap-2 sm:gap-2.5"
+          >
+            {badges.map((badge) => (
+              <StaggerItem key={badge}>
+                <span className="inline-flex items-center rounded-full border border-rose/25 bg-white px-3.5 py-1.5 text-[11.5px] font-medium text-ink shadow-sm sm:text-[12.5px]">
                   {badge}
                 </span>
               </StaggerItem>
@@ -99,11 +88,21 @@ export default function SpermFreezingHero() {
         </div>
 
         <HeroBannerImage
-          src="/images/about-mona-dahiya/sperm-freezing-doctor.jpg"
-          alt="Dr. Mona Dahiya - Semen & Sperm Freezing Specialist"
+          src="/images/best-IUI.jpg"
+          alt="Dr. Mona Dahiya — Semen & Sperm Freezing in Delhi, Noida & Ghaziabad"
+        />
+      </div>
+
+      <div className="page-container relative">
+        <HeroCounterBar
+          items={[
+            { target: 25000, suffix: "+", label: "Families treated" },
+            { target: 25, suffix: "+", label: "Years experience" },
+            { target: 90, suffix: "%+", label: "Success rates" },
+            { target: 15000, suffix: "+", label: "IVF cycles performed" },
+          ]}
         />
       </div>
     </section>
   );
 }
-

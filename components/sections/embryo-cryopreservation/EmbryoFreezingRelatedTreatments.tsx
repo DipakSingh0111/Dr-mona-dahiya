@@ -1,11 +1,12 @@
 "use client";
 
-import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
+import { Stagger, StaggerItem } from "@/components/ui/Reveal";
 import {
   TreatmentSection,
   TreatmentSectionHeader,
-  RelatedTreatmentCard
+  RelatedTreatmentCard,
 } from "@/components/ui/treatment";
+
 const relatedTreatments = [
   {
     title: "Frozen Embryo Transfer (FET)",
@@ -15,7 +16,7 @@ const relatedTreatments = [
   {
     title: "Semen & Sperm Freezing",
     subtitle: "Keep your options open",
-    href: "/treatments",
+    href: "/semen-sperm-freezing",
   },
   {
     title: "Oncofertility (Cancer Fertility Preservation)",
@@ -32,21 +33,21 @@ const relatedTreatments = [
 export default function EmbryoFreezingRelatedTreatments() {
   return (
     <TreatmentSection>
-        <TreatmentSectionHeader
-          eyebrow="Related care"
-          title="Related treatments"
-        />
+      <TreatmentSectionHeader
+        eyebrow="Related care"
+        title="Related treatments"
+      />
 
-        <Stagger
-          delay={0.05}
-          className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-2"
-        >
-          {relatedTreatments.map((item) => (
-            <StaggerItem key={item.title}>
+      <Stagger
+        delay={0.05}
+        className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
+      >
+        {relatedTreatments.map((item) => (
+          <StaggerItem key={item.title}>
             <RelatedTreatmentCard {...item} />
           </StaggerItem>
-          ))}
-        </Stagger>
-      </TreatmentSection>
+        ))}
+      </Stagger>
+    </TreatmentSection>
   );
 }

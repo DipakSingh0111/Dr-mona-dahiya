@@ -1,14 +1,16 @@
 "use client";
 
-import ClinicsAppointmentCards from "@/components/sections/ClinicsAppointmentCards";
+import IvfSuccessClinics from "@/components/sections/ivf-stories/IvfSuccessClinics";
 
 export default function EggFreezingClinics() {
   return (
-    <ClinicsAppointmentCards
+    <IvfSuccessClinics
       eyebrow="Visit Dr. Mona"
       title="Book a Consultation at Our Clinics"
       subtitle="Dr. Mona sees patients in Noida, Ghaziabad and Delhi, and offers online consultations."
-      primaryCity="noida"
+      directionsLinkText="Get directions"
+      clinicLinkText="Clinic page"
+      bookButtonText="Book appointment"
     />
   );
 }

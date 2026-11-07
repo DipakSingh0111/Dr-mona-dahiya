@@ -15,6 +15,8 @@ export type HeroCounterItem = {
   decimals?: number;
   /** Optional custom rendered suffix (e.g. star icon) */
   suffixNode?: ReactNode;
+  /** Optional static display text (e.g. "24–48 hrs") instead of animated number */
+  displayText?: string;
 };
 
 function easeOutCubic(t: number) {
@@ -70,10 +72,14 @@ function CounterValue({
 
   return (
     <span className="font-serif text-[1.75rem] leading-none font-bold tracking-tight text-rose tabular-nums sm:text-[2.1rem] lg:text-[2.35rem]">
-      {item.prefix ?? ""}
-      {formatted}
-      {item.suffix ?? ""}
-      {item.suffixNode ?? null}
+      {item.displayText ?? (
+        <>
+          {item.prefix ?? ""}
+          {formatted}
+          {item.suffix ?? ""}
+          {item.suffixNode ?? null}
+        </>
+      )}
     </span>
   );
 }

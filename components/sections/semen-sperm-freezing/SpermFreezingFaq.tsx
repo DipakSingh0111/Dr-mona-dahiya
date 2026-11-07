@@ -7,26 +7,44 @@ import {
   type FaqItem,
 } from "@/components/ui/treatment";
 
-const faqs: FaqItem[] = [
+const leftFaqs: FaqItem[] = [
   {
     question: "How long can sperm be stored?",
-    answer:
-      "Properly frozen sperm remains viable for many years, subject to storage rules and consent renewals. Long-term liquid nitrogen storage at -196°C pauses all cellular aging without degrading the genetic material.",
-  },
-  {
-    question: "How many samples should I freeze?",
-    answer:
-      "Usually more than one. Your doctor will advise based on your count, motility, and whether the stored vials will be used for multiple IUI cycles or future ICSI treatments.",
+    answer: (
+      <p>
+        As long as you follow the protocol for storing and renew your consent,
+        you can store it for many years.
+      </p>
+    ),
   },
   {
     question: "Does freezing reduce sperm quality?",
-    answer:
-      "Some sperm do not survive thawing, so a pre-freeze sample matters. ICSI needs just one sperm per egg, so even if post-thaw recovery is reduced, successful fertilization is consistently achievable.",
+    answer: (
+      <p>
+        After thawing, the quality of sperm will always be lower, so we advise
+        you to freeze more than one sample. In the case of ICSI, one good sperm
+        can fertilise an egg.
+      </p>
+    ),
+  },
+];
+
+const rightFaqs: FaqItem[] = [
+  {
+    question: "How many samples should I freeze?",
+    answer: (
+      <p>
+        It depends on your sperm count, but usually it would be more than one.
+      </p>
+    ),
   },
   {
     question: "Can I use frozen sperm for IUI?",
-    answer:
-      "Yes, if the post-thaw quality is adequate. Otherwise IVF or ICSI is advised to maximize the fertilization and pregnancy chances per stored vial.",
+    answer: (
+      <p>
+        Yes, if after thawing the sperm is of good enough quality to be used.
+      </p>
+    ),
   },
 ];
 
@@ -34,10 +52,15 @@ export default function SpermFreezingFaq() {
   return (
     <TreatmentSection>
       <TreatmentSectionHeader
-        eyebrow="Patient questions"
-        title="Frequently Asked Questions about Semen & Sperm Freezing"
+        eyebrow="FAQ"
+        title={
+          <>
+            Frequently Asked Questions
+            <br className="hidden sm:inline" /> about Semen &amp; Sperm Freezing
+          </>
+        }
       />
-      <FaqAccordion items={faqs} />
+      <FaqAccordion leftItems={leftFaqs} rightItems={rightFaqs} />
     </TreatmentSection>
   );
 }

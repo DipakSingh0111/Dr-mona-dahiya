@@ -1,86 +1,150 @@
 "use client";
 
-import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
+import { Stagger, StaggerItem } from "@/components/ui/Reveal";
 import {
   TreatmentSection,
   TreatmentSectionHeader,
   FaqAccordion,
   type FaqItem,
-  CostFactorCard
+  CostFactorCard,
 } from "@/components/ui/treatment";
+
+const checkIcon = (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2.4"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="size-4 text-white"
+    aria-hidden
+  >
+    <path d="M20 6 9 17l-5-5" />
+  </svg>
+);
+
+const pillIcon = (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="size-4 text-white"
+    aria-hidden
+  >
+    <path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z" />
+    <path d="m8.5 8.5 7 7" />
+  </svg>
+);
+
 const costCards = [
   {
-    iconType: "check" as const,
-    title: "Vitrification",
-    description: "Freezing of each embryo or batch.",
+    icon: checkIcon,
+    title: "Cost of Vitrification",
+    description: "Each embryo/batch to be frozen.",
   },
   {
-    iconType: "pills" as const,
-    title: "Annual storage",
-    description: "Charge for each storage year.",
+    icon: pillIcon,
+    title: "Yearly Storage Cost",
+    description: "Charged on a yearly basis.",
   },
   {
-    iconType: "check" as const,
-    title: "Embryo warming",
-    description: "At the time of transfer.",
+    icon: checkIcon,
+    title: "Cost to Thaw Embryos",
+    description: "When you want to use the embryos.",
   },
   {
-    iconType: "check" as const,
-    title: "Genetic testing (optional)",
-    description: "If biopsy is planned.",
+    icon: checkIcon,
+    title: "Genetics Cost (if applicable)",
+    description: "Biopsy for PGT-A or PGT-SR.",
   },
 ];
 
 const leftFaqs: FaqItem[] = [
   {
     question: "How long can embryos be stored?",
-    answer:
-      "Embryos can be stored for many years, with timelines set by law and by your consent.",
+    answer: (
+      <p>
+        There is no fixed time period. You can store them as long as you want,
+        depending on the law and your wishes.
+      </p>
+    ),
   },
   {
     question: "Do frozen embryos work as well as fresh?",
-    answer:
-      "In many patients, frozen transfers do equally well and sometimes better. Your doctor will explain your case.",
+    answer: (
+      <p>
+        Frozen embryo transfer has a similar outcome to fresh embryo transfer.
+        Discuss this with your doctor.
+      </p>
+    ),
   },
   {
     question: "What happens to unused embryos?",
-    answer:
-      "You decide: continue storage, donate within legal norms or discontinue, with written consent.",
+    answer: (
+      <p>
+        It depends upon you. You can store them, donate them to research as per
+        law, or allow them to be disposed of. All of these would require
+        consent.
+      </p>
+    ),
   },
   {
     question: "Is embryo freezing safe for the baby?",
-    answer:
-      "Current evidence for vitrified embryos is reassuring. Your doctor will go through the details.",
+    answer: (
+      <p>
+        Studies have shown that vitrified embryos have better health outcomes.
+        Discuss this in more detail with your doctor.
+      </p>
+    ),
   },
   {
     question: "What is the success rate of pregnancy using frozen embryos?",
     answer: (
       <>
         <p>
-          Frozen Embryo Transfer (FET) achieves live birth rates equal to or higher than
-          fresh transfers, with post-thaw survival rates exceeding{" "}
-          <strong className="text-white">95% to 98%</strong>. Live birth rates per
-          transfer by age group:
+          The pregnancy rate from frozen embryo transfer is equal to fresh
+          embryo transfer. The survival rate of embryos after thawing is more
+          than 95–98%. Here are the average pregnancy rates per transfer for
+          each age group:
         </p>
-        <ul className="mt-2 list-disc space-y-1 pl-5">
-          <li>
-            <strong className="text-white">Under 35:</strong> ~50%–60%
+        <ul className="mt-2.5 space-y-1.5">
+          <li className="flex items-start gap-2.5">
+            <span className="mt-2 size-1.5 shrink-0 rounded-full bg-rose" />
+            <span>
+              <strong className="font-bold text-ink">Below 35:</strong> approx.
+              50–60%
+            </span>
           </li>
-          <li>
-            <strong className="text-white">35–37:</strong> ~40%–45%
+          <li className="flex items-start gap-2.5">
+            <span className="mt-2 size-1.5 shrink-0 rounded-full bg-rose" />
+            <span>
+              <strong className="font-bold text-ink">35–37 years:</strong>{" "}
+              approx. 40–45%
+            </span>
           </li>
-          <li>
-            <strong className="text-white">38–40:</strong> ~25%–35%
+          <li className="flex items-start gap-2.5">
+            <span className="mt-2 size-1.5 shrink-0 rounded-full bg-rose" />
+            <span>
+              <strong className="font-bold text-ink">38–40 years:</strong>{" "}
+              approx. 25–35%
+            </span>
           </li>
-          <li>
-            <strong className="text-white">Over 40:</strong> ~10%–15% (rises to{" "}
-            <strong className="text-white">60%+</strong> across all ages when transferring
-            a PGT-A confirmed euploid blastocyst).
+          <li className="flex items-start gap-2.5">
+            <span className="mt-2 size-1.5 shrink-0 rounded-full bg-rose" />
+            <span>
+              <strong className="font-bold text-ink">Above 40 years:</strong>{" "}
+              approx. 10–15%
+            </span>
           </li>
         </ul>
-        <p className="mt-2">
-          FET also eliminates ovarian hyperstimulation syndrome (OHSS) risks by avoiding
-          fresh stimulation during implantation.
+        <p className="mt-2.5">
+          If you transfer a euploid embryo (confirmed by PGT-A), pregnancy rates
+          are greater than 60% at all ages. Also, the risk of developing OHSS is
+          zero with frozen embryo transfer.
         </p>
       </>
     ),
@@ -88,34 +152,24 @@ const leftFaqs: FaqItem[] = [
   {
     question: "How long can frozen embryos remain viable in storage?",
     answer: (
-      <>
-        Biologically, embryos stored in liquid nitrogen at{" "}
-        <strong className="text-white">-196°C</strong> remain viable indefinitely because
-        metabolic activity is suspended. Healthy live births have occurred from embryos
-        stored for over <strong className="text-white">20 years</strong>. Under India&apos;s{" "}
-        <strong className="text-white">ART Act 2021 (Section 23)</strong>, statutory embryo
-        storage is permitted for up to <strong className="text-white">10 years</strong>,
-        after which embryos are allowed to perish or be donated to accredited research with
-        patient consent.
-      </>
+      <p>
+        Studies have shown that embryos can be stored indefinitely. Babies have
+        been born from embryos that were frozen for more than 30 years. As per
+        the ART Act 2021, embryos can be stored for up to 10 years, beyond which
+        they will be allowed to perish or can be donated to research.
+      </p>
     ),
   },
   {
-    question: "What is the difference between embryo freezing and egg freezing?",
+    question:
+      "What is the difference between embryo freezing and egg freezing?",
     answer: (
-      <ul className="list-disc space-y-2 pl-5">
-        <li>
-          <strong className="text-white">Cellular Resilience:</strong> An unfertilised egg
-          is a single, water-dense cell with an 85%–90% thaw survival rate. A Day 5
-          blastocyst contains 100–150 cells, achieving{" "}
-          <strong className="text-white">&gt;95% thaw survival</strong>.
-        </li>
-        <li>
-          <strong className="text-white">Diagnostic Certainty:</strong> Egg freezing
-          preserves unverified potential. Embryo freezing confirms fertilization, cleavage
-          rates, and blastocyst development beforehand.
-        </li>
-      </ul>
+      <p>
+        Freezing embryos gives you a higher success rate and survival rate after
+        thawing. An egg is a single cell with more water content, so its
+        survival rate drops to 85–90%. A blastocyst contains 100–150 cells, with
+        a higher survival rate after thawing (&gt;95%).
+      </p>
     ),
   },
 ];
@@ -125,70 +179,51 @@ const rightFaqs: FaqItem[] = [
     question: "How much does embryo freezing and long-term storage cost?",
     answer: (
       <>
-        <p>Costs divide into three transparent phases:</p>
-        <ol className="mt-2 list-decimal space-y-1.5 pl-5">
-          <li>
-            <strong className="text-white">Initial Clinical Cycle:</strong> Ovarian
-            stimulation, egg retrieval, fertilization (IVF/ICSI), and blastocyst
-            vitrification.
-          </li>
-          <li>
-            <strong className="text-white">Annual Storage Maintenance:</strong> Liquid
-            nitrogen upkeep and cryo-tank monitoring, billed annually or in multi-year
-            blocks.
-          </li>
-          <li>
-            <strong className="text-white">Thaw &amp; Transfer (FET):</strong> Endometrial
-            preparation, laboratory embryo warming, and ultrasound-guided transfer when
-            ready to conceive.
-          </li>
-        </ol>
-      </>
-    ),
-  },
-  {
-    question: "What is embryo banking and who benefits most from it?",
-    answer: (
-      <>
         <p>
-          Embryo banking involves{" "}
-          <strong className="text-white">2 to 3 consecutive retrieval cycles</strong> to
-          stockpile blastocysts before scheduling a transfer. It is ideal for:
+          There are 3 different costs you need to consider when you decide to
+          store embryos:
         </p>
-        <ul className="mt-2 list-disc space-y-1.5 pl-5">
-          <li>
-            <strong className="text-white">Diminished Ovarian Reserve (DOR):</strong>{" "}
-            Patients with low AMH (below 1.1 ng/mL) or AFC below 6 yielding only 1–2
-            blastocysts per cycle.
+        <ul className="mt-2.5 space-y-1.5">
+          <li className="flex items-start gap-2.5">
+            <span className="mt-2 size-1.5 shrink-0 rounded-full bg-rose" />
+            <span>
+              Cost of stimulating the ovaries and vitrifying embryos
+              (blastocysts)
+            </span>
           </li>
-          <li>
-            <strong className="text-white">Multi-Child Planning:</strong> Securing{" "}
-            <strong className="text-white">2 to 3 euploid blastocysts</strong> gives a ~95%
-            statistical chance of at least one live birth.
+          <li className="flex items-start gap-2.5">
+            <span className="mt-2 size-1.5 shrink-0 rounded-full bg-rose" />
+            <span>Yearly cost of storing the embryos</span>
           </li>
-          <li>
-            <strong className="text-white">Cost Efficiency for PGT-A:</strong> Batching
-            biopsies from multiple rounds into one lab shipment lowers genetic testing
-            fees.
+          <li className="flex items-start gap-2.5">
+            <span className="mt-2 size-1.5 shrink-0 rounded-full bg-rose" />
+            <span>Cost of thawing and transferring the embryos</span>
           </li>
         </ul>
       </>
     ),
   },
   {
+    question: "What is embryo banking and who benefits most from it?",
+    answer: (
+      <p>
+        Embryo banking involves 2–3 collections to have enough blastocysts to
+        transfer. This helps patients who have a low ovarian reserve, who may
+        produce only 1–2 blastocysts per retrieval. Having 2–3 euploid embryos
+        gives you around a 95% chance of at least one baby. It can also save
+        cost on genetic testing when we send all the samples at once.
+      </p>
+    ),
+  },
+  {
     question: "Are babies born from frozen embryos healthy?",
     answer: (
-      <>
-        Extensive data covering over{" "}
-        <strong className="text-white">1 million FET births</strong> shows no increase in
-        congenital defects, developmental delays, or genetic abnormalities compared to
-        spontaneous conceptions. Because FET occurs in an unmedicated or hormonally
-        balanced uterine lining, babies have a{" "}
-        <strong className="text-white">
-          15% to 20% lower risk of low birth weight and prematurity
-        </strong>{" "}
-        compared to fresh IVF transfers.
-      </>
+      <p>
+        Babies born from frozen embryos are as healthy as those born from fresh
+        embryos. There is no evidence that frozen embryos are unsafe. In fact,
+        due to no hormonal effect during implantation, the baby has a 15–20%
+        lower risk of low birth weight.
+      </p>
     ),
   },
   {
@@ -196,24 +231,27 @@ const rightFaqs: FaqItem[] = [
     answer: (
       <>
         <p>
-          Vitrification flash-freezes embryos at over{" "}
-          <strong className="text-white">15,000°C per minute</strong> to prevent damaging
-          ice crystals:
+          We use a method called vitrification to freeze the embryo. This
+          ensures no ice crystals are formed inside the embryo. Here are the
+          basic steps:
         </p>
-        <ol className="mt-2 list-decimal space-y-1.5 pl-5">
-          <li>
-            <strong className="text-white">Blastocyst Culture:</strong> Embryos grow to Day
-            5/6 (100–150 cells).
+        <ol className="mt-2.5 space-y-1.5">
+          <li className="flex items-start gap-2">
+            <span className="font-bold text-rose">1.</span>
+            <span>A Day 5 or 6 embryo (blastocyst) is developed.</span>
           </li>
-          <li>
-            <strong className="text-white">Collapsing &amp; Dehydration:</strong> The fluid
-            cavity is collapsed via laser pulse, and cryoprotectants replace intracellular
-            water.
+          <li className="flex items-start gap-2">
+            <span className="font-bold text-rose">2.</span>
+            <span>
+              The blastocoel is collapsed and dehydrated to make room for
+              freezing.
+            </span>
           </li>
-          <li>
-            <strong className="text-white">Vitrification:</strong> Embryos are loaded onto
-            micro-straws and plunged directly into liquid nitrogen at{" "}
-            <strong className="text-white">-196°C</strong>.
+          <li className="flex items-start gap-2">
+            <span className="font-bold text-rose">3.</span>
+            <span>
+              The embryo is placed in straws and dipped in liquid nitrogen.
+            </span>
           </li>
         </ol>
       </>
@@ -222,85 +260,82 @@ const rightFaqs: FaqItem[] = [
   {
     question: "Can frozen embryos be genetically tested (PGT)?",
     answer: (
-      <>
-        Yes. While the standard protocol biopsies 4–6 trophectoderm cells on{" "}
-        <strong className="text-white">Day 5/6 prior to initial vitrification</strong>,
-        previously frozen unbiopsied embryos can be thawed, biopsied, and re-frozen.
-        High-complexity labs maintain an{" "}
-        <strong className="text-white">95%–98% survival rate</strong> for double-vitrified
-        embryos.
-      </>
+      <p>
+        Normally we take a biopsy of the embryo before freezing to test for
+        genetic defects. But if you have frozen embryos without a biopsy, they
+        can be thawed, biopsied and refrozen. Most laboratories have a high
+        survival rate of 85–90% even after double vitrification.
+      </p>
     ),
   },
   {
     question: "What happens to unused or spare frozen embryos?",
     answer: (
-      <>
-        <p>
-          Once family building is complete, patients have clear, legally documented
-          choices:
-        </p>
-        <ul className="mt-2 list-disc space-y-1.5 pl-5">
-          <li>
-            <strong className="text-white">Continued Storage:</strong> Extended through
-            annual renewal within statutory limits.
-          </li>
-          <li>
-            <strong className="text-white">Compassionate Thaw:</strong> Allowed to perish
-            naturally in the laboratory under written consent of both partners.
-          </li>
-          <li>
-            <strong className="text-white">Research Donation:</strong> Donated to registered
-            stem cell and reproductive biology research under the ART Act 2021.
-          </li>
-        </ul>
-      </>
+      <p>
+        Once you are done having children, you can either continue storing them,
+        allow them to perish, or donate them to research. This depends on your
+        wishes and requires consent forms to be signed.
+      </p>
     ),
   },
   {
     question: "Does freezing and thawing damage the embryo?",
     answer: (
-      <>
-        With modern vitrification, post-thaw damage occurs in fewer than{" "}
-        <strong className="text-white">2% to 5% of embryos</strong>. Because it solidifies
-        cells into a glass-like state without jagged ice crystals, cellular membranes and
-        DNA remain intact. Thawed blastocysts re-expand their cavity within 2 to 4 hours
-        in the incubator, confirming functional viability before transfer.
-      </>
+      <p>
+        Vitrification freezes the embryo quickly and reduces harm to less than
+        3–5% of embryos. When thawed, the blastocyst re-expands its cavity
+        within 2–4 hours, showing that it is viable for transfer.
+      </p>
     ),
   },
 ];
 
-export default function EmbryoFreezingCostAndFaq() {
-return (
+export function EmbryoFreezingCost() {
+  return (
     <TreatmentSection>
-        <div className="mb-14 sm:mb-16 lg:mb-20">
-          <TreatmentSectionHeader
-          eyebrow="Transparency"
-          title="Cost Factors Breakdown"
-          subtitle="Cost covers the freezing procedure and an annual storage charge. Transfers are charged separately."
-        />
+      <TreatmentSectionHeader
+        eyebrow="Embryo Freezing Cost in Delhi, Noida & Ghaziabad"
+        title="Embryo Freezing Cost Details"
+        subtitle="It includes the cost to freeze embryos and yearly storage charges. Frozen embryo transfer would be an additional cost."
+      />
 
-          <Stagger
-            delay={0.05}
-            className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4"
-          >
-            {costCards.map((card) => (
-              <StaggerItem key={card.title}>
-              <CostFactorCard {...card} />
-            </StaggerItem>
-            ))}
-          </Stagger>
-        </div>
+      <Stagger
+        delay={0.05}
+        className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4"
+      >
+        {costCards.map((card) => (
+          <StaggerItem key={card.title}>
+            <CostFactorCard {...card} />
+          </StaggerItem>
+        ))}
+      </Stagger>
+    </TreatmentSection>
+  );
+}
 
-        <div>
-          <TreatmentSectionHeader
-          eyebrow="Patient questions"
-          title="Frequently Asked Questions about Embryo Freezing &amp; Banking"
-        />
+export function EmbryoFreezingFaq() {
+  return (
+    <TreatmentSection>
+      <TreatmentSectionHeader
+        eyebrow="Frequently Asked Questions"
+        title={
+          <>
+            Frequently Asked Questions about
+            <br className="hidden sm:inline" /> Embryo Freezing &amp; Banking
+          </>
+        }
+      />
 
-          <FaqAccordion leftItems={leftFaqs} rightItems={rightFaqs} />
-        </div>
-      </TreatmentSection>
+      <FaqAccordion leftItems={leftFaqs} rightItems={rightFaqs} />
+    </TreatmentSection>
+  );
+}
+
+export default function EmbryoFreezingCostAndFaq() {
+  return (
+    <>
+      <EmbryoFreezingCost />
+      <EmbryoFreezingFaq />
+    </>
   );
 }

@@ -9,112 +9,98 @@ import {
   NumberedCard,
   ChecklistRow,
 } from "@/components/ui/treatment";
+
 const indications: { number: string; title: string; description: ReactNode }[] =
   [
     {
       number: "1",
-      title: "Women facing chemotherapy",
+      title: "If you are a female who needs to undergo chemotherapy",
       description:
-        "Lymphoma, leukaemia or sarcoma treated with alkylating drugs such as cyclophosphamide, which carry a high risk of ovarian failure.",
+        "Lymphoma, leukemia, sarcoma. Drugs used are alkylators, i.e. cyclophosphamide, which has a high probability of inducing ovarian failure.",
     },
     {
       number: "2",
-      title: "Hormone-sensitive breast cancer",
+      title: "Breast cancers that are sensitive to hormones",
       description:
-        "Letrozole-supported protocols keep estradiol low while eggs are banked.",
+        "By adding letrozole we can reduce estradiol levels and still preserve fertility.",
     },
     {
       number: "3",
-      title: "Pelvic radiotherapy",
+      title: "Radiation therapy in the pelvic region",
       description:
-        "Gynaecological, colorectal or pelvic cancers needing egg freezing or ovarian transposition out of the radiation field.",
+        "Gynecological cancers or colorectal cancers where we need to preserve eggs or do ovary transposition.",
     },
     {
       number: "4",
-      title: "Men facing cancer treatment",
+      title: "Males who are going to undergo cancer treatment",
       description: (
         <>
-          Chemotherapy, pelvic radiation or orchiectomy, with urgent{" "}
+          They may require chemotherapy, radiation therapy in the pelvic region
+          or removal of the testes.{" "}
           <Link
-            href="/treatments"
-            className="font-medium text-blue underline underline-offset-2 hover:text-rose transition-colors"
+            href="/semen-sperm-freezing"
+            className="font-medium text-blue underline underline-offset-2 transition-colors hover:text-rose"
           >
-            Semen Freezing
-          </Link>
-          .
+            Semen freezing
+          </Link>{" "}
+          can be done in urgent scenarios.
         </>
       ),
     },
     {
       number: "5",
-      title: "Non-cancer conditions",
+      title:
+        "Patients who don't have cancer but may need aggressive immunosuppressive therapy",
       description:
-        "Severe autoimmune disease (lupus nephritis, vasculitis) needing high-dose cytotoxic drugs.",
+        "Like severe lupus or other autoimmune conditions which require high doses of cytotoxics.",
     },
   ];
 
 const checklist = [
-  {
-    title: "Oncology coordination",
-    text: "direct contact with your oncologist to confirm the safe window before therapy.",
-  },
-  {
-    title: "Rapid reserve check",
-    text: "AMH, antral follicle count and estradiol, without waiting for a period.",
-  },
-  {
-    title: "Hormone-receptor status",
-    text: "ER/PR results in breast and gynaecological cancers to tailor the protocol.",
-  },
-  {
-    title: "Emergency viral markers (HIV I & II, HBsAg, HCV, VDRL)",
-    text: "so the lab can process samples.",
-  },
-  {
-    title: "Urgent semen analysis",
-    text: "to confirm samples suitable for direct freezing.",
-  },
+  "Get in touch with your oncologist to figure out how soon you will have to begin treatment.",
+  "Test your ovarian reserve: AMH, AFC and estradiol levels, without waiting for your periods.",
+  "Check receptor status in breast and gynae cancers.",
+  "Viral markers done urgently (HIV I & II, HBsAg, HCV, VDRL); this is needed so the lab can work on your samples.",
+  "If it's a male, we will do a semen analysis urgently to check if the sample can be directly frozen.",
 ];
 
 export default function OncofertilityIndicationsAndChecklist() {
   return (
-    <TreatmentSection>
-        <div className="mb-14 sm:mb-16 lg:mb-20">
-          <TreatmentSectionHeader
-          eyebrow="Clinical indications"
+    <>
+      <TreatmentSection>
+        <TreatmentSectionHeader
+          eyebrow="What you need to know"
           title="Indications: Who Needs Emergency Oncofertility Care?"
         />
 
-          <Stagger
-            delay={0.05}
-            className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
-          >
-            {indications.map((item) => (
-              <StaggerItem key={item.number}>
+        <Stagger
+          delay={0.05}
+          className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
+        >
+          {indications.map((item) => (
+            <StaggerItem key={item.number}>
               <NumberedCard {...item} />
             </StaggerItem>
-            ))}
-          </Stagger>
-        </div>
+          ))}
+        </Stagger>
+      </TreatmentSection>
 
-        <div>
-          <TreatmentSectionHeader
-          eyebrow="Before treatment"
-          title="Diagnostic Checklist: Rapid-Response Workup"
-          subtitle="All tests are done within a day or two so treatment can start on time."
+      <TreatmentSection>
+        <TreatmentSectionHeader
+          eyebrow="What we do before we begin your treatment"
+          title="Here Is What We Do Before We Get Started With Your Oncofertility"
         />
 
-          <div className="mt-6 flex flex-col gap-3.5 sm:mt-7 sm:gap-4">
-            {checklist.map((item, idx) => (
-              <Reveal key={item.title} variant="fadeUp" delay={idx * 0.04}>
-                <ChecklistRow>
-                  <strong className="font-semibold text-black">{item.title}:</strong>{" "}
-                  {item.text}
-                </ChecklistRow>
-              </Reveal>
-            ))}
-          </div>
+        <div className="mt-6 flex flex-col gap-3.5 sm:mt-7 sm:gap-4">
+          {checklist.map((text, idx) => (
+            <Reveal key={text} variant="fadeUp" delay={idx * 0.04}>
+              <ChecklistRow>
+                <span>{text}</span>
+              </ChecklistRow>
+            </Reveal>
+          ))}
         </div>
       </TreatmentSection>
+    </>
   );
 }

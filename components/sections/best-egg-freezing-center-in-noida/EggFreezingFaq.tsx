@@ -34,7 +34,7 @@ const leftFaqs: FaqItem[] = [
     answer: (
       <p>
         Once your eggs are frozen, they are essentially stopped in time. There
-        is no ageing process when they are in liquid nitrogen at -196°C.
+        is no ageing process when they are in liquid nitrogen at −196°C.
         However, you will need to abide by the terms of storage as per the ART
         Act.
       </p>
@@ -109,7 +109,12 @@ export default function EggFreezingFaq() {
     <TreatmentSection>
       <TreatmentSectionHeader
         eyebrow="FAQ's"
-        title="Top FAQs About Egg Freezing in Noida and Delhi NCR"
+        title={
+          <>
+            Top FAQs About Egg Freezing
+            <br className="hidden sm:inline" /> in Noida and Delhi NCR
+          </>
+        }
       />
 
       <FaqAccordion leftItems={leftFaqs} rightItems={rightFaqs} />

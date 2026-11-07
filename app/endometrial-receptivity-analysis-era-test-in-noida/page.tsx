@@ -15,9 +15,9 @@ import { SectionReveal } from "@/components/ui/Reveal";
 
 export const metadata: Metadata = {
   title:
-    "Personalized ERA Test in Noida & Delhi NCR | Dr. Mona Dahiya",
+    "Personalized Endometrial Receptivity Analysis (ERA Test) in Noida & Delhi NCR | Dr. Mona Dahiya",
   description:
-    "Endometrial Receptivity Analysis (ERA) with Dr. Mona Dahiya — 248-gene NGS testing to time personalised embryo transfer for recurrent implantation failure across Noida, Delhi and Ghaziabad.",
+    "A simple biopsy can tell you your window of implantation. We analyse 248 genes from the sample of endometrium to identify your window of implantation across Noida, Delhi and Ghaziabad.",
 };
 
 export default function EraTestPage() {
@@ -26,7 +26,13 @@ export default function EraTestPage() {
       <EraHero />
 
       <SectionReveal>
-        <MedicalRegistration />
+        <MedicalRegistration
+          councilRegLabels={{
+            DMC: "DMC registration number",
+            MCI: "MCI registration number",
+            UPMC: "UPMC registration number",
+          }}
+        />
       </SectionReveal>
 
       <SectionReveal delay={0.04}>
@@ -42,7 +48,14 @@ export default function EraTestPage() {
       </SectionReveal>
 
       <SectionReveal delay={0.04}>
-        <IvfSuccessClinics />
+        <IvfSuccessClinics
+          eyebrow="Visit Dr. Mona"
+          title="Book a Consultation at Our Clinics"
+          subtitle="Dr. Mona sees patients in Noida, Ghaziabad and Delhi, and offers online consultations."
+          directionsLinkText="Get directions"
+          clinicLinkText="Clinic page"
+          bookButtonText="Book appointment"
+        />
       </SectionReveal>
 
       <SectionReveal delay={0.04}>
@@ -57,9 +70,31 @@ export default function EraTestPage() {
         <AboutConsultation
           sectionId="book-consultation"
           eyebrow="Next step"
-          title="Book an In-Clinic or Online Consultation"
-          subtitle="Book an in-clinic consultation with Dr. Mona Dahiya in Noida, Ghaziabad or Delhi, or a video review of your reports. Direct line: +91 92679 82924."
+          title={
+            <>
+              Book an In-Clinic or
+              <br />
+              Online Consultation
+            </>
+          }
+          subtitle={
+            <>
+              Book an in-clinic consultation with Dr. Mona Dahiya in Noida,
+              Ghaziabad or Delhi, or schedule an online consultation to review
+              your reports. Direct line:{" "}
+              <a
+                href="tel:+919267982924"
+                className="font-medium text-blue hover:text-rose"
+              >
+                +91 92679 82924
+              </a>
+              .
+            </>
+          }
           appendContacts={false}
+          consultationDuration=""
+          defaultClinic="Noida"
+          sectionBg="bg-white"
         />
       </SectionReveal>
 

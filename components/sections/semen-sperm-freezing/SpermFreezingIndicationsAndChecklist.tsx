@@ -11,73 +11,93 @@ import {
 const indications = [
   {
     number: "1",
-    title: "Before cancer treatment",
-    description: "Chemotherapy or radiotherapy can damage sperm.",
+    title: "If you are planning on starting chemotherapy/radiation therapy",
+    description: "Sperm quality gets affected after chemo/radiation therapy.",
   },
   {
     number: "2",
-    title: "Before vasectomy or testicular surgery",
-    description: "To preserve future options.",
+    title: "Planning on getting a vasectomy or testicular surgery",
+    description: "In case you want to preserve your options.",
   },
   {
     number: "3",
-    title: "Backup on egg-retrieval day",
-    description: "When collection stress is a concern.",
+    title: "Plan B on Day of Egg Retrieval",
+    description:
+      "You can have a backup sample frozen in case you face any issues during sample collection.",
   },
   {
     number: "4",
-    title: "Fluctuating or declining sperm quality",
-    description: "To bank better samples.",
+    title: "Irregular/Declining sperm quality",
+    description: "Bank your good samples for later use.",
   },
   {
     number: "5",
-    title: "Work or personal delay",
-    description: "Frequent travel, military postings or planned delay.",
+    title: "Delaying due to Work/Personal requirements",
+    description:
+      "Due to job postings, you might not be able to visit often. You can store your sample and have your baby later on.",
   },
 ];
 
 const checklistItems = [
-  "Semen analysis",
-  "Infectious disease screening (as required for storage)",
-  "Consent and identification formalities",
-  "Abstinence guidance of 2 to 5 days",
+  "Semen report",
+  "Blood workup as necessary for freezing",
+  "Paperwork and ID to be carried",
+  "Abstinence period of minimum 2 days and maximum 5 days",
 ];
+
+export function SpermFreezingIndications() {
+  return (
+    <TreatmentSection>
+      <TreatmentSectionHeader
+        eyebrow="Clinical Pointers"
+        title={
+          <>
+            Indications: When Should
+            <br className="hidden sm:inline" /> You Freeze Semen/Sperm?
+          </>
+        }
+        subtitle="Following are some of the indications when we recommend that our patients get their semen/sperm frozen."
+      />
+      <Stagger
+        delay={0.05}
+        className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
+      >
+        {indications.map((item) => (
+          <StaggerItem key={item.number}>
+            <NumberedCard {...item} />
+          </StaggerItem>
+        ))}
+      </Stagger>
+    </TreatmentSection>
+  );
+}
+
+export function SpermFreezingChecklist() {
+  return (
+    <TreatmentSection>
+      <TreatmentSectionHeader
+        eyebrow="Pre treatment"
+        title="What tests do you need to get done?"
+        subtitle="Diagnosis is made by the following investigations. Each patient is different, so you might not require all of these."
+      />
+      <div className="mt-6 grid grid-cols-1 gap-3.5 sm:mt-7 sm:grid-cols-2 sm:gap-4">
+        {checklistItems.map((item, idx) => (
+          <Reveal key={item} variant="fadeUp" delay={idx * 0.04}>
+            <ChecklistRow>
+              <span className="font-semibold text-ink">{item}</span>
+            </ChecklistRow>
+          </Reveal>
+        ))}
+      </div>
+    </TreatmentSection>
+  );
+}
 
 export default function SpermFreezingIndicationsAndChecklist() {
   return (
-    <TreatmentSection>
-      <div className="mb-14 sm:mb-16 lg:mb-20">
-        <TreatmentSectionHeader
-          eyebrow="Clinical breakdown"
-          title="Indications: Who Needs Semen or Sperm Freezing?"
-          subtitle="Common reasons Dr. Mona Dahiya recommends semen & sperm freezing care."
-        />
-        <Stagger
-          delay={0.05}
-          className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
-        >
-          {indications.map((item) => (
-            <StaggerItem key={item.number}>
-              <NumberedCard {...item} />
-            </StaggerItem>
-          ))}
-        </Stagger>
-      </div>
-
-      <div>
-        <TreatmentSectionHeader
-          eyebrow="Before treatment"
-          title="Diagnostic Checklist"
-          subtitle="These tests help confirm the diagnosis and choose the right plan. Not every patient needs every test."
-        />
-        <div className="mt-6 grid grid-cols-1 gap-3.5 sm:mt-7 sm:grid-cols-2 sm:gap-4">
-          {checklistItems.map((item, idx) => (
-            <Reveal key={item} variant="fadeUp" delay={idx * 0.04}>
-              <ChecklistRow>{item}</ChecklistRow>
-            </Reveal>
-          ))}
-        </div>
-      </div>
-    </TreatmentSection>
+    <>
+      <SpermFreezingIndications />
+      <SpermFreezingChecklist />
+    </>
   );
 }

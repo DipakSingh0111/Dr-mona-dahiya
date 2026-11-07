@@ -2,12 +2,12 @@
 
 import type { ReactNode } from "react";
 import Link from "next/link";
-import { FaCheck } from "react-icons/fa";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 import {
   TreatmentSection,
   TreatmentSectionHeader,
   NumberedCard,
+  ChecklistRow,
 } from "@/components/ui/treatment";
 
 const indications: { number: string; title: string; description: ReactNode }[] =
@@ -26,11 +26,10 @@ const indications: { number: string; title: string; description: ReactNode }[] =
           Multiple good quality blastocysts failed to implant. Learn more about{" "}
           <Link
             href="/recurrent-implantation-failure-rif"
-            className="font-medium text-blue underline underline-offset-2 hover:text-blue-dark"
+            className="font-medium text-blue underline underline-offset-2 transition-colors hover:text-rose"
           >
             Recurrent Implantation Failure
           </Link>
-          .
         </>
       ),
     },
@@ -49,11 +48,10 @@ const indications: { number: string; title: string; description: ReactNode }[] =
           augmentation. Learn more about{" "}
           <Link
             href="/best-low-amh-treatment-in-noida"
-            className="font-medium text-blue underline underline-offset-2 hover:text-blue-dark"
+            className="font-medium text-blue underline underline-offset-2 transition-colors hover:text-rose"
           >
             Low AMH
           </Link>
-          .
         </>
       ),
     },
@@ -69,8 +67,8 @@ const checklist = [
 
 export default function PrpIndicationsAndChecklist() {
   return (
-    <TreatmentSection>
-      <div className="mb-14 sm:mb-16 lg:mb-20">
+    <>
+      <TreatmentSection>
         <TreatmentSectionHeader
           eyebrow="PRP Indications in IVF"
           title="Indications: Who Needs PRP Therapy in IVF?"
@@ -78,7 +76,7 @@ export default function PrpIndicationsAndChecklist() {
 
         <Stagger
           delay={0.05}
-          className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5"
+          className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
         >
           {indications.map((item) => (
             <StaggerItem key={item.number} className="h-full">
@@ -86,9 +84,9 @@ export default function PrpIndicationsAndChecklist() {
             </StaggerItem>
           ))}
         </Stagger>
-      </div>
+      </TreatmentSection>
 
-      <div>
+      <TreatmentSection>
         <TreatmentSectionHeader
           eyebrow="Checklist"
           title="Diagnostic Checklist: Pre-PRP Evaluation"
@@ -98,18 +96,13 @@ export default function PrpIndicationsAndChecklist() {
         <div className="mt-6 flex flex-col gap-3.5 sm:mt-7 sm:gap-4">
           {checklist.map((item, idx) => (
             <Reveal key={item} variant="fadeUp" delay={idx * 0.04}>
-              <div className="flex items-center gap-3.5 rounded-xl border border-[#fde2ec] bg-white px-4 py-3.5 transition-all duration-200 hover:border-rose/40 hover:bg-[#fff0f5] sm:px-5 sm:py-4">
-                <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-rose/15 text-rose ring-1 ring-rose/35 sm:size-6">
-                  <FaCheck className="size-2.5 sm:size-3" />
-                </span>
-                <p className="text-[13.5px] leading-relaxed text-ink/80 sm:text-[14.5px]">
-                  {item}
-                </p>
-              </div>
+              <ChecklistRow>
+                <span>{item}</span>
+              </ChecklistRow>
             </Reveal>
           ))}
         </div>
-      </div>
-    </TreatmentSection>
+      </TreatmentSection>
+    </>
   );
 }

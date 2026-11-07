@@ -20,7 +20,7 @@ const reviews = [
     review:
       "Dr. Mona Dahiya's foresight in recommending fertility preservation before my cancer treatment was life-changing. Years later, after beating cancer, we were able to use our frozen eggs to conceive our miracle baby. Her dedication to safeguarding fertility for future generations is truly inspiring.",
     initial: "S",
-    name: "Shivam Shakya",
+    name: "Shivam. Shakya",
     source: "Google patient review",
   },
   {
@@ -37,7 +37,12 @@ export default function EggFreezingReviews() {
     <TreatmentSection>
       <TreatmentSectionHeader
         eyebrow="Patient reviews"
-        title="What Patients Say About Egg Freezing with Dr. Mona"
+        title={
+          <>
+            What Patients Say About
+            <br className="hidden sm:inline" /> Egg Freezing with Dr. Mona
+          </>
+        }
         subtitle="Reviews from patients who mention Egg Freezing. These are individual experiences in patients' own words."
       />
 
@@ -52,10 +57,10 @@ export default function EggFreezingReviews() {
         ))}
       </Stagger>
 
-      <Reveal variant="fadeUp" delay={0.1} className="mt-8">
+      <Reveal variant="fadeUp" delay={0.1} className="mt-7">
         <Link
           href="/best-ivf-patient-reviews"
-          className="inline-flex items-center justify-center rounded-full border border-blue/40 bg-white px-5 py-2.5 text-[13px] font-semibold text-blue transition-all hover:border-blue hover:bg-blue/5 hover:text-blue-dark"
+          className="inline-flex items-center justify-center rounded-full border border-rose/30 bg-white px-5 py-2.5 text-[13px] font-semibold text-ink shadow-sm transition-all hover:border-rose hover:text-rose sm:text-[13.5px]"
         >
           Read All Patient Reviews
         </Link>

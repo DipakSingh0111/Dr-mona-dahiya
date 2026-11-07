@@ -15,9 +15,9 @@ import { SectionReveal } from "@/components/ui/Reveal";
 
 export const metadata: Metadata = {
   title:
-    "Autologous PRP Therapy in IVF: Ovarian & Endometrial Rejuvenation | Dr. Mona Dahiya",
+    "Platelet-Rich Plasma (PRP) Therapy in IVF: Ovarian & Endometrial Rejuvenation | Dr. Mona Dahiya",
   description:
-    "PRP therapy for thin lining and low ovarian reserve with Dr. Mona Dahiya — autologous platelet-rich plasma across Noida, Delhi and Ghaziabad.",
+    "Using autologous PRP (Platelet Rich Plasma) to increase thickness of your endometrium if its less than 7 mm & augment dormant follicles in your ovaries. Intra uterine PRP can achieve 45–55% implantation when done by Dr. Mona Dahiya in Noida, Delhi and Ghaziabad.",
 };
 
 export default function PrpTherapyPage() {
@@ -26,7 +26,13 @@ export default function PrpTherapyPage() {
       <PrpHero />
 
       <SectionReveal>
-        <MedicalRegistration />
+        <MedicalRegistration
+          councilRegLabels={{
+            DMC: "DMC registration number",
+            MCI: "MCI registration number",
+            UPMC: "UPMC registration number",
+          }}
+        />
       </SectionReveal>
 
       <SectionReveal delay={0.04}>
@@ -42,7 +48,14 @@ export default function PrpTherapyPage() {
       </SectionReveal>
 
       <SectionReveal delay={0.04}>
-        <IvfSuccessClinics />
+        <IvfSuccessClinics
+          eyebrow="Visit Dr. Mona"
+          title="Book a Consultation at Our Clinics"
+          subtitle="Dr. Mona sees patients in Noida, Ghaziabad and Delhi, and offers online consultations."
+          directionsLinkText="Get directions"
+          clinicLinkText="Clinic page"
+          bookButtonText="Book appointment"
+        />
       </SectionReveal>
 
       <SectionReveal delay={0.04}>
@@ -57,10 +70,31 @@ export default function PrpTherapyPage() {
         <AboutConsultation
           sectionId="book-consultation"
           eyebrow="Next step"
-          title="Book an In-Clinic or Online Consultation"
-          subtitle="Book an in-clinic consultation with Dr. Mona Dahiya in Noida, Ghaziabad or Delhi, or an online review of your reports. Direct line: +91 92679 82924."
+          title={
+            <>
+              Book an In-Clinic or
+              <br />
+              Online Consultation
+            </>
+          }
+          subtitle={
+            <>
+              Book an in-clinic consultation with Dr. Mona Dahiya in Noida,
+              Ghaziabad or Delhi, or schedule an online consultation to review
+              your reports. Direct line:{" "}
+              <a
+                href="tel:+919267982924"
+                className="font-medium text-blue hover:text-rose"
+              >
+                +91 92679 82924
+              </a>
+              .
+            </>
+          }
           appendContacts={false}
           consultationDuration=""
+          defaultClinic="Noida"
+          sectionBg="bg-white"
         />
       </SectionReveal>
 

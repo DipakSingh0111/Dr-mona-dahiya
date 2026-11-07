@@ -1,11 +1,10 @@
-﻿"use client";
+"use client";
+
+import Link from "next/link";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import HeroBannerImage from "@/components/ui/HeroBannerImage";
 import HeroCounterBar from "@/components/ui/HeroCounterBar";
-
-import Link from "next/link";
-
-import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
+import { Stagger, StaggerItem } from "@/components/ui/Reveal";
 
 export default function EggFreezingHero() {
   const badges = [
@@ -19,18 +18,12 @@ export default function EggFreezingHero() {
     <section
       className="relative flex flex-col justify-center overflow-hidden py-8 sm:py-10 lg:min-h-[calc(100svh-var(--site-header-h,8.75rem))] lg:py-8 xl:py-10"
       style={{
-        background:
-          "var(--pink)",
+        background: "var(--pink)",
       }}
     >
       <div className="page-container relative grid grid-cols-1 items-start gap-6 sm:gap-7 lg:grid-cols-12 lg:items-start lg:gap-8 xl:gap-12">
         <div className="min-w-0 lg:col-span-7">
-          <Breadcrumb
-          items={[
-            { label: "Treatments", href: "/our-services" },
-            { label: "Egg Freezing" }
-          ]}
-        />
+          <Breadcrumb items={[{ label: "Egg Freezing Center in Noida" }]} />
 
           <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">
             Medical egg freezing
@@ -41,10 +34,10 @@ export default function EggFreezingHero() {
             Delhi NCR
           </h1>
 
-          <p className="mt-3.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
+          <p className="mt-3.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/80 sm:text-[15px]">
             Egg freezing is also known as oocyte cryopreservation. We collect
             the mature (unfertilised) eggs from the female and store them at
-            –196°C using state-of-the-art vitrification techniques. When done
+            −196°C using state-of-the-art vitrification techniques. When done
             correctly under Dr. Mona Dahiya&apos;s care at our clinics in Noida,
             Delhi and Ghaziabad, your eggs have a greater than 95% chance of
             surviving once they are thawed.
@@ -68,7 +61,7 @@ export default function EggFreezingHero() {
           <div className="mt-4 sm:mt-5">
             <Link
               href="/best-ivf-patient-reviews"
-              className="inline-flex items-center gap-1.5 text-[12.5px] font-medium text-rose transition-colors hover:text-rose-dark sm:text-[13.5px]"
+              className="inline-flex items-center gap-1.5 text-[12.5px] font-semibold text-ink transition-colors hover:text-rose sm:text-[13.5px]"
             >
               Read Dr Mona Dahiya&apos;s Reviews
               <span aria-hidden>→</span>
@@ -81,7 +74,7 @@ export default function EggFreezingHero() {
           >
             {badges.map((badge) => (
               <StaggerItem key={badge}>
-                <span className="inline-flex items-center rounded-full border border-rose/35 bg-transparent px-4 py-1.5 text-[11.5px] font-semibold text-ink sm:px-5 sm:py-2 sm:text-[12.5px]">
+                <span className="inline-flex items-center rounded-full border border-rose/35 bg-white/80 px-4 py-1.5 text-[11.5px] font-semibold text-ink sm:px-5 sm:py-2 sm:text-[12.5px]">
                   {badge}
                 </span>
               </StaggerItem>
@@ -91,7 +84,7 @@ export default function EggFreezingHero() {
 
         <HeroBannerImage
           src="/images/Best-egg-banner.jpg"
-          alt="Dr. Mona Dahiya — Egg Freezing Center"
+          alt="Dr. Mona Dahiya — Best Egg Freezing Center in Noida & Delhi NCR"
         />
       </div>
 
