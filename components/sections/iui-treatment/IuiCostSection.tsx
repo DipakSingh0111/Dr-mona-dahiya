@@ -6,22 +6,22 @@ import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 export default function IuiCostSection() {
   const costFactors = [
     {
-      icon: <FaPills className="size-4 text-rose" />,
+      icon: <FaPills className="size-4" />,
       title: "If You Are Doing An Induced Cycle or Natural Cycle",
       desc: "Taking pills will typically be cheaper than using injections.",
     },
     {
-      icon: <FaHeartbeat className="size-4 text-rose" />,
+      icon: <FaHeartbeat className="size-4" />,
       title: "Scans to Monitor Follicles",
       desc: "How many times you will need to come in for scans.",
     },
     {
-      icon: <FaFlask className="size-4 text-rose" />,
+      icon: <FaFlask className="size-4" />,
       title: "Sperm Can Be Washed Using Density Gradient Method or Swim Up Method",
       desc: "Can be used on partner or a certified donor.",
     },
     {
-      icon: <FaSyncAlt className="size-4 text-rose" />,
+      icon: <FaSyncAlt className="size-4" />,
       title: "May Require Multiple Cycles to Get Pregnant",
       desc: "You may need to do more than one cycle to become pregnant.",
     },
@@ -82,7 +82,7 @@ export default function IuiCostSection() {
               <StaggerItem key={idx} className="h-full">
                 <div className="card-highlight flex h-full flex-col rounded-2xl border border-[#fde2ec] bg-white p-5 shadow-sm transition-all duration-300 hover:border-[#fbcfe0] hover:bg-[#fff0f5] hover:shadow-md sm:p-6">
                   <div className="flex items-center gap-3">
-                    <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-rose/15 text-rose">
+                    <span className="card-badge flex size-8 shrink-0 items-center justify-center rounded-lg bg-rose text-white">
                       {item.icon}
                     </span>
                     <h4 className="text-[14px] font-bold leading-snug text-ink sm:text-[14.5px]">

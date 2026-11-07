@@ -2,123 +2,142 @@
 
 import type { ReactNode } from "react";
 import Link from "next/link";
-import { FaCheck } from "react-icons/fa";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 import {
   TreatmentSection,
   TreatmentSectionHeader,
-  NumberedCard
+  NumberedCard,
+  ChecklistRow,
 } from "@/components/ui/treatment";
+
 const indications = [
   {
     number: "1",
-    title: "Low ovarian reserve (low AMH or AFC)",
+    title: "Low AMH/AFC",
     description:
-      "AMH below 0.8 ng/mL, with only 2 to 4 follicles even on high-dose conventional cycles.",
+      "If your AMH value is less than 0.8 and you respond with only 2-4 follicles in normal-dose IVF cycles, then mini IVF is suggested.",
   },
   {
     number: "2",
-    title: "Age over 38 to 40",
-    description: "Where egg quality matters more than egg numbers.",
+    title: "Age more than 38-40 yrs",
+    description:
+      "When the quality of eggs becomes more important than the number of eggs.",
   },
   {
     number: "3",
-    title: "PCOS with high OHSS risk",
+    title: "PCOS patients at risk of OHSS",
     description:
-      "Women who over-respond to injections, where standard doses can cause dangerous fluid shifts.",
+      "Patients who tend to over-respond to injections can benefit from mini IVF, as the chances of getting OHSS in normal-dose IVF can be higher.",
   },
   {
     number: "4",
-    title: "Past over-response or intolerance",
+    title: "Previous history of over-response",
     description:
-      "Severe nausea, fluid retention or high-estrogen side effects in earlier IVF cycles.",
+      "If you have experienced severe side effects, from nausea to water retention, due to high estrogen levels in a previous cycle, then mini IVF will help.",
   },
   {
     number: "5",
-    title: "Cost-conscious family planning",
+    title: "Affordable IVF treatment",
     description:
-      "A medically sound, lower-cost alternative to high-dose injectable treatment.",
+      "If you want to plan a baby at a lower cost, mini IVF can be opted for. It is a cheaper version of conventional injectable IVF.",
   },
   {
     number: "6",
-    title: "Conditions where high estrogen must be avoided",
+    title: "Avoidance of high estrogen levels in the body",
     description:
       "A history of hormone-sensitive conditions that rules out large estradiol rises.",
   },
 ];
 
-const checklist: { text: ReactNode }[] = [
+const checklist: { title?: string; text: ReactNode }[] = [
   {
-    text: "Reserve mapping: serum AMH, Day 2 or 3 FSH, LH and a transvaginal antral follicle count.",
+    title: "Estimate ovarian reserve",
+    text: "blood workup for AMH, FSH and LH on day 2/3 of the cycle, plus Antral Follicle Count (AFC) on ultrasound.",
   },
   {
-    text: "Thyroid and prolactin: TSH (target around 2.5 mIU/L) and prolactin, so ovulation is not held back.",
+    title: "Check thyroid and prolactin levels",
+    text: "to ensure proper ovulation. Thyroid (TSH) should be in the range of 2.5 mIU/L.",
   },
   {
+    title: "Semen profile of partner",
     text: (
       <>
-        Semen analysis: if severe male factor shows up,{" "}
+        if any severe male factor is found, then plan for{" "}
         <Link
           href="/intracytoplasmic-sperm-injection-icsi-treatment"
-          className="font-medium text-blue underline underline-offset-2 hover:text-rose transition-colors"
+          className="font-semibold text-blue underline transition-colors hover:text-rose"
         >
           ICSI Treatment
         </Link>{" "}
-        is planned alongside.
+        as well.
       </>
     ),
   },
   {
-    text: "Pelvic scan: 2D or 3D transvaginal scan to rule out hydrosalpinx or fibroids inside the cavity.",
+    title: "Ultrasound pelvis",
+    text: "to exclude any pathology like hydrosalpinx or intracavitary fibroid, with a 2D/3D USG scan.",
   },
   {
-    text: "Infection screening for both partners (HIV I & II, HBsAg, HCV, VDRL), as required under the Indian ART Act.",
+    text: (
+      <span className="font-semibold text-ink">
+        HIV I &amp; II, HBsAg, HCV and VDRL of both partners (as per the ART Act
+        of India).
+      </span>
+    ),
   },
 ];
 
-export default function MiniIvfIndicationsAndChecklist() {
+export function MiniIvfIndications() {
   return (
     <TreatmentSection>
-        <div className="mb-14 sm:mb-16 lg:mb-20">
-          <TreatmentSectionHeader
-          eyebrow="Clinical breakdown"
-          title="Indications: Who is a Candidate for Mini IVF?"
-        />
+      <TreatmentSectionHeader
+        eyebrow="What is mini IVF"
+        title="Who Needs Mini IVF?"
+      />
 
-          <Stagger
-            delay={0.05}
-            className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
-          >
-            {indications.map((item) => (
-              <StaggerItem key={item.number}>
-              <NumberedCard {...item} />
-            </StaggerItem>
-            ))}
-          </Stagger>
-        </div>
+      <Stagger
+        delay={0.05}
+        className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
+      >
+        {indications.map((item) => (
+          <StaggerItem key={item.number}>
+            <NumberedCard {...item} />
+          </StaggerItem>
+        ))}
+      </Stagger>
+    </TreatmentSection>
+  );
+}
 
-        <div>
-          <TreatmentSectionHeader
-          eyebrow="Before treatment"
-          title="Diagnostic Checklist: Pre-Mini IVF Evaluation"
-          subtitle="These tests confirm Mini IVF is the right fit and set the starting dose."
-        />
+export function MiniIvfChecklist() {
+  return (
+    <TreatmentSection>
+      <TreatmentSectionHeader
+        eyebrow="Before treatment"
+        title="Tests to Be Done Before Starting Mini IVF"
+        subtitle="The tests below need to be performed to evaluate you for mini IVF and decide the starting dose of the drug."
+      />
 
-          <div className="mt-6 flex flex-col gap-3.5 sm:mt-7 sm:gap-4">
-            {checklist.map((item, idx) => (
-              <Reveal key={idx} variant="fadeUp" delay={idx * 0.04}>
-                <div className="flex items-center gap-3.5 rounded-xl border border-[#fde2ec] bg-white px-4 py-3.5 backdrop-blur-md transition-all duration-200 hover:border-blue/50 hover:bg-[#fff0f5] sm:px-5 sm:py-4">
-                  <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-rose/15 text-rose ring-1 ring-rose/35 sm:size-6">
-                    <FaCheck className="size-2.5 sm:size-3" />
-                  </span>
-                  <p className="text-[13.5px] leading-relaxed text-black sm:text-[14.5px]">
-                    {item.text}
-                  </p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </TreatmentSection>
+      <div className="mt-6 flex flex-col gap-3 sm:mt-7 sm:gap-3.5">
+        {checklist.map((item, idx) => (
+          <Reveal key={idx} variant="fadeUp" delay={idx * 0.04}>
+            {item.title ? (
+              <ChecklistRow title={item.title} text={item.text} />
+            ) : (
+              <ChecklistRow>{item.text}</ChecklistRow>
+            )}
+          </Reveal>
+        ))}
+      </div>
+    </TreatmentSection>
+  );
+}
+
+export default function MiniIvfIndicationsAndChecklist() {
+  return (
+    <>
+      <MiniIvfIndications />
+      <MiniIvfChecklist />
+    </>
   );
 }

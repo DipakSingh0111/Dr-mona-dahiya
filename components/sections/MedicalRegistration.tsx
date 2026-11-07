@@ -5,10 +5,13 @@ import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 export default function MedicalRegistration({
   dark = false,
   councilRegLabels,
+  councilNames,
 }: {
   dark?: boolean;
   /** Override the small label under each registration number (e.g. DMC Reg No.) */
   councilRegLabels?: Partial<Record<"DMC" | "MCI" | "UPMC", string>>;
+  /** Override council display name (e.g. U.P. Medical Council) */
+  councilNames?: Partial<Record<"DMC" | "MCI" | "UPMC", string>>;
 }) {
   const registrations = [
     {
@@ -104,7 +107,8 @@ export default function MedicalRegistration({
 
                   <div className="min-w-0 flex-1">
                     <h3 className="text-[12.5px] font-semibold text-black sm:text-[13px]">
-                      {item.councilName}
+                      {councilNames?.[item.code as "DMC" | "MCI" | "UPMC"] ??
+                        item.councilName}
                     </h3>
                     <p
                       className={`font-serif mt-0.5 text-[21px] font-bold tracking-tight sm:text-[23px] ${item.numColor}`}

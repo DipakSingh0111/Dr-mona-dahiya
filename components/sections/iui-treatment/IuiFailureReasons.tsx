@@ -6,17 +6,17 @@ import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 export default function IuiFailureReasons() {
   const factors = [
     {
-      icon: <FaCalendarAlt className="size-4 text-rose" />,
+      icon: <FaCalendarAlt className="size-4" />,
       title: "Age",
       desc: "You have a higher chance of success if you are under the age of 35. After you hit the age of 40 your chances drop off.",
     },
     {
-      icon: <FaSearch className="size-4 text-rose" />,
+      icon: <FaSearch className="size-4" />,
       title: "What is Causing Your Infertility",
       desc: "Most of our patients who do IUI have unknown causes, cervical factor or mild male factor.",
     },
     {
-      icon: <FaSyncAlt className="size-4 text-rose" />,
+      icon: <FaSyncAlt className="size-4" />,
       title: "May Take More Than One Cycle to Get Pregnant",
       desc: "You may need to do several cycles to become pregnant. Dr. Mona will reassess you after a couple of cycles.",
     },
@@ -51,7 +51,7 @@ export default function IuiFailureReasons() {
                 <StaggerItem key={idx}>
                   <div className="flex flex-col gap-2 rounded-2xl border border-[#fde2ec] bg-white p-5 shadow-sm transition-all duration-300 hover:border-[#fbcfe0] hover:bg-[#fff0f5] hover:shadow-md sm:p-6">
                     <div className="flex items-center gap-3">
-                      <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-rose/15 text-rose">
+                      <span className="card-badge flex size-8 shrink-0 items-center justify-center rounded-lg bg-rose text-white">
                         {item.icon}
                       </span>
                       <h3 className="text-[14.5px] font-bold text-ink sm:text-[15px]">

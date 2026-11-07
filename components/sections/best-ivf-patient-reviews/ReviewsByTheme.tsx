@@ -87,7 +87,7 @@ export default function ReviewsByTheme() {
                   href={theme.href}
                   className="card-highlight group flex h-full items-center gap-2.5 rounded-2xl border border-[#fde2ec] bg-white px-3.5 py-3.5 shadow-sm backdrop-blur-md transition-all duration-200 hover:-translate-y-0.5 hover:border-rose/50 hover:bg-pink sm:px-4"
                 >
-                  <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-rose/20 text-rose ring-1 ring-rose/35 transition-colors group-hover:bg-rose-dark group-hover:text-rose">
+                  <span className="card-badge flex size-8 shrink-0 items-center justify-center rounded-lg bg-rose text-white transition-colors">
                     <Icon className="size-3.5" />
                   </span>
                   <span className="min-w-0 text-[12.5px] leading-snug font-medium text-black sm:text-[13px]">

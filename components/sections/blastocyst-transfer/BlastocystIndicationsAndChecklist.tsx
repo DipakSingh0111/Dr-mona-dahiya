@@ -1,225 +1,155 @@
 "use client";
 
+import type { ReactNode } from "react";
 import Link from "next/link";
-import { FaCheck } from "react-icons/fa";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
+import {
+  TreatmentSection,
+  TreatmentSectionHeader,
+  NumberedCard,
+  ChecklistRow,
+} from "@/components/ui/treatment";
 
-interface IndicationCard {
-  number: string;
-  title: string;
-  description: React.ReactNode;
-  theme: "pink" | "teal" | "purple" | "orange" | "blue";
-}
-
-const cardThemes = {
-  pink: {
-    border: "border-[#fbcfe0]",
-    bg: "bg-gradient-to-br from-[#fff5f8] via-white to-[#ffe8f0]",
-    badgeBg: "bg-gradient-to-br from-[#f85f8f] to-[#e6356e]",
-    badgeShadow: "shadow-[0_4px_12px_rgba(248,95,143,0.35)]",
-    hoverShadow: "hover:shadow-[0_12px_30px_rgba(230,53,110,0.15)]",
-    titleColor: "text-[#831843]",
-    descColor: "text-black",
-  },
-  teal: {
-    border: "border-[#b8ebe2]",
-    bg: "bg-gradient-to-br from-[#f0fbf9] via-white to-[#e6f8f5]",
-    badgeBg: "bg-gradient-to-br from-blue to-[var(--blue)]",
-    badgeShadow: "shadow-[0_4px_12px_rgba(20,184,166,0.35)]",
-    hoverShadow: "hover:shadow-[0_12px_30px_rgba(20,184,166,0.15)]",
-    titleColor: "text-black",
-    descColor: "text-black",
-  },
-  purple: {
-    border: "border-[#dfd3fa]",
-    bg: "bg-gradient-to-br from-[#f7f4fe] via-white to-[#f0eaff]",
-    badgeBg: "bg-gradient-to-br from-[#9274f4] to-[#764de8]",
-    badgeShadow: "shadow-[0_4px_12px_rgba(118,77,232,0.35)]",
-    hoverShadow: "hover:shadow-[0_12px_30px_rgba(118,77,232,0.15)]",
-    titleColor: "text-[#4c1d95]",
-    descColor: "text-black",
-  },
-  orange: {
-    border: "border-[#fedab7]",
-    bg: "bg-gradient-to-br from-[#fff7f0] via-white to-[#feefe2]",
-    badgeBg: "bg-gradient-to-br from-[#fb9956] to-[#eb7629]",
-    badgeShadow: "shadow-[0_4px_12px_rgba(235,118,41,0.35)]",
-    hoverShadow: "hover:shadow-[0_12px_30px_rgba(235,118,41,0.15)]",
-    titleColor: "text-[#7c2d12]",
-    descColor: "text-black",
-  },
-  blue: {
-    border: "border-[#c4e1fd]",
-    bg: "bg-gradient-to-br from-[#f2f8fe] via-white to-[#e6f2fd]",
-    badgeBg: "bg-gradient-to-br from-[#3b82f6] to-blue-dark",
-    badgeShadow: "shadow-[0_4px_12px_rgba(37,99,235,0.35)]",
-    hoverShadow: "hover:shadow-[0_12px_30px_rgba(37,99,235,0.15)]",
-    titleColor: "text-[#1e3a8a]",
-    descColor: "text-black",
-  },
-};
-
-const indications: IndicationCard[] = [
+const indications: { number: string; title: string; description: ReactNode }[] = [
   {
     number: "1",
-    title: "Elective single-embryo transfer (eSET)",
-    description: "For the best chance of one healthy baby while avoiding the risks of twins and triplets.",
-    theme: "pink",
+    title: "Elective Single Embryo Transfer (eSET)",
+    description:
+      "To ensure the best chances of one baby, avoiding multiple pregnancies (twins or triplets).",
   },
   {
     number: "2",
-    title: "Repeated Day-3 transfer failure",
+    title: "Failure of Day 3 Embryo Transfer",
     description: (
-      <span>
-        Couples whose normal-looking Day 2 or Day 3 embryos have not implanted. See{" "}
-        <Link href="/recurrent-implantation-failure-rif" className="text-blue underline font-semibold hover:text-rose transition-colors">
-          Recurrent Implantation Failure
+      <>
+        If your Day 2/Day 3 embryos appear normal but do not implant. Read about{" "}
+        <Link
+          href="/recurrent-implantation-failure-rif"
+          className="font-semibold text-blue underline transition-colors hover:text-rose"
+        >
+          Implantation Failure
         </Link>
         .
-      </span>
+      </>
     ),
-    theme: "teal",
   },
   {
     number: "3",
-    title: "Genetic testing (PGT-A or PGT-M)",
-    description: "A safe biopsy of 4 to 6 outer cells needs an expanded blastocyst, leaving the inner cell mass untouched.",
-    theme: "purple",
+    title: "Need for Embryo Testing (PGT-A/PGT-M)",
+    description:
+      "The blastocyst must be expanded enough for us to biopsy 4–6 outer layer cells, leaving the inner layer cells (baby) intact.",
   },
   {
     number: "4",
-    title: "Good responders with 4+ quality Day-3 embryos",
-    description: "Extended culture naturally shows which embryos can keep developing.",
-    theme: "orange",
+    title: "You have 4 or more good quality embryos on Day 3",
+    description:
+      "By extending embryo culture to Day 5, we know which embryos can go on to develop further.",
   },
   {
     number: "5",
-    title: "Frozen embryo transfer timing",
+    title: "Day 5 Embryo for Frozen Embryo Transfer",
     description: (
-      <span>
-        Matching a Day-5 embryo to the lining&apos;s receptive window. See{" "}
-        <Link href="/treatments" className="text-blue underline font-semibold hover:text-rose transition-colors">
+      <>
+        Ensuring that the uterine lining is in its window of receptivity. Read
+        about{" "}
+        <Link
+          href="/frozen-embryo-transfer"
+          className="font-semibold text-blue underline transition-colors hover:text-rose"
+        >
           Frozen Embryo Transfer
         </Link>
         .
-      </span>
+      </>
     ),
-    theme: "blue",
   },
 ];
 
-const checklistItems = [
-  "Day-3 cleavage check: 6 to 8 even cells with under 10% fragmentation, to confirm extended culture makes sense.",
-  "Endometrial thickness: a 7.5 to 11 mm trilaminar lining with good blood flow on transvaginal scan.",
-  "Serum progesterone in fresh cycles: below 1.0 to 1.5 ng/mL before trigger, so the lining is not out of step.",
-  "Mock transfer: confirms a clear cervical passage to avoid bleeding or touching the top of the uterus on the day.",
-  "Cavity clearance: sonohysterography or Hysteroscopy to rule out polyps, adhesions or chronic endometritis.",
+const checklistItems: { title: string; text: ReactNode }[] = [
+  {
+    title: "Day 3 embryo",
+    text: "Ensure that there are at least 6–8 equal cells with minimal (<10%) fragmentation.",
+  },
+  {
+    title: "Endometrium",
+    text: "Must measure between 7.5–11 mm, trilaminar, and show good vascularity on TVS.",
+  },
+  {
+    title: "Blood progesterone levels in fresh cycles",
+    text: "Must be <1.0–1.5 ng/ml before trigger day to prevent desynchrony of the endometrium.",
+  },
+  {
+    title: "Mock transfer",
+    text: "To ensure that there is an easy route through the cervix and prevent any bleeding or contact with the fundus of the uterus on transfer day.",
+  },
+  {
+    title: "Polyps, adhesions or chronic endometritis",
+    text: (
+      <>
+        Can be ruled out with Sonohysterogram/
+        <Link
+          href="/hysteroscopy-treatment"
+          className="font-semibold text-blue underline transition-colors hover:text-rose"
+        >
+          Hysteroscopy
+        </Link>
+        .
+      </>
+    ),
+  },
 ];
 
-export default function BlastocystIndicationsAndChecklist() {
+export function BlastocystIndications() {
   return (
-    <section className="relative overflow-hidden bg-white py-8 sm:py-10 lg:py-14 border-t border-slate-100">
-      <div className="page-container relative">
-        {/* ================= SECTION 1: Indications ================= */}
-        <div className="mb-14 sm:mb-16 lg:mb-20">
-          <Reveal variant="fadeUp">
-            <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
-              Clinical breakdown
-            </p>
-            <h2 className="font-serif mt-1 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-navy sm:text-[2.2rem] lg:text-[2.45rem]">
-              Indications: Who Needs a Day-5 Blastocyst Transfer?
-            </h2>
-          </Reveal>
+    <TreatmentSection>
+      <TreatmentSectionHeader
+        eyebrow="What is Day 5/6 Transfer?"
+        title={
+          <>
+            Who should undergo
+            <br className="hidden sm:inline" /> a Day 5/6 Transfer?
+          </>
+        }
+      />
 
-          {/* Row 1: 3 Cards */}
-          <Stagger delay={0.04} className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-5">
-            {indications.slice(0, 3).map((item, idx) => {
-              const theme = cardThemes[item.theme];
-              return (
-                <StaggerItem key={idx}>
-                  <div
-                    className={`relative flex h-full flex-col rounded-2xl border ${theme.border} ${theme.bg} p-5 sm:p-6 shadow-sm ${theme.hoverShadow} transition-all duration-300 hover:-translate-y-1`}
-                  >
-                    <div className="flex items-start gap-3.5">
-                      <span
-                        className={`flex size-8 shrink-0 items-center justify-center rounded-lg ${theme.badgeBg} text-[15px] font-bold text-black ${theme.badgeShadow}`}
-                      >
-                        {item.number}
-                      </span>
-                      <h3 className={`font-serif text-[1.05rem] font-semibold ${theme.titleColor} leading-snug sm:text-[1.12rem] pt-0.5`}>
-                        {item.title}
-                      </h3>
-                    </div>
-                    <div className={`mt-3.5 text-[13px] leading-relaxed ${theme.descColor} sm:text-[13.5px]`}>
-                      {item.description}
-                    </div>
-                  </div>
-                </StaggerItem>
-              );
-            })}
-          </Stagger>
-
-          {/* Row 2: 2 Cards */}
-          <Stagger delay={0.04} className="mt-4 sm:mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-2 sm:gap-5 max-w-4xl">
-            {indications.slice(3, 5).map((item, idx) => {
-              const theme = cardThemes[item.theme];
-              return (
-                <StaggerItem key={idx}>
-                  <div
-                    className={`relative flex h-full flex-col rounded-2xl border ${theme.border} ${theme.bg} p-5 sm:p-6 shadow-sm ${theme.hoverShadow} transition-all duration-300 hover:-translate-y-1`}
-                  >
-                    <div className="flex items-start gap-3.5">
-                      <span
-                        className={`flex size-8 shrink-0 items-center justify-center rounded-lg ${theme.badgeBg} text-[15px] font-bold text-black ${theme.badgeShadow}`}
-                      >
-                        {item.number}
-                      </span>
-                      <h3 className={`font-serif text-[1.05rem] font-semibold ${theme.titleColor} leading-snug sm:text-[1.12rem] pt-0.5`}>
-                        {item.title}
-                      </h3>
-                    </div>
-                    <div className={`mt-3.5 text-[13px] leading-relaxed ${theme.descColor} sm:text-[13.5px]`}>
-                      {item.description}
-                    </div>
-                  </div>
-                </StaggerItem>
-              );
-            })}
-          </Stagger>
-        </div>
-
-        {/* ================= SECTION 2: Diagnostic Checklist: Pre-Transfer Evaluation ================= */}
-        <div>
-          <Reveal variant="fadeUp">
-            <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
-              Before treatment
-            </p>
-            <h2 className="font-serif mt-1 text-[1.85rem] leading-[1.2] font-normal tracking-tight text-navy sm:text-[2.2rem] lg:text-[2.45rem]">
-              Diagnostic Checklist: Pre-Transfer Evaluation
-            </h2>
-            <p className="mt-2 text-[14px] text-black sm:text-[15px]">
-              These checks confirm that the embryo, the lining and the transfer path are all ready.
-            </p>
-          </Reveal>
-
-          {/* Checklist Bars */}
-          <div className="mt-6 flex flex-col gap-3 sm:mt-7 sm:gap-3.5">
-            {checklistItems.map((text, idx) => (
-              <Reveal key={idx} variant="fadeUp" delay={idx * 0.04}>
-                <div className="flex items-center gap-3.5 rounded-xl border border-slate-200 bg-slate-50/70 px-4 py-3.5 transition-all duration-200 hover:border-blue/40 hover:bg-white hover:shadow-sm sm:px-5 sm:py-4">
-                  <span className="flex size-6 shrink-0 items-center justify-center rounded-full bg-rose/15 text-rose ring-1 ring-rose/35">
-                    <FaCheck className="size-2.5" />
-                  </span>
-                  <p className="text-[13px] leading-relaxed text-slate-700 sm:text-[14px]">
-                    {text}
-                  </p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
+      <Stagger
+        delay={0.04}
+        className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
+      >
+        {indications.map((item) => (
+          <StaggerItem key={item.number}>
+            <NumberedCard {...item} />
+          </StaggerItem>
+        ))}
+      </Stagger>
+    </TreatmentSection>
   );
 }
 
+export function BlastocystChecklist() {
+  return (
+    <TreatmentSection>
+      <TreatmentSectionHeader
+        eyebrow="What to expect before treatment"
+        title="Day 5 Blastocyst Transfer Diagnostic Checklist"
+        subtitle="We will ensure that the embryo is capable of extended culture, the endometrium is prepared and we can perform a smooth transfer."
+      />
+
+      <div className="mt-6 flex flex-col gap-3 sm:mt-7 sm:gap-3.5">
+        {checklistItems.map((item, idx) => (
+          <Reveal key={item.title} variant="fadeUp" delay={idx * 0.04}>
+            <ChecklistRow title={item.title} text={item.text} />
+          </Reveal>
+        ))}
+      </div>
+    </TreatmentSection>
+  );
+}
+
+export default function BlastocystIndicationsAndChecklist() {
+  return (
+    <>
+      <BlastocystIndications />
+      <BlastocystChecklist />
+    </>
+  );
+}

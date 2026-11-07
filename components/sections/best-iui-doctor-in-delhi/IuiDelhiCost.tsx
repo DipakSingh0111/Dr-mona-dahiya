@@ -6,22 +6,22 @@ import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 export default function IuiDelhiCost() {
   const costFactors = [
     {
-      icon: <FaPills className="size-4 text-rose" />,
+      icon: <FaPills className="size-4" />,
       title: "Medications Used For Stimulation",
       desc: "Oral Medications like Letrozole or Clomiphene Citrate can lower the cost of the cycle. Injectable gonadotropins can be required in cases of poor ovarian response which can increase the cost.",
     },
     {
-      icon: <FaHeartbeat className="size-4 text-rose" />,
+      icon: <FaHeartbeat className="size-4" />,
       title: "Number of Ultrasound Scans",
       desc: "Based on how long it takes for you to ovulate we may require more or fewer scans.",
     },
     {
-      icon: <FaFlask className="size-4 text-rose" />,
+      icon: <FaFlask className="size-4" />,
       title: "Type of Sperm Wash",
       desc: "If you are using your partner's sperm it is washed using Density Gradient Method. Or we may procure a Donor Sample.",
     },
     {
-      icon: <FaHeart className="size-4 text-rose" />,
+      icon: <FaHeart className="size-4" />,
       title: "Medications After IUI",
       desc: "Micronised Progesterone Tablets or Vaginal Suppositories are prescribed.",
     },
@@ -90,7 +90,7 @@ export default function IuiDelhiCost() {
               <StaggerItem key={item.title} className="h-full">
                 <div className="card-highlight flex h-full flex-col rounded-2xl border border-rose/30 bg-white p-5 shadow-[0_0_20px_rgba(232,62,116,0.1)] backdrop-blur-md transition-all duration-300 hover:border-rose/55 hover:bg-[#fff0f5] sm:p-6">
                   <div className="flex items-center gap-3">
-                    <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-rose/20 ring-1 ring-rose/35">
+                    <span className="card-badge flex size-8 shrink-0 items-center justify-center rounded-lg bg-rose text-white">
                       {item.icon}
                     </span>
                     <h4 className="text-[14px] font-bold leading-snug text-black sm:text-[14.5px]">

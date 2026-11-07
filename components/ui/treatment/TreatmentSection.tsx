@@ -4,14 +4,17 @@ import type { ReactNode } from "react";
 import { Reveal } from "@/components/ui/Reveal";
 
 export function TreatmentSection({
+  id,
   children,
   className = "",
 }: {
+  id?: string;
   children: ReactNode;
   className?: string;
 }) {
   return (
     <section
+      id={id}
       className={`treatment-section relative overflow-hidden py-8 sm:py-10 lg:py-12 ${className}`}
     >
       <div className="page-container relative">{children}</div>

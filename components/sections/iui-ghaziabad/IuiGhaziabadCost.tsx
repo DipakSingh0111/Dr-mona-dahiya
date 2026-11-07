@@ -6,22 +6,22 @@ import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 export default function IuiGhaziabadCost() {
   const costFactors = [
     {
-      icon: <FaPills className="size-4 text-rose" />,
+      icon: <FaPills className="size-4" />,
       title: "Medication",
       desc: "If we only use oral drugs then the cost will be less. If we need to add injectable gonadotropins the cost will increase.",
     },
     {
-      icon: <FaHeartbeat className="size-4 text-rose" />,
+      icon: <FaHeartbeat className="size-4" />,
       title: "Monitoring",
       desc: "How many scans you will require to monitor your follicles and trigger ovulation.",
     },
     {
-      icon: <FaFlask className="size-4 text-rose" />,
+      icon: <FaFlask className="size-4" />,
       title: "Sperm Washing",
       desc: "This involves using special media to separate the best quality sperms.",
     },
     {
-      icon: <FaHeart className="size-4 text-rose" />,
+      icon: <FaHeart className="size-4" />,
       title: "Sperms Used",
       desc: "Are you using your partner's sperm or donor's sperm?",
     },
@@ -82,7 +82,7 @@ export default function IuiGhaziabadCost() {
               <StaggerItem key={idx} className="h-full">
                 <div className="card-highlight flex h-full flex-col rounded-2xl border border-[#fde2ec] bg-white p-5 shadow-sm transition-all duration-300 hover:border-[#fbcfe0] hover:bg-[#fff0f5] hover:shadow-md sm:p-6">
                   <div className="flex items-center gap-3">
-                    <span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-rose/15 text-rose">
+                    <span className="card-badge flex size-9 shrink-0 items-center justify-center rounded-xl bg-rose text-white">
                       {item.icon}
                     </span>
                     <h4 className="text-[14px] font-bold leading-snug text-ink sm:text-[14.5px]">

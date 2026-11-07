@@ -93,14 +93,14 @@ export default function IvfSuccessClinics(
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 transition-colors hover:text-rose-dark hover:underline"
                     >
-                      {directionsLinkText}
+                      {directionsLinkText.replace("{city}", clinic.city)}
                       <FaExternalLinkAlt className="size-2.5 opacity-70" />
                     </a>
                     <Link
                       href={clinic.clinicUrl}
                       className="inline-flex items-center gap-1.5 transition-colors hover:text-rose-dark hover:underline"
                     >
-                      {clinicLinkText}
+                      {clinicLinkText.replace("{city}", clinic.city)}
                       <FaArrowRight className="size-2.5" />
                     </Link>
                   </div>

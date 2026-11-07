@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import {
   TreatmentSection,
   TreatmentSectionHeader,
@@ -11,58 +12,55 @@ const leftFaqs: FaqItem[] = [
   {
     question: "Is a Day-5 transfer always better than a Day-3 transfer?",
     answer: (
-      <div className="space-y-3">
-        <p>
-          Not always. Blastocysts implant at higher rates (65% to 70% per embryo) because weaker embryos stop growing between Days 3 and 5. With only 1 or 2 embryos on Day 3, an earlier transfer may be safer than risking arrest in the lab.
-        </p>
-      </div>
+      <p>
+        Not always. Day 5 embryos have higher implantation rates of 65%-70% per
+        embryo transferred. However, if you only have 1 or 2 embryos, it may be
+        beneficial to transfer them on Day 3 instead of risking them stopping
+        their growth in the incubator.
+      </p>
     ),
   },
   {
     question: "Why do some embryos not reach the blastocyst stage?",
     answer: (
-      <div className="space-y-3">
-        <p>
-          Up to Day 3, growth runs on the egg&apos;s own reserves. On Day 4 the embryo&apos;s own genes switch on, so 3 problems show up: high sperm DNA fragmentation, chromosomal errors in the egg, and weak mitochondria. Typically 30% to 50% of embryos reach Day 5.
-        </p>
-      </div>
+      <p>
+        Embryos rely on the energy stores of the egg up until Day 3. Their own
+        genes activate on Day 4. This is where problems occur with high DNA
+        fragmentation in sperm, abnormal chromosomes in the egg and poor
+        mitochondrial function. On average, 30%-50% of embryos will reach Day 5.
+      </p>
     ),
   },
   {
     question: "Is bed rest needed after a blastocyst transfer?",
     answer: (
-      <div className="space-y-3">
-        <p>
-          No. Studies show bed rest does not improve implantation. Rest for 15 minutes at the clinic, then return to normal, non-strenuous activity the same day.
-        </p>
-      </div>
+      <p>
+        No, there is no evidence that bed rest improves pregnancy rates. Take 15
+        mins of rest after your transfer and carry on with your daily
+        (non-strenuous) activities.
+      </p>
     ),
   },
   {
     question: "Where can I have blastocyst transfer with Dr. Mona Dahiya?",
     answer: (
-      <div className="space-y-2">
-        <p>3 clinics:</p>
-        <p>
-          <strong className="text-ink">Noida</strong> (3rd Floor, K-06, above FirstCry, Baraula, Sector 49, Noida, Uttar Pradesh 201301)
-        </p>
-        <p>
-          <strong className="text-ink">Ghaziabad</strong> (2nd Floor, RDC, C-53A, near Bikanerwala, Sector 15, Sector 10, Raj Nagar, Ghaziabad, Uttar Pradesh 201002)
-        </p>
-        <p>
-          <strong className="text-ink">Delhi</strong> (Building Number 41, First Floor, Ring Road, Block Q, Lajpat Nagar IV, Lajpat Nagar, New Delhi 110024)
-        </p>
-      </div>
+      <p>
+        At our 3 clinics: Noida (3rd Floor, K-06, above FirstCry, Baraula,
+        Sector 49, Noida, Uttar Pradesh 201301), Ghaziabad (2nd Floor, RDC,
+        C-53A, near Bikanerwala, Sector 15, Sector 10, Raj Nagar, Ghaziabad,
+        Uttar Pradesh 201002) and Delhi (Building Number 41, First Floor, Ring
+        Road, Block Q, Lajpat Nagar IV, Lajpat Nagar, New Delhi 110024).
+      </p>
     ),
   },
   {
     question: "How many blastocysts should be transferred?",
     answer: (
-      <div className="space-y-3">
-        <p>
-          Usually 1. A single good blastocyst gives a similar pregnancy chance to 2 Day-3 embryos while keeping the twin risk near 1% to 2%. Spare blastocysts are frozen.
-        </p>
-      </div>
+      <p>
+        One blastocyst will have the same success rate as 2 Day 3 embryos, while
+        reducing the risk of twins to around 1%-2%. All remaining embryos can be
+        frozen.
+      </p>
     ),
   },
 ];
@@ -71,42 +69,45 @@ const rightFaqs: FaqItem[] = [
   {
     question: "Can blastocysts be frozen and used later?",
     answer: (
-      <div className="space-y-3">
-        <p>
-          Yes. Vitrified blastocysts survive warming over 95% of the time, and a frozen transfer lets the lining recover after stimulation. See{" "}
-          <span className="text-rose underline">Frozen Embryo Transfer</span>.
-        </p>
-      </div>
+      <p>
+        Yes, blastocysts have very high survival rates after thawing (&gt;95%)
+        and can be transferred in a frozen cycle. Learn more about{" "}
+        <Link
+          href="/frozen-embryo-transfer"
+          className="font-semibold text-blue underline transition-colors hover:text-rose"
+        >
+          Frozen Embryo Transfer
+        </Link>
+        .
+      </p>
     ),
   },
   {
     question: "Does blastocyst transfer cost more?",
     answer: (
-      <div className="space-y-3">
-        <p>
-          A little. Extended culture adds ₹15,000 to ₹25,000 to the IVF cycle, which is usually offset by needing fewer transfers.
-        </p>
-      </div>
+      <p>
+        Slightly. As mentioned above, extending embryo culture costs
+        ₹15,000–₹25,000 more per cycle, but it may reduce the number of
+        transfers required.
+      </p>
     ),
   },
   {
     question: "When is the pregnancy test after blastocyst transfer?",
     answer: (
-      <div className="space-y-3">
-        <p>
-          A blood Beta-hCG test 12 to 14 days after transfer. Home urine tests before Day 10 often give false results.
-        </p>
-      </div>
+      <p>
+        Your blood Beta-hCG will be checked 12–14 days after transfer. Home
+        urine tests are unreliable before Day 10.
+      </p>
     ),
   },
   {
     question: "Is blastocyst transfer painful?",
     answer: (
-      <div className="space-y-3">
-        <p>
-          No. It feels like a routine pelvic exam, takes about 5 to 10 minutes and needs no anaesthesia.
-        </p>
-      </div>
+      <p>
+        No, it&apos;s no different to a routine examination. It takes around
+        5–10 minutes and no anaesthesia is required.
+      </p>
     ),
   },
 ];
@@ -115,9 +116,14 @@ export default function BlastocystFaq() {
   return (
     <TreatmentSection>
       <TreatmentSectionHeader
-          eyebrow="Patient questions"
-          title="Top FAQs About Blastocyst Transfer in Delhi NCR"
-        />
+        eyebrow="Patient FAQ's"
+        title={
+          <>
+            Top FAQs About Blastocyst
+            <br className="hidden sm:inline" /> Transfer in Delhi NCR
+          </>
+        }
+      />
       <FaqAccordion leftItems={leftFaqs} rightItems={rightFaqs} />
     </TreatmentSection>
   );

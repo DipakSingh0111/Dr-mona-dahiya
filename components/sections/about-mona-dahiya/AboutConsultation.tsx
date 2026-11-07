@@ -173,17 +173,17 @@ export default function AboutConsultation({
 
               <div className="mt-7 space-y-3 text-[13px] leading-relaxed text-slate-600">
                 <div>
-                  <strong className="font-bold text-ink">Delhi:</strong>{" "}
+                  <strong className="font-bold text-ink">Delhi</strong>{" "}
                   Building Number 41, First Floor, Ring Road, Block Q, Lajpat
                   Nagar IV, Lajpat Nagar, New Delhi 110024
                 </div>
                 <div>
-                  <strong className="font-bold text-ink">Noida:</strong> 3rd
+                  <strong className="font-bold text-ink">Noida</strong> 3rd
                   Floor, K-06, above FirstCry, Baraula, Sector 49, Noida, Uttar
                   Pradesh 201301
                 </div>
                 <div>
-                  <strong className="font-bold text-ink">Ghaziabad:</strong>{" "}
+                  <strong className="font-bold text-ink">Ghaziabad</strong>{" "}
                   2nd Floor, RDC, C-53A, near Bikanerwala, Sector 15, Sector 10,
                   Raj Nagar, Ghaziabad, Uttar Pradesh 201002
                 </div>
@@ -225,7 +225,6 @@ export default function AboutConsultation({
                       <input
                         type="text"
                         required
-                        placeholder="Enter your name"
                         value={formData.name}
                         onChange={(e) =>
                           setFormData({ ...formData, name: e.target.value })
@@ -294,7 +293,6 @@ export default function AboutConsultation({
                       onChange={(e) =>
                         setFormData({ ...formData, notes: e.target.value })
                       }
-                      placeholder="Anything you want us to know..."
                       className="mt-1.5 w-full resize-none rounded-xl border border-slate-200 bg-[#f8fafc] px-3.5 py-2.5 text-[14px] text-ink outline-none transition-all placeholder:text-slate-400 focus:border-rose focus:bg-white focus:ring-1 focus:ring-rose/30"
                     />
                   </div>

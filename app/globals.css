@@ -796,6 +796,36 @@ div.bg-white span[class*="size-6"].text-blue {
   box-shadow: 0 0 0 1px rgba(232, 62, 116, 0.35) !important;
 }
 
+/* On Pink sections: Checklist checkmark badges become Blue */
+main:not(.home-main) > :nth-child(odd):not(:first-child) span[class*="size-5"].bg-rose\/15,
+main:not(.home-main) > :nth-child(odd):not(:first-child) span[class*="size-5"].bg-rose\/20,
+main:not(.home-main) > :nth-child(odd):not(:first-child) span[class*="size-6"].bg-rose\/15,
+main:not(.home-main) > :nth-child(odd):not(:first-child) span[class*="size-6"].bg-rose\/20,
+main:not(.home-main) > div:nth-child(odd):not(:first-child) span[class*="size-5"].bg-rose\/15,
+main:not(.home-main) > div:nth-child(odd):not(:first-child) span[class*="size-5"].bg-rose\/20,
+main:not(.home-main) > div:nth-child(odd):not(:first-child) span[class*="size-6"].bg-rose\/15,
+main:not(.home-main) > div:nth-child(odd):not(:first-child) span[class*="size-6"].bg-rose\/20,
+main:not(.home-main) > section:nth-child(odd):not(:first-child) span[class*="size-5"].bg-rose\/15,
+main:not(.home-main) > section:nth-child(odd):not(:first-child) span[class*="size-5"].bg-rose\/20,
+main:not(.home-main) > section:nth-child(odd):not(:first-child) span[class*="size-6"].bg-rose\/15,
+main:not(.home-main) > section:nth-child(odd):not(:first-child) span[class*="size-6"].bg-rose\/20,
+.bg-pink span[class*="size-5"].bg-rose\/15,
+.bg-pink span[class*="size-5"].bg-rose\/20,
+.bg-pink span[class*="size-6"].bg-rose\/15,
+.bg-pink span[class*="size-6"].bg-rose\/20,
+section.bg-pink span[class*="size-5"].bg-rose\/15,
+section.bg-pink span[class*="size-5"].bg-rose\/20,
+section.bg-pink span[class*="size-6"].bg-rose\/15,
+section.bg-pink span[class*="size-6"].bg-rose\/20,
+div.bg-pink span[class*="size-5"].bg-rose\/15,
+div.bg-pink span[class*="size-5"].bg-rose\/20,
+div.bg-pink span[class*="size-6"].bg-rose\/15,
+div.bg-pink span[class*="size-6"].bg-rose\/20 {
+  background-color: rgba(0, 71, 202, 0.15) !important;
+  color: var(--blue) !important;
+  box-shadow: 0 0 0 1px rgba(0, 71, 202, 0.35) !important;
+}
+
 /* Inline links inside cards / content hover to brand rose, never white */
 .card-highlight a.underline:hover,
 main a.text-blue.underline:hover,
