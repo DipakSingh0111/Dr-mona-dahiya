@@ -644,14 +644,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   background-color: var(--pink);
 }
 
-/* Even-positioned section blocks on inner pages -> Crisp White */
+/* Even-positioned section blocks on inner pages -> Soft Light Off-White (matching Home OurServices) */
 main:not(.home-main) > :nth-child(even),
 main:not(.home-main) > div:nth-child(even),
 main:not(.home-main) > div:nth-child(even) > section,
 main:not(.home-main) > div:nth-child(even) > div > section,
 main:not(.home-main) > :nth-child(even) > section,
 main:not(.home-main) > section:nth-child(even) {
-  background-color: #ffffff !important;
+  background-color: #f5f6f8 !important;
 }
 
 /* Odd-positioned section blocks on inner pages (excluding Hero/first-child) -> Soft Pink */
@@ -664,23 +664,27 @@ main:not(.home-main) > section:nth-child(odd):not(:first-child) {
   background-color: var(--pink) !important;
 }
 
-/* Explicit class overrides always take precedence over nth-child rules */
-main:not(.home-main) section.bg-white,
-main:not(.home-main) div.bg-white {
-  background-color: #ffffff !important;
+/* Explicit section class overrides always take precedence over nth-child rules */
+main:not(.home-main) section.bg-white.bg-white.bg-white,
+main:not(.home-main) > div.bg-white.bg-white.bg-white {
+  background-color: #f5f6f8 !important;
+  border-top: 1px solid rgba(232, 62, 116, 0.16);
+  border-bottom: 1px solid rgba(232, 62, 116, 0.16);
 }
 
-main:not(.home-main) section.bg-pink,
-main:not(.home-main) div.bg-pink {
+main:not(.home-main) section.bg-pink.bg-pink.bg-pink,
+main:not(.home-main) > div.bg-pink.bg-pink.bg-pink {
   background-color: var(--pink) !important;
+  border-top: none;
+  border-bottom: none;
 }
 
-/* Hairline border accents for alternating White sections */
+/* Hairline border accents for alternating Light Off-White sections */
 main:not(.home-main) > :nth-child(even) > section,
 main:not(.home-main) > div:nth-child(even) > section,
 main:not(.home-main) > section:nth-child(even) {
-  border-top: 1px solid rgba(253, 226, 236, 0.7);
-  border-bottom: 1px solid rgba(253, 226, 236, 0.7);
+  border-top: 1px solid rgba(232, 62, 116, 0.16);
+  border-bottom: 1px solid rgba(232, 62, 116, 0.16);
 }
 
 /* Preserve Parenthood CTA styling */
