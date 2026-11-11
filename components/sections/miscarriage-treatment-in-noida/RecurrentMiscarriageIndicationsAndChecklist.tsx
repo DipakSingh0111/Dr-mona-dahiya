@@ -53,45 +53,58 @@ const indications: { number: string; title: string; description: ReactNode }[] =
     },
   ];
 
-const checklist: ReactNode[] = [
-  <>
-    Both partners are sent for <strong>Karyotyping</strong> to see if there is a
-    Balanced or Robertsonian Translocation.
-  </>,
-  <>
-    Uterine evaluation: <strong>3D Saline Sonogram</strong> or{" "}
-    <Link
-      href="/hysteroscopy-treatment"
-      className="font-medium text-blue underline underline-offset-2 hover:text-blue-dark"
-    >
-      Diagnostic Hysteroscopy
-    </Link>{" "}
-    to identify any Septum, Fibroid, Polyp or Adhesions.
-  </>,
-  <>
-    Blood work for Clotting:{" "}
-    <strong>
-      Antiphospholipid profile, Lupus Anticoagulant, Anti-cardiolipin Antibody,
-      Anti-Beta2 glycoprotein-1, Protein C &amp; S Deficiency, Factor V Leiden.
-    </strong>
-  </>,
-  <>
-    Profile for Thyroid and Diabetes:{" "}
-    <strong>
-      TSH, Anti-TPO antibodies, HbA1c, Prolactin and Progesterone levels in
-      luteal phase.
-    </strong>
-  </>,
-  <>
-    Send partner for a{" "}
-    <Link
-      href="/sperm-dna-fragmentation-test"
-      className="font-medium text-blue underline underline-offset-2 hover:text-blue-dark"
-    >
-      Sperm DNA Fragmentation Test
-    </Link>{" "}
-    to evaluate contribution from male.
-  </>,
+const checklist: { title?: string; text: ReactNode }[] = [
+  {
+    text: (
+      <>
+        Both partners are sent for <strong>Karyotyping</strong> to see if there is a
+        Balanced or Robertsonian Translocation.
+      </>
+    ),
+  },
+  {
+    title: "Uterine evaluation",
+    text: (
+      <>
+        <strong>3D Saline Sonogram</strong> or{" "}
+        <Link
+          href="/hysteroscopy-treatment"
+          className="font-medium text-blue underline underline-offset-2 hover:text-rose"
+        >
+          Diagnostic Hysteroscopy
+        </Link>{" "}
+        to identify any Septum, Fibroid, Polyp or Adhesions.
+      </>
+    ),
+  },
+  {
+    title: "Blood work for Clotting",
+    text: (
+      <>
+        Antiphospholipid profile, Lupus Anticoagulant, Anti-cardiolipin
+        Antibody, Anti-Beta2 glycoprotein-1, Protein C &amp; S Deficiency,
+        Factor V Leiden.
+      </>
+    ),
+  },
+  {
+    title: "Profile for Thyroid and Diabetes",
+    text: "TSH, Anti-TPO antibodies, HbA1c, Prolactin and Progesterone levels in luteal phase.",
+  },
+  {
+    text: (
+      <>
+        Send partner for a{" "}
+        <Link
+          href="/sperm-dna-fragmentation-test"
+          className="font-medium text-blue underline underline-offset-2 hover:text-rose"
+        >
+          Sperm DNA Fragmentation Test
+        </Link>{" "}
+        to evaluate contribution from male.
+      </>
+    ),
+  },
 ];
 
 export default function RecurrentMiscarriageIndicationsAndChecklist() {
@@ -125,7 +138,7 @@ export default function RecurrentMiscarriageIndicationsAndChecklist() {
         <div className="mt-6 flex flex-col gap-3.5 sm:mt-7 sm:gap-4">
           {checklist.map((item, idx) => (
             <Reveal key={idx} variant="fadeUp" delay={idx * 0.04}>
-              <ChecklistRow>{item}</ChecklistRow>
+              <ChecklistRow title={item.title} text={item.text} />
             </Reveal>
           ))}
         </div>

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import HeroBannerImage from "@/components/ui/HeroBannerImage";
 import HeroCounterBar from "@/components/ui/HeroCounterBar";
@@ -48,7 +48,7 @@ export default function IvfFaqsHero() {
             <div className="mt-4 flex flex-wrap items-center gap-2 sm:mt-5 sm:gap-2.5">
               <Link
                 href={data.primaryCta.href}
-                className="inline-flex items-center justify-center rounded-full bg-rose px-3.5 py-2 text-[12px] font-semibold whitespace-nowrap text-white shadow-md transition-all hover:bg-rose-dark active:scale-95 sm:px-5 sm:py-2.5 sm:text-[13px]"
+                className="inline-flex items-center justify-center rounded-full border border-rose/20 bg-white/75 backdrop-blur-sm px-3.5 py-2 text-[12px] font-semibold whitespace-nowrap text-ink shadow-[0_4px_14px_rgba(15,36,56,0.05)] transition-all hover:border-rose/50 hover:bg-white hover:text-rose active:scale-95 sm:px-5 sm:py-2.5 sm:text-[13px]"
               >
                 {data.primaryCta.label}
               </Link>

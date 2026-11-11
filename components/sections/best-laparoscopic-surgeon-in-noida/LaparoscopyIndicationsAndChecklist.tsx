@@ -122,18 +122,7 @@ export default function LaparoscopyIndicationsAndChecklist() {
         <div className="mt-6 flex flex-col gap-3.5 sm:mt-7 sm:gap-4">
           {checklist.map((item, idx) => (
             <Reveal key={item.title} variant="fadeUp" delay={idx * 0.04}>
-              <ChecklistRow>
-                {item.text ? (
-                  <>
-                    <strong className="font-semibold text-ink">
-                      {item.title}:
-                    </strong>{" "}
-                    {item.text}
-                  </>
-                ) : (
-                  <strong className="font-semibold text-ink">{item.title}</strong>
-                )}
-              </ChecklistRow>
+              <ChecklistRow title={item.title} text={item.text} />
             </Reveal>
           ))}
         </div>

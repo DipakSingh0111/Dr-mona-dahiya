@@ -1,17 +1,23 @@
 "use client";
 
-import Image from "next/image";
-import { FaArrowRight, FaMapMarkerAlt, FaClock } from "react-icons/fa";
+import { FaClock } from "react-icons/fa";
 import { MdOutlineCalendarMonth } from "react-icons/md";
 import siteData from "@/data/site.json";
 import { Stagger, StaggerItem } from "@/components/ui/Reveal";
+import {
+  ClinicAppointmentCard,
+  defaultClinics,
+} from "@/components/sections/ClinicsAppointmentCards";
 
 export default function Clinics() {
-  const { eyebrow, titlePrefix, titleAccent, hoursBadge, clinics } =
+  const { eyebrow, titlePrefix, titleAccent, hoursBadge } =
     siteData.clinicsSection;
 
   return (
-    <section className="relative overflow-hidden bg-white py-6 sm:py-7 lg:py-8">
+    <section
+      id="clinics"
+      className="relative overflow-hidden bg-white py-6 sm:py-7 lg:py-8"
+    >
       <div
         aria-hidden
         className="pointer-events-none absolute -top-16 right-0 -z-10 h-[440px] w-[520px] rounded-full"
@@ -58,49 +64,16 @@ export default function Clinics() {
           </div>
         </div>
 
-        <Stagger className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:gap-7" stagger={0.1}>
-          {clinics.map((clinic) => (
-            <StaggerItem key={clinic.id} variant="scaleIn" className="h-full">
-              <article
-                className="group relative z-0 flex h-full flex-col overflow-visible rounded-[26px] border border-[#fde8ef] bg-white p-4 shadow-[0_8px_28px_rgba(232,62,116,0.06)] transition-all duration-300 hover:z-10 hover:-translate-y-1 hover:border-[#fbcfe0] hover:shadow-[0_18px_40px_rgba(232,62,116,0.12)] sm:p-5"
-              >
-                <div className="relative z-0 h-[210px] w-full overflow-hidden rounded-[20px] bg-[#fff0f5] sm:h-[230px]">
-                  <Image
-                    src={clinic.image}
-                    alt={`${clinic.city} fertility centre`}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 400px"
-                    className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.04]"
-                  />
-                </div>
-
-                <div className="pointer-events-none absolute top-[210px] left-8 z-30 -translate-y-1/2 sm:top-[230px] sm:left-9">
-                  <div className="flex size-[58px] items-center justify-center rounded-full bg-white shadow-[0_6px_18px_rgba(15,23,42,0.12)] sm:size-[62px]">
-                    <div className="flex size-[42px] items-center justify-center rounded-full bg-gradient-to-br from-rose to-rose-dark text-white sm:size-[46px]">
-                      <FaMapMarkerAlt className="size-[17px] sm:size-[18px]" />
-                    </div>
-                  </div>
-                </div>
-
-                <div className="relative z-10 mt-9 flex flex-1 items-end justify-between gap-3">
-                  <div className="flex min-w-0 flex-1 flex-col justify-between self-stretch pr-2 pl-1">
-                    <h3 className="font-display text-[22px] font-bold tracking-tight text-ink sm:text-[24px]">
-                      {clinic.city}
-                    </h3>
-                    <p className="mt-2 min-h-[58px] text-[12.5px] leading-relaxed text-gray-500 sm:min-h-[62px] sm:text-[13px]">
-                      {clinic.address}
-                    </p>
-                  </div>
-
-                  <a
-                    href={clinic.href}
-                    aria-label={`Open ${clinic.city} clinic details`}
-                    className="pointer-events-auto flex size-[44px] shrink-0 items-center justify-center rounded-full border border-[#fde2ec] bg-[#fff0f5] text-rose transition-all duration-300 hover:scale-105 hover:bg-rose-dark hover:text-white sm:size-[48px]"
-                  >
-                    <FaArrowRight className="size-3.5 sm:size-4" />
-                  </a>
-                </div>
-              </article>
+        <Stagger
+          className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:gap-7"
+          stagger={0.1}
+        >
+          {defaultClinics.map((clinic) => (
+            <StaggerItem key={clinic.city} variant="scaleIn" className="h-full">
+              <ClinicAppointmentCard
+                clinic={clinic}
+                bookHref="#book-appointment"
+              />
             </StaggerItem>
           ))}
         </Stagger>
@@ -108,4 +81,3 @@ export default function Clinics() {
     </section>
   );
 }
-

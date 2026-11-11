@@ -1,9 +1,9 @@
-﻿"use client";
+"use client";
 
+import Breadcrumb from "@/components/ui/Breadcrumb";
 import HeroBannerImage from "@/components/ui/HeroBannerImage";
 import HeroCounterBar from "@/components/ui/HeroCounterBar";
 import Link from "next/link";
-import { FaHome, FaChevronRight } from "react-icons/fa";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
 export default function LowAmhHero() {
@@ -28,27 +28,12 @@ export default function LowAmhHero() {
 
       <div className="page-container relative grid grid-cols-1 items-start gap-6 sm:gap-7 lg:grid-cols-12 lg:items-start lg:gap-6 xl:gap-8">
         <div className="min-w-0 lg:col-span-7">
-          <nav aria-label="Breadcrumb" className="mb-4 sm:mb-5">
-            <ol className="inline-flex max-w-full flex-wrap items-center gap-1.5 rounded-full border border-rose/25 bg-white px-3 py-1.5 shadow-sm sm:gap-2 sm:px-3.5 sm:py-2">
-              <li>
-                <Link
-                  href="/"
-                  className="inline-flex items-center gap-1.5 rounded-full px-1.5 py-0.5 text-[12px] font-medium text-ink/70 transition-colors hover:text-rose sm:text-[13px]"
-                >
-                  <FaHome className="size-3 shrink-0 sm:size-3.5" />
-                  Home
-                </Link>
-              </li>
-              <li aria-hidden className="text-ink/35">
-                <FaChevronRight className="size-2.5 sm:size-3" />
-              </li>
-              <li>
-                <span className="inline-flex items-center rounded-full bg-rose/20 px-2.5 py-0.5 text-[12px] font-semibold text-rose ring-1 ring-rose/35 sm:px-3 sm:text-[13px]">
-                  Low AMH Treatment in Noida
-                </span>
-              </li>
-            </ol>
-          </nav>
+          <Breadcrumb
+            items={[
+              { label: "Conditions Treated", href: "/female-infertility-treatment" },
+              { label: "Low AMH Treatment in Noida" },
+            ]}
+          />
 
           <Reveal variant="slideLeft">
             <p className="text-[12px] font-bold tracking-[0.12em] text-rose uppercase sm:text-[13px]">
@@ -72,7 +57,7 @@ export default function LowAmhHero() {
             <div className="mt-4 flex w-full max-w-[450px] flex-col gap-2.5 sm:mt-5 sm:max-w-[500px] sm:flex-row sm:gap-3">
               <a
                 href="#book-consultation"
-                className="inline-flex h-11 w-full flex-1 items-center justify-center rounded-full bg-rose px-3 text-[12px] font-semibold whitespace-nowrap text-white shadow-md transition-all hover:bg-rose-dark active:scale-[0.98] sm:h-12 sm:px-4 sm:text-[13px]"
+                className="inline-flex h-11 w-full flex-1 items-center justify-center rounded-full border border-rose/20 bg-white/75 backdrop-blur-sm px-3 text-[12px] font-semibold whitespace-nowrap text-ink shadow-[0_4px_14px_rgba(15,36,56,0.05)] transition-all hover:border-rose/50 hover:bg-white hover:text-rose active:scale-[0.98] sm:h-12 sm:px-4 sm:text-[13px]"
               >
                 Book In-Clinic Consultation
               </a>

@@ -141,27 +141,28 @@ export default function FemaleDiagnosticAndPathway() {
         <div className="mt-6 flex flex-col gap-3 sm:mt-7 sm:gap-3.5">
           {checklist.map((item, idx) => (
             <Reveal key={idx} variant="fadeUp" delay={idx * 0.05}>
-              <div className="flex items-center gap-3.5 rounded-xl border border-[#fde2ec] bg-white px-4 py-3.5 backdrop-blur-md transition-all duration-200 hover:border-blue/50 hover:bg-[#fff0f5] sm:px-5 sm:py-4">
-                {/* Cyan / Teal circle checkmark */}
-                <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-rose/15 text-rose ring-1 ring-rose/35 sm:size-6">
+              <div className="flex items-start gap-3.5 rounded-xl border border-[#fde2ec] bg-white px-4 py-3.5 shadow-[0_8px_24px_rgba(232,62,116,0.05)] transition-all duration-200 hover:border-[#f8b4cb] hover:shadow-[0_12px_28px_rgba(232,62,116,0.1)] sm:gap-4 sm:px-5 sm:py-4">
+                <span className="mt-0.5 flex size-5.5 shrink-0 items-center justify-center rounded-full bg-rose/15 text-rose ring-1 ring-rose/35 sm:size-6">
                   <FaCheck className="size-2.5 sm:size-3" />
                 </span>
 
-                <p className="text-[13.5px] leading-relaxed text-black sm:text-[14.5px]">
-                  <strong className="font-semibold text-black">
-                    {item.prefix}
-                  </strong>
-                  {item.text}
-                  {item.linkText && item.linkHref && (
-                    <Link
-                      href={item.linkHref}
-                      className="font-medium text-emerald-300 underline decoration-emerald-400/50 underline-offset-2 transition-colors hover:text-emerald-200 hover:decoration-emerald-300"
-                    >
-                      {item.linkText}
-                    </Link>
-                  )}
-                  {item.suffix || ""}
-                </p>
+                <div className="min-w-0 flex-1">
+                  <h3 className="font-bold text-[1rem] leading-snug text-ink sm:text-[1.0625rem]">
+                    {item.prefix.replace(/:\s*$/, "")}
+                  </h3>
+                  <p className="mt-1 text-[13.5px] leading-relaxed text-slate-600 sm:text-[14px]">
+                    {item.text}
+                    {item.linkText && item.linkHref && (
+                      <Link
+                        href={item.linkHref}
+                        className="font-medium text-blue underline underline-offset-2 transition-colors hover:text-rose"
+                      >
+                        {item.linkText}
+                      </Link>
+                    )}
+                    {item.suffix || ""}
+                  </p>
+                </div>
               </div>
             </Reveal>
           ))}

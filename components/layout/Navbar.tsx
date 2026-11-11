@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, type MouseEvent } from "react";
+import { usePathname } from "next/navigation";
 import siteData from "@/data/site.json";
 import {
   CalendarIcon,
@@ -10,6 +11,69 @@ import {
   PhoneIcon,
 } from "@/components/ui/Icons";
 import { FaStar, FaWhatsapp } from "react-icons/fa";
+
+function normalizePath(path: string) {
+  const clean = path.split("#")[0]?.split("?")[0] ?? "";
+  if (clean.length > 1 && clean.endsWith("/")) return clean.slice(0, -1);
+  return clean;
+}
+
+function isHrefActive(pathname: string, href?: string) {
+  if (!href || href === "#" || href.startsWith("#")) return false;
+  const target = normalizePath(href);
+  if (!target || target === "/404") return false;
+  if (target === "/") return pathname === "/";
+  return pathname === target || pathname.startsWith(`${target}/`);
+}
+
+type NavMenuItem = (typeof siteData.navbar.menu)[number];
+
+const EXTRA_ROUTES_BY_TAB: Record<string, string[]> = {
+  Treatments: [
+    "/best-iui-doctor-in-delhi",
+    "/best-iui-doctor-in-ghaziabad",
+    "/best-ivf-doctor-in-noida",
+    "/best-ivf-doctor-in-delhi",
+    "/best-ivf-doctor-in-ghaziabad",
+  ],
+  "Conditions Treated": [
+    "/best-female-infertility-doctor-in-noida",
+    "/best-male-infertility-doctor-in-noida",
+  ],
+  "About Dr. Mona": ["/privacy-policy", "/terms-of-service"],
+  "Patient Resources": ["/international-ivf-patient"],
+};
+
+function isNavItemActive(pathname: string, item: NavMenuItem) {
+  if (isHrefActive(pathname, item.href)) return true;
+  if (EXTRA_ROUTES_BY_TAB[item.label]?.some((href) => isHrefActive(pathname, href))) {
+    return true;
+  }
+  if ("dropdown" in item && Array.isArray(item.dropdown)) {
+    if (item.dropdown.some((sub) => isHrefActive(pathname, sub.href))) {
+      return true;
+    }
+  }
+  if ("megaMenu" in item && Array.isArray(item.megaMenu)) {
+    if (
+      item.megaMenu.some((col) =>
+        col.items.some((sub) => isHrefActive(pathname, sub.href)),
+      )
+    ) {
+      return true;
+    }
+  }
+  if ("treatmentsMega" in item && item.treatmentsMega) {
+    const inColumns = item.treatmentsMega.columns.some((col) =>
+      col.items.some((sub) => isHrefActive(pathname, sub.href)),
+    );
+    if (inColumns) return true;
+    if (isHrefActive(pathname, item.treatmentsMega.promoCard?.ctaHref)) {
+      return true;
+    }
+  }
+  return false;
+}
 
 function handlePlainNavClick(
   e: MouseEvent<HTMLAnchorElement>,
@@ -31,6 +95,8 @@ function handlePlainNavClick(
 
 export default function Navbar() {
   const { brand, menu, cta } = siteData.navbar;
+  const rawPathname = usePathname() || "/";
+  const pathname = normalizePath(rawPathname);
   const [open, setOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
@@ -170,17 +236,28 @@ export default function Navbar() {
               const hasDropdown = "dropdown" in item && Array.isArray(item.dropdown) && item.dropdown.length > 0;
               const isMegaMenu = "isMegaMenu" in item && Boolean(item.isMegaMenu) && "megaMenu" in item && Array.isArray(item.megaMenu);
               const isTreatmentsMega = "isTreatmentsMega" in item && Boolean(item.isTreatmentsMega) && "treatmentsMega" in item;
+              const isActive = isNavItemActive(pathname, item);
+              const isDirectActive = isHrefActive(pathname, item.href);
 
               return (
                 <div key={item.label} className="group/nav relative py-0.5">
                   <a
                     href={item.href}
+                    aria-current={isDirectActive ? "page" : undefined}
                     onClick={(e) => handlePlainNavClick(e, item.href)}
-                    className="group inline-flex shrink-0 items-center gap-1 rounded-lg px-2 py-1 text-[11px] font-semibold tracking-[0.05em] text-white/95 uppercase whitespace-nowrap transition-all hover:bg-white/10 hover:text-rose group-hover/nav:bg-white/10 group-hover/nav:text-rose xl:px-3 xl:py-1.5 xl:text-[12.5px] xl:tracking-[0.06em]"
+                    className={`group relative inline-flex shrink-0 items-center gap-1 rounded-lg px-2 py-1 text-[11px] font-semibold tracking-[0.05em] uppercase whitespace-nowrap transition-all xl:px-3 xl:py-1.5 xl:text-[12.5px] xl:tracking-[0.06em] ${
+                      isActive
+                        ? "bg-white/15 text-rose ring-1 ring-rose/45 shadow-[inset_0_-2px_0_0_var(--rose)]"
+                        : "text-white/95 hover:bg-white/10 hover:text-rose group-hover/nav:bg-white/10 group-hover/nav:text-rose"
+                    }`}
                   >
                     <span>{item.label}</span>
                     {item.hasDropdown ? (
-                      <ChevronDownIcon className="size-3 shrink-0 opacity-70 transition-transform duration-200 group-hover/nav:rotate-180 group-hover/nav:text-rose group-hover/nav:opacity-100 xl:size-3.5" />
+                      <ChevronDownIcon
+                        className={`size-3 shrink-0 transition-transform duration-200 group-hover/nav:rotate-180 group-hover/nav:text-rose group-hover/nav:opacity-100 xl:size-3.5 ${
+                          isActive ? "text-rose opacity-100" : "opacity-70"
+                        }`}
+                      />
                     ) : null}
                   </a>
 
@@ -198,19 +275,25 @@ export default function Navbar() {
                                   {col.category}
                                 </span>
                                 <div className="flex flex-col space-y-3">
-                                  {col.items.map((sub) => (
-                                    <a
-                                      key={sub.label}
-                                      href={sub.href}
-                                      className={`text-[13.5px] leading-snug normal-case transition-colors duration-150 ${
-                                        "highlight" in sub && sub.highlight
-                                          ? "font-semibold text-rose hover:underline"
-                                          : "font-normal text-white/90 hover:text-rose"
-                                      }`}
-                                    >
-                                      {sub.label}
-                                    </a>
-                                  ))}
+                                  {col.items.map((sub) => {
+                                    const subActive = isHrefActive(pathname, sub.href);
+                                    return (
+                                      <a
+                                        key={sub.label}
+                                        href={sub.href}
+                                        aria-current={subActive ? "page" : undefined}
+                                        className={`text-[13.5px] leading-snug normal-case transition-colors duration-150 ${
+                                          subActive
+                                            ? "font-semibold text-rose underline underline-offset-4"
+                                            : "highlight" in sub && sub.highlight
+                                              ? "font-semibold text-rose hover:underline"
+                                              : "font-normal text-white/90 hover:text-rose"
+                                        }`}
+                                      >
+                                        {sub.label}
+                                      </a>
+                                    );
+                                  })}
                                 </div>
                               </div>
                             ))}
@@ -230,7 +313,16 @@ export default function Navbar() {
                             <div className="mt-6">
                               <a
                                 href={item.treatmentsMega!.promoCard.ctaHref}
-                                className="inline-flex w-full items-center justify-center rounded-full bg-white px-5 py-2.5 text-[12.5px] font-bold text-ink shadow-sm transition-all hover:bg-slate-100 hover:text-blue active:scale-95"
+                                aria-current={
+                                  isHrefActive(pathname, item.treatmentsMega!.promoCard.ctaHref)
+                                    ? "page"
+                                    : undefined
+                                }
+                                className={`inline-flex w-full items-center justify-center rounded-full px-5 py-2.5 text-[12.5px] font-bold shadow-sm transition-all active:scale-95 ${
+                                  isHrefActive(pathname, item.treatmentsMega!.promoCard.ctaHref)
+                                    ? "bg-rose text-white hover:bg-rose-dark"
+                                    : "bg-white text-ink hover:bg-slate-100 hover:text-blue"
+                                }`}
                               >
                                 {item.treatmentsMega!.promoCard.ctaLabel}
                               </a>
@@ -267,15 +359,23 @@ export default function Navbar() {
                                 {col.category}
                               </span>
                               <div className="flex flex-col space-y-1">
-                                {col.items.map((sub) => (
-                                  <a
-                                    key={sub.label}
-                                    href={sub.href}
-                                    className="rounded-lg px-2.5 py-1.5 text-[13.5px] font-medium text-slate-100 normal-case transition-all duration-150 hover:bg-white/10 hover:text-rose"
-                                  >
-                                    {sub.label}
-                                  </a>
-                                ))}
+                                {col.items.map((sub) => {
+                                  const subActive = isHrefActive(pathname, sub.href);
+                                  return (
+                                    <a
+                                      key={sub.label}
+                                      href={sub.href}
+                                      aria-current={subActive ? "page" : undefined}
+                                      className={`rounded-lg px-2.5 py-1.5 text-[13.5px] normal-case transition-all duration-150 ${
+                                        subActive
+                                          ? "bg-white/10 font-semibold text-rose"
+                                          : "font-medium text-slate-100 hover:bg-white/10 hover:text-rose"
+                                      }`}
+                                    >
+                                      {sub.label}
+                                    </a>
+                                  );
+                                })}
                               </div>
                             </div>
                           ))}
@@ -288,20 +388,28 @@ export default function Navbar() {
                   {!isMegaMenu && hasDropdown ? (
                     <div className="invisible absolute top-full left-0 z-50 pt-1 opacity-0 pointer-events-none translate-y-2 transition-all duration-250 ease-out group-hover/nav:visible group-hover/nav:pointer-events-auto group-hover/nav:translate-y-0 group-hover/nav:opacity-100">
                       <div className="w-[290px] overflow-hidden rounded-b-2xl border-t-2 border-rose bg-navy p-2 shadow-[0_22px_45px_rgba(0,10,30,0.7)] ring-1 ring-white/10">
-                        {item.dropdown!.map((sub) => (
-                          <a
-                            key={sub.label}
-                            href={sub.href}
-                            className="flex items-center justify-between rounded-xl px-4 py-2.5 text-[14px] font-medium text-slate-100 normal-case transition-all duration-200 hover:bg-white/10 hover:text-rose"
-                          >
-                            <span>{sub.label}</span>
-                            {"badge" in sub && typeof sub.badge === "string" ? (
-                              <span className="ml-2 inline-flex items-center rounded-full bg-[#f59e0b] px-2 py-0.5 text-[10px] font-extrabold tracking-wide text-black uppercase shadow-sm">
-                                {sub.badge}
-                              </span>
-                            ) : null}
-                          </a>
-                        ))}
+                        {item.dropdown!.map((sub) => {
+                          const subActive = isHrefActive(pathname, sub.href);
+                          return (
+                            <a
+                              key={sub.label}
+                              href={sub.href}
+                              aria-current={subActive ? "page" : undefined}
+                              className={`flex items-center justify-between rounded-xl px-4 py-2.5 text-[14px] normal-case transition-all duration-200 ${
+                                subActive
+                                  ? "bg-white/10 font-semibold text-rose"
+                                  : "font-medium text-slate-100 hover:bg-white/10 hover:text-rose"
+                              }`}
+                            >
+                              <span>{sub.label}</span>
+                              {"badge" in sub && typeof sub.badge === "string" ? (
+                                <span className="ml-2 inline-flex items-center rounded-full bg-[#f59e0b] px-2 py-0.5 text-[10px] font-extrabold tracking-wide text-black uppercase shadow-sm">
+                                  {sub.badge}
+                                </span>
+                              ) : null}
+                            </a>
+                          );
+                        })}
                       </div>
                     </div>
                   ) : null}
@@ -345,13 +453,19 @@ export default function Navbar() {
                 "treatmentsMega" in item;
               const hasAnyChildren = hasDropdown || isMegaMenu || isTreatmentsMega;
               const isExpanded = openDropdown === item.label;
+              const isActive = isNavItemActive(pathname, item);
+              const isDirectActive = isHrefActive(pathname, item.href);
 
               return (
                 <div key={item.label} className="flex flex-col">
                   {hasAnyChildren ? (
                     <button
                       type="button"
-                      className="flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-left text-sm font-semibold tracking-wide text-white uppercase hover:bg-white/5"
+                      className={`flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-left text-sm font-semibold tracking-wide uppercase transition-colors ${
+                        isActive
+                          ? "bg-white/10 text-rose"
+                          : "text-white hover:bg-white/5"
+                      }`}
                       aria-expanded={isExpanded}
                       onClick={() =>
                         setOpenDropdown((prev) =>
@@ -361,15 +475,20 @@ export default function Navbar() {
                     >
                       <span>{item.label}</span>
                       <ChevronDownIcon
-                        className={`size-4 opacity-70 transition-transform duration-300 ease-in-out ${
+                        className={`size-4 transition-transform duration-300 ease-in-out ${
                           isExpanded ? "rotate-180" : ""
-                        }`}
+                        } ${isActive ? "text-rose opacity-100" : "opacity-70"}`}
                       />
                     </button>
                   ) : (
                     <a
                       href={item.href}
-                      className="flex items-center justify-between rounded-lg px-3 py-2.5 text-sm font-semibold tracking-wide text-white uppercase hover:bg-white/5"
+                      aria-current={isDirectActive ? "page" : undefined}
+                      className={`flex items-center justify-between rounded-lg px-3 py-2.5 text-sm font-semibold tracking-wide uppercase transition-colors ${
+                        isActive
+                          ? "bg-white/10 text-rose"
+                          : "text-white hover:bg-white/5"
+                      }`}
                       onClick={(e) => {
                         handlePlainNavClick(e, item.href);
                         closeMobileMenu();
@@ -386,20 +505,26 @@ export default function Navbar() {
                           <span className="text-[10.5px] font-bold tracking-wider text-rose uppercase">
                             {col.category}
                           </span>
-                          {col.items.map((sub) => (
-                            <a
-                              key={sub.label}
-                              href={sub.href}
-                              className={`px-2 py-1 text-[13px] font-normal normal-case ${
-                                "highlight" in sub && sub.highlight
-                                  ? "font-bold text-rose"
-                                  : "text-white/80 hover:text-rose"
-                              }`}
-                              onClick={closeMobileMenu}
-                            >
-                              {sub.label}
-                            </a>
-                          ))}
+                          {col.items.map((sub) => {
+                            const subActive = isHrefActive(pathname, sub.href);
+                            return (
+                              <a
+                                key={sub.label}
+                                href={sub.href}
+                                aria-current={subActive ? "page" : undefined}
+                                className={`rounded-md px-2 py-1 text-[13px] normal-case ${
+                                  subActive
+                                    ? "bg-white/10 font-semibold text-rose"
+                                    : "highlight" in sub && sub.highlight
+                                      ? "font-bold text-rose"
+                                      : "font-normal text-white/80 hover:text-rose"
+                                }`}
+                                onClick={closeMobileMenu}
+                              >
+                                {sub.label}
+                              </a>
+                            );
+                          })}
                         </div>
                       ))}
                     </div>
@@ -412,16 +537,24 @@ export default function Navbar() {
                           <span className="text-[10.5px] font-bold tracking-wider text-rose uppercase">
                             {col.category}
                           </span>
-                          {col.items.map((sub) => (
-                            <a
-                              key={sub.label}
-                              href={sub.href}
-                              className="px-2 py-1 text-[13px] font-normal text-white/80 normal-case hover:text-rose"
-                              onClick={closeMobileMenu}
-                            >
-                              {sub.label}
-                            </a>
-                          ))}
+                          {col.items.map((sub) => {
+                            const subActive = isHrefActive(pathname, sub.href);
+                            return (
+                              <a
+                                key={sub.label}
+                                href={sub.href}
+                                aria-current={subActive ? "page" : undefined}
+                                className={`rounded-md px-2 py-1 text-[13px] normal-case ${
+                                  subActive
+                                    ? "bg-white/10 font-semibold text-rose"
+                                    : "font-normal text-white/80 hover:text-rose"
+                                }`}
+                                onClick={closeMobileMenu}
+                              >
+                                {sub.label}
+                              </a>
+                            );
+                          })}
                         </div>
                       ))}
                     </div>
@@ -437,23 +570,31 @@ export default function Navbar() {
                     >
                       <div className="overflow-hidden">
                         <div className="ml-4 mb-2 flex flex-col gap-1 border-l-2 border-rose/60 pl-3">
-                          {item.dropdown!.map((sub) => (
-                            <a
-                              key={sub.label}
-                              href={sub.href}
-                              className="flex items-center justify-between px-2 py-1.5 text-[13px] font-normal text-white/80 normal-case hover:text-rose"
-                              onClick={closeMobileMenu}
-                              tabIndex={isExpanded ? 0 : -1}
-                            >
-                              <span>{sub.label}</span>
-                              {"badge" in sub &&
-                              typeof sub.badge === "string" ? (
-                                <span className="ml-2 rounded-full bg-[#f59e0b] px-2 py-0.5 text-[9.5px] font-extrabold text-black uppercase">
-                                  {sub.badge}
-                                </span>
-                              ) : null}
-                            </a>
-                          ))}
+                          {item.dropdown!.map((sub) => {
+                            const subActive = isHrefActive(pathname, sub.href);
+                            return (
+                              <a
+                                key={sub.label}
+                                href={sub.href}
+                                aria-current={subActive ? "page" : undefined}
+                                className={`flex items-center justify-between rounded-md px-2 py-1.5 text-[13px] normal-case ${
+                                  subActive
+                                    ? "bg-white/10 font-semibold text-rose"
+                                    : "font-normal text-white/80 hover:text-rose"
+                                }`}
+                                onClick={closeMobileMenu}
+                                tabIndex={isExpanded ? 0 : -1}
+                              >
+                                <span>{sub.label}</span>
+                                {"badge" in sub &&
+                                typeof sub.badge === "string" ? (
+                                  <span className="ml-2 rounded-full bg-[#f59e0b] px-2 py-0.5 text-[9.5px] font-extrabold text-black uppercase">
+                                    {sub.badge}
+                                  </span>
+                                ) : null}
+                              </a>
+                            );
+                          })}
                         </div>
                       </div>
                     </div>

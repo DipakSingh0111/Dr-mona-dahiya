@@ -1,163 +1,122 @@
 "use client";
 
 import Link from "next/link";
-import { FaCheckCircle } from "react-icons/fa";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
+import {
+  TreatmentSection,
+  TreatmentSectionHeader,
+  NumberedCard,
+  ChecklistRow,
+  type NumberedCardItem,
+} from "@/components/ui/treatment";
+
+const whenCards: NumberedCardItem[] = [
+  {
+    number: "1",
+    title: "Had one or more failed transfers of blastocysts",
+    description: (
+      <>
+        Your blastocyst had a good grade but still didn&apos;t implant. Find
+        more on{" "}
+        <Link
+          href="/recurrent-implantation-failure-rif"
+          className="font-medium text-blue underline underline-offset-2 transition-colors hover:text-rose"
+        >
+          Recurrent Implantation Failure
+        </Link>
+        .
+      </>
+    ),
+  },
+  {
+    number: "2",
+    title: "Embryos don't divide past Day 3 to Day 5 stage",
+    description:
+      "Repeated failure can be caused by sperm DNA fragmentation and genetic defect in embryos.",
+  },
+  {
+    number: "3",
+    title: "Low fertilisation rate",
+    description:
+      "Have consistent fertilisation rate of less than 50%, even with a normal semen report.",
+  },
+  {
+    number: "4",
+    title: "Low endometrium thickness",
+    description:
+      "Cycles getting cancelled due to lining being <7 mm every time.",
+  },
+  {
+    number: "5",
+    title: "Were told to use donor egg",
+    description: (
+      <>
+        Try methods on your own eggs before going to donor, like DuoStim and
+        micro-dose flare. Know more about{" "}
+        <Link
+          href="/best-low-amh-treatment-in-noida"
+          className="font-medium text-blue underline underline-offset-2 transition-colors hover:text-rose"
+        >
+          Low AMH Treatment
+        </Link>
+        .
+      </>
+    ),
+  },
+];
+
+const records = [
+  "Your previous IVF protocol: day-by-day injections taken, antagonist added and when, oestradiol levels and what was the trigger used.",
+  "Number of eggs collected and their maturity level. Did they show fertilization or not? How many cells did they develop till Day 3 or Day 5?",
+  "If you had a laparoscopy or hysteroscopy/ sonohysterography reports.",
+  "Semen report: computer-assisted semen analysis. If you had done a sperm DNA fragmentation test/ halosperm share that too.",
+  "If you had a 3D sonography, check for any adenomyosis/junctional zone or hydrosalpinx.",
+];
 
 export default function SecondOpinionWhenAndRecords() {
-  const whenCards = [
-    {
-      num: "1",
-      title: "1 or more failed blastocyst transfers",
-      desc: (
-        <>
-          Good-grade embryos that did not implant in a lining that looked ready. See{" "}
-          <Link
-            href="/recurrent-implantation-failure"
-            className="font-medium text-blue underline underline-offset-2 hover:text-blue-dark"
-          >
-            Recurrent Implantation Failure
-          </Link>
-          .
-        </>
-      ),
-      color: "from-rose to-[#f43f5e]",
-      border: "hover:border-rose/50",
-    },
-    {
-      num: "2",
-      title: "Embryos stopping between Day 3 and Day 5",
-      desc: "Repeated arrest before the blastocyst stage, pointing to sperm DNA damage or embryo genome problems.",
-      color: "from-blue to-[var(--blue)]",
-      border: "hover:border-blue/50",
-    },
-    {
-      num: "3",
-      title: "Unexplained poor fertilisation",
-      desc: "Fertilisation below 50% despite a normal semen report.",
-      color: "from-[#8b5cf6] to-[#a855f7]",
-      border: "hover:border-[#8b5cf6]/50",
-    },
-    {
-      num: "4",
-      title: "Persistently thin lining",
-      desc: "Cycles repeatedly cancelled because the lining stays under 7 mm.",
-      color: "from-blue to-[var(--blue)]",
-      border: "hover:border-blue/50",
-    },
-    {
-      num: "5",
-      title: "Repeatedly advised donor eggs",
-      desc: (
-        <>
-          Told to use donor eggs without trying own-egg options such as DuoStim or micro-dose flare. See{" "}
-          <Link
-            href="/low-amh"
-            className="font-medium text-blue underline underline-offset-2 hover:text-blue-dark"
-          >
-            Low AMH Treatment
-          </Link>
-          .
-        </>
-      ),
-      color: "from-[#ea580c] to-[#f97316]",
-      border: "hover:border-[#ea580c]/50",
-    },
-  ];
-
-  const checklistItems = [
-    {
-      title: "Stimulation charts",
-      desc: "daily injection doses, antagonist timing, estradiol levels and trigger type.",
-    },
-    {
-      title: "Embryology records",
-      desc: "eggs retrieved, maturity (MII vs MI), fertilisation (2PN) and Day-3 vs Day-5 progress.",
-    },
-    {
-      title: "Surgery reports",
-      desc: "any past laparoscopy, hysteroscopy or sonohysterography.",
-    },
-    {
-      title: "Semen reports",
-      desc: "computer-assisted analysis and sperm DNA fragmentation (Halosperm) results.",
-    },
-    {
-      title: "Pelvic imaging",
-      desc: "3D ultrasound reports on adenomyosis, the junctional zone or hydrosalpinx.",
-    },
-  ];
-
   return (
-    <section className="relative overflow-hidden bg-slate-50/70 py-8 sm:py-10 lg:py-12">
-      <div className="page-container relative">
-        {/* Part A: When Should You Get an Independent Second Opinion? */}
-        <Reveal className="mb-6 sm:mb-8">
-          <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
-            When to seek one
-          </p>
-          <h2 className="font-serif mt-1 text-[1.65rem] leading-[1.2] font-normal tracking-tight text-slate-900 sm:text-[2.1rem] lg:text-[2.35rem]">
-            When Should You Get an Independent Second Opinion?
-          </h2>
-        </Reveal>
+    <TreatmentSection>
+      <div className="mb-14 sm:mb-16 lg:mb-20">
+        <TreatmentSectionHeader
+          eyebrow="Get an Independent Second Opinion if:"
+          title={
+            <>
+              When Should You Get an
+              <br />
+              Independent Second Opinion?
+            </>
+          }
+        />
 
         <Stagger
-          stagger={0.06}
-          className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
+          delay={0.05}
+          className="mt-7 grid grid-cols-1 items-stretch gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
         >
-          {whenCards.map((item, idx) => (
-            <StaggerItem key={idx}>
-              <div
-                className={`group flex h-full flex-col justify-start rounded-[18px] border border-slate-200/90 bg-white p-5 shadow-[0_4px_18px_rgba(0,20,60,0.03)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_28px_rgba(0,30,80,0.08)] ${item.border}`}
-              >
-                <div className="flex items-center gap-3">
-                  <span
-                    className={`inline-flex size-8 shrink-0 items-center justify-center rounded-lg text-[13px] font-bold text-black shadow-sm bg-gradient-to-r ${item.color}`}
-                  >
-                    {item.num}
-                  </span>
-                  <h3 className="text-[15px] font-bold text-slate-900 group-hover:text-blue transition-colors sm:text-[16px]">
-                    {item.title}
-                  </h3>
-                </div>
-                <div className="mt-3 text-[13.5px] leading-relaxed text-black">
-                  {item.desc}
-                </div>
-              </div>
+          {whenCards.map((card) => (
+            <StaggerItem key={card.number} className="h-full">
+              <NumberedCard {...card} />
             </StaggerItem>
           ))}
         </Stagger>
+      </div>
 
-        {/* Part B: What to Bring for Your Second-Opinion Review */}
-        <div className="mt-12 sm:mt-16">
-          <Reveal className="mb-6 sm:mb-8">
-            <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
-              Before your review
-            </p>
-            <h2 className="font-serif mt-1 text-[1.65rem] leading-[1.2] font-normal tracking-tight text-slate-900 sm:text-[2.1rem] lg:text-[2.35rem]">
-              What to Bring for Your Second-Opinion Review
-            </h2>
-            <p className="mt-2 text-[14px] leading-relaxed text-black sm:text-[15px]">
-              Bringing these records lets Dr. Dahiya review your past cycles without repeating tests.
-            </p>
-          </Reveal>
+      <div>
+        <TreatmentSectionHeader
+          eyebrow="Things to Know"
+          title="Records to Bring Along to Your Failed IVF Cycle Review"
+          subtitle="If you can provide us with the following documents we can avoid doing tests on you."
+        />
 
-          <Stagger stagger={0.06} className="space-y-3.5 sm:space-y-4">
-            {checklistItems.map((item, idx) => (
-              <StaggerItem key={idx}>
-                <div className="flex items-start gap-3.5 rounded-[16px] border border-slate-200/90 bg-white p-4.5 sm:p-5 shadow-[0_4px_14px_rgba(0,20,60,0.03)] transition-all duration-300 hover:border-blue/40 hover:shadow-[0_8px_22px_rgba(0,71,202,0.07)]">
-                  <FaCheckCircle className="mt-1 size-5 shrink-0 text-blue" />
-                  <div className="text-[13.5px] leading-relaxed text-slate-700 sm:text-[14.5px]">
-                    <strong className="font-bold text-slate-900">{item.title}:</strong>{" "}
-                    {item.desc}
-                  </div>
-                </div>
-              </StaggerItem>
-            ))}
-          </Stagger>
+        <div className="mt-6 flex flex-col gap-3.5 sm:mt-7 sm:gap-4">
+          {records.map((item, idx) => (
+            <Reveal key={item} variant="fadeUp" delay={idx * 0.04}>
+              <ChecklistRow>
+                <span>{item}</span>
+              </ChecklistRow>
+            </Reveal>
+          ))}
         </div>
       </div>
-    </section>
+    </TreatmentSection>
   );
 }
-

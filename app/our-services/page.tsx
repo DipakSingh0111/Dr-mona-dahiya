@@ -15,7 +15,7 @@ export default function OurServicesPage() {
   return (
     <main className="flex min-h-screen flex-col bg-pink">
       <SectionReveal>
-        <OurServices />
+        <OurServices showBreadcrumb />
       </SectionReveal>
 
       <SectionReveal delay={0.04}>

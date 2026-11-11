@@ -5,142 +5,122 @@ import {
   TreatmentSection,
   TreatmentSectionHeader,
   ProtocolCard,
-  WhyPointRow
+  WhyPointRow,
 } from "@/components/ui/treatment";
+
 const protocols = [
   {
     number: "1",
-    title: "Pathway A: PESA",
+    title: "Step 1: PESA",
     bullets: [
-      "Needle aspiration from the epididymis",
-      "Suitable for obstructive azoospermia",
+      "We will extract sperm by using a needle from epididymis.",
+      "If you have obstruction.",
     ],
   },
   {
     number: "2",
-    title: "Pathway B: TESA",
+    title: "Step 2: TESA",
     bullets: [
-      "Needle aspiration from the testis",
-      "Used when epididymal sperm is not available or for selected cases",
+      "Will take sperm using needle from testis.",
+      "If you have obstruction or did not get any sperm from PESA.",
     ],
   },
   {
     number: "3",
-    title: "Pathway C: Micro-TESE",
+    title: "Step 3: Micro TESE",
     bullets: [
-      "Operating microscope used to find sperm-producing tubules",
-      "For non-obstructive azoospermia, with minimal tissue removed",
+      "Under microscope we will look for spermatic tubules.",
+      "If you have Non Obstructive azoospermia. Less amount of tissue will be extracted.",
     ],
   },
   {
     number: "4",
-    title: "Laboratory processing",
+    title: "Lab",
     bullets: [
-      "Embryologist searches and prepares the sample",
-      "Surplus sperm can be frozen",
+      "Lab staff will check if any sperm are available and prepare for ICSI.",
+      "If there is more sperm left we can cryopreserve it.",
     ],
   },
   {
     number: "5",
-    title: "ICSI and recovery",
+    title: "ICSI",
     bullets: [
-      "Retrieved sperm is used for ICSI",
-      "Most men go home the same day with simple pain relief",
+      "Your egg will be fertilized using these sperm.",
+      "Patient can leave the clinic same day. Pain medication will be prescribed.",
     ],
   },
 ];
 
 const whyPoints = [
   {
-    title: "Right procedure for the diagnosis",
-    desc: "The procedure is chosen according to cause, not preference.",
+    title: "We will perform the Correct Method.",
+    desc: "Be it PESA TESA or Micro TESE.",
   },
   {
-    title: "Synchronised with the female cycle",
-    desc: "Retrieval is timed with egg collection or frozen to avoid pressure.",
+    title: "Will sync womans cycle.",
+    desc: "We will either ovulate and pick up eggs. Or store sperm for future use.",
   },
   {
-    title: "Embryology backup",
-    desc: "An experienced lab team searches and freezes sperm carefully.",
+    title: "Will have lab staff on standby.",
+    desc: "So that your sperm can be checked and stored by an embryologist.",
   },
 ];
 
 export default function SurgicalSpermRetrievalProtocolWhyAndCase() {
   return (
     <TreatmentSection>
-        <div className="mb-14 sm:mb-16 lg:mb-20">
-          <TreatmentSectionHeader
-          eyebrow="How it works"
+      <div className="mb-14 sm:mb-16 lg:mb-20">
+        <TreatmentSectionHeader
+          eyebrow="Steps"
           title="Step-by-Step Treatment Protocol"
-          subtitle="What to expect at each stage. The exact plan is set at your consultation."
+          subtitle="Following is a stepwise plan of how we will proceed with your treatment. Each individual will have their own plan."
         />
 
-          <Stagger
-            delay={0.05}
-            className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
-          >
-            {protocols.map((item) => (
-              <StaggerItem key={item.number}>
+        <Stagger
+          delay={0.05}
+          className="mt-7 grid grid-cols-1 items-stretch gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
+        >
+          {protocols.map((item) => (
+            <StaggerItem key={item.number} className="h-full">
               <ProtocolCard {...item} />
             </StaggerItem>
-            ))}
-          </Stagger>
-        </div>
+          ))}
+        </Stagger>
+      </div>
 
-        <div className="mb-14 sm:mb-16 lg:mb-20">
-          <TreatmentSectionHeader
-          eyebrow="Expertise & authority"
+      <div className="mb-14 sm:mb-16 lg:mb-20">
+        <TreatmentSectionHeader
+          eyebrow="Why choose us"
           title="Why Consult Dr. Mona Dahiya for Surgical Sperm Retrieval?"
         />
 
-          <div className="mt-6 flex flex-col gap-3.5 sm:mt-7 sm:gap-4">
-            {whyPoints.map((point, idx) => (
-              <Reveal key={point.title} variant="fadeUp" delay={idx * 0.05}>
+        <div className="mt-6 flex flex-col gap-3.5 sm:mt-7 sm:gap-4">
+          {whyPoints.map((point, idx) => (
+            <Reveal key={point.title} variant="fadeUp" delay={idx * 0.05}>
               <WhyPointRow {...point} />
             </Reveal>
-            ))}
-          </div>
-
-          <Reveal variant="fadeUp" delay={0.15} className="mt-6">
-            <div className="rounded-xl border border-[#fde2ec] bg-white px-5 py-4 text-[12.5px] leading-relaxed text-ink sm:text-[13px]">
-              <p>
-                <strong className="text-ink">Delhi</strong> · Building Number
-                41, First Floor, Ring Road, Block Q, Lajpat Nagar IV, Lajpat
-                Nagar, New Delhi 110024
-              </p>
-              <p className="mt-1.5">
-                <strong className="text-ink">Noida</strong> · 3rd Floor, K-06,
-                above FirstCry, Baraula, Sector 49, Noida, Uttar Pradesh 201301
-              </p>
-              <p className="mt-1.5">
-                <strong className="text-ink">Ghaziabad</strong> · 2nd Floor,
-                RDC, C-53A, near Bikanerwala, Sector 15, Sector 10, Raj Nagar,
-                Ghaziabad, Uttar Pradesh 201002
-              </p>
-            </div>
-          </Reveal>
+          ))}
         </div>
+      </div>
 
-        <div>
-          <TreatmentSectionHeader
-          eyebrow="From the clinic"
+      <div>
+        <TreatmentSectionHeader
+          eyebrow="Azoospermia Couple"
           title="Clinical Case Insight"
         />
 
-          <Reveal variant="fadeUp" delay={0.06} className="mt-6">
-            <div className="card-highlight rounded-2xl border border-[#fde2ec] bg-white p-6 shadow-[0_8px_24px_rgba(232,62,116,0.06)] sm:p-7">
-              <p className="text-[14px] leading-relaxed font-medium text-ink sm:text-[15.5px]">
-                A couple faced with azoospermia chose retrieval and the sperm
-                was frozen in small vials. The lab used them for ICSI, with no
-                need for a repeat surgery for later cycles.
-              </p>
-              <p className="mt-3 text-[12px] text-ink/65">
-                Details changed to protect patient privacy. Individual results
-                vary.
-              </p>
-            </div>
-          </Reveal>
-        </div>
-      </TreatmentSection>
+        <Reveal variant="fadeUp" delay={0.06} className="mt-6">
+          <div className="card-highlight rounded-2xl border border-[#fde2ec] bg-white p-6 shadow-[0_8px_24px_rgba(232,62,116,0.06)] sm:p-7">
+            <p className="text-[14px] leading-relaxed font-medium text-ink sm:text-[15.5px]">
+              Male was operated on and we got his sperm frozen. So he wont have
+              to be operated again for future ICSI cycles.
+            </p>
+            <p className="mt-3 text-[12px] text-ink/65">
+              Patient name changed. Outcomes can vary from person to person.
+            </p>
+          </div>
+        </Reveal>
+      </div>
+    </TreatmentSection>
   );
 }

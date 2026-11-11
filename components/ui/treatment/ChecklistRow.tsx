@@ -1,6 +1,6 @@
 "use client";
 
-import type { ReactNode } from "react";
+import { isValidElement, type ReactNode } from "react";
 import { FaCheck } from "react-icons/fa";
 
 export interface ChecklistRowProps {
@@ -10,20 +10,43 @@ export interface ChecklistRowProps {
   className?: string;
 }
 
+function splitColonString(raw: string): { heading: string; body: string } | null {
+  const colonIndex = raw.indexOf(":");
+  if (colonIndex > 0 && colonIndex < 70) {
+    const heading = raw.slice(0, colonIndex).trim();
+    const body = raw.slice(colonIndex + 1).trim();
+    if (heading && body) {
+      return { heading, body };
+    }
+  }
+  return null;
+}
+
+function extractSplitFromNode(node: ReactNode): { heading: string; body: string } | null {
+  if (typeof node === "string") {
+    return splitColonString(node);
+  }
+  if (isValidElement<{ children?: ReactNode }>(node) && typeof node.props?.children === "string") {
+    return splitColonString(node.props.children);
+  }
+  return null;
+}
+
 export function ChecklistRow({
   title,
   text,
   children,
   className = "",
 }: ChecklistRowProps) {
-  let heading = title;
-  let body = text;
+  let heading: ReactNode =
+    typeof title === "string" ? title.replace(/:\s*$/, "") : title;
+  let body: ReactNode = text;
 
-  if (!heading && typeof children === "string") {
-    const colonIndex = children.indexOf(":");
-    if (colonIndex > 0 && colonIndex < 70) {
-      heading = children.slice(0, colonIndex).trim();
-      body = children.slice(colonIndex + 1).trim();
+  if (!heading) {
+    const split = extractSplitFromNode(children) ?? extractSplitFromNode(text);
+    if (split) {
+      heading = split.heading;
+      body = split.body;
     }
   }
 
@@ -39,15 +62,15 @@ export function ChecklistRow({
 
       {hasSeparateHeading ? (
         <div className="min-w-0 flex-1">
-          <h3 className="font-bold text-[14.5px] leading-snug text-ink sm:text-[15.5px]">
+          <h3 className="font-bold text-[1rem] leading-snug text-ink sm:text-[1.0625rem]">
             {heading}
           </h3>
-          <p className="mt-1 text-[13px] leading-relaxed text-slate-600 sm:text-[14px]">
+          <p className="mt-1 text-[13.5px] leading-relaxed text-slate-600 sm:text-[14px]">
             {body}
           </p>
         </div>
       ) : (
-        <div className="min-w-0 flex-1 text-[13.5px] leading-relaxed text-ink sm:text-[14.5px]">
+        <div className="min-w-0 flex-1 text-[13.5px] leading-relaxed text-ink sm:text-[14px]">
           {children || heading || body}
         </div>
       )}

@@ -46,7 +46,7 @@ export default function IuiGhaziabadConsultation() {
               <div className="mt-6 flex flex-wrap items-center gap-3.5 sm:mt-7">
                 <a
                   href="#request-appointment-form"
-                  className="inline-flex items-center justify-center rounded-full bg-rose px-6 py-3 text-[14px] font-semibold text-white shadow-md transition-all duration-200 hover:bg-rose-dark active:scale-95"
+                  className="inline-flex items-center justify-center rounded-full border border-rose/20 bg-white/75 backdrop-blur-sm px-6 py-3 text-[14px] font-semibold text-ink shadow-[0_4px_14px_rgba(15,36,56,0.05)] transition-all duration-200 hover:border-rose/50 hover:bg-white hover:text-rose active:scale-95"
                 >
                   Book In-Clinic Consultation
                 </a>

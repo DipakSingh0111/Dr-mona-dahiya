@@ -16,16 +16,25 @@ export const metadata: Metadata = {
   title:
     "Expert Second Opinion for Failed IVF Cycles in Delhi, Noida & Ghaziabad | Dr. Mona Dahiya",
   description:
-    "Failed IVF cycle audit with Dr. Mona Dahiya (25+ years' experience). Independent review of past stimulation sheets, embryo development, and receptivity markers.",
+    "Failed IVF cycle audit with Dr. Mona Dahiya — assessment of previous IVF cycles, stimulation sheet, embryo quality, uterus and receptivity across Delhi, Noida and Ghaziabad.",
 };
 
 export default function SecondOpinionFailedIvfPage() {
   return (
-    <main className="flex min-h-screen flex-col bg-white">
+    <main className="flex min-h-screen flex-col bg-pink">
       <SecondOpinionHero />
 
       <SectionReveal>
-        <MedicalRegistration />
+        <MedicalRegistration
+          eyebrow="Registered medical practitioner"
+          title="Medical Registration"
+          subtitle="Dr. Mona Dahiya is registered with the following medical councils."
+          councilRegLabels={{
+            DMC: "DMC registration number",
+            MCI: "MCI registration number",
+            UPMC: "UPMC registration number",
+          }}
+        />
       </SectionReveal>
 
       <SectionReveal delay={0.04}>
@@ -52,7 +61,9 @@ export default function SecondOpinionFailedIvfPage() {
         <SecondOpinionClinicsAndConsultation />
       </SectionReveal>
 
-      <AboutParenthoodCta />
+      <SectionReveal delay={0.04}>
+        <AboutParenthoodCta />
+      </SectionReveal>
     </main>
   );
 }

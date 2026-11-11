@@ -8,9 +8,12 @@ import {
   FaVial,
   FaSnowflake,
   FaCalendarCheck,
-  FaMapMarkerAlt,
 } from "react-icons/fa";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
+import {
+  ClinicAppointmentCard,
+  defaultClinics,
+} from "@/components/sections/ClinicsAppointmentCards";
 
 export default function PgtCostAndClinics() {
   const costFactors = [
@@ -55,36 +58,6 @@ export default function PgtCostAndClinics() {
       title: "Frozen Embryo Transfer Cost",
       desc: "Finally you will need to do your Frozen Embryo transfer. This involves lining meds, scan and transferring the embryo.",
       icon: FaCalendarCheck,
-    },
-  ];
-
-  const clinics = [
-    {
-      sector: "SECTOR 49",
-      city: "Noida",
-      address:
-        "3rd Floor, K-06, above FirstCry, Baraula, Sector 49, Noida, Uttar Pradesh 201301",
-      mapUrl:
-        "https://maps.google.com/?q=3rd+Floor+K-06+Sector+49+Noida+201301",
-      clinicUrl: "/best-ivf-doctor-in-noida",
-    },
-    {
-      sector: "RAJ NAGAR",
-      city: "Ghaziabad",
-      address:
-        "2nd Floor, RDC, C-53A, near Bikanerwala, Sector 15, Sector 10, Raj Nagar, Ghaziabad, Uttar Pradesh 201002",
-      mapUrl:
-        "https://maps.google.com/?q=RDC+C-53A+Raj+Nagar+Ghaziabad+201002",
-      clinicUrl: "/best-ivf-doctor-in-ghaziabad",
-    },
-    {
-      sector: "LAJPAT NAGAR",
-      city: "Delhi",
-      address:
-        "Building Number 41, First Floor, Ring Road, Block Q, Lajpat Nagar IV, Lajpat Nagar, New Delhi 110024",
-      mapUrl:
-        "https://maps.google.com/?q=Building+41+Lajpat+Nagar+IV+New+Delhi+110024",
-      clinicUrl: "/best-ivf-doctor-in-delhi",
     },
   ];
 
@@ -146,49 +119,16 @@ export default function PgtCostAndClinics() {
           </Reveal>
 
           <Stagger
-            stagger={0.06}
-            className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
+            stagger={0.08}
+            className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:gap-7"
           >
-            {clinics.map((c) => (
-              <StaggerItem key={c.city}>
-                <div className="card-highlight flex h-full flex-col justify-between rounded-[20px] border border-[#fde2ec] bg-white p-6 shadow-[0_8px_24px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-rose/35 hover:shadow-[0_14px_36px_rgba(232,62,116,0.1)]">
-                  <div>
-                    <span className="text-[11.5px] font-bold tracking-wider text-rose uppercase">
-                      {c.sector}
-                    </span>
-                    <h3 className="font-serif mt-1 text-[1.4rem] font-bold text-ink">
-                      {c.city}
-                    </h3>
-                    <p className="mt-2 text-[13px] leading-relaxed text-ink/75">
-                      {c.address}
-                    </p>
-                  </div>
-
-                  <div className="mt-6 flex flex-wrap items-center gap-3 border-t border-[#fde2ec] pt-4">
-                    <a
-                      href={c.mapUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-[12.5px] font-semibold text-blue hover:underline"
-                    >
-                      <FaMapMarkerAlt className="size-3" />
-                      Get directions
-                    </a>
-                    <span className="text-ink/30">•</span>
-                    <Link
-                      href={c.clinicUrl}
-                      className="text-[12.5px] font-semibold text-ink/75 hover:text-rose"
-                    >
-                      Clinic page
-                    </Link>
-                    <a
-                      href="#book-consultation"
-                      className="mt-2 w-full rounded-full border border-rose/30 bg-white py-2 text-center text-[13px] font-semibold text-ink transition-colors hover:border-rose hover:bg-rose hover:text-white"
-                    >
-                      Book appointment
-                    </a>
-                  </div>
-                </div>
+            {defaultClinics.map((clinic) => (
+              <StaggerItem
+                key={clinic.city}
+                variant="scaleIn"
+                className="h-full"
+              >
+                <ClinicAppointmentCard clinic={clinic} />
               </StaggerItem>
             ))}
           </Stagger>

@@ -39,12 +39,12 @@ export default function SurgicalSpermRetrievalRelatedTreatments() {
 
         <Stagger
           delay={0.05}
-          className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-2"
+          className="mt-7 grid grid-cols-1 items-stretch gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
         >
           {relatedTreatments.map((item) => (
-            <StaggerItem key={item.title}>
-            <RelatedTreatmentCard {...item} />
-          </StaggerItem>
+            <StaggerItem key={item.title} className="h-full">
+              <RelatedTreatmentCard {...item} />
+            </StaggerItem>
           ))}
         </Stagger>
       </TreatmentSection>

@@ -1,18 +1,31 @@
-﻿"use client";
-import Breadcrumb from "@/components/ui/Breadcrumb";
+"use client";
 
-import HeroBannerImage from "@/components/ui/HeroBannerImage";
 import Link from "next/link";
-
+import Breadcrumb from "@/components/ui/Breadcrumb";
+import HeroBannerImage from "@/components/ui/HeroBannerImage";
+import HeroCounterBar, {
+  type HeroCounterItem,
+} from "@/components/ui/HeroCounterBar";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
-export default function LaparoscopyHero() {
-  const badges = [
-    "More than 25 years experience",
-    "Keyhole surgeries using instruments ranging from 2.9mm to 5 mm",
-    "Appointments available online or in person",
-  ];
+const badges = [
+  "More than 25 years experience",
+  "Keyhole surgeries using instruments ranging from 2.9mm to 5 mm",
+  "Appointments available online or in person",
+];
 
+const counters: HeroCounterItem[] = [
+  { target: 25000, suffix: "+", label: "families helped" },
+  { target: 25, suffix: "+", label: "years experience" },
+  {
+    target: 12,
+    displayText: "6–12 hrs",
+    label: "to be discharged on day care basis",
+  },
+  { target: 15000, label: "cycles of IVF completed" },
+];
+
+export default function LaparoscopyHero() {
   return (
     <section
       className="relative overflow-hidden pt-3 pb-6 sm:pt-4 sm:pb-8 lg:pt-5 lg:pb-9"
@@ -38,11 +51,11 @@ export default function LaparoscopyHero() {
       <div className="page-container relative grid grid-cols-1 items-start gap-6 sm:gap-7 lg:grid-cols-12 lg:gap-6 xl:gap-8">
         <div className="min-w-0 lg:col-span-7">
           <Breadcrumb
-          items={[
-            { label: "Treatments", href: "/our-services" },
-            { label: "Laparoscopic Fertility Surgery" }
-          ]}
-        />
+            items={[
+              { label: "Treatments", href: "/our-services" },
+              { label: "Best Laparoscopic Surgeon in Noida" },
+            ]}
+          />
 
           <Reveal variant="slideLeft">
             <p className="text-[12px] font-bold tracking-[0.12em] text-rose uppercase sm:text-[13px]">
@@ -68,16 +81,16 @@ export default function LaparoscopyHero() {
           <div className="mt-6 flex flex-wrap items-center gap-3 sm:gap-4">
             <a
               href="#book-consultation"
-              className="inline-flex items-center justify-center rounded-full bg-rose px-6 py-2.5 text-[13.5px] font-bold text-white shadow-[0_8px_20px_rgba(232,62,116,0.35)] transition-all hover:bg-rose-dark active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"
+              className="inline-flex items-center justify-center rounded-full border border-rose/20 bg-white/75 backdrop-blur-sm px-6 py-2.5 text-[13.5px] font-bold text-ink shadow-[0_4px_14px_rgba(15,36,56,0.05)] transition-all hover:border-rose/50 hover:bg-white hover:text-rose active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"
             >
               Book In-Clinic Consultation
             </a>
-            <a
-              href="#book-consultation"
+            <Link
+              href="/ivf-consultation-online"
               className="inline-flex items-center justify-center rounded-full bg-blue px-6 py-2.5 text-[13.5px] font-semibold text-white shadow-[0_8px_20px_rgba(0,71,202,0.35)] transition-all hover:bg-blue-dark active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"
             >
               Schedule Online Consultation
-            </a>
+            </Link>
           </div>
 
           <Link
@@ -104,7 +117,12 @@ export default function LaparoscopyHero() {
         <HeroBannerImage
           src="/images/best-male-infertility.jpg"
           alt="Dr. Mona Dahiya - Laparoscopy & Hysteroscopy"
+          objectPosition="object-top"
         />
+      </div>
+
+      <div className="page-container relative">
+        <HeroCounterBar items={counters} />
       </div>
     </section>
   );

@@ -27,7 +27,7 @@ export function ProtocolCard({
               {tag}
             </span>
           ) : null}
-          <h3 className="font-serif pt-0.5 text-[1.05rem] leading-snug font-semibold text-black sm:text-[1.12rem]">
+          <h3 className="font-serif pt-0.5 text-[1rem] leading-snug font-semibold text-black sm:text-[1.0625rem]">
             {title}
           </h3>
         </div>
@@ -36,7 +36,7 @@ export function ProtocolCard({
         {bullets.map((bullet, idx) => (
           <div
             key={idx}
-            className="flex items-start gap-2.5 text-[13px] leading-relaxed text-black sm:text-[13.5px]"
+            className="flex items-start gap-2.5 text-[13.5px] leading-relaxed text-black sm:text-[14px]"
           >
             <span className="pt-0.5 text-[14px] leading-none text-rose select-none">
               ↳

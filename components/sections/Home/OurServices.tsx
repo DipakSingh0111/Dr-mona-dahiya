@@ -14,6 +14,7 @@ import {
 import { GiEmbryo } from "react-icons/gi";
 import { MdPregnantWoman } from "react-icons/md";
 import siteData from "@/data/site.json";
+import Breadcrumb from "@/components/ui/Breadcrumb";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
 const ICONS: Record<string, ReactNode> = {
@@ -122,7 +123,11 @@ const THEMES: Record<string, Theme> = {
   },
 };
 
-export default function OurServices() {
+export default function OurServices({
+  showBreadcrumb = false,
+}: {
+  showBreadcrumb?: boolean;
+}) {
   const { eyebrow, titlePrefix, titleLocations, description, cta, items } =
     siteData.ourServices;
 
@@ -132,6 +137,14 @@ export default function OurServices() {
       className="relative overflow-hidden bg-[#f5f6f8] py-6 sm:py-7 lg:py-8"
     >
       <div className="page-container">
+        {showBreadcrumb ? (
+          <Breadcrumb
+            items={[
+              { label: "Treatments", href: "/our-services" },
+              { label: "All Services Hub" },
+            ]}
+          />
+        ) : null}
         <Reveal>
           <div className="mb-6 sm:mb-8">
             <div className="mb-4 flex flex-wrap items-center gap-2.5 sm:flex-nowrap sm:gap-3">

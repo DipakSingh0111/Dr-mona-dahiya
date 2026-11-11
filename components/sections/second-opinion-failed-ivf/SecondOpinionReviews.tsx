@@ -1,108 +1,67 @@
 "use client";
 
 import Link from "next/link";
-import { FaQuoteLeft, FaStar } from "react-icons/fa";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
+import {
+  TreatmentSection,
+  TreatmentSectionHeader,
+  ReviewCard,
+  type ReviewCardItem,
+} from "@/components/ui/treatment";
+
+const reviews: ReviewCardItem[] = [
+  {
+    title: "Superb Infertility Specialist",
+    review:
+      "Dr. Mona Dahiya is superb infertility specialist. She expertly diagnosed and treated our uterine issues, including polyps and fibroids, because of which we were not able to conceive. Her thorough approach and attention to detail, especially in managing adhesions from past surgeries, was incredible.I highly recommend her as the best infertility doctor.",
+    initial: "S",
+    name: "Sachin Upadhyay",
+    source: "Patient review",
+  },
+  {
+    review:
+      "We are immensely grateful to Dr. Mona Dahiya for her expertise in treating my wife's infertility due to low AMH levels. Despite the challenges, Dr. Mona guided us through the IVF process with remarkable care and precision. Thanks to her, we achieved success. She truly is the best doctor for IVF with low AMH in India. 🙏1",
+    initial: "A",
+    name: "Ashok Yadav",
+    source: "Google patient review",
+  },
+  {
+    review:
+      "Her fertility clinic is a boon for patients with complex infertility problems.Dr Mona is really good is what we can say.Her experience and success rates are one of the best in India.Her team is very friendly and cooperative.Our recommendation is that you should obviously meet her for the right guidance.",
+    initial: "A",
+    name: "Anand Kumar",
+    source: "Google patient review",
+  },
+];
 
 export default function SecondOpinionReviews() {
-  const reviews = [
-    {
-      title: "Superb Infertility Specialist",
-      quote:
-        "Dr. Mona Dahiya is superb infertility specialist. She expertly diagnosed and treated our uterine issues, including polyps and fibroids, because of which we were not able to conceive. Her thorough approach and attention to detail, especially in managing adhesions from past surgeries, was incredible. I highly recommend her as the best infertility doctor.",
-      author: "Sachin Upadhyay",
-      source: "Patient review",
-      initial: "S",
-      color: "bg-rose",
-    },
-    {
-      title: "",
-      quote:
-        "We are immensely grateful to Dr. Mona Dahiya for her expertise in treating my wife's infertility due to low AMH levels. Despite the challenges, Dr. Mona guided us through the IVF process with remarkable care and precision. Thanks to her, we achieved success. She truly is the best doctor for IVF with low AMH in India. 🙏",
-      author: "Ashok Yadav",
-      source: "Google patient review",
-      initial: "A",
-      color: "bg-blue",
-    },
-    {
-      title: "",
-      quote:
-        "Her fertility clinic is a boon for patients with complex infertility problems. Dr Mona is really good is what we can say. Her experience and success rates are one of the best in India. Her team is very friendly and cooperative. Our recommendation is that you should obviously meet her for the right guidance.",
-      author: "Anand Kumar",
-      source: "Google patient review",
-      initial: "A",
-      color: "bg-blue",
-    },
-  ];
-
   return (
-    <section id="patient-reviews" className="relative overflow-hidden bg-white py-8 sm:py-10 lg:py-12">
-      <div className="page-container relative">
-        <Reveal className="mb-6 sm:mb-8">
-          <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
-            Patient reviews
-          </p>
-          <h2 className="font-serif mt-1 text-[1.65rem] leading-[1.2] font-normal tracking-tight text-slate-900 sm:text-[2.1rem] lg:text-[2.35rem]">
-            What Patients Say About Dr. Mona
-          </h2>
-          <p className="mt-2 text-[14px] leading-relaxed text-black sm:text-[15px]">
-            Individual experiences in patients&apos; own words.
-          </p>
-        </Reveal>
+    <TreatmentSection id="patient-reviews">
+      <TreatmentSectionHeader
+        eyebrow="Patient reviews"
+        title="What Patients Say About Dr. Mona"
+        subtitle="Individual experiences in patients' own words."
+      />
 
-        <Stagger
-          stagger={0.06}
-          className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"
+      <Stagger
+        delay={0.05}
+        className="mt-7 grid grid-cols-1 items-stretch gap-5 lg:grid-cols-3"
+      >
+        {reviews.map((rev) => (
+          <StaggerItem key={rev.name} className="h-full">
+            <ReviewCard {...rev} />
+          </StaggerItem>
+        ))}
+      </Stagger>
+
+      <Reveal variant="fadeUp" delay={0.1} className="mt-8">
+        <Link
+          href="/best-ivf-patient-reviews"
+          className="inline-flex items-center justify-center rounded-full border border-rose/40 bg-white px-5 py-2.5 text-[13px] font-semibold text-ink transition-all hover:border-rose hover:bg-rose hover:text-white"
         >
-          {reviews.map((r, idx) => (
-            <StaggerItem key={idx}>
-              <div className="flex h-full flex-col justify-between rounded-[20px] border border-slate-200/90 bg-gradient-to-br from-slate-50/60 to-white p-6 shadow-[0_4px_18px_rgba(0,20,60,0.03)] transition-all duration-300 hover:-translate-y-1 hover:border-blue/40 hover:shadow-[0_12px_28px_rgba(0,30,80,0.08)]">
-                <div>
-                  <div className="flex items-center gap-1 text-amber-400">
-                    {[...Array(5)].map((_, i) => (
-                      <FaStar key={i} className="size-3.5" />
-                    ))}
-                  </div>
-
-                  {r.title && (
-                    <h3 className="mt-3 text-[15px] font-bold text-slate-900">
-                      {r.title}
-                    </h3>
-                  )}
-
-                  <p className="mt-3 text-[13.5px] leading-relaxed text-black">
-                    &ldquo;{r.quote}&rdquo;
-                  </p>
-                </div>
-
-                <div className="mt-5 flex items-center gap-3 pt-4 border-t border-slate-100">
-                  <span
-                    className={`inline-flex size-9 shrink-0 items-center justify-center rounded-full text-[13px] font-bold text-black shadow-xs ${r.color}`}
-                  >
-                    {r.initial}
-                  </span>
-                  <div>
-                    <h4 className="text-[13.5px] font-bold text-slate-900">
-                      {r.author}
-                    </h4>
-                    <p className="text-[11.5px] text-black">{r.source}</p>
-                  </div>
-                </div>
-              </div>
-            </StaggerItem>
-          ))}
-        </Stagger>
-
-        <div className="mt-8">
-          <Link
-            href="/patient-reviews"
-            className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-2.5 text-[13.5px] font-semibold text-slate-800 transition-all hover:border-blue hover:bg-blue hover:text-white"
-          >
-            Read All Patient Reviews
-          </Link>
-        </div>
-      </div>
-    </section>
+          Read All Patient Reviews
+        </Link>
+      </Reveal>
+    </TreatmentSection>
   );
 }
-

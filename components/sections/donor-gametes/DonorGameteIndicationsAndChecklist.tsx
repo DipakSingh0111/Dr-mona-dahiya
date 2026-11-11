@@ -17,51 +17,48 @@ const indications: {
 }[] = [
   {
     number: "1",
-    title: "Premature ovarian insufficiency",
-    description:
-      "Complete follicle loss or surgical or medical menopause before 40.",
+    title: "Failed ovaries",
+    description: "May be no follicles or early menopause due to surgery or drugs.",
   },
   {
     number: "2",
     title: "Severely low reserve",
-    description: "AMH under 0.2 ng/mL with repeated failed stimulation.",
+    description: "Low AMH less than 0.2 and no response after multiple attempts.",
   },
   {
     number: "3",
-    title: "Non-obstructive azoospermia",
+    title: "No sperm",
     description: (
       <>
-        No sperm found even with micro-TESE. See{" "}
+        No sperm after micro TESE. More info - Treating{" "}
         <Link
           href="/azoospermia-treatment"
-          className="font-medium text-blue underline underline-offset-2 hover:text-rose transition-colors"
+          className="font-medium text-blue underline underline-offset-2 transition-colors hover:text-rose"
         >
-          Azoospermia Treatment
+          Azoospermia
         </Link>
-        .
       </>
     ),
   },
   {
     number: "4",
     title: "Serious inherited conditions",
-    description:
-      "Where PGT-M is not suitable to prevent a severe genetic disease.",
+    description: "Inborn diseases where PGT-M cannot rule out disease.",
   },
   {
     number: "5",
     title: "Repeated poor egg or embryo quality",
     description:
-      "Consistently abnormal eggs or embryo arrest despite changed protocols.",
+      "Bad quality eggs or arrested embryos time and again despite using different protocols.",
   },
 ];
 
 const checklist = [
-  "Sourcing only through government-registered ART banks, as Indian law requires.",
-  "Donor screening: HIV, hepatitis B and C, VDRL, CMV, karyotype and thalassaemia screening.",
-  "Recipient cavity check: 3D sonohysterography or hysteroscopy.",
-  "Mock lining preparation: estrogen trial targeting 8 mm or more with a trilaminar pattern.",
-  "Legal and psychological counselling, with informed consent filed as required.",
+  "Get eggs/sperm from licensed ART banks. As per indian laws you have to buy eggs from ART banks only.",
+  "All donors will be tested for HIV, Hepatitis B & C, VDRL, CMV and Karyotyping and Thalassaemia.",
+  "Check lining of uterus using 3D Sonohysterogram or Hysteroscopy.",
+  "Prepare the lining of uterus with Estrogens. Aim for endometrial thickness more than 8 mm and trilaminar.",
+  "Talk to our counsellor about legal and emotional aspects of using donor gametes. Form will be filled and given to you.",
 ];
 
 export default function DonorGameteIndicationsAndChecklist() {
@@ -69,15 +66,15 @@ export default function DonorGameteIndicationsAndChecklist() {
     <TreatmentSection>
       <div className="mb-14 sm:mb-16 lg:mb-20">
         <TreatmentSectionHeader
-          eyebrow="Clinical breakdown"
+          eyebrow="Donor Egg / Sperm"
           title="Indications: When Are Donor Gametes Recommended?"
         />
         <Stagger
           delay={0.05}
-          className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
+          className="mt-7 grid grid-cols-1 items-stretch gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
         >
           {indications.map((item) => (
-            <StaggerItem key={item.number}>
+            <StaggerItem key={item.number} className="h-full">
               <NumberedCard {...item} />
             </StaggerItem>
           ))}
@@ -86,14 +83,23 @@ export default function DonorGameteIndicationsAndChecklist() {
 
       <div>
         <TreatmentSectionHeader
-          eyebrow="Before treatment"
+          eyebrow="Tests Required"
           title="Diagnostic Checklist: Donor Screening & Recipient Preparation"
-          subtitle="Every step follows the ART (Regulation) Act and National ART Board requirements."
+          subtitle={
+            <>
+              Things to check before starting treatment.
+              <br />
+              All guidelines of National board of ART are followed and as per ART
+              (Regulation) Act.
+            </>
+          }
         />
         <div className="mt-6 grid grid-cols-1 gap-3.5 sm:mt-7 sm:gap-4">
           {checklist.map((item, idx) => (
             <Reveal key={item} variant="fadeUp" delay={idx * 0.04}>
-              <ChecklistRow>{item}</ChecklistRow>
+              <ChecklistRow>
+                <span>{item}</span>
+              </ChecklistRow>
             </Reveal>
           ))}
         </div>

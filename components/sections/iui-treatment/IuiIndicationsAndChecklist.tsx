@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { FaCheck } from "react-icons/fa";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
+import { ChecklistRow } from "@/components/ui/treatment";
 
 interface IndicationCard {
   number: string;
@@ -183,14 +183,7 @@ export default function IuiIndicationsAndChecklist() {
           <div className="mt-6 flex flex-col gap-3 sm:mt-7 sm:gap-3.5">
             {checklistItems.map((text, idx) => (
               <Reveal key={idx} variant="fadeUp" delay={idx * 0.04}>
-                <div className="flex items-center gap-3.5 rounded-xl border border-slate-200 bg-slate-50/70 px-4 py-3.5 transition-all duration-200 hover:border-blue/40 hover:bg-white hover:shadow-sm sm:px-5 sm:py-4">
-                  <span className="flex size-6 shrink-0 items-center justify-center rounded-full bg-rose/15 text-rose ring-1 ring-rose/35">
-                    <FaCheck className="size-2.5" />
-                  </span>
-                  <p className="text-[13px] leading-relaxed text-slate-700 sm:text-[14px]">
-                    {text}
-                  </p>
-                </div>
+                <ChecklistRow>{text}</ChecklistRow>
               </Reveal>
             ))}
           </div>

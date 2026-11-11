@@ -15,10 +15,10 @@ export function WhyPointRow({ title, desc }: WhyPointItem) {
         <FaCheck className="size-3" />
       </span>
       <div className="min-w-0 flex-1">
-        <h3 className="font-serif text-[1rem] font-semibold text-black sm:text-[1.05rem]">
+        <h3 className="font-serif text-[1rem] font-semibold text-black sm:text-[1.0625rem]">
           {title}
         </h3>
-        <div className="mt-1 text-[13px] leading-relaxed text-black sm:text-[13.5px]">
+        <div className="mt-1 text-[13.5px] leading-relaxed text-black sm:text-[14px]">
           {desc}
         </div>
       </div>

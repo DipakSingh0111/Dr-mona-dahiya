@@ -22,7 +22,7 @@ export function RelatedTreatmentCard({
     >
       <div>
         <div className="flex items-start justify-between gap-3">
-          <h3 className="font-serif text-[1.05rem] leading-snug font-semibold text-black transition-colors group-hover:text-rose">
+          <h3 className="font-serif text-[1rem] leading-snug font-semibold text-black transition-colors group-hover:text-rose sm:text-[1.0625rem]">
             {title}
           </h3>
           <span className="flex size-6 shrink-0 items-center justify-center rounded-full text-black transition-all group-hover:translate-x-0.5 group-hover:text-rose">
@@ -30,7 +30,7 @@ export function RelatedTreatmentCard({
           </span>
         </div>
         {subtitle ? (
-          <p className="mt-3 text-[13px] leading-relaxed text-black sm:text-[13.5px]">
+          <p className="mt-3 text-[13.5px] leading-relaxed text-black sm:text-[14px]">
             {subtitle}
           </p>
         ) : null}
@@ -51,10 +51,10 @@ export function RelatedTreatmentCompactCard({
       className="group relative flex items-center justify-between rounded-xl border border-[#fde2ec] bg-white p-4 shadow-[0_8px_24px_rgba(232,62,116,0.05)] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#f8b4cb] hover:shadow-[0_14px_32px_rgba(232,62,116,0.1)]"
     >
       <div>
-        <h3 className="font-serif text-[1rem] font-semibold text-black transition-colors group-hover:text-rose sm:text-[1.08rem]">
+        <h3 className="font-serif text-[1rem] font-semibold text-black transition-colors group-hover:text-rose sm:text-[1.0625rem]">
           {title}
         </h3>
-        <p className="mt-0.5 text-[12px] text-black group-hover:text-black">
+        <p className="mt-0.5 text-[13.5px] text-black group-hover:text-black sm:text-[14px]">
           {label}
         </p>
       </div>

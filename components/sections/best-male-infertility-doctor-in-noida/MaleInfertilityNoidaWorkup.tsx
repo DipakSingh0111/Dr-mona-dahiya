@@ -1,10 +1,10 @@
 "use client";
 
-import { FaCheck } from "react-icons/fa";
 import { Stagger, StaggerItem } from "@/components/ui/Reveal";
 import {
   TreatmentSection,
   TreatmentSectionHeader,
+  ChecklistRow,
 } from "@/components/ui/treatment";
 
 const tests = [
@@ -27,14 +27,7 @@ export default function MaleInfertilityNoidaWorkup() {
       <Stagger className="mt-7 flex flex-col gap-3" stagger={0.05}>
         {tests.map((text) => (
           <StaggerItem key={text}>
-            <div className="flex items-start gap-3 rounded-2xl border border-[#fde2ec] bg-white px-4 py-3.5 backdrop-blur-md sm:px-5 sm:py-4">
-              <span className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-rose/15 text-rose ring-1 ring-rose/35">
-                <FaCheck className="size-2.5" />
-              </span>
-              <p className="text-[13.5px] leading-relaxed text-ink/80 sm:text-[14px]">
-                {text}
-              </p>
-            </div>
+            <ChecklistRow>{text}</ChecklistRow>
           </StaggerItem>
         ))}
       </Stagger>

@@ -31,7 +31,7 @@ function FaqCard({
         aria-expanded={isOpen}
         className="flex w-full cursor-pointer items-center justify-between gap-4 p-5 text-left sm:p-5.5"
       >
-        <span className="font-serif text-[1rem] font-semibold text-black sm:text-[1.05rem]">
+        <span className="font-serif text-[1rem] font-semibold text-black sm:text-[1.0625rem]">
           {item.question}
         </span>
         <span
@@ -51,7 +51,7 @@ function FaqCard({
         }`}
       >
         <div className="overflow-hidden">
-          <div className="border-t border-[#fde8ef] px-5 pt-3 pb-5 text-[13px] leading-relaxed text-black sm:px-5.5 sm:text-[13.5px]">
+          <div className="border-t border-[#fde8ef] px-5 pt-3 pb-5 text-[13.5px] leading-relaxed text-black sm:px-5.5 sm:text-[14px]">
             {item.answer}
           </div>
         </div>

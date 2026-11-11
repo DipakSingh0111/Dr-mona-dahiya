@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title:
     "Ethical & ART Act-Compliant Donor Gamete Programs (Egg & Sperm) | Dr. Mona Dahiya",
   description:
-    "Donor egg and donor sperm IVF with Dr. Mona Dahiya — ART Act-compliant screening, registered ART banks, and pregnancy rates above 70% to 75% across Delhi NCR.",
+    "Donor egg and donor sperm IVF with Dr. Mona Dahiya — ART Act-compliant screening, licensed ART banks, and success rates above 70-75% across Noida, Delhi and Ghaziabad.",
 };
 
 export default function DonorGametePage() {
@@ -26,7 +26,13 @@ export default function DonorGametePage() {
       <DonorGameteHero />
 
       <SectionReveal>
-        <MedicalRegistration />
+        <MedicalRegistration
+          councilRegLabels={{
+            DMC: "DMC registration number",
+            MCI: "MCI registration number",
+            UPMC: "UPMC registration number",
+          }}
+        />
       </SectionReveal>
 
       <SectionReveal delay={0.04}>
@@ -57,10 +63,31 @@ export default function DonorGametePage() {
         <AboutConsultation
           sectionId="book-consultation"
           eyebrow="Next step"
-          title="Book an In-Clinic or Online Consultation"
-          subtitle="Book an in-clinic consultation with Dr. Mona Dahiya in Noida, Ghaziabad or Delhi, or a video review of your reports. Direct line: +91 92679 82924."
+          title={
+            <>
+              Book an In-Clinic or
+              <br />
+              Online Consultation
+            </>
+          }
+          subtitle={
+            <>
+              Book an in-clinic consultation with Dr. Mona Dahiya in Noida,
+              Ghaziabad or Delhi, or a video review of your reports. Direct
+              line:{" "}
+              <a
+                href="tel:+919267982924"
+                className="font-medium text-blue hover:text-rose"
+              >
+                +91 92679 82924
+              </a>
+              .
+            </>
+          }
           appendContacts={false}
-          consultationDuration="20 minutes"
+          consultationDuration=""
+          defaultClinic="Noida"
+          sectionBg="bg-white"
         />
       </SectionReveal>
 

@@ -126,12 +126,14 @@ export default function OnlineConsultationContent() {
                   <span className="signature-tick mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full text-white shadow-xs">
                     <FaCheck className="size-2.5" />
                   </span>
-                  <p className="min-w-0 flex-1 text-[13.5px] leading-relaxed text-ink/85 sm:text-[14.5px]">
-                    <strong className="font-semibold text-ink">
-                      {item.label}
-                    </strong>{" "}
-                    {item.text}
-                  </p>
+                  <div className="min-w-0 flex-1">
+                    <h3 className="font-bold text-[1rem] leading-snug text-ink sm:text-[1.0625rem]">
+                      {item.label.replace(/:\s*$/, "")}
+                    </h3>
+                    <p className="mt-1 text-[13.5px] leading-relaxed text-ink/80 sm:text-[14px]">
+                      {item.text}
+                    </p>
+                  </div>
                 </div>
               </Reveal>
             ))}

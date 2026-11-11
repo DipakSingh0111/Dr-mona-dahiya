@@ -16,11 +16,11 @@ export function NumberedCard({ number, title, description }: NumberedCardItem) {
           <span className="card-badge flex size-8 shrink-0 items-center justify-center rounded-lg bg-rose text-[15px] font-bold text-white shadow-[0_2px_8px_rgba(232,62,116,0.4)]">
             {number}
           </span>
-          <h3 className="font-serif pt-0.5 text-[1.05rem] leading-snug font-semibold text-black sm:text-[1.12rem]">
+          <h3 className="font-serif pt-0.5 text-[1rem] leading-snug font-semibold text-black sm:text-[1.0625rem]">
             {title}
           </h3>
         </div>
-        <div className="mt-3.5 text-[13px] leading-relaxed text-black sm:text-[13.5px]">
+        <div className="mt-3.5 text-[13.5px] leading-relaxed text-black sm:text-[14px]">
           {description}
         </div>
       </div>

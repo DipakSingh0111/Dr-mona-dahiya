@@ -1,168 +1,164 @@
 "use client";
 
+import type { ReactNode } from "react";
 import Link from "next/link";
-import { FaCheck } from "react-icons/fa";
-import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
+import { Stagger, StaggerItem } from "@/components/ui/Reveal";
+import {
+  TreatmentSection,
+  TreatmentSectionHeader,
+  CostFactorCard,
+} from "@/components/ui/treatment";
+
+type AuditGroup = {
+  groupTitle: string;
+  cards: {
+    title: string;
+    description: ReactNode;
+  }[];
+};
+
+const groups: AuditGroup[] = [
+  {
+    groupTitle: "Assess Embryo and Sperm",
+    cards: [
+      {
+        title: "What stage did your embryos reach?",
+        description:
+          "Did your embryos stop dividing on day 3 or make it to day 5 blastocyst stage?",
+      },
+      {
+        title: "Sperm DNA Fragmentation Index",
+        description: (
+          <>
+            Get a test done here. Click{" "}
+            <Link
+              href="/sperm-dna-fragmentation-test"
+              className="font-medium text-blue underline underline-offset-2 transition-colors hover:text-rose"
+            >
+              Sperm DNA Fragmentation Test
+            </Link>
+            .
+          </>
+        ),
+      },
+      {
+        title: "Were your embryos aneuploidy checked?",
+        description: "If you did a PGT-A tell us the results.",
+      },
+      {
+        title: "MII rate and irregular eggs",
+        description:
+          "What was your MII rate and did you notice any irregular eggs?",
+      },
+    ],
+  },
+  {
+    groupTitle: "Uterus and Endometrium",
+    cards: [
+      {
+        title: "Uterine cavity assessment",
+        description: (
+          <>
+            Through 3D sonography/
+            <Link
+              href="/hysteroscopy-treatment"
+              className="font-medium text-blue underline underline-offset-2 transition-colors hover:text-rose"
+            >
+              Hysteroscopy
+            </Link>{" "}
+            if you have any minor defects like septum.
+          </>
+        ),
+      },
+      {
+        title: "Do you have chronic endometritis?",
+        description: "Tested by doing a biopsy CD 138.",
+      },
+      {
+        title: "Is your window of implantation closed?",
+        description: (
+          <>
+            Do you need to do an{" "}
+            <Link
+              href="/endometrial-receptivity-analysis-era-test-in-noida"
+              className="font-medium text-blue underline underline-offset-2 transition-colors hover:text-rose"
+            >
+              ERA test
+            </Link>
+            ?
+          </>
+        ),
+      },
+      {
+        title: "Endometrial thickness is < 7 mm?",
+        description: (
+          <>
+            Consider doing{" "}
+            <Link
+              href="/platelet-rich-plasma-prp-ivf-treatment-in-noida"
+              className="font-medium text-blue underline underline-offset-2 transition-colors hover:text-rose"
+            >
+              PRP Therapy
+            </Link>
+            .
+          </>
+        ),
+      },
+    ],
+  },
+  {
+    groupTitle: "Hormonal Imbalance",
+    cards: [
+      {
+        title: "Any progesterone elevation on day of trigger?",
+        description: "Serum progesterone >1.5 ng/ml.",
+      },
+      {
+        title: "Which IVF protocol were you put on?",
+        description: "Antagonist/ Flare/ DuoStim.",
+      },
+      {
+        title: "Trigger and luteal support",
+        description:
+          "Did you use appropriate trigger? And were you given sufficient luteal phase support?",
+      },
+      {
+        title: "Thyroid or prolactin imbalances",
+        description: "Any thyroid or prolactin imbalances?",
+      },
+    ],
+  },
+];
 
 export default function SecondOpinionWhatAuditLooksAt() {
-  const groups = [
-    {
-      groupTitle: "Embryo and sperm",
-      cards: [
-        {
-          title: "Day of embryo arrest",
-          desc: "Did embryos stop at Day 3 or reach Day 5?",
-        },
-        {
-          title: "Sperm DNA fragmentation",
-          desc: (
-            <>
-              DFI testing. See{" "}
-              <Link
-                href="/sperm-dna-fragmentation"
-                className="font-medium text-blue underline underline-offset-2 hover:text-blue-dark"
-              >
-                Sperm DNA Fragmentation Test
-              </Link>
-            </>
-          ),
-        },
-        {
-          title: "Chromosomal status",
-          desc: "Whether PGT-A was done, and what it showed.",
-        },
-        {
-          title: "Egg maturity and shape",
-          desc: "MII rate and any abnormal-looking eggs.",
-        },
-      ],
-    },
-    {
-      groupTitle: "Uterus and receptivity",
-      cards: [
-        {
-          title: "Cavity check",
-          desc: (
-            <>
-              3D sonography or{" "}
-              <Link
-                href="/treatments"
-                className="font-medium text-blue underline underline-offset-2 hover:text-blue-dark"
-              >
-                Hysteroscopy
-              </Link>{" "}
-              for subtle septa, polyps or adhesions.
-            </>
-          ),
-        },
-        {
-          title: "Chronic endometritis",
-          desc: "CD138 biopsy for hidden inflammation.",
-        },
-        {
-          title: "Window of implantation",
-          desc: (
-            <>
-              Whether an{" "}
-              <Link
-                href="/treatments"
-                className="font-medium text-blue underline underline-offset-2 hover:text-blue-dark"
-              >
-                ERA test
-              </Link>{" "}
-              is needed.
-            </>
-          ),
-        },
-        {
-          title: "Thin lining",
-          desc: (
-            <>
-              A lining under 7 mm. See{" "}
-              <Link
-                href="/treatments"
-                className="font-medium text-blue underline underline-offset-2 hover:text-blue-dark"
-              >
-                PRP Therapy
-              </Link>
-              .
-            </>
-          ),
-        },
-      ],
-    },
-    {
-      groupTitle: "Hormones and protocol",
-      cards: [
-        {
-          title: "Early progesterone rise",
-          desc: "Progesterone above 1.5 ng/mL before trigger.",
-        },
-        {
-          title: "Protocol choice",
-          desc: "Antagonist, flare or DuoStim, matched to your reserve.",
-        },
-        {
-          title: "Trigger and luteal support",
-          desc: "Was the trigger timed and dosed well?",
-        },
-        {
-          title: "Thyroid and prolactin",
-          desc: "Subtle imbalances that affect implantation.",
-        },
-      ],
-    },
-  ];
-
   return (
-    <section className="relative overflow-hidden bg-white py-8 sm:py-10 lg:py-12">
-      <div className="page-container relative">
-        <Reveal className="mb-6 sm:mb-8">
-          <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
-            Root-cause framework
-          </p>
-          <h2 className="font-serif mt-1 text-[1.65rem] leading-[1.2] font-normal tracking-tight text-slate-900 sm:text-[2.1rem] lg:text-[2.35rem]">
-            What a Failed IVF Audit Looks At
-          </h2>
-          <p className="mt-2 text-[14px] leading-relaxed text-black sm:text-[15px]">
-            Every review covers 3 areas, because most failures come from more than one factor.
-          </p>
-        </Reveal>
+    <TreatmentSection>
+      <TreatmentSectionHeader
+        eyebrow="Root-cause framework"
+        title="What a Failed IVF Audit Looks At"
+        subtitle="During your audit we will assess:"
+      />
 
-        <div className="space-y-8 sm:space-y-10">
-          {groups.map((grp, gIdx) => (
-            <div key={gIdx}>
-              <h3 className="font-serif text-[18px] font-bold text-slate-900 sm:text-[20px] mb-4">
-                {grp.groupTitle}
-              </h3>
+      <div className="mt-8 space-y-10 sm:space-y-12">
+        {groups.map((grp) => (
+          <div key={grp.groupTitle}>
+            <h3 className="font-serif border-b border-rose/20 pb-2.5 text-[1.15rem] font-semibold text-ink sm:text-[1.25rem]">
+              {grp.groupTitle}
+            </h3>
 
-              <Stagger
-                stagger={0.05}
-                className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"
-              >
-                {grp.cards.map((c, cIdx) => (
-                  <StaggerItem key={cIdx}>
-                    <div className="card-highlight group flex h-full flex-col justify-start rounded-[18px] border border-slate-200/90 bg-gradient-to-br from-slate-50/70 to-white p-5 shadow-[0_4px_16px_rgba(0,20,60,0.03)] transition-all duration-300 hover:-translate-y-1 hover:border-blue/40 hover:shadow-[0_12px_28px_rgba(0,30,80,0.08)]">
-                      <div className="flex items-center gap-2.5">
-                        <span className="signature-tick inline-flex size-7 shrink-0 items-center justify-center rounded-lg text-white shadow-xs">
-                          <FaCheck className="size-3" />
-                        </span>
-                        <h4 className="text-[14.5px] font-bold text-slate-900 group-hover:text-blue transition-colors sm:text-[15px]">
-                          {c.title}
-                        </h4>
-                      </div>
-                      <div className="mt-3 text-[13px] leading-relaxed text-black sm:text-[13.5px]">
-                        {c.desc}
-                      </div>
-                    </div>
-                  </StaggerItem>
-                ))}
-              </Stagger>
-            </div>
-          ))}
-        </div>
+            <Stagger
+              delay={0.05}
+              className="mt-5 grid grid-cols-1 items-stretch gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
+            >
+              {grp.cards.map((card) => (
+                <StaggerItem key={card.title} className="h-full">
+                  <CostFactorCard {...card} />
+                </StaggerItem>
+              ))}
+            </Stagger>
+          </div>
+        ))}
       </div>
-    </section>
+    </TreatmentSection>
   );
 }
-

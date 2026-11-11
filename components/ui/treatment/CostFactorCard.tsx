@@ -17,11 +17,11 @@ export function CostFactorCard({ title, description, icon }: CostFactorItem) {
           <span className="card-badge flex size-8 shrink-0 items-center justify-center rounded-lg bg-rose text-white shadow-[0_2px_8px_rgba(232,62,116,0.4)]">
             {icon ?? <FaCheck className="size-3.5" />}
           </span>
-          <h3 className="font-serif text-[1.05rem] leading-snug font-semibold text-black">
+          <h3 className="font-serif text-[1rem] leading-snug font-semibold text-black sm:text-[1.0625rem]">
             {title}
           </h3>
         </div>
-        <div className="mt-4 text-[13px] leading-relaxed text-black sm:text-[13.5px]">
+        <div className="mt-4 text-[13.5px] leading-relaxed text-black sm:text-[14px]">
           {description}
         </div>
       </div>
