@@ -41,7 +41,11 @@ const EXTRA_ROUTES_BY_TAB: Record<string, string[]> = {
     "/best-female-infertility-doctor-in-noida",
     "/best-male-infertility-doctor-in-noida",
   ],
-  "About Dr. Mona": ["/privacy-policy", "/terms-of-service"],
+  "About Dr. Mona": [
+    "/privacy-policy",
+    "/terms-of-service",
+    "/medical-disclaimer",
+  ],
   "Patient Resources": [
     "/international-ivf-patient",
     "/comprehensive-ivf-faqs",

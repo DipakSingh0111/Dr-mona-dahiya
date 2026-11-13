@@ -1920,6 +1920,10 @@
         "href": "/contact-us"
       },
       {
+        "label": "Medical Disclaimer",
+        "href": "/medical-disclaimer"
+      },
+      {
         "label": "XML Sitemap",
         "href": "#"
       }
