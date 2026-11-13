@@ -26,7 +26,11 @@ export default function IvfHero() {
         background: "var(--pink)",
       }}
     >
-      <HeroFullWidthBanner src="/pageBanner/M0500391.JPG" alt="Dr. Mona Dahiya - IVF Treatment in Delhi, Noida & Ghaziabad" />
+      <HeroFullWidthBanner
+        src="/pageBanner/M0500426.JPG"
+        alt="Dr. Mona Dahiya - IVF Treatment in Delhi, Noida & Ghaziabad"
+        objectPosition="object-[72%_25%] md:object-[72%_22%] lg:object-[82%_50%] xl:object-[80%_50%] 2xl:object-[76%_48%]"
+      />
       <div
         aria-hidden
         className="pointer-events-none absolute top-0 right-[8%] h-[280px] w-[280px] -translate-y-1/4 rounded-full opacity-35 blur-3xl"
