@@ -72,7 +72,7 @@ export default function Clinics() {
             <StaggerItem key={clinic.city} variant="scaleIn" className="h-full">
               <ClinicAppointmentCard
                 clinic={clinic}
-                bookHref="#book-appointment"
+                bookHref="/book-appointment"
               />
             </StaggerItem>
           ))}

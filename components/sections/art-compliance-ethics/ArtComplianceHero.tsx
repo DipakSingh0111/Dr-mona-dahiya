@@ -2,7 +2,10 @@
 
 import Link from "next/link";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import HeroBannerImage from "@/components/ui/HeroBannerImage";
+import {
+  HeroFullWidthBanner,
+  HeroMobileBanner,
+} from "@/components/ui/HeroFullWidthBanner";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
 export default function ArtComplianceHero() {
@@ -10,9 +13,10 @@ export default function ArtComplianceHero() {
 
   return (
     <section
-      className="relative overflow-hidden pt-3 pb-6 sm:pt-4 sm:pb-8 lg:pt-5 lg:pb-9"
+      className="relative overflow-hidden flex flex-col pb-8 lg:min-h-[calc(100svh-var(--site-header-h,8.75rem))] lg:justify-center lg:py-10"
       style={{ background: "var(--pink)" }}
     >
+      <HeroFullWidthBanner src="/pageBanner/M0500358.JPG" alt="Dr. Mona Dahiya - Assisted Reproductive Technology (ART) Compliance & Medical Ethics Policy" />
       <div
         aria-hidden
         className="pointer-events-none absolute top-0 right-[8%] h-[280px] w-[280px] -translate-y-1/4 rounded-full opacity-35 blur-3xl"
@@ -30,8 +34,8 @@ export default function ArtComplianceHero() {
         }}
       />
 
-      <div className="page-container relative grid grid-cols-1 items-start gap-6 sm:gap-7 lg:grid-cols-12 lg:gap-6 xl:gap-8">
-        <div className="min-w-0 lg:col-span-7">
+      <div className="page-container relative z-10 w-full pt-5 lg:pt-0">
+        <div className="lg:max-w-[30rem] xl:max-w-[38rem]">
           <Breadcrumb
             items={[
               { label: "About Dr. Mona", href: "/about-mona-dahiya" },
@@ -95,11 +99,7 @@ export default function ArtComplianceHero() {
           </Stagger>
         </div>
 
-        <HeroBannerImage
-          src="/images/about-mona-dahiya/hysteroscopy.jpg"
-          alt="Dr. Mona Dahiya - Assisted Reproductive Technology (ART) Compliance & Medical Ethics Policy"
-          objectPosition="object-center"
-        />
+        <HeroMobileBanner src="/pageBanner/M0500358.JPG" alt="Dr. Mona Dahiya - Assisted Reproductive Technology (ART) Compliance & Medical Ethics Policy" />
       </div>
     </section>
   );

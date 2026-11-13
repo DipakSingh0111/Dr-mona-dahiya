@@ -35,13 +35,14 @@ const EXTRA_ROUTES_BY_TAB: Record<string, string[]> = {
     "/best-ivf-doctor-in-noida",
     "/best-ivf-doctor-in-delhi",
     "/best-ivf-doctor-in-ghaziabad",
+    "/ivf-cost-emi",
   ],
   "Conditions Treated": [
     "/best-female-infertility-doctor-in-noida",
     "/best-male-infertility-doctor-in-noida",
   ],
   "About Dr. Mona": ["/privacy-policy", "/terms-of-service"],
-  "Patient Resources": ["/international-ivf-patient"],
+  "Patient Resources": ["/international-ivf-patient", "/comprehensive-ivf-faqs"],
 };
 
 function isNavItemActive(pathname: string, item: NavMenuItem) {
@@ -80,6 +81,10 @@ function handlePlainNavClick(
   href: string,
 ) {
   if (typeof window === "undefined") return;
+  if (href === "#") {
+    e.preventDefault();
+    return;
+  }
   if (href.includes("#")) return;
 
   const path = href.split("?")[0] || "/";
@@ -106,11 +111,13 @@ export default function Navbar() {
   };
 
   useEffect(() => {
+    // Lock scroll on <html> rather than <body> because overflow:hidden on <body>
+    // breaks position:sticky on .site-header when scrolled down the page.
     if (!open) {
-      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
       return;
     }
-    document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
 
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
@@ -121,7 +128,7 @@ export default function Navbar() {
     window.addEventListener("resize", handleResize);
 
     return () => {
-      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
       window.removeEventListener("resize", handleResize);
     };
   }, [open]);
@@ -434,7 +441,7 @@ export default function Navbar() {
       {open ? (
         <div
           id="mobile-menu"
-          className="absolute inset-x-0 top-full z-50 max-h-[calc(100vh-5.25rem)] max-h-[calc(100dvh-var(--site-header-h,5.25rem))] overflow-y-auto overscroll-contain border-t border-white/10 bg-[rgba(6,21,50,0.98)] px-4 pt-4 pb-8 shadow-2xl backdrop-blur-md [-webkit-overflow-scrolling:touch] lg:hidden"
+          className="absolute inset-x-0 top-full z-[70] max-h-[calc(100dvh-var(--site-header-h,5.25rem))] overflow-y-auto overscroll-contain border-t border-white/10 bg-[rgba(6,21,50,0.98)] px-4 pt-4 pb-8 shadow-2xl backdrop-blur-md [-webkit-overflow-scrolling:touch] lg:hidden"
         >
           <nav className="flex flex-col gap-1" aria-label="Mobile">
             {menu.map((item) => {

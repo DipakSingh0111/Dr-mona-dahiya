@@ -3,7 +3,10 @@ import Breadcrumb from "@/components/ui/Breadcrumb";
 
 import Link from "next/link";
 
-import HeroBannerImage from "@/components/ui/HeroBannerImage";
+import {
+  HeroFullWidthBanner,
+  HeroMobileBanner,
+} from "@/components/ui/HeroFullWidthBanner";
 import HeroCounterBar from "@/components/ui/HeroCounterBar";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 import siteData from "@/data/site.json";
@@ -12,12 +15,14 @@ export default function IVFSuccessStoriesHero() {
   const data = siteData.ivfStoriesPage;
 
   return (
-    <section
-      className="relative overflow-hidden pt-4 pb-10 sm:pt-5 sm:pb-12 lg:pt-6 lg:pb-14"
+    <>
+      <section
+      className="relative overflow-hidden flex flex-col pb-8 lg:min-h-[calc(100svh-var(--site-header-h,8.75rem))] lg:justify-center lg:py-10"
       style={{
         background: "var(--pink)",
       }}
     >
+      <HeroFullWidthBanner src={data.image} alt="Dr. Mona Dahiya - IVF Success Stories" />
       <div
         aria-hidden
         className="pointer-events-none absolute top-0 right-[8%] h-[280px] w-[280px] -translate-y-1/4 rounded-full opacity-35 blur-3xl"
@@ -35,8 +40,8 @@ export default function IVFSuccessStoriesHero() {
         }}
       />
 
-      <div className="page-container relative grid grid-cols-1 items-start gap-6 sm:gap-7 lg:grid-cols-12 lg:items-start lg:gap-6 xl:gap-8">
-        <div className="min-w-0 lg:col-span-7">
+      <div className="page-container relative z-10 w-full pt-5 lg:pt-0">
+        <div className="lg:max-w-[30rem] xl:max-w-[38rem]">
           <Breadcrumb
           items={[
             { label: "Success Stories", href: "/success-stories" },
@@ -97,14 +102,12 @@ export default function IVFSuccessStoriesHero() {
           </Reveal>
         </div>
 
-        <HeroBannerImage
-          src={data.image}
-          alt="Dr. Mona Dahiya - IVF Success Stories"
-        />
+        <HeroMobileBanner src={data.image} alt="Dr. Mona Dahiya - IVF Success Stories" />
       </div>
-
-      <div className="page-container relative">
-        <HeroCounterBar
+    </section>
+      <section className="py-5 sm:py-6">
+        <div className="page-container relative">
+          <HeroCounterBar
           items={[
             { target: 25000, suffix: "+", label: "Patients have become parents" },
             { target: 25, suffix: "+", label: "Years Of Experience" },
@@ -112,7 +115,8 @@ export default function IVFSuccessStoriesHero() {
             { target: 15000, suffix: "+", label: "IVF cycles performed" },
           ]}
         />
-      </div>
-    </section>
+        </div>
+      </section>
+    </>
   );
 }

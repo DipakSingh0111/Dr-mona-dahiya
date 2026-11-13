@@ -9,7 +9,11 @@ import {
 } from "@/components/ui/treatment";
 
 const areas = [
-  { title: "Best IVF Doctor in Sector 18 Noida", subtitle: "Sector 18, Noida" },
+  {
+    title: "Best IVF Doctor in Sector 18 Noida",
+    subtitle: "Sector 18, Noida",
+    href: "/location/best-ivf-doctor-in-sector-18-noida",
+  },
   { title: "IVF Specialist in Sector 50 Noida", subtitle: "Sector 50, Noida" },
   { title: "Best IVF Doctor in Sector 51 Noida", subtitle: "Sector 51, Noida" },
   { title: "Best IVF Doctor in Sector 62 Noida", subtitle: "Sector 62, Noida" },
@@ -56,7 +60,7 @@ export default function BestIvfDoctorAreas() {
         {areas.map((area) => (
           <StaggerItem key={area.title}>
             <Link
-              href="#book-consultation"
+              href={"href" in area && area.href ? area.href : "#book-consultation"}
               className="card-highlight group relative flex items-center justify-between rounded-xl border border-[#fde2ec] bg-white p-4 shadow-[0_8px_24px_rgba(232,62,116,0.05)] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#f8b4cb] hover:shadow-[0_14px_32px_rgba(232,62,116,0.1)]"
             >
               <div>

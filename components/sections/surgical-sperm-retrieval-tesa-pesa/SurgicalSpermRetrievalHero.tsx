@@ -3,7 +3,10 @@
 import Link from "next/link";
 import { FaStar } from "react-icons/fa";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import HeroBannerImage from "@/components/ui/HeroBannerImage";
+import {
+  HeroFullWidthBanner,
+  HeroMobileBanner,
+} from "@/components/ui/HeroFullWidthBanner";
 import HeroCounterBar, {
   type HeroCounterItem,
 } from "@/components/ui/HeroCounterBar";
@@ -34,12 +37,14 @@ const counters: HeroCounterItem[] = [
 
 export default function SurgicalSpermRetrievalHero() {
   return (
-    <section
-      className="relative overflow-hidden pt-3 pb-6 sm:pt-4 sm:pb-8 lg:pt-5 lg:pb-9"
+    <>
+      <section
+      className="relative overflow-hidden flex flex-col pb-8 lg:min-h-[calc(100svh-var(--site-header-h,8.75rem))] lg:justify-center lg:py-10"
       style={{
         background: "var(--pink)",
       }}
     >
+      <HeroFullWidthBanner src="/pageBanner/M0500409.JPG" alt="Dr. Mona Dahiya - Surgical Sperm Retrieval" />
       <div
         aria-hidden
         className="pointer-events-none absolute top-0 right-[8%] h-[280px] w-[280px] -translate-y-1/4 rounded-full opacity-35 blur-3xl"
@@ -57,8 +62,8 @@ export default function SurgicalSpermRetrievalHero() {
         }}
       />
 
-      <div className="page-container relative grid grid-cols-1 items-start gap-6 sm:gap-7 lg:grid-cols-12 lg:items-start lg:gap-6 xl:gap-8">
-        <div className="min-w-0 lg:col-span-7">
+      <div className="page-container relative z-10 w-full pt-5 lg:pt-0">
+        <div className="lg:max-w-[30rem] xl:max-w-[38rem]">
           <Breadcrumb
             items={[
               { label: "Treatments", href: "/our-services" },
@@ -113,16 +118,14 @@ export default function SurgicalSpermRetrievalHero() {
           </Stagger>
         </div>
 
-        <HeroBannerImage
-          src="/images/ivf-noida.jpg"
-          alt="Dr. Mona Dahiya - Surgical Sperm Retrieval"
-          objectPosition="object-top"
-        />
-      </div>
-
-      <div className="page-container relative">
-        <HeroCounterBar items={counters} />
+        <HeroMobileBanner src="/pageBanner/M0500409.JPG" alt="Dr. Mona Dahiya - Surgical Sperm Retrieval" />
       </div>
     </section>
+      <section className="py-5 sm:py-6">
+        <div className="page-container relative">
+          <HeroCounterBar items={counters} />
+        </div>
+      </section>
+    </>
   );
 }

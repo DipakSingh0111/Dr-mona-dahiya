@@ -4,7 +4,10 @@ import Breadcrumb from "@/components/ui/Breadcrumb";
 import Link from "next/link";
 
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
-import HeroBannerImage from "@/components/ui/HeroBannerImage";
+import {
+  HeroFullWidthBanner,
+  HeroMobileBanner,
+} from "@/components/ui/HeroFullWidthBanner";
 import HeroCounterBar from "@/components/ui/HeroCounterBar";
 
 export default function IuiGhaziabadHero() {
@@ -18,12 +21,14 @@ export default function IuiGhaziabadHero() {
   ];
 
   return (
-    <section
-      className="relative overflow-x-hidden pt-4 pb-10 sm:pt-5 sm:pb-12 lg:pt-6 lg:pb-14"
+    <>
+      <section
+      className="relative overflow-hidden flex flex-col pb-8 lg:min-h-[calc(100svh-var(--site-header-h,8.75rem))] lg:justify-center lg:py-10"
       style={{
         background: "var(--pink)",
       }}
     >
+      <HeroFullWidthBanner src="/pageBanner/M0500385.JPG" alt="Dr. Mona Dahiya — IUI Treatment in Ghaziabad" />
       {/* Decorative ambient background glows */}
       <div
         aria-hidden
@@ -42,9 +47,9 @@ export default function IuiGhaziabadHero() {
         }}
       />
 
-      <div className="page-container relative grid grid-cols-1 items-start gap-6 sm:gap-7 lg:grid-cols-12 lg:items-start lg:gap-6 xl:gap-8">
+      <div className="page-container relative z-10 w-full pt-5 lg:pt-0">
         {/* Left Column */}
-        <div className="min-w-0 lg:col-span-7">
+        <div className="lg:max-w-[30rem] xl:max-w-[38rem]">
           {/* Breadcrumb */}
           <Breadcrumb
           items={[
@@ -109,14 +114,12 @@ export default function IuiGhaziabadHero() {
         </div>
 
         {/* Doctor Photo in Rounded Card — Standard uniform size */}
-        <HeroBannerImage
-          src="/images/IUI-treatment.jpg"
-          alt="Dr. Mona Dahiya — IUI Treatment in Ghaziabad"
-        />
+        <HeroMobileBanner src="/pageBanner/M0500385.JPG" alt="Dr. Mona Dahiya — IUI Treatment in Ghaziabad" />
       </div>
-
-      <div className="page-container relative">
-        <HeroCounterBar
+    </section>
+      <section className="py-5 sm:py-6">
+        <div className="page-container relative">
+          <HeroCounterBar
           items={[
             { target: 25, suffix: "+", label: "years of experience" },
             { target: 10000, label: "IUI Cycles" },
@@ -124,7 +127,8 @@ export default function IuiGhaziabadHero() {
             { target: 4.9, decimals: 1, label: "Stars Rating On Google" },
           ]}
         />
-      </div>
-    </section>
+        </div>
+      </section>
+    </>
   );
 }

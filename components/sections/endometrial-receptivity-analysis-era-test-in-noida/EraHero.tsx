@@ -2,7 +2,10 @@
 
 import Link from "next/link";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import HeroBannerImage from "@/components/ui/HeroBannerImage";
+import {
+  HeroFullWidthBanner,
+  HeroMobileBanner,
+} from "@/components/ui/HeroFullWidthBanner";
 import HeroCounterBar from "@/components/ui/HeroCounterBar";
 import { Stagger, StaggerItem } from "@/components/ui/Reveal";
 
@@ -15,12 +18,14 @@ export default function EraHero() {
   ];
 
   return (
-    <section
-      className="relative flex flex-col justify-center overflow-hidden py-8 sm:py-10 lg:min-h-[calc(100svh-var(--site-header-h,8.75rem))] lg:py-8 xl:py-10"
+    <>
+      <section
+      className="relative flex flex-col justify-center overflow-hidden py-8 sm:py-10 lg:min-h-[calc(100svh-var(--site-header-h,8.75rem))] lg:py-8 xl:py-10 flex flex-col pb-8 lg:min-h-[calc(100svh-var(--site-header-h,8.75rem))] lg:justify-center lg:py-10"
       style={{ background: "var(--pink)" }}
     >
-      <div className="page-container relative grid grid-cols-1 items-start gap-6 sm:gap-7 lg:grid-cols-12 lg:items-start lg:gap-8 xl:gap-12">
-        <div className="min-w-0 lg:col-span-7">
+      <HeroFullWidthBanner src="/pageBanner/M0500376.JPG" alt="Dr. Mona Dahiya — Personalized Endometrial Receptivity Analysis (ERA Test) in Noida & Delhi NCR" />
+      <div className="page-container relative z-10 w-full pt-5 lg:pt-0">
+        <div className="lg:max-w-[30rem] xl:max-w-[38rem]">
           <Breadcrumb
             items={[
               { label: "Treatments", href: "/our-services" },
@@ -84,15 +89,12 @@ export default function EraHero() {
           </Stagger>
         </div>
 
-        <HeroBannerImage
-          src="/images/VID00029.jpeg"
-          alt="Dr. Mona Dahiya — Personalized Endometrial Receptivity Analysis (ERA Test) in Noida & Delhi NCR"
-          objectPosition="object-top"
-        />
+        <HeroMobileBanner src="/pageBanner/M0500376.JPG" alt="Dr. Mona Dahiya — Personalized Endometrial Receptivity Analysis (ERA Test) in Noida & Delhi NCR" />
       </div>
-
-      <div className="page-container relative">
-        <HeroCounterBar
+    </section>
+      <section className="py-5 sm:py-6">
+        <div className="page-container relative">
+          <HeroCounterBar
           items={[
             { target: 25000, suffix: "+", label: "families helped" },
             { target: 25, suffix: "+", label: "years experience" },
@@ -100,7 +102,8 @@ export default function EraHero() {
             { target: 15000, suffix: "+", label: "IVF cycles performed" },
           ]}
         />
-      </div>
-    </section>
+        </div>
+      </section>
+    </>
   );
 }

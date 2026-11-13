@@ -1,10 +1,12 @@
 "use client";
-import Breadcrumb from "@/components/ui/Breadcrumb";
 
 import Link from "next/link";
-
+import Breadcrumb from "@/components/ui/Breadcrumb";
+import {
+  HeroFullWidthBanner,
+  HeroMobileBanner,
+} from "@/components/ui/HeroFullWidthBanner";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
-import HeroBannerImage from "@/components/ui/HeroBannerImage";
 import AboutScrollTop from "./AboutScrollTop";
 
 export default function AboutHero() {
@@ -17,38 +19,25 @@ export default function AboutHero() {
 
   return (
     <section
-      className="relative overflow-x-hidden pt-4 pb-10 sm:pt-5 sm:pb-12 lg:pt-6 lg:pb-14"
-      style={{
-        background:
-          "var(--pink)",
-      }}
+      className="relative overflow-hidden flex flex-col pb-8 lg:min-h-[calc(100svh-var(--site-header-h,8.75rem))] lg:justify-center lg:py-10"
+      style={{ background: "var(--pink)" }}
     >
       <AboutScrollTop />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -top-24 right-[8%] h-[320px] w-[320px] rounded-full opacity-35 blur-3xl"
-        style={{
-          background:
-            "radial-gradient(circle, rgba(255,107,157,0.4) 0%, rgba(232,62,116,0.12) 50%, transparent 70%)",
-        }}
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute bottom-0 left-[-5%] h-[280px] w-[280px] rounded-full opacity-25 blur-3xl"
-        style={{
-          background:
-            "radial-gradient(circle, rgba(232,62,116,0.1) 0%, transparent 68%)",
-        }}
+
+      {/* Desktop full-width background banner */}
+      <HeroFullWidthBanner
+        src="/pageBanner/M0500440.JPG"
+        alt="Dr. Mona Dahiya - Senior Reproductive Endocrinologist & Fertility Specialist"
       />
 
-      <div className="page-container relative grid grid-cols-1 items-start gap-6 sm:gap-7 lg:grid-cols-12 lg:items-start lg:gap-6 xl:gap-8">
-        <div className="min-w-0 lg:col-span-7">
+      <div className="page-container relative z-10 w-full pt-5 lg:pt-0">
+        <div className="lg:max-w-[30rem] xl:max-w-[38rem]">
           <Breadcrumb
-          items={[
-            { label: "About Dr. Mona", href: "/about-mona-dahiya" },
-            { label: "Credentials & Bio" }
-          ]}
-        />
+            items={[
+              { label: "About Dr. Mona", href: "/about-mona-dahiya" },
+              { label: "Credentials & Bio" },
+            ]}
+          />
 
           <Reveal variant="slideLeft">
             <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">
@@ -59,14 +48,14 @@ export default function AboutHero() {
               Dr. Mona Dahiya - Senior Reproductive Endocrinologist &amp; Fertility Specialist
             </h1>
 
-            <p className="mt-3.5 max-w-xl text-[13px] leading-relaxed text-ink/75 sm:mt-4 sm:text-[14px]">
+            <p className="mt-3.5 max-w-xl text-[13px] leading-relaxed text-ink/80 sm:mt-4 sm:text-[14px]">
               Dr. Mona Dahiya is a senior reproductive endocrinologist &amp; infertility specialist with 25+ years of experience. She is the Founder Director of Little Angel IVF. She has successfully treated more than 25000 couples from India and abroad.
             </p>
 
             <div className="mt-4 flex flex-wrap items-center gap-2 sm:mt-5 sm:gap-2.5">
               <a
                 href="#book-consultation"
-                className="inline-flex items-center justify-center rounded-full border border-rose/20 bg-white/75 backdrop-blur-sm px-3.5 py-2 text-[12px] font-semibold whitespace-nowrap text-ink shadow-[0_4px_14px_rgba(15,36,56,0.05)] transition-all hover:border-rose/50 hover:bg-white hover:text-rose active:scale-95 sm:px-5 sm:py-2.5 sm:text-[13px]"
+                className="inline-flex items-center justify-center rounded-full border border-rose/20 bg-white/85 px-3.5 py-2 text-[12px] font-semibold whitespace-nowrap text-ink shadow-[0_4px_14px_rgba(15,36,56,0.05)] backdrop-blur-sm transition-all hover:border-rose/50 hover:bg-white hover:text-rose active:scale-95 sm:px-5 sm:py-2.5 sm:text-[13px]"
               >
                 Book In-Clinic Consultation
               </a>
@@ -93,7 +82,7 @@ export default function AboutHero() {
             >
               {badges.map((badge) => (
                 <StaggerItem key={badge}>
-                  <span className="inline-flex items-center rounded-full border border-rose/30 bg-white px-2.5 py-1 text-[10.5px] font-medium whitespace-nowrap text-ink/90 sm:px-3 sm:py-1.5 sm:text-[12px]">
+                  <span className="inline-flex items-center rounded-full border border-rose/30 bg-white/95 px-2.5 py-1 text-[10.5px] font-medium whitespace-nowrap text-ink/90 shadow-xs sm:px-3 sm:py-1.5 sm:text-[12px]">
                     {badge}
                   </span>
                 </StaggerItem>
@@ -102,8 +91,9 @@ export default function AboutHero() {
           </Reveal>
         </div>
 
-        <HeroBannerImage
-          src="/images/ivf-noida-01.jpg"
+        {/* Mobile / tablet full-width banner */}
+        <HeroMobileBanner
+          src="/pageBanner/M0500440.JPG"
           alt="Dr. Mona Dahiya - Senior Reproductive Endocrinologist & Fertility Specialist"
         />
       </div>

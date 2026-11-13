@@ -58,7 +58,7 @@ export function ClinicAppointmentCard({
   directionsLabel = "Directions",
   clinicLinkLabel,
   bookButtonLabel = "Book Appointment",
-  bookHref = "#book-consultation",
+  bookHref = "/book-appointment",
 }: {
   clinic: ClinicCardData;
   directionsLabel?: string;
@@ -146,12 +146,12 @@ export function ClinicAppointmentCard({
           </div>
         )}
 
-        <a
+        <Link
           href={bookHref}
           className="inline-flex w-full items-center justify-center rounded-full border border-rose bg-white py-2.5 text-[13px] font-semibold text-rose shadow-sm transition-all hover:bg-[#fff0f5]"
         >
           {bookButtonLabel}
-        </a>
+        </Link>
       </div>
     </article>
   );
@@ -186,7 +186,7 @@ export default function ClinicsAppointmentCards({
   directionsLabel,
   clinicLinkLabel,
   bookButtonLabel,
-  bookHref = "#book-consultation",
+  bookHref = "/book-appointment",
 }: ClinicsAppointmentCardsProps) {
   let list = clinics ?? defaultClinics;
 

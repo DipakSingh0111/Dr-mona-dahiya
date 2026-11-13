@@ -644,14 +644,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   background-color: var(--pink);
 }
 
-/* Even-positioned section blocks on inner pages -> Soft Light Off-White (matching Home OurServices) */
+/* Even-positioned section blocks on inner pages -> Clean White (#ffffff) */
 main:not(.home-main) > :nth-child(even),
 main:not(.home-main) > div:nth-child(even),
 main:not(.home-main) > div:nth-child(even) > section,
 main:not(.home-main) > div:nth-child(even) > div > section,
 main:not(.home-main) > :nth-child(even) > section,
 main:not(.home-main) > section:nth-child(even) {
-  background-color: #f5f6f8 !important;
+  background-color: #ffffff !important;
 }
 
 /* Odd-positioned section blocks on inner pages (excluding Hero/first-child) -> Soft Pink */
@@ -667,7 +667,7 @@ main:not(.home-main) > section:nth-child(odd):not(:first-child) {
 /* Explicit section class overrides always take precedence over nth-child rules */
 main:not(.home-main) section.bg-white.bg-white.bg-white,
 main:not(.home-main) > div.bg-white.bg-white.bg-white {
-  background-color: #f5f6f8 !important;
+  background-color: #ffffff !important;
   border-top: 1px solid rgba(232, 62, 116, 0.16);
   border-bottom: 1px solid rgba(232, 62, 116, 0.16);
 }

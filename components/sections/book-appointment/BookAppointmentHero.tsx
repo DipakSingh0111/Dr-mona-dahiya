@@ -1,7 +1,10 @@
 "use client";
 
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import HeroBannerImage from "@/components/ui/HeroBannerImage";
+import {
+  HeroFullWidthBanner,
+  HeroMobileBanner,
+} from "@/components/ui/HeroFullWidthBanner";
 import HeroCounterBar from "@/components/ui/HeroCounterBar";
 import siteData from "@/data/site.json";
 import { Reveal } from "@/components/ui/Reveal";
@@ -12,12 +15,14 @@ export default function BookAppointmentHero() {
   const data = siteData.bookAppointmentPage;
 
   return (
-    <section
-      className="relative overflow-x-hidden pt-5 pb-10 sm:pt-6 sm:pb-12 lg:pt-7 lg:pb-14"
+    <>
+      <section
+      className="relative overflow-hidden flex flex-col pb-8 lg:min-h-[calc(100svh-var(--site-header-h,8.75rem))] lg:justify-center lg:py-10"
       style={{
         background: "var(--pink)",
       }}
     >
+      <HeroFullWidthBanner src={data.image} alt={`Dr. Mona Dahiya - ${data.title}`} />
       {/* Ambient background glows */}
       <div
         aria-hidden
@@ -36,8 +41,8 @@ export default function BookAppointmentHero() {
         }}
       />
 
-      <div className="page-container relative grid grid-cols-1 items-start gap-7 sm:gap-8 lg:grid-cols-12 lg:items-center lg:gap-8 xl:gap-10">
-        <div className="min-w-0 lg:col-span-7">
+      <div className="page-container relative z-10 w-full pt-5 lg:pt-0">
+        <div className="lg:max-w-[30rem] xl:max-w-[38rem]">
           <Breadcrumb
             items={[
               { label: "Patient Resources", href: "/ivf-faqs" },
@@ -95,18 +100,17 @@ export default function BookAppointmentHero() {
         </div>
 
         {/* Doctor Photo */}
-        <HeroBannerImage
-          src={data.image}
-          alt={`Dr. Mona Dahiya - ${data.title}`}
-          objectPosition="object-center"
-        />
+        <HeroMobileBanner src={data.image} alt={`Dr. Mona Dahiya - ${data.title}`} />
       </div>
 
       {/* Counter bar */}
-      <div className="page-container mt-8 sm:mt-10 lg:mt-12">
-        <HeroCounterBar items={data.counter} />
-      </div>
     </section>
+      <section className="py-5 sm:py-6">
+        <div className="page-container relative">
+          <HeroCounterBar items={data.counter} />
+        </div>
+      </section>
+    </>
   );
 }
 

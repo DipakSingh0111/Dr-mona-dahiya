@@ -9,6 +9,10 @@ type Props = {
   query: string;
 };
 
+const areaDetailHrefMap: Record<string, string> = {
+  "Sector 18": "/location/best-ivf-doctor-in-sector-18-noida",
+};
+
 function matchesQuery(label: string, query: string) {
   if (!query.trim()) return true;
   return label.toLowerCase().includes(query.trim().toLowerCase());
@@ -91,16 +95,23 @@ export default function LocationsDirectory({ query }: Props) {
                         {group.areas.map((area) => {
                           const highlighted =
                             q.length > 0 && matchesQuery(area, q);
+                          const areaHref = areaDetailHrefMap[area];
+                          const pillClass = `rounded-full border px-3.5 py-2 text-[12.5px] font-medium transition-all sm:text-[13px] ${
+                            highlighted
+                              ? "border-rose/70 bg-rose/20 text-white ring-1 ring-rose/35"
+                              : "border-[#fde2ec] bg-white text-ink hover:border-rose/40 hover:bg-rose/10 hover:text-rose"
+                          }`;
+
+                          if (areaHref) {
+                            return (
+                              <Link key={area} href={areaHref} className={pillClass}>
+                                {area}
+                              </Link>
+                            );
+                          }
+
                           return (
-                            <a
-                              key={area}
-                              href="#"
-                              className={`rounded-full border px-3.5 py-2 text-[12.5px] font-medium transition-all sm:text-[13px] ${
-                                highlighted
-                                  ? "border-rose/70 bg-rose/20 text-white ring-1 ring-rose/35"
-                                  : "border-[#fde2ec] bg-white text-ink hover:border-rose/40 hover:bg-rose/10 hover:text-rose"
-                              }`}
-                            >
+                            <a key={area} href="#" className={pillClass}>
                               {area}
                             </a>
                           );
