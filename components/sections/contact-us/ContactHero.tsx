@@ -9,14 +9,13 @@ import { Reveal } from "@/components/ui/Reveal";
 export default function ContactHero() {
   return (
     <section
-      className="relative overflow-hidden flex flex-col pb-8 lg:min-h-[calc(100svh-var(--site-header-h,8.75rem))] lg:justify-center lg:py-10"
+      className="relative overflow-hidden flex flex-col justify-center pb-6 sm:pb-8 lg:pb-0"
       style={{ background: "var(--pink)" }}
     >
       {/* Full-width background doctor banner from pageBanner */}
       <HeroFullWidthBanner
         src="/pageBanner/M0500440.JPG"
         alt="Dr. Mona Dahiya - Contact In-Clinic and Online Consultation"
-        objectPosition="object-[72%_25%] md:object-[72%_22%] lg:object-[78%_35%] xl:object-[75%_35%]"
       />
 
       {/* Ambient background glows */}
@@ -37,8 +36,8 @@ export default function ContactHero() {
         }}
       />
 
-      <div className="page-container relative z-10 w-full pt-5 lg:pt-0">
-        <div className="lg:max-w-[30rem] xl:max-w-[38rem]">
+      <div className="page-container relative z-10 w-full pt-4 sm:pt-5 lg:pt-0">
+        <div className="lg:max-w-[28rem] xl:max-w-[34rem] 2xl:max-w-[38rem]">
           <Breadcrumb
             items={[
               { label: "Home", href: "/" },
@@ -68,7 +67,7 @@ export default function ContactHero() {
           </Reveal>
 
           <Reveal variant="fadeUp" delay={0.24}>
-            <div className="mt-6 flex flex-wrap items-center gap-3">
+            <div className="mt-4 flex flex-wrap items-center gap-2.5 sm:mt-5 sm:gap-3.5">
               <a
                 href="#request-appointment"
                 className="inline-flex items-center gap-2 rounded-full bg-rose px-5 py-2.5 text-xs sm:text-sm font-semibold text-white shadow-[0_10px_24px_rgba(232,62,116,0.28)] transition hover:bg-rose-dark active:scale-95"

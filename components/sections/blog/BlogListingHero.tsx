@@ -11,7 +11,7 @@ import { Reveal } from "@/components/ui/Reveal";
 export default function BlogListingHero() {
   return (
     <section
-      className="relative flex flex-col overflow-hidden pb-8 lg:min-h-[calc(100svh-var(--site-header-h,8.75rem))] lg:justify-center lg:py-10"
+        className="relative overflow-hidden flex flex-col justify-center pb-6 sm:pb-8 lg:pb-0"
       style={{ background: "var(--pink)" }}
     >
       <HeroFullWidthBanner
@@ -19,8 +19,8 @@ export default function BlogListingHero() {
         alt="Dr. Mona Dahiya — Fertility & IVF Blog"
       />
 
-      <div className="page-container relative z-10 w-full pt-5 lg:pt-0">
-        <div className="lg:max-w-[30rem] xl:max-w-[38rem]">
+      <div className="page-container relative z-10 w-full pt-4 sm:pt-5 lg:pt-0">
+        <div className="lg:max-w-[28rem] xl:max-w-[34rem] 2xl:max-w-[38rem]">
           <Breadcrumb items={[{ label: "Fertility & IVF Blog" }]} />
 
           <Reveal variant="slideLeft">
@@ -40,7 +40,7 @@ export default function BlogListingHero() {
             </p>
           </Reveal>
 
-          <div className="mt-6 flex flex-wrap items-center gap-3 sm:gap-4">
+          <div className="mt-4 flex flex-wrap items-center gap-2.5 sm:mt-5 sm:gap-3.5">
             <a
               href="#book-consultation"
               className="inline-flex items-center justify-center rounded-full border border-rose/20 bg-white/75 px-6 py-2.5 text-[13.5px] font-bold text-ink shadow-[0_4px_14px_rgba(15,36,56,0.05)] backdrop-blur-sm transition-all hover:border-rose/50 hover:bg-white hover:text-rose active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"

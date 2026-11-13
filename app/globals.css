@@ -264,6 +264,60 @@ main:not(.home-main) table tbody td {
   }
 }
 
+/* Full-width page banner — fits laptop screen fold so banner shows properly without scroll */
+@media (min-width: 1024px) {
+  section:has(.hero-fullwidth-banner) {
+    height: calc(100svh - var(--site-header-h, 8.75rem)) !important;
+    min-height: 480px !important;
+    max-height: calc(100svh - var(--site-header-h, 8.75rem)) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    padding-top: clamp(1.5rem, 3.2svh, 2.5rem) !important;
+    padding-bottom: clamp(1rem, 2svh, 1.5rem) !important;
+    overflow: hidden !important;
+  }
+
+  section:has(.hero-fullwidth-banner) nav[aria-label="Breadcrumb"] {
+    margin-bottom: clamp(0.75rem, 1.5svh, 1.25rem) !important;
+  }
+}
+
+@media (min-width: 1024px) and (max-height: 820px) {
+  section:has(.hero-fullwidth-banner) {
+    padding-top: clamp(1.25rem, 2.8svh, 1.85rem) !important;
+    padding-bottom: clamp(0.85rem, 1.8svh, 1.25rem) !important;
+  }
+
+  section:has(.hero-fullwidth-banner) nav[aria-label="Breadcrumb"] {
+    margin-bottom: 0.65rem !important;
+  }
+
+  section:has(.hero-fullwidth-banner) h1 {
+    font-size: clamp(1.65rem, 2.2svh, 2.15rem) !important;
+    line-height: 1.18 !important;
+  }
+
+  section:has(.hero-fullwidth-banner) h1 ~ p,
+  section:has(.hero-fullwidth-banner) p {
+    margin-top: 0.4rem !important;
+    line-height: 1.45 !important;
+    font-size: clamp(12.5px, 1.4svh, 14px) !important;
+  }
+
+  section:has(.hero-fullwidth-banner) :is(.mt-4, .mt-5, .mt-6) {
+    margin-top: 0.6rem !important;
+  }
+
+  section:has(.hero-fullwidth-banner) a.rounded-full {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+    font-size: 13px !important;
+  }
+}
+
 /* Dark left for copy, clear center so Hero-banner people + Times Network show */
 .hero-overlay {
   background:

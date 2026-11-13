@@ -18,7 +18,7 @@ export default function LowAmhHero() {
   return (
     <>
       <section
-      className="relative overflow-hidden flex flex-col pb-8 lg:min-h-[calc(100svh-var(--site-header-h,8.75rem))] lg:justify-center lg:py-10"
+        className="relative overflow-hidden flex flex-col justify-center pb-6 sm:pb-8 lg:pb-0"
       style={{ background: "var(--pink)" }}
     >
       <HeroFullWidthBanner src="/pageBanner/M0500369.JPG" alt="Dr. Mona Dahiya - Low AMH Treatment in Noida, Delhi and Ghaziabad" />
@@ -31,8 +31,8 @@ export default function LowAmhHero() {
         }}
       />
 
-      <div className="page-container relative z-10 w-full pt-5 lg:pt-0">
-        <div className="lg:max-w-[30rem] xl:max-w-[38rem]">
+      <div className="page-container relative z-10 w-full pt-4 sm:pt-5 lg:pt-0">
+        <div className="lg:max-w-[28rem] xl:max-w-[34rem] 2xl:max-w-[38rem]">
           <Breadcrumb
             items={[
               { label: "Conditions Treated", href: "/female-infertility-treatment" },

@@ -144,6 +144,8 @@ export default function IvfProtocolAndWhy() {
                   src="/images/ivf-treatment.jpg"
                   alt="Dr. Mona Dahiya - IVF Treatment Specialist"
                   fill
+                  quality={100}
+                  unoptimized
                   sizes="(max-width: 1024px) 100vw, 42vw"
                   className="object-cover object-center"
                   priority

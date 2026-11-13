@@ -19,7 +19,7 @@ export default function DfiHero() {
   return (
     <>
       <section
-      className="relative overflow-hidden flex flex-col pb-8 lg:min-h-[calc(100svh-var(--site-header-h,8.75rem))] lg:justify-center lg:py-10"
+        className="relative overflow-hidden flex flex-col justify-center pb-6 sm:pb-8 lg:pb-0"
       style={{ background: "var(--pink)" }}
     >
       <HeroFullWidthBanner src="/pageBanner/M0500407.JPG" alt="Dr. Mona Dahiya - Sperm DNA Fragmentation Index (DFI) Testing in Delhi, Noida & Ghaziabad" />
@@ -32,8 +32,8 @@ export default function DfiHero() {
         }}
       />
 
-      <div className="page-container relative z-10 w-full pt-5 lg:pt-0">
-        <div className="lg:max-w-[30rem] xl:max-w-[38rem]">
+      <div className="page-container relative z-10 w-full pt-4 sm:pt-5 lg:pt-0">
+        <div className="lg:max-w-[28rem] xl:max-w-[34rem] 2xl:max-w-[38rem]">
           <Breadcrumb
             items={[
               { label: "Conditions Treated", href: "/male-infertility-treatment" },
@@ -59,7 +59,7 @@ export default function DfiHero() {
             </p>
           </Reveal>
 
-          <div className="mt-6 flex flex-wrap items-center gap-3 sm:gap-4">
+          <div className="mt-4 flex flex-wrap items-center gap-2.5 sm:mt-5 sm:gap-3.5">
             <a
               href="#book-consultation"
               className="inline-flex items-center justify-center rounded-full border border-rose/20 bg-white/75 backdrop-blur-sm px-6 py-2.5 text-[13.5px] font-bold text-ink shadow-[0_4px_14px_rgba(15,36,56,0.05)] transition-all hover:border-rose/50 hover:bg-white hover:text-rose active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"
@@ -76,7 +76,7 @@ export default function DfiHero() {
 
           <Stagger
             delay={0.05}
-            className="mt-5 flex flex-wrap items-center gap-2 sm:gap-2.5"
+            className="mt-3.5 flex flex-wrap items-center gap-1.5 sm:mt-4 sm:gap-2"
           >
             {badges.map((badge) => (
               <StaggerItem key={badge}>
