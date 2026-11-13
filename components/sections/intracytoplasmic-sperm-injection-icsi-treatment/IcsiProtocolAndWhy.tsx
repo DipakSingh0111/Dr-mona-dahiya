@@ -95,8 +95,8 @@ export default function IcsiProtocolAndWhy() {
           title="Reasons To Choose Dr. Mona For ICSI"
         />
 
-        <div className="mt-7 grid grid-cols-1 items-start gap-6 lg:grid-cols-12 lg:gap-8">
-          <div className="flex flex-col gap-3.5 sm:gap-4 lg:col-span-7">
+        <div className="mt-7 grid grid-cols-1 items-center gap-6 lg:grid-cols-12 lg:gap-8">
+          <div className="flex flex-col justify-center gap-4 sm:gap-5 lg:col-span-7">
             {whyPoints.map((point, idx) => (
               <Reveal key={point.title} variant="fadeUp" delay={idx * 0.05}>
                 <WhyPointRow {...point} />
@@ -104,15 +104,18 @@ export default function IcsiProtocolAndWhy() {
             ))}
           </div>
 
-          <div className="relative mx-auto w-full max-w-[380px] lg:col-span-5 lg:mx-0 lg:max-w-none">
+          <div className="relative mx-auto w-full max-w-[340px] sm:max-w-[380px] lg:col-span-5 lg:mx-0 lg:max-w-[390px]">
             <Reveal variant="scaleIn" delay={0.08}>
-              <div className="relative overflow-hidden rounded-[20px] border-[3px] border-white/70 shadow-[0_20px_50px_rgba(0,10,40,0.45)] sm:rounded-[24px]">
+              <div className="relative aspect-[5/6] w-full overflow-hidden rounded-[20px] border-[3px] border-white/70 shadow-[0_20px_50px_rgba(0,10,40,0.45)] sm:rounded-[24px]">
                 <Image
-                  src="/images/about-mona-dahiya/dr-mona-dahiya.jpg"
-                  alt="Dr. Mona Dahiya - ICSI specialist"
-                  width={480}
-                  height={560}
-                  className="max-h-[420px] w-full object-cover object-top sm:max-h-[480px]"
+                  src="/images/ICSI.jpg"
+                  alt="Dr. Mona Dahiya - ICSI Specialist"
+                  fill
+                  quality={100}
+                  unoptimized
+                  sizes="(max-width: 1024px) 100vw, 42vw"
+                  className="object-cover object-top"
+                  priority
                 />
               </div>
             </Reveal>
