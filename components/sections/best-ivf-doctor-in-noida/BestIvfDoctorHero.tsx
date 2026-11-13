@@ -25,7 +25,7 @@ export default function BestIvfDoctorHero() {
         style={{ background: "var(--pink)" }}
       >
         <HeroFullWidthBanner
-          src="/pageBanner/M0500388.JPG"
+          src="/pageBanner/M0500389.JPG"
           alt="Dr. Mona Dahiya - Best IVF Doctor in Noida"
           objectPosition="object-[72%_25%] md:object-[72%_22%] lg:object-[82%_47%] xl:object-[80%_47%] 2xl:object-[76%_44%]"
         />
@@ -108,7 +108,7 @@ export default function BestIvfDoctorHero() {
           </Stagger>
         </div>
 
-        <HeroMobileBanner src="/pageBanner/M0500365.JPG" alt="Dr. Mona Dahiya - Best IVF Doctor in Noida" />
+        <HeroMobileBanner src="/pageBanner/M0500389.JPG" alt="Dr. Mona Dahiya - Best IVF Doctor in Noida" />
       </div>
     </section>
       <section className="py-5 sm:py-6">

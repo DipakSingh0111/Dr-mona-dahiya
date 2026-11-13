@@ -14,7 +14,7 @@ export default function ContactHero() {
     >
       {/* Full-width background doctor banner from pageBanner */}
       <HeroFullWidthBanner
-        src="/pageBanner/M0500440.JPG"
+        src="/pageBanner/M0500441.JPG"
         alt="Dr. Mona Dahiya - Contact In-Clinic and Online Consultation"
       />
 

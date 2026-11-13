@@ -108,7 +108,7 @@ export default function DisclaimerHero() {
           {/* Right Column: Hero Doctor Photo */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end">
             <HeroBannerImage
-              src="/pageBanner/M0500440.JPG"
+              src="/pageBanner/M0500442.JPG"
               alt="Dr. Mona Dahiya - Medical & Clinical Information Disclaimer"
               priority
             />

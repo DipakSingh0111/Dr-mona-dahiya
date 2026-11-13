@@ -43,11 +43,11 @@ export default function EndometriosisHero() {
       />
 
       <div className="page-container relative z-10 w-full pt-4 sm:pt-5 lg:pt-0">
-        <div className="lg:max-w-[28rem] xl:max-w-[34rem] 2xl:max-w-[38rem]">
+        <div className="lg:max-w-[34rem] xl:max-w-[40rem] 2xl:max-w-[45rem]">
           <Breadcrumb
             items={[
               { label: "Conditions Treated", href: "/female-infertility-treatment" },
-              { label: "Endometriosis & Adenomyosis Fertility Treatment" },
+              { label: "Endometriosis & Adenomyosis" },
             ]}
           />
 
@@ -56,21 +56,12 @@ export default function EndometriosisHero() {
               Living with pain and wanting to get pregnant
             </p>
 
-            <h1 className="font-serif mt-1.5 max-w-[38rem] text-[1.65rem] leading-[1.18] font-normal tracking-tight text-ink sm:text-[2.1rem] lg:text-[2.35rem] xl:text-[2.6rem]">
-              Endometriosis &amp;
-              <br />
-              Adenomyosis Fertility
-              <br />
-              Treatment in Delhi,
-              <br />
-              Noida &amp; Ghaziabad
+            <h1 className="font-serif mt-1.5 max-w-[42rem] text-[1.85rem] leading-[1.15] font-normal tracking-tight text-ink sm:text-[2.35rem] lg:text-[2.75rem] xl:text-[3.1rem]">
+              Endometriosis &amp; Adenomyosis Fertility Treatment in Delhi, Noida &amp; Ghaziabad
             </h1>
 
-            <p className="mt-3.5 max-w-[36rem] text-[13.5px] leading-relaxed text-ink/80 sm:text-[15px]">
-              Suffering from painful periods and wanting to get pregnant. Dr.
-              Mona Dahiya will help you understand what your options are by
-              looking at your age, egg reserve and pain. We can opt for certain
-              procedures. Use medications and even IVF if needed!
+            <p className="mt-3.5 max-w-[38rem] text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px] lg:text-[15.5px]">
+              Suffering from painful periods and wanting to get pregnant. Dr. Mona Dahiya will help you understand what your options are by looking at your age, egg reserve and pain. We can opt for certain procedures, use medications and even IVF if needed!
             </p>
           </Reveal>
 
