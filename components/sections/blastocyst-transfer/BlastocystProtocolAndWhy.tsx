@@ -117,9 +117,8 @@ export function BlastocystWhy() {
             eyebrow="Our Expertise"
             title={
               <>
-                Why Choose Dr.
-                <br className="hidden sm:inline" /> Mona Dahiya for
-                <br className="hidden sm:inline" /> Blastocyst Transfer?
+                Why Choose Dr. Mona Dahiya
+                <br className="hidden sm:inline" /> for Blastocyst Transfer?
               </>
             }
           />
