@@ -21,8 +21,8 @@ const topicGradientMap: Record<string, string> = {
   "ART & Advanced Procedures": "from-blue via-[#0047ca] to-blue-dark text-white",
   "Complex Conditions & Low Ovarian Reserve": "from-rose via-[#b32b55] to-navy text-white",
   "Diet, Lifestyle & Natural Fertility": "from-amber-600 via-[#c25e00] to-rose-dark text-white",
-  "Patient Guides, Regulations & FAQs": "from-blue-dark via-[#0a3273] to-navy text-white",
-  "Choosing Your Doctor & Clinic": "from-navy via-[#0f2d5c] to-blue-dark text-white",
+  "Patient Guides, Regulations & FAQs": "from-[#0284c7] via-[#0369a1] to-blue-dark text-white",
+  "Choosing Your Doctor & Clinic": "from-[#ea580c] via-[#e83e74] to-rose-dark text-white",
 };
 
 export default function BlogListingCatalog() {

@@ -71,12 +71,12 @@ export const FEATURED_PILLAR_GUIDES: Record<string, PillarGuide> = {
   "Choosing Your Doctor & Clinic": {
     topic: "CHOOSING YOUR DOCTOR & CLINIC",
     title:
-      "Experienced IVF Doctor in Noida: Your Complete Guide to Choosing the Right Fertility Specialist",
-    date: "15 Jul 2026",
-    href: "/blog/experienced-ivf-doctor-in-noida",
+      "Best IVF Doctor in Noida 2026: 15 Qualities Every Couple Should Look For Before Starting Treatment",
+    date: "7 Jul 2026",
+    href: "/best-ivf-doctor-in-noida",
     description:
-      "Start here: the most complete guide in this topic. Published 15 Jul 2026.",
-    accent: "blue",
+      "Start here: the most complete guide in this topic. Published 7 Jul 2026.",
+    accent: "rose",
   },
 };
 
@@ -120,7 +120,7 @@ export const BLOG_TOPICS: BlogTopic[] = [
     title: "Choosing Your Doctor & Clinic",
     description:
       "Finding the right IVF specialist in Noida, Delhi and Ghaziabad.",
-    accent: "blue",
+    accent: "rose",
   },
 ];
 
