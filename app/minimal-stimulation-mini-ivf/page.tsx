@@ -96,31 +96,12 @@ export default function MiniIvfPage() {
         <AboutConsultation
           sectionId="book-consultation"
           eyebrow="Next step"
-          title={
-            <>
-              Book an In-Clinic or
-              <br />
-              Online Consultation
-            </>
-          }
-          subtitle={
-            <>
-              Book an in-clinic consultation with Dr. Mona Dahiya in Noida,
-              Ghaziabad or Delhi, or schedule an online consultation to review
-              your reports. Direct line:{" "}
-              <a
-                href="tel:+919267982924"
-                className="font-medium text-blue hover:text-rose"
-              >
-                +91 92679 82924
-              </a>
-              .
-            </>
-          }
+          title="Book an In-Clinic or Online Consultation"
+          subtitle="Book an in-clinic consultation with Dr. Mona Dahiya in Noida, Ghaziabad or Delhi, or schedule an online consultation to review your reports. Direct line: +91 92679 82924."
           appendContacts={false}
           consultationDuration=""
           defaultClinic="Noida"
-          sectionBg="bg-white"
+          sectionBg="bg-pink"
         />
       </SectionReveal>
 
