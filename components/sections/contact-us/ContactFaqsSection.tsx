@@ -1,23 +1,44 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
+import { FaChevronDown } from "react-icons/fa";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
 export default function ContactFaqsSection() {
+  // Store open state for each FAQ so users can toggle them smoothly
+  const [openStates, setOpenStates] = useState<Record<number, boolean>>({
+    0: true, // First FAQ open by default
+  });
+
+  const toggleFaq = (index: number) => {
+    setOpenStates((prev) => ({
+      ...prev,
+      [index]: !prev[index],
+    }));
+  };
+
   const faqs = [
     {
       q: "How can I book an appointment with Dr. Mona Dahiya?",
       a: (
         <>
           If you call or WhatsApp us at{" "}
-          <a href="tel:+919267982924" className="font-semibold text-rose hover:underline">
+          <a
+            href="tel:+919267982924"
+            className="font-semibold text-rose hover:underline"
+          >
             +91 92679 82924
           </a>{" "}
           or email{" "}
-          <a href="mailto:info@drmonadahiya.com" className="font-semibold text-rose hover:underline">
+          <a
+            href="mailto:info@drmonadahiya.com"
+            className="font-semibold text-rose hover:underline"
+          >
             info@drmonadahiya.com
           </a>{" "}
-          our coordinator will verify and confirm the clinic location and appointment slot.
+          our coordinator will verify and confirm the clinic location and
+          appointment slot.
         </>
       ),
     },
@@ -37,8 +58,12 @@ export default function ContactFaqsSection() {
       q: "Does Dr. Mona Dahiya offer online consultations?",
       a: (
         <>
-          Yes, you can. Online consultation fee is ₹1000 within India or US$ 25 if you are staying abroad.{" "}
-          <Link href="/ivf-consultation-online" className="font-semibold text-rose hover:underline">
+          Yes, you can. Online consultation fee is ₹1000 within India or US$ 25
+          if you are staying abroad.{" "}
+          <Link
+            href="/ivf-consultation-online"
+            className="font-semibold text-rose hover:underline"
+          >
             Click Here for Online Consultation
           </Link>
         </>
@@ -49,7 +74,10 @@ export default function ContactFaqsSection() {
       a: (
         <>
           Upload them! You can email them to{" "}
-          <a href="mailto:info@drmonadahiya.com" className="font-semibold text-rose hover:underline">
+          <a
+            href="mailto:info@drmonadahiya.com"
+            className="font-semibold text-rose hover:underline"
+          >
             info@drmonadahiya.com
           </a>{" "}
           or attach them directly on WhatsApp.
@@ -72,9 +100,14 @@ export default function ContactFaqsSection() {
       q: "Can international patients contact Dr. Dahiya?",
       a: (
         <>
-          Yes. You may get started with a remote consultation and review of your files.{" "}
-          <Link href="/international-ivf-patient" className="font-semibold text-rose hover:underline">
-            Click here for information on seeing Dr Dahiya if you live outside of India.
+          Yes. You may get started with a remote consultation and review of
+          your files.{" "}
+          <Link
+            href="/international-ivf-patient"
+            className="font-semibold text-rose hover:underline"
+          >
+            Click here for information on seeing Dr Dahiya if you live outside of
+            India.
           </Link>
         </>
       ),
@@ -85,8 +118,67 @@ export default function ContactFaqsSection() {
     },
   ];
 
+  const leftColumn = faqs.filter((_, i) => i % 2 === 0);
+  const rightColumn = faqs.filter((_, i) => i % 2 !== 0);
+
+  const renderCard = (faq: (typeof faqs)[number], originalIdx: number) => {
+    const isOpen = !!openStates[originalIdx];
+
+    return (
+      <div
+        key={originalIdx}
+        className={`group overflow-hidden rounded-2xl border transition-all duration-300 ease-out ${
+          isOpen
+            ? "border-rose/30 bg-[#fffbfc] shadow-[0_8px_24px_rgba(232,62,116,0.08)] ring-1 ring-rose/20"
+            : "border-rose/15 bg-white shadow-sm hover:border-rose/35 hover:shadow-md"
+        }`}
+      >
+        <button
+          type="button"
+          onClick={() => toggleFaq(originalIdx)}
+          aria-expanded={isOpen}
+          className="flex w-full cursor-pointer items-center justify-between gap-4 p-5 text-left select-none sm:p-6"
+        >
+          <h3
+            className={`font-display text-base sm:text-lg font-bold leading-snug transition-colors duration-200 ${
+              isOpen ? "text-rose" : "text-ink group-hover:text-rose"
+            }`}
+          >
+            {faq.q}
+          </h3>
+          <span
+            className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full border transition-all duration-300 ${
+              isOpen
+                ? "rotate-180 border-rose bg-rose text-white shadow-sm"
+                : "border-rose/20 bg-pink text-rose group-hover:border-rose/50"
+            }`}
+            aria-hidden="true"
+          >
+            <FaChevronDown className="text-xs transition-transform" />
+          </span>
+        </button>
+
+        {/* Smooth CSS Grid Expansion */}
+        <div
+          className={`grid transition-[grid-template-rows,opacity] duration-300 ease-out ${
+            isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+          }`}
+        >
+          <div className="overflow-hidden">
+            <div className="border-t border-rose/10 px-5 pt-3.5 pb-5 text-xs sm:text-sm leading-relaxed text-ink/75 sm:px-6 sm:pb-6">
+              {faq.a}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   return (
-    <section className="relative overflow-hidden py-14 lg:py-20" style={{ background: "var(--pink)" }}>
+    <section
+      className="relative overflow-hidden py-14 lg:py-20"
+      style={{ background: "var(--pink)" }}
+    >
       <div className="page-container relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-10">
           <Reveal variant="fadeUp">
@@ -101,19 +193,22 @@ export default function ContactFaqsSection() {
           </Reveal>
         </div>
 
-        <Stagger className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          {faqs.map((faq, idx) => (
-            <StaggerItem key={idx}>
-              <div className="flex h-full flex-col justify-start rounded-2xl border border-rose/15 bg-white p-5 sm:p-6 shadow-sm transition hover:border-rose/40 hover:shadow-md">
-                <h3 className="font-display text-base sm:text-lg font-bold text-ink mb-2">
-                  {faq.q}
-                </h3>
-                <div className="text-xs sm:text-sm leading-relaxed text-ink/75">
-                  {faq.a}
-                </div>
-              </div>
-            </StaggerItem>
-          ))}
+        <Stagger className="grid grid-cols-1 md:grid-cols-2 gap-5 items-start">
+          <div className="space-y-4">
+            {leftColumn.map((faq, colIdx) => (
+              <StaggerItem key={colIdx}>
+                {renderCard(faq, colIdx * 2)}
+              </StaggerItem>
+            ))}
+          </div>
+
+          <div className="space-y-4">
+            {rightColumn.map((faq, colIdx) => (
+              <StaggerItem key={colIdx}>
+                {renderCard(faq, colIdx * 2 + 1)}
+              </StaggerItem>
+            ))}
+          </div>
         </Stagger>
       </div>
     </section>
