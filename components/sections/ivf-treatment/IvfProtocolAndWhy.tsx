@@ -128,8 +128,8 @@ export default function IvfProtocolAndWhy() {
           title="Why choose Dr. Mona Dahiya for your IVF Treatment"
         />
 
-        <div className="mt-7 grid grid-cols-1 items-start gap-6 lg:grid-cols-12 lg:gap-8">
-          <div className="flex flex-col gap-3.5 sm:gap-4 lg:col-span-7">
+        <div className="mt-7 grid grid-cols-1 items-stretch gap-6 lg:grid-cols-12 lg:gap-8">
+          <div className="flex flex-col justify-between gap-3.5 sm:gap-4 lg:col-span-7">
             {whyPoints.map((point, idx) => (
               <Reveal key={point.title} variant="fadeUp" delay={idx * 0.05}>
                 <WhyPointRow {...point} />
@@ -137,15 +137,16 @@ export default function IvfProtocolAndWhy() {
             ))}
           </div>
 
-          <div className="relative mx-auto w-full max-w-[380px] lg:col-span-5 lg:mx-0 lg:max-w-none">
-            <Reveal variant="scaleIn" delay={0.08}>
-              <div className="relative overflow-hidden rounded-[20px] border-[3px] border-white/70 shadow-[0_20px_50px_rgba(0,10,40,0.45)] sm:rounded-[24px]">
+          <div className="relative mx-auto w-full max-w-[440px] lg:col-span-5 lg:mx-0 lg:max-w-none h-full min-h-[380px] sm:min-h-[440px] lg:min-h-0">
+            <Reveal variant="scaleIn" delay={0.08} className="h-full">
+              <div className="relative h-full w-full min-h-[380px] sm:min-h-[440px] lg:min-h-full overflow-hidden rounded-[20px] border-4 border-white shadow-[0_16px_40px_rgba(232,62,116,0.12)] sm:rounded-[24px]">
                 <Image
-                  src="/images/about-mona-dahiya/female-infertility.jpg"
-                  alt="Dr. Mona Dahiya at clinic"
-                  width={480}
-                  height={560}
-                  className="max-h-[420px] w-full object-cover object-top sm:max-h-[480px]"
+                  src="/images/ivf-treatment.jpg"
+                  alt="Dr. Mona Dahiya - IVF Treatment Specialist"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 42vw"
+                  className="object-cover object-center"
+                  priority
                 />
               </div>
             </Reveal>
