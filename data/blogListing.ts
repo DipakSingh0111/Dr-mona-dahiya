@@ -12,6 +12,74 @@ export type BlogListingArticle = {
   href: string;
 };
 
+export type PillarGuide = {
+  topic: string;
+  title: string;
+  date: string;
+  href: string;
+  description: string;
+  accent: "rose" | "blue";
+};
+
+export const FEATURED_PILLAR_GUIDES: Record<string, PillarGuide> = {
+  "Understanding Infertility & Diagnosis": {
+    topic: "UNDERSTANDING INFERTILITY & DIAGNOSIS",
+    title: "What is Infertility: Causes, Diagnosis, and Treatments",
+    date: "14 Nov 2023",
+    href: "/blog/what-is-infertility",
+    description:
+      "Start here: the most complete guide in this topic. Published 14 Nov 2023.",
+    accent: "rose",
+  },
+  "ART & Advanced Procedures": {
+    topic: "ART & ADVANCED PROCEDURES",
+    title: "IVF Step by Step Procedure & How It Works",
+    date: "9 Aug 2023",
+    href: "/blog/ivf-step-by-step-procedure",
+    description:
+      "Start here: the most complete guide in this topic. Published 9 Aug 2023.",
+    accent: "blue",
+  },
+  "Complex Conditions & Low Ovarian Reserve": {
+    topic: "COMPLEX CONDITIONS & LOW OVARIAN RESERVE",
+    title:
+      "Can IVF Be Successful After Multiple Failed Cycles? A Complete Guide to Finding Hope After IVF Failure",
+    date: "24 Jul 2026",
+    href: "/blog/can-ivf-be-successful-after-multiple-failed-cycles",
+    description:
+      "Start here: the most complete guide in this topic. Published 24 Jul 2026.",
+    accent: "rose",
+  },
+  "Diet, Lifestyle & Natural Fertility": {
+    topic: "DIET, LIFESTYLE & NATURAL FERTILITY",
+    title: "Preparing for IVF: Diet, Lifestyle & Medical Tips",
+    date: "29 Jul 2026",
+    href: "/blog/preparing-for-ivf-diet-lifestyle-medical-tips",
+    description:
+      "Start here: the most complete guide in this topic. Published 29 Jul 2026.",
+    accent: "blue",
+  },
+  "Patient Guides, Regulations & FAQs": {
+    topic: "PATIENT GUIDES, REGULATIONS & FAQS",
+    title: "IVF Success Rates by Age: What Women Should Know in 2026",
+    date: "21 Jul 2026",
+    href: "/blog/ivf-success-rates-by-age",
+    description:
+      "Start here: the most complete guide in this topic. Published 21 Jul 2026.",
+    accent: "rose",
+  },
+  "Choosing Your Doctor & Clinic": {
+    topic: "CHOOSING YOUR DOCTOR & CLINIC",
+    title:
+      "Experienced IVF Doctor in Noida: Your Complete Guide to Choosing the Right Fertility Specialist",
+    date: "15 Jul 2026",
+    href: "/blog/experienced-ivf-doctor-in-noida",
+    description:
+      "Start here: the most complete guide in this topic. Published 15 Jul 2026.",
+    accent: "blue",
+  },
+};
+
 export const BLOG_TOPICS: BlogTopic[] = [
   {
     id: "understanding-infertility-diagnosis",
@@ -185,7 +253,7 @@ export const BLOG_LISTING_ARTICLES: BlogListingArticle[] = [
   },
   {
     topic: "Understanding Infertility & Diagnosis",
-    title: "Everything You Should Know About the HSG Test",
+    title: "Everything You Should Know About The HSG Test",
     date: "23 Feb 2026",
     href: "/fallopian-tube-blockage-treatment",
   },
@@ -463,7 +531,7 @@ export const BLOG_LISTING_ARTICLES: BlogListingArticle[] = [
   },
   {
     topic: "Understanding Infertility & Diagnosis",
-    title: "Find Out Which Infertility Treatment Is Best for You",
+    title: "Find Out Which Infertility Treatment is Best for You",
     date: "21 Aug 2023",
     href: "/our-services",
   },
