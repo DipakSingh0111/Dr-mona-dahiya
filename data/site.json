@@ -300,7 +300,7 @@
           },
           {
             "label": "Contact Us",
-            "href": "/location"
+            "href": "/contact-us"
           },
           {
             "label": "Book Appointment",
@@ -1854,7 +1854,7 @@
     "directory": [
       {
         "label": "All Locations",
-        "href": "#clinics"
+        "href": "/location"
       }
     ],
     "clinicHours": "Clinics: Mon–Sat · 10:00 AM to 5:00 PM",
@@ -1917,7 +1917,7 @@
     "bottomLinks": [
       {
         "label": "Contact Us",
-        "href": "#book-appointment"
+        "href": "/contact-us"
       },
       {
         "label": "XML Sitemap",

@@ -42,7 +42,11 @@ const EXTRA_ROUTES_BY_TAB: Record<string, string[]> = {
     "/best-male-infertility-doctor-in-noida",
   ],
   "About Dr. Mona": ["/privacy-policy", "/terms-of-service"],
-  "Patient Resources": ["/international-ivf-patient", "/comprehensive-ivf-faqs"],
+  "Patient Resources": [
+    "/international-ivf-patient",
+    "/comprehensive-ivf-faqs",
+    "/contact-us",
+  ],
 };
 
 function isNavItemActive(pathname: string, item: NavMenuItem) {
