@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { FaSearch, FaArrowRight } from "react-icons/fa";
-import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
+import { Reveal } from "@/components/ui/Reveal";
 import { TreatmentSection } from "@/components/ui/treatment";
 import {
   BLOG_LISTING_ARTICLES,
@@ -165,48 +165,50 @@ export default function BlogListingCatalog() {
             </button>
           </div>
         ) : (
-          <Stagger className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
+          <div
+            key={selectedTopic}
+            className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5 animate-in fade-in duration-300"
+          >
             {filteredArticles.map((article, idx) => {
               const isBlue = topicAccentMap.get(article.topic) === "blue";
               return (
-                <StaggerItem key={`${article.title}-${idx}`}>
-                  <Link
-                    href={article.href}
-                    className="group flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-rose/15 bg-white shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-rose/40 hover:shadow-md"
-                  >
-                    <div>
-                      {/* Top Topic Banner Strip */}
-                      <div
-                        className={`px-4 py-2 text-[10.5px] font-bold tracking-wide uppercase text-white ${
-                          isBlue ? "bg-blue" : "bg-rose"
-                        }`}
-                      >
-                        {article.topic}
-                      </div>
-
-                      {/* Title */}
-                      <div className="p-4 sm:p-5">
-                        <h3 className="font-display text-[14.5px] sm:text-[15px] leading-snug font-bold text-ink transition-colors group-hover:text-rose">
-                          {article.title}
-                        </h3>
-                      </div>
+                <Link
+                  key={`${article.title}-${idx}`}
+                  href={article.href}
+                  className="group flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-rose/15 bg-white shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-rose/40 hover:shadow-md"
+                >
+                  <div>
+                    {/* Top Topic Banner Strip */}
+                    <div
+                      className={`px-4 py-2 text-[10.5px] font-bold tracking-wide uppercase text-white ${
+                        isBlue ? "bg-blue" : "bg-rose"
+                      }`}
+                    >
+                      {article.topic}
                     </div>
 
-                    {/* Footer Date & Read */}
-                    <div className="px-4 pb-4 sm:px-5 sm:pb-5 pt-1 border-t border-rose/5">
-                      <span
-                        className={`text-[11.5px] font-semibold ${
-                          isBlue ? "text-blue" : "text-rose"
-                        }`}
-                      >
-                        {article.date} · Read article ↗
-                      </span>
+                    {/* Title */}
+                    <div className="p-4 sm:p-5">
+                      <h3 className="font-display text-[14.5px] sm:text-[15px] leading-snug font-bold text-ink transition-colors group-hover:text-rose">
+                        {article.title}
+                      </h3>
                     </div>
-                  </Link>
-                </StaggerItem>
+                  </div>
+
+                  {/* Footer Date & Read */}
+                  <div className="px-4 pb-4 sm:px-5 sm:pb-5 pt-1 border-t border-rose/5">
+                    <span
+                      className={`text-[11.5px] font-semibold ${
+                        isBlue ? "text-blue" : "text-rose"
+                      }`}
+                    >
+                      {article.date} · Read article ↗
+                    </span>
+                  </div>
+                </Link>
               );
             })}
-          </Stagger>
+          </div>
         )}
       </div>
     </TreatmentSection>
