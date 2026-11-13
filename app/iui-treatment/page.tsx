@@ -2,18 +2,12 @@ import type { Metadata } from "next";
 
 import IuiTreatmentHero from "@/components/sections/iui-treatment/IuiTreatmentHero";
 import MedicalRegistration from "@/components/sections/MedicalRegistration";
-import IuiAbout from "@/components/sections/iui-treatment/IuiAbout";
-import IuiDoctorGlance from "@/components/sections/iui-treatment/IuiDoctorGlance";
-import IuiBenefits from "@/components/sections/iui-treatment/IuiBenefits";
-import IuiDiagnosticTesting from "@/components/sections/iui-treatment/IuiDiagnosticTesting";
-import IuiCycleSteps from "@/components/sections/iui-treatment/IuiCycleSteps";
-import IuiCostSection from "@/components/sections/iui-treatment/IuiCostSection";
-import IuiFailureReasons from "@/components/sections/iui-treatment/IuiFailureReasons";
-import IuiNotSuitable from "@/components/sections/iui-treatment/IuiNotSuitable";
+import IuiIndicationsAndChecklist from "@/components/sections/iui-treatment/IuiIndicationsAndChecklist";
+import IuiProtocolAndWhy from "@/components/sections/iui-treatment/IuiProtocolAndWhy";
+import IuiReviewsAndCost from "@/components/sections/iui-treatment/IuiReviewsAndCost";
 import IuiClinicLocation from "@/components/sections/iui-treatment/IuiClinicLocation";
-import IuiPatientTestimonials from "@/components/sections/iui-treatment/IuiPatientTestimonials";
-import IuiRelatedBlogs from "@/components/sections/iui-treatment/IuiRelatedBlogs";
 import IuiQuestionsFaq from "@/components/sections/iui-treatment/IuiQuestionsFaq";
+import IuiRelatedTreatments from "@/components/sections/iui-treatment/IuiRelatedTreatments";
 import AboutConsultation from "@/components/sections/about-mona-dahiya/AboutConsultation";
 import AboutParenthoodCta from "@/components/sections/about-mona-dahiya/AboutParenthoodCta";
 
@@ -22,7 +16,7 @@ import { SectionReveal } from "@/components/ui/Reveal";
 export const metadata: Metadata = {
   title: "IUI Treatment (Intrauterine Insemination) | Dr. Mona Dahiya",
   description:
-    "Intrauterine Insemination (IUI) treatment by Dr. Mona Dahiya with personalized ovulation tracking, advanced semen preparation, and high success rates in Noida, Delhi & Ghaziabad.",
+    "Intrauterine Insemination (IUI) treatment by Dr. Mona Dahiya with personalized ovulation tracking, advanced semen preparation, and high success rates in Delhi, Noida & Ghaziabad.",
   alternates: {
     canonical: "https://drmonadahiya.com/iui-treatment/",
   },
@@ -38,35 +32,15 @@ export default function IuiTreatmentPage() {
       </SectionReveal>
 
       <SectionReveal delay={0.04}>
-        <IuiAbout />
+        <IuiIndicationsAndChecklist />
       </SectionReveal>
 
       <SectionReveal delay={0.04}>
-        <IuiDoctorGlance />
+        <IuiProtocolAndWhy />
       </SectionReveal>
 
       <SectionReveal delay={0.04}>
-        <IuiBenefits />
-      </SectionReveal>
-
-      <SectionReveal delay={0.04}>
-        <IuiDiagnosticTesting />
-      </SectionReveal>
-
-      <SectionReveal delay={0.04}>
-        <IuiCycleSteps />
-      </SectionReveal>
-
-      <SectionReveal delay={0.04}>
-        <IuiCostSection />
-      </SectionReveal>
-
-      <SectionReveal delay={0.04}>
-        <IuiFailureReasons />
-      </SectionReveal>
-
-      <SectionReveal delay={0.04}>
-        <IuiNotSuitable />
+        <IuiReviewsAndCost />
       </SectionReveal>
 
       <SectionReveal delay={0.04}>
@@ -74,19 +48,21 @@ export default function IuiTreatmentPage() {
       </SectionReveal>
 
       <SectionReveal delay={0.04}>
-        <IuiPatientTestimonials />
-      </SectionReveal>
-
-      <SectionReveal delay={0.04}>
-        <IuiRelatedBlogs />
-      </SectionReveal>
-
-      <SectionReveal delay={0.04}>
         <IuiQuestionsFaq />
       </SectionReveal>
 
       <SectionReveal delay={0.04}>
-        <AboutConsultation />
+        <IuiRelatedTreatments />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <AboutConsultation
+          eyebrow="Next step"
+          title="Book an In-Clinic or Online Consultation"
+          subtitle="Book an in-clinic consultation with Dr. Mona Dahiya in Noida, Ghaziabad or Delhi, or schedule an online consultation to review your reports. Direct line: +91 92679 82924."
+          appendContacts={false}
+          consultationDuration=""
+        />
       </SectionReveal>
 
       <SectionReveal delay={0.04}>
@@ -95,4 +71,3 @@ export default function IuiTreatmentPage() {
     </main>
   );
 }
-
