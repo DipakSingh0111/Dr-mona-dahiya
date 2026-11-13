@@ -43,7 +43,7 @@ export default function BlastocystHero() {
       />
 
       <div className="page-container relative z-10 w-full pt-4 sm:pt-5 lg:pt-0">
-        <div className="lg:max-w-[28rem] xl:max-w-[34rem] 2xl:max-w-[38rem]">
+        <div className="lg:max-w-[34rem] xl:max-w-[40rem] 2xl:max-w-[45rem]">
           <Breadcrumb
             items={[
               { label: "Treatments", href: "/our-services" },
@@ -56,17 +56,11 @@ export default function BlastocystHero() {
               Blastocyst Transfer
             </p>
 
-            <h1 className="font-serif mt-1.5 max-w-[38rem] text-[1.85rem] leading-[1.15] font-normal tracking-tight text-ink sm:text-[2.45rem] lg:text-[2.85rem] xl:text-[3.1rem]">
-              Advanced Day-5
-              <br />
-              Blastocyst Transfer
-              <br />
-              in Delhi, Noida
-              <br />
-              &amp; Ghaziabad
+            <h1 className="font-serif mt-1.5 max-w-[42rem] text-[1.85rem] leading-[1.15] font-normal tracking-tight text-ink sm:text-[2.45rem] lg:text-[2.85rem] xl:text-[3.1rem]">
+              Advanced Day-5 Blastocyst Transfer in Delhi, Noida &amp; Ghaziabad
             </h1>
 
-            <p className="mt-3.5 max-w-[36rem] text-[13.5px] leading-relaxed text-ink/80 sm:text-[15px]">
+            <p className="mt-3.5 max-w-[38rem] text-[13.5px] leading-relaxed text-ink/80 sm:text-[15px]">
               When we grow the embryo in the incubator till Day 5/6 in the lab,
               this is called blastocyst transfer. By this time, the embryo will
               have an inner cell mass (baby) and the trophectoderm (placenta).
