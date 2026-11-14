@@ -25,9 +25,13 @@ export default function PgtHero() {
         background: "var(--pink)",
       }}
     >
-      <HeroFullWidthBanner src="/pageBanner/M0500402.JPG" alt="Dr. Mona Dahiya - Preimplantation Genetic Testing (PGT) Specialist" />
+      <HeroFullWidthBanner
+        src="/pageBanner/M0500397.JPG"
+        alt="Dr. Mona Dahiya - Preimplantation Genetic Testing (PGT) Specialist"
+        objectPosition="object-[72%_35%] md:object-[72%_32%] lg:object-[82%_58%] xl:object-[80%_58%] 2xl:object-[76%_54%]"
+      />
       <div className="page-container relative z-10 w-full pt-4 sm:pt-5 lg:pt-0">
-        <div className="lg:max-w-[28rem] xl:max-w-[34rem] 2xl:max-w-[38rem]">
+        <div className="lg:max-w-[34rem] xl:max-w-[40rem] 2xl:max-w-[45rem]">
           <Breadcrumb
           items={[
             { label: "Treatments", href: "/our-services" },
@@ -40,8 +44,9 @@ export default function PgtHero() {
           </p>
 
           <h1 className="font-serif mt-1.5 max-w-[42rem] text-[1.65rem] leading-[1.16] font-normal tracking-tight text-ink sm:text-[2.15rem] lg:text-[2.45rem] xl:text-[2.65rem]">
-            Preimplantation Genetic Testing (PGT) in Noida, Ghaziabad &amp;
-            Delhi
+            Preimplantation Genetic Testing (PGT){" "}
+            <br className="hidden sm:inline" />
+            in Noida, Ghaziabad &amp; Delhi
           </h1>
 
           <p className="mt-3.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
@@ -92,7 +97,7 @@ export default function PgtHero() {
           </Stagger>
         </div>
 
-        <HeroMobileBanner src="/pageBanner/M0500402.JPG" alt="Dr. Mona Dahiya - Preimplantation Genetic Testing (PGT) Specialist" />
+        <HeroMobileBanner src="/pageBanner/M0500397.JPG" alt="Dr. Mona Dahiya - Preimplantation Genetic Testing (PGT) Specialist" />
       </div>
     </section>
       <section className="py-5 sm:py-6">
