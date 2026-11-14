@@ -23,7 +23,11 @@ export default function EmbryoFreezingHero() {
         className="relative overflow-hidden flex flex-col justify-center pb-6 sm:pb-8 lg:pb-0"
       style={{ background: "var(--pink)" }}
     >
-      <HeroFullWidthBanner src="/pageBanner/M0500375.JPG" alt="Dr. Mona Dahiya — Embryo Freezing (Cryopreservation) in Delhi, Noida & Ghaziabad" />
+      <HeroFullWidthBanner
+        src="/pageBanner/M0500405.JPG"
+        alt="Dr. Mona Dahiya — Embryo Freezing (Cryopreservation) in Delhi, Noida & Ghaziabad"
+        objectPosition="object-[72%_35%] md:object-[72%_32%] lg:object-[82%_62%] xl:object-[80%_62%] 2xl:object-[76%_58%]"
+      />
       <div
         aria-hidden
         className="pointer-events-none absolute top-0 right-[8%] h-[280px] w-[280px] -translate-y-1/4 rounded-full opacity-35 blur-3xl"
@@ -42,7 +46,7 @@ export default function EmbryoFreezingHero() {
       />
 
       <div className="page-container relative z-10 w-full pt-4 sm:pt-5 lg:pt-0">
-        <div className="lg:max-w-[28rem] xl:max-w-[34rem] 2xl:max-w-[38rem]">
+        <div className="lg:max-w-[34rem] xl:max-w-[40rem] 2xl:max-w-[45rem]">
           <Breadcrumb
             items={[
               { label: "Treatments", href: "/our-services" },
@@ -55,17 +59,13 @@ export default function EmbryoFreezingHero() {
               Bank Your Best Quality Embryos
             </p>
 
-            <h1 className="font-serif mt-1.5 max-w-[40rem] text-[1.85rem] leading-[1.15] font-normal tracking-tight text-ink sm:text-[2.45rem] lg:text-[2.8rem] xl:text-[3.05rem]">
-              Embryo Freezing
-              <br />
-              (Cryopreservation)
-              <br />
-              in Delhi, Noida
-              <br />
-              &amp; Ghaziabad
+            <h1 className="font-serif mt-1.5 max-w-[44rem] text-[1.85rem] leading-[1.15] font-normal tracking-tight text-ink sm:text-[2.45rem] lg:text-[2.8rem] xl:text-[3.05rem]">
+              Embryo Freezing (Cryopreservation){" "}
+              <br className="hidden sm:inline" />
+              in Delhi, Noida &amp; Ghaziabad
             </h1>
 
-            <p className="mt-3.5 max-w-[36rem] text-[13.5px] leading-relaxed text-ink/80 sm:text-[15px]">
+            <p className="mt-3.5 max-w-[38rem] text-[13.5px] leading-relaxed text-ink/80 sm:text-[15px]">
               We can store the healthy embryos obtained from your IVF cycle to
               be transferred later on, used for preimplantation genetic testing,
               or for future siblings. We use the vitrification method and follow
@@ -103,7 +103,7 @@ export default function EmbryoFreezingHero() {
           </Stagger>
         </div>
 
-        <HeroMobileBanner src="/pageBanner/M0500375.JPG" alt="Dr. Mona Dahiya — Embryo Freezing (Cryopreservation) in Delhi, Noida & Ghaziabad" />
+        <HeroMobileBanner src="/pageBanner/M0500405.JPG" alt="Dr. Mona Dahiya — Embryo Freezing (Cryopreservation) in Delhi, Noida & Ghaziabad" />
       </div>
     </section>
       <section className="py-5 sm:py-6">
