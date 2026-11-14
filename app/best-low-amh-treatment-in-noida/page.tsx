@@ -35,9 +35,7 @@ export default function LowAmhPage() {
         <LowAmhIndications />
       </SectionReveal>
 
-      <SectionReveal delay={0.04}>
-        <LowAmhDiagnosticAndProtocol />
-      </SectionReveal>
+      <LowAmhDiagnosticAndProtocol />
 
       <SectionReveal delay={0.04}>
         <LowAmhWhyConsult />

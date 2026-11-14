@@ -1,6 +1,7 @@
 "use client";
 
 import type { ReactNode } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 import {
@@ -83,8 +84,9 @@ const protocols: {
 
 export default function LowAmhDiagnosticAndProtocol() {
   return (
-    <TreatmentSection>
-      <div className="mb-14 sm:mb-16 lg:mb-20">
+    <>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Before Treatment"
           title="Diagnostic Checklist: Assessing True Functional Reserve"
@@ -108,8 +110,10 @@ export default function LowAmhDiagnosticAndProtocol() {
           </Reveal>
         </div>
       </div>
+      </TreatmentSection>
 
-      <div>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Steps For Treatment For Low Amh Patient"
           title="Step-by-Step Low AMH Protocol"
@@ -117,10 +121,13 @@ export default function LowAmhDiagnosticAndProtocol() {
 
         <Stagger
           delay={0.05}
-          className="mt-7 grid grid-cols-1 items-stretch gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
+          className="mt-7 grid auto-rows-fr grid-cols-1 items-stretch gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
         >
           {protocols.map((item) => (
-            <StaggerItem key={item.number} className="h-full">
+            <StaggerItem
+              key={item.number}
+              className="h-full min-h-[240px] sm:min-h-[260px]"
+            >
               <ProtocolCard
                 number={item.number}
                 title={item.title}
@@ -128,8 +135,20 @@ export default function LowAmhDiagnosticAndProtocol() {
               />
             </StaggerItem>
           ))}
+          <StaggerItem className="h-full min-h-[240px] sm:min-h-[260px]">
+            <div className="card-highlight relative h-full min-h-[240px] overflow-hidden rounded-2xl border border-[#fde2ec] bg-white shadow-[0_10px_30px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-[#f8b4cb] hover:shadow-[0_18px_40px_rgba(232,62,116,0.12)] sm:min-h-[260px]">
+              <Image
+                src="/shared-gallery/low amh test.jpeg"
+                alt="AMH Blood Test for Ovarian Reserve"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="object-cover object-center"
+              />
+            </div>
+          </StaggerItem>
         </Stagger>
       </div>
-    </TreatmentSection>
+      </TreatmentSection>
+    </>
   );
 }

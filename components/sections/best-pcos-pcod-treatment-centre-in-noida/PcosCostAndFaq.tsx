@@ -98,8 +98,9 @@ const rightFaqs: FaqItem[] = [
 
 export default function PcosCostAndFaq() {
   return (
-    <TreatmentSection>
-      <div className="mb-14 sm:mb-16 lg:mb-20">
+    <>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Pricing"
           title="What Affects the Cost of PCOS Treatment"
@@ -117,8 +118,10 @@ export default function PcosCostAndFaq() {
           ))}
         </Stagger>
       </div>
+      </TreatmentSection>
 
-      <div>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Frequently Asked Questions"
           title="Top FAQs About PCOS and PCOD Fertility Treatment"
@@ -126,6 +129,7 @@ export default function PcosCostAndFaq() {
 
         <FaqAccordion leftItems={leftFaqs} rightItems={rightFaqs} />
       </div>
-    </TreatmentSection>
+      </TreatmentSection>
+    </>
   );
 }

@@ -35,13 +35,9 @@ export default function LaparoscopyHysteroscopyPage() {
         />
       </SectionReveal>
 
-      <SectionReveal delay={0.04}>
-        <LaparoscopyIndicationsAndChecklist />
-      </SectionReveal>
+      <LaparoscopyIndicationsAndChecklist />
 
-      <SectionReveal delay={0.04}>
-        <LaparoscopyProtocolAndWhy />
-      </SectionReveal>
+      <LaparoscopyProtocolAndWhy />
 
       <SectionReveal delay={0.04}>
         <LaparoscopyReviews />
@@ -51,9 +47,7 @@ export default function LaparoscopyHysteroscopyPage() {
         <IvfSuccessClinics />
       </SectionReveal>
 
-      <SectionReveal delay={0.04}>
-        <LaparoscopyCostAndFaq />
-      </SectionReveal>
+      <LaparoscopyCostAndFaq />
 
       <SectionReveal delay={0.04}>
         <LaparoscopyRelatedTreatments />

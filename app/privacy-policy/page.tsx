@@ -30,13 +30,9 @@ export default function PrivacyPolicyPage() {
         <PrivacyCollect />
       </SectionReveal>
 
-      <SectionReveal delay={0.04}>
-        <PrivacyUseAndProtection />
-      </SectionReveal>
+      <PrivacyUseAndProtection />
 
-      <SectionReveal delay={0.04}>
-        <PrivacyLegalAndRights />
-      </SectionReveal>
+      <PrivacyLegalAndRights />
 
       <SectionReveal delay={0.04}>
         <PrivacyFaq />

@@ -82,8 +82,9 @@ const rightFaqs: FaqItem[] = [
 
 export default function DonorGameteCostAndFaq() {
   return (
-    <TreatmentSection>
-      <div className="mb-14 sm:mb-16 lg:mb-20">
+    <>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="How much does Donor Egg IVF cost?"
           title="What Affects the Cost of Donor Gamete IVF"
@@ -100,14 +101,17 @@ export default function DonorGameteCostAndFaq() {
           ))}
         </Stagger>
       </div>
+      </TreatmentSection>
 
-      <div>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="FAQs"
           title="Top FAQs About Donor Egg and Donor Sperm IVF"
         />
         <FaqAccordion leftItems={leftFaqs} rightItems={rightFaqs} />
       </div>
-    </TreatmentSection>
+      </TreatmentSection>
+    </>
   );
 }

@@ -97,10 +97,11 @@ const whyPoints = [
 
 export default function IuiProtocolAndWhy() {
   return (
-    <section className="relative overflow-hidden bg-pink py-10 sm:py-14 lg:py-16 border-t border-[#fde2ec]">
-      <div className="page-container relative">
-        {/* ================= SECTION 1: Step-by-Step IUI Treatment Protocol ================= */}
-        <div className="mb-14 sm:mb-16 lg:mb-20">
+    <>
+      <section className="relative overflow-hidden py-10 sm:py-14 lg:py-16">
+        <div className="page-container relative">
+          {/* ================= SECTION 1: Step-by-Step IUI Treatment Protocol ================= */}
+          <div>
           <Reveal variant="fadeUp">
             <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
               Procedure explained
@@ -168,10 +169,10 @@ export default function IuiProtocolAndWhy() {
             ))}
           </Stagger>
 
-          {/* Card 7 */}
-          <div className="mt-4 grid grid-cols-1 sm:mt-5 sm:grid-cols-2 lg:grid-cols-3">
-            <Reveal variant="fadeUp" delay={0.1}>
-              <div className="relative flex h-full flex-col rounded-2xl border border-[#fde2ec] bg-white p-6 shadow-[0_4px_20px_rgba(15,36,56,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-rose/40 hover:shadow-[0_12px_30px_rgba(232,62,116,0.12)]">
+          {/* Card 7 + Image */}
+          <div className="mt-4 grid auto-rows-fr grid-cols-1 gap-4 sm:mt-5 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
+            <Reveal variant="fadeUp" delay={0.1} className="h-full">
+              <div className="relative flex h-full min-h-[240px] flex-col rounded-2xl border border-[#fde2ec] bg-white p-6 shadow-[0_4px_20px_rgba(15,36,56,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-rose/40 hover:shadow-[0_12px_30px_rgba(232,62,116,0.12)] sm:min-h-[260px]">
                 <div className="flex items-start gap-3.5">
                   <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-rose text-[14px] font-bold text-white shadow-[0_3px_10px_rgba(232,62,116,0.35)]">
                     {protocols[6].number}
@@ -190,11 +191,26 @@ export default function IuiProtocolAndWhy() {
                 </ul>
               </div>
             </Reveal>
+            <Reveal variant="fadeUp" delay={0.14} className="h-full">
+              <div className="relative h-full min-h-[240px] overflow-hidden rounded-2xl border border-[#fde2ec] bg-white shadow-[0_4px_20px_rgba(15,36,56,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-rose/40 hover:shadow-[0_12px_30px_rgba(232,62,116,0.12)] sm:min-h-[260px]">
+                <Image
+                  src="/shared-gallery/iui treatment in delhi ncr.jpeg"
+                  alt="IUI Intrauterine Insemination Procedure Illustration"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover object-center"
+                />
+              </div>
+            </Reveal>
+          </div>
           </div>
         </div>
+      </section>
 
-        {/* ================= SECTION 2: Why Consult Dr. Mona Dahiya for IUI? ================= */}
-        <div>
+      <section className="relative overflow-hidden py-10 sm:py-14 lg:py-16">
+        <div className="page-container relative">
+          {/* ================= SECTION 2: Why Consult Dr. Mona Dahiya for IUI? ================= */}
+          <div>
           <div className="grid grid-cols-1 items-stretch gap-8 lg:grid-cols-12 lg:gap-10 xl:gap-12">
             <div className="flex flex-col justify-between lg:col-span-7">
               <Reveal variant="fadeUp">
@@ -259,7 +275,8 @@ export default function IuiProtocolAndWhy() {
             </div>
           </div>
         </div>
-      </div>
-    </section>
+        </div>
+      </section>
+    </>
   );
 }

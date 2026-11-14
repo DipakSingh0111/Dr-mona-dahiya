@@ -38,17 +38,11 @@ export default function SurgicalSpermRetrievalPage() {
         <SurgicalSpermRetrievalTechniques />
       </SectionReveal>
 
-      <SectionReveal delay={0.04}>
-        <SurgicalSpermRetrievalIndicationsAndChecklist />
-      </SectionReveal>
+      <SurgicalSpermRetrievalIndicationsAndChecklist />
 
-      <SectionReveal delay={0.04}>
-        <SurgicalSpermRetrievalProtocolWhyAndCase />
-      </SectionReveal>
+      <SurgicalSpermRetrievalProtocolWhyAndCase />
 
-      <SectionReveal delay={0.04}>
-        <SurgicalSpermRetrievalCostAndFaq />
-      </SectionReveal>
+      <SurgicalSpermRetrievalCostAndFaq />
 
       <SectionReveal delay={0.04}>
         <SurgicalSpermRetrievalRelatedTreatments />

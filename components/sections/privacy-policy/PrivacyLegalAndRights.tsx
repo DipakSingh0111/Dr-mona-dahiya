@@ -36,8 +36,9 @@ const rights = [
 
 export default function PrivacyLegalAndRights() {
   return (
-    <TreatmentSection>
-      <div className="mb-14 sm:mb-16 lg:mb-20">
+    <>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Section 4"
           title="Legal Disclosures (ART Act Compliance)"
@@ -54,8 +55,10 @@ export default function PrivacyLegalAndRights() {
           ))}
         </Stagger>
       </div>
+      </TreatmentSection>
 
-      <div>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Section 5"
           title="Your Rights"
@@ -70,6 +73,7 @@ export default function PrivacyLegalAndRights() {
           ))}
         </div>
       </div>
-    </TreatmentSection>
+      </TreatmentSection>
+    </>
   );
 }

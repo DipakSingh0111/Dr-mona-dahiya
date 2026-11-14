@@ -36,14 +36,10 @@ export default function MaleInfertilityPage() {
       </SectionReveal>
 
       {/* 4. Diagnostic Checklist & Step-by-Step Treatment Protocol */}
-      <SectionReveal delay={0.04}>
-        <MaleDiagnosticAndProtocol />
-      </SectionReveal>
+      <MaleDiagnosticAndProtocol />
 
       {/* 5. Cost Factors & What Patients Say About Dr. Mona */}
-      <SectionReveal delay={0.04}>
-        <MaleCostAndReviews />
-      </SectionReveal>
+      <MaleCostAndReviews />
 
       {/* 6. Book a Consultation at Our Clinics */}
       <SectionReveal delay={0.04}>

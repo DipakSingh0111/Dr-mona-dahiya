@@ -35,13 +35,9 @@ export default function FollicularMonitoringPage() {
         />
       </SectionReveal>
 
-      <SectionReveal delay={0.04}>
-        <FollicularIndicationsAndChecklist />
-      </SectionReveal>
+      <FollicularIndicationsAndChecklist />
 
-      <SectionReveal delay={0.04}>
-        <FollicularProtocolAndWhy />
-      </SectionReveal>
+      <FollicularProtocolAndWhy />
 
       <SectionReveal delay={0.04}>
         <FollicularReviews />
@@ -58,9 +54,7 @@ export default function FollicularMonitoringPage() {
         />
       </SectionReveal>
 
-      <SectionReveal delay={0.04}>
-        <FollicularCostAndFaq />
-      </SectionReveal>
+      <FollicularCostAndFaq />
 
       <SectionReveal delay={0.04}>
         <FollicularRelatedTreatments />

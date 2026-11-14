@@ -33,17 +33,11 @@ export default function HysteroscopyPage() {
         />
       </SectionReveal>
 
-      <SectionReveal delay={0.04}>
-        <HysteroscopyIndicationsAndChecklist />
-      </SectionReveal>
+      <HysteroscopyIndicationsAndChecklist />
 
-      <SectionReveal delay={0.04}>
-        <HysteroscopyProtocolWhyAndCase />
-      </SectionReveal>
+      <HysteroscopyProtocolWhyAndCase />
 
-      <SectionReveal delay={0.04}>
-        <HysteroscopyCostAndFaq />
-      </SectionReveal>
+      <HysteroscopyCostAndFaq />
 
       <SectionReveal delay={0.04}>
         <HysteroscopyRelatedTreatments />

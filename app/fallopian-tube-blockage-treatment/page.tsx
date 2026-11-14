@@ -28,17 +28,11 @@ export default function FallopianTubeBlockagePage() {
         <MedicalRegistration />
       </SectionReveal>
 
-      <SectionReveal delay={0.04}>
-        <FallopianTubesIndicationsAndChecklist />
-      </SectionReveal>
+      <FallopianTubesIndicationsAndChecklist />
 
-      <SectionReveal delay={0.04}>
-        <FallopianTubesProtocolAndWhy />
-      </SectionReveal>
+      <FallopianTubesProtocolAndWhy />
 
-      <SectionReveal delay={0.04}>
-        <FallopianTubesCaseAndCost />
-      </SectionReveal>
+      <FallopianTubesCaseAndCost />
 
       <SectionReveal delay={0.04}>
         <FallopianTubesFaq />

@@ -35,13 +35,9 @@ export default function EraTestPage() {
         />
       </SectionReveal>
 
-      <SectionReveal delay={0.04}>
-        <EraIndicationsAndChecklist />
-      </SectionReveal>
+      <EraIndicationsAndChecklist />
 
-      <SectionReveal delay={0.04}>
-        <EraProtocolAndWhy />
-      </SectionReveal>
+      <EraProtocolAndWhy />
 
       <SectionReveal delay={0.04}>
         <EraReviews />
@@ -58,9 +54,7 @@ export default function EraTestPage() {
         />
       </SectionReveal>
 
-      <SectionReveal delay={0.04}>
-        <EraCostAndFaq />
-      </SectionReveal>
+      <EraCostAndFaq />
 
       <SectionReveal delay={0.04}>
         <EraRelatedTreatments />

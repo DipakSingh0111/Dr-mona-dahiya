@@ -35,13 +35,9 @@ export default function ArtComplianceEthicsPage() {
         />
       </SectionReveal>
 
-      <SectionReveal delay={0.04}>
-        <ArtLawsAndProhibited />
-      </SectionReveal>
+      <ArtLawsAndProhibited />
 
-      <SectionReveal delay={0.04}>
-        <ArtEligibilityAndEthics />
-      </SectionReveal>
+      <ArtEligibilityAndEthics />
 
       <SectionReveal delay={0.04}>
         <ArtComplianceFaq />

@@ -124,7 +124,7 @@ export default function PatientReviewsBottomSections() {
   };
 
   return (
-    <div className="flex flex-col text-ink">
+    <>
       <ClinicsAppointmentCards
         eyebrow="Visit Dr. Mona"
         title="Book a consultation at a clinic near you"
@@ -190,6 +190,6 @@ export default function PatientReviewsBottomSections() {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }

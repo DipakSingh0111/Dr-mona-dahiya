@@ -62,11 +62,9 @@ export default function PgtCostAndClinics() {
   ];
 
   return (
-    <section
-      className="relative overflow-hidden py-8 sm:py-10 lg:py-12"
-      style={{ background: "var(--pink)" }}
-    >
-      <div className="page-container relative">
+    <>
+      <section className="relative overflow-hidden py-8 sm:py-10 lg:py-12">
+        <div className="page-container relative">
         <Reveal className="mb-6 sm:mb-8">
           <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
             Cost of Preimplantation Genetic Testing
@@ -104,7 +102,11 @@ export default function PgtCostAndClinics() {
           })}
         </Stagger>
 
-        <div className="mt-12 sm:mt-16">
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden py-8 sm:py-10 lg:py-12">
+        <div className="page-container relative">
           <Reveal className="mb-6 sm:mb-8">
             <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
               Visit Dr. Mona
@@ -133,7 +135,7 @@ export default function PgtCostAndClinics() {
             ))}
           </Stagger>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

@@ -89,8 +89,9 @@ const rightFaqs: FaqItem[] = [
 
 export default function LaparoscopyCostAndFaq() {
   return (
-    <TreatmentSection>
-      <div className="mb-14 sm:mb-16 lg:mb-20">
+    <>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Cost of Laparoscopy and Hysteroscopy"
           title="What Affects the Cost of Laparoscopy and Hysteroscopy"
@@ -108,8 +109,10 @@ export default function LaparoscopyCostAndFaq() {
           ))}
         </Stagger>
       </div>
+      </TreatmentSection>
 
-      <div>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Frequently Asked Questions"
           title="Top FAQs About Fertility Laparoscopy and Hysteroscopy"
@@ -117,6 +120,7 @@ export default function LaparoscopyCostAndFaq() {
 
         <FaqAccordion leftItems={leftFaqs} rightItems={rightFaqs} />
       </div>
-    </TreatmentSection>
+      </TreatmentSection>
+    </>
   );
 }

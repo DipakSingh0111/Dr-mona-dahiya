@@ -93,8 +93,9 @@ const checklist = [
 
 export default function LaparoscopyIndicationsAndChecklist() {
   return (
-    <TreatmentSection>
-      <div className="mb-14 sm:mb-16 lg:mb-20">
+    <>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Surgery to improve your chances of conception"
           title="Indications: When Is Reproductive Surgery Recommended?"
@@ -111,8 +112,10 @@ export default function LaparoscopyIndicationsAndChecklist() {
           ))}
         </Stagger>
       </div>
+      </TreatmentSection>
 
-      <div>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Investigations before surgery"
           title="Diagnostic Checklist: Pre-Operative Workup"
@@ -127,6 +130,7 @@ export default function LaparoscopyIndicationsAndChecklist() {
           ))}
         </div>
       </div>
-    </TreatmentSection>
+      </TreatmentSection>
+    </>
   );
 }

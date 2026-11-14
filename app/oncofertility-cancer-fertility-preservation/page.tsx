@@ -38,13 +38,9 @@ export default function OncofertilityPage() {
         />
       </SectionReveal>
 
-      <SectionReveal delay={0.04}>
-        <OncofertilityIndicationsAndChecklist />
-      </SectionReveal>
+      <OncofertilityIndicationsAndChecklist />
 
-      <SectionReveal delay={0.04}>
-        <OncofertilityProtocolAndWhy />
-      </SectionReveal>
+      <OncofertilityProtocolAndWhy />
 
       <SectionReveal delay={0.04}>
         <OncofertilityReviews />
@@ -61,9 +57,7 @@ export default function OncofertilityPage() {
         />
       </SectionReveal>
 
-      <SectionReveal delay={0.04}>
-        <OncofertilityCostAndFaq />
-      </SectionReveal>
+      <OncofertilityCostAndFaq />
 
       <SectionReveal delay={0.04}>
         <OncofertilityRelatedTreatments />

@@ -49,7 +49,7 @@ export default function FemaleInfertilityNoidaDiagnostic() {
         {tests.map((item) => (
           <StaggerItem key={item.key}>
             <div className="flex items-start gap-3.5 rounded-2xl border border-[#fde2ec] bg-white px-4 py-3.5 backdrop-blur-md sm:gap-4 sm:px-5 sm:py-4">
-              <span className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-rose/15 text-rose ring-1 ring-rose/35">
+              <span className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-rose to-rose-dark text-white shadow-[0_4px_12px_rgba(232,62,116,0.3)]">
                 <FaCheck className="size-2.5" />
               </span>
               <div className="min-w-0 flex-1">

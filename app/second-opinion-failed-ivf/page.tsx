@@ -41,13 +41,9 @@ export default function SecondOpinionFailedIvfPage() {
         <SecondOpinionWhatAuditLooksAt />
       </SectionReveal>
 
-      <SectionReveal delay={0.04}>
-        <SecondOpinionWhenAndRecords />
-      </SectionReveal>
+      <SecondOpinionWhenAndRecords />
 
-      <SectionReveal delay={0.04}>
-        <SecondOpinionPathwayAndWhy />
-      </SectionReveal>
+      <SecondOpinionPathwayAndWhy />
 
       <SectionReveal delay={0.04}>
         <SecondOpinionReviewOptions />

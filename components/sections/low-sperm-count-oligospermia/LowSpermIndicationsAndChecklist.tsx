@@ -49,8 +49,9 @@ const diagnosticItems = [
 
 export default function LowSpermIndicationsAndChecklist() {
   return (
-    <TreatmentSection>
-      <div className="mb-14 sm:mb-16 lg:mb-20">
+    <>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Causes for low sperm count?"
           title={
@@ -67,8 +68,10 @@ export default function LowSpermIndicationsAndChecklist() {
           ))}
         </div>
       </div>
+      </TreatmentSection>
 
-      <div>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Semen Analysis Workup"
           title="Diagnostic Checklist for Low Sperm Count & Motility"
@@ -83,6 +86,7 @@ export default function LowSpermIndicationsAndChecklist() {
           ))}
         </div>
       </div>
-    </TreatmentSection>
+      </TreatmentSection>
+    </>
   );
 }

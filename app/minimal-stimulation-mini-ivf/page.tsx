@@ -60,9 +60,7 @@ export default function MiniIvfPage() {
       </SectionReveal>
 
       {/* 7. What Patients Say About Mini IVF with Dr. Mona (Pink) */}
-      <SectionReveal delay={0.04}>
-        <MiniIvfReviews />
-      </SectionReveal>
+      <MiniIvfReviews />
 
       {/* 8. Visit Us at One of Our Clinic Locations (White) */}
       <SectionReveal delay={0.04}>

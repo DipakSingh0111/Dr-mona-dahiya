@@ -35,8 +35,9 @@ const protectionCards = [
 
 export default function PrivacyUseAndProtection() {
   return (
-    <TreatmentSection>
-      <div className="mb-14 sm:mb-16 lg:mb-20">
+    <>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Section 2"
           title="How We Use Your Information"
@@ -51,8 +52,10 @@ export default function PrivacyUseAndProtection() {
           ))}
         </div>
       </div>
+      </TreatmentSection>
 
-      <div>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Section 3"
           title="Data Protection & Electronic Health Records"
@@ -69,6 +72,7 @@ export default function PrivacyUseAndProtection() {
           ))}
         </Stagger>
       </div>
-    </TreatmentSection>
+      </TreatmentSection>
+    </>
   );
 }

@@ -35,13 +35,9 @@ export default function PrpTherapyPage() {
         />
       </SectionReveal>
 
-      <SectionReveal delay={0.04}>
-        <PrpIndicationsAndChecklist />
-      </SectionReveal>
+      <PrpIndicationsAndChecklist />
 
-      <SectionReveal delay={0.04}>
-        <PrpProtocolAndWhy />
-      </SectionReveal>
+      <PrpProtocolAndWhy />
 
       <SectionReveal delay={0.04}>
         <PrpReviews />
@@ -58,9 +54,7 @@ export default function PrpTherapyPage() {
         />
       </SectionReveal>
 
-      <SectionReveal delay={0.04}>
-        <PrpCostAndFaq />
-      </SectionReveal>
+      <PrpCostAndFaq />
 
       <SectionReveal delay={0.04}>
         <PrpRelatedTreatments />

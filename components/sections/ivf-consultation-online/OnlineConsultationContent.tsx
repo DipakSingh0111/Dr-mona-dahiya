@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { FaCheck, FaCalendarAlt } from "react-icons/fa";
 import siteData from "@/data/site.json";
@@ -46,7 +47,7 @@ export default function OnlineConsultationContent() {
   const faqColumns = [faqItems.slice(0, faqMid), faqItems.slice(faqMid)];
 
   return (
-    <div className="text-ink">
+    <>
       {/* 1. Who Benefits (White) */}
       <section className="relative overflow-hidden bg-white py-8 sm:py-10 lg:py-12 border-y border-[#fde2ec]/70">
         <div className="page-container relative">
@@ -60,7 +61,7 @@ export default function OnlineConsultationContent() {
           </Reveal>
 
           <Stagger
-            className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5"
+            className="grid auto-rows-fr grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5"
             stagger={0.06}
           >
             {benefitItems.map((item, i) => (
@@ -103,6 +104,17 @@ export default function OnlineConsultationContent() {
                 </article>
               </StaggerItem>
             ))}
+            <StaggerItem className="h-full min-h-[210px] sm:min-h-[225px]">
+              <div className="card-highlight relative h-full min-h-[210px] overflow-hidden rounded-[22px] border border-rose/20 bg-white shadow-[0_6px_24px_rgba(232,62,116,0.08)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(232,62,116,0.14)] sm:min-h-[225px]">
+                <Image
+                  src="/shared-gallery/online consultation.jpeg"
+                  alt="Online Fertility Consultation with Dr. Mona Dahiya"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover object-center"
+                />
+              </div>
+            </StaggerItem>
           </Stagger>
         </div>
       </section>
@@ -154,13 +166,16 @@ export default function OnlineConsultationContent() {
           </Reveal>
 
           <Stagger
-            className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5"
+            className="grid auto-rows-fr grid-cols-1 items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5"
             stagger={0.06}
           >
             {stepItems.map((item, i) => (
-              <StaggerItem key={item.title} className="h-full">
+              <StaggerItem
+                key={item.title}
+                className="h-full min-h-[240px] sm:min-h-[260px]"
+              >
                 <article
-                  className={`${cardClass} flex h-full flex-col border-t-2 border-t-rose`}
+                  className={`${cardClass} flex h-full min-h-[240px] flex-col border-t-2 border-t-rose sm:min-h-[260px]`}
                 >
                   <div className="flex items-center gap-3.5">
                     <span className="card-badge flex size-10 shrink-0 items-center justify-center rounded-xl bg-rose text-[14px] font-bold text-white shadow-sm">
@@ -345,6 +360,6 @@ export default function OnlineConsultationContent() {
           />
         </div>
       </section>
-    </div>
+    </>
   );
 }

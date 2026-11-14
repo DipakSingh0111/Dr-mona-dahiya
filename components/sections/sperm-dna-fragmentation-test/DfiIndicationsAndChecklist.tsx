@@ -57,9 +57,9 @@ const checklist: ChecklistItem[] = [
 
 export default function DfiIndicationsAndChecklist() {
   return (
-    <TreatmentSection>
-      {/* ================= SECTION 1: Indications: Who Needs a DFI Test? ================= */}
-      <div className="mb-14 sm:mb-16 lg:mb-20">
+    <>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Clinical breakdown"
           title={
@@ -83,9 +83,10 @@ export default function DfiIndicationsAndChecklist() {
           ))}
         </Stagger>
       </div>
+      </TreatmentSection>
 
-      {/* ================= SECTION 2: Diagnostic Checklist (2x2 Grid) ================= */}
-      <div>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Before treatment"
           title="Diagnostic Checklist"
@@ -97,7 +98,7 @@ export default function DfiIndicationsAndChecklist() {
           {checklist.map((item, idx) => (
             <Reveal key={idx} variant="fadeUp" delay={idx * 0.04}>
               <div className="flex items-center gap-3.5 rounded-xl border border-[#fde2ec] bg-white px-4 py-3.5 backdrop-blur-md transition-all duration-200 hover:border-blue/50 hover:bg-[#fff0f5] sm:px-5 sm:py-4">
-                <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-rose/15 text-rose ring-1 ring-rose/35 sm:size-6">
+                <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-rose to-rose-dark text-white shadow-[0_4px_12px_rgba(232,62,116,0.3)] sm:size-6">
                   <FaCheck className="size-2.5 sm:size-3" />
                 </span>
                 <p className="text-[13.5px] leading-relaxed text-black sm:text-[14.5px]">
@@ -108,6 +109,7 @@ export default function DfiIndicationsAndChecklist() {
           ))}
         </div>
       </div>
-    </TreatmentSection>
+      </TreatmentSection>
+    </>
   );
 }

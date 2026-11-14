@@ -131,8 +131,9 @@ const checklistItems: { title: ReactNode; text: ReactNode }[] = [
 
 export default function IvfIndicationsAndChecklist() {
   return (
-    <TreatmentSection>
-      <div className="mb-14 sm:mb-16 lg:mb-20">
+    <>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="About"
           title="Who Needs IVF Treatment?"
@@ -149,8 +150,10 @@ export default function IvfIndicationsAndChecklist() {
           ))}
         </Stagger>
       </div>
+      </TreatmentSection>
 
-      <div>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Before Treatment"
           title="Checklist Before starting IVF"
@@ -165,6 +168,7 @@ export default function IvfIndicationsAndChecklist() {
           ))}
         </div>
       </div>
-    </TreatmentSection>
+      </TreatmentSection>
+    </>
   );
 }

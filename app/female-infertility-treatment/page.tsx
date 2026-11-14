@@ -35,9 +35,7 @@ export default function FemaleInfertilityPage() {
         <FemaleFertilityIndications />
       </SectionReveal>
 
-      <SectionReveal delay={0.04}>
-        <FemaleDiagnosticAndPathway />
-      </SectionReveal>
+      <FemaleDiagnosticAndPathway />
 
       <SectionReveal delay={0.04}>
         <FemaleWhyConsult />

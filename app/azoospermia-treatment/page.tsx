@@ -34,9 +34,7 @@ export default function AzoospermiaPage() {
         <AzoospermiaIndications />
       </SectionReveal>
 
-      <SectionReveal delay={0.04}>
-        <AzoospermiaDiagnosticAndProtocol />
-      </SectionReveal>
+      <AzoospermiaDiagnosticAndProtocol />
 
       <SectionReveal delay={0.04}>
         <AzoospermiaWhyConsult />

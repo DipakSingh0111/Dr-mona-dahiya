@@ -2,7 +2,7 @@ import PatientReviewsGroup from "./PatientReviewsGroup";
 
 export default function AllPatientReviewsSections() {
   return (
-    <div className="flex flex-col">
+    <>
       <PatientReviewsGroup
         id="first-cycle"
         sectionBg="bg-pink"
@@ -1082,6 +1082,6 @@ export default function AllPatientReviewsSections() {
           },
         ]}
       />
-    </div>
+    </>
   );
 }

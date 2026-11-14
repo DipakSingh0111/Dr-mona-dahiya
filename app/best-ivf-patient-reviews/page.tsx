@@ -41,9 +41,7 @@ export default function PatientReviewsPage() {
 
       <AllPatientReviewsSections />
 
-      <SectionReveal delay={0.04}>
-        <PatientReviewsBottomSections />
-      </SectionReveal>
+      <PatientReviewsBottomSections />
 
       <SectionReveal delay={0.04}>
         <AboutConsultation

@@ -35,13 +35,9 @@ export default function IcsiTreatmentPage() {
         />
       </SectionReveal>
 
-      <SectionReveal delay={0.04}>
-        <IcsiIndicationsAndChecklist />
-      </SectionReveal>
+      <IcsiIndicationsAndChecklist />
 
-      <SectionReveal delay={0.04}>
-        <IcsiProtocolAndWhy />
-      </SectionReveal>
+      <IcsiProtocolAndWhy />
 
       <SectionReveal delay={0.04}>
         <IcsiReviews />
@@ -58,9 +54,7 @@ export default function IcsiTreatmentPage() {
         />
       </SectionReveal>
 
-      <SectionReveal delay={0.04}>
-        <IcsiCostAndFaq />
-      </SectionReveal>
+      <IcsiCostAndFaq />
 
       <SectionReveal delay={0.04}>
         <IcsiRelatedTreatments />

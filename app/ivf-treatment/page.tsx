@@ -65,13 +65,9 @@ export default function IvfTreatmentPage() {
         <MedicalRegistration />
       </SectionReveal>
 
-      <SectionReveal delay={0.04}>
-        <IvfIndicationsAndChecklist />
-      </SectionReveal>
+      <IvfIndicationsAndChecklist />
 
-      <SectionReveal delay={0.04}>
-        <IvfProtocolAndWhy />
-      </SectionReveal>
+      <IvfProtocolAndWhy />
 
       <SectionReveal delay={0.04}>
         <IvfReviews />
@@ -86,9 +82,7 @@ export default function IvfTreatmentPage() {
         />
       </SectionReveal>
 
-      <SectionReveal delay={0.04}>
-        <IvfCostAndFaq />
-      </SectionReveal>
+      <IvfCostAndFaq />
 
       <SectionReveal delay={0.04}>
         <IvfRelatedTreatments />

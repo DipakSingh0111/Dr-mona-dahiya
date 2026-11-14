@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 import {
@@ -38,8 +39,9 @@ const diagnosticRows = [
 
 export default function MaleDiagnosticAndProtocol() {
   return (
-    <TreatmentSection>
-      <div className="mb-14 sm:mb-16 lg:mb-20">
+    <>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Tests to be done before treating male infertility"
           title="Diagnostic Checklist"
@@ -54,8 +56,10 @@ export default function MaleDiagnosticAndProtocol() {
           ))}
         </div>
       </div>
+      </TreatmentSection>
 
-      <div className="mb-14 sm:mb-16 lg:mb-20">
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="How do we treat Male Infertility?"
           title="Male Infertility Treatment Protocol"
@@ -64,30 +68,30 @@ export default function MaleDiagnosticAndProtocol() {
 
         <Stagger
           delay={0.06}
-          className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-5"
+          className="mt-7 grid auto-rows-fr grid-cols-1 items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-5"
         >
-          <StaggerItem>
+          <StaggerItem className="h-full min-h-[240px] sm:min-h-[260px]">
             <NumberedCard
               number="1"
               title="Modify Life style"
               description="Life style modifications are the first step towards improving your sperm health. Since it takes 74 days for sperm to develop. Try to avoid smoking and excessive alcohol. Keep your testicles away from high temperature. We will give you anti oxidants to improve your sperm health."
             />
           </StaggerItem>
-          <StaggerItem>
+          <StaggerItem className="h-full min-h-[240px] sm:min-h-[260px]">
             <NumberedCard
               number="2"
               title="Medications"
               description="If you have any infection we will start you on antibiotics. In case of low testosterone and high estrogen ratio we will give you medications like Clomiphene or an aromatase inhibitor."
             />
           </StaggerItem>
-          <StaggerItem>
+          <StaggerItem className="h-full min-h-[240px] sm:min-h-[260px]">
             <NumberedCard
               number="3"
               title="Repair of Varicocele"
               description="We will recommend surgery for varicocele if you have one and low semen parameters. We can refer you to our urologist to get it done."
             />
           </StaggerItem>
-          <StaggerItem>
+          <StaggerItem className="h-full min-h-[240px] sm:min-h-[260px]">
             <NumberedCard
               number="4"
               title="Intra Uterine Insemination (IUI)"
@@ -104,7 +108,7 @@ export default function MaleDiagnosticAndProtocol() {
               }
             />
           </StaggerItem>
-          <StaggerItem>
+          <StaggerItem className="h-full min-h-[240px] sm:min-h-[260px]">
             <NumberedCard
               number="5"
               title="ICSI by using microfluidics"
@@ -123,7 +127,7 @@ export default function MaleDiagnosticAndProtocol() {
               }
             />
           </StaggerItem>
-          <StaggerItem>
+          <StaggerItem className="h-full min-h-[240px] sm:min-h-[260px]">
             <NumberedCard
               number="6"
               title="Surgically retrieve sperm from you."
@@ -142,10 +146,23 @@ export default function MaleDiagnosticAndProtocol() {
               }
             />
           </StaggerItem>
+          <StaggerItem className="h-full min-h-[240px] sm:min-h-[260px]">
+            <div className="card-highlight relative h-full min-h-[240px] overflow-hidden rounded-2xl border border-[#fde2ec] bg-white p-2 shadow-[0_10px_30px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-[#f8b4cb] hover:shadow-[0_18px_40px_rgba(232,62,116,0.12)] sm:min-h-[260px]">
+              <Image
+                src="/shared-gallery/male infertility treatment overview.jpeg"
+                alt="Healthy Testis vs Varicocele Testis Diagram"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="object-contain p-2"
+              />
+            </div>
+          </StaggerItem>
         </Stagger>
       </div>
+      </TreatmentSection>
 
-      <div>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Why choose us?"
           title="Why Consult Dr. Mona Dahiya for Male Infertility?"
@@ -172,6 +189,7 @@ export default function MaleDiagnosticAndProtocol() {
           </Reveal>
         </div>
       </div>
-    </TreatmentSection>
+      </TreatmentSection>
+    </>
   );
 }

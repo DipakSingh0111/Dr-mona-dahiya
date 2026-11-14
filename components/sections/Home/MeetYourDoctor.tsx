@@ -98,7 +98,7 @@ export default function MeetYourDoctor() {
             <ul className="mt-6 grid grid-cols-1 gap-x-4 gap-y-3 sm:grid-cols-2 xl:mt-7 xl:gap-x-6 xl:gap-y-3.5">
               {data.features.map((feature) => (
                 <li key={feature} className="flex items-start gap-2">
-                  <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-[#ffe8f0] text-rose">
+                  <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-rose to-rose-dark text-white shadow-[0_4px_12px_rgba(232,62,116,0.3)]">
                     <FaCheck className="size-2.5" />
                   </span>
                   <span className="text-[12.5px] leading-snug font-semibold text-navy xl:text-[13.5px]">

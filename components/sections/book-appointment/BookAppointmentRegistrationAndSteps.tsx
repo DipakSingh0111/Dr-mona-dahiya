@@ -9,9 +9,10 @@ export default function BookAppointmentRegistrationAndSteps() {
   const { medicalRegistration, howToBook } = siteData.bookAppointmentPage;
 
   return (
-    <section className="relative overflow-hidden bg-pink py-10 sm:py-12 lg:py-14">
-      <div className="page-container relative space-y-12 sm:space-y-14 lg:space-y-16">
-        {/* Sub-section 1: Medical Registration Details */}
+    <>
+      <section className="relative overflow-hidden py-10 sm:py-12 lg:py-14">
+        <div className="page-container relative">
+          {/* Sub-section 1: Medical Registration Details */}
         <div>
           <Reveal variant="fadeUp" className="text-center">
             <span className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">
@@ -53,10 +54,14 @@ export default function BookAppointmentRegistrationAndSteps() {
               </StaggerItem>
             ))}
           </Stagger>
+          </div>
         </div>
+      </section>
 
-        {/* Sub-section 2: How to Book? 3 Steps */}
-        <div id="how-to-book">
+      <section id="how-to-book" className="relative overflow-hidden py-10 sm:py-12 lg:py-14">
+        <div className="page-container relative">
+          {/* Sub-section 2: How to Book? 3 Steps */}
+          <div>
           <Reveal variant="fadeUp" className="text-center">
             <span className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">
               {howToBook.eyebrow}
@@ -196,8 +201,9 @@ export default function BookAppointmentRegistrationAndSteps() {
             </p>
           </Reveal>
         </div>
-      </div>
-    </section>
+        </div>
+      </section>
+    </>
   );
 }
 

@@ -31,8 +31,9 @@ const costCards = [
 
 export default function FallopianTubesCaseAndCost() {
   return (
-    <TreatmentSection>
-      <div className="mb-14 sm:mb-16 lg:mb-20">
+    <>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Blocked fallopian tube patient"
           title="Clinical Case Insight"
@@ -53,8 +54,10 @@ export default function FallopianTubesCaseAndCost() {
           </div>
         </Reveal>
       </div>
+      </TreatmentSection>
 
-      <div>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Costs"
           title="Cost Factors Breakdown"
@@ -72,6 +75,7 @@ export default function FallopianTubesCaseAndCost() {
           ))}
         </Stagger>
       </div>
-    </TreatmentSection>
+      </TreatmentSection>
+    </>
   );
 }

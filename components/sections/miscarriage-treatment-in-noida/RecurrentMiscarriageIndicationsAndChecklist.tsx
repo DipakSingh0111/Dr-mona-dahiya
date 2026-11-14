@@ -109,8 +109,9 @@ const checklist: { title?: string; text: ReactNode }[] = [
 
 export default function RecurrentMiscarriageIndicationsAndChecklist() {
   return (
-    <TreatmentSection>
-      <div className="mb-14 sm:mb-16 lg:mb-20">
+    <>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Know more about this condition"
           title="Causes of Recurrent Miscarriage : When do you need an evaluation?"
@@ -127,8 +128,10 @@ export default function RecurrentMiscarriageIndicationsAndChecklist() {
           ))}
         </Stagger>
       </div>
+      </TreatmentSection>
 
-      <div>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Evaluation"
           title="Tests we perform : 5 Pillar Investigation for Recurrent Miscarriage"
@@ -143,6 +146,7 @@ export default function RecurrentMiscarriageIndicationsAndChecklist() {
           ))}
         </div>
       </div>
-    </TreatmentSection>
+      </TreatmentSection>
+    </>
   );
 }

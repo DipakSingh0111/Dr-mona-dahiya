@@ -28,17 +28,11 @@ export default function SpermDfiPage() {
         <MedicalRegistration />
       </SectionReveal>
 
-      <SectionReveal delay={0.04}>
-        <DfiIndicationsAndChecklist />
-      </SectionReveal>
+      <DfiIndicationsAndChecklist />
 
-      <SectionReveal delay={0.04}>
-        <DfiProtocolAndWhy />
-      </SectionReveal>
+      <DfiProtocolAndWhy />
 
-      <SectionReveal delay={0.04}>
-        <DfiCaseAndCost />
-      </SectionReveal>
+      <DfiCaseAndCost />
 
       <SectionReveal delay={0.04}>
         <DfiFaq />

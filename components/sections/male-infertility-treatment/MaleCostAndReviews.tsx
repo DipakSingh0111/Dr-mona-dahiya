@@ -11,8 +11,9 @@ import {
 
 export default function MaleCostAndReviews() {
   return (
-    <TreatmentSection>
-      <div className="mb-14 sm:mb-16 lg:mb-20">
+    <>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Transparency"
           title="Cost Factors"
@@ -49,8 +50,10 @@ export default function MaleCostAndReviews() {
           </StaggerItem>
         </Stagger>
       </div>
+      </TreatmentSection>
 
-      <div>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Patient reviews"
           title="What Patients Say About Dr. Mona"
@@ -96,6 +99,7 @@ export default function MaleCostAndReviews() {
           </Link>
         </Reveal>
       </div>
-    </TreatmentSection>
+      </TreatmentSection>
+    </>
   );
 }

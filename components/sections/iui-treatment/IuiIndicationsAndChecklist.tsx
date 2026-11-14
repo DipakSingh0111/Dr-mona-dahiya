@@ -80,10 +80,11 @@ const checklistItems = [
 
 export default function IuiIndicationsAndChecklist() {
   return (
-    <section className="relative overflow-hidden bg-pink py-10 sm:py-14 lg:py-16">
-      <div className="page-container relative">
-        {/* ================= SECTION 1: Who is a Good Candidate for IUI? ================= */}
-        <div className="mb-14 sm:mb-16 lg:mb-20">
+    <>
+      <section className="relative overflow-hidden py-10 sm:py-14 lg:py-16">
+        <div className="page-container relative">
+          {/* ================= SECTION 1: Who is a Good Candidate for IUI? ================= */}
+          <div>
           <Reveal variant="fadeUp">
             <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
               About the treatment
@@ -116,10 +117,14 @@ export default function IuiIndicationsAndChecklist() {
               </StaggerItem>
             ))}
           </Stagger>
+          </div>
         </div>
+      </section>
 
-        {/* ================= SECTION 2: What tests are required before IUI? ================= */}
-        <div>
+      <section className="relative overflow-hidden py-10 sm:py-14 lg:py-16">
+        <div className="page-container relative">
+          {/* ================= SECTION 2: What tests are required before IUI? ================= */}
+          <div>
           <Reveal variant="fadeUp">
             <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
               What happens before treatment?
@@ -149,7 +154,8 @@ export default function IuiIndicationsAndChecklist() {
             ))}
           </div>
         </div>
-      </div>
-    </section>
+        </div>
+      </section>
+    </>
   );
 }

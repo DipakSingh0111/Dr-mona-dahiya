@@ -161,8 +161,9 @@ const rightFaqs: FaqItem[] = [
 
 export default function SurgicalSpermRetrievalCostAndFaq() {
   return (
-    <TreatmentSection>
-      <div className="mb-14 sm:mb-16 lg:mb-20">
+    <>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="What effects the price?"
           title="Cost Factors Breakdown"
@@ -180,8 +181,10 @@ export default function SurgicalSpermRetrievalCostAndFaq() {
           ))}
         </Stagger>
       </div>
+      </TreatmentSection>
 
-      <div>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Common Questions"
           title="Frequently Asked Questions about Surgical Sperm Retrieval"
@@ -189,6 +192,7 @@ export default function SurgicalSpermRetrievalCostAndFaq() {
 
         <FaqAccordion leftItems={leftFaqs} rightItems={rightFaqs} />
       </div>
-    </TreatmentSection>
+      </TreatmentSection>
+    </>
   );
 }

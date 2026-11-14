@@ -35,13 +35,9 @@ export default function DonorGametePage() {
         />
       </SectionReveal>
 
-      <SectionReveal delay={0.04}>
-        <DonorGameteIndicationsAndChecklist />
-      </SectionReveal>
+      <DonorGameteIndicationsAndChecklist />
 
-      <SectionReveal delay={0.04}>
-        <DonorGameteProtocolAndWhy />
-      </SectionReveal>
+      <DonorGameteProtocolAndWhy />
 
       <SectionReveal delay={0.04}>
         <DonorGameteReviews />
@@ -51,9 +47,7 @@ export default function DonorGametePage() {
         <IvfSuccessClinics />
       </SectionReveal>
 
-      <SectionReveal delay={0.04}>
-        <DonorGameteCostAndFaq />
-      </SectionReveal>
+      <DonorGameteCostAndFaq />
 
       <SectionReveal delay={0.04}>
         <DonorGameteRelatedTreatments />

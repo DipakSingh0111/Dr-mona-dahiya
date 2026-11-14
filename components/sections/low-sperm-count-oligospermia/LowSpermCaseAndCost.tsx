@@ -31,8 +31,9 @@ const costCards = [
 
 export default function LowSpermCaseAndCost() {
   return (
-    <TreatmentSection>
-      <div className="mb-14 sm:mb-16 lg:mb-20">
+    <>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Articles from our Clinic"
           title="Clinical Case Insight"
@@ -51,8 +52,10 @@ export default function LowSpermCaseAndCost() {
           </div>
         </Reveal>
       </div>
+      </TreatmentSection>
 
-      <div>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Prices we offer"
           title="Cost Factors Breakdown"
@@ -70,6 +73,7 @@ export default function LowSpermCaseAndCost() {
           ))}
         </Stagger>
       </div>
-    </TreatmentSection>
+      </TreatmentSection>
+    </>
   );
 }

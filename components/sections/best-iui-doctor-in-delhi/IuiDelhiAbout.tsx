@@ -7,7 +7,7 @@ import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
 export default function IuiDelhiAbout() {
   const requirements = [
-    "A bit abnormal semen parameters",
+    "Mild abnormal semen parameters",
     "Hostile Cervical Mucus",
     "Difficulty Ejaculating or Sexual Dysfunction",
     "Unexplained Infertility for a period of 1 year or more",
@@ -41,7 +41,7 @@ export default function IuiDelhiAbout() {
               </p>
 
               <h3 className="font-serif mt-6 text-[1.05rem] font-semibold text-black sm:text-[1.15rem]">
-                Who needs IUI
+                Who needs IUI ?
               </h3>
             </Reveal>
 
@@ -49,7 +49,7 @@ export default function IuiDelhiAbout() {
               {requirements.map((item) => (
                 <StaggerItem key={item}>
                   <div className="flex items-center gap-3 rounded-xl border-4 border-white bg-white px-4 py-3 backdrop-blur-md transition-all duration-200 hover:border-[#fbcfe0] hover:bg-[#fff0f5] sm:px-5 sm:py-3.5">
-                    <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-rose/15 text-rose ring-1 ring-rose/35">
+                    <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-rose to-rose-dark text-white shadow-[0_4px_12px_rgba(232,62,116,0.3)]">
                       <FaCheck className="size-2.5" />
                     </span>
                     <span className="text-[13px] font-medium text-black sm:text-[14px]">

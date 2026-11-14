@@ -28,13 +28,9 @@ export default function RifPage() {
         <MedicalRegistration />
       </SectionReveal>
 
-      <SectionReveal delay={0.04}>
-        <RifWhatAndIndications />
-      </SectionReveal>
+      <RifWhatAndIndications />
 
-      <SectionReveal delay={0.04}>
-        <RifProtocolWhyAndCase />
-      </SectionReveal>
+      <RifProtocolWhyAndCase />
 
       <SectionReveal delay={0.04}>
         <RifCost />

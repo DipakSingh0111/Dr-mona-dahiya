@@ -46,7 +46,7 @@ export default function IuiGhaziabadAbout() {
               {checklist.map((item) => (
                 <StaggerItem key={item}>
                   <div className="flex items-center gap-3 rounded-xl border-4 border-white bg-white px-4 py-3 shadow-sm transition-all hover:border-[#fbcfe0] hover:bg-[#fff0f5]">
-                    <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-rose/15 text-rose ring-1 ring-rose/35">
+                    <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-rose to-rose-dark text-white shadow-[0_4px_12px_rgba(232,62,116,0.3)]">
                       <FaCheck className="size-2.5" />
                     </span>
                     <span className="text-[13px] font-medium text-ink sm:text-[13.5px]">

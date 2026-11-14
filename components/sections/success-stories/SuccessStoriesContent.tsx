@@ -16,7 +16,7 @@ export default function SuccessStoriesContent() {
   const { diagnosis, trust, journey } = siteData.successStoriesPage;
 
   return (
-    <div className="text-ink">
+    <>
       {/* 1. Explore Patient Stories by Diagnosis (White) */}
       <section
         id="stories-by-diagnosis"
@@ -136,6 +136,6 @@ export default function SuccessStoriesContent() {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }

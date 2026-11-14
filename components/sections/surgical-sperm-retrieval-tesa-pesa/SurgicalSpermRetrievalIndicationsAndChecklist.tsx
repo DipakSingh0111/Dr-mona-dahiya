@@ -48,8 +48,9 @@ const checklist = [
 
 export default function SurgicalSpermRetrievalIndicationsAndChecklist() {
   return (
-    <TreatmentSection>
-      <div className="mb-14 sm:mb-16 lg:mb-20">
+    <>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Reasons"
           title="Indications: Who Needs Surgical Sperm Retrieval?"
@@ -67,8 +68,10 @@ export default function SurgicalSpermRetrievalIndicationsAndChecklist() {
           ))}
         </Stagger>
       </div>
+      </TreatmentSection>
 
-      <div>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Diagnosis"
           title="Diagnostic Checklist"
@@ -83,6 +86,7 @@ export default function SurgicalSpermRetrievalIndicationsAndChecklist() {
           ))}
         </div>
       </div>
-    </TreatmentSection>
+      </TreatmentSection>
+    </>
   );
 }

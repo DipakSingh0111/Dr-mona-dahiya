@@ -29,13 +29,9 @@ export default function PcosTreatmentPage() {
         <MedicalRegistration />
       </SectionReveal>
 
-      <SectionReveal delay={0.04}>
-        <PcosDifferenceAndCriteria />
-      </SectionReveal>
+      <PcosDifferenceAndCriteria />
 
-      <SectionReveal delay={0.04}>
-        <PcosChecklistAndProtocol />
-      </SectionReveal>
+      <PcosChecklistAndProtocol />
 
       <SectionReveal delay={0.04}>
         <PcosReviews />
@@ -45,9 +41,7 @@ export default function PcosTreatmentPage() {
         <IvfSuccessClinics />
       </SectionReveal>
 
-      <SectionReveal delay={0.04}>
-        <PcosCostAndFaq />
-      </SectionReveal>
+      <PcosCostAndFaq />
 
       <SectionReveal delay={0.04}>
         <PcosRelatedTreatments />

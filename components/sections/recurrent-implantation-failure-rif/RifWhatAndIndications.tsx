@@ -48,8 +48,9 @@ const checklistItems = [
 
 export default function RifWhatAndIndications() {
   return (
-    <TreatmentSection>
-      <div className="mb-14 sm:mb-16 lg:mb-20">
+    <>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="About Recurrent Implantation Failure (RIF)"
           title="What Is Recurrent Implantation Failure (RIF)?"
@@ -77,8 +78,10 @@ export default function RifWhatAndIndications() {
           </div>
         </Reveal>
       </div>
+      </TreatmentSection>
 
-      <div className="mb-14 sm:mb-16 lg:mb-20">
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Reasons For Recurrent Implantation Failure (RIF)"
           title="Indications: Who Needs a RIF Evaluation?"
@@ -96,8 +99,10 @@ export default function RifWhatAndIndications() {
           ))}
         </Stagger>
       </div>
+      </TreatmentSection>
 
-      <div>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Test To Diagnose Recurrent Implantation Failure (RIF)"
           title="Diagnostic Checklist"
@@ -112,6 +117,7 @@ export default function RifWhatAndIndications() {
           ))}
         </div>
       </div>
-    </TreatmentSection>
+      </TreatmentSection>
+    </>
   );
 }

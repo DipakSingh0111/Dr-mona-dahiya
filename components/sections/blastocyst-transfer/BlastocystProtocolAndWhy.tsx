@@ -95,13 +95,25 @@ export function BlastocystProtocol() {
       />
       <Stagger
         delay={0.04}
-        className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
+        className="mt-7 grid auto-rows-fr grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
       >
         {protocols.map((item) => (
-          <StaggerItem key={item.number}>
+          <StaggerItem key={item.number} className="h-full">
             <ProtocolCard {...item} />
           </StaggerItem>
         ))}
+
+        <StaggerItem className="h-full">
+          <div className="card-highlight relative h-full min-h-[240px] w-full overflow-hidden rounded-2xl border border-[#fde2ec] bg-white shadow-[0_10px_30px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-[#f8b4cb] hover:shadow-[0_18px_40px_rgba(232,62,116,0.12)] sm:aspect-[4/3]">
+            <Image
+              src="/shared-gallery/blastocyst.jpeg"
+              alt="Day 5 Expanded Blastocyst under Embryology Microscope"
+              fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              className="object-cover object-center"
+            />
+          </div>
+        </StaggerItem>
       </Stagger>
     </TreatmentSection>
   );

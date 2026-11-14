@@ -54,8 +54,9 @@ const diagnosticItems = [
 
 export default function FallopianTubesIndicationsAndChecklist() {
   return (
-    <TreatmentSection>
-      <div className="mb-14 sm:mb-16 lg:mb-20">
+    <>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Reasons To Check Your Fallopian Tubes"
           title={
@@ -73,8 +74,10 @@ export default function FallopianTubesIndicationsAndChecklist() {
           ))}
         </div>
       </div>
+      </TreatmentSection>
 
-      <div>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Ways to check if your tubes are blocked"
           title="Diagnostic Checklist"
@@ -89,6 +92,7 @@ export default function FallopianTubesIndicationsAndChecklist() {
           ))}
         </div>
       </div>
-    </TreatmentSection>
+      </TreatmentSection>
+    </>
   );
 }

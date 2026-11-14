@@ -92,8 +92,9 @@ const whyPoints = [
 
 export default function SecondOpinionPathwayAndWhy() {
   return (
-    <TreatmentSection>
-      <div className="mb-14 sm:mb-16 lg:mb-20">
+    <>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Process Followed"
           title="Step-by-Step Second-Opinion Pathway"
@@ -101,17 +102,22 @@ export default function SecondOpinionPathwayAndWhy() {
 
         <Stagger
           delay={0.05}
-          className="mt-7 grid grid-cols-1 items-stretch gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
+          className="mt-7 grid auto-rows-fr grid-cols-1 items-stretch gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
         >
           {steps.map((step) => (
-            <StaggerItem key={step.number} className="h-full">
+            <StaggerItem
+              key={step.number}
+              className="h-full min-h-[240px] sm:min-h-[260px]"
+            >
               <ProtocolCard {...step} />
             </StaggerItem>
           ))}
         </Stagger>
       </div>
+      </TreatmentSection>
 
-      <div>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="About Us"
           title="Why Consult Dr. Mona Dahiya for a Second Opinion?"
@@ -125,6 +131,7 @@ export default function SecondOpinionPathwayAndWhy() {
           ))}
         </div>
       </div>
-    </TreatmentSection>
+      </TreatmentSection>
+    </>
   );
 }

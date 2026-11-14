@@ -21,8 +21,9 @@ const responsibilityItems = [
 
 export default function TermsScopeAndResponsibilities() {
   return (
-    <TreatmentSection>
-      <div className="mb-14 sm:mb-16 lg:mb-20">
+    <>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Section 2"
           title="Scope of Services & Clinical Autonomy"
@@ -37,8 +38,10 @@ export default function TermsScopeAndResponsibilities() {
           ))}
         </div>
       </div>
+      </TreatmentSection>
 
-      <div>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Section 3"
           title="Patient Responsibilities & Required Documents"
@@ -53,6 +56,7 @@ export default function TermsScopeAndResponsibilities() {
           ))}
         </div>
       </div>
-    </TreatmentSection>
+      </TreatmentSection>
+    </>
   );
 }

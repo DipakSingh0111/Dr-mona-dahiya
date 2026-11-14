@@ -30,13 +30,9 @@ export default function RecurrentMiscarriagePage() {
         <MedicalRegistration />
       </SectionReveal>
 
-      <SectionReveal delay={0.04}>
-        <RecurrentMiscarriageIndicationsAndChecklist />
-      </SectionReveal>
+      <RecurrentMiscarriageIndicationsAndChecklist />
 
-      <SectionReveal delay={0.04}>
-        <RecurrentMiscarriageProtocolAndWhy />
-      </SectionReveal>
+      <RecurrentMiscarriageProtocolAndWhy />
 
       <SectionReveal delay={0.04}>
         <RecurrentMiscarriageReviews />

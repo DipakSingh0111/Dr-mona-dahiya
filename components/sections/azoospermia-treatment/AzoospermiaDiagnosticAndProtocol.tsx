@@ -60,8 +60,9 @@ const protocols = [
 
 export default function AzoospermiaDiagnosticAndProtocol() {
   return (
-    <TreatmentSection>
-      <div className="mb-14 sm:mb-16 lg:mb-20">
+    <>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Tests to Diagnose Azoospermia"
           title="Diagnostic Checklist"
@@ -76,8 +77,10 @@ export default function AzoospermiaDiagnosticAndProtocol() {
           ))}
         </div>
       </div>
+      </TreatmentSection>
 
-      <div>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Protocol to Follow"
           title="Treatment Protocol of Azoospermia"
@@ -86,15 +89,16 @@ export default function AzoospermiaDiagnosticAndProtocol() {
 
         <Stagger
           delay={0.05}
-          className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-5"
+          className="mt-7 grid auto-rows-fr grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-5"
         >
           {protocols.map((item) => (
-            <StaggerItem key={item.number}>
+            <StaggerItem key={item.number} className="h-full">
               <ProtocolCard {...item} />
             </StaggerItem>
           ))}
         </Stagger>
       </div>
-    </TreatmentSection>
+      </TreatmentSection>
+    </>
   );
 }

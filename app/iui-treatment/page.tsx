@@ -34,13 +34,9 @@ export default function IuiTreatmentPage() {
         <MedicalRegistration />
       </SectionReveal>
 
-      <SectionReveal delay={0.04}>
-        <IuiIndicationsAndChecklist />
-      </SectionReveal>
+      <IuiIndicationsAndChecklist />
 
-      <SectionReveal delay={0.04}>
-        <IuiProtocolAndWhy />
-      </SectionReveal>
+      <IuiProtocolAndWhy />
 
       <SectionReveal delay={0.04}>
         <IuiReviews />

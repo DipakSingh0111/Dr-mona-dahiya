@@ -286,7 +286,7 @@ export default function IvfFaqsContent() {
   };
 
   return (
-    <div className="text-black">
+    <>
       {/* Category Navigation (White) */}
       <section className="relative overflow-hidden bg-white py-10 sm:py-12 lg:py-14 border-y border-[#fde2ec]/70">
         <div className="page-container relative">
@@ -356,6 +356,6 @@ export default function IvfFaqsContent() {
           </section>
         );
       })}
-    </div>
+    </>
   );
 }

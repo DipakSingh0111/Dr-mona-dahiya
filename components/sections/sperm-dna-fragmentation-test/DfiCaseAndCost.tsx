@@ -28,8 +28,9 @@ const costCards = [
 
 export default function DfiCaseAndCost() {
   return (
-    <TreatmentSection>
-      <div className="mb-14 sm:mb-16 lg:mb-20">
+    <>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Case Study"
           title="Clinical Case Insight"
@@ -49,8 +50,10 @@ export default function DfiCaseAndCost() {
           </div>
         </Reveal>
       </div>
+      </TreatmentSection>
 
-      <div>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Cost"
           title="Cost Factors Breakdown"
@@ -68,6 +71,7 @@ export default function DfiCaseAndCost() {
           ))}
         </Stagger>
       </div>
-    </TreatmentSection>
+      </TreatmentSection>
+    </>
   );
 }

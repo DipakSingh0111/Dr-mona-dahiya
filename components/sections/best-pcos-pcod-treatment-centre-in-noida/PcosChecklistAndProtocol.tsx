@@ -72,8 +72,9 @@ function LinkedProtocolCard({
 
 export default function PcosChecklistAndProtocol() {
   return (
-    <TreatmentSection>
-      <div className="mb-14 sm:mb-16 lg:mb-20">
+    <>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Prior to starting"
           title="Diagnostic Checklist: Metabolic & Hormonal Profiling"
@@ -88,8 +89,10 @@ export default function PcosChecklistAndProtocol() {
           ))}
         </div>
       </div>
+      </TreatmentSection>
 
-      <div className="mb-14 sm:mb-16 lg:mb-20">
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="About this process"
           title="Step-by-Step PCOS Treatment Protocol"
@@ -177,8 +180,10 @@ export default function PcosChecklistAndProtocol() {
           </StaggerItem>
         </Stagger>
       </div>
+      </TreatmentSection>
 
-      <div>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Experience and Knowledge"
           title="Why Consult Dr. Mona Dahiya for PCOS?"
@@ -192,6 +197,7 @@ export default function PcosChecklistAndProtocol() {
           ))}
         </div>
       </div>
-    </TreatmentSection>
+      </TreatmentSection>
+    </>
   );
 }

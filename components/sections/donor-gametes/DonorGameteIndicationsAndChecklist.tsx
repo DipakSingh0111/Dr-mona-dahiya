@@ -63,8 +63,9 @@ const checklist = [
 
 export default function DonorGameteIndicationsAndChecklist() {
   return (
-    <TreatmentSection>
-      <div className="mb-14 sm:mb-16 lg:mb-20">
+    <>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Donor Egg / Sperm"
           title="Indications: When Are Donor Gametes Recommended?"
@@ -80,8 +81,10 @@ export default function DonorGameteIndicationsAndChecklist() {
           ))}
         </Stagger>
       </div>
+      </TreatmentSection>
 
-      <div>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Tests Required"
           title="Diagnostic Checklist: Donor Screening & Recipient Preparation"
@@ -104,6 +107,7 @@ export default function DonorGameteIndicationsAndChecklist() {
           ))}
         </div>
       </div>
-    </TreatmentSection>
+      </TreatmentSection>
+    </>
   );
 }

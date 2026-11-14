@@ -56,8 +56,9 @@ const criteria = [
 
 export default function PcosDifferenceAndCriteria() {
   return (
-    <TreatmentSection>
-      <div className="mb-14 sm:mb-16 lg:mb-20">
+    <>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Know More"
           title="What Is PCOS and What Is PCOD?"
@@ -73,8 +74,10 @@ export default function PcosDifferenceAndCriteria() {
           ))}
         </Stagger>
       </div>
+      </TreatmentSection>
 
-      <div>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="More Information"
           title="Indications: PCOS Diagnostic Criteria (Rotterdam)"
@@ -90,6 +93,7 @@ export default function PcosDifferenceAndCriteria() {
           ))}
         </Stagger>
       </div>
-    </TreatmentSection>
+      </TreatmentSection>
+    </>
   );
 }

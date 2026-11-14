@@ -31,19 +31,13 @@ export default function LowSpermTreatmentPage() {
       </SectionReveal>
 
       {/* 3. Indications & Diagnostic Checklist */}
-      <SectionReveal delay={0.04}>
-        <LowSpermIndicationsAndChecklist />
-      </SectionReveal>
+      <LowSpermIndicationsAndChecklist />
 
       {/* 4. Step-by-Step Protocol & Why Consult Dr. Mona */}
-      <SectionReveal delay={0.04}>
-        <LowSpermProtocolAndWhy />
-      </SectionReveal>
+      <LowSpermProtocolAndWhy />
 
       {/* 5. Clinical Case Insight & Cost Factors Breakdown */}
-      <SectionReveal delay={0.04}>
-        <LowSpermCaseAndCost />
-      </SectionReveal>
+      <LowSpermCaseAndCost />
 
       {/* 6. Top FAQs About Low Sperm Count & Motility */}
       <SectionReveal delay={0.04}>

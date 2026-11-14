@@ -31,13 +31,9 @@ export default function TermsOfServicePage() {
         <TermsAuthority />
       </SectionReveal>
 
-      <SectionReveal delay={0.04}>
-        <TermsScopeAndResponsibilities />
-      </SectionReveal>
+      <TermsScopeAndResponsibilities />
 
-      <SectionReveal delay={0.04}>
-        <TermsGovernanceAndIp />
-      </SectionReveal>
+      <TermsGovernanceAndIp />
 
       <SectionReveal delay={0.04}>
         <TermsFaq />

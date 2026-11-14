@@ -91,8 +91,9 @@ const rightFaqs: FaqItem[] = [
 
 export default function IvfCostAndFaq() {
   return (
-    <TreatmentSection>
-      <div className="mb-14 sm:mb-16 lg:mb-20">
+    <>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Cost"
           title="What determines your cost of IVF Treatment?"
@@ -110,8 +111,10 @@ export default function IvfCostAndFaq() {
           ))}
         </Stagger>
       </div>
+      </TreatmentSection>
 
-      <div>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Patient questions"
           title="Top FAQs About IVF Treatment in Delhi NCR"
@@ -119,6 +122,7 @@ export default function IvfCostAndFaq() {
 
         <FaqAccordion leftItems={leftFaqs} rightItems={rightFaqs} />
       </div>
-    </TreatmentSection>
+      </TreatmentSection>
+    </>
   );
 }

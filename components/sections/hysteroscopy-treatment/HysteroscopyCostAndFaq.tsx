@@ -129,8 +129,9 @@ const rightFaqs: FaqItem[] = [
 
 export default function HysteroscopyCostAndFaq() {
   return (
-    <TreatmentSection>
-      <div className="mb-14 sm:mb-16 lg:mb-20">
+    <>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Understanding the pricing of your procedure"
           title="Cost Factors Breakdown"
@@ -147,8 +148,10 @@ export default function HysteroscopyCostAndFaq() {
           ))}
         </Stagger>
       </div>
+      </TreatmentSection>
 
-      <div>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="FAQs"
           title="Frequently Asked Questions about Hysteroscopy"
@@ -156,6 +159,7 @@ export default function HysteroscopyCostAndFaq() {
         />
         <FaqAccordion leftItems={leftFaqs} rightItems={rightFaqs} />
       </div>
-    </TreatmentSection>
+      </TreatmentSection>
+    </>
   );
 }

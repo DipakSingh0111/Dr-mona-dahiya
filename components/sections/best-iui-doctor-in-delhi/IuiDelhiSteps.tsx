@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
@@ -64,12 +65,12 @@ export default function IuiDelhiSteps() {
         </Reveal>
 
         <Stagger
-          className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5"
+          className="mt-7 grid auto-rows-fr grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5"
           stagger={0.06}
         >
           {steps.map((item) => (
             <StaggerItem key={item.num} className="h-full">
-              <div className="card-highlight flex h-full flex-col rounded-2xl border border-rose/25 bg-white p-5 shadow-[0_0_20px_rgba(232,62,116,0.08)] backdrop-blur-md transition-all duration-300 hover:border-rose/45 hover:bg-[#fff0f5] sm:p-6">
+              <div className="card-highlight flex h-full min-h-[240px] flex-col rounded-2xl border border-rose/25 bg-white p-5 shadow-[0_0_20px_rgba(232,62,116,0.08)] backdrop-blur-md transition-all duration-300 hover:border-rose/45 hover:bg-[#fff0f5] sm:min-h-[260px] sm:p-6">
                 <div className="flex items-center gap-3">
                   <span className="card-badge flex size-7 shrink-0 items-center justify-center rounded-lg bg-rose text-[13px] font-bold text-white shadow-[0_2px_10px_rgba(232,62,116,0.35)]">
                     {item.num}
@@ -84,6 +85,18 @@ export default function IuiDelhiSteps() {
               </div>
             </StaggerItem>
           ))}
+
+          <StaggerItem className="h-full">
+            <div className="card-highlight relative h-full min-h-[240px] w-full overflow-hidden rounded-2xl border border-rose/25 bg-white shadow-[0_0_20px_rgba(232,62,116,0.08)] transition-all duration-300 hover:-translate-y-1 hover:border-rose/45 hover:shadow-md sm:min-h-[260px]">
+              <Image
+                src="/shared-gallery/best iui doctor in delhi.jpeg"
+                alt="IUI Sperm Preparation and Embryology Laboratory in Delhi"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="object-cover object-center"
+              />
+            </div>
+          </StaggerItem>
         </Stagger>
 
         <Reveal variant="fadeUp" delay={0.2} className="mt-8">

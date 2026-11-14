@@ -29,21 +29,13 @@ export default function PgtPage() {
         <MedicalRegistration />
       </SectionReveal>
 
-      <SectionReveal delay={0.04}>
-        <PgtWhatAndModalities />
-      </SectionReveal>
+      <PgtWhatAndModalities />
 
-      <SectionReveal delay={0.04}>
-        <PgtIndicationsAndChecklist />
-      </SectionReveal>
+      <PgtIndicationsAndChecklist />
 
-      <SectionReveal delay={0.04}>
-        <PgtProtocolAndWhy />
-      </SectionReveal>
+      <PgtProtocolAndWhy />
 
-      <SectionReveal delay={0.04}>
-        <PgtCostAndClinics />
-      </SectionReveal>
+      <PgtCostAndClinics />
 
       <SectionReveal delay={0.04}>
         <PgtFaq />

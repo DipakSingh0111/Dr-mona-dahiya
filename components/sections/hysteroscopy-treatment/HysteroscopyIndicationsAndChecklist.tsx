@@ -48,8 +48,9 @@ const checklist = [
 
 export default function HysteroscopyIndicationsAndChecklist() {
   return (
-    <TreatmentSection>
-      <div className="mb-14 sm:mb-16 lg:mb-20">
+    <>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Clinical breakdown"
           title="Indications: Who Needs Hysteroscopy?"
@@ -66,8 +67,10 @@ export default function HysteroscopyIndicationsAndChecklist() {
           ))}
         </Stagger>
       </div>
+      </TreatmentSection>
 
-      <div>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Prior to treatment"
           title="Diagnostic Checklist"
@@ -81,6 +84,7 @@ export default function HysteroscopyIndicationsAndChecklist() {
           ))}
         </div>
       </div>
-    </TreatmentSection>
+      </TreatmentSection>
+    </>
   );
 }

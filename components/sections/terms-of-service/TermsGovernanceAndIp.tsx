@@ -51,8 +51,9 @@ const platformCards = [
 
 export default function TermsGovernanceAndIp() {
   return (
-    <TreatmentSection>
-      <div className="mb-14 sm:mb-16 lg:mb-20">
+    <>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Regulatory standards"
           title="Statutory Governance & Clinical Quality"
@@ -69,8 +70,10 @@ export default function TermsGovernanceAndIp() {
           ))}
         </Stagger>
       </div>
+      </TreatmentSection>
 
-      <div>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Platform terms"
           title="Intellectual Property & Legal Jurisdiction"
@@ -87,6 +90,7 @@ export default function TermsGovernanceAndIp() {
           ))}
         </Stagger>
       </div>
-    </TreatmentSection>
+      </TreatmentSection>
+    </>
   );
 }

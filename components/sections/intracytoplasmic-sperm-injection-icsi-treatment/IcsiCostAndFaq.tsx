@@ -95,8 +95,9 @@ const rightFaqs: FaqItem[] = [
 
 export default function IcsiCostAndFaq() {
   return (
-    <TreatmentSection>
-      <div className="mb-14 sm:mb-16 lg:mb-20">
+    <>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="Cost"
           title="Factors Which Affect Cost Of ICSI"
@@ -114,8 +115,10 @@ export default function IcsiCostAndFaq() {
           ))}
         </Stagger>
       </div>
+      </TreatmentSection>
 
-      <div>
+      <TreatmentSection>
+        <div>
         <TreatmentSectionHeader
           eyebrow="FAQ"
           title="Top FAQs About ICSI Treatment in Delhi NCR"
@@ -136,6 +139,7 @@ export default function IcsiCostAndFaq() {
           </div>
         </Reveal>
       </div>
-    </TreatmentSection>
+      </TreatmentSection>
+    </>
   );
 }

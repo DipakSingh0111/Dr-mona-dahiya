@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
 export default function IuiGhaziabadSteps() {
@@ -58,11 +59,11 @@ export default function IuiGhaziabadSteps() {
           </p>
         </Reveal>
 
-        {/* 7 Steps Cards Grid */}
-        <Stagger className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5" stagger={0.05}>
+        {/* 7 Steps Cards Grid + Lab Image Card */}
+        <Stagger className="mt-7 grid auto-rows-fr grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5" stagger={0.05}>
           {steps.map((item) => (
             <StaggerItem key={item.num} className="h-full">
-              <div className="card-highlight flex h-full flex-col rounded-2xl border border-[#fde2ec] bg-white p-5 shadow-sm transition-all duration-300 hover:border-[#fbcfe0] hover:bg-[#fff0f5] hover:shadow-md sm:p-6">
+              <div className="card-highlight flex h-full min-h-[240px] flex-col rounded-2xl border border-[#fde2ec] bg-white p-5 shadow-sm transition-all duration-300 hover:border-[#fbcfe0] hover:bg-[#fff0f5] hover:shadow-md sm:min-h-[260px] sm:p-6">
                 <div className="flex items-center gap-3">
                   <span className="flex size-7 shrink-0 items-center justify-center rounded-lg bg-rose text-[13px] font-bold text-white shadow-[0_2px_10px_rgba(232,62,116,0.35)]">
                     {item.num}
@@ -77,6 +78,18 @@ export default function IuiGhaziabadSteps() {
               </div>
             </StaggerItem>
           ))}
+
+          <StaggerItem className="h-full">
+            <div className="card-highlight relative h-full min-h-[240px] w-full overflow-hidden rounded-2xl border border-[#fde2ec] bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#fbcfe0] hover:shadow-md sm:min-h-[260px]">
+              <Image
+                src="/shared-gallery/best iui doctor in ghaziabad.jpeg"
+                alt="IUI Laboratory and Embryology Preparation in Ghaziabad"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="object-cover object-center"
+              />
+            </div>
+          </StaggerItem>
         </Stagger>
 
         {/* Button */}
