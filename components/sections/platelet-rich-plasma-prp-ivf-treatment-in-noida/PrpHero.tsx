@@ -18,9 +18,13 @@ export default function PrpHero() {
         className="relative overflow-hidden flex flex-col justify-center pb-6 sm:pb-8 lg:pb-0"
       style={{ background: "var(--pink)" }}
     >
-      <HeroFullWidthBanner src="/pageBanner/M0500401.JPG" alt="Dr. Mona Dahiya — Platelet-Rich Plasma (PRP) Therapy in IVF" />
+      <HeroFullWidthBanner
+        src="/pageBanner/M0500399.JPG"
+        alt="Dr. Mona Dahiya — Platelet-Rich Plasma (PRP) Therapy in IVF"
+        objectPosition="object-[72%_35%] md:object-[72%_32%] lg:object-[82%_62%] xl:object-[80%_62%] 2xl:object-[76%_58%]"
+      />
       <div className="page-container relative z-10 w-full pt-4 sm:pt-5 lg:pt-0">
-        <div className="lg:max-w-[28rem] xl:max-w-[34rem] 2xl:max-w-[38rem]">
+        <div className="lg:max-w-[34rem] xl:max-w-[40rem] 2xl:max-w-[45rem]">
           <Breadcrumb
             items={[
               { label: "Treatments", href: "/our-services" },
@@ -32,9 +36,10 @@ export default function PrpHero() {
             PRP in IVF – Ovarian &amp; Uterine lining augmentation
           </p>
 
-          <h1 className="font-serif mt-1.5 max-w-[40rem] text-[1.65rem] leading-[1.16] font-normal tracking-tight text-ink sm:text-[2.15rem] lg:text-[2.45rem] xl:text-[2.65rem]">
-            Platelet-Rich Plasma (PRP) Therapy in IVF: Ovarian &amp; Endometrial
-            Rejuvenation
+          <h1 className="font-serif mt-1.5 max-w-[44rem] text-[1.65rem] leading-[1.16] font-normal tracking-tight text-ink sm:text-[2.15rem] lg:text-[2.45rem] xl:text-[2.65rem]">
+            Platelet-Rich Plasma (PRP) Therapy in IVF:{" "}
+            <br className="hidden sm:inline" />
+            Ovarian &amp; Endometrial Rejuvenation
           </h1>
 
           <p className="mt-3.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/80 sm:text-[15px]">
@@ -84,7 +89,7 @@ export default function PrpHero() {
           </Stagger>
         </div>
 
-        <HeroMobileBanner src="/pageBanner/M0500401.JPG" alt="Dr. Mona Dahiya — Platelet-Rich Plasma (PRP) Therapy in IVF" />
+        <HeroMobileBanner src="/pageBanner/M0500399.JPG" alt="Dr. Mona Dahiya — Platelet-Rich Plasma (PRP) Therapy in IVF" />
       </div>
     </section>
       <section className="py-5 sm:py-6">

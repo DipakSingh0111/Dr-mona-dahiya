@@ -25,7 +25,7 @@ export default function OncofertilityHero() {
         background: "var(--pink)",
       }}
     >
-      <HeroFullWidthBanner src="/pageBanner/M0500399.JPG" alt="Dr. Mona Dahiya — Oncofertility in Delhi NCR" />
+      <HeroFullWidthBanner src="/pageBanner/M0500401.JPG" alt="Dr. Mona Dahiya — Oncofertility in Delhi NCR" />
       <div className="page-container relative z-10 w-full pt-4 sm:pt-5 lg:pt-0">
         <div className="lg:max-w-[28rem] xl:max-w-[34rem] 2xl:max-w-[38rem]">
           <Breadcrumb
@@ -89,7 +89,7 @@ export default function OncofertilityHero() {
           </Stagger>
         </div>
 
-        <HeroMobileBanner src="/pageBanner/M0500399.JPG" alt="Dr. Mona Dahiya — Oncofertility in Delhi NCR" />
+        <HeroMobileBanner src="/pageBanner/M0500401.JPG" alt="Dr. Mona Dahiya — Oncofertility in Delhi NCR" />
       </div>
     </section>
       <section className="py-5 sm:py-6">
