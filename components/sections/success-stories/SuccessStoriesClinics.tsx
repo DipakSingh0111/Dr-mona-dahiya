@@ -12,6 +12,7 @@ export default function SuccessStoriesClinics() {
       eyebrow={eyebrow}
       title={title}
       subtitle={subtitle}
+      sectionBg="bg-pink"
     />
   );
 }

@@ -15,7 +15,7 @@ const galleryItems: GalleryItem[] = [
     id: "clinic-noida",
     title: "Noida IVF Centre",
     subtitle: "Advanced IVF Lab & Consultation Chambers",
-    image: "/images/clinics/noida.jpg",
+    image: "/images/noida.jpeg",
   },
   {
     id: "award-times",
@@ -33,7 +33,7 @@ const galleryItems: GalleryItem[] = [
     id: "clinic-delhi",
     title: "Delhi Lajpat Nagar Centre",
     subtitle: "State-of-the-art Fertility Care Facilities",
-    image: "/images/clinics/delhi.jpg",
+    image: "/images/delhi.png",
   },
   {
     id: "award-stage",
@@ -45,7 +45,7 @@ const galleryItems: GalleryItem[] = [
     id: "clinic-ghaziabad",
     title: "Ghaziabad Raj Nagar Centre",
     subtitle: "Full-service Infertility & Embryology Lab",
-    image: "/images/clinics/ghaziabad.jpg",
+    image: "/images/ghaziabad.jpeg",
   },
   {
     id: "award-asia",

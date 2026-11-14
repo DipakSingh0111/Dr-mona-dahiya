@@ -1,4 +1,5 @@
 "use client";
+import HeroCounterBar from "@/components/ui/HeroCounterBar";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 
 import {
@@ -13,6 +14,7 @@ export default function TermsHero() {
   const badges = ["Governed by Indian law", "Noida • Ghaziabad • Delhi"];
 
   return (
+    <>
     <section
         className="relative overflow-hidden flex flex-col justify-center pb-6 sm:pb-8 lg:pb-0"
       style={{ background: "var(--pink)" }}
@@ -102,5 +104,34 @@ export default function TermsHero() {
         <HeroMobileBanner src="/pageBanner/M0500410.JPG" alt="Dr. Mona Dahiya - Terms of Service" />
       </div>
     </section>
+      <section className="relative overflow-hidden bg-white py-7 sm:py-9 border-y border-[#fde2ec]/70">
+        <div className="page-container relative">
+          <HeroCounterBar
+            items={[
+          {
+                    "target": 100,
+                    "suffix": "%",
+                    "label": "transparent terms"
+          },
+          {
+                    "target": 25,
+                    "suffix": "+",
+                    "label": "years' clinical ethics"
+          },
+          {
+                    "target": 25000,
+                    "suffix": "+",
+                    "label": "families guided"
+          },
+          {
+                    "target": 15000,
+                    "suffix": "+",
+                    "label": "IVF cycles"
+          }
+]}
+          />
+        </div>
+      </section>
+    </>
   );
 }

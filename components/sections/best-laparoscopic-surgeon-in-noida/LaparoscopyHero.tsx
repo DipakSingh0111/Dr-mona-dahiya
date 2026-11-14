@@ -122,7 +122,7 @@ export default function LaparoscopyHero() {
         <HeroMobileBanner src="/pageBanner/M0500367.JPG" alt="Dr. Mona Dahiya - Laparoscopy & Hysteroscopy" />
       </div>
     </section>
-      <section className="py-5 sm:py-6">
+      <section className="relative overflow-hidden bg-white py-7 sm:py-9 border-y border-[#fde2ec]/70">
         <div className="page-container relative">
           <HeroCounterBar items={counters} />
         </div>

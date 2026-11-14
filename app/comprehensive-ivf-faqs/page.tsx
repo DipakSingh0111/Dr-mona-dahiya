@@ -38,7 +38,7 @@ export default function ComprehensiveIvfFaqsPage() {
       <SectionReveal delay={0.04}>
         <AboutConsultation
           sectionId="book-consultation"
-          sectionBg="bg-white"
+          sectionBg="bg-pink"
           eyebrow="Next step"
           title="Have More Questions?"
           subtitle={

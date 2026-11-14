@@ -479,7 +479,7 @@
     "title": "Reasons why couples choose",
     "titleAccent": "Dr. Mona Dahiya",
     "subtitle": "",
-    "image": "/images/why-choose/dr-mona-dahiya.jpg",
+    "image": "/images/VID00030.jpeg",
     "leftCards": [
       {
         "number": "01",
@@ -857,7 +857,7 @@
         {
           "city": "Noida",
           "tag": "SECTOR 49",
-          "image": "/images/clinics/noida.jpg",
+          "image": "/images/noida.jpeg",
           "address": "3rd Floor, K-06, above FirstCry, Baraula, Sector 49, Noida, Uttar Pradesh 201301",
           "mapsUrl": "https://www.google.com/maps/search/?api=1&query=3rd+Floor+K-06+above+FirstCry+Baraula+Sector+49+Noida",
           "clinicUrl": "/best-ivf-doctor-in-noida"
@@ -865,7 +865,7 @@
         {
           "city": "Ghaziabad",
           "tag": "RAJ NAGAR EXTENSION",
-          "image": "/images/clinics/ghaziabad.jpg",
+          "image": "/images/ghaziabad.jpeg",
           "address": "2nd Floor, RDC, C-53A, near Bikanerwala, Sector 15, Sector 10, Raj Nagar, Ghaziabad, Uttar Pradesh 201002",
           "mapsUrl": "https://www.google.com/maps/search/?api=1&query=2nd+Floor+RDC+C-53A+near+Bikanerwala+Raj+Nagar+Ghaziabad",
           "clinicUrl": "/best-ivf-doctor-in-ghaziabad"
@@ -873,7 +873,7 @@
         {
           "city": "Delhi",
           "tag": "LAJPAT NAGAR",
-          "image": "/images/clinics/delhi.jpg",
+          "image": "/images/delhi.png",
           "address": "Building Number 41, First Floor, Ring Road, Block Q, Lajpat Nagar IV, Lajpat Nagar, New Delhi 110024",
           "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Building+Number+41+First+Floor+Ring+Road+Block+Q+Lajpat+Nagar+IV+New+Delhi",
           "clinicUrl": "/best-ivf-doctor-in-delhi"
@@ -1279,7 +1279,7 @@
       },
       "cta": {
         "label": "See news, media & events →",
-        "href": "#blog"
+        "href": "/news-and-media"
       },
       "items": [
         {
@@ -1404,21 +1404,21 @@
         "id": "noida",
         "city": "Noida",
         "address": "3rd Floor, K-06, above FirstCry, Baraula, Sector 49, Noida, Uttar Pradesh 201301",
-        "image": "/images/clinics/noida.jpg",
+        "image": "/images/noida.jpeg",
         "href": "#noida"
       },
       {
         "id": "ghaziabad",
         "city": "Ghaziabad",
         "address": "2nd Floor, RDC, C-53A, near Bikanerwala, Sector 15, Sector 10, Raj Nagar, Ghaziabad, Uttar Pradesh 201002",
-        "image": "/images/clinics/ghaziabad.jpg",
+        "image": "/images/ghaziabad.jpeg",
         "href": "#ghaziabad"
       },
       {
         "id": "delhi",
         "city": "Delhi",
         "address": "Building Number 41, First Floor, Ring Road, Block Q, Lajpat Nagar IV, Lajpat Nagar, New Delhi 110024",
-        "image": "/images/clinics/delhi.jpg",
+        "image": "/images/delhi.png",
         "href": "#delhi"
       }
     ]
@@ -2202,7 +2202,7 @@
         {
           "city": "Noida",
           "tag": "SECTOR 49",
-          "image": "/images/clinics/noida.jpg",
+          "image": "/images/noida.jpeg",
           "address": "3rd Floor, K-06, above FirstCry, Baraula, Sector 49, Noida, Uttar Pradesh 201301",
           "mapsUrl": "https://www.google.com/maps/search/?api=1&query=3rd+Floor+K-06+above+FirstCry+Baraula+Sector+49+Noida",
           "clinicUrl": "/best-ivf-doctor-in-noida"
@@ -2210,7 +2210,7 @@
         {
           "city": "Ghaziabad",
           "tag": "RAJ NAGAR",
-          "image": "/images/clinics/ghaziabad.jpg",
+          "image": "/images/ghaziabad.jpeg",
           "address": "2nd Floor, RDC, C-53A, near Bikanerwala, Sector 15, Sector 10, Raj Nagar, Ghaziabad, Uttar Pradesh 201002",
           "mapsUrl": "https://www.google.com/maps/search/?api=1&query=2nd+Floor+RDC+C-53A+near+Bikanerwala+Raj+Nagar+Ghaziabad",
           "clinicUrl": "/best-ivf-doctor-in-ghaziabad"
@@ -2218,7 +2218,7 @@
         {
           "city": "Delhi",
           "tag": "LAJPAT NAGAR",
-          "image": "/images/clinics/delhi.jpg",
+          "image": "/images/delhi.png",
           "address": "Building Number 41, First Floor, Ring Road, Block Q, Lajpat Nagar IV, Lajpat Nagar, New Delhi 110024",
           "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Building+Number+41+First+Floor+Ring+Road+Block+Q+Lajpat+Nagar+IV+New+Delhi",
           "clinicUrl": "/best-ivf-doctor-in-delhi"
@@ -2855,7 +2855,7 @@
           "address": "3rd Floor, K-06, above FirstCry, Baraula, Sector 49, Noida, Uttar Pradesh 201301",
           "directionsUrl": "https://maps.google.com/?q=Nayra+IVF+Sector+49+Noida",
           "clinicUrl": "/best-ivf-doctor-in-noida",
-          "image": "/images/clinics/noida.jpg"
+          "image": "/images/noida.jpeg"
         },
         {
           "tag": "RAJ NAGAR",
@@ -2863,7 +2863,7 @@
           "address": "2nd Floor, RDC, C-53A, near Bikanerwala, Sector 15, Sector 10, Raj Nagar, Ghaziabad, Uttar Pradesh 201002",
           "directionsUrl": "https://maps.google.com/?q=Nayra+IVF+Raj+Nagar+Ghaziabad",
           "clinicUrl": "/best-ivf-doctor-in-ghaziabad",
-          "image": "/images/clinics/ghaziabad.jpg"
+          "image": "/images/ghaziabad.jpeg"
         },
         {
           "tag": "LAJPAT NAGAR",
@@ -2871,7 +2871,7 @@
           "address": "Building Number 41, First Floor, Ring Road, Block Q, Lajpat Nagar IV, Lajpat Nagar, New Delhi 110024",
           "directionsUrl": "https://maps.google.com/?q=Nayra+IVF+Lajpat+Nagar+Delhi",
           "clinicUrl": "/best-ivf-doctor-in-delhi",
-          "image": "/images/clinics/delhi.jpg"
+          "image": "/images/delhi.png"
         }
       ]
     },

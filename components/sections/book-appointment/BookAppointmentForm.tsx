@@ -44,7 +44,7 @@ export default function BookAppointmentForm() {
                     href="tel:+919267982924"
                     className="flex items-center gap-3 rounded-[14px] bg-pink/60 p-3 text-ink transition-colors hover:text-rose"
                   >
-                    <div className="flex size-9 shrink-0 items-center justify-center rounded-full bg-blue text-white">
+                    <div className="flex size-9 shrink-0 items-center justify-center rounded-full bg-navy text-white">
                       <FaPhoneAlt className="size-3.5" />
                     </div>
                     <div>

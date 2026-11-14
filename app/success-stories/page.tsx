@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function SuccessStoriesPage() {
   return (
-    <main className="flex min-h-screen flex-col">
+    <main className="flex min-h-screen flex-col bg-pink">
       <SuccessStoriesHero />
 
       <SectionReveal>
@@ -38,7 +38,7 @@ export default function SuccessStoriesPage() {
       <SectionReveal delay={0.04}>
         <AboutConsultation
           sectionId="book-consultation"
-          sectionBg="bg-white"
+          sectionBg="bg-pink"
           eyebrow="Next step"
           title="Start Your Own Journey"
           subtitle="Book an in-clinic consultation or an online review of your previous reports with Dr. Mona Dahiya. Call +91 92679 82924."

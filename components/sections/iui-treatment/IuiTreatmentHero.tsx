@@ -125,13 +125,13 @@ export default function IuiTreatmentHero() {
       </section>
 
       {/* 4 Stat Counter Bar */}
-      <section className="py-5 sm:py-6 bg-pink">
+      <section className="relative overflow-hidden bg-white py-7 sm:py-9 border-y border-[#fde2ec]/70">
         <div className="page-container relative">
           <HeroCounterBar
             items={[
               { target: 25000, suffix: "+", label: "Happy families" },
               { target: 25, suffix: "+", label: "Years of experience" },
-              { target: 50, suffix: "%+", label: "IUI success rate" },
+              { target: 25, suffix: "%+", label: "IUI success rate" },
               { target: 10000, suffix: "+", label: "IUI cycles" },
             ]}
           />

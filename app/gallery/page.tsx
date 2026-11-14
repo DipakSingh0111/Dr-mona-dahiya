@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function GalleryPage() {
   return (
-    <main className="flex min-h-screen flex-col">
+    <main className="flex min-h-screen flex-col bg-pink">
       {/* 1. Gallery Hero matching Screenshot */}
       <GalleryHero />
 

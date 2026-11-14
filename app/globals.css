@@ -698,47 +698,55 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   background-color: var(--pink);
 }
 
-/* Even-positioned section blocks on inner pages -> Clean White (#ffffff) */
+/* ==========================================================================
+   Inner Pages Section Alternation: Clean White (#ffffff) vs Soft Pink (var(--pink))
+   - Child 1: Hero Banner (Soft Pink var(--pink))
+   - Child 2 (Even): Hero Counter (Clean White #ffffff + crisp divider border)
+   - Child 3 (Odd): Medical Registration (Soft Pink var(--pink))
+   - Even-positioned children (4, 6, 8, 10...): Clean White (#ffffff) + crisp border
+   - Odd-positioned children (5, 7, 9, 11...): Soft Pink (var(--pink))
+   ========================================================================== */
+
+/* Fallback default background for treatment sections */
+.treatment-section {
+  background-color: var(--pink);
+}
+
+/* Explicit compound section classes (for multi-section components) */
+main:not(.home-main) section.bg-white,
+main:not(.home-main) section.section-white,
+main:not(.home-main) section[data-bg="white"] {
+  background-color: #ffffff !important;
+  border-top: 1px solid rgba(232, 62, 116, 0.18) !important;
+  border-bottom: 1px solid rgba(232, 62, 116, 0.18) !important;
+}
+
+main:not(.home-main) section.bg-pink,
+main:not(.home-main) section.section-pink,
+main:not(.home-main) section[data-bg="pink"] {
+  background-color: var(--pink) !important;
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+/* Even-positioned section blocks on inner pages -> Clean White (#ffffff) with crisp hairline divider borders */
 main:not(.home-main) > :nth-child(even),
-main:not(.home-main) > div:nth-child(even),
-main:not(.home-main) > div:nth-child(even) > section,
-main:not(.home-main) > div:nth-child(even) > div > section,
 main:not(.home-main) > :nth-child(even) > section,
+main:not(.home-main) > div:nth-child(even) > section,
 main:not(.home-main) > section:nth-child(even) {
   background-color: #ffffff !important;
+  border-top: 1px solid rgba(232, 62, 116, 0.18) !important;
+  border-bottom: 1px solid rgba(232, 62, 116, 0.18) !important;
 }
 
 /* Odd-positioned section blocks on inner pages (excluding Hero/first-child) -> Soft Pink */
 main:not(.home-main) > :nth-child(odd):not(:first-child),
-main:not(.home-main) > div:nth-child(odd):not(:first-child),
-main:not(.home-main) > div:nth-child(odd):not(:first-child) > section,
-main:not(.home-main) > div:nth-child(odd):not(:first-child) > div > section,
 main:not(.home-main) > :nth-child(odd):not(:first-child) > section,
+main:not(.home-main) > div:nth-child(odd):not(:first-child) > section,
 main:not(.home-main) > section:nth-child(odd):not(:first-child) {
   background-color: var(--pink) !important;
-}
-
-/* Explicit section class overrides always take precedence over nth-child rules */
-main:not(.home-main) section.bg-white.bg-white.bg-white,
-main:not(.home-main) > div.bg-white.bg-white.bg-white {
-  background-color: #ffffff !important;
-  border-top: 1px solid rgba(232, 62, 116, 0.16);
-  border-bottom: 1px solid rgba(232, 62, 116, 0.16);
-}
-
-main:not(.home-main) section.bg-pink.bg-pink.bg-pink,
-main:not(.home-main) > div.bg-pink.bg-pink.bg-pink {
-  background-color: var(--pink) !important;
-  border-top: none;
-  border-bottom: none;
-}
-
-/* Hairline border accents for alternating Light Off-White sections */
-main:not(.home-main) > :nth-child(even) > section,
-main:not(.home-main) > div:nth-child(even) > section,
-main:not(.home-main) > section:nth-child(even) {
-  border-top: 1px solid rgba(232, 62, 116, 0.16);
-  border-bottom: 1px solid rgba(232, 62, 116, 0.16);
+  border-top: none !important;
+  border-bottom: none !important;
 }
 
 /* Preserve Parenthood CTA styling */
@@ -762,14 +770,14 @@ main div:has(.parenthood-cta) > section {
   box-shadow: 0 4px 14px rgba(232, 62, 116, 0.35) !important;
 }
 
-/* 1a. Alternating Odd (Pink) sections -> Blue */
+/* 1a. Alternating Odd (Pink) sections -> Navy (Navbar color) */
 main:not(.home-main) > :nth-child(odd):not(:first-child) .signature-tick,
 main:not(.home-main) > div:nth-child(odd):not(:first-child) .signature-tick,
 main:not(.home-main) > div:nth-child(odd):not(:first-child) section .signature-tick,
 main:not(.home-main) > section:nth-child(odd):not(:first-child) .signature-tick {
-  background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%) !important;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%) !important;
   color: #ffffff !important;
-  box-shadow: 0 4px 14px rgba(0, 71, 202, 0.35) !important;
+  box-shadow: 0 4px 14px rgba(6, 21, 50, 0.35) !important;
 }
 
 /* 1b. Alternating Even (White) sections -> Rose/Pink */
@@ -782,13 +790,13 @@ main:not(.home-main) > section:nth-child(even) .signature-tick {
   box-shadow: 0 4px 14px rgba(232, 62, 116, 0.35) !important;
 }
 
-/* 1c. Explicit Pink section override -> Blue */
+/* 1c. Explicit Pink section override -> Navy */
 main:not(.home-main) section.bg-pink.bg-pink .signature-tick,
 main:not(.home-main) > div.bg-pink.bg-pink .signature-tick,
 main:not(.home-main) section[style*="var(--pink)"].relative .signature-tick {
-  background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%) !important;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%) !important;
   color: #ffffff !important;
-  box-shadow: 0 4px 14px rgba(0, 71, 202, 0.35) !important;
+  box-shadow: 0 4px 14px rgba(6, 21, 50, 0.35) !important;
 }
 
 /* 1d. Explicit White section override -> Rose/Pink */
@@ -811,7 +819,7 @@ main:not(.home-main) > div.bg-white.bg-white .signature-tick {
   box-shadow: 0 4px 14px rgba(232, 62, 116, 0.4) !important;
 }
 
-/* 2a. Alternating Odd (Pink) sections -> Blue */
+/* 2a. Alternating Odd (Pink) sections -> Navy (Navbar color) */
 main:not(.home-main) > :nth-child(odd):not(:first-child) .card-badge,
 main:not(.home-main) > div:nth-child(odd):not(:first-child) .card-badge,
 main:not(.home-main) > section:nth-child(odd):not(:first-child) .card-badge,
@@ -821,27 +829,27 @@ main:not(.home-main) > section:nth-child(odd):not(:first-child) .card-highlight 
 main:not(.home-main) > :nth-child(odd):not(:first-child) [class*="rounded-"] :is(span, div):is([class*="size-6"], [class*="size-7"], [class*="size-8"], [class*="size-9"], [class*="size-10"], [class*="size-11"]).bg-rose,
 main:not(.home-main) > div:nth-child(odd):not(:first-child) [class*="rounded-"] :is(span, div):is([class*="size-6"], [class*="size-7"], [class*="size-8"], [class*="size-9"], [class*="size-10"], [class*="size-11"]).bg-rose,
 main:not(.home-main) > section:nth-child(odd):not(:first-child) [class*="rounded-"] :is(span, div):is([class*="size-6"], [class*="size-7"], [class*="size-8"], [class*="size-9"], [class*="size-10"], [class*="size-11"]).bg-rose {
-  background-color: var(--blue) !important;
+  background-color: var(--navy) !important;
   color: #ffffff !important;
-  box-shadow: 0 4px 14px rgba(0, 71, 202, 0.4) !important;
+  box-shadow: 0 4px 14px rgba(6, 21, 50, 0.35) !important;
 }
 
 /* 2b. Alternating Even (White) sections -> Rose/Pink */
 main:not(.home-main) > :nth-child(even) .card-badge,
 main:not(.home-main) > div:nth-child(even) .card-badge,
 main:not(.home-main) > section:nth-child(even) .card-badge,
-main:not(.home-main) > :nth-child(even) .card-highlight :is(span, div):is(.bg-rose, .bg-blue),
-main:not(.home-main) > div:nth-child(even) .card-highlight :is(span, div):is(.bg-rose, .bg-blue),
-main:not(.home-main) > section:nth-child(even) .card-highlight :is(span, div):is(.bg-rose, .bg-blue),
-main:not(.home-main) > :nth-child(even) [class*="rounded-"] :is(span, div):is([class*="size-6"], [class*="size-7"], [class*="size-8"], [class*="size-9"], [class*="size-10"], [class*="size-11"]):is(.bg-rose, .bg-blue),
-main:not(.home-main) > div:nth-child(even) [class*="rounded-"] :is(span, div):is([class*="size-6"], [class*="size-7"], [class*="size-8"], [class*="size-9"], [class*="size-10"], [class*="size-11"]):is(.bg-rose, .bg-blue),
-main:not(.home-main) > section:nth-child(even) [class*="rounded-"] :is(span, div):is([class*="size-6"], [class*="size-7"], [class*="size-8"], [class*="size-9"], [class*="size-10"], [class*="size-11"]):is(.bg-rose, .bg-blue) {
+main:not(.home-main) > :nth-child(even) .card-highlight :is(span, div):is(.bg-rose, .bg-blue, .bg-navy),
+main:not(.home-main) > div:nth-child(even) .card-highlight :is(span, div):is(.bg-rose, .bg-blue, .bg-navy),
+main:not(.home-main) > section:nth-child(even) .card-highlight :is(span, div):is(.bg-rose, .bg-blue, .bg-navy),
+main:not(.home-main) > :nth-child(even) [class*="rounded-"] :is(span, div):is([class*="size-6"], [class*="size-7"], [class*="size-8"], [class*="size-9"], [class*="size-10"], [class*="size-11"]):is(.bg-rose, .bg-blue, .bg-navy),
+main:not(.home-main) > div:nth-child(even) [class*="rounded-"] :is(span, div):is([class*="size-6"], [class*="size-7"], [class*="size-8"], [class*="size-9"], [class*="size-10"], [class*="size-11"]):is(.bg-rose, .bg-blue, .bg-navy),
+main:not(.home-main) > section:nth-child(even) [class*="rounded-"] :is(span, div):is([class*="size-6"], [class*="size-7"], [class*="size-8"], [class*="size-9"], [class*="size-10"], [class*="size-11"]):is(.bg-rose, .bg-blue, .bg-navy) {
   background-color: var(--rose) !important;
   color: #ffffff !important;
   box-shadow: 0 4px 14px rgba(232, 62, 116, 0.4) !important;
 }
 
-/* 2c. Explicit Pink section override -> Blue */
+/* 2c. Explicit Pink section override -> Navy (Navbar color) */
 main:not(.home-main) section.bg-pink.bg-pink .card-badge,
 main:not(.home-main) > div.bg-pink.bg-pink .card-badge,
 main:not(.home-main) section[style*="var(--pink)"].relative .card-badge,
@@ -849,18 +857,18 @@ main:not(.home-main) section.bg-pink.bg-pink .card-highlight :is(span, div).bg-r
 main:not(.home-main) > div.bg-pink.bg-pink .card-highlight :is(span, div).bg-rose,
 main:not(.home-main) section.bg-pink.bg-pink [class*="rounded-"] :is(span, div):is([class*="size-6"], [class*="size-7"], [class*="size-8"], [class*="size-9"], [class*="size-10"], [class*="size-11"]).bg-rose,
 main:not(.home-main) > div.bg-pink.bg-pink [class*="rounded-"] :is(span, div):is([class*="size-6"], [class*="size-7"], [class*="size-8"], [class*="size-9"], [class*="size-10"], [class*="size-11"]).bg-rose {
-  background-color: var(--blue) !important;
+  background-color: var(--navy) !important;
   color: #ffffff !important;
-  box-shadow: 0 4px 14px rgba(0, 71, 202, 0.4) !important;
+  box-shadow: 0 4px 14px rgba(6, 21, 50, 0.35) !important;
 }
 
 /* 2d. Explicit White section override -> Rose/Pink */
 main:not(.home-main) section.bg-white.bg-white .card-badge,
 main:not(.home-main) > div.bg-white.bg-white .card-badge,
-main:not(.home-main) section.bg-white.bg-white .card-highlight :is(span, div):is(.bg-rose, .bg-blue),
-main:not(.home-main) > div.bg-white.bg-white .card-highlight :is(span, div):is(.bg-rose, .bg-blue),
-main:not(.home-main) section.bg-white.bg-white [class*="rounded-"] :is(span, div):is([class*="size-6"], [class*="size-7"], [class*="size-8"], [class*="size-9"], [class*="size-10"], [class*="size-11"]):is(.bg-rose, .bg-blue),
-main:not(.home-main) > div.bg-white.bg-white [class*="rounded-"] :is(span, div):is([class*="size-6"], [class*="size-7"], [class*="size-8"], [class*="size-9"], [class*="size-10"], [class*="size-11"]):is(.bg-rose, .bg-blue) {
+main:not(.home-main) section.bg-white.bg-white .card-highlight :is(span, div):is(.bg-rose, .bg-blue, .bg-navy),
+main:not(.home-main) > div.bg-white.bg-white .card-highlight :is(span, div):is(.bg-rose, .bg-blue, .bg-navy),
+main:not(.home-main) section.bg-white.bg-white [class*="rounded-"] :is(span, div):is([class*="size-6"], [class*="size-7"], [class*="size-8"], [class*="size-9"], [class*="size-10"], [class*="size-11"]):is(.bg-rose, .bg-blue, .bg-navy),
+main:not(.home-main) > div.bg-white.bg-white [class*="rounded-"] :is(span, div):is([class*="size-6"], [class*="size-7"], [class*="size-8"], [class*="size-9"], [class*="size-10"], [class*="size-11"]):is(.bg-rose, .bg-blue, .bg-navy) {
   background-color: var(--rose) !important;
   color: #ffffff !important;
   box-shadow: 0 4px 14px rgba(232, 62, 116, 0.4) !important;
@@ -868,16 +876,16 @@ main:not(.home-main) > div.bg-white.bg-white [class*="rounded-"] :is(span, div):
 
 /* ==========================================================================
    Soft Checklist Checkmark Circles:
-   Dynamic Blue (on Pink sections) vs Pink/Rose (on White sections)
+   Dynamic Navy (on Pink sections) vs Pink/Rose (on White sections)
    ========================================================================== */
 
-/* 3a. Alternating Odd (Pink) sections -> Blue checkmark badge */
+/* 3a. Alternating Odd (Pink) sections -> Navy checkmark badge */
 main:not(.home-main) > :nth-child(odd):not(:first-child) span:is([class*="size-5"], [class*="size-6"]):is(.bg-rose\/15, .bg-rose\/20, .bg-blue\/15, .bg-blue\/20, .bg-blue\/25, .text-blue),
 main:not(.home-main) > div:nth-child(odd):not(:first-child) span:is([class*="size-5"], [class*="size-6"]):is(.bg-rose\/15, .bg-rose\/20, .bg-blue\/15, .bg-blue\/20, .bg-blue\/25, .text-blue),
 main:not(.home-main) > section:nth-child(odd):not(:first-child) span:is([class*="size-5"], [class*="size-6"]):is(.bg-rose\/15, .bg-rose\/20, .bg-blue\/15, .bg-blue\/20, .bg-blue\/25, .text-blue) {
-  background-color: rgba(0, 71, 202, 0.15) !important;
-  color: var(--blue) !important;
-  box-shadow: 0 0 0 1px rgba(0, 71, 202, 0.35) !important;
+  background-color: rgba(6, 21, 50, 0.08) !important;
+  color: var(--navy) !important;
+  box-shadow: 0 0 0 1px rgba(6, 21, 50, 0.22) !important;
 }
 
 /* 3b. Alternating Even (White) sections -> Pink/Rose checkmark badge */
@@ -889,13 +897,13 @@ main:not(.home-main) > section:nth-child(even) span:is([class*="size-5"], [class
   box-shadow: 0 0 0 1px rgba(232, 62, 116, 0.35) !important;
 }
 
-/* 3c. Explicit Pink section override -> Blue checkmark badge */
+/* 3c. Explicit Pink section override -> Navy checkmark badge */
 main:not(.home-main) section.bg-pink.bg-pink span:is([class*="size-5"], [class*="size-6"]):is(.bg-rose\/15, .bg-rose\/20, .bg-blue\/15, .bg-blue\/20, .bg-blue\/25, .text-blue),
 main:not(.home-main) > div.bg-pink.bg-pink span:is([class*="size-5"], [class*="size-6"]):is(.bg-rose\/15, .bg-rose\/20, .bg-blue\/15, .bg-blue\/20, .bg-blue\/25, .text-blue),
 main:not(.home-main) section[style*="var(--pink)"].relative span:is([class*="size-5"], [class*="size-6"]):is(.bg-rose\/15, .bg-rose\/20, .bg-blue\/15, .bg-blue\/20, .bg-blue\/25, .text-blue) {
-  background-color: rgba(0, 71, 202, 0.15) !important;
-  color: var(--blue) !important;
-  box-shadow: 0 0 0 1px rgba(0, 71, 202, 0.35) !important;
+  background-color: rgba(6, 21, 50, 0.08) !important;
+  color: var(--navy) !important;
+  box-shadow: 0 0 0 1px rgba(6, 21, 50, 0.22) !important;
 }
 
 /* 3d. Explicit White section override -> Pink/Rose checkmark badge */
@@ -911,7 +919,7 @@ main:not(.home-main) > :nth-child(odd):not(:first-child) [class*="rounded-"] > s
 main:not(.home-main) > div:nth-child(odd):not(:first-child) [class*="rounded-"] > svg.text-rose,
 main:not(.home-main) > section:nth-child(odd):not(:first-child) [class*="rounded-"] > svg.text-rose,
 main:not(.home-main) section.bg-pink.bg-pink [class*="rounded-"] > svg.text-rose {
-  color: var(--blue) !important;
+  color: var(--navy) !important;
 }
 
 main:not(.home-main) > :nth-child(even) [class*="rounded-"] > svg:is(.text-rose, .text-blue),

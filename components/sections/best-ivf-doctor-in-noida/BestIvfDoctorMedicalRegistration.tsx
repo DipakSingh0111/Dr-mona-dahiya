@@ -31,7 +31,7 @@ const registrations = [
 
 export default function BestIvfDoctorMedicalRegistration() {
   return (
-    <section className="relative overflow-hidden bg-white py-8 sm:py-10 lg:py-12 border-y border-[#fde2ec]/70">
+    <section className="relative overflow-hidden bg-pink py-7 sm:py-9 lg:py-10">
       <div className="page-container relative">
         <Reveal variant="fadeUp">
           <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">

@@ -1,21 +1,30 @@
 "use client";
-
+import HeroCounterBar from "@/components/ui/HeroCounterBar";
 import Link from "next/link";
-import { FaCalendarCheck, FaVideo, FaArrowRight } from "react-icons/fa";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import HeroBannerImage from "@/components/ui/HeroBannerImage";
-import { Reveal } from "@/components/ui/Reveal";
+import {
+  HeroFullWidthBanner,
+  HeroMobileBanner,
+} from "@/components/ui/HeroFullWidthBanner";
+import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
 export default function DisclaimerHero() {
+  const badges = ["Informing Patients", "Noida • Ghaziabad • Delhi"];
+
   return (
+    <>
     <section
-      className="relative overflow-hidden flex flex-col pb-8 pt-4 lg:min-h-[calc(100svh-var(--site-header-h,8.75rem))] lg:justify-center lg:py-10"
+      className="relative overflow-hidden flex flex-col justify-center pb-6 sm:pb-8 lg:pb-0"
       style={{ background: "var(--pink)" }}
     >
-      {/* Ambient background glows */}
+      <HeroFullWidthBanner
+        src="/pageBanner/M0500442.JPG"
+        alt="Dr. Mona Dahiya - Medical & Clinical Information Disclaimer"
+        objectPosition="object-[72%_35%] md:object-[72%_32%] lg:object-[82%_62%] xl:object-[80%_62%] 2xl:object-[76%_58%]"
+      />
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-24 right-[8%] h-[360px] w-[360px] rounded-full opacity-35 blur-3xl"
+        className="pointer-events-none absolute top-0 right-[8%] h-[280px] w-[280px] -translate-y-1/4 rounded-full opacity-35 blur-3xl"
         style={{
           background:
             "radial-gradient(circle, rgba(255,107,157,0.4) 0%, rgba(232,62,116,0.12) 50%, transparent 70%)",
@@ -23,99 +32,113 @@ export default function DisclaimerHero() {
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute bottom-0 left-[-5%] h-[280px] w-[280px] rounded-full opacity-25 blur-3xl"
+        className="pointer-events-none absolute bottom-0 left-0 h-[240px] w-[240px] -translate-x-1/4 translate-y-1/4 rounded-full opacity-25 blur-3xl"
         style={{
           background:
             "radial-gradient(circle, rgba(232,62,116,0.1) 0%, transparent 68%)",
         }}
       />
 
-      <div className="page-container relative z-10 w-full pt-2 lg:pt-0">
-        <Breadcrumb
-          items={[
-            { label: "Home", href: "/" },
-            { label: "Medical Disclaimer" },
-          ]}
-        />
+      <div className="page-container relative z-10 w-full pt-4 sm:pt-5 lg:pt-0">
+        <div className="lg:max-w-[34rem] xl:max-w-[40rem] 2xl:max-w-[45rem]">
+          <Breadcrumb
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Medical Disclaimer" },
+            ]}
+          />
 
-        <div className="mt-4 grid items-center gap-8 lg:grid-cols-12 lg:gap-12">
-          {/* Left Column: Text & Actions */}
-          <div className="lg:col-span-7">
-            <Reveal variant="fadeUp">
-              <span className="inline-block rounded-full bg-rose/10 px-3.5 py-1 text-xs font-bold tracking-wider uppercase text-rose">
-                Legal · Medical Disclaimer
-              </span>
-            </Reveal>
+          <Reveal variant="slideLeft">
+            <p className="text-[12px] font-bold tracking-[0.12em] text-rose uppercase sm:text-[13px]">
+              Legal • Medical Disclaimer
+            </p>
 
-            <Reveal variant="fadeUp" delay={0.08}>
-              <h1 className="mt-3 font-display text-3xl font-bold tracking-tight text-ink sm:text-4xl lg:text-5xl leading-[1.2]">
-                Medical &amp; Clinical Information Disclaimer
-              </h1>
-            </Reveal>
+            <h1 className="font-serif mt-1.5 max-w-[42rem] text-[1.65rem] leading-[1.18] font-normal tracking-tight text-ink sm:text-[2.1rem] lg:text-[2.35rem] xl:text-[2.55rem]">
+              Medical &amp; Clinical Information Disclaimer
+            </h1>
 
-            <Reveal variant="fadeUp" delay={0.16}>
-              <p className="mt-4 text-sm leading-relaxed text-ink/80 sm:text-base sm:leading-relaxed max-w-2xl">
-                Information shared on this website about medical and fertility
-                topics is for information purposes only. No diagnosis or medication
-                can be concluded from the information we provide. We don&apos;t
-                create a doctor-patient relationship through our website.
-                Clinical evaluation, along with diagnosis and hormone testing,
-                is required before any medical decision.
-              </p>
-            </Reveal>
+            <p className="mt-3.5 max-w-[38rem] text-[13.5px] leading-relaxed text-ink/80 sm:text-[15px]">
+              Information shared on this website about medical and fertility
+              topics is for information purposes only. No diagnosis or medication
+              can be concluded from the information we provide. We don&apos;t
+              create a doctor-patient relationship through our website.
+              Clinical evaluation, along with diagnosis and hormone testing,
+              is required before any medical decision.
+            </p>
+          </Reveal>
 
-            <Reveal variant="fadeUp" delay={0.24}>
-              <div className="mt-6 flex flex-wrap items-center gap-3">
-                <a
-                  href="#request-appointment"
-                  className="inline-flex items-center gap-2 rounded-full bg-rose px-5 py-2.5 text-xs sm:text-sm font-semibold text-white shadow-sm transition hover:bg-rose-dark active:scale-95"
-                >
-                  <FaCalendarCheck />
-                  <span>Book In-Clinic Consultation</span>
-                </a>
-
-                <Link
-                  href="/ivf-consultation-online"
-                  className="inline-flex items-center gap-2 rounded-full bg-blue px-5 py-2.5 text-xs sm:text-sm font-semibold text-white shadow-sm transition hover:bg-blue-dark active:scale-95"
-                >
-                  <FaVideo />
-                  <span>Schedule Online Consultation</span>
-                </Link>
-              </div>
-
-              <div className="mt-4">
-                <Link
-                  href="/best-ivf-patient-reviews"
-                  className="group inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-rose transition hover:text-rose-dark hover:underline"
-                >
-                  <span>Read Dr Mona Dahiya&apos;s Reviews</span>
-                  <FaArrowRight className="text-xs transition-transform group-hover:translate-x-1" />
-                </Link>
-              </div>
-
-              {/* Badges from screenshot */}
-              <div className="mt-5 flex flex-wrap items-center gap-2">
-                <span className="rounded-full border border-rose/25 bg-white/80 px-3 py-1 text-[11px] font-semibold text-ink">
-                  Informing Patients
-                </span>
-                <span className="rounded-full border border-rose/25 bg-white/80 px-3 py-1 text-[11px] font-semibold text-ink">
-                  Noida · Ghaziabad · Delhi
-                </span>
-              </div>
-            </Reveal>
+          <div className="mt-4 flex flex-wrap items-center gap-2.5 sm:mt-5 sm:gap-3.5">
+            <a
+              href="#book-consultation"
+              className="inline-flex items-center justify-center rounded-full border border-rose/20 bg-white/75 backdrop-blur-sm px-6 py-2.5 text-[13.5px] font-bold text-ink shadow-[0_4px_14px_rgba(15,36,56,0.05)] transition-all hover:border-rose/50 hover:bg-white hover:text-rose active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"
+            >
+              Book In-Clinic Consultation
+            </a>
+            <Link
+              href="/ivf-consultation-online"
+              className="inline-flex items-center justify-center rounded-full bg-blue px-6 py-2.5 text-[13.5px] font-semibold text-white shadow-[0_8px_20px_rgba(0,71,202,0.35)] transition-all hover:bg-blue-dark active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"
+            >
+              Schedule Online Consultation
+            </Link>
           </div>
 
-          {/* Right Column: Hero Doctor Photo */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end">
-            <HeroBannerImage
-              src="/pageBanner/M0500442.JPG"
-              alt="Dr. Mona Dahiya - Medical & Clinical Information Disclaimer"
-              priority
-            />
+          <div className="mt-3.5 sm:mt-4">
+            <Link
+              href="/best-ivf-patient-reviews"
+              className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-ink underline decoration-ink/30 underline-offset-4 transition-colors hover:text-rose hover:decoration-rose sm:text-[13.5px]"
+            >
+              Read Dr Mona Dahiya&apos;s Reviews →
+            </Link>
           </div>
+
+          <Stagger
+            delay={0.05}
+            className="mt-3.5 flex flex-wrap items-center gap-1.5 sm:mt-4 sm:gap-2"
+          >
+            {badges.map((badge) => (
+              <StaggerItem key={badge}>
+                <span className="inline-flex items-center rounded-full border border-rose/25 bg-white px-3.5 py-1.5 text-[11.5px] font-medium text-ink shadow-sm sm:text-[12.5px]">
+                  {badge}
+                </span>
+              </StaggerItem>
+            ))}
+          </Stagger>
         </div>
+
+        <HeroMobileBanner
+          src="/pageBanner/M0500442.JPG"
+          alt="Dr. Mona Dahiya - Medical & Clinical Information Disclaimer"
+        />
       </div>
     </section>
+      <section className="relative overflow-hidden bg-white py-7 sm:py-9 border-y border-[#fde2ec]/70">
+        <div className="page-container relative">
+          <HeroCounterBar
+            items={[
+          {
+                    "target": 25000,
+                    "suffix": "+",
+                    "label": "families guided"
+          },
+          {
+                    "target": 25,
+                    "suffix": "+",
+                    "label": "years' expertise"
+          },
+          {
+                    "target": 100,
+                    "suffix": "%",
+                    "label": "transparent care"
+          },
+          {
+                    "target": 15000,
+                    "suffix": "+",
+                    "label": "IVF cycles"
+          }
+]}
+          />
+        </div>
+      </section>
+    </>
   );
 }
-

@@ -89,7 +89,7 @@ export default function SuccessStoriesFaq() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#fff8fb] via-white to-[#fff5f8] py-8 sm:py-10 lg:py-12 border-t border-slate-100">
+    <section className="relative overflow-hidden bg-white py-8 sm:py-10 lg:py-12 border-y border-[#fde2ec]/70">
       <div className="page-container relative">
         <Reveal className="mb-7 sm:mb-9">
           <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">

@@ -1,5 +1,5 @@
 "use client";
-
+import HeroCounterBar from "@/components/ui/HeroCounterBar";
 import Link from "next/link";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import {
@@ -12,6 +12,7 @@ export default function ArtComplianceHero() {
   const badges = ["Noida · Ghaziabad · Delhi"];
 
   return (
+    <>
     <section
         className="relative overflow-hidden flex flex-col justify-center pb-6 sm:pb-8 lg:pb-0"
       style={{ background: "var(--pink)" }}
@@ -102,6 +103,34 @@ export default function ArtComplianceHero() {
         <HeroMobileBanner src="/pageBanner/M0500358.JPG" alt="Dr. Mona Dahiya - Assisted Reproductive Technology (ART) Compliance & Medical Ethics Policy" />
       </div>
     </section>
+      <section className="relative overflow-hidden bg-white py-7 sm:py-9 border-y border-[#fde2ec]/70">
+        <div className="page-container relative">
+          <HeroCounterBar
+            items={[
+          {
+                    "target": 100,
+                    "suffix": "%",
+                    "label": "ART Act 2021 compliant"
+          },
+          {
+                    "target": 25,
+                    "suffix": "+",
+                    "label": "years' clinical ethics"
+          },
+          {
+                    "target": 25000,
+                    "suffix": "+",
+                    "label": "families guided"
+          },
+          {
+                    "target": 15000,
+                    "suffix": "+",
+                    "label": "IVF procedures"
+          }
+]}
+          />
+        </div>
+      </section>
+    </>
   );
 }
-

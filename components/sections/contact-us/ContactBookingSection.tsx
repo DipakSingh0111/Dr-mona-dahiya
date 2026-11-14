@@ -89,8 +89,8 @@ export default function ContactBookingSection() {
                   </span>
                 </div>
 
-                <div className="rounded-xl border border-blue/20 bg-blue/5 p-3.5">
-                  <span className="block text-[11px] font-bold uppercase tracking-wider text-blue">
+                <div className="rounded-xl border border-navy/20 bg-navy/5 p-3.5">
+                  <span className="block text-[11px] font-bold uppercase tracking-wider text-navy">
                     Foreign Patients
                   </span>
                   <div className="mt-0.5 text-xl font-bold text-ink">US$25</div>

@@ -1,4 +1,5 @@
 "use client";
+import HeroCounterBar from "@/components/ui/HeroCounterBar";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 
 import {
@@ -17,11 +18,12 @@ export default function PrivacyHero() {
   ];
 
   return (
+    <>
     <section
         className="relative overflow-hidden flex flex-col justify-center pb-6 sm:pb-8 lg:pb-0"
       style={{ background: "var(--pink)" }}
     >
-      <HeroFullWidthBanner src="/pageBanner/M0500403.JPG" alt="Dr. Mona Dahiya - Privacy Policy & Patient Data Protection" />
+      <HeroFullWidthBanner src="/pageBanner/M0500444.JPG" alt="Dr. Mona Dahiya - Privacy Policy & Patient Data Protection" />
       <div
         aria-hidden
         className="pointer-events-none absolute top-0 right-[8%] h-[280px] w-[280px] -translate-y-1/4 rounded-full opacity-35 blur-3xl"
@@ -101,8 +103,37 @@ export default function PrivacyHero() {
           </Stagger>
         </div>
 
-        <HeroMobileBanner src="/pageBanner/M0500403.JPG" alt="Dr. Mona Dahiya - Privacy Policy & Patient Data Protection" />
+        <HeroMobileBanner src="/pageBanner/M0500444.JPG" alt="Dr. Mona Dahiya - Privacy Policy & Patient Data Protection" />
       </div>
     </section>
+      <section className="relative overflow-hidden bg-white py-7 sm:py-9 border-y border-[#fde2ec]/70">
+        <div className="page-container relative">
+          <HeroCounterBar
+            items={[
+          {
+                    "target": 100,
+                    "suffix": "%",
+                    "label": "confidential care"
+          },
+          {
+                    "target": 25,
+                    "suffix": "+",
+                    "label": "years' ethics"
+          },
+          {
+                    "target": 25000,
+                    "suffix": "+",
+                    "label": "families trusted"
+          },
+          {
+                    "target": 15000,
+                    "suffix": "+",
+                    "label": "IVF cycles"
+          }
+]}
+          />
+        </div>
+      </section>
+    </>
   );
 }

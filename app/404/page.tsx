@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Custom404Page() {
   return (
-    <main className="flex min-h-[calc(100vh-200px)] flex-col justify-center">
+    <main className="flex min-h-[calc(100vh-200px)] flex-col justify-center bg-pink">
       <NotFoundHero />
     </main>
   );

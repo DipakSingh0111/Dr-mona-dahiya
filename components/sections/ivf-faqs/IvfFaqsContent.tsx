@@ -287,8 +287,8 @@ export default function IvfFaqsContent() {
 
   return (
     <div className="text-black">
-      {/* Category Navigation (Pink) */}
-      <section className="relative overflow-hidden bg-pink py-10 sm:py-12 lg:py-14">
+      {/* Category Navigation (White) */}
+      <section className="relative overflow-hidden bg-white py-10 sm:py-12 lg:py-14 border-y border-[#fde2ec]/70">
         <div className="page-container relative">
           <Reveal className="mb-7 sm:mb-9">
             <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
@@ -319,9 +319,9 @@ export default function IvfFaqsContent() {
         </div>
       </section>
 
-      {/* Alternating FAQ Categories: Even index = White, Odd index = Pink */}
+      {/* Alternating FAQ Categories: Even index = Pink, Odd index = White */}
       {sections.map((section, idx) => {
-        const isWhite = idx % 2 === 0;
+        const isWhite = idx % 2 === 1;
         return (
           <section
             key={section.id}

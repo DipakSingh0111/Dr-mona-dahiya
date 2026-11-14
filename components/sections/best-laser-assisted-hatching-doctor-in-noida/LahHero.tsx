@@ -114,7 +114,7 @@ export default function LahHero() {
         <HeroMobileBanner src="/pageBanner/M0500440.JPG" alt="Dr. Mona Dahiya - Laser Assisted Hatching in Noida, Delhi & Ghaziabad" />
       </div>
     </section>
-      <section className="py-5 sm:py-6">
+      <section className="relative overflow-hidden bg-white py-7 sm:py-9 border-y border-[#fde2ec]/70">
         <div className="page-container relative">
           <HeroCounterBar
           items={[

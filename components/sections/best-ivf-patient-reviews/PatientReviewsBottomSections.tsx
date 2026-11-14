@@ -129,10 +129,10 @@ export default function PatientReviewsBottomSections() {
         eyebrow="Visit Dr. Mona"
         title="Book a consultation at a clinic near you"
         subtitle="Dr. Mona sees patients in Noida, Ghaziabad and Delhi, and offers online consultation."
-        sectionBg="bg-pink"
+        sectionBg="bg-white"
       />
 
-      <section className="bg-white border-y border-[#fde2ec]/70 py-8 sm:py-10 lg:py-12 text-ink">
+      <section className="bg-pink py-8 sm:py-10 lg:py-12 text-ink">
         <div className="page-container relative">
           <Reveal className="mb-6">
             <span className="text-[12px] font-semibold tracking-wider text-rose uppercase">
@@ -148,7 +148,7 @@ export default function PatientReviewsBottomSections() {
               <Link
                 key={page.title}
                 href={page.href}
-                className="group relative flex flex-col justify-between rounded-2xl border border-[#fde2ec] bg-pink p-5 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-rose/50 hover:bg-white"
+                className="group relative flex flex-col justify-between rounded-2xl border border-[#fde2ec] bg-white p-5 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-rose/50 hover:shadow-md"
               >
                 <div>
                   <h3 className="font-bold text-[15px] text-ink transition-colors group-hover:text-rose">
@@ -169,7 +169,7 @@ export default function PatientReviewsBottomSections() {
         </div>
       </section>
 
-      <section className="bg-pink py-8 sm:py-10 lg:py-12 text-ink">
+      <section className="bg-white border-y border-[#fde2ec]/70 py-8 sm:py-10 lg:py-12 text-ink">
         <div className="page-container relative">
           <Reveal className="mb-6">
             <span className="text-[12px] font-semibold tracking-wider text-rose uppercase">

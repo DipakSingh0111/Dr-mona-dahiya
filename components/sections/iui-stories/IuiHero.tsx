@@ -97,13 +97,13 @@ export default function IuiHero() {
         <HeroMobileBanner src="/pageBanner/M0500386.JPG" alt="Dr. Mona Dahiya - Real IUI Success Stories" />
       </div>
     </section>
-      <section className="py-5 sm:py-6">
+      <section className="relative overflow-hidden bg-white py-7 sm:py-9 border-y border-[#fde2ec]/70">
         <div className="page-container relative">
           <HeroCounterBar
           items={[
             { target: 25000, suffix: "+", label: "Happy couples treated" },
             { target: 25, suffix: "+", label: "Years of experience" },
-            { target: 50, suffix: "%+", label: "Success rate per cycle" },
+            { target: 25, suffix: "%+", label: "Success rate per cycle" },
             { target: 10000, suffix: "+", label: "IUI cycles performed" },
           ]}
         />

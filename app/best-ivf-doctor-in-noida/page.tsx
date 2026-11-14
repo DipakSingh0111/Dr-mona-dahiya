@@ -21,7 +21,7 @@ const noidaPageClinics = [
   {
     city: "Noida",
     tag: "SECTOR 49",
-    image: "/images/clinics/noida.jpg",
+    image: "/images/noida.jpeg",
     address:
       "3rd Floor, K-06, above FirstCry, Baraula, Sector 49, Noida, Uttar Pradesh 201301",
     mapsUrl:
@@ -32,7 +32,7 @@ const noidaPageClinics = [
   {
     city: "Ghaziabad",
     tag: "RAJ NAGAR EXTENSION",
-    image: "/images/clinics/ghaziabad.jpg",
+    image: "/images/ghaziabad.jpeg",
     address:
       "2nd Floor, RDC, C-53A, near Bikanerwala, Sector 15, Sector 10, Raj Nagar, Ghaziabad, Uttar Pradesh 201002",
     mapsUrl:
@@ -43,7 +43,7 @@ const noidaPageClinics = [
   {
     city: "Delhi",
     tag: "LAJPAT NAGAR",
-    image: "/images/clinics/delhi.jpg",
+    image: "/images/delhi.png",
     address:
       "Building Number 41, First Floor, Ring Road, Block Q, Lajpat Nagar IV, Lajpat Nagar, New Delhi 110024",
     mapsUrl:

@@ -31,9 +31,9 @@ export default function ContactTeamCards() {
       value: "info@drmonadahiya.com",
       subtext: "Send records before your visit",
       href: "mailto:info@drmonadahiya.com",
-      accent: "blue",
-      badgeClass: "bg-blue/10 text-blue",
-      cardBorder: "border-blue/20 hover:border-blue/60",
+      accent: "navy",
+      badgeClass: "bg-navy/10 text-navy",
+      cardBorder: "border-navy/20 hover:border-navy/60",
     },
     {
       icon: FaVideo,

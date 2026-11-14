@@ -117,13 +117,13 @@ export default function IuiGhaziabadHero() {
         <HeroMobileBanner src="/pageBanner/M0500385.JPG" alt="Dr. Mona Dahiya — IUI Treatment in Ghaziabad" />
       </div>
     </section>
-      <section className="py-5 sm:py-6">
+      <section className="relative overflow-hidden bg-white py-7 sm:py-9 border-y border-[#fde2ec]/70">
         <div className="page-container relative">
           <HeroCounterBar
           items={[
             { target: 25, suffix: "+", label: "years of experience" },
             { target: 10000, label: "IUI Cycles" },
-            { target: 50, suffix: "%+", label: "Success Rates" },
+            { target: 25, suffix: "%+", label: "Success Rates" },
             { target: 4.9, decimals: 1, label: "Stars Rating On Google" },
           ]}
         />

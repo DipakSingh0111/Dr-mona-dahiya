@@ -92,7 +92,7 @@ export default function PrpHero() {
         <HeroMobileBanner src="/pageBanner/M0500399.JPG" alt="Dr. Mona Dahiya — Platelet-Rich Plasma (PRP) Therapy in IVF" />
       </div>
     </section>
-      <section className="py-5 sm:py-6">
+      <section className="relative overflow-hidden bg-white py-7 sm:py-9 border-y border-[#fde2ec]/70">
         <div className="page-container relative">
           <HeroCounterBar
           items={[

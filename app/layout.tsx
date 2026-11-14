@@ -4,6 +4,7 @@ import ScrollToTop from "@/components/layout/ScrollToTop";
 import HeaderHeightSync from "@/components/layout/HeaderHeightSync";
 import TopBar from "@/components/layout/TopBar";
 import Navbar from "@/components/layout/Navbar";
+import BreadcrumbBar from "@/components/layout/BreadcrumbBar";
 import Footer from "@/components/layout/Footer";
 import FloatingActions from "@/components/layout/FloatingActions";
 import "./globals.css";
@@ -48,6 +49,8 @@ export default function RootLayout({
           <TopBar />
           <Navbar />
         </div>
+
+        <BreadcrumbBar />
 
         {/* Page Content */}
         <div className="flex-1 flex flex-col">{children}</div>

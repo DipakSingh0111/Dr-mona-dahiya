@@ -12,6 +12,7 @@ export default function IvfFaqsClinics() {
       eyebrow={clinics.eyebrow}
       title={clinics.title}
       subtitle={clinics.subtitle}
+      sectionBg="bg-pink"
       showBookButton
     />
   );

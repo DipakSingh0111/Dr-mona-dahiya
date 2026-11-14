@@ -8,7 +8,7 @@ export default function IvfFaqsReviews() {
   const { reviews } = siteData.ivfFaqsPage;
 
   return (
-    <section className="relative overflow-hidden bg-pink py-6 text-black sm:py-7 lg:py-8">
+    <section className="relative overflow-hidden bg-white py-6 text-black sm:py-7 lg:py-8 border-y border-[#fde2ec]/70">
       <div className="page-container relative">
         <Reveal className="mb-7 sm:mb-9">
           <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">

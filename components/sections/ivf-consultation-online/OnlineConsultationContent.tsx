@@ -47,8 +47,8 @@ export default function OnlineConsultationContent() {
 
   return (
     <div className="text-ink">
-      {/* 1. Who Benefits (Pink) */}
-      <section className="relative overflow-hidden bg-pink py-8 sm:py-10 lg:py-12">
+      {/* 1. Who Benefits (White) */}
+      <section className="relative overflow-hidden bg-white py-8 sm:py-10 lg:py-12 border-y border-[#fde2ec]/70">
         <div className="page-container relative">
           <Reveal className="mb-7 sm:mb-9">
             <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">
@@ -107,8 +107,8 @@ export default function OnlineConsultationContent() {
         </div>
       </section>
 
-      {/* 2. What to Prepare (White) */}
-      <section id="what-to-prepare" className="relative overflow-hidden bg-white py-8 sm:py-10 lg:py-12 border-y border-[#fde2ec]/70 scroll-mt-28">
+      {/* 2. What to Prepare (Pink) */}
+      <section id="what-to-prepare" className="relative overflow-hidden bg-pink py-8 sm:py-10 lg:py-12 scroll-mt-28">
         <div className="page-container relative">
           <Reveal className="mb-7 sm:mb-9">
             <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">
@@ -141,8 +141,8 @@ export default function OnlineConsultationContent() {
         </div>
       </section>
 
-      {/* 3. Step-by-Step Process (Pink) */}
-      <section className="relative overflow-hidden bg-pink py-8 sm:py-10 lg:py-12">
+      {/* 3. Step-by-Step Process (White) */}
+      <section className="relative overflow-hidden bg-white py-8 sm:py-10 lg:py-12 border-y border-[#fde2ec]/70">
         <div className="page-container relative">
           <Reveal className="mb-7 sm:mb-9">
             <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">
@@ -188,8 +188,8 @@ export default function OnlineConsultationContent() {
         </div>
       </section>
 
-      {/* 4. Why Book (White) */}
-      <section className="relative overflow-hidden bg-white py-8 sm:py-10 lg:py-12 border-y border-[#fde2ec]/70">
+      {/* 4. Why Book (Pink) */}
+      <section className="relative overflow-hidden bg-pink py-8 sm:py-10 lg:py-12">
         <div className="page-container relative">
           <Reveal className="mb-7 sm:mb-9">
             <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">
@@ -222,8 +222,8 @@ export default function OnlineConsultationContent() {
         </div>
       </section>
 
-      {/* 5. Fees (Pink) */}
-      <section className="relative overflow-hidden bg-pink py-8 sm:py-10 lg:py-12">
+      {/* 5. Fees (White) */}
+      <section className="relative overflow-hidden bg-white py-8 sm:py-10 lg:py-12 border-y border-[#fde2ec]/70">
         <div className="page-container relative">
           <Reveal className="mb-7 sm:mb-9">
             <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">
@@ -291,8 +291,8 @@ export default function OnlineConsultationContent() {
         </div>
       </section>
 
-      {/* 6. FAQs (White) */}
-      <section className="relative overflow-hidden bg-white py-8 sm:py-10 lg:py-12 border-y border-[#fde2ec]/70">
+      {/* 6. FAQs (Pink) */}
+      <section className="relative overflow-hidden bg-pink py-8 sm:py-10 lg:py-12">
         <div className="page-container relative">
           <Reveal>
             <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">

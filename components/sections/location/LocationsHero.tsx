@@ -1,4 +1,5 @@
 "use client";
+import HeroCounterBar from "@/components/ui/HeroCounterBar";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 
 import { FaSearch } from "react-icons/fa";
@@ -15,6 +16,7 @@ export default function LocationsHero({ query, onQueryChange }: Props) {
     siteData.locationsPage;
 
   return (
+    <>
     <section
       className="relative overflow-hidden pt-6 pb-7 sm:pt-7 sm:pb-8 lg:pt-8 lg:pb-9"
       style={{
@@ -71,5 +73,33 @@ export default function LocationsHero({ query, onQueryChange }: Props) {
         </Reveal>
       </div>
     </section>
+      <section className="relative overflow-hidden bg-white py-7 sm:py-9 border-y border-[#fde2ec]/70">
+        <div className="page-container relative">
+          <HeroCounterBar
+            items={[
+          {
+                    "target": 3,
+                    "label": "NCR clinic centers"
+          },
+          {
+                    "target": 25,
+                    "suffix": "+",
+                    "label": "years' expertise"
+          },
+          {
+                    "target": 25000,
+                    "suffix": "+",
+                    "label": "families treated"
+          },
+          {
+                    "target": 15000,
+                    "suffix": "+",
+                    "label": "IVF cycles"
+          }
+]}
+          />
+        </div>
+      </section>
+    </>
   );
 }

@@ -57,7 +57,7 @@ const themes = [
 
 export default function ReviewsByTheme() {
   return (
-    <section className="relative overflow-hidden bg-pink border-t border-[#fde2ec] py-6 text-ink sm:py-7 lg:py-8">
+    <section className="relative overflow-hidden bg-white border-y border-[#fde2ec]/70 py-6 text-ink sm:py-7 lg:py-8">
       <div className="page-container relative">
         <Reveal className="max-w-3xl">
           <span className="text-[12px] font-semibold tracking-wider text-rose uppercase">

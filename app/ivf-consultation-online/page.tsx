@@ -28,6 +28,7 @@ export default function OnlineConsultationPage() {
       <SectionReveal delay={0.04}>
         <AboutConsultation
           sectionId="schedule-consultation"
+          sectionBg="bg-white"
           eyebrow="Next step"
           title="Schedule Your Online Consultation"
           subtitle="Book a 30-minute online record review with Dr. Mona. Appointment line:"

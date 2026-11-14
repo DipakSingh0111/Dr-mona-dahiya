@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function PatientReviewsPage() {
   return (
-    <main className="flex min-h-screen flex-col">
+    <main className="flex min-h-screen flex-col bg-pink">
       <PatientReviewsHero />
 
       <SectionReveal>
@@ -48,7 +48,7 @@ export default function PatientReviewsPage() {
       <SectionReveal delay={0.04}>
         <AboutConsultation
           sectionId="book-consultation"
-          sectionBg="bg-white"
+          sectionBg="bg-pink"
           eyebrow="Book an appointment"
           title="Schedule your fertility consultation"
           subtitle="Meet Dr. Mona Dahiya to review your options and plan your care. Choose an in-clinic or online consultation, or call or write directly."

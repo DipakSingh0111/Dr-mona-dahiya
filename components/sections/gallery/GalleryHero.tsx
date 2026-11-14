@@ -1,4 +1,5 @@
 "use client";
+import HeroCounterBar from "@/components/ui/HeroCounterBar";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 
 import Link from "next/link";
@@ -7,6 +8,7 @@ import { Reveal } from "@/components/ui/Reveal";
 
 export default function GalleryHero() {
   return (
+    <>
     <section
       className="relative overflow-hidden pt-5 pb-8 sm:pt-6 sm:pb-9 lg:pt-7 lg:pb-10"
       style={{
@@ -59,5 +61,34 @@ export default function GalleryHero() {
         </Reveal>
       </div>
     </section>
+      <section className="relative overflow-hidden bg-white py-7 sm:py-9 border-y border-[#fde2ec]/70">
+        <div className="page-container relative">
+          <HeroCounterBar
+            items={[
+          {
+                    "target": 25000,
+                    "suffix": "+",
+                    "label": "families treated"
+          },
+          {
+                    "target": 25,
+                    "suffix": "+",
+                    "label": "years' expertise"
+          },
+          {
+                    "target": 90,
+                    "suffix": "%+",
+                    "label": "success rate"
+          },
+          {
+                    "target": 15000,
+                    "suffix": "+",
+                    "label": "IVF cycles"
+          }
+]}
+          />
+        </div>
+      </section>
+    </>
   );
 }

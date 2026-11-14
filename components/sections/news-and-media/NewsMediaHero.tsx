@@ -95,7 +95,7 @@ export default function NewsMediaHero() {
         <HeroMobileBanner src="/pageBanner/M0500398.JPG" alt="Dr. Mona Dahiya in the News & Media — Times Network India Health Summit & Awards 2025" />
       </div>
     </section>
-      <section className="py-5 sm:py-6">
+      <section className="relative overflow-hidden bg-white py-7 sm:py-9 border-y border-[#fde2ec]/70">
         <div className="page-container relative">
           <HeroCounterBar
           items={[

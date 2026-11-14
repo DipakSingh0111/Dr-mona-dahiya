@@ -5,6 +5,7 @@ import {
   HeroFullWidthBanner,
   HeroMobileBanner,
 } from "@/components/ui/HeroFullWidthBanner";
+import HeroCounterBar from "@/components/ui/HeroCounterBar";
 import Link from "next/link";
 
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";

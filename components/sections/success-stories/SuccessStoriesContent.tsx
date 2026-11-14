@@ -7,9 +7,9 @@ import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
 const diagnosisGradients = [
   "from-rose to-rose-dark",
-  "from-blue-dark to-blue",
+  "from-navy-mid to-navy",
   "from-rose to-[#a02050]",
-  "from-blue to-blue-dark",
+  "from-navy to-navy-mid",
 ];
 
 export default function SuccessStoriesContent() {
@@ -17,10 +17,10 @@ export default function SuccessStoriesContent() {
 
   return (
     <div className="text-ink">
-      {/* 1. Explore Patient Stories by Diagnosis (Pink) */}
+      {/* 1. Explore Patient Stories by Diagnosis (White) */}
       <section
         id="stories-by-diagnosis"
-        className="relative overflow-hidden bg-pink py-8 sm:py-10 lg:py-12"
+        className="relative overflow-hidden bg-white py-8 sm:py-10 lg:py-12 border-y border-[#fde2ec]/70"
       >
         <div className="page-container relative">
           <Reveal className="mb-7 sm:mb-9">
@@ -71,8 +71,8 @@ export default function SuccessStoriesContent() {
         </div>
       </section>
 
-      {/* 2. Why Couples Trust Dr. Mona Dahiya (White) */}
-      <section className="relative overflow-hidden bg-white py-8 sm:py-10 lg:py-12 border-y border-[#fde2ec]/70">
+      {/* 2. Why Couples Trust Dr. Mona Dahiya (Pink) */}
+      <section className="relative overflow-hidden bg-pink py-8 sm:py-10 lg:py-12">
         <div className="page-container relative">
           <Reveal className="mb-7 sm:mb-9">
             <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">
@@ -105,8 +105,8 @@ export default function SuccessStoriesContent() {
         </div>
       </section>
 
-      {/* 3. How Every Journey Begins (Pink) */}
-      <section className="relative overflow-hidden bg-pink py-8 sm:py-10 lg:py-12">
+      {/* 3. How Every Journey Begins (White) */}
+      <section className="relative overflow-hidden bg-white py-8 sm:py-10 lg:py-12 border-y border-[#fde2ec]/70">
         <div className="page-container relative">
           <Reveal className="mb-7 sm:mb-9">
             <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">

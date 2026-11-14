@@ -4,7 +4,10 @@ import IuiTreatmentHero from "@/components/sections/iui-treatment/IuiTreatmentHe
 import MedicalRegistration from "@/components/sections/MedicalRegistration";
 import IuiIndicationsAndChecklist from "@/components/sections/iui-treatment/IuiIndicationsAndChecklist";
 import IuiProtocolAndWhy from "@/components/sections/iui-treatment/IuiProtocolAndWhy";
-import IuiReviewsAndCost from "@/components/sections/iui-treatment/IuiReviewsAndCost";
+import {
+  IuiReviews,
+  IuiCost,
+} from "@/components/sections/iui-treatment/IuiReviewsAndCost";
 import IuiClinicLocation from "@/components/sections/iui-treatment/IuiClinicLocation";
 import IuiQuestionsFaq from "@/components/sections/iui-treatment/IuiQuestionsFaq";
 import IuiRelatedTreatments from "@/components/sections/iui-treatment/IuiRelatedTreatments";
@@ -40,7 +43,11 @@ export default function IuiTreatmentPage() {
       </SectionReveal>
 
       <SectionReveal delay={0.04}>
-        <IuiReviewsAndCost />
+        <IuiReviews />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <IuiCost />
       </SectionReveal>
 
       <SectionReveal delay={0.04}>

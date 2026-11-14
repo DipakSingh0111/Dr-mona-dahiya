@@ -5,7 +5,7 @@ export default function AllPatientReviewsSections() {
     <div className="flex flex-col">
       <PatientReviewsGroup
         id="first-cycle"
-        sectionBg="bg-white"
+        sectionBg="bg-pink"
         eyebrow="First cycle"
         title="Pregnant in my first cycle"
         subtitle="Our patients have mentioned becoming pregnant in their first cycle. Every case is different."
@@ -78,6 +78,7 @@ export default function AllPatientReviewsSections() {
 
       <PatientReviewsGroup
         id="complex-cases"
+        sectionBg="bg-white"
         eyebrow="Complex cases"
         title="Second time around & patients with a diagnosis"
         subtitle="Patients that have tried elsewhere before coming to us or have been diagnosed with a problem. Whether it's PCOS, Low AMH, Miscarriages, Blocked Tubes or Fibroids."
@@ -155,7 +156,7 @@ export default function AllPatientReviewsSections() {
 
       <PatientReviewsGroup
         id="clear-explanations"
-        sectionBg="bg-white"
+        sectionBg="bg-pink"
         eyebrow="Clear explanations"
         title="Took time to listen & explain things clearly"
         subtitle="Many of our patients love how we take the time to explain everything."
@@ -233,6 +234,7 @@ export default function AllPatientReviewsSections() {
 
       <PatientReviewsGroup
         id="compassion"
+        sectionBg="bg-white"
         eyebrow="Compassion"
         title="Warmth & Empathy"
         subtitle="Patients have loved that we care about them. And want the best for them."
@@ -312,7 +314,7 @@ export default function AllPatientReviewsSections() {
 
       <PatientReviewsGroup
         id="staff-support"
-        sectionBg="bg-white"
+        sectionBg="bg-pink"
         eyebrow="Staff support"
         title="Love our Nurses/Staff"
         subtitle="Patients mention our nurses, front desk, counsellor and staff that are always there for them."
@@ -393,6 +395,7 @@ export default function AllPatientReviewsSections() {
 
       <PatientReviewsGroup
         id="honesty"
+        sectionBg="bg-white"
         eyebrow="Honesty"
         title="We tell you the truth"
         subtitle="Some patients have told us they love that we don't push unnecessary tests/treatment on them. And explain to them what they should and shouldn't do."
@@ -470,7 +473,7 @@ export default function AllPatientReviewsSections() {
 
       <PatientReviewsGroup
         id="icsi"
-        sectionBg="bg-white"
+        sectionBg="bg-pink"
         eyebrow="ICSI"
         title="Patients who mentioned ICSI"
         subtitle="Patients have mentioned how we perform ICSI."
@@ -534,6 +537,7 @@ export default function AllPatientReviewsSections() {
 
       <PatientReviewsGroup
         id="embryo-selection"
+        sectionBg="bg-white"
         eyebrow="Embryo selection"
         title="Embryo selection/testing & Lab work"
         subtitle="Patients who have mentioned how we grow your embryos. Testing or our lab."
@@ -610,7 +614,7 @@ export default function AllPatientReviewsSections() {
 
       <PatientReviewsGroup
         id="iui"
-        sectionBg="bg-white"
+        sectionBg="bg-pink"
         eyebrow="IUI"
         title="Patients who mentioned IUI"
         subtitle="Patients who have mentioned that we perform IUI."
@@ -662,6 +666,7 @@ export default function AllPatientReviewsSections() {
 
       <PatientReviewsGroup
         id="egg-freezing"
+        sectionBg="bg-white"
         eyebrow="Egg freezing"
         title="Egg Freezing/Fertility Preservation"
         subtitle="Patients who have mentioned Egg Freezing."
@@ -700,7 +705,7 @@ export default function AllPatientReviewsSections() {
 
       <PatientReviewsGroup
         id="expertise"
-        sectionBg="bg-white"
+        sectionBg="bg-pink"
         eyebrow="Expertise"
         title="Dr. Mona's experience & knowledge"
         subtitle="Some of our patients love that Dr. Mona knows her stuff. Knows how to diagnose and help you."
@@ -777,6 +782,7 @@ export default function AllPatientReviewsSections() {
 
       <PatientReviewsGroup
         id="best-noida"
+        sectionBg="bg-white"
         eyebrow="Best IVF doctor in Noida"
         title="Mentioned Noida"
         subtitle="Our patients have mentioned Noida in their reviews."
@@ -854,7 +860,7 @@ export default function AllPatientReviewsSections() {
 
       <PatientReviewsGroup
         id="best-ghaziabad"
-        sectionBg="bg-white"
+        sectionBg="bg-pink"
         eyebrow="Best IVF doctor in Ghaziabad"
         title="Mentioned Ghaziabad"
         subtitle="Our patients have mentioned Ghaziabad in their reviews."
@@ -929,6 +935,7 @@ export default function AllPatientReviewsSections() {
 
       <PatientReviewsGroup
         id="best-delhi"
+        sectionBg="bg-white"
         eyebrow="Best IVF doctor in Delhi"
         title="Mentioned Delhi"
         subtitle="Our patients have mentioned Delhi in their reviews."
@@ -1002,7 +1009,7 @@ export default function AllPatientReviewsSections() {
 
       <PatientReviewsGroup
         id="best-india"
-        sectionBg="bg-white"
+        sectionBg="bg-pink"
         eyebrow="Best IVF doctor in India"
         title="Mentioned India"
         subtitle="Our patients have mentioned India in their reviews."

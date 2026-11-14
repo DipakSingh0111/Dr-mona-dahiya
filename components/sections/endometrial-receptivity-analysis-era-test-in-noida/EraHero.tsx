@@ -23,9 +23,13 @@ export default function EraHero() {
         className="relative overflow-hidden flex flex-col justify-center pb-6 sm:pb-8 lg:pb-0"
       style={{ background: "var(--pink)" }}
     >
-      <HeroFullWidthBanner src="/pageBanner/M0500376.JPG" alt="Dr. Mona Dahiya — Personalized Endometrial Receptivity Analysis (ERA Test) in Noida & Delhi NCR" />
+      <HeroFullWidthBanner
+        src="/pageBanner/M0500361.JPG"
+        alt="Dr. Mona Dahiya — Personalized Endometrial Receptivity Analysis (ERA Test) in Noida & Delhi NCR"
+        objectPosition="object-[72%_0%] md:object-[72%_0%] lg:object-[82%_0%] xl:object-[80%_0%] 2xl:object-[76%_0%]"
+      />
       <div className="page-container relative z-10 w-full pt-4 sm:pt-5 lg:pt-0">
-        <div className="lg:max-w-[28rem] xl:max-w-[34rem] 2xl:max-w-[38rem]">
+        <div className="lg:max-w-[34rem] xl:max-w-[40rem] 2xl:max-w-[45rem]">
           <Breadcrumb
             items={[
               { label: "Treatments", href: "/our-services" },
@@ -37,9 +41,10 @@ export default function EraHero() {
             Endometrial Receptivity Analysis (ERA) Test in Delhi NCR
           </p>
 
-          <h1 className="font-serif mt-1.5 max-w-[40rem] text-[1.65rem] leading-[1.16] font-normal tracking-tight text-ink sm:text-[2.15rem] lg:text-[2.45rem] xl:text-[2.65rem]">
-            Personalized Endometrial Receptivity Analysis (ERA Test) in Noida
-            &amp; Delhi NCR
+          <h1 className="font-serif mt-1.5 max-w-[44rem] text-[1.65rem] leading-[1.16] font-normal tracking-tight text-ink sm:text-[2.15rem] lg:text-[2.45rem] xl:text-[2.65rem]">
+            Personalized Endometrial Receptivity Analysis (ERA Test){" "}
+            <br className="hidden sm:inline" />
+            in Noida &amp; Delhi NCR
           </h1>
 
           <p className="mt-3.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/80 sm:text-[15px]">
@@ -89,10 +94,10 @@ export default function EraHero() {
           </Stagger>
         </div>
 
-        <HeroMobileBanner src="/pageBanner/M0500376.JPG" alt="Dr. Mona Dahiya — Personalized Endometrial Receptivity Analysis (ERA Test) in Noida & Delhi NCR" />
+        <HeroMobileBanner src="/pageBanner/M0500361.JPG" alt="Dr. Mona Dahiya — Personalized Endometrial Receptivity Analysis (ERA Test) in Noida & Delhi NCR" />
       </div>
     </section>
-      <section className="py-5 sm:py-6">
+      <section className="relative overflow-hidden bg-white py-7 sm:py-9 border-y border-[#fde2ec]/70">
         <div className="page-container relative">
           <HeroCounterBar
           items={[

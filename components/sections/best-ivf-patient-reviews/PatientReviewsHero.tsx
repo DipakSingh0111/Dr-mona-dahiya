@@ -1,4 +1,5 @@
 "use client";
+import HeroCounterBar from "@/components/ui/HeroCounterBar";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import {
   HeroFullWidthBanner,
@@ -16,6 +17,7 @@ export default function PatientReviewsHero() {
   ];
 
   return (
+    <>
     <section
         className="relative overflow-hidden flex flex-col justify-center pb-6 sm:pb-8 lg:pb-0"
       style={{
@@ -97,5 +99,34 @@ export default function PatientReviewsHero() {
         <HeroMobileBanner src="/pageBanner/M0500366.JPG" alt="Dr. Mona Dahiya — IVF Patient Reviews" />
       </div>
     </section>
+      <section className="relative overflow-hidden bg-white py-7 sm:py-9 border-y border-[#fde2ec]/70">
+        <div className="page-container relative">
+          <HeroCounterBar
+            items={[
+          {
+                    "target": 25000,
+                    "suffix": "+",
+                    "label": "patients treated"
+          },
+          {
+                    "target": 25,
+                    "suffix": "+",
+                    "label": "years' expertise"
+          },
+          {
+                    "target": 90,
+                    "suffix": "%+",
+                    "label": "IVF success rate"
+          },
+          {
+                    "target": 15000,
+                    "suffix": "+",
+                    "label": "IVF cycles"
+          }
+]}
+          />
+        </div>
+      </section>
+    </>
   );
 }

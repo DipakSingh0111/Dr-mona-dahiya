@@ -199,12 +199,13 @@ export default function WhyChooseUs() {
               }}
             />
 
-            <div className="relative z-10 h-full w-full overflow-hidden rounded-[22px] border-4 border-white shadow-[0_18px_40px_rgba(232,62,116,0.18)] sm:rounded-[24px]">
+            <div className="relative z-10 h-full w-full overflow-hidden rounded-[22px] border-4 border-white bg-white shadow-[0_18px_40px_rgba(232,62,116,0.18)] sm:rounded-[24px]">
               <Image
                 src={image}
                 alt="Dr. Mona Dahiya - Fertility & IVF Specialist"
                 fill
                 priority
+                quality={95}
                 className="object-cover object-top select-none"
                 sizes="(max-width: 1024px) 330px, 320px"
               />

@@ -100,7 +100,7 @@ export default function PgtHero() {
         <HeroMobileBanner src="/pageBanner/M0500397.JPG" alt="Dr. Mona Dahiya - Preimplantation Genetic Testing (PGT) Specialist" />
       </div>
     </section>
-      <section className="py-5 sm:py-6">
+      <section className="relative overflow-hidden bg-white py-7 sm:py-9 border-y border-[#fde2ec]/70">
         <div className="page-container relative">
           <HeroCounterBar
           items={[

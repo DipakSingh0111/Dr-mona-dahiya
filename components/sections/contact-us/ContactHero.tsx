@@ -1,5 +1,5 @@
 "use client";
-
+import HeroCounterBar from "@/components/ui/HeroCounterBar";
 import Link from "next/link";
 import { FaCalendarCheck, FaVideo, FaArrowRight } from "react-icons/fa";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -8,6 +8,7 @@ import { Reveal } from "@/components/ui/Reveal";
 
 export default function ContactHero() {
   return (
+    <>
     <section
       className="relative overflow-hidden flex flex-col justify-center pb-6 sm:pb-8 lg:pb-0"
       style={{ background: "var(--pink)" }}
@@ -98,5 +99,33 @@ export default function ContactHero() {
         </div>
       </div>
     </section>
+      <section className="relative overflow-hidden bg-white py-7 sm:py-9 border-y border-[#fde2ec]/70">
+        <div className="page-container relative">
+          <HeroCounterBar
+            items={[
+          {
+                    "target": 3,
+                    "label": "clinic centers in NCR"
+          },
+          {
+                    "target": 25,
+                    "suffix": "+",
+                    "label": "years of excellence"
+          },
+          {
+                    "target": 25000,
+                    "suffix": "+",
+                    "label": "families treated"
+          },
+          {
+                    "target": 15000,
+                    "suffix": "+",
+                    "label": "cycles performed"
+          }
+]}
+          />
+        </div>
+      </section>
+    </>
   );
 }

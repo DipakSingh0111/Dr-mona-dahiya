@@ -112,13 +112,13 @@ export default function IuiDelhiHero() {
         <HeroMobileBanner src="/pageBanner/M0500362.JPG" alt="Dr. Mona Dahiya — IUI Treatment Delhi" />
       </div>
     </section>
-      <section className="py-5 sm:py-6">
+      <section className="relative overflow-hidden bg-white py-7 sm:py-9 border-y border-[#fde2ec]/70">
         <div className="page-container relative">
           <HeroCounterBar
           items={[
             { target: 25, suffix: "+", label: "Years of Experience" },
             { target: 10000, label: "IUI Cycles Completed" },
-            { target: 50, suffix: "%+", label: "IUI Success Rates" },
+            { target: 25, suffix: "%+", label: "IUI Success Rates" },
             { target: 4.9, decimals: 1, label: "Star Rating On Google" },
           ]}
         />

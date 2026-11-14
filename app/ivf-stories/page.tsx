@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 
 export default function IVFSuccessStoriesPage() {
   return (
-    <main className="flex min-h-screen flex-col">
+    <main className="flex min-h-screen flex-col bg-pink">
       <IVFSuccessStoriesHero />
 
       <SectionReveal>

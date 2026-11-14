@@ -1,5 +1,5 @@
 "use client";
-
+import HeroCounterBar from "@/components/ui/HeroCounterBar";
 import Link from "next/link";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import {
@@ -18,6 +18,7 @@ export default function AboutHero() {
   ];
 
   return (
+    <>
     <section
         className="relative overflow-hidden flex flex-col justify-center pb-6 sm:pb-8 lg:pb-0"
       style={{ background: "var(--pink)" }}
@@ -26,7 +27,7 @@ export default function AboutHero() {
 
       {/* Desktop full-width background banner */}
       <HeroFullWidthBanner
-        src="/pageBanner/M0500440.JPG"
+        src="/pageBanner/M0500443.JPG"
         alt="Dr. Mona Dahiya - Senior Reproductive Endocrinologist & Fertility Specialist"
       />
 
@@ -93,10 +94,39 @@ export default function AboutHero() {
 
         {/* Mobile / tablet full-width banner */}
         <HeroMobileBanner
-          src="/pageBanner/M0500440.JPG"
+          src="/pageBanner/M0500443.JPG"
           alt="Dr. Mona Dahiya - Senior Reproductive Endocrinologist & Fertility Specialist"
         />
       </div>
     </section>
+      <section className="relative overflow-hidden bg-white py-7 sm:py-9 border-y border-[#fde2ec]/70">
+        <div className="page-container relative">
+          <HeroCounterBar
+            items={[
+          {
+                    "target": 25000,
+                    "suffix": "+",
+                    "label": "families treated"
+          },
+          {
+                    "target": 25,
+                    "suffix": "+",
+                    "label": "years' expertise"
+          },
+          {
+                    "target": 90,
+                    "suffix": "%+",
+                    "label": "success rates"
+          },
+          {
+                    "target": 15000,
+                    "suffix": "+",
+                    "label": "IVF cycles"
+          }
+]}
+          />
+        </div>
+      </section>
+    </>
   );
 }

@@ -71,7 +71,7 @@ function CounterValue({
       : value.toLocaleString("en-IN");
 
   return (
-    <span className="font-serif text-[1.75rem] leading-none font-bold tracking-tight text-rose tabular-nums sm:text-[2.1rem] lg:text-[2.35rem]">
+    <span className="font-serif text-[2.25rem] leading-none font-normal tracking-tight text-ink tabular-nums sm:text-[2.65rem] lg:text-[3rem]">
       {item.displayText ?? (
         <>
           {item.prefix ?? ""}
@@ -107,15 +107,12 @@ export default function HeroCounterBar({ items }: { items: HeroCounterItem[] }) 
   }, []);
 
   return (
-    <div
-      ref={ref}
-      className="mt-8 rounded-2xl border border-rose/15 bg-white px-4 py-5 shadow-sm sm:mt-9 sm:px-6 sm:py-6 lg:mt-10 lg:px-8 lg:py-7"
-    >
-      <div className="grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-4 lg:gap-6">
+    <div ref={ref} className="w-full">
+      <div className="grid grid-cols-2 gap-x-6 gap-y-7 sm:gap-8 lg:grid-cols-4 lg:gap-10">
         {items.map((item) => (
-          <div key={item.label} className="min-w-0 text-center sm:text-left">
+          <div key={item.label} className="min-w-0">
             <CounterValue item={item} active={active} />
-            <p className="mt-1.5 text-[12px] leading-snug font-medium text-ink/70 sm:text-[13px]">
+            <p className="mt-2 text-[12.5px] leading-snug font-medium text-ink/75 sm:text-[13.5px]">
               {item.label}
             </p>
           </div>
