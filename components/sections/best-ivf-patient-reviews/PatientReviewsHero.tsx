@@ -109,7 +109,7 @@ export default function PatientReviewsHero() {
                   </a>
                   <a
                     href="#first-cycle"
-                    className="inline-flex items-center justify-center rounded-full bg-blue px-5 py-2.5 text-[12.5px] font-semibold whitespace-nowrap text-white shadow-md ring-1 ring-blue/20 transition-all hover:bg-blue-dark active:scale-95 sm:px-6 sm:py-3 sm:text-[13.5px]"
+                    className="inline-flex items-center justify-center rounded-full bg-navy px-5 py-2.5 text-[12.5px] font-semibold whitespace-nowrap text-white shadow-md ring-1 ring-navy/20 transition-all hover:bg-navy-mid active:scale-95 sm:px-6 sm:py-3 sm:text-[13.5px]"
                   >
                     Read Patient Reviews
                   </a>

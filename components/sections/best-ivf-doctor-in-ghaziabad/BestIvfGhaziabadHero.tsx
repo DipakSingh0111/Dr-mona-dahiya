@@ -67,7 +67,7 @@ export default function BestIvfGhaziabadHero() {
             </a>
             <Link
               href="/ivf-consultation-online"
-              className="inline-flex items-center justify-center rounded-full bg-blue px-6 py-2.5 text-[13.5px] font-semibold text-white shadow-[0_8px_20px_rgba(0,71,202,0.35)] ring-1 ring-blue/20 transition-all hover:bg-blue-dark hover:brightness-110 active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"
+              className="inline-flex items-center justify-center rounded-full bg-navy px-6 py-2.5 text-[13.5px] font-semibold text-white shadow-[0_8px_20px_rgba(6,21,50,0.35)] ring-1 ring-navy/20 transition-all hover:bg-navy-mid hover:brightness-110 active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"
             >
               Schedule Online Consultation
             </Link>

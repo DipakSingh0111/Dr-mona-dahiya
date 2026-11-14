@@ -64,7 +64,7 @@ export default function EraHero() {
             </a>
             <Link
               href="/ivf-consultation-online"
-              className="inline-flex items-center justify-center rounded-full bg-blue px-5 py-2.5 text-[13px] font-semibold text-white shadow-[0_4px_16px_rgba(0,71,202,0.35)] transition-all hover:bg-blue-dark sm:px-6 sm:py-3 sm:text-[14px]"
+              className="inline-flex items-center justify-center rounded-full bg-navy px-5 py-2.5 text-[13px] font-semibold text-white shadow-[0_4px_16px_rgba(6,21,50,0.35)] transition-all hover:bg-navy-mid sm:px-6 sm:py-3 sm:text-[14px]"
             >
               Schedule Online Consultation
             </Link>

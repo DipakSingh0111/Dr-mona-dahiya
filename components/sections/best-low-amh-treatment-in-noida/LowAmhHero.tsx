@@ -68,7 +68,7 @@ export default function LowAmhHero() {
               </a>
               <a
                 href="#book-consultation"
-                className="inline-flex h-11 w-full flex-1 items-center justify-center rounded-full bg-blue px-3 text-[12px] font-semibold whitespace-nowrap text-white shadow-md ring-1 ring-blue/20 transition-all hover:bg-blue-dark active:scale-[0.98] sm:h-12 sm:px-4 sm:text-[13px]"
+                className="inline-flex h-11 w-full flex-1 items-center justify-center rounded-full bg-navy px-3 text-[12px] font-semibold whitespace-nowrap text-white shadow-md ring-1 ring-navy/20 transition-all hover:bg-navy-mid active:scale-[0.98] sm:h-12 sm:px-4 sm:text-[13px]"
               >
                 Schedule Online Consultation
               </a>

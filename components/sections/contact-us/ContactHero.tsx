@@ -79,7 +79,7 @@ export default function ContactHero() {
 
               <Link
                 href="/ivf-consultation-online"
-                className="inline-flex items-center gap-2 rounded-full bg-blue px-5 py-2.5 text-xs sm:text-sm font-semibold text-white shadow-[0_10px_24px_rgba(0,71,202,0.25)] transition hover:bg-blue-dark active:scale-95"
+                className="inline-flex items-center gap-2 rounded-full bg-navy px-5 py-2.5 text-xs sm:text-sm font-semibold text-white shadow-[0_10px_24px_rgba(6,21,50,0.25)] transition hover:bg-navy-mid active:scale-95"
               >
                 <FaVideo />
                 <span>Schedule Online Consultation</span>

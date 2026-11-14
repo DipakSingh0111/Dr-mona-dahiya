@@ -63,7 +63,7 @@ export default function PcosStoriesHero() {
             </a>
             <a
               href="#book-consultation"
-              className="inline-flex items-center justify-center rounded-full bg-blue px-6 py-2.5 text-[13.5px] font-semibold text-white shadow-[0_8px_20px_rgba(0,71,202,0.35)] transition-all hover:bg-blue-dark active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"
+              className="inline-flex items-center justify-center rounded-full bg-navy px-6 py-2.5 text-[13.5px] font-semibold text-white shadow-[0_8px_20px_rgba(6,21,50,0.35)] transition-all hover:bg-navy-mid active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"
             >
               Book Your Online Consultation Now
             </a>

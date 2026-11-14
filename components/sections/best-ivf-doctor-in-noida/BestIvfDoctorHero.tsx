@@ -81,7 +81,7 @@ export default function BestIvfDoctorHero() {
             </a>
             <a
               href="#book-consultation"
-              className="inline-flex items-center justify-center rounded-full bg-blue px-5 py-2 text-[13px] font-semibold text-white shadow-[0_8px_20px_rgba(0,71,202,0.35)] transition-all hover:bg-blue-dark active:scale-95 sm:px-6 sm:py-2.5 sm:text-[13.5px]"
+              className="inline-flex items-center justify-center rounded-full bg-navy px-5 py-2 text-[13px] font-semibold text-white shadow-[0_8px_20px_rgba(6,21,50,0.35)] transition-all hover:bg-navy-mid active:scale-95 sm:px-6 sm:py-2.5 sm:text-[13.5px]"
             >
               Schedule Online Consultation
             </a>

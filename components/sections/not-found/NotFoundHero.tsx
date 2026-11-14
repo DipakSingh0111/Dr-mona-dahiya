@@ -14,7 +14,7 @@ export default function NotFoundHero() {
         className="pointer-events-none absolute -top-20 left-1/2 -translate-x-1/2 h-[420px] w-[650px] rounded-full opacity-25 blur-3xl"
         style={{
           background:
-            "radial-gradient(circle, rgba(0,71,202,0.35) 0%, rgba(232,62,116,0.2) 50%, transparent 70%)",
+            "radial-gradient(circle, rgba(6,21,50,0.35) 0%, rgba(232,62,116,0.2) 50%, transparent 70%)",
         }}
       />
 
@@ -57,7 +57,7 @@ export default function NotFoundHero() {
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3.5 sm:gap-4">
               <Link
                 href="/"
-                className="inline-flex items-center gap-2 rounded-full bg-blue px-6 py-3.5 text-[13.5px] font-bold text-white shadow-lg shadow-blue/25 transition-all hover:bg-blue-dark hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0"
+                className="inline-flex items-center gap-2 rounded-full bg-navy px-6 py-3.5 text-[13.5px] font-bold text-white shadow-lg shadow-navy/25 transition-all hover:bg-navy-mid hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0"
               >
                 <FaHome className="size-4" />
                 <span>Back to Home</span>
