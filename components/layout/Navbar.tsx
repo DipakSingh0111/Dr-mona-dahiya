@@ -45,8 +45,10 @@ const EXTRA_ROUTES_BY_TAB: Record<string, string[]> = {
     "/privacy-policy",
     "/terms-of-service",
     "/medical-disclaimer",
+    "/refund-and-cancellation-policy",
   ],
   "Patient Resources": [
+    "/fertility-assessment-quiz",
     "/international-ivf-patient",
     "/comprehensive-ivf-faqs",
     "/contact-us",

@@ -28,7 +28,7 @@ export default function FloatingActions() {
     >
       {/* Left: Fertility Assessment Pill */}
       <Link
-        href="/book-appointment"
+        href="/fertility-assessment-quiz"
         aria-label="Take Fertility Assessment"
         tabIndex={visible ? 0 : -1}
         style={{

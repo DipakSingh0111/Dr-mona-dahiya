@@ -115,6 +115,7 @@ const ROUTE_BREADCRUMBS: Record<string, BreadcrumbItem[]> = {
     { label: "Conditions Treated", href: "/female-infertility-treatment" },
     { label: "Fallopian Tube Blockage" },
   ],
+  "/fertility-assessment-quiz": [{ label: "Fertility Assessment Quiz" }],
   "/female-infertility-treatment": [
     { label: "Conditions Treated", href: "/female-infertility-treatment" },
     { label: "Female Infertility Treatment in Delhi NCR" },
@@ -225,6 +226,10 @@ const ROUTE_BREADCRUMBS: Record<string, BreadcrumbItem[]> = {
   "/recurrent-implantation-failure-rif": [
     { label: "Conditions Treated", href: "/female-infertility-treatment" },
     { label: "Recurrent Implantation Failure (RIF)" },
+  ],
+  "/refund-and-cancellation-policy": [
+    { label: "Legal" },
+    { label: "Refund & Cancellation Policy" },
   ],
   "/second-opinion-failed-ivf": [
     { label: "Treatments", href: "/our-services" },
