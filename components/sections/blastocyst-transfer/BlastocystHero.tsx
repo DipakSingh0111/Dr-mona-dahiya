@@ -23,7 +23,7 @@ export default function BlastocystHero() {
         className="relative overflow-hidden flex flex-col justify-center pb-6 sm:pb-8 lg:pb-0"
       style={{ background: "var(--pink)" }}
     >
-      <HeroFullWidthBanner src="/pageBanner/M0500372.JPG" alt="Dr. Mona Dahiya - Advanced Day-5 Blastocyst Transfer in Delhi, Noida & Ghaziabad" />
+      <HeroFullWidthBanner src="/pageBanner/M0500401.jpg" alt="Dr. Mona Dahiya - Advanced Day-5 Blastocyst Transfer in Delhi, Noida & Ghaziabad" />
       {/* Decorative Radial Glows matching Theme */}
       <div
         aria-hidden
@@ -112,7 +112,7 @@ export default function BlastocystHero() {
           </Stagger>
         </div>
 
-        <HeroMobileBanner src="/pageBanner/M0500372.JPG" alt="Dr. Mona Dahiya - Advanced Day-5 Blastocyst Transfer in Delhi, Noida & Ghaziabad" />
+        <HeroMobileBanner src="/pageBanner/M0500401.jpg" alt="Dr. Mona Dahiya - Advanced Day-5 Blastocyst Transfer in Delhi, Noida & Ghaziabad" />
       </div>
     </section>
       <section className="relative overflow-hidden bg-white py-7 sm:py-9 border-y border-[#fde2ec]/70">

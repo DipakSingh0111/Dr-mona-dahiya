@@ -35,7 +35,7 @@ export default function LaparoscopyHero() {
         className="relative overflow-hidden flex flex-col justify-center pb-6 sm:pb-8 lg:pb-0"
       style={{ background: "var(--pink)" }}
     >
-      <HeroFullWidthBanner src="/pageBanner/M0500367.JPG" alt="Dr. Mona Dahiya - Laparoscopy & Hysteroscopy" />
+      <HeroFullWidthBanner src="/pageBanner/M0500389_1.jpg" alt="Dr. Mona Dahiya - Laparoscopy & Hysteroscopy" />
       <div
         aria-hidden
         className="pointer-events-none absolute top-0 right-[8%] h-[280px] w-[280px] -translate-y-1/4 rounded-full opacity-35 blur-3xl"
@@ -119,7 +119,7 @@ export default function LaparoscopyHero() {
           </Stagger>
         </div>
 
-        <HeroMobileBanner src="/pageBanner/M0500367.JPG" alt="Dr. Mona Dahiya - Laparoscopy & Hysteroscopy" />
+        <HeroMobileBanner src="/pageBanner/M0500389_1.jpg" alt="Dr. Mona Dahiya - Laparoscopy & Hysteroscopy" />
       </div>
     </section>
       <section className="relative overflow-hidden bg-white py-7 sm:py-9 border-y border-[#fde2ec]/70">

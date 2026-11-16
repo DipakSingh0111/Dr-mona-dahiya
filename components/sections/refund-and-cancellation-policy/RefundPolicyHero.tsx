@@ -17,7 +17,7 @@ export default function RefundPolicyHero() {
       style={{ background: "var(--pink)" }}
     >
       <HeroFullWidthBanner
-        src="/pageBanner/M0500368.JPG"
+        src="/pageBanner/M0500468.jpg"
         alt="Dr. Mona Dahiya - Clinical Fee, Cancellation & Refund Policy"
       />
       <div
@@ -101,7 +101,7 @@ export default function RefundPolicyHero() {
         </div>
 
         <HeroMobileBanner
-          src="/pageBanner/M0500368.JPG"
+          src="/pageBanner/M0500468.jpg"
           alt="Dr. Mona Dahiya - Clinical Fee, Cancellation & Refund Policy"
         />
       </div>

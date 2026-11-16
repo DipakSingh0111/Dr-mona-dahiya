@@ -1,7 +1,7 @@
 "use client";
 import HeroCounterBar from "@/components/ui/HeroCounterBar";
 import Link from "next/link";
-import { FaCalendarCheck, FaVideo, FaArrowRight } from "react-icons/fa";
+import { FaCalendarCheck, FaPhoneAlt, FaArrowRight } from "react-icons/fa";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { HeroFullWidthBanner } from "@/components/ui/HeroFullWidthBanner";
 import { Reveal } from "@/components/ui/Reveal";
@@ -15,7 +15,7 @@ export default function ContactHero() {
     >
       {/* Full-width background doctor banner from pageBanner */}
       <HeroFullWidthBanner
-        src="/pageBanner/M0500441.JPG"
+        src="/pageBanner/M0500406_1.jpg"
         alt="Dr. Mona Dahiya - Contact In-Clinic and Online Consultation"
       />
 
@@ -81,7 +81,7 @@ export default function ContactHero() {
                 href="/ivf-consultation-online"
                 className="inline-flex items-center gap-2 rounded-full bg-navy px-5 py-2.5 text-xs sm:text-sm font-semibold text-white shadow-[0_10px_24px_rgba(6,21,50,0.25)] transition hover:bg-navy-mid active:scale-95"
               >
-                <FaVideo />
+                <FaPhoneAlt />
                 <span>Schedule Online Consultation</span>
               </Link>
             </div>

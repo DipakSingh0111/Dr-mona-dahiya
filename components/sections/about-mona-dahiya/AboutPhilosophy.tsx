@@ -5,7 +5,7 @@ import {
   FaShieldAlt,
   FaMicrophone,
   FaStethoscope,
-  FaVideo,
+  FaPhoneAlt,
 } from "react-icons/fa";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
@@ -52,7 +52,7 @@ export default function AboutPhilosophy() {
       glow: "radial-gradient(circle at 85% 15%, rgba(2,132,199,0.08) 0%, transparent 65%)",
     },
     {
-      icon: FaVideo,
+      icon: FaPhoneAlt,
       title: "3 Clinics & Online Consultation",
       desc: "Three fertility centres in Noida, Ghaziabad and Delhi. You can also consult us online if you are from outstation or abroad.",
       iconBg: "bg-gradient-to-br from-[#8b5cf6] to-[#7c3aed]",

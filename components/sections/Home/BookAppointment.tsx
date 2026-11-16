@@ -11,7 +11,6 @@ import {
   FaClock,
   FaCalendarAlt,
   FaChevronDown,
-  FaVideo,
   FaDollarSign,
   FaCheckCircle,
 } from "react-icons/fa";
@@ -99,7 +98,7 @@ export default function BookAppointment() {
                 href={data.secondaryCta.href}
                 className="inline-flex shrink-0 items-center justify-center gap-2.5 rounded-full bg-blue px-6 py-3.5 text-[13px] font-semibold whitespace-nowrap text-white shadow-[0_10px_28px_rgba(37,99,235,0.35)] transition-all hover:bg-blue-dark active:scale-95 xl:text-[13.5px]"
               >
-                <FaVideo className="size-3.5 shrink-0 text-white" />
+                <FaPhoneAlt className="size-3.5 shrink-0 text-white" />
                 {data.secondaryCta.label}
                 <FaArrowRight className="size-3.5 shrink-0 text-white" />
               </a>

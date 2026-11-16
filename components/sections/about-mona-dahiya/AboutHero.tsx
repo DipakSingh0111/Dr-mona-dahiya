@@ -27,7 +27,7 @@ export default function AboutHero() {
 
       {/* Desktop full-width background banner */}
       <HeroFullWidthBanner
-        src="/pageBanner/M0500443.JPG"
+        src="/pageBanner/M0500359.jpg"
         alt="Dr. Mona Dahiya - Senior Reproductive Endocrinologist & Fertility Specialist"
       />
 
@@ -94,7 +94,7 @@ export default function AboutHero() {
 
         {/* Mobile / tablet full-width banner */}
         <HeroMobileBanner
-          src="/pageBanner/M0500443.JPG"
+          src="/pageBanner/M0500359.jpg"
           alt="Dr. Mona Dahiya - Senior Reproductive Endocrinologist & Fertility Specialist"
         />
       </div>

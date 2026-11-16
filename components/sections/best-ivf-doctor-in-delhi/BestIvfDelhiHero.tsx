@@ -27,9 +27,8 @@ export default function BestIvfDelhiHero() {
       }}
     >
       <HeroFullWidthBanner
-        src="/pageBanner/M0500418.JPG"
+        src="/pageBanner/M0500373.jpg"
         alt="Dr. Mona Dahiya - Best IVF Doctor in Delhi"
-        objectPosition="object-[72%_25%] md:object-[72%_22%] lg:object-[82%_50%] xl:object-[80%_50%] 2xl:object-[76%_48%]"
       />
       {/* Decorative Radial Glow matching theme */}
       <div
@@ -110,7 +109,7 @@ export default function BestIvfDelhiHero() {
           </Stagger>
         </div>
 
-        <HeroMobileBanner src="/pageBanner/M0500363.JPG" alt="Dr. Mona Dahiya - Best IVF Doctor in Delhi" />
+        <HeroMobileBanner src="/pageBanner/M0500373.jpg" alt="Dr. Mona Dahiya - Best IVF Doctor in Delhi" />
       </div>
     </section>
       <section className="relative overflow-hidden bg-white py-7 sm:py-9 border-y border-[#fde2ec]/70">

@@ -14,7 +14,7 @@ const reasons = [
     desc: "We prepare your protocol, check your USG and perform Embryo transfer by Dr. Mona Dahiya herself.",
   },
   {
-    title: "Qualifications",
+    title: "World Class Qualifications",
     desc: "MBBS, MD (Gold Medalist), DNB & IVF Fellowship from Singapore General Hospital with more than 100 publications to her name.",
   },
   {

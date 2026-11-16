@@ -24,9 +24,8 @@ export default function MiniIvfHero() {
         style={{ background: "var(--pink)" }}
       >
         <HeroFullWidthBanner
-          src="/pageBanner/M0500403.JPG"
+          src="/pageBanner/M0500450.jpg"
           alt="Dr. Mona Dahiya - Mini IVF Treatment in Delhi NCR"
-          objectPosition="object-[72%_25%] md:object-[72%_22%] lg:object-[80%_35%] xl:object-[78%_35%] 2xl:object-[75%_35%]"
         />
         <div
           aria-hidden
@@ -111,7 +110,7 @@ export default function MiniIvfHero() {
             </Stagger>
           </div>
 
-          <HeroMobileBanner src="/pageBanner/M0500403.JPG" alt="Dr. Mona Dahiya - Mini IVF Treatment in Delhi NCR" />
+          <HeroMobileBanner src="/pageBanner/M0500450.jpg" alt="Dr. Mona Dahiya - Mini IVF Treatment in Delhi NCR" />
         </div>
       </section>
       <section className="relative overflow-hidden bg-white py-7 sm:py-9 border-y border-[#fde2ec]/70">

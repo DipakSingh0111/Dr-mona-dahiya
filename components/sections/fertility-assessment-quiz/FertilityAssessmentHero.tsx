@@ -24,7 +24,7 @@ export default function FertilityAssessmentHero() {
         style={{ background: "var(--pink)" }}
       >
         <HeroFullWidthBanner
-          src="/pageBanner/M0500370.JPG"
+          src="/pageBanner/M0500422.jpg"
           alt="Dr. Mona Dahiya - Fertility Assessment: Your 10-Point Fertility Score in 2 Minutes"
         />
         <div
@@ -103,7 +103,7 @@ export default function FertilityAssessmentHero() {
           </div>
 
           <HeroMobileBanner
-            src="/pageBanner/M0500370.JPG"
+            src="/pageBanner/M0500422.jpg"
             alt="Dr. Mona Dahiya - Fertility Assessment: Your 10-Point Fertility Score in 2 Minutes"
           />
         </div>

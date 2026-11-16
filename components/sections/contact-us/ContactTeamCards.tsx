@@ -1,6 +1,6 @@
 "use client";
 
-import { FaPhoneAlt, FaWhatsapp, FaEnvelope, FaVideo } from "react-icons/fa";
+import { FaPhoneAlt, FaWhatsapp, FaEnvelope } from "react-icons/fa";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
 export default function ContactTeamCards() {
@@ -36,7 +36,7 @@ export default function ContactTeamCards() {
       cardBorder: "border-navy/20 hover:border-navy/60",
     },
     {
-      icon: FaVideo,
+      icon: FaPhoneAlt,
       label: "ONLINE CONSULTATION",
       value: "₹1,000 · US$25 abroad",
       subtext: "30-minute online consultation",

@@ -49,26 +49,17 @@ const accentStyles = {
 
 export default function LocationsRegistration() {
   return (
-    <section className="relative overflow-hidden bg-pink py-7 sm:py-9 lg:py-10">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -top-20 right-1/4 h-[300px] w-[400px] rounded-full opacity-40 blur-3xl"
-        style={{
-          background:
-            "radial-gradient(circle, rgba(232,62,116,0.16) 0%, rgba(0,71,202,0.12) 50%, transparent 70%)",
-        }}
-      />
-
+    <section className="relative overflow-hidden border-y border-[#fde2ec]/70 bg-white py-8 sm:py-10 lg:py-12">
       <div className="page-container relative">
-        <Reveal className="mb-7 sm:mb-9">
-          <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
-            Registered medical practitioner
+        <Reveal className="mb-7 sm:mb-8">
+          <p className="text-[12px] font-bold tracking-[0.12em] text-rose sm:text-[13px]">
+            Registered Medical Practitioner
           </p>
-          <h2 className="font-serif mt-2 text-[2rem] leading-tight font-normal tracking-tight text-ink sm:text-[2.5rem] lg:text-[2.75rem]">
-            Medical Registration
+          <h2 className="font-serif mt-1.5 text-[1.75rem] leading-tight font-normal tracking-tight text-ink sm:text-[2.25rem] lg:text-[2.5rem]">
+            Medical Council Registration Numbers
           </h2>
-          <p className="mt-2 text-[13.5px] leading-relaxed text-ink sm:text-[14.5px]">
-            Dr. Mona Dahiya is registered with the following medical councils.
+          <p className="mt-2 text-[13.5px] leading-relaxed text-ink/80 sm:text-[14.5px]">
+            Dr. Mona Dahiya is a registered fertility doctor.
           </p>
         </Reveal>
 

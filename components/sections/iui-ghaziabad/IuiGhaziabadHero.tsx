@@ -28,7 +28,7 @@ export default function IuiGhaziabadHero() {
         background: "var(--pink)",
       }}
     >
-      <HeroFullWidthBanner src="/pageBanner/M0500385.JPG" alt="Dr. Mona Dahiya — IUI Treatment in Ghaziabad" />
+      <HeroFullWidthBanner src="/pageBanner/M0500434.jpg" alt="Dr. Mona Dahiya — IUI Treatment in Ghaziabad" />
       {/* Decorative ambient background glows */}
       <div
         aria-hidden
@@ -114,7 +114,7 @@ export default function IuiGhaziabadHero() {
         </div>
 
         {/* Doctor Photo in Rounded Card — Standard uniform size */}
-        <HeroMobileBanner src="/pageBanner/M0500385.JPG" alt="Dr. Mona Dahiya — IUI Treatment in Ghaziabad" />
+        <HeroMobileBanner src="/pageBanner/M0500434.jpg" alt="Dr. Mona Dahiya — IUI Treatment in Ghaziabad" />
       </div>
     </section>
       <section className="relative overflow-hidden bg-white py-7 sm:py-9 border-y border-[#fde2ec]/70">

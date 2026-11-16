@@ -23,7 +23,7 @@ export default function EndometriosisHero() {
         className="relative overflow-hidden flex flex-col justify-center pb-6 sm:pb-8 lg:pb-0"
       style={{ background: "var(--pink)" }}
     >
-      <HeroFullWidthBanner src="/pageBanner/M0500377.JPG" alt="Dr. Mona Dahiya - Endometriosis & Adenomyosis Fertility Treatment" />
+      <HeroFullWidthBanner src="/pageBanner/M0500415.jpg" alt="Dr. Mona Dahiya - Endometriosis & Adenomyosis Fertility Treatment" />
       {/* Decorative Radial Glows matching Theme */}
       <div
         aria-hidden
@@ -96,7 +96,7 @@ export default function EndometriosisHero() {
           </Stagger>
         </div>
 
-        <HeroMobileBanner src="/pageBanner/M0500377.JPG" alt="Dr. Mona Dahiya - Endometriosis & Adenomyosis Fertility Treatment" />
+        <HeroMobileBanner src="/pageBanner/M0500415.jpg" alt="Dr. Mona Dahiya - Endometriosis & Adenomyosis Fertility Treatment" />
       </div>
     </section>
       <section className="relative overflow-hidden bg-white py-7 sm:py-9 border-y border-[#fde2ec]/70">

@@ -18,7 +18,7 @@ export default function PcosStoriesHero() {
         className="relative overflow-hidden flex flex-col justify-center pb-6 sm:pb-8 lg:pb-0"
       style={{ background: "var(--pink)" }}
     >
-      <HeroFullWidthBanner src="/pageBanner/M0500400.JPG" alt="Dr. Mona Dahiya - PCOS/PCOD Pregnancy Stories" />
+      <HeroFullWidthBanner src="/pageBanner/M0500458.jpg" alt="Dr. Mona Dahiya - PCOS/PCOD Pregnancy Stories" />
       <div
         aria-hidden
         className="pointer-events-none absolute top-0 right-[8%] h-[280px] w-[280px] -translate-y-1/4 rounded-full opacity-35 blur-3xl"
@@ -90,7 +90,7 @@ export default function PcosStoriesHero() {
           </Stagger>
         </div>
 
-        <HeroMobileBanner src="/pageBanner/M0500400.JPG" alt="Dr. Mona Dahiya - PCOS/PCOD Pregnancy Stories" />
+        <HeroMobileBanner src="/pageBanner/M0500458.jpg" alt="Dr. Mona Dahiya - PCOS/PCOD Pregnancy Stories" />
       </div>
     </section>
       <section className="relative overflow-hidden bg-white py-7 sm:py-9 border-y border-[#fde2ec]/70">

@@ -301,10 +301,6 @@
           {
             "label": "Contact Us",
             "href": "/contact-us"
-          },
-          {
-            "label": "Book Appointment",
-            "href": "/book-appointment"
           }
         ]
       }
@@ -692,7 +688,7 @@
     "eyebrow": "Success Stories Of Patients Who Got Pregnant Through IVF",
     "title": "Real IVF Success Stories",
     "subtitle": "Our patients have conceived at our clinic using IVF, from all over India and abroad. With blastocyst culture, PGT-A and better endometrial lining, for reasons such as blocked tubes, male infertility and failed previous IVF cycles, to name a few. Below are some of their IVF success stories.",
-    "image": "/pageBanner/M0500389.JPG",
+    "image": "/pageBanner/M0500480.jpg",
     "primaryCta": {
       "label": "Book Appointment In-Clinic",
       "href": "#book-consultation"
@@ -1949,50 +1945,50 @@
         "name": "Noida",
         "address": "3rd Floor, K-06, above FirstCry, Baraula, Sector 49, Noida, Uttar Pradesh 201301",
         "areaCount": 34,
-        "clinicHref": "#noida",
+        "clinicHref": "/best-ivf-doctor-in-noida",
         "groups": [
           {
             "label": "Noida Sectors",
             "areas": [
               "Sector 18",
-              "Sector 22",
-              "Sector 37",
-              "Sector 44",
-              "Sector 49",
               "Sector 50",
               "Sector 51",
-              "Sector 52",
-              "Sector 61",
               "Sector 62",
-              "Sector 63",
               "Sector 75",
               "Sector 76",
+              "Sector 77",
               "Sector 78",
-              "Sector 100",
+              "Sector 93",
               "Sector 104",
-              "Sector 107",
+              "Sector 105",
+              "Sector 110",
+              "Sector 116",
               "Sector 119",
               "Sector 120",
+              "Sector 121",
+              "Sector 122",
+              "Sector 126",
               "Sector 128",
+              "Sector 132",
+              "Sector 134",
+              "Sector 135",
               "Sector 137",
-              "Sector 142",
+              "Sector 141",
               "Sector 143",
+              "Sector 143B",
               "Sector 150",
-              "Sector 151",
-              "Sector 168"
+              "Sector 152"
             ]
           },
           {
             "label": "Greater Noida & Noida Extension",
             "areas": [
+              "Greater Noida",
+              "Greater Noida West",
+              "Noida Extension",
               "Pari Chowk",
               "Techzone 4",
-              "Knowledge Park",
-              "Alpha 1",
-              "Noida Extension",
-              "Greater Noida West",
-              "Omega 1",
-              "Chi Phi"
+              "Gaur City"
             ]
           }
         ]
@@ -2002,10 +1998,10 @@
         "name": "Ghaziabad",
         "address": "2nd Floor, RDC, C-53A, near Bikanervala, Sector 15, Sector 10, Raj Nagar, Ghaziabad, Uttar Pradesh 201002",
         "areaCount": 7,
-        "clinicHref": "#ghaziabad",
+        "clinicHref": "/best-ivf-doctor-in-ghaziabad",
         "groups": [
           {
-            "label": "Ghaziabad Areas",
+            "label": "Areas",
             "areas": [
               "Indirapuram",
               "Vaishali",
@@ -2022,8 +2018,8 @@
         "id": "delhi",
         "name": "Delhi",
         "address": "Building Number 41, First Floor, Ring Road, Block Q, Lajpat Nagar IV, Lajpat Nagar, New Delhi 110024",
-        "areaCount": 55,
-        "clinicHref": "#delhi",
+        "areaCount": 56,
+        "clinicHref": "/best-ivf-doctor-in-delhi",
         "groups": [
           {
             "label": "South Delhi",
@@ -2088,6 +2084,7 @@
               "Civil Lines",
               "Model Town",
               "Mukherjee Nagar",
+              "North Delhi",
               "Pitampura",
               "Rohini (Best IVF Doctor)",
               "Rohini (Fertility Specialist)",
@@ -2114,7 +2111,7 @@
     "eyebrow": "Success Story of Patients: How More Than 25,000 Became Parents",
     "title": "Fertility Success Stories",
     "subtitle": "Your experience may vary but many patients became successful with Dr Mona Dahiya at her fertility clinic in Noida, Delhi & Ghaziabad after failures at other places. These could be Failed IVF, Low AMH, PCOS, Male factor etc.",
-    "image": "/pageBanner/M0500390.JPG",
+    "image": "/pageBanner/M0500483.jpg",
     "primaryCta": {
       "label": "Book an appointment at clinic",
       "href": "#book-consultation"
@@ -2304,7 +2301,7 @@
     "breadcrumb": "Online IVF Consultation",
     "eyebrow": "Online Consultation with Dr Mona Dahiya",
     "title": "Online IVF Consultation with Dr. Mona Dahiya",
-    "image": "/pageBanner/M0500388.JPG",
+    "image": "/pageBanner/M0500485.jpg",
     "primaryCta": {
       "label": "Book In-Clinic Consultation",
       "href": "#schedule-consultation"
@@ -2500,7 +2497,7 @@
     "breadcrumb": "IVF FAQs",
     "eyebrow": "IVF FAQs",
     "title": "IVF Frequently Asked Questions, Answered by Dr. Mona Dahiya",
-    "image": "/pageBanner/M0500411.JPG",
+    "image": "/pageBanner/M0500487.jpg",
     "primaryCta": {
       "label": "Book In-Clinic Consultation",
       "href": "/about-mona-dahiya#book-consultation"
@@ -2756,7 +2753,7 @@
       "href": "/best-ivf-patient-reviews"
     },
     "quote": "MBBS MD Gold Medalist from Delhi University, Fellowship trained from Singapore General Hospital",
-    "image": "/pageBanner/M0500373.JPG",
+    "image": "/pageBanner/M0500489.jpg",
     "counter": [
       {
         "target": 25000,
@@ -9816,7 +9813,7 @@
         "descriptionPrefix": "Dr. Mona Dahiya is an experienced IVF doctor with more than 25 years of experience and has over 90% chance of clinical pregnancy near Sector 18 Noida. You can book consultation in person or online for customized IVF, ICSI and ET according to your need and not a predetermined package. ",
         "highlightLocation": "Sector 49 Noida",
         "descriptionSuffix": " | 8 km from Sector 18 Noida",
-        "image": "/pageBanner/M0500412.JPG",
+        "image": "/pageBanner/M0500491.jpg",
         "imageAlt": "Best IVF Doctor in Sector 18 Noida — Dr. Mona Dahiya",
         "primaryCta": {
           "label": "Book In-Clinic Consultation",

@@ -94,7 +94,7 @@ const checklistItems: { title: ReactNode; text: ReactNode }[] = [
     title: "Semen Sample",
     text: (
       <>
-        A sample of semen will be analysed with Computer software. We also do a{" "}
+        A sample of semen will be analysed. We also do a{" "}
         <Link
           href="/sperm-dna-fragmentation-test"
           className="font-medium text-blue underline underline-offset-2 transition-colors hover:text-rose"
@@ -125,7 +125,7 @@ const checklistItems: { title: ReactNode; text: ReactNode }[] = [
   },
   {
     title: "Mandatory Lab work as per ART Act",
-    text: "Partner also has to get tested for HIV I&II, Hepatitis B (HBsAg) and Hepatitis C (Anti HCV) and VDRL.",
+    text: "Couples also has to get tested for HIV I&II, Hepatitis B (HBsAg) and Hepatitis C (Anti HCV) and VDRL.",
   },
 ];
 
@@ -134,40 +134,40 @@ export default function IvfIndicationsAndChecklist() {
     <>
       <TreatmentSection>
         <div>
-        <TreatmentSectionHeader
-          eyebrow="About"
-          title="Who Needs IVF Treatment?"
-        />
+          <TreatmentSectionHeader
+            eyebrow="About"
+            title="Who Needs IVF Treatment?"
+          />
 
-        <Stagger
-          delay={0.05}
-          className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
-        >
-          {indications.map((item) => (
-            <StaggerItem key={item.number}>
-              <NumberedCard {...item} />
-            </StaggerItem>
-          ))}
-        </Stagger>
-      </div>
+          <Stagger
+            delay={0.05}
+            className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
+          >
+            {indications.map((item) => (
+              <StaggerItem key={item.number}>
+                <NumberedCard {...item} />
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </div>
       </TreatmentSection>
 
       <TreatmentSection>
         <div>
-        <TreatmentSectionHeader
-          eyebrow="Before Treatment"
-          title="Checklist Before starting IVF"
-          subtitle="These are tests to rule out why you may not be pregnant and decide on a stimulation protocol. You may not need all of these."
-        />
+          <TreatmentSectionHeader
+            eyebrow="Before Treatment"
+            title="Checklist Before starting IVF"
+            subtitle="These are tests to rule out why you may not be pregnant and decide on a stimulation protocol. You may not need all of these."
+          />
 
-        <div className="mt-6 flex flex-col gap-3.5 sm:mt-7 sm:gap-4">
-          {checklistItems.map((item, idx) => (
-            <Reveal key={idx} variant="fadeUp" delay={idx * 0.04}>
-              <ChecklistRow title={item.title} text={item.text} />
-            </Reveal>
-          ))}
+          <div className="mt-6 flex flex-col gap-3.5 sm:mt-7 sm:gap-4">
+            {checklistItems.map((item, idx) => (
+              <Reveal key={idx} variant="fadeUp" delay={idx * 0.04}>
+                <ChecklistRow title={item.title} text={item.text} />
+              </Reveal>
+            ))}
+          </div>
         </div>
-      </div>
       </TreatmentSection>
     </>
   );

@@ -15,7 +15,7 @@ export default function BlogListingHero() {
       style={{ background: "var(--pink)" }}
     >
       <HeroFullWidthBanner
-        src="/pageBanner/M0500484.JPG"
+        src="/pageBanner/M0500406.jpg"
         alt="Dr. Mona Dahiya — Fertility & IVF Blog"
       />
 
@@ -66,7 +66,7 @@ export default function BlogListingHero() {
         </div>
 
         <HeroMobileBanner
-          src="/pageBanner/M0500484.JPG"
+          src="/pageBanner/M0500406.jpg"
           alt="Dr. Mona Dahiya — Fertility & IVF Blog"
         />
       </div>

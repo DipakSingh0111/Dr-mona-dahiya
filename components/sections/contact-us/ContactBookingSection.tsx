@@ -4,7 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 import {
   FaCalendarCheck,
-  FaVideo,
   FaPhoneAlt,
   FaEnvelope,
   FaCheckCircle,
@@ -72,7 +71,7 @@ export default function ContactBookingSection() {
                   href="/ivf-consultation-online"
                   className="inline-flex items-center gap-2 rounded-full bg-blue px-5 py-2.5 text-xs sm:text-sm font-semibold text-white shadow-sm transition hover:bg-blue-dark"
                 >
-                  <FaVideo />
+                  <FaPhoneAlt />
                   <span>Schedule Online Consultation</span>
                 </Link>
               </div>

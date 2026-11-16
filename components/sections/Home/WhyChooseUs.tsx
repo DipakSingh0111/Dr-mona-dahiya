@@ -7,7 +7,7 @@ import {
   FaFileAlt,
   FaGraduationCap,
   FaHandHoldingHeart,
-  FaVideo,
+  FaPhoneAlt,
 } from "react-icons/fa";
 import siteData from "@/data/site.json";
 import { Stagger, StaggerItem, Reveal } from "@/components/ui/Reveal";
@@ -18,7 +18,7 @@ const iconMap = {
   document: FaFileAlt,
   graduation: FaGraduationCap,
   heartHands: FaHandHoldingHeart,
-  video: FaVideo,
+  video: FaPhoneAlt,
 } as const;
 
 const cardColorThemes = {

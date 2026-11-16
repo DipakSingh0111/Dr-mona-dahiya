@@ -27,9 +27,8 @@ export default function BestIvfGhaziabadHero() {
       }}
     >
       <HeroFullWidthBanner
-        src="/pageBanner/M0500388.JPG"
+        src="/pageBanner/M0500381.jpg"
         alt="Dr. Mona Dahiya - Best IVF doctor in Ghaziabad"
-        objectPosition="object-[72%_25%] md:object-[72%_22%] lg:object-[82%_47%] xl:object-[80%_47%] 2xl:object-[76%_44%]"
       />
       <div className="page-container relative z-10 w-full pt-4 sm:pt-5 lg:pt-0">
         <div className="lg:max-w-[28rem] xl:max-w-[34rem] 2xl:max-w-[38rem]">
@@ -94,7 +93,7 @@ export default function BestIvfGhaziabadHero() {
           </Stagger>
         </div>
 
-        <HeroMobileBanner src="/pageBanner/M0500364.JPG" alt="Dr. Mona Dahiya - Best IVF doctor in Ghaziabad" />
+        <HeroMobileBanner src="/pageBanner/M0500381.jpg" alt="Dr. Mona Dahiya - Best IVF doctor in Ghaziabad" />
       </div>
     </section>
       <section className="relative overflow-hidden bg-white py-7 sm:py-9 border-y border-[#fde2ec]/70">

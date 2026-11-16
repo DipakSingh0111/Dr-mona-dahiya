@@ -264,16 +264,16 @@ main:not(.home-main) table tbody td {
   }
 }
 
-/* Full-width page banner — fits laptop screen fold so banner shows properly without scroll */
+/* Full-width page banner — consistent compact height across all inner pages */
 @media (min-width: 1024px) {
   section:has(.hero-fullwidth-banner) {
-    height: calc(100svh - var(--site-header-h, 8.75rem)) !important;
-    min-height: 480px !important;
-    max-height: calc(100svh - var(--site-header-h, 8.75rem)) !important;
+    height: clamp(500px, calc(100svh - var(--site-header-h, 8.75rem)), 540px) !important;
+    min-height: 500px !important;
+    max-height: 540px !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
-    padding-top: clamp(1.5rem, 3.2svh, 2.5rem) !important;
+    padding-top: clamp(1.25rem, 2.5svh, 2rem) !important;
     padding-bottom: clamp(1rem, 2svh, 1.5rem) !important;
     overflow: hidden !important;
   }

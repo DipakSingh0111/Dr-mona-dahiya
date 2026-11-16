@@ -19,9 +19,8 @@ export default function PrpHero() {
       style={{ background: "var(--pink)" }}
     >
       <HeroFullWidthBanner
-        src="/pageBanner/M0500399.JPG"
+        src="/pageBanner/M0500460.jpg"
         alt="Dr. Mona Dahiya — Platelet-Rich Plasma (PRP) Therapy in IVF"
-        objectPosition="object-[72%_35%] md:object-[72%_32%] lg:object-[82%_62%] xl:object-[80%_62%] 2xl:object-[76%_58%]"
       />
       <div className="page-container relative z-10 w-full pt-4 sm:pt-5 lg:pt-0">
         <div className="lg:max-w-[34rem] xl:max-w-[40rem] 2xl:max-w-[45rem]">
@@ -89,7 +88,7 @@ export default function PrpHero() {
           </Stagger>
         </div>
 
-        <HeroMobileBanner src="/pageBanner/M0500399.JPG" alt="Dr. Mona Dahiya — Platelet-Rich Plasma (PRP) Therapy in IVF" />
+        <HeroMobileBanner src="/pageBanner/M0500460.jpg" alt="Dr. Mona Dahiya — Platelet-Rich Plasma (PRP) Therapy in IVF" />
       </div>
     </section>
       <section className="relative overflow-hidden bg-white py-7 sm:py-9 border-y border-[#fde2ec]/70">

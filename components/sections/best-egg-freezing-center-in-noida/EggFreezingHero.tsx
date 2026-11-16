@@ -25,7 +25,7 @@ export default function EggFreezingHero() {
         background: "var(--pink)",
       }}
     >
-      <HeroFullWidthBanner src="/pageBanner/M0500360.JPG" alt="Dr. Mona Dahiya — Best Egg Freezing Center in Noida & Delhi NCR" />
+      <HeroFullWidthBanner src="/pageBanner/M0500365.jpg" alt="Dr. Mona Dahiya — Best Egg Freezing Center in Noida & Delhi NCR" />
       <div className="page-container relative z-10 w-full pt-4 sm:pt-5 lg:pt-0">
         <div className="lg:max-w-[28rem] xl:max-w-[34rem] 2xl:max-w-[38rem]">
           <Breadcrumb
@@ -92,7 +92,7 @@ export default function EggFreezingHero() {
           </Stagger>
         </div>
 
-        <HeroMobileBanner src="/pageBanner/M0500360.JPG" alt="Dr. Mona Dahiya — Best Egg Freezing Center in Noida & Delhi NCR" />
+        <HeroMobileBanner src="/pageBanner/M0500365.jpg" alt="Dr. Mona Dahiya — Best Egg Freezing Center in Noida & Delhi NCR" />
       </div>
     </section>
       <section className="relative overflow-hidden bg-white py-7 sm:py-9 border-y border-[#fde2ec]/70">

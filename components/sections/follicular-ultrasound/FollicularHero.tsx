@@ -22,7 +22,7 @@ export default function FollicularHero() {
         className="relative overflow-hidden flex flex-col justify-center pb-6 sm:pb-8 lg:pb-0"
       style={{ background: "var(--pink)" }}
     >
-      <HeroFullWidthBanner src="/pageBanner/M0500380.JPG" alt="Dr. Mona Dahiya — High-Resolution Follicular Ultrasound Monitoring & Ovulation Tracking" />
+      <HeroFullWidthBanner src="/pageBanner/M0500424.jpg" alt="Dr. Mona Dahiya — High-Resolution Follicular Ultrasound Monitoring & Ovulation Tracking" />
       <div className="page-container relative z-10 w-full pt-4 sm:pt-5 lg:pt-0">
         <div className="lg:max-w-[28rem] xl:max-w-[34rem] 2xl:max-w-[38rem]">
           <Breadcrumb
@@ -89,7 +89,7 @@ export default function FollicularHero() {
           </Stagger>
         </div>
 
-        <HeroMobileBanner src="/pageBanner/M0500380.JPG" alt="Dr. Mona Dahiya — High-Resolution Follicular Ultrasound Monitoring & Ovulation Tracking" />
+        <HeroMobileBanner src="/pageBanner/M0500424.jpg" alt="Dr. Mona Dahiya — High-Resolution Follicular Ultrasound Monitoring & Ovulation Tracking" />
       </div>
     </section>
       <section className="relative overflow-hidden bg-white py-7 sm:py-9 border-y border-[#fde2ec]/70">

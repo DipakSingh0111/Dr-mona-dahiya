@@ -21,7 +21,7 @@ export default function LowAmhHero() {
         className="relative overflow-hidden flex flex-col justify-center pb-6 sm:pb-8 lg:pb-0"
       style={{ background: "var(--pink)" }}
     >
-      <HeroFullWidthBanner src="/pageBanner/M0500369.JPG" alt="Dr. Mona Dahiya - Low AMH Treatment in Noida, Delhi and Ghaziabad" />
+      <HeroFullWidthBanner src="/pageBanner/M0500395.jpg" alt="Dr. Mona Dahiya - Low AMH Treatment in Noida, Delhi and Ghaziabad" />
       <div
         aria-hidden
         className="pointer-events-none absolute top-0 right-[8%] h-[280px] w-[280px] -translate-y-1/4 rounded-full opacity-35 blur-3xl"
@@ -99,7 +99,7 @@ export default function LowAmhHero() {
           </Reveal>
         </div>
 
-        <HeroMobileBanner src="/pageBanner/M0500369.JPG" alt="Dr. Mona Dahiya - Low AMH Treatment in Noida, Delhi and Ghaziabad" />
+        <HeroMobileBanner src="/pageBanner/M0500395.jpg" alt="Dr. Mona Dahiya - Low AMH Treatment in Noida, Delhi and Ghaziabad" />
       </div>
     </section>
       <section className="relative overflow-hidden bg-white py-7 sm:py-9 border-y border-[#fde2ec]/70">

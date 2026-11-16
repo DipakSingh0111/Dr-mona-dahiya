@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { FaVideo, FaPlane } from "react-icons/fa";
+import { FaPhoneAlt, FaPlane } from "react-icons/fa";
 import siteData from "@/data/site.json";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
@@ -121,7 +121,7 @@ export default function InternationalPatients() {
                 href={data.secondaryCta.href}
                 className="inline-flex shrink-0 items-center justify-center gap-2.5 rounded-full bg-blue px-6 py-3.5 text-[13.5px] font-semibold whitespace-nowrap text-white transition hover:bg-blue-dark sm:text-[14px]"
               >
-                <FaVideo className="size-3.5 shrink-0" />
+                <FaPhoneAlt className="size-3.5 shrink-0" />
                 {data.secondaryCta.label}
               </a>
             </Reveal>

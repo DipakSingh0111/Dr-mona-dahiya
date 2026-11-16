@@ -18,9 +18,8 @@ export default function DisclaimerHero() {
       style={{ background: "var(--pink)" }}
     >
       <HeroFullWidthBanner
-        src="/pageBanner/M0500442.JPG"
+        src="/pageBanner/M0500448.jpg"
         alt="Dr. Mona Dahiya - Medical & Clinical Information Disclaimer"
-        objectPosition="object-[72%_35%] md:object-[72%_32%] lg:object-[82%_62%] xl:object-[80%_62%] 2xl:object-[76%_58%]"
       />
       <div
         aria-hidden
@@ -106,7 +105,7 @@ export default function DisclaimerHero() {
         </div>
 
         <HeroMobileBanner
-          src="/pageBanner/M0500442.JPG"
+          src="/pageBanner/M0500448.jpg"
           alt="Dr. Mona Dahiya - Medical & Clinical Information Disclaimer"
         />
       </div>

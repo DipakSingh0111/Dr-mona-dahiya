@@ -26,9 +26,8 @@ export default function IuiTreatmentHero() {
         }}
       >
         <HeroFullWidthBanner
-          src="/pageBanner/M0500387.JPG"
+          src="/pageBanner/M0500438.jpg"
           alt="Dr. Mona Dahiya — IUI Treatment in Delhi, Noida & Ghaziabad"
-          objectPosition="object-[72%_20%] md:object-[72%_18%] lg:object-[82%_32%] xl:object-[80%_32%] 2xl:object-[76%_30%]"
         />
 
         {/* Decorative Radial Glows matching Theme */}
@@ -118,7 +117,7 @@ export default function IuiTreatmentHero() {
           </div>
 
           <HeroMobileBanner
-            src="/pageBanner/M0500387.JPG"
+            src="/pageBanner/M0500438.jpg"
             alt="Dr. Mona Dahiya — IUI Treatment in Delhi, Noida & Ghaziabad"
           />
         </div>

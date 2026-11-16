@@ -27,9 +27,8 @@ export default function IvfHero() {
       }}
     >
       <HeroFullWidthBanner
-        src="/pageBanner/M0500426.JPG"
+        src="/pageBanner/M0500440.jpg"
         alt="Dr. Mona Dahiya - IVF Treatment in Delhi, Noida & Ghaziabad"
-        objectPosition="object-[72%_25%] md:object-[72%_22%] lg:object-[82%_50%] xl:object-[80%_50%] 2xl:object-[76%_48%]"
       />
       <div
         aria-hidden
@@ -116,7 +115,7 @@ export default function IvfHero() {
           </Stagger>
         </div>
 
-        <HeroMobileBanner src="/pageBanner/M0500391.JPG" alt="Dr. Mona Dahiya - IVF Treatment in Delhi, Noida & Ghaziabad" />
+        <HeroMobileBanner src="/pageBanner/M0500440.jpg" alt="Dr. Mona Dahiya - IVF Treatment in Delhi, Noida & Ghaziabad" />
       </div>
     </section>
       <section className="relative overflow-hidden bg-white py-7 sm:py-9 border-y border-[#fde2ec]/70">

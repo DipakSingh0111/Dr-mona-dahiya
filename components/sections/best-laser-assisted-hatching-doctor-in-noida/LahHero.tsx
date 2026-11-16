@@ -24,9 +24,8 @@ export default function LahHero() {
       style={{ background: "var(--pink)" }}
     >
       <HeroFullWidthBanner
-        src="/pageBanner/M0500440.JPG"
+        src="/pageBanner/M0500393.jpg"
         alt="Dr. Mona Dahiya - Laser Assisted Hatching in Noida, Delhi & Ghaziabad"
-        objectPosition="object-[72%_35%] md:object-[72%_32%] lg:object-[82%_62%] xl:object-[80%_62%] 2xl:object-[76%_58%]"
       />
       <div
         aria-hidden
@@ -111,7 +110,7 @@ export default function LahHero() {
           </Stagger>
         </div>
 
-        <HeroMobileBanner src="/pageBanner/M0500440.JPG" alt="Dr. Mona Dahiya - Laser Assisted Hatching in Noida, Delhi & Ghaziabad" />
+        <HeroMobileBanner src="/pageBanner/M0500393.jpg" alt="Dr. Mona Dahiya - Laser Assisted Hatching in Noida, Delhi & Ghaziabad" />
       </div>
     </section>
       <section className="relative overflow-hidden bg-white py-7 sm:py-9 border-y border-[#fde2ec]/70">

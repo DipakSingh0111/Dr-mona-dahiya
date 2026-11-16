@@ -23,9 +23,8 @@ export default function SpermFreezingHero() {
       style={{ background: "var(--pink)" }}
     >
       <HeroFullWidthBanner
-        src="/pageBanner/M0500406.JPG"
+        src="/pageBanner/M0500472.jpg"
         alt="Dr. Mona Dahiya — Semen & Sperm Freezing in Delhi, Noida & Ghaziabad"
-        objectPosition="object-[72%_35%] md:object-[72%_32%] lg:object-[82%_62%] xl:object-[80%_62%] 2xl:object-[76%_58%]"
       />
       <div
         aria-hidden
@@ -102,7 +101,7 @@ export default function SpermFreezingHero() {
           </Stagger>
         </div>
 
-        <HeroMobileBanner src="/pageBanner/M0500406.JPG" alt="Dr. Mona Dahiya — Semen & Sperm Freezing in Delhi, Noida & Ghaziabad" />
+        <HeroMobileBanner src="/pageBanner/M0500472.jpg" alt="Dr. Mona Dahiya — Semen & Sperm Freezing in Delhi, Noida & Ghaziabad" />
       </div>
     </section>
       <section className="relative overflow-hidden bg-white py-7 sm:py-9 border-y border-[#fde2ec]/70">

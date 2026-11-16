@@ -19,7 +19,7 @@ export default function NewsMediaHero() {
         background: "var(--pink)",
       }}
     >
-      <HeroFullWidthBanner src="/pageBanner/M0500398.JPG" alt="Dr. Mona Dahiya in the News & Media — Times Network India Health Summit & Awards 2025" />
+      <HeroFullWidthBanner src="/pageBanner/M0500454.jpg" alt="Dr. Mona Dahiya in the News & Media — Times Network India Health Summit & Awards 2025" />
       <div
         aria-hidden
         className="pointer-events-none absolute -top-24 right-[8%] h-[320px] w-[320px] rounded-full opacity-35 blur-3xl"
@@ -92,7 +92,7 @@ export default function NewsMediaHero() {
           </Reveal>
         </div>
 
-        <HeroMobileBanner src="/pageBanner/M0500398.JPG" alt="Dr. Mona Dahiya in the News & Media — Times Network India Health Summit & Awards 2025" />
+        <HeroMobileBanner src="/pageBanner/M0500454.jpg" alt="Dr. Mona Dahiya in the News & Media — Times Network India Health Summit & Awards 2025" />
       </div>
     </section>
       <section className="relative overflow-hidden bg-white py-7 sm:py-9 border-y border-[#fde2ec]/70">

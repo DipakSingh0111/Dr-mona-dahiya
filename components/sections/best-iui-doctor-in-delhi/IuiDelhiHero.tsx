@@ -26,7 +26,7 @@ export default function IuiDelhiHero() {
         background: "var(--pink)",
       }}
     >
-      <HeroFullWidthBanner src="/pageBanner/M0500362.JPG" alt="Dr. Mona Dahiya — IUI Treatment Delhi" />
+      <HeroFullWidthBanner src="/pageBanner/M0500369.jpg" alt="Dr. Mona Dahiya — IUI Treatment Delhi" />
       <div
         aria-hidden
         className="pointer-events-none absolute top-0 right-[8%] h-[280px] w-[280px] -translate-y-1/4 rounded-full opacity-35 blur-3xl"
@@ -109,7 +109,7 @@ export default function IuiDelhiHero() {
           </Stagger>
         </div>
 
-        <HeroMobileBanner src="/pageBanner/M0500362.JPG" alt="Dr. Mona Dahiya — IUI Treatment Delhi" />
+        <HeroMobileBanner src="/pageBanner/M0500369.jpg" alt="Dr. Mona Dahiya — IUI Treatment Delhi" />
       </div>
     </section>
       <section className="relative overflow-hidden bg-white py-7 sm:py-9 border-y border-[#fde2ec]/70">

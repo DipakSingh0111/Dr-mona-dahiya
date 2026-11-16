@@ -25,7 +25,7 @@ export default function IntlHero() {
         background: "var(--pink)",
       }}
     >
-      <HeroFullWidthBanner src="/pageBanner/M0500383.JPG" alt="Dr. Mona Dahiya — International IVF Patients in India" />
+      <HeroFullWidthBanner src="/pageBanner/M0500430.jpg" alt="Dr. Mona Dahiya — International IVF Patients in India" />
       <div
         aria-hidden
         className="pointer-events-none absolute top-0 right-[8%] h-[280px] w-[280px] -translate-y-1/4 rounded-full opacity-35 blur-3xl"
@@ -91,7 +91,7 @@ export default function IntlHero() {
           </Stagger>
         </div>
 
-        <HeroMobileBanner src="/pageBanner/M0500383.JPG" alt="Dr. Mona Dahiya — International IVF Patients in India" />
+        <HeroMobileBanner src="/pageBanner/M0500430.jpg" alt="Dr. Mona Dahiya — International IVF Patients in India" />
       </div>
     </section>
       <section className="relative overflow-hidden bg-white py-7 sm:py-9 border-y border-[#fde2ec]/70">
