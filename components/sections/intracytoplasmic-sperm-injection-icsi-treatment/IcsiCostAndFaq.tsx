@@ -14,7 +14,7 @@ import {
 const costCards = [
   {
     title: "Cost of ICSI",
-    description: "Additional lab charges on top of regular IVF charges.",
+    description: "No Additional lab charges on top of regular IVF charges.",
     icon: <FaFlask className="size-3.5" />,
   },
   {
@@ -98,47 +98,47 @@ export default function IcsiCostAndFaq() {
     <>
       <TreatmentSection>
         <div>
-        <TreatmentSectionHeader
-          eyebrow="Cost"
-          title="Factors Which Affect Cost Of ICSI"
-          subtitle="As ICSI is performed along with IVF, the total cost will lie between 1.5 Lakhs and 2.5 Lakhs. Below are some things which will affect your cost. We don't charge any extra amount from the lab."
-        />
+          <TreatmentSectionHeader
+            eyebrow="Cost"
+            title="Factors Which Affect Cost Of ICSI"
+            subtitle="As ICSI is performed along with IVF, the total cost will lie between 1.5 Lakhs and 2.5 Lakhs. Below are some things which will affect your cost. We don't charge any extra amount from the lab."
+          />
 
-        <Stagger
-          delay={0.05}
-          className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4"
-        >
-          {costCards.map((card) => (
-            <StaggerItem key={card.title}>
-              <CostFactorCard {...card} />
-            </StaggerItem>
-          ))}
-        </Stagger>
-      </div>
+          <Stagger
+            delay={0.05}
+            className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4"
+          >
+            {costCards.map((card) => (
+              <StaggerItem key={card.title}>
+                <CostFactorCard {...card} />
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </div>
       </TreatmentSection>
 
       <TreatmentSection>
         <div>
-        <TreatmentSectionHeader
-          eyebrow="FAQ"
-          title="Top FAQs About ICSI Treatment in Delhi NCR"
-        />
+          <TreatmentSectionHeader
+            eyebrow="FAQ"
+            title="Top FAQs About ICSI Treatment in Delhi NCR"
+          />
 
-        <FaqAccordion leftItems={leftFaqs} rightItems={rightFaqs} />
+          <FaqAccordion leftItems={leftFaqs} rightItems={rightFaqs} />
 
-        <Reveal variant="fadeUp" delay={0.06} className="mt-10">
-          <div className="rounded-2xl border border-[#fde2ec] bg-white p-6 shadow-[0_10px_30px_rgba(232,62,116,0.06)] sm:p-7">
-            <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
-              How successful is ICSI?
-            </p>
-            <p className="mt-3 text-[13.5px] leading-relaxed text-black sm:text-[14px]">
-              The fertilisation rate with ICSI is 70%-85%, and egg survival after ICSI is
-              more than 95%. Your chance of pregnancy will depend on your age and embryo
-              quality.
-            </p>
-          </div>
-        </Reveal>
-      </div>
+          <Reveal variant="fadeUp" delay={0.06} className="mt-10">
+            <div className="rounded-2xl border border-[#fde2ec] bg-white p-6 shadow-[0_10px_30px_rgba(232,62,116,0.06)] sm:p-7">
+              <p className="text-[12px] font-bold tracking-[0.14em] text-rose uppercase sm:text-[13px]">
+                How successful is ICSI?
+              </p>
+              <p className="mt-3 text-[13.5px] leading-relaxed text-black sm:text-[14px]">
+                The fertilisation rate with ICSI is 70%-85%, and egg survival after ICSI is
+                more than 95%. Your chance of pregnancy will depend on your age and embryo
+                quality.
+              </p>
+            </div>
+          </Reveal>
+        </div>
       </TreatmentSection>
     </>
   );

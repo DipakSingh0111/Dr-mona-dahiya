@@ -182,10 +182,7 @@ export default function FemaleDiagnosticAndPathway() {
           className="mt-7 grid auto-rows-fr grid-cols-1 items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-5"
         >
           {pathways.map((item, idx) => (
-            <StaggerItem
-              key={idx}
-              className="h-full min-h-[240px] sm:min-h-[260px]"
-            >
+            <StaggerItem key={idx} className="h-full">
               <ProtocolCard
                 number={item.number}
                 title={item.title}

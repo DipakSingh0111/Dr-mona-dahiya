@@ -13,12 +13,6 @@ function WorldMapArt() {
       className="pointer-events-none absolute top-[8%] right-[-2%] h-[78%] w-[58%] text-[#9ec4ff] opacity-[0.22]"
       fill="currentColor"
     >
-      <ellipse cx="120" cy="90" rx="70" ry="42" opacity="0.55" />
-      <ellipse cx="210" cy="130" rx="55" ry="36" opacity="0.45" />
-      <ellipse cx="300" cy="100" rx="80" ry="48" opacity="0.5" />
-      <ellipse cx="400" cy="140" rx="65" ry="40" opacity="0.45" />
-      <ellipse cx="160" cy="190" rx="48" ry="30" opacity="0.35" />
-      <ellipse cx="340" cy="200" rx="70" ry="32" opacity="0.4" />
       <path
         d="M70 210 C160 150, 250 120, 360 90 S470 50, 500 40"
         fill="none"
@@ -73,7 +67,7 @@ export default function InternationalPatients() {
 
           <FaPlane
             aria-hidden
-            className="pointer-events-none absolute top-7 right-10 z-[2] hidden size-5 rotate-[18deg] text-white/55 lg:block"
+            className="pointer-events-none absolute top-7 right-10 z-[2] hidden size-8 rotate-[18deg] text-white/75 lg:block xl:size-9"
           />
 
           <Reveal

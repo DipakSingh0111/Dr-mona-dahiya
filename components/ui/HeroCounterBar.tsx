@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, type ReactNode } from "react";
+import { FaStar } from "react-icons/fa";
 
 export type HeroCounterItem = {
   /** Final number to count to */
@@ -70,14 +71,25 @@ function CounterValue({
       ? value.toFixed(item.decimals)
       : value.toLocaleString("en-IN");
 
+  const isGoogleRating = /google/i.test(item.label);
+  const cleanSuffix = isGoogleRating
+    ? (item.suffix ?? "").replace(/★/g, "")
+    : (item.suffix ?? "");
+
   return (
     <span className="font-serif text-[2.25rem] leading-none font-normal tracking-tight text-ink tabular-nums sm:text-[2.65rem] lg:text-[3rem]">
       {item.displayText ?? (
         <>
           {item.prefix ?? ""}
           {formatted}
-          {item.suffix ?? ""}
-          {item.suffixNode ?? null}
+          {cleanSuffix}
+          {item.suffixNode ??
+            (isGoogleRating ? (
+              <FaStar
+                aria-hidden
+                className="ml-1.5 inline-block size-[0.72em] align-[-0.04em] text-ink"
+              />
+            ) : null)}
         </>
       )}
     </span>

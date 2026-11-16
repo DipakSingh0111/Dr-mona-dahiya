@@ -84,7 +84,7 @@ export default function DisclaimerBooking() {
                   </span>
                   <div className="mt-0.5 text-xl font-bold text-ink">₹1,000</div>
                   <span className="text-[11px] text-ink/70">
-                    Online consultation · 30 minutes
+                    Online consultation
                   </span>
                 </div>
 
@@ -94,7 +94,7 @@ export default function DisclaimerBooking() {
                   </span>
                   <div className="mt-0.5 text-xl font-bold text-ink">US$25</div>
                   <span className="text-[11px] text-ink/70">
-                    Online consultation · 30 minutes
+                    Online consultation
                   </span>
                 </div>
               </div>

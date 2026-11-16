@@ -131,7 +131,7 @@ function FeatureStat({
 function EducationCard({ badge, title, institution }: QualCard) {
   return (
     <article className="card-highlight flex h-full items-start gap-3.5 rounded-[20px] border border-[#fde2ec] bg-white p-4.5 shadow-[0_8px_24px_rgba(232,62,116,0.05)] transition-all duration-200 hover:border-[#f8b4cb] hover:bg-[#fff0f5] sm:gap-4 sm:p-5">
-      <span className="flex size-11 shrink-0 items-center justify-center rounded-[14px] bg-gradient-to-br from-blue to-blue-dark text-[11.5px] font-bold tracking-wide text-white shadow-[0_8px_18px_rgba(0,71,202,0.35)] sm:size-12 sm:rounded-2xl sm:text-[12.5px]">
+      <span className="flex size-11 shrink-0 items-center justify-center rounded-[14px] bg-gradient-to-br from-navy to-navy-mid text-[11.5px] font-bold tracking-wide text-white shadow-[0_8px_18px_rgba(6,21,50,0.35)] sm:size-12 sm:rounded-2xl sm:text-[12.5px]">
         {badge}
       </span>
       <div className="min-w-0 pt-0.5">

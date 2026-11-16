@@ -86,7 +86,6 @@ export default function PgtConsultation() {
                   <p className="mt-1 text-[11.5px] text-ink/75">
                     Online consultation
                   </p>
-                  <p className="text-[11.5px] text-ink/75">30 minutes</p>
                 </div>
 
                 <div className="card-highlight w-[170px] rounded-[18px] border border-rose/30 bg-white p-4 shadow-sm">
@@ -99,7 +98,6 @@ export default function PgtConsultation() {
                   <p className="mt-1 text-[11.5px] text-ink/75">
                     Online consultation
                   </p>
-                  <p className="text-[11.5px] text-ink/75">30 minutes</p>
                 </div>
               </div>
 

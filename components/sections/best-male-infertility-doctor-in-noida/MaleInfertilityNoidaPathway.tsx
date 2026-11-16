@@ -1,7 +1,6 @@
 "use client";
 
 import type { ReactNode } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { Stagger, StaggerItem } from "@/components/ui/Reveal";
 import {
@@ -100,7 +99,7 @@ export default function MaleInfertilityNoidaPathway() {
       >
         {steps.map((item) => (
           <StaggerItem key={item.number} className="h-full">
-            <div className="card-highlight flex h-full min-h-[240px] flex-col rounded-2xl border border-rose/25 bg-white p-5 shadow-[0_0_20px_rgba(232,62,116,0.08)] backdrop-blur-md transition-all duration-300 hover:border-rose/45 hover:bg-[#fff0f5] sm:min-h-[260px] sm:p-6">
+            <div className="card-highlight flex h-full flex-col rounded-2xl border border-rose/25 bg-white p-5 shadow-[0_0_20px_rgba(232,62,116,0.08)] backdrop-blur-md transition-all duration-300 hover:border-rose/45 hover:bg-[#fff0f5] sm:p-6">
               <div className="flex items-center gap-3">
                 <span className="flex size-7 shrink-0 items-center justify-center rounded-lg bg-rose text-[13px] font-bold text-white shadow-[0_2px_10px_rgba(232,62,116,0.35)]">
                   {item.number}
@@ -122,17 +121,6 @@ export default function MaleInfertilityNoidaPathway() {
             </div>
           </StaggerItem>
         ))}
-        <StaggerItem className="h-full">
-          <div className="card-highlight relative h-full min-h-[240px] overflow-hidden rounded-2xl border border-rose/25 bg-white shadow-[0_0_20px_rgba(232,62,116,0.08)] backdrop-blur-md transition-all duration-300 hover:border-rose/45 sm:min-h-[260px]">
-            <Image
-              src="/shared-gallery/best male infertility doctor.jpeg"
-              alt="Male Infertility Diagnosis and Treatment Protocol"
-              fill
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              className="object-cover object-center"
-            />
-          </div>
-        </StaggerItem>
       </Stagger>
     </TreatmentSection>
   );

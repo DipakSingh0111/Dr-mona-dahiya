@@ -1,6 +1,7 @@
 "use client";
 
 import type { ReactNode } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Stagger, StaggerItem } from "@/components/ui/Reveal";
 import {
@@ -63,13 +64,27 @@ export default function EggFreezingWhoNeeds() {
 
       <Stagger
         delay={0.05}
-        className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
+        className="mt-7 grid auto-rows-fr grid-cols-1 items-stretch gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
       >
         {items.map((item) => (
-          <StaggerItem key={item.number}>
+          <StaggerItem
+            key={item.number}
+            className="h-full min-h-[220px] sm:min-h-[240px]"
+          >
             <NumberedCard {...item} />
           </StaggerItem>
         ))}
+        <StaggerItem className="h-full min-h-[220px] sm:min-h-[240px]">
+          <div className="card-highlight relative h-full min-h-[220px] overflow-hidden rounded-2xl border border-[#fde2ec] bg-white shadow-[0_10px_30px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-[#f8b4cb] hover:shadow-[0_18px_40px_rgba(232,62,116,0.12)] sm:min-h-[240px]">
+            <Image
+              src="/shared-gallery/egg freezing.jpeg"
+              alt="Egg Freezing Vitrification and Liquid Nitrogen Cryopreservation"
+              fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              className="object-cover object-center"
+            />
+          </div>
+        </StaggerItem>
       </Stagger>
     </TreatmentSection>
   );

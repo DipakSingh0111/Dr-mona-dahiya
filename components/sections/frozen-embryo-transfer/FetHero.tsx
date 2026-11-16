@@ -43,7 +43,7 @@ export default function FetHero() {
       />
 
       <div className="page-container relative z-10 w-full pt-4 sm:pt-5 lg:pt-0">
-        <div className="lg:max-w-[28rem] xl:max-w-[34rem] 2xl:max-w-[38rem]">
+        <div className="lg:max-w-[36rem] xl:max-w-[42rem] 2xl:max-w-[46rem]">
           <Breadcrumb
             items={[
               { label: "Treatments", href: "/our-services" },
@@ -56,14 +56,9 @@ export default function FetHero() {
               Vitrified embryos, prepared lining, timed transfer
             </p>
 
-            <h1 className="font-serif mt-1.5 max-w-[38rem] text-[1.85rem] leading-[1.15] font-normal tracking-tight text-ink sm:text-[2.45rem] lg:text-[2.85rem] xl:text-[3.1rem]">
-              Advanced Frozen
-              <br />
-              Embryo Transfer
-              <br />
-              (FET) in Delhi,
-              <br />
-              Noida &amp; Ghaziabad
+            <h1 className="font-serif mt-1.5 max-w-[44rem] text-[1.7rem] leading-[1.15] font-normal tracking-tight text-ink sm:text-[2.05rem] lg:text-[2.1rem] xl:text-[2.3rem]">
+              Advanced Frozen Embryo Transfer
+              <br className="hidden sm:inline" /> (FET) in Delhi, Noida &amp; Ghaziabad
             </h1>
 
             <p className="mt-3.5 max-w-[36rem] text-[13.5px] leading-relaxed text-ink/80 sm:text-[15px]">

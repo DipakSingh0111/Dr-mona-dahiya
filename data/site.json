@@ -2969,14 +2969,14 @@
           "label": "INDIAN NATIONALS",
           "price": "₹1,000",
           "line1": "Online consultation",
-          "line2": "30 minutes"
+          "line2": ""
         },
         {
           "id": "foreign",
           "label": "FOREIGN PATIENTS",
           "price": "US$25",
           "line1": "Online consultation",
-          "line2": "30 minutes"
+          "line2": ""
         }
       ],
       "contacts": {

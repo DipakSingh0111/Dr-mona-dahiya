@@ -118,11 +118,6 @@ export default function AboutConsultation({
                   <p className="mt-1 text-[11.5px] text-slate-600">
                     Online consultation
                   </p>
-                  {consultationDuration ? (
-                    <p className="text-[11.5px] text-slate-600">
-                      {consultationDuration}
-                    </p>
-                  ) : null}
                 </div>
 
                 <div className="w-[172px] rounded-[20px] border border-[#fbcfe8] bg-gradient-to-br from-[#fff0f5] to-white p-4.5 shadow-sm">
@@ -135,11 +130,6 @@ export default function AboutConsultation({
                   <p className="mt-1 text-[11.5px] text-slate-600">
                     Online consultation
                   </p>
-                  {consultationDuration ? (
-                    <p className="text-[11.5px] text-slate-600">
-                      {consultationDuration}
-                    </p>
-                  ) : null}
                 </div>
               </div>
 
