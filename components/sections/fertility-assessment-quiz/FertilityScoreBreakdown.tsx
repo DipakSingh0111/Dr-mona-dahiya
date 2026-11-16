@@ -152,10 +152,10 @@ export default function FertilityScoreBreakdown() {
           <div className="overflow-x-auto">
             <table className="w-full min-w-[600px] border-collapse text-left">
               <thead>
-                <tr className="border-b border-[#fde2ec] bg-pink text-[11.5px] font-bold tracking-wider text-ink/80 uppercase">
-                  <th className="px-5 py-3.5">Category</th>
-                  <th className="px-5 py-3.5">Highest Score</th>
-                  <th className="px-5 py-3.5">What We Are Looking At?</th>
+                <tr className="border-b border-[#fde2ec] bg-pink text-[12px] font-extrabold tracking-wider text-ink uppercase sm:text-[12.5px]">
+                  <th className="px-5 py-3.5 font-extrabold">Category</th>
+                  <th className="px-5 py-3.5 font-extrabold">Highest Score</th>
+                  <th className="px-5 py-3.5 font-extrabold">What We Are Looking At?</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-[#fde8ef] text-[13.5px] sm:text-[14px]">
