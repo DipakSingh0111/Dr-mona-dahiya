@@ -14,37 +14,29 @@ export default function ParenthoodCta() {
 
   return (
     <section className="parenthood-cta relative overflow-hidden bg-[#f4f0ea]">
-      {/* Full-width background image */}
-      <div className="absolute inset-0">
+      {/* Right-aligned 3:2 image container matching the natural aspect ratio with soft left fade */}
+      <div className="absolute inset-0 lg:inset-y-0 lg:right-0 lg:left-auto lg:h-full lg:w-auto lg:aspect-[3/2] lg:[mask-image:linear-gradient(to_right,transparent_0%,rgba(0,0,0,0.22)_16%,black_34%,black_100%)]">
         <Image
           src={data.image}
-          alt="Hands forming a heart on a baby bump"
+          alt="Newborn baby cradled gently in hands"
           fill
-          sizes="100vw"
-          className="object-cover object-[72%_center]"
+          sizes="(max-width: 1023px) 100vw, 550px"
+          className="object-cover object-[65%_40%] lg:object-contain lg:object-right"
           priority
         />
       </div>
 
-      {/* Cream gradient behind text — fades into the photo */}
-      <div
-        aria-hidden
-        className="absolute inset-0 z-[1]"
-        style={{
-          background:
-            "linear-gradient(90deg, #f4f0ea 0%, #f4f0ea 34%, rgba(244,240,234,0.92) 48%, rgba(244,240,234,0.45) 68%, transparent 88%)",
-        }}
-      />
+      {/* Mobile cream gradient behind text */}
       <div
         aria-hidden
         className="absolute inset-0 z-[1] lg:hidden"
         style={{
           background:
-            "linear-gradient(180deg, rgba(244,240,234,0.96) 0%, rgba(244,240,234,0.82) 42%, rgba(244,240,234,0.35) 100%)",
+            "linear-gradient(180deg, rgba(255,245,247,0.96) 0%, rgba(255,245,247,0.84) 45%, rgba(255,245,247,0.35) 100%)",
         }}
       />
 
-      <div className="page-container relative z-10 flex min-h-[240px] items-center py-6 sm:min-h-[280px] sm:py-8 lg:min-h-[300px] lg:py-9">
+      <div className="page-container relative z-10 flex min-h-[240px] items-center py-6 sm:min-h-[280px] sm:py-8 lg:min-h-[340px] lg:py-10">
         <Reveal variant="slideLeft" className="w-full max-w-[740px]">
           <span className="mb-5 block h-[3px] w-11 rounded-full bg-rose" />
 

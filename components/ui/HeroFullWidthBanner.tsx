@@ -30,15 +30,6 @@ export function HeroFullWidthBanner({
           className={`origin-[72%_26%] scale-[1.35] object-cover sm:scale-[1.15] md:scale-[1.05] ${objectPosition} lg:origin-bottom-right lg:scale-100 lg:object-contain lg:object-right`}
         />
       </div>
-
-      {/* Mobile bottom fade only */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-12 lg:hidden"
-        style={{
-          background: "linear-gradient(to top, var(--pink), transparent)",
-        }}
-      />
     </div>
   );
 }
