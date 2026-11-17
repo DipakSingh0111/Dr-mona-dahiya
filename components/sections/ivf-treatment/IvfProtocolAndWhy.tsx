@@ -142,7 +142,7 @@ export default function IvfProtocolAndWhy() {
         <div>
         <TreatmentSectionHeader
           eyebrow="Education"
-          title="Why choose Dr. Mona Dahiya for your IVF Treatment"
+          title="Why choose Dr. Mona Dahiya for your IVF Treatment?"
         />
 
         <div className="mt-7 grid grid-cols-1 items-stretch gap-6 lg:grid-cols-12 lg:gap-8">

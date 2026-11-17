@@ -79,7 +79,7 @@ export default function OncofertilityProtocolAndWhy() {
           <div className="lg:col-span-6">
             <TreatmentSectionHeader
               eyebrow="Know more about Dr. Mona Dahiya"
-              title="Why Choose Us"
+              title="Why Choose Us?"
             />
 
             <div className="mt-6 flex flex-col gap-3.5 sm:mt-7 sm:gap-4">

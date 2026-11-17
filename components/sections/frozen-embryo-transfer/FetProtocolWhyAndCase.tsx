@@ -115,7 +115,7 @@ export function FetWhy() {
     <TreatmentSection>
       <TreatmentSectionHeader
         eyebrow="About Us"
-        title="Why Choose Dr. Mona Dahiya For Frozen Embryo Transfer"
+        title="Why Choose Dr. Mona Dahiya For Frozen Embryo Transfer?"
       />
 
       <div className="mt-6 flex flex-col gap-3.5 sm:mt-7 sm:gap-4">

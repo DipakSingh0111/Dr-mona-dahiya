@@ -30,7 +30,7 @@ export default function FemaleInfertilityNoidaWhy() {
     <TreatmentSection>
       <TreatmentSectionHeader
         eyebrow="What makes us different?"
-        title="Why Fertility Patients in Noida Choose Dr. Mona Dahiya"
+        title="Why Fertility Patients in Noida Choose Dr. Mona Dahiya?"
       />
 
       <Stagger className="mt-7 flex flex-col gap-3.5 sm:gap-4" stagger={0.06}>

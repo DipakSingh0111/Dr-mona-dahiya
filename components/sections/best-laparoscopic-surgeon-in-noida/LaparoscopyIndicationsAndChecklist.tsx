@@ -73,7 +73,7 @@ const checklist = [
     text: "This helps us identify the lesion within uterine cavity and it's depth.",
   },
   {
-    title: "Transabdominal/ Transvaginal Pelvic MRI (If indicated)",
+    title: "Transabdominal/ Transvaginal Pelvic MRI ",
     text: "If you have deep infiltrating endometriosis or uterine fibroids then an MRI can give better insight into extent of the pathology.",
   },
   {
@@ -96,40 +96,51 @@ export default function LaparoscopyIndicationsAndChecklist() {
     <>
       <TreatmentSection>
         <div>
-        <TreatmentSectionHeader
-          eyebrow="Surgery to improve your chances of conception"
-          title="Indications: When Is Reproductive Surgery Recommended?"
-        />
+          <TreatmentSectionHeader
+            eyebrow="Surgery to improve your chances of conception"
+            title="Indications: When Is Reproductive Surgery Recommended?"
+          />
 
-        <Stagger
-          delay={0.05}
-          className="mt-7 grid grid-cols-1 items-stretch gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
-        >
-          {indications.map((item) => (
-            <StaggerItem key={item.number} className="h-full">
-              <NumberedCard {...item} />
-            </StaggerItem>
-          ))}
-        </Stagger>
-      </div>
+          <Stagger
+            delay={0.05}
+            className="mt-7 grid grid-cols-1 items-stretch gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3"
+          >
+            {indications.map((item) => (
+              <StaggerItem key={item.number} className="h-full">
+                <NumberedCard {...item} />
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </div>
       </TreatmentSection>
 
       <TreatmentSection>
         <div>
-        <TreatmentSectionHeader
-          eyebrow="Investigations before surgery"
-          title="Diagnostic Checklist: Pre-Operative Workup"
-          subtitle="The following tests are done prior to any laparoscopic and/or hysteroscopic surgeries to assess and diagnose your problem."
-        />
+          <TreatmentSectionHeader
+            eyebrow="Investigations before surgery"
+            title="Diagnostic Checklist: Pre-Operative Workup"
+            subtitle="The following tests are done prior to any laparoscopic and/or hysteroscopic surgeries to assess and diagnose your problem."
+          />
 
-        <div className="mt-6 flex flex-col gap-3.5 sm:mt-7 sm:gap-4">
-          {checklist.map((item, idx) => (
-            <Reveal key={item.title} variant="fadeUp" delay={idx * 0.04}>
-              <ChecklistRow title={item.title} text={item.text} />
-            </Reveal>
-          ))}
+          <div className="mt-6 flex flex-col gap-3.5 sm:mt-7 sm:gap-4">
+            {checklist.map((item, idx) => (
+              <Reveal key={item.title} variant="fadeUp" delay={idx * 0.04}>
+                <ChecklistRow>
+                  {item.text ? (
+                    <>
+                      <strong className="font-semibold text-ink">
+                        {item.title}
+                      </strong>{" "}
+                      ({item.text})
+                    </>
+                  ) : (
+                    item.title
+                  )}
+                </ChecklistRow>
+              </Reveal>
+            ))}
+          </div>
         </div>
-      </div>
       </TreatmentSection>
     </>
   );
