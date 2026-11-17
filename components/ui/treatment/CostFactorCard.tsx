@@ -2,6 +2,7 @@
 
 import type { ReactNode } from "react";
 import { FaCheck } from "react-icons/fa";
+import { autoLinkNode } from "./AutoLinkText";
 
 export type CostFactorItem = {
   title: string;
@@ -22,7 +23,7 @@ export function CostFactorCard({ title, description, icon }: CostFactorItem) {
           </h3>
         </div>
         <div className="mt-4 text-[13.5px] leading-relaxed text-black sm:text-[14px]">
-          {description}
+          {autoLinkNode(description)}
         </div>
       </div>
     </div>

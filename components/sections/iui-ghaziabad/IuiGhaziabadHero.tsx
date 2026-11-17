@@ -122,7 +122,7 @@ export default function IuiGhaziabadHero() {
           <HeroCounterBar
           items={[
             { target: 25, suffix: "+", label: "years of experience" },
-            { target: 10000, label: "IUI Cycles" },
+            { target: 10000, suffix: "+", label: "IUI Cycles" },
             { target: 25, suffix: "%+", label: "Success Rates" },
             { target: 4.9, decimals: 1, label: "Stars Rating On Google" },
           ]}

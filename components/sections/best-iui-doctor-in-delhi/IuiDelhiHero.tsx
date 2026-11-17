@@ -117,7 +117,7 @@ export default function IuiDelhiHero() {
           <HeroCounterBar
           items={[
             { target: 25, suffix: "+", label: "Years of Experience" },
-            { target: 10000, label: "IUI Cycles Completed" },
+            { target: 10000, suffix: "+", label: "IUI Cycles Completed" },
             { target: 25, suffix: "%+", label: "IUI Success Rates" },
             { target: 4.9, decimals: 1, label: "Star Rating On Google" },
           ]}

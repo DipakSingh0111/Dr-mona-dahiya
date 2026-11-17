@@ -60,12 +60,12 @@ export default function IuiTreatmentHero() {
 
             {/* Eyebrow */}
             <p className="text-[12px] font-bold tracking-[0.12em] text-rose uppercase sm:text-[13px] lg:text-[13.5px]">
-              IUI in Delhi NCR
+              IUI in Noida | Best IUI doctor in Noida
             </p>
 
             {/* Headline */}
             <h1 className="font-serif mt-1.5 max-w-[42rem] text-[2.1rem] leading-[1.14] font-normal tracking-tight text-ink sm:text-[2.75rem] lg:text-[3.3rem] xl:text-[3.65rem]">
-              Intrauterine Insemination (IUI) Treatment in Delhi, Noida &amp; Ghaziabad
+              Intrauterine Insemination (IUI) Treatment in Noida
             </h1>
 
             {/* Subtitle / Paragraph from image */}

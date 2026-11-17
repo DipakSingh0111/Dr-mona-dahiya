@@ -104,7 +104,7 @@ const embryologyCards: CostFactorItem[] = [
 ];
 
 const singleTransferPoints = [
-  "Encouraging single embryo transfers, to keep the risk of twins and triplets within defined parameters.",
+  "Single Embryo Transfers: Encouraging single embryo transfers, to keep the risk of twins and triplets within defined parameters.",
   "Storage of extra blastocysts: we only store them if given permission by the patient. They cannot be stored indefinitely as per the ART Act. We will discard, donate to research or allow to perish based on instructions given by the patient.",
   "Maintaining registry: we report all case numbers to the national registry along with success rates. Cases of moderate to severe OHSS are also reported to the National ART and Surrogacy Board.",
 ];

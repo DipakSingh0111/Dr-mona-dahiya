@@ -1,6 +1,7 @@
 "use client";
 
 import type { ReactNode } from "react";
+import { autoLinkNode } from "./AutoLinkText";
 
 export type ProtocolCardItem = {
   number: string;
@@ -41,7 +42,7 @@ export function ProtocolCard({
             <span className="pt-0.5 text-[14px] leading-none text-rose select-none">
               ↳
             </span>
-            <div className="flex-1">{bullet}</div>
+            <div className="flex-1">{autoLinkNode(bullet)}</div>
           </div>
         ))}
       </div>

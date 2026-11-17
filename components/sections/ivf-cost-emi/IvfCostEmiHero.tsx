@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import HeroCounterBar from "@/components/ui/HeroCounterBar";
@@ -29,68 +30,89 @@ export default function IvfCostEmiHero() {
       />
 
       <div className="page-container relative">
-        <div className="max-w-4xl">
-          <Breadcrumb
-            items={[
-              { label: "Treatments", href: "/our-services" },
-              { label: "IVF Cost and EMI Financing in Delhi NCR" },
-            ]}
-          />
+        <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-12 lg:gap-10">
+          <div className="lg:col-span-7">
+            <Breadcrumb
+              items={[
+                { label: "Treatments", href: "/our-services" },
+                { label: "IVF Cost and EMI Financing in Delhi NCR" },
+              ]}
+            />
 
-          <Reveal variant="slideLeft">
-            <p className="text-[12px] font-bold tracking-[0.12em] text-rose uppercase sm:text-[13px]">
-              Cost of IVF and EMI plan
-            </p>
+            <Reveal variant="slideLeft">
+              <p className="text-[12px] font-bold tracking-[0.12em] text-rose uppercase sm:text-[13px]">
+                Cost of IVF and EMI plan
+              </p>
 
-            <h1 className="font-serif mt-1.5 max-w-[42rem] text-[1.65rem] leading-[1.18] font-normal tracking-tight text-ink sm:text-[2.1rem] lg:text-[2.35rem] xl:text-[2.55rem]">
-              Transparent IVF Cost &amp; Flexible EMI Medical Financing in Delhi,
-              Noida &amp; Ghaziabad
-            </h1>
+              <h1 className="font-serif mt-1.5 max-w-[42rem] text-[1.65rem] leading-[1.18] font-normal tracking-tight text-ink sm:text-[2.1rem] lg:text-[2.35rem] xl:text-[2.55rem]">
+                Transparent IVF Cost &amp; Flexible EMI Medical Financing in Delhi,
+                Noida &amp; Ghaziabad
+              </h1>
 
-            <p className="mt-3.5 max-w-[40rem] text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
-              We know everyone wants low-cost IVF treatment. However, the
-              quality of laboratory procedures cannot be compromised. We provide
-              transparent medical costs of IVF treatment at Noida, Delhi and
-              Ghaziabad by Dr Mona Dahiya. IVF with EMI plans is also available
-              from various banks and NBFCs, some of which even offer
-              interest-free loans.
-            </p>
-          </Reveal>
+              <p className="mt-3.5 max-w-[40rem] text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
+                We know everyone wants low-cost IVF treatment. However, the
+                quality of laboratory procedures cannot be compromised. We provide
+                transparent medical costs of IVF treatment at Noida, Delhi and
+                Ghaziabad by Dr Mona Dahiya. IVF with EMI plans is also available
+                from various banks and NBFCs, some of which even offer
+                interest-free loans.
+              </p>
+            </Reveal>
 
-          <div className="mt-6 flex flex-wrap items-center gap-3 sm:gap-4">
-            <a
-              href="#book-consultation"
-              className="inline-flex items-center justify-center rounded-full border border-rose/20 bg-white/75 px-6 py-2.5 text-[13.5px] font-bold text-ink shadow-[0_4px_14px_rgba(15,36,56,0.05)] backdrop-blur-sm transition-all hover:border-rose/50 hover:bg-white hover:text-rose active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"
-            >
-              Book In-Clinic Consultation
-            </a>
+            <div className="mt-6 flex flex-wrap items-center gap-3 sm:gap-4">
+              <a
+                href="#book-consultation"
+                className="inline-flex items-center justify-center rounded-full border border-rose/20 bg-white/75 px-6 py-2.5 text-[13.5px] font-bold text-ink shadow-[0_4px_14px_rgba(15,36,56,0.05)] backdrop-blur-sm transition-all hover:border-rose/50 hover:bg-white hover:text-rose active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"
+              >
+                Book In-Clinic Consultation
+              </a>
+              <Link
+                href="/ivf-consultation-online"
+                className="inline-flex items-center justify-center rounded-full bg-navy px-6 py-2.5 text-[13.5px] font-semibold text-white shadow-[0_8px_20px_rgba(6,21,50,0.35)] ring-1 ring-navy/20 transition-all hover:bg-navy-mid hover:brightness-110 active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"
+              >
+                Schedule Online Consultation
+              </Link>
+            </div>
+
             <Link
-              href="/ivf-consultation-online"
-              className="inline-flex items-center justify-center rounded-full bg-navy px-6 py-2.5 text-[13.5px] font-semibold text-white shadow-[0_8px_20px_rgba(6,21,50,0.35)] ring-1 ring-navy/20 transition-all hover:bg-navy-mid hover:brightness-110 active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"
+              href="/best-ivf-patient-reviews"
+              className="mt-4 inline-flex items-center gap-1.5 text-[13.5px] font-medium text-ink/90 transition-colors hover:text-rose sm:text-[14px]"
             >
-              Schedule Online Consultation
+              Read Dr Mona Dahiya&apos;s Reviews →
             </Link>
+
+            <Stagger
+              delay={0.05}
+              className="mt-5 flex flex-wrap items-center gap-2 sm:gap-2.5"
+            >
+              {badges.map((badge) => (
+                <StaggerItem key={badge}>
+                  <span className="inline-flex items-center rounded-full border border-rose/25 bg-white px-3 py-1 text-[11.5px] font-medium text-ink shadow-sm backdrop-blur-md sm:text-[12.5px]">
+                    {badge}
+                  </span>
+                </StaggerItem>
+              ))}
+            </Stagger>
           </div>
 
-          <Link
-            href="/best-ivf-patient-reviews"
-            className="mt-4 inline-flex items-center gap-1.5 text-[13.5px] font-medium text-ink/90 transition-colors hover:text-rose sm:text-[14px]"
-          >
-            Read Dr Mona Dahiya&apos;s Reviews →
-          </Link>
-
-          <Stagger
-            delay={0.05}
-            className="mt-5 flex flex-wrap items-center gap-2 sm:gap-2.5"
-          >
-            {badges.map((badge) => (
-              <StaggerItem key={badge}>
-                <span className="inline-flex items-center rounded-full border border-rose/25 bg-white px-3 py-1 text-[11.5px] font-medium text-ink shadow-sm backdrop-blur-md sm:text-[12.5px]">
-                  {badge}
-                </span>
-              </StaggerItem>
-            ))}
-          </Stagger>
+          <div className="flex justify-center lg:col-span-5 lg:justify-end">
+            <Reveal
+              variant="scaleIn"
+              delay={0.1}
+              className="w-full max-w-[420px] lg:max-w-[480px]"
+            >
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[22px] border-4 border-white bg-white shadow-[0_20px_50px_rgba(232,62,116,0.12)] ring-1 ring-rose/15 sm:rounded-[26px]">
+                <Image
+                  src="/shared-gallery/ivf cost banner picture.jpeg"
+                  alt="IVF Cost and EMI Loan Options"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 480px"
+                  className="object-cover object-center"
+                />
+              </div>
+            </Reveal>
+          </div>
         </div>
       </div>
     </section>

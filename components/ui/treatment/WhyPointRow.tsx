@@ -2,6 +2,7 @@
 
 import type { ReactNode } from "react";
 import { FaCheck } from "react-icons/fa";
+import { autoLinkNode } from "./AutoLinkText";
 
 export type WhyPointItem = {
   title: string;
@@ -19,7 +20,7 @@ export function WhyPointRow({ title, desc }: WhyPointItem) {
           {title}
         </h3>
         <div className="mt-1 text-[13.5px] leading-relaxed text-black sm:text-[14px]">
-          {desc}
+          {autoLinkNode(desc)}
         </div>
       </div>
     </div>

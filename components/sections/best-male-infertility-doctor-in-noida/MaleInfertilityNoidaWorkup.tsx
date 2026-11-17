@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/treatment";
 
 const tests = [
-  "Semen analysis on computer assisted semen analysis (CASA) machine after an abstinence period of 2-3 days to assess count, motility and morphology (Kruger Strict).",
+  "Semen Analysis: Semen analysis on computer assisted semen analysis (CASA) machine after an abstinence period of 2-3 days to assess count, motility and morphology (Kruger Strict).",
   "DNA fragmentation (Halosperm): single strand and double strand fragmentation of sperm.",
   "Hormone profile: testosterone, LH, FSH, prolactin and TSH levels in the early morning.",
   "Ultrasound: scrotal USG done to find out the size of the testis and presence of varicocele.",

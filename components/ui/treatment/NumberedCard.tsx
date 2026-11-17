@@ -1,6 +1,7 @@
 "use client";
 
 import type { ReactNode } from "react";
+import { autoLinkNode } from "./AutoLinkText";
 
 export type NumberedCardItem = {
   number: string;
@@ -21,7 +22,7 @@ export function NumberedCard({ number, title, description }: NumberedCardItem) {
           </h3>
         </div>
         <div className="mt-3.5 text-[13.5px] leading-relaxed text-black sm:text-[14px]">
-          {description}
+          {autoLinkNode(description)}
         </div>
       </div>
     </div>

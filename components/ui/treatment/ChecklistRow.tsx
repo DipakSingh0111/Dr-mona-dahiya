@@ -2,6 +2,7 @@
 
 import { isValidElement, type ReactNode } from "react";
 import { FaCheck } from "react-icons/fa";
+import { autoLinkNode } from "./AutoLinkText";
 
 export interface ChecklistRowProps {
   title?: ReactNode;
@@ -66,12 +67,12 @@ export function ChecklistRow({
             {heading}
           </h3>
           <p className="mt-1 text-[13.5px] leading-relaxed text-slate-600 sm:text-[14px]">
-            {body}
+            {autoLinkNode(body)}
           </p>
         </div>
       ) : (
         <div className="min-w-0 flex-1 text-[13.5px] leading-relaxed text-ink sm:text-[14px]">
-          {children || heading || body}
+          {autoLinkNode(children || heading || body)}
         </div>
       )}
     </div>

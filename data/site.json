@@ -1945,12 +1945,14 @@
         "name": "Noida",
         "address": "3rd Floor, K-06, above FirstCry, Baraula, Sector 49, Noida, Uttar Pradesh 201301",
         "areaCount": 34,
+        "areaCount": 35,
         "clinicHref": "/best-ivf-doctor-in-noida",
         "groups": [
           {
             "label": "Noida Sectors",
             "areas": [
               "Sector 18",
+              "Sector 49",
               "Sector 50",
               "Sector 51",
               "Sector 62",
@@ -2340,7 +2342,7 @@
           "linkHref": "/international-ivf-patient"
         },
         {
-          "title": "Busy doctors/professionals who don't have time for appointments to be fragmented by consulting doctors",
+          "title": "Busy doctors/professionals who don't have time for appointments.",
           "description": "Things to do before you book your Online Consultation...",
           "linkLabel": "Click Here",
           "linkHref": "#what-to-prepare"

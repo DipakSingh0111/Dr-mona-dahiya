@@ -31,7 +31,7 @@ export default function OnlineConsultationPage() {
           sectionBg="bg-white"
           eyebrow="Next step"
           title="Schedule Your Online Consultation"
-          subtitle="Book a 30-minute online record review with Dr. Mona. Appointment line:"
+          subtitle="Book an online record review with Dr. Mona. Appointment line:"
         />
       </SectionReveal>
 
