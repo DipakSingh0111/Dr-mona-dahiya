@@ -101,6 +101,7 @@ h2 {
 }
 
 @media (min-width: 640px) {
+
   h1,
   h2 {
     font-size: 2.1rem !important;
@@ -108,6 +109,7 @@ h2 {
 }
 
 @media (min-width: 1024px) {
+
   h1,
   h2 {
     font-size: 2.35rem !important;
@@ -115,6 +117,7 @@ h2 {
 }
 
 @media (min-width: 1280px) {
+
   h1,
   h2 {
     font-size: 2.55rem !important;
@@ -128,96 +131,109 @@ h2 {
 /* Eyebrows above page / section headings */
 main:not(.home-main) section:not(.parenthood-cta) :is(p, span):has(+ h1),
 main:not(.home-main) section:not(.parenthood-cta) :is(p, span):has(+ h2) {
-  font-size: 0.75rem !important; /* 12px */
+  font-size: 0.75rem !important;
+  /* 12px */
   line-height: 1.4 !important;
 }
 
 @media (min-width: 640px) {
+
   main:not(.home-main) section:not(.parenthood-cta) :is(p, span):has(+ h1),
   main:not(.home-main) section:not(.parenthood-cta) :is(p, span):has(+ h2) {
-    font-size: 0.8125rem !important; /* 13px */
+    font-size: 0.8125rem !important;
+    /* 13px */
   }
 }
 
 /* Hero descriptions & section intro subtitles */
-main:not(.home-main) section:has(.hero-banner-card) h1 ~ p,
-main:not(.home-main) section:not(.parenthood-cta) h1 + p,
-main:not(.home-main) section:not(.parenthood-cta) h2 + p {
-  font-size: 0.875rem !important; /* 14px */
+main:not(.home-main) section:has(.hero-banner-card) h1~p,
+main:not(.home-main) section:not(.parenthood-cta) h1+p,
+main:not(.home-main) section:not(.parenthood-cta) h2+p {
+  font-size: 0.875rem !important;
+  /* 14px */
   line-height: 1.62 !important;
 }
 
 @media (min-width: 640px) {
-  main:not(.home-main) section:has(.hero-banner-card) h1 ~ p,
-  main:not(.home-main) section:not(.parenthood-cta) h1 + p,
-  main:not(.home-main) section:not(.parenthood-cta) h2 + p {
-    font-size: 0.9375rem !important; /* 15px */
+
+  main:not(.home-main) section:has(.hero-banner-card) h1~p,
+  main:not(.home-main) section:not(.parenthood-cta) h1+p,
+  main:not(.home-main) section:not(.parenthood-cta) h2+p {
+    font-size: 0.9375rem !important;
+    /* 15px */
   }
 }
 
 /* All inner-page card titles, subheadings & FAQ questions */
 main:not(.home-main) h3:not(:has(+ p.font-serif)):not(.uppercase),
 main:not(.home-main) h4,
-main:not(.home-main) button[aria-expanded] > span:first-child {
-  font-size: 1rem !important; /* 16px */
+main:not(.home-main) button[aria-expanded]>span:first-child {
+  font-size: 1rem !important;
+  /* 16px */
   line-height: 1.35 !important;
 }
 
 @media (min-width: 640px) {
+
   main:not(.home-main) h3:not(:has(+ p.font-serif)):not(.uppercase),
   main:not(.home-main) h4,
-  main:not(.home-main) button[aria-expanded] > span:first-child {
-    font-size: 1.0625rem !important; /* 17px */
+  main:not(.home-main) button[aria-expanded]>span:first-child {
+    font-size: 1.0625rem !important;
+    /* 17px */
   }
 }
 
 /* Medical council registration labels (above registration codes) */
 main:not(.home-main) h3:has(+ p.font-serif) {
-  font-size: 0.8125rem !important; /* 13px */
+  font-size: 0.8125rem !important;
+  /* 13px */
   line-height: 1.35 !important;
 }
 
 /* Card descriptions, protocol bullets, checklist text, FAQ answers, table body & review quotes */
-main:not(.home-main) .card-highlight h3 + p:not(.font-serif),
-main:not(.home-main) .card-highlight h4 + p:not(.font-serif),
-main:not(.home-main) .card-highlight > div > div + div:not(.border-t),
-main:not(.home-main) .card-highlight > div + div:not(.border-t),
-main:not(.home-main) .card-highlight > p:first-child,
-main:not(.home-main) .card-highlight > div > h3 + p:not(.font-serif),
-main:not(.home-main) .card-highlight > div > div > h3 + p:not(.font-serif),
-main:not(.home-main) .card-highlight > div > div + p:not(.font-serif),
-main:not(.home-main) .treatment-section h3 + p:not(.font-serif),
-main:not(.home-main) .treatment-section h3 + div:not(.mt-6),
+main:not(.home-main) .card-highlight h3+p:not(.font-serif),
+main:not(.home-main) .card-highlight h4+p:not(.font-serif),
+main:not(.home-main) .card-highlight>div>div+div:not(.border-t),
+main:not(.home-main) .card-highlight>div+div:not(.border-t),
+main:not(.home-main) .card-highlight>p:first-child,
+main:not(.home-main) .card-highlight>div>h3+p:not(.font-serif),
+main:not(.home-main) .card-highlight>div>div>h3+p:not(.font-serif),
+main:not(.home-main) .card-highlight>div>div+p:not(.font-serif),
+main:not(.home-main) .treatment-section h3+p:not(.font-serif),
+main:not(.home-main) .treatment-section h3+div:not(.mt-6),
 main:not(.home-main) .treatment-section div:has(> span.signature-tick) p,
-main:not(.home-main) .treatment-section div:has(> span.signature-tick) h3 + div,
-main:not(.home-main) .treatment-section div:has(> span > svg) > div:last-child:not([class*="mt-0"]),
-main:not(.home-main) .treatment-section button[aria-expanded] + div,
-main:not(.home-main) .treatment-section button[aria-expanded] + div p,
-main:not(.home-main) .treatment-section button[aria-expanded] + div li,
+main:not(.home-main) .treatment-section div:has(> span.signature-tick) h3+div,
+main:not(.home-main) .treatment-section div:has(> span > svg)>div:last-child:not([class*="mt-0"]),
+main:not(.home-main) .treatment-section button[aria-expanded]+div,
+main:not(.home-main) .treatment-section button[aria-expanded]+div p,
+main:not(.home-main) .treatment-section button[aria-expanded]+div li,
 main:not(.home-main) table tbody td {
-  font-size: 0.84375rem !important; /* 13.5px */
+  font-size: 0.84375rem !important;
+  /* 13.5px */
   line-height: 1.6 !important;
 }
 
 @media (min-width: 640px) {
-  main:not(.home-main) .card-highlight h3 + p:not(.font-serif),
-  main:not(.home-main) .card-highlight h4 + p:not(.font-serif),
-  main:not(.home-main) .card-highlight > div > div + div:not(.border-t),
-  main:not(.home-main) .card-highlight > div + div:not(.border-t),
-  main:not(.home-main) .card-highlight > p:first-child,
-  main:not(.home-main) .card-highlight > div > h3 + p:not(.font-serif),
-  main:not(.home-main) .card-highlight > div > div > h3 + p:not(.font-serif),
-  main:not(.home-main) .card-highlight > div > div + p:not(.font-serif),
-  main:not(.home-main) .treatment-section h3 + p:not(.font-serif),
-  main:not(.home-main) .treatment-section h3 + div:not(.mt-6),
+
+  main:not(.home-main) .card-highlight h3+p:not(.font-serif),
+  main:not(.home-main) .card-highlight h4+p:not(.font-serif),
+  main:not(.home-main) .card-highlight>div>div+div:not(.border-t),
+  main:not(.home-main) .card-highlight>div+div:not(.border-t),
+  main:not(.home-main) .card-highlight>p:first-child,
+  main:not(.home-main) .card-highlight>div>h3+p:not(.font-serif),
+  main:not(.home-main) .card-highlight>div>div>h3+p:not(.font-serif),
+  main:not(.home-main) .card-highlight>div>div+p:not(.font-serif),
+  main:not(.home-main) .treatment-section h3+p:not(.font-serif),
+  main:not(.home-main) .treatment-section h3+div:not(.mt-6),
   main:not(.home-main) .treatment-section div:has(> span.signature-tick) p,
-  main:not(.home-main) .treatment-section div:has(> span.signature-tick) h3 + div,
-  main:not(.home-main) .treatment-section div:has(> span > svg) > div:last-child:not([class*="mt-0"]),
-  main:not(.home-main) .treatment-section button[aria-expanded] + div,
-  main:not(.home-main) .treatment-section button[aria-expanded] + div p,
-  main:not(.home-main) .treatment-section button[aria-expanded] + div li,
+  main:not(.home-main) .treatment-section div:has(> span.signature-tick) h3+div,
+  main:not(.home-main) .treatment-section div:has(> span > svg)>div:last-child:not([class*="mt-0"]),
+  main:not(.home-main) .treatment-section button[aria-expanded]+div,
+  main:not(.home-main) .treatment-section button[aria-expanded]+div p,
+  main:not(.home-main) .treatment-section button[aria-expanded]+div li,
   main:not(.home-main) table tbody td {
-    font-size: 0.875rem !important; /* 14px */
+    font-size: 0.875rem !important;
+    /* 14px */
   }
 }
 
@@ -233,19 +249,17 @@ main:not(.home-main) table tbody td {
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
-    padding-top: clamp(0.75rem, 1.8svh, 1.5rem) !important;
-    padding-bottom: clamp(0.75rem, 1.8svh, 1.5rem) !important;
+    padding-top: 2.25rem !important;
+    padding-bottom: 2.5rem !important;
   }
 
-  section:has(.hero-banner-card) > .page-container {
+  section:has(.hero-banner-card)>.page-container {
     align-items: center !important;
   }
 
   .hero-banner-card {
-    max-width: min(
-      440px,
-      calc((100svh - var(--site-header-h, 8.75rem) - 2.5rem) * 0.8)
-    ) !important;
+    max-width: min(440px,
+        calc((100svh - var(--site-header-h, 8.75rem) - 2.5rem) * 0.8)) !important;
   }
 }
 
@@ -254,39 +268,34 @@ main:not(.home-main) table tbody td {
     margin-bottom: 0.65rem !important;
   }
 
-  section:has(.hero-banner-card) h1 ~ p {
-    margin-top: 0.55rem !important;
+  section:has(.hero-banner-card) h1~p {
     line-height: 1.55 !important;
-  }
-
-  section:has(.hero-banner-card) .lg\:col-span-7 :is(.mt-4, .mt-5, .mt-6) {
-    margin-top: 0.7rem !important;
   }
 }
 
 /* Full-width page banner — consistent compact height across all inner pages */
 @media (min-width: 1024px) {
   section:has(.hero-fullwidth-banner) {
-    height: clamp(500px, calc(100svh - var(--site-header-h, 8.75rem)), 540px) !important;
-    min-height: 500px !important;
-    max-height: 540px !important;
+    height: clamp(460px, calc(100svh - var(--site-header-h, 8.75rem)), 620px) !important;
+    min-height: 460px !important;
+    max-height: 620px !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
-    padding-top: clamp(1.25rem, 2.5svh, 2rem) !important;
-    padding-bottom: clamp(1rem, 2svh, 1.5rem) !important;
+    padding-top: 1.25rem;
+    padding-bottom: 2rem;
     overflow: hidden !important;
   }
 
   section:has(.hero-fullwidth-banner) nav[aria-label="Breadcrumb"] {
-    margin-bottom: clamp(0.75rem, 1.5svh, 1.25rem) !important;
+    margin-bottom: 0.75rem !important;
   }
 }
 
 @media (min-width: 1024px) and (max-height: 820px) {
   section:has(.hero-fullwidth-banner) {
-    padding-top: clamp(1.25rem, 2.8svh, 1.85rem) !important;
-    padding-bottom: clamp(0.85rem, 1.8svh, 1.25rem) !important;
+    padding-top: 1rem;
+    padding-bottom: 1.75rem;
   }
 
   section:has(.hero-fullwidth-banner) nav[aria-label="Breadcrumb"] {
@@ -294,49 +303,39 @@ main:not(.home-main) table tbody td {
   }
 
   section:has(.hero-fullwidth-banner) h1 {
-    font-size: clamp(1.65rem, 2.2svh, 2.15rem) !important;
+    font-size: clamp(1.95rem, 2.9svh, 2.6rem) !important;
     line-height: 1.18 !important;
   }
 
-  section:has(.hero-fullwidth-banner) h1 ~ p,
-  section:has(.hero-fullwidth-banner) p {
-    margin-top: 0.4rem !important;
-    line-height: 1.45 !important;
-    font-size: clamp(12.5px, 1.4svh, 14px) !important;
-  }
-
-  section:has(.hero-fullwidth-banner) :is(.mt-4, .mt-5, .mt-6) {
-    margin-top: 0.6rem !important;
+  section:has(.hero-fullwidth-banner) h1~p {
+    line-height: 1.6 !important;
+    font-size: clamp(14px, 1.75svh, 15.5px) !important;
   }
 
   section:has(.hero-fullwidth-banner) a.rounded-full {
-    padding-top: 0.5rem !important;
-    padding-bottom: 0.5rem !important;
-    padding-left: 1.25rem !important;
-    padding-right: 1.25rem !important;
-    font-size: 13px !important;
+    padding-top: 0.6rem !important;
+    padding-bottom: 0.6rem !important;
+    padding-left: 1.4rem !important;
+    padding-right: 1.4rem !important;
+    font-size: 13.5px !important;
   }
 }
 
 /* Dark left for copy, clear center so Hero-banner people + Times Network show */
 .hero-overlay {
   background:
-    linear-gradient(
-      95deg,
+    linear-gradient(95deg,
       rgba(4, 12, 28, 0.86) 0%,
       rgba(5, 16, 36, 0.65) 26%,
       rgba(6, 28, 58, 0.18) 48%,
       transparent 60%,
       transparent 74%,
-      rgba(5, 18, 40, 0.25) 100%
-    ),
-    linear-gradient(
-      180deg,
+      rgba(5, 18, 40, 0.25) 100%),
+    linear-gradient(180deg,
       rgba(4, 12, 28, 0.22) 0%,
       transparent 16%,
       transparent 78%,
-      rgba(4, 12, 28, 0.4) 100%
-    );
+      rgba(4, 12, 28, 0.4) 100%);
 }
 
 .btn-rose {
@@ -454,22 +453,27 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   animation: hero-fade-up 0.7s ease both;
 }
 
-.hero-copy > .hero-fade-up:nth-child(1) {
+.hero-copy>.hero-fade-up:nth-child(1) {
   animation-delay: 0.05s;
 }
-.hero-copy > .hero-fade-up:nth-child(2) {
+
+.hero-copy>.hero-fade-up:nth-child(2) {
   animation-delay: 0.12s;
 }
-.hero-copy > .hero-fade-up:nth-child(3) {
+
+.hero-copy>.hero-fade-up:nth-child(3) {
   animation-delay: 0.18s;
 }
-.hero-copy > .hero-fade-up:nth-child(4) {
+
+.hero-copy>.hero-fade-up:nth-child(4) {
   animation-delay: 0.24s;
 }
-.hero-copy > .hero-fade-up:nth-child(5) {
+
+.hero-copy>.hero-fade-up:nth-child(5) {
   animation-delay: 0.3s;
 }
-.hero-copy > .hero-fade-up:nth-child(6) {
+
+.hero-copy>.hero-fade-up:nth-child(6) {
   animation-delay: 0.4s;
 }
 
@@ -478,6 +482,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     opacity: 0;
     transform: translateY(16px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -489,6 +494,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     opacity: 0;
     transform: translateX(28px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -504,18 +510,21 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   width: 100%;
   max-width: 1440px;
   margin-inline: auto;
-  padding-inline: 1rem; /* px-4 */
+  padding-inline: 1rem;
+  /* px-4 */
 }
 
 @media (min-width: 640px) {
   .page-container {
-    padding-inline: 1.5rem; /* sm:px-6 */
+    padding-inline: 1.5rem;
+    /* sm:px-6 */
   }
 }
 
 @media (min-width: 1024px) {
   .page-container {
-    padding-inline: 2rem; /* lg:px-8 */
+    padding-inline: 2rem;
+    /* lg:px-8 */
   }
 }
 
@@ -544,14 +553,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .hero-veil {
-  background: linear-gradient(
-    90deg,
-    rgba(6, 21, 50, 0.94) 0%,
-    rgba(10, 31, 69, 0.88) 22%,
-    rgba(10, 31, 69, 0.72) 38%,
-    rgba(6, 21, 50, 0.35) 52%,
-    transparent 64%
-  );
+  background: linear-gradient(90deg,
+      rgba(6, 21, 50, 0.94) 0%,
+      rgba(10, 31, 69, 0.88) 22%,
+      rgba(10, 31, 69, 0.72) 38%,
+      rgba(6, 21, 50, 0.35) 52%,
+      transparent 64%);
 }
 
 .hero-content {
@@ -664,6 +671,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -680,6 +688,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .hero-fade-up,
   .btn-rose,
   .btn-outline,
@@ -730,20 +739,20 @@ main:not(.home-main) section[data-bg="pink"] {
 }
 
 /* Even-positioned section blocks on inner pages -> Clean White (#ffffff) with crisp hairline divider borders */
-main:not(.home-main) > :nth-child(even),
-main:not(.home-main) > :nth-child(even) > section,
-main:not(.home-main) > div:nth-child(even) > section,
-main:not(.home-main) > section:nth-child(even) {
+main:not(.home-main)> :nth-child(even),
+main:not(.home-main)> :nth-child(even)>section,
+main:not(.home-main)>div:nth-child(even)>section,
+main:not(.home-main)>section:nth-child(even) {
   background-color: #ffffff !important;
   border-top: 1px solid rgba(232, 62, 116, 0.18) !important;
   border-bottom: 1px solid rgba(232, 62, 116, 0.18) !important;
 }
 
 /* Odd-positioned section blocks on inner pages (excluding Hero/first-child) -> Soft Pink */
-main:not(.home-main) > :nth-child(odd):not(:first-child),
-main:not(.home-main) > :nth-child(odd):not(:first-child) > section,
-main:not(.home-main) > div:nth-child(odd):not(:first-child) > section,
-main:not(.home-main) > section:nth-child(odd):not(:first-child) {
+main:not(.home-main)> :nth-child(odd):not(:first-child),
+main:not(.home-main)> :nth-child(odd):not(:first-child)>section,
+main:not(.home-main)>div:nth-child(odd):not(:first-child)>section,
+main:not(.home-main)>section:nth-child(odd):not(:first-child) {
   background-color: var(--pink) !important;
   border-top: none !important;
   border-bottom: none !important;
@@ -752,7 +761,7 @@ main:not(.home-main) > section:nth-child(odd):not(:first-child) {
 /* Preserve Parenthood CTA styling */
 main .parenthood-cta,
 main div:has(.parenthood-cta),
-main div:has(.parenthood-cta) > section {
+main div:has(.parenthood-cta)>section {
   background-color: #f4f0ea !important;
   border-top: none !important;
   border-bottom: none !important;
@@ -771,20 +780,20 @@ main div:has(.parenthood-cta) > section {
 }
 
 /* 1a. Alternating Odd (Pink) sections -> Navy (Navbar color) */
-main:not(.home-main) > :nth-child(odd):not(:first-child) .signature-tick,
-main:not(.home-main) > div:nth-child(odd):not(:first-child) .signature-tick,
-main:not(.home-main) > div:nth-child(odd):not(:first-child) section .signature-tick,
-main:not(.home-main) > section:nth-child(odd):not(:first-child) .signature-tick {
+main:not(.home-main)> :nth-child(odd):not(:first-child) .signature-tick,
+main:not(.home-main)>div:nth-child(odd):not(:first-child) .signature-tick,
+main:not(.home-main)>div:nth-child(odd):not(:first-child) section .signature-tick,
+main:not(.home-main)>section:nth-child(odd):not(:first-child) .signature-tick {
   background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%) !important;
   color: #ffffff !important;
   box-shadow: 0 4px 14px rgba(6, 21, 50, 0.35) !important;
 }
 
 /* 1b. Alternating Even (White) sections -> Rose/Pink */
-main:not(.home-main) > :nth-child(even) .signature-tick,
-main:not(.home-main) > div:nth-child(even) .signature-tick,
-main:not(.home-main) > div:nth-child(even) section .signature-tick,
-main:not(.home-main) > section:nth-child(even) .signature-tick {
+main:not(.home-main)> :nth-child(even) .signature-tick,
+main:not(.home-main)>div:nth-child(even) .signature-tick,
+main:not(.home-main)>div:nth-child(even) section .signature-tick,
+main:not(.home-main)>section:nth-child(even) .signature-tick {
   background: linear-gradient(135deg, var(--rose) 0%, var(--rose-dark) 100%) !important;
   color: #ffffff !important;
   box-shadow: 0 4px 14px rgba(232, 62, 116, 0.35) !important;
@@ -792,7 +801,7 @@ main:not(.home-main) > section:nth-child(even) .signature-tick {
 
 /* 1c. Explicit Pink section override -> Navy */
 main:not(.home-main) section.bg-pink.bg-pink .signature-tick,
-main:not(.home-main) > div.bg-pink.bg-pink .signature-tick,
+main:not(.home-main)>div.bg-pink.bg-pink .signature-tick,
 main:not(.home-main) section[style*="var(--pink)"].relative .signature-tick {
   background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%) !important;
   color: #ffffff !important;
@@ -801,7 +810,7 @@ main:not(.home-main) section[style*="var(--pink)"].relative .signature-tick {
 
 /* 1d. Explicit White section override -> Rose/Pink */
 main:not(.home-main) section.bg-white.bg-white .signature-tick,
-main:not(.home-main) > div.bg-white.bg-white .signature-tick {
+main:not(.home-main)>div.bg-white.bg-white .signature-tick {
   background: linear-gradient(135deg, var(--rose) 0%, var(--rose-dark) 100%) !important;
   color: #ffffff !important;
   box-shadow: 0 4px 14px rgba(232, 62, 116, 0.35) !important;
@@ -820,30 +829,30 @@ main:not(.home-main) > div.bg-white.bg-white .signature-tick {
 }
 
 /* 2a. Alternating Odd (Pink) sections -> Navy (Navbar color) */
-main:not(.home-main) > :nth-child(odd):not(:first-child) .card-badge,
-main:not(.home-main) > div:nth-child(odd):not(:first-child) .card-badge,
-main:not(.home-main) > section:nth-child(odd):not(:first-child) .card-badge,
-main:not(.home-main) > :nth-child(odd):not(:first-child) .card-highlight :is(span, div).bg-rose,
-main:not(.home-main) > div:nth-child(odd):not(:first-child) .card-highlight :is(span, div).bg-rose,
-main:not(.home-main) > section:nth-child(odd):not(:first-child) .card-highlight :is(span, div).bg-rose,
-main:not(.home-main) > :nth-child(odd):not(:first-child) [class*="rounded-"] :is(span, div):is([class*="size-6"], [class*="size-7"], [class*="size-8"], [class*="size-9"], [class*="size-10"], [class*="size-11"]).bg-rose,
-main:not(.home-main) > div:nth-child(odd):not(:first-child) [class*="rounded-"] :is(span, div):is([class*="size-6"], [class*="size-7"], [class*="size-8"], [class*="size-9"], [class*="size-10"], [class*="size-11"]).bg-rose,
-main:not(.home-main) > section:nth-child(odd):not(:first-child) [class*="rounded-"] :is(span, div):is([class*="size-6"], [class*="size-7"], [class*="size-8"], [class*="size-9"], [class*="size-10"], [class*="size-11"]).bg-rose {
+main:not(.home-main)> :nth-child(odd):not(:first-child) .card-badge,
+main:not(.home-main)>div:nth-child(odd):not(:first-child) .card-badge,
+main:not(.home-main)>section:nth-child(odd):not(:first-child) .card-badge,
+main:not(.home-main)> :nth-child(odd):not(:first-child) .card-highlight :is(span, div).bg-rose,
+main:not(.home-main)>div:nth-child(odd):not(:first-child) .card-highlight :is(span, div).bg-rose,
+main:not(.home-main)>section:nth-child(odd):not(:first-child) .card-highlight :is(span, div).bg-rose,
+main:not(.home-main)> :nth-child(odd):not(:first-child) [class*="rounded-"] :is(span, div):is([class*="size-6"], [class*="size-7"], [class*="size-8"], [class*="size-9"], [class*="size-10"], [class*="size-11"]).bg-rose,
+main:not(.home-main)>div:nth-child(odd):not(:first-child) [class*="rounded-"] :is(span, div):is([class*="size-6"], [class*="size-7"], [class*="size-8"], [class*="size-9"], [class*="size-10"], [class*="size-11"]).bg-rose,
+main:not(.home-main)>section:nth-child(odd):not(:first-child) [class*="rounded-"] :is(span, div):is([class*="size-6"], [class*="size-7"], [class*="size-8"], [class*="size-9"], [class*="size-10"], [class*="size-11"]).bg-rose {
   background-color: var(--navy) !important;
   color: #ffffff !important;
   box-shadow: 0 4px 14px rgba(6, 21, 50, 0.35) !important;
 }
 
 /* 2b. Alternating Even (White) sections -> Rose/Pink */
-main:not(.home-main) > :nth-child(even) .card-badge,
-main:not(.home-main) > div:nth-child(even) .card-badge,
-main:not(.home-main) > section:nth-child(even) .card-badge,
-main:not(.home-main) > :nth-child(even) .card-highlight :is(span, div):is(.bg-rose, .bg-blue, .bg-navy),
-main:not(.home-main) > div:nth-child(even) .card-highlight :is(span, div):is(.bg-rose, .bg-blue, .bg-navy),
-main:not(.home-main) > section:nth-child(even) .card-highlight :is(span, div):is(.bg-rose, .bg-blue, .bg-navy),
-main:not(.home-main) > :nth-child(even) [class*="rounded-"] :is(span, div):is([class*="size-6"], [class*="size-7"], [class*="size-8"], [class*="size-9"], [class*="size-10"], [class*="size-11"]):is(.bg-rose, .bg-blue, .bg-navy),
-main:not(.home-main) > div:nth-child(even) [class*="rounded-"] :is(span, div):is([class*="size-6"], [class*="size-7"], [class*="size-8"], [class*="size-9"], [class*="size-10"], [class*="size-11"]):is(.bg-rose, .bg-blue, .bg-navy),
-main:not(.home-main) > section:nth-child(even) [class*="rounded-"] :is(span, div):is([class*="size-6"], [class*="size-7"], [class*="size-8"], [class*="size-9"], [class*="size-10"], [class*="size-11"]):is(.bg-rose, .bg-blue, .bg-navy) {
+main:not(.home-main)> :nth-child(even) .card-badge,
+main:not(.home-main)>div:nth-child(even) .card-badge,
+main:not(.home-main)>section:nth-child(even) .card-badge,
+main:not(.home-main)> :nth-child(even) .card-highlight :is(span, div):is(.bg-rose, .bg-blue, .bg-navy),
+main:not(.home-main)>div:nth-child(even) .card-highlight :is(span, div):is(.bg-rose, .bg-blue, .bg-navy),
+main:not(.home-main)>section:nth-child(even) .card-highlight :is(span, div):is(.bg-rose, .bg-blue, .bg-navy),
+main:not(.home-main)> :nth-child(even) [class*="rounded-"] :is(span, div):is([class*="size-6"], [class*="size-7"], [class*="size-8"], [class*="size-9"], [class*="size-10"], [class*="size-11"]):is(.bg-rose, .bg-blue, .bg-navy),
+main:not(.home-main)>div:nth-child(even) [class*="rounded-"] :is(span, div):is([class*="size-6"], [class*="size-7"], [class*="size-8"], [class*="size-9"], [class*="size-10"], [class*="size-11"]):is(.bg-rose, .bg-blue, .bg-navy),
+main:not(.home-main)>section:nth-child(even) [class*="rounded-"] :is(span, div):is([class*="size-6"], [class*="size-7"], [class*="size-8"], [class*="size-9"], [class*="size-10"], [class*="size-11"]):is(.bg-rose, .bg-blue, .bg-navy) {
   background-color: var(--rose) !important;
   color: #ffffff !important;
   box-shadow: 0 4px 14px rgba(232, 62, 116, 0.4) !important;
@@ -851,12 +860,12 @@ main:not(.home-main) > section:nth-child(even) [class*="rounded-"] :is(span, div
 
 /* 2c. Explicit Pink section override -> Navy (Navbar color) */
 main:not(.home-main) section.bg-pink.bg-pink .card-badge,
-main:not(.home-main) > div.bg-pink.bg-pink .card-badge,
+main:not(.home-main)>div.bg-pink.bg-pink .card-badge,
 main:not(.home-main) section[style*="var(--pink)"].relative .card-badge,
 main:not(.home-main) section.bg-pink.bg-pink .card-highlight :is(span, div).bg-rose,
-main:not(.home-main) > div.bg-pink.bg-pink .card-highlight :is(span, div).bg-rose,
+main:not(.home-main)>div.bg-pink.bg-pink .card-highlight :is(span, div).bg-rose,
 main:not(.home-main) section.bg-pink.bg-pink [class*="rounded-"] :is(span, div):is([class*="size-6"], [class*="size-7"], [class*="size-8"], [class*="size-9"], [class*="size-10"], [class*="size-11"]).bg-rose,
-main:not(.home-main) > div.bg-pink.bg-pink [class*="rounded-"] :is(span, div):is([class*="size-6"], [class*="size-7"], [class*="size-8"], [class*="size-9"], [class*="size-10"], [class*="size-11"]).bg-rose {
+main:not(.home-main)>div.bg-pink.bg-pink [class*="rounded-"] :is(span, div):is([class*="size-6"], [class*="size-7"], [class*="size-8"], [class*="size-9"], [class*="size-10"], [class*="size-11"]).bg-rose {
   background-color: var(--navy) !important;
   color: #ffffff !important;
   box-shadow: 0 4px 14px rgba(6, 21, 50, 0.35) !important;
@@ -864,11 +873,11 @@ main:not(.home-main) > div.bg-pink.bg-pink [class*="rounded-"] :is(span, div):is
 
 /* 2d. Explicit White section override -> Rose/Pink */
 main:not(.home-main) section.bg-white.bg-white .card-badge,
-main:not(.home-main) > div.bg-white.bg-white .card-badge,
+main:not(.home-main)>div.bg-white.bg-white .card-badge,
 main:not(.home-main) section.bg-white.bg-white .card-highlight :is(span, div):is(.bg-rose, .bg-blue, .bg-navy),
-main:not(.home-main) > div.bg-white.bg-white .card-highlight :is(span, div):is(.bg-rose, .bg-blue, .bg-navy),
+main:not(.home-main)>div.bg-white.bg-white .card-highlight :is(span, div):is(.bg-rose, .bg-blue, .bg-navy),
 main:not(.home-main) section.bg-white.bg-white [class*="rounded-"] :is(span, div):is([class*="size-6"], [class*="size-7"], [class*="size-8"], [class*="size-9"], [class*="size-10"], [class*="size-11"]):is(.bg-rose, .bg-blue, .bg-navy),
-main:not(.home-main) > div.bg-white.bg-white [class*="rounded-"] :is(span, div):is([class*="size-6"], [class*="size-7"], [class*="size-8"], [class*="size-9"], [class*="size-10"], [class*="size-11"]):is(.bg-rose, .bg-blue, .bg-navy) {
+main:not(.home-main)>div.bg-white.bg-white [class*="rounded-"] :is(span, div):is([class*="size-6"], [class*="size-7"], [class*="size-8"], [class*="size-9"], [class*="size-10"], [class*="size-11"]):is(.bg-rose, .bg-blue, .bg-navy) {
   background-color: var(--rose) !important;
   color: #ffffff !important;
   box-shadow: 0 4px 14px rgba(232, 62, 116, 0.4) !important;
@@ -880,18 +889,18 @@ main:not(.home-main) > div.bg-white.bg-white [class*="rounded-"] :is(span, div):
    ========================================================================== */
 
 /* 3a. Alternating Odd (Pink) sections -> Navy checkmark badge */
-main:not(.home-main) > :nth-child(odd):not(:first-child) span:is([class*="size-5"], [class*="size-6"]):is(.bg-rose\/15, .bg-rose\/20, .bg-blue\/15, .bg-blue\/20, .bg-blue\/25, .text-blue),
-main:not(.home-main) > div:nth-child(odd):not(:first-child) span:is([class*="size-5"], [class*="size-6"]):is(.bg-rose\/15, .bg-rose\/20, .bg-blue\/15, .bg-blue\/20, .bg-blue\/25, .text-blue),
-main:not(.home-main) > section:nth-child(odd):not(:first-child) span:is([class*="size-5"], [class*="size-6"]):is(.bg-rose\/15, .bg-rose\/20, .bg-blue\/15, .bg-blue\/20, .bg-blue\/25, .text-blue) {
+main:not(.home-main)> :nth-child(odd):not(:first-child) span:is([class*="size-5"], [class*="size-6"]):is(.bg-rose\/15, .bg-rose\/20, .bg-blue\/15, .bg-blue\/20, .bg-blue\/25, .text-blue),
+main:not(.home-main)>div:nth-child(odd):not(:first-child) span:is([class*="size-5"], [class*="size-6"]):is(.bg-rose\/15, .bg-rose\/20, .bg-blue\/15, .bg-blue\/20, .bg-blue\/25, .text-blue),
+main:not(.home-main)>section:nth-child(odd):not(:first-child) span:is([class*="size-5"], [class*="size-6"]):is(.bg-rose\/15, .bg-rose\/20, .bg-blue\/15, .bg-blue\/20, .bg-blue\/25, .text-blue) {
   background-color: rgba(6, 21, 50, 0.08) !important;
   color: var(--navy) !important;
   box-shadow: 0 0 0 1px rgba(6, 21, 50, 0.22) !important;
 }
 
 /* 3b. Alternating Even (White) sections -> Pink/Rose checkmark badge */
-main:not(.home-main) > :nth-child(even) span:is([class*="size-5"], [class*="size-6"]):is(.bg-rose\/15, .bg-rose\/20, .bg-blue\/15, .bg-blue\/20, .bg-blue\/25, .text-blue),
-main:not(.home-main) > div:nth-child(even) span:is([class*="size-5"], [class*="size-6"]):is(.bg-rose\/15, .bg-rose\/20, .bg-blue\/15, .bg-blue\/20, .bg-blue\/25, .text-blue),
-main:not(.home-main) > section:nth-child(even) span:is([class*="size-5"], [class*="size-6"]):is(.bg-rose\/15, .bg-rose\/20, .bg-blue\/15, .bg-blue\/20, .bg-blue\/25, .text-blue) {
+main:not(.home-main)> :nth-child(even) span:is([class*="size-5"], [class*="size-6"]):is(.bg-rose\/15, .bg-rose\/20, .bg-blue\/15, .bg-blue\/20, .bg-blue\/25, .text-blue),
+main:not(.home-main)>div:nth-child(even) span:is([class*="size-5"], [class*="size-6"]):is(.bg-rose\/15, .bg-rose\/20, .bg-blue\/15, .bg-blue\/20, .bg-blue\/25, .text-blue),
+main:not(.home-main)>section:nth-child(even) span:is([class*="size-5"], [class*="size-6"]):is(.bg-rose\/15, .bg-rose\/20, .bg-blue\/15, .bg-blue\/20, .bg-blue\/25, .text-blue) {
   background-color: rgba(232, 62, 116, 0.15) !important;
   color: var(--rose) !important;
   box-shadow: 0 0 0 1px rgba(232, 62, 116, 0.35) !important;
@@ -899,7 +908,7 @@ main:not(.home-main) > section:nth-child(even) span:is([class*="size-5"], [class
 
 /* 3c. Explicit Pink section override -> Navy checkmark badge */
 main:not(.home-main) section.bg-pink.bg-pink span:is([class*="size-5"], [class*="size-6"]):is(.bg-rose\/15, .bg-rose\/20, .bg-blue\/15, .bg-blue\/20, .bg-blue\/25, .text-blue),
-main:not(.home-main) > div.bg-pink.bg-pink span:is([class*="size-5"], [class*="size-6"]):is(.bg-rose\/15, .bg-rose\/20, .bg-blue\/15, .bg-blue\/20, .bg-blue\/25, .text-blue),
+main:not(.home-main)>div.bg-pink.bg-pink span:is([class*="size-5"], [class*="size-6"]):is(.bg-rose\/15, .bg-rose\/20, .bg-blue\/15, .bg-blue\/20, .bg-blue\/25, .text-blue),
 main:not(.home-main) section[style*="var(--pink)"].relative span:is([class*="size-5"], [class*="size-6"]):is(.bg-rose\/15, .bg-rose\/20, .bg-blue\/15, .bg-blue\/20, .bg-blue\/25, .text-blue) {
   background-color: rgba(6, 21, 50, 0.08) !important;
   color: var(--navy) !important;
@@ -908,24 +917,24 @@ main:not(.home-main) section[style*="var(--pink)"].relative span:is([class*="siz
 
 /* 3d. Explicit White section override -> Pink/Rose checkmark badge */
 main:not(.home-main) section.bg-white.bg-white span:is([class*="size-5"], [class*="size-6"]):is(.bg-rose\/15, .bg-rose\/20, .bg-blue\/15, .bg-blue\/20, .bg-blue\/25, .text-blue),
-main:not(.home-main) > div.bg-white.bg-white span:is([class*="size-5"], [class*="size-6"]):is(.bg-rose\/15, .bg-rose\/20, .bg-blue\/15, .bg-blue\/20, .bg-blue\/25, .text-blue) {
+main:not(.home-main)>div.bg-white.bg-white span:is([class*="size-5"], [class*="size-6"]):is(.bg-rose\/15, .bg-rose\/20, .bg-blue\/15, .bg-blue\/20, .bg-blue\/25, .text-blue) {
   background-color: rgba(232, 62, 116, 0.15) !important;
   color: var(--rose) !important;
   box-shadow: 0 0 0 1px rgba(232, 62, 116, 0.35) !important;
 }
 
 /* Standalone FaCheckCircle SVG icons inside Pink vs White sections */
-main:not(.home-main) > :nth-child(odd):not(:first-child) [class*="rounded-"] > svg.text-rose,
-main:not(.home-main) > div:nth-child(odd):not(:first-child) [class*="rounded-"] > svg.text-rose,
-main:not(.home-main) > section:nth-child(odd):not(:first-child) [class*="rounded-"] > svg.text-rose,
-main:not(.home-main) section.bg-pink.bg-pink [class*="rounded-"] > svg.text-rose {
+main:not(.home-main)> :nth-child(odd):not(:first-child) [class*="rounded-"]>svg.text-rose,
+main:not(.home-main)>div:nth-child(odd):not(:first-child) [class*="rounded-"]>svg.text-rose,
+main:not(.home-main)>section:nth-child(odd):not(:first-child) [class*="rounded-"]>svg.text-rose,
+main:not(.home-main) section.bg-pink.bg-pink [class*="rounded-"]>svg.text-rose {
   color: var(--navy) !important;
 }
 
-main:not(.home-main) > :nth-child(even) [class*="rounded-"] > svg:is(.text-rose, .text-blue),
-main:not(.home-main) > div:nth-child(even) [class*="rounded-"] > svg:is(.text-rose, .text-blue),
-main:not(.home-main) > section:nth-child(even) [class*="rounded-"] > svg:is(.text-rose, .text-blue),
-main:not(.home-main) section.bg-white.bg-white [class*="rounded-"] > svg:is(.text-rose, .text-blue) {
+main:not(.home-main)> :nth-child(even) [class*="rounded-"]>svg:is(.text-rose, .text-blue),
+main:not(.home-main)>div:nth-child(even) [class*="rounded-"]>svg:is(.text-rose, .text-blue),
+main:not(.home-main)>section:nth-child(even) [class*="rounded-"]>svg:is(.text-rose, .text-blue),
+main:not(.home-main) section.bg-white.bg-white [class*="rounded-"]>svg:is(.text-rose, .text-blue) {
   color: var(--rose) !important;
 }
 
@@ -981,12 +990,10 @@ main a.underline:hover {
   width: 140px !important;
   height: 120px !important;
   border-radius: 9999px !important;
-  background: radial-gradient(
-    circle at top right,
-    rgba(232, 62, 116, 0.18) 0%,
-    rgba(232, 62, 116, 0.06) 45%,
-    transparent 70%
-  ) !important;
+  background: radial-gradient(circle at top right,
+      rgba(232, 62, 116, 0.18) 0%,
+      rgba(232, 62, 116, 0.06) 45%,
+      transparent 70%) !important;
   pointer-events: none !important;
   z-index: 1 !important;
   filter: blur(14px) !important;

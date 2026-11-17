@@ -6,9 +6,9 @@ import {
   FaCalendarCheck,
   FaPhoneAlt,
   FaEnvelope,
-  FaCheckCircle,
-} from "react-icons/fa";
+  } from "react-icons/fa";
 import { Reveal } from "@/components/ui/Reveal";
+import RequestAppointmentCard from "@/components/ui/RequestAppointmentCard";
 
 export default function ContactBookingSection() {
   const [submitted, setSubmitted] = useState(false);
@@ -88,7 +88,7 @@ export default function ContactBookingSection() {
                   </span>
                 </div>
 
-                <div className="rounded-xl border border-navy/20 bg-navy/5 p-3.5">
+                <div className="rounded-xl border border-navy/20 bg-blue/5 p-3.5">
                   <span className="block text-[11px] font-bold uppercase tracking-wider text-navy">
                     Foreign Patients
                   </span>
@@ -133,96 +133,7 @@ export default function ContactBookingSection() {
           {/* Right Column: Appointment Form */}
           <div className="lg:col-span-6">
             <Reveal variant="slideLeft" delay={0.15}>
-              <div className="rounded-2xl border border-rose/15 bg-white p-6 sm:p-8 shadow-[0_10px_35px_rgba(232,62,116,0.08)]">
-                <h3 className="font-display text-xl sm:text-2xl font-bold text-ink mb-1">
-                  Request an appointment
-                </h3>
-                <p className="text-xs text-ink/65 mb-6">
-                  Fill in your details and our coordinator will connect with you within 2 business hours.
-                </p>
-
-                {submitted ? (
-                  <div className="rounded-xl bg-emerald-50 border border-emerald-200 p-6 text-center">
-                    <FaCheckCircle className="mx-auto text-3xl text-emerald-600 mb-2" />
-                    <h4 className="text-base font-bold text-emerald-900">
-                      Request Received!
-                    </h4>
-                    <p className="mt-1 text-xs text-emerald-700">
-                      Thank you, {formData.name}. Our clinic coordinator will call or WhatsApp you shortly at {formData.phone} to confirm your slot at {formData.clinic} clinic.
-                    </p>
-                  </div>
-                ) : (
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <div>
-                      <label className="block text-xs font-semibold text-ink/80 mb-1.5">
-                        Your name
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        placeholder="Enter your full name"
-                        value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full rounded-xl border border-rose/20 bg-white px-4 py-2.5 text-sm text-ink placeholder:text-ink/40 focus:border-rose focus:outline-none focus:ring-1 focus:ring-rose"
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-xs font-semibold text-ink/80 mb-1.5">
-                        Phone number
-                      </label>
-                      <div className="flex items-center rounded-xl border border-rose/20 bg-white focus-within:border-rose focus-within:ring-1 focus-within:ring-rose">
-                        <span className="flex items-center gap-1 border-r border-rose/15 px-3 py-2.5 text-xs font-semibold text-ink/75 bg-pink/40 rounded-l-xl">
-                          🇮🇳 +91
-                        </span>
-                        <input
-                          type="tel"
-                          required
-                          placeholder="Enter Phone"
-                          value={formData.phone}
-                          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          className="w-full rounded-r-xl bg-transparent px-3 py-2.5 text-sm text-ink placeholder:text-ink/40 focus:outline-none"
-                        />
-                      </div>
-                    </div>
-
-                    <div>
-                      <label className="block text-xs font-semibold text-ink/80 mb-1.5">
-                        Preferred clinic
-                      </label>
-                      <select
-                        value={formData.clinic}
-                        onChange={(e) => setFormData({ ...formData, clinic: e.target.value })}
-                        className="w-full rounded-xl border border-rose/20 bg-white px-4 py-2.5 text-sm text-ink focus:border-rose focus:outline-none focus:ring-1 focus:ring-rose"
-                      >
-                        <option value="Noida">Noida (Sector 49)</option>
-                        <option value="Ghaziabad">Ghaziabad (Raj Nagar)</option>
-                        <option value="Delhi">Delhi (Lajpat Nagar IV)</option>
-                      </select>
-                    </div>
-
-                    <div>
-                      <label className="block text-xs font-semibold text-ink/80 mb-1.5">
-                        Anything you want us to know (optional)
-                      </label>
-                      <textarea
-                        rows={3}
-                        placeholder="Mention previous treatments, primary concern, or preferred appointment day/time"
-                        value={formData.notes}
-                        onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                        className="w-full rounded-xl border border-rose/20 bg-white px-4 py-2.5 text-sm text-ink placeholder:text-ink/40 focus:border-rose focus:outline-none focus:ring-1 focus:ring-rose resize-none"
-                      />
-                    </div>
-
-                    <button
-                      type="submit"
-                      className="w-full rounded-xl bg-rose py-3 text-sm font-bold text-white shadow-[0_10px_24px_rgba(232,62,116,0.25)] transition hover:bg-rose-dark active:scale-[0.99]"
-                    >
-                      Request an appointment
-                    </button>
-                  </form>
-                )}
-              </div>
+              <RequestAppointmentCard />
             </Reveal>
           </div>
         </div>

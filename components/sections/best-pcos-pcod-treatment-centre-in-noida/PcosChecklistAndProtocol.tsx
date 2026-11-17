@@ -9,6 +9,7 @@ import {
   ProtocolCard,
   WhyPointRow,
   ChecklistRow,
+  autoLinkNode,
 } from "@/components/ui/treatment";
 
 const checklist = [
@@ -62,7 +63,7 @@ function LinkedProtocolCard({
             <span className="pt-0.5 text-[14px] leading-none text-rose select-none">
               ↳
             </span>
-            <p className="flex-1">{bullet}</p>
+            <p className="flex-1">{autoLinkNode(bullet)}</p>
           </div>
         ))}
       </div>

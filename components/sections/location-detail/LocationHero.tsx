@@ -30,7 +30,7 @@ export default function LocationHero({
       />
 
       <div className="page-container relative z-10 w-full pt-4 sm:pt-5 lg:pt-0">
-        <div className="lg:max-w-[28rem] xl:max-w-[34rem] 2xl:max-w-[38rem]">
+        <div className="lg:max-w-[44rem] xl:max-w-[48rem] 2xl:max-w-[50rem] lg:-mt-1">
           <Breadcrumb
             items={[
               hero.breadcrumbParent,
@@ -47,7 +47,7 @@ export default function LocationHero({
               {hero.title}
             </h1>
 
-            <p className="mt-4 max-w-[38rem] text-[14px] leading-relaxed text-ink/85 sm:text-[15px]">
+            <p className="mt-4 max-w-none text-[14px] leading-relaxed text-ink/85 sm:text-[15px]">
               {hero.descriptionPrefix}
               <strong className="font-semibold text-ink">
                 {hero.highlightLocation}
@@ -56,22 +56,22 @@ export default function LocationHero({
             </p>
           </Reveal>
 
-          <div className="mt-4 flex flex-wrap items-center gap-2.5 sm:mt-5 sm:gap-3.5">
+          <div className="mt-5 sm:mt-6 flex flex-wrap items-center gap-2.5 sm:mt-5 sm:gap-3.5">
             <a
               href={hero.primaryCta.href}
-              className="inline-flex items-center justify-center rounded-full border border-rose/20 bg-white/75 px-6 py-2.5 text-[13.5px] font-bold text-ink shadow-[0_4px_14px_rgba(15,36,56,0.05)] backdrop-blur-sm transition-all hover:border-rose/50 hover:bg-white hover:text-rose active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"
+              className="inline-flex items-center justify-center rounded-full bg-rose px-6 py-2.5 text-[13.5px] font-bold text-white shadow-[0_8px_20px_rgba(232,62,116,0.28)] transition-all hover:bg-rose-dark active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"
             >
               {hero.primaryCta.label}
             </a>
             <Link
               href={hero.secondaryCta.href}
-              className="inline-flex items-center justify-center rounded-full bg-navy px-6 py-2.5 text-[13.5px] font-semibold text-white shadow-[0_8px_20px_rgba(6,21,50,0.35)] ring-1 ring-navy/20 transition-all hover:bg-navy-mid hover:brightness-110 active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"
+              className="inline-flex items-center justify-center rounded-full bg-blue px-6 py-2.5 text-[13.5px] font-semibold text-white shadow-[0_8px_20px_rgba(0,71,202,0.28)] ring-1 ring-blue/20 transition-all hover:bg-blue-mid hover:brightness-110 active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"
             >
               {hero.secondaryCta.label}
             </Link>
           </div>
 
-          <div className="mt-3.5 flex flex-wrap items-center gap-1.5 sm:mt-4 sm:gap-2">
+          <div className="mt-5 sm:mt-6 flex flex-wrap items-center gap-1.5 sm:mt-4 sm:gap-2">
             {hero.pills.map((pill) => (
               <span
                 key={pill}

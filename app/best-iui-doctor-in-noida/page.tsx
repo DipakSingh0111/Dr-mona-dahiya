@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import IuiTreatmentHero from "@/components/sections/iui-treatment/IuiTreatmentHero";
+import BestIuiNoidaHero from "@/components/sections/best-iui-doctor-in-noida/BestIuiNoidaHero";
 import MedicalRegistration from "@/components/sections/MedicalRegistration";
 import IuiAbout from "@/components/sections/iui-treatment/IuiAbout";
 import IuiDoctorGlance from "@/components/sections/iui-treatment/IuiDoctorGlance";
@@ -29,7 +29,7 @@ export default function BestIuiDoctorInNoidaPage() {
   return (
     <main className="flex min-h-screen flex-col bg-pink">
       {/* 1. Hero: IUI Treatment in Noida (Image 1) */}
-      <IuiTreatmentHero />
+      <BestIuiNoidaHero />
 
       {/* 2. Medical Council Registration Numbers (Image 2 Top) */}
       <SectionReveal>

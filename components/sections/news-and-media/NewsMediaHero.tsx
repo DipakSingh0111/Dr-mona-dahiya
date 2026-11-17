@@ -38,7 +38,7 @@ export default function NewsMediaHero() {
       />
 
       <div className="page-container relative z-10 w-full pt-4 sm:pt-5 lg:pt-0">
-        <div className="lg:max-w-[28rem] xl:max-w-[34rem] 2xl:max-w-[38rem]">
+        <div className="lg:max-w-[44rem] xl:max-w-[48rem] 2xl:max-w-[50rem] lg:-mt-1">
           <Breadcrumb
           items={[
             { label: "About Dr. Mona", href: "/about-mona-dahiya" },
@@ -51,13 +51,11 @@ export default function NewsMediaHero() {
               News &amp; media
             </p>
 
-            <h1 className="font-serif mt-1.5 max-w-[34rem] text-[1.85rem] leading-[1.18] font-normal tracking-tight text-ink sm:text-[2.35rem] lg:text-[2.55rem] xl:text-[2.85rem]">
-              Dr. Mona Dahiya in
-              <br />
-              the News &amp; Media
+            <h1 className="font-serif mt-1.5 max-w-none text-[1.85rem] leading-[1.18] font-normal tracking-tight text-ink sm:text-[2.35rem] lg:text-[2.45rem] xl:text-[2.75rem]">
+              Dr. Mona Dahiya in the News &amp; Media
             </h1>
 
-            <p className="mt-3.5 max-w-xl text-[13.5px] leading-relaxed text-ink/80 sm:mt-4 sm:text-[14.5px]">
+            <p className="mt-3.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/80 sm:mt-4 sm:text-[14.5px]">
               Dr. Mona Dahiya&apos;s interviews, articles and features have
               appeared in some of India&apos;s top publications, covering
               national news and business media as well as healthcare and
@@ -65,16 +63,16 @@ export default function NewsMediaHero() {
               read the article on the publisher&apos;s website.
             </p>
 
-            <div className="mt-3.5 flex flex-wrap items-center gap-1.5 sm:mt-4 sm:gap-2">
+            <div className="mt-5 sm:mt-6 flex flex-wrap items-center gap-1.5 sm:mt-4 sm:gap-2">
               <a
                 href="#book-consultation"
-                className="inline-flex items-center justify-center rounded-full border border-rose/20 bg-white/75 backdrop-blur-sm px-4 py-2.5 text-[12.5px] font-semibold whitespace-nowrap text-ink shadow-[0_4px_14px_rgba(15,36,56,0.05)] transition-all hover:border-rose/50 hover:bg-white hover:text-rose active:scale-95 sm:px-5 sm:py-3 sm:text-[13.5px]"
+                className="inline-flex items-center justify-center rounded-full bg-rose px-4 py-2.5 text-[12.5px] font-semibold whitespace-nowrap text-white shadow-[0_8px_20px_rgba(232,62,116,0.28)] transition-all hover:bg-rose-dark active:scale-95 sm:px-5 sm:py-3 sm:text-[13.5px]"
               >
                 Book In-Clinic Consultation
               </a>
               <Link
                 href="/ivf-consultation-online"
-                className="inline-flex items-center justify-center rounded-full bg-navy px-4 py-2.5 text-[12.5px] font-semibold whitespace-nowrap text-white shadow-md ring-1 ring-navy/20 transition-all hover:bg-navy-mid active:scale-95 sm:px-5 sm:py-3 sm:text-[13.5px]"
+                className="inline-flex items-center justify-center rounded-full bg-blue px-4 py-2.5 text-[12.5px] font-semibold whitespace-nowrap text-white shadow-md ring-1 ring-blue/20 transition-all hover:bg-blue-mid active:scale-95 sm:px-5 sm:py-3 sm:text-[13.5px]"
               >
                 Schedule Online Consultation
               </Link>

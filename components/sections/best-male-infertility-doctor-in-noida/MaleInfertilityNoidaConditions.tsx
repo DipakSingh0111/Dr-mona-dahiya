@@ -6,6 +6,7 @@ import { Stagger, StaggerItem } from "@/components/ui/Reveal";
 import {
   TreatmentSection,
   TreatmentSectionHeader,
+  autoLinkNode,
 } from "@/components/ui/treatment";
 
 const conditions = [
@@ -103,7 +104,7 @@ export default function MaleInfertilityNoidaConditions() {
                 </h3>
               </div>
               <p className="mt-3 text-[13px] leading-relaxed text-ink/80 sm:text-[13.5px]">
-                {item.description}
+                {autoLinkNode(item.description)}
               </p>
             </div>
           </StaggerItem>

@@ -27,7 +27,7 @@ export default function OncofertilityHero() {
     >
       <HeroFullWidthBanner src="/pageBanner/M0500456.jpg" alt="Dr. Mona Dahiya — Oncofertility in Delhi NCR" />
       <div className="page-container relative z-10 w-full pt-4 sm:pt-5 lg:pt-0">
-        <div className="lg:max-w-[28rem] xl:max-w-[34rem] 2xl:max-w-[38rem]">
+        <div className="lg:max-w-[44rem] xl:max-w-[48rem] 2xl:max-w-[50rem] lg:-mt-2">
           <Breadcrumb
             items={[
               { label: "Treatments", href: "/our-services" },
@@ -39,7 +39,7 @@ export default function OncofertilityHero() {
             Cancer fertility preservation
           </p>
 
-          <h1 className="font-serif mt-1.5 max-w-[42rem] text-[1.65rem] leading-[1.16] font-normal tracking-tight text-ink sm:text-[2.15rem] lg:text-[2.45rem] xl:text-[2.65rem]">
+          <h1 className="font-serif mt-1.5 max-w-[48rem] text-[1.65rem] leading-[1.16] font-normal tracking-tight text-ink sm:text-[2.15rem] lg:text-[2.45rem] xl:text-[2.65rem]">
             Oncofertility: To Preserve Fertility Before Cancer Treatments
           </h1>
 
@@ -50,16 +50,16 @@ export default function OncofertilityHero() {
             get started in 24 to 48 hours.
           </p>
 
-          <div className="mt-3.5 flex flex-wrap items-center gap-1.5 sm:mt-4 sm:gap-2">
+          <div className="mt-5 sm:mt-6 flex flex-wrap items-center gap-1.5 sm:mt-4 sm:gap-2">
             <a
               href="#book-consultation"
-              className="inline-flex items-center justify-center rounded-full border border-rose/20 bg-white/75 backdrop-blur-sm px-5 py-2.5 text-[13px] font-semibold text-ink shadow-[0_4px_14px_rgba(15,36,56,0.05)] transition-all hover:border-rose/50 hover:bg-white hover:text-rose sm:px-6 sm:py-3 sm:text-[14px]"
+              className="inline-flex items-center justify-center rounded-full bg-rose px-5 py-2.5 text-[13px] font-semibold text-white shadow-[0_8px_20px_rgba(232,62,116,0.28)] transition-all hover:bg-rose-dark sm:px-6 sm:py-3 sm:text-[14px]"
             >
               In-Clinic Appointment
             </a>
             <Link
               href="/ivf-consultation-online"
-              className="inline-flex items-center justify-center rounded-full bg-navy px-5 py-2.5 text-[13px] font-semibold text-white shadow-[0_4px_16px_rgba(6,21,50,0.35)] transition-all hover:bg-navy-mid sm:px-6 sm:py-3 sm:text-[14px]"
+              className="inline-flex items-center justify-center rounded-full bg-blue px-5 py-2.5 text-[13px] font-semibold text-white shadow-[0_4px_16px_rgba(6,21,50,0.35)] transition-all hover:bg-blue-mid sm:px-6 sm:py-3 sm:text-[14px]"
             >
               Schedule Appointment Online
             </Link>
@@ -76,7 +76,7 @@ export default function OncofertilityHero() {
           </div>
 
           <Stagger
-            className="mt-4 flex flex-wrap items-center gap-2 sm:mt-5 sm:gap-2.5"
+            className="mt-5 sm:mt-6 flex flex-wrap items-center gap-2 sm:mt-5 sm:gap-2.5"
             stagger={0.06}
           >
             {badges.map((badge) => (

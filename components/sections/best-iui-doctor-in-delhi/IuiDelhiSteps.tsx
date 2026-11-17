@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
+import { autoLinkNode } from "@/components/ui/treatment";
 
 export default function IuiDelhiSteps() {
   const steps = [
@@ -80,7 +81,7 @@ export default function IuiDelhiSteps() {
                   </h3>
                 </div>
                 <p className="mt-3 text-[13px] leading-relaxed text-black sm:text-[13.5px]">
-                  {item.desc}
+                  {autoLinkNode(item.desc)}
                 </p>
               </div>
             </StaggerItem>

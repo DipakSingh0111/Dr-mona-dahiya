@@ -37,7 +37,7 @@ export default function IvfFaqsHero({
         />
 
         <div className="page-container relative z-10 w-full pt-4 sm:pt-5 lg:pt-0">
-          <div className="lg:max-w-[28rem] xl:max-w-[34rem] 2xl:max-w-[38rem]">
+          <div className="lg:max-w-[44rem] xl:max-w-[48rem] 2xl:max-w-[50rem] lg:-mt-1">
             <Breadcrumb
               items={[
                 { label: "Patient Resources", href: "/ivf-faqs" },
@@ -49,20 +49,20 @@ export default function IvfFaqsHero({
               <p className="text-[12px] font-semibold tracking-wide text-ink/75 sm:text-[13px]">
                 {data.eyebrow}
               </p>
-              <h1 className="font-serif mt-1 max-w-[34rem] text-[1.65rem] leading-[1.2] font-normal tracking-tight text-ink sm:text-[2.1rem] lg:text-[2.3rem] xl:text-[2.55rem]">
+              <h1 className="font-serif mt-1 max-w-[48rem] text-[1.65rem] leading-[1.2] font-normal tracking-tight text-ink sm:text-[2.1rem] lg:text-[2.3rem] xl:text-[2.55rem]">
                 {data.title}
               </h1>
 
-              <div className="mt-4 flex flex-wrap items-center gap-2 sm:mt-5 sm:gap-2.5">
+              <div className="mt-5 sm:mt-6 flex flex-wrap items-center gap-2 sm:mt-5 sm:gap-2.5">
                 <Link
                   href={data.primaryCta.href}
-                  className="inline-flex items-center justify-center rounded-full border border-rose/20 bg-white/75 backdrop-blur-sm px-3.5 py-2 text-[12px] font-semibold whitespace-nowrap text-ink shadow-[0_4px_14px_rgba(15,36,56,0.05)] transition-all hover:border-rose/50 hover:bg-white hover:text-rose active:scale-95 sm:px-5 sm:py-2.5 sm:text-[13px]"
+                  className="inline-flex items-center justify-center rounded-full bg-rose px-3.5 py-2 text-[12px] font-semibold whitespace-nowrap text-white shadow-[0_8px_20px_rgba(232,62,116,0.28)] transition-all hover:bg-rose-dark active:scale-95 sm:px-5 sm:py-2.5 sm:text-[13px]"
                 >
                   {data.primaryCta.label}
                 </Link>
                 <Link
                   href={data.secondaryCta.href}
-                  className="inline-flex items-center justify-center rounded-full bg-navy px-3.5 py-2 text-[12px] font-semibold whitespace-nowrap text-white shadow-md ring-1 ring-navy/20 transition-all hover:bg-navy-mid active:scale-95 sm:px-5 sm:py-2.5 sm:text-[13px]"
+                  className="inline-flex items-center justify-center rounded-full bg-blue px-3.5 py-2 text-[12px] font-semibold whitespace-nowrap text-white shadow-md ring-1 ring-blue/20 transition-all hover:bg-blue-mid active:scale-95 sm:px-5 sm:py-2.5 sm:text-[13px]"
                 >
                   {data.secondaryCta.label}
                 </Link>

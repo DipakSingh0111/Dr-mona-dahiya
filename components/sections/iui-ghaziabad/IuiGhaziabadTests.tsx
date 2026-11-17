@@ -1,6 +1,7 @@
 "use client";
 
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
+import { autoLinkNode } from "@/components/ui/treatment";
 
 export default function IuiGhaziabadTests() {
   const tests = [
@@ -66,7 +67,7 @@ export default function IuiGhaziabadTests() {
                   </h4>
                 </div>
                 <p className="mt-3 text-[13px] leading-relaxed text-slate-600 sm:text-[13.5px]">
-                  {item.desc}
+                  {autoLinkNode(item.desc)}
                 </p>
               </div>
             </StaggerItem>

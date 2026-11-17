@@ -1,9 +1,9 @@
 "use client";
 
-import { useState, type ReactNode } from "react";
+import { type ReactNode } from "react";
 import Link from "next/link";
-import { FaChevronDown, FaCheckCircle } from "react-icons/fa";
 import { Reveal } from "@/components/ui/Reveal";
+import RequestAppointmentCard from "@/components/ui/RequestAppointmentCard";
 
 type Props = {
   sectionId?: string;
@@ -33,25 +33,11 @@ export default function AboutConsultation({
   subtitle = "Book an in-clinic consultation or an online record review. Appointment line:",
   appendContacts = true,
   consultationDuration = "30 minutes",
-  defaultClinic = "Noida",
+  defaultClinic,
   showAddresses = true,
   className = "",
   sectionBg = "bg-pink",
 }: Props) {
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    clinic: defaultClinic,
-    notes: "",
-  });
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!formData.name || !formData.phone) return;
-    setSubmitted(true);
-  };
-
   return (
     <section
       id={sectionId}
@@ -95,7 +81,7 @@ export default function AboutConsultation({
               <div className="mt-6 flex flex-wrap items-center gap-3.5 sm:mt-7">
                 <a
                   href="#request-appointment-form"
-                  className="inline-flex items-center justify-center rounded-full border border-rose/20 bg-white/75 backdrop-blur-sm px-6 py-3 text-[14px] font-semibold text-ink shadow-[0_4px_14px_rgba(15,36,56,0.05)] transition-all duration-200 hover:border-rose/50 hover:bg-white hover:text-rose active:scale-95"
+                  className="inline-flex items-center justify-center rounded-full bg-rose px-6 py-3 text-[14px] font-semibold text-white shadow-[0_8px_20px_rgba(232,62,116,0.28)] transition-all duration-200 hover:bg-rose-dark active:scale-95"
                 >
                   Book In-Clinic Consultation
                 </a>
@@ -186,120 +172,7 @@ export default function AboutConsultation({
           </div>
 
           <div className="lg:col-span-5" id="request-appointment-form">
-            <div className="rounded-[26px] border border-[#fde2ec] bg-white p-6 shadow-xl sm:p-8">
-              <h3 className="font-serif text-[22px] font-bold tracking-tight text-ink sm:text-[24px]">
-                Request an appointment
-              </h3>
-
-              {submitted ? (
-                <div className="mt-6 flex flex-col items-center justify-center rounded-2xl border border-blue/40 bg-[#f0f9ff] p-6 text-center text-blue">
-                  <FaCheckCircle className="size-12 text-blue" />
-                  <h4 className="mt-3 text-lg font-bold text-ink">
-                    Request Received!
-                  </h4>
-                  <p className="mt-1 text-sm text-slate-600">
-                    Our team will call you shortly at {formData.phone} to
-                    confirm your slot at {formData.clinic} clinic.
-                  </p>
-                  <button
-                    type="button"
-                    onClick={() => setSubmitted(false)}
-                    className="mt-4 text-xs font-semibold text-rose underline underline-offset-2 cursor-pointer"
-                  >
-                    Submit another request
-                  </button>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="mt-5 space-y-4">
-                  <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-2">
-                    <div>
-                      <label className="block text-[12.5px] font-semibold text-slate-700">
-                        Your name
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        value={formData.name}
-                        onChange={(e) =>
-                          setFormData({ ...formData, name: e.target.value })
-                        }
-                        className="mt-1.5 w-full rounded-xl border border-slate-200 bg-[#f8fafc] px-3.5 py-2.5 text-[14px] text-ink outline-none transition-all placeholder:text-slate-400 focus:border-rose focus:bg-white focus:ring-1 focus:ring-rose/30"
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-[12.5px] font-semibold text-slate-700">
-                        Phone number
-                      </label>
-                      <div className="mt-1.5 flex rounded-xl border border-slate-200 bg-[#f8fafc] focus-within:border-rose focus-within:bg-white focus-within:ring-1 focus-within:ring-rose/30 transition-all">
-                        <div className="flex items-center gap-1.5 border-r border-slate-200 px-3 text-[13px] text-slate-600">
-                          <span className="text-[15px] leading-none">🇮🇳</span>
-                          <span className="font-semibold text-ink">+91</span>
-                          <FaChevronDown className="size-2 text-slate-400" />
-                        </div>
-                        <input
-                          type="tel"
-                          required
-                          placeholder="Enter Phone"
-                          value={formData.phone}
-                          onChange={(e) =>
-                            setFormData({ ...formData, phone: e.target.value })
-                          }
-                          className="w-full bg-transparent px-3 py-2.5 text-[14px] text-ink outline-none placeholder:text-slate-400"
-                        />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-[12.5px] font-semibold text-slate-700">
-                      Preferred clinic
-                    </label>
-                    <div className="relative mt-1.5">
-                      <select
-                        value={formData.clinic}
-                        onChange={(e) =>
-                          setFormData({ ...formData, clinic: e.target.value })
-                        }
-                        className="w-full appearance-none rounded-xl border border-slate-200 bg-[#f8fafc] px-3.5 py-2.5 text-[14px] text-ink outline-none transition-all focus:border-rose focus:bg-white focus:ring-1 focus:ring-rose/30 cursor-pointer"
-                      >
-                        <option value="Noida" className="bg-white text-ink">
-                          Noida
-                        </option>
-                        <option value="Ghaziabad" className="bg-white text-ink">
-                          Ghaziabad
-                        </option>
-                        <option value="Delhi" className="bg-white text-ink">
-                          Delhi
-                        </option>
-                      </select>
-                      <FaChevronDown className="pointer-events-none absolute top-1/2 right-3.5 size-3 -translate-y-1/2 text-slate-500" />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-[12.5px] font-semibold text-slate-700">
-                      Anything you want us to know (optional)
-                    </label>
-                    <textarea
-                      rows={3}
-                      value={formData.notes}
-                      onChange={(e) =>
-                        setFormData({ ...formData, notes: e.target.value })
-                      }
-                      className="mt-1.5 w-full resize-none rounded-xl border border-slate-200 bg-[#f8fafc] px-3.5 py-2.5 text-[14px] text-ink outline-none transition-all placeholder:text-slate-400 focus:border-rose focus:bg-white focus:ring-1 focus:ring-rose/30"
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="mt-2 w-full rounded-[18px] bg-rose py-3.5 text-[14.5px] font-semibold text-white shadow-md transition-all duration-200 hover:bg-rose-dark active:scale-[0.99] cursor-pointer"
-                  >
-                    Request an appointment
-                  </button>
-                </form>
-              )}
-            </div>
+            <RequestAppointmentCard defaultClinic={defaultClinic} />
           </div>
         </div>
       </div>

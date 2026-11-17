@@ -1,25 +1,11 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
-import { FaCheckCircle, FaChevronDown } from "react-icons/fa";
+import { FaChevronDown } from "react-icons/fa";
 import { Reveal } from "@/components/ui/Reveal";
+import RequestAppointmentCard from "@/components/ui/RequestAppointmentCard";
 
 export default function PgtConsultation() {
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    clinic: "Noida",
-    notes: "",
-  });
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!formData.name || !formData.phone) return;
-    setSubmitted(true);
-  };
-
   return (
     <section
       id="book-consultation"
@@ -56,7 +42,7 @@ export default function PgtConsultation() {
               <div className="mt-6 flex flex-wrap items-center gap-3 sm:mt-7">
                 <a
                   href="#request-appointment-form"
-                  className="inline-flex items-center justify-center rounded-full border border-rose/20 bg-white/75 backdrop-blur-sm px-6 py-2.5 text-[13.5px] font-bold text-ink shadow-[0_4px_14px_rgba(15,36,56,0.05)] transition-all hover:border-rose/50 hover:bg-white hover:text-rose active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"
+                  className="inline-flex items-center justify-center rounded-full bg-rose backdrop-blur-sm px-6 py-2.5 text-[13.5px] font-bold text-white shadow-[0_8px_20px_rgba(232,62,116,0.28)] transition-all hover:bg-rose-dark active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"
                 >
                   Book In-Clinic Consultation
                 </a>
@@ -150,105 +136,7 @@ export default function PgtConsultation() {
           {/* Right Column: Appointment Form */}
           <div id="request-appointment-form" className="lg:col-span-5">
             <Reveal variant="slideRight">
-              <div className="card-highlight rounded-[24px] border border-rose/20 bg-white p-6 shadow-md sm:p-8">
-                <h3 className="font-serif text-[1.4rem] font-bold tracking-tight text-ink sm:text-[1.6rem]">
-                  Request an appointment
-                </h3>
-
-                {submitted ? (
-                  <div className="my-8 rounded-2xl border border-rose/20 bg-rose/5 p-6 text-center">
-                    <FaCheckCircle className="mx-auto size-10 text-rose" />
-                    <h4 className="mt-3 text-[16px] font-bold text-ink">
-                      Request Received!
-                    </h4>
-                    <p className="mt-1.5 text-[13px] text-ink/75">
-                      Our patient care coordinator will call you back shortly.
-                    </p>
-                  </div>
-                ) : (
-                  <form onSubmit={handleSubmit} className="mt-5 space-y-4">
-                    <div>
-                      <label className="block text-[12px] font-medium text-ink/80">
-                        Your name
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        value={formData.name}
-                        onChange={(e) =>
-                          setFormData({ ...formData, name: e.target.value })
-                        }
-                        placeholder="Enter your name"
-                        className="mt-1 w-full rounded-xl border border-slate-200 bg-slate-50 px-3.5 py-2.5 text-[14px] text-ink placeholder-slate-400 focus:border-rose focus:bg-white focus:outline-none focus:ring-1 focus:ring-rose"
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-[12px] font-medium text-ink/80">
-                        Phone number
-                      </label>
-                      <div className="mt-1 flex gap-2">
-                        <div className="inline-flex shrink-0 items-center gap-1.5 rounded-xl border border-slate-200 bg-slate-100 px-3 py-2.5 text-[13px] font-medium text-ink/80">
-                          <span>IN</span>
-                          <span>+91</span>
-                        </div>
-                        <input
-                          type="tel"
-                          required
-                          value={formData.phone}
-                          onChange={(e) =>
-                            setFormData({ ...formData, phone: e.target.value })
-                          }
-                          placeholder="Enter Phone"
-                          className="w-full rounded-xl border border-slate-200 bg-slate-50 px-3.5 py-2.5 text-[14px] text-ink placeholder-slate-400 focus:border-rose focus:bg-white focus:outline-none focus:ring-1 focus:ring-rose"
-                        />
-                      </div>
-                    </div>
-
-                    <div>
-                      <label className="block text-[12px] font-medium text-ink/80">
-                        Preferred clinic
-                      </label>
-                      <div className="relative mt-1">
-                        <select
-                          value={formData.clinic}
-                          onChange={(e) =>
-                            setFormData({ ...formData, clinic: e.target.value })
-                          }
-                          className="w-full appearance-none rounded-xl border border-slate-200 bg-slate-50 px-3.5 py-2.5 text-[14px] text-ink focus:border-rose focus:bg-white focus:outline-none focus:ring-1 focus:ring-rose"
-                        >
-                          <option value="Noida">Noida</option>
-                          <option value="Delhi">Delhi</option>
-                          <option value="Ghaziabad">Ghaziabad</option>
-                        </select>
-                        <FaChevronDown className="pointer-events-none absolute right-3.5 top-1/2 size-3.5 -translate-y-1/2 text-ink/50" />
-                      </div>
-                    </div>
-
-                    <div>
-                      <label className="block text-[12px] font-medium text-ink/80">
-                        Anything you want us to know (optional)
-                      </label>
-                      <textarea
-                        rows={3}
-                        value={formData.notes}
-                        onChange={(e) =>
-                          setFormData({ ...formData, notes: e.target.value })
-                        }
-                        placeholder="Anything you want us to know..."
-                        className="mt-1 w-full rounded-xl border border-slate-200 bg-slate-50 px-3.5 py-2 text-[14px] text-ink placeholder-slate-400 focus:border-rose focus:bg-white focus:outline-none focus:ring-1 focus:ring-rose"
-                      />
-                    </div>
-
-                    <button
-                      type="submit"
-                      className="w-full rounded-xl bg-rose py-3 text-[14px] font-bold text-white shadow-[0_8px_20px_rgba(232,62,116,0.3)] transition-all hover:bg-rose-dark active:scale-95"
-                    >
-                      Request an appointment
-                    </button>
-                  </form>
-                )}
-              </div>
+              <RequestAppointmentCard defaultClinic="Noida" />
             </Reveal>
           </div>
         </div>

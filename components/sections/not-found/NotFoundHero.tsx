@@ -57,7 +57,7 @@ export default function NotFoundHero() {
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3.5 sm:gap-4">
               <Link
                 href="/"
-                className="inline-flex items-center gap-2 rounded-full bg-navy px-6 py-3.5 text-[13.5px] font-bold text-white shadow-lg shadow-navy/25 transition-all hover:bg-navy-mid hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0"
+                className="inline-flex items-center gap-2 rounded-full bg-blue px-6 py-3.5 text-[13.5px] font-bold text-white shadow-lg shadow-navy/25 transition-all hover:bg-blue-mid hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0"
               >
                 <FaHome className="size-4" />
                 <span>Back to Home</span>

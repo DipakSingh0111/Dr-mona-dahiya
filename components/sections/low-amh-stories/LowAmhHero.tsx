@@ -17,6 +17,7 @@ export default function LowAmhHero() {
   ];
 
   return (
+    <>
     <section
         className="relative overflow-hidden flex flex-col justify-center pb-6 sm:pb-8 lg:pb-0"
       style={{ background: "var(--pink)" }}
@@ -40,7 +41,7 @@ export default function LowAmhHero() {
       />
 
       <div className="page-container relative z-10 w-full pt-4 sm:pt-5 lg:pt-0">
-        <div className="lg:max-w-[28rem] xl:max-w-[34rem] 2xl:max-w-[38rem]">
+        <div className="lg:max-w-[44rem] xl:max-w-[48rem] 2xl:max-w-[50rem] lg:-mt-1">
           <Breadcrumb
           items={[
             { label: "Success Stories", href: "/success-stories" },
@@ -53,11 +54,11 @@ export default function LowAmhHero() {
               Low AMH Pregnancy Stories
             </p>
 
-            <h1 className="font-serif mt-1.5 max-w-[40rem] text-[1.65rem] leading-[1.18] font-normal tracking-tight text-ink sm:text-[2.1rem] lg:text-[2.35rem] xl:text-[2.55rem]">
+            <h1 className="font-serif mt-1.5 max-w-[48rem] text-[1.65rem] leading-[1.18] font-normal tracking-tight text-ink sm:text-[2.1rem] lg:text-[2.35rem] xl:text-[2.55rem]">
               Low AMH Success Stories
             </h1>
 
-            <p className="mt-3.5 max-w-[36rem] text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
+            <p className="mt-4 max-w-none text-[13.5px] leading-relaxed text-ink/75 sm:mt-5 sm:text-[15px]">
               Having a low AMH level below 1 ng/ml doesn&apos;t mean your egg
               quality is bad. Many of our patients have achieved pregnancies
               with their own eggs by following a protocol called DuoStim or
@@ -68,13 +69,13 @@ export default function LowAmhHero() {
           <div className="mt-4 flex flex-wrap items-center gap-2.5 sm:mt-5 sm:gap-3.5">
             <a
               href="#book-consultation"
-              className="inline-flex items-center justify-center rounded-full border border-rose/20 bg-white/75 backdrop-blur-sm px-6 py-2.5 text-[13.5px] font-bold text-ink shadow-[0_4px_14px_rgba(15,36,56,0.05)] transition-all hover:border-rose/50 hover:bg-white hover:text-rose active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"
+              className="inline-flex items-center justify-center rounded-full bg-rose px-6 py-2.5 text-[13.5px] font-bold text-white shadow-[0_8px_20px_rgba(232,62,116,0.28)] transition-all hover:bg-rose-dark active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"
             >
               In person consultation
             </a>
             <a
               href="#book-consultation"
-              className="inline-flex items-center justify-center rounded-full bg-navy px-6 py-2.5 text-[13.5px] font-semibold text-white shadow-[0_8px_20px_rgba(6,21,50,0.35)] transition-all hover:bg-navy-mid active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"
+              className="inline-flex items-center justify-center rounded-full bg-blue px-6 py-2.5 text-[13.5px] font-semibold text-white shadow-[0_8px_20px_rgba(0,71,202,0.28)] transition-all hover:bg-blue-mid active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"
             >
               Online consultation
             </a>
@@ -82,14 +83,14 @@ export default function LowAmhHero() {
 
           <Link
             href="/best-ivf-patient-reviews"
-            className="mt-2.5 inline-flex items-center gap-1.5 sm:mt-3 text-[13.5px] font-medium text-rose transition-colors hover:text-rose-dark sm:text-[14px]"
+            className="mt-4 inline-flex items-center gap-1.5 sm:mt-5 text-[13.5px] font-medium text-rose transition-colors hover:text-rose-dark sm:text-[14px]"
           >
             Read Dr Mona Dahiya&apos;s Reviews →
           </Link>
 
           <Stagger
             delay={0.05}
-            className="mt-3.5 flex flex-wrap items-center gap-1.5 sm:mt-4 sm:gap-2"
+            className="mt-5 flex flex-wrap items-center gap-1.5 sm:mt-6 sm:gap-2"
           >
             {badges.map((badge) => (
               <StaggerItem key={badge}>
@@ -104,5 +105,18 @@ export default function LowAmhHero() {
         <HeroMobileBanner src="/pageBanner/M0500442.jpg" alt="Dr. Mona Dahiya - Low AMH Success Stories" />
       </div>
     </section>
+      <section className="relative overflow-hidden bg-white py-7 sm:py-9 border-y border-[#fde2ec]/70">
+        <div className="page-container relative">
+          <HeroCounterBar
+            items={[
+              { target: 25000, suffix: "+", label: "Couples helped to achieve pregnancy" },
+              { target: 25, suffix: "+", label: "Years of experience" },
+              { target: 90, suffix: "%+", label: "Success rate" },
+              { target: 15000, suffix: "+", label: "IVF cycles performed" },
+            ]}
+          />
+        </div>
+      </section>
+    </>
   );
 }

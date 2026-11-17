@@ -14,3 +14,4 @@ export {
   type RelatedTreatmentItem,
 } from "./RelatedTreatmentCard";
 export { ReviewCard, type ReviewCardItem } from "./ReviewCard";
+export { autoLinkNode } from "./AutoLinkText";

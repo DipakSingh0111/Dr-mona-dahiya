@@ -310,7 +310,7 @@ export default function BookAppointment() {
                       onChange={(e) =>
                         setFormData({ ...formData, notes: e.target.value })
                       }
-                      placeholder="Anything you want us to know..."
+                      placeholder="Share your query or preferred time (optional)"
                       className="mt-1.5 w-full resize-none rounded-xl border border-slate-200 bg-[#f8fafc] px-3.5 py-2.5 text-[14px] text-ink outline-none transition-all placeholder:text-slate-400 focus:border-rose focus:bg-white focus:ring-1 focus:ring-rose/30"
                     />
                   </div>

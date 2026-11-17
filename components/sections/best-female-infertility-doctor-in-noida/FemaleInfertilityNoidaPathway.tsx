@@ -5,6 +5,7 @@ import { Stagger, StaggerItem } from "@/components/ui/Reveal";
 import {
   TreatmentSection,
   TreatmentSectionHeader,
+  autoLinkNode,
 } from "@/components/ui/treatment";
 
 const steps = [
@@ -105,7 +106,7 @@ export default function FemaleInfertilityNoidaPathway() {
                   aria-hidden
                   className="mt-1.5 inline-block size-1.5 shrink-0 rounded-full bg-rose"
                 />
-                <span>{item.description}</span>
+                <span>{autoLinkNode(item.description)}</span>
               </p>
             </div>
           </StaggerItem>

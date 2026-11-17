@@ -73,7 +73,7 @@ const checklist = [
     text: "This helps us identify the lesion within uterine cavity and it's depth.",
   },
   {
-    title: "Transabdominal/ Transvaginal Pelvic MRI ",
+    title: "Transabdominal/ Transvaginal Pelvic MRI",
     text: "If you have deep infiltrating endometriosis or uterine fibroids then an MRI can give better insight into extent of the pathology.",
   },
   {

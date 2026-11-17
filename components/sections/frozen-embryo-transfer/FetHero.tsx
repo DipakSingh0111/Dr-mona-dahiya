@@ -43,7 +43,7 @@ export default function FetHero() {
       />
 
       <div className="page-container relative z-10 w-full pt-4 sm:pt-5 lg:pt-0">
-        <div className="lg:max-w-[36rem] xl:max-w-[42rem] 2xl:max-w-[46rem]">
+        <div className="lg:max-w-[44rem] xl:max-w-[48rem] 2xl:max-w-[50rem] lg:-mt-2">
           <Breadcrumb
             items={[
               { label: "Treatments", href: "/our-services" },
@@ -56,28 +56,27 @@ export default function FetHero() {
               Vitrified embryos, prepared lining, timed transfer
             </p>
 
-            <h1 className="font-serif mt-1.5 max-w-[44rem] text-[1.7rem] leading-[1.15] font-normal tracking-tight text-ink sm:text-[2.05rem] lg:text-[2.1rem] xl:text-[2.3rem]">
-              Advanced Frozen Embryo Transfer
-              <br className="hidden sm:inline" /> (FET) in Delhi, Noida &amp; Ghaziabad
+            <h1 className="font-serif mt-1.5 max-w-[48rem] text-[1.7rem] leading-[1.15] font-normal tracking-tight text-ink sm:text-[2.05rem] lg:text-[2.1rem] xl:text-[2.3rem]">
+              Advanced Frozen Embryo Transfer (FET) in Delhi, Noida &amp; Ghaziabad
             </h1>
 
-            <p className="mt-3.5 max-w-[36rem] text-[13.5px] leading-relaxed text-ink/80 sm:text-[15px]">
+            <p className="mt-3.5 max-w-none text-[13.5px] leading-relaxed text-ink/80 sm:text-[15px]">
               Dr. Mona Dahiya has more than 25 years of experience providing the
               frozen embryo transfer procedure using vitrified embryos. Your
               endometrium and menstrual cycle are tailored to you.
             </p>
           </Reveal>
 
-          <div className="mt-4 flex flex-wrap items-center gap-2.5 sm:mt-5 sm:gap-3.5">
+          <div className="mt-5 sm:mt-6 flex flex-wrap items-center gap-2.5 sm:mt-5 sm:gap-3.5">
             <a
               href="#book-consultation"
-              className="inline-flex items-center justify-center rounded-full border border-rose/20 bg-white/75 backdrop-blur-sm px-6 py-2.5 text-[13.5px] font-semibold text-ink shadow-[0_4px_14px_rgba(15,36,56,0.05)] transition-all hover:border-rose/50 hover:bg-white hover:text-rose active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"
+              className="inline-flex items-center justify-center rounded-full bg-rose px-6 py-2.5 text-[13.5px] font-semibold text-white shadow-[0_8px_20px_rgba(232,62,116,0.28)] transition-all hover:bg-rose-dark active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"
             >
               Book an Appointment at Our Clinic
             </a>
             <Link
               href="/ivf-consultation-online"
-              className="inline-flex items-center justify-center rounded-full bg-navy px-6 py-2.5 text-[13.5px] font-semibold text-white shadow-[0_8px_20px_rgba(6,21,50,0.3)] ring-1 ring-navy/20 transition-all hover:bg-navy-mid active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"
+              className="inline-flex items-center justify-center rounded-full bg-blue px-6 py-2.5 text-[13.5px] font-semibold text-white shadow-[0_8px_20px_rgba(6,21,50,0.3)] ring-1 ring-blue/20 transition-all hover:bg-blue-mid active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"
             >
               Book Online
             </Link>
@@ -85,7 +84,7 @@ export default function FetHero() {
 
           <Stagger
             delay={0.05}
-            className="mt-3.5 flex flex-wrap items-center gap-1.5 sm:mt-4 sm:gap-2"
+            className="mt-5 sm:mt-6.5 flex flex-wrap items-center gap-1.5 sm:mt-4 sm:gap-2"
           >
             {badges.map((badge) => (
               <StaggerItem key={badge}>

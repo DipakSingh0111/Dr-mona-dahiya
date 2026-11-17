@@ -38,7 +38,7 @@ export default function ContactHero() {
       />
 
       <div className="page-container relative z-10 w-full pt-4 sm:pt-5 lg:pt-0">
-        <div className="lg:max-w-[28rem] xl:max-w-[34rem] 2xl:max-w-[38rem]">
+        <div className="lg:max-w-[44rem] xl:max-w-[48rem] 2xl:max-w-[50rem] lg:-mt-1">
           <Breadcrumb
             items={[
               { label: "Home", href: "/" },
@@ -59,7 +59,7 @@ export default function ContactHero() {
           </Reveal>
 
           <Reveal variant="fadeUp" delay={0.16}>
-            <p className="mt-4 text-sm leading-relaxed text-ink/80 sm:text-base sm:leading-relaxed max-w-xl">
+            <p className="mt-4 text-sm leading-relaxed text-ink/80 sm:text-base sm:leading-relaxed max-w-2xl">
               Direct contact consultation with Dr Mona Dahiya (MBBS &amp; MD Gold
               Medalist, Fellowship Singapore General Hospital). Our clinics at
               Noida, Ghaziabad and Delhi offer hassle-free evaluations to guide
@@ -68,7 +68,7 @@ export default function ContactHero() {
           </Reveal>
 
           <Reveal variant="fadeUp" delay={0.24}>
-            <div className="mt-4 flex flex-wrap items-center gap-2.5 sm:mt-5 sm:gap-3.5">
+            <div className="mt-5 sm:mt-6 flex flex-wrap items-center gap-2.5 sm:mt-5 sm:gap-3.5">
               <a
                 href="#request-appointment"
                 className="inline-flex items-center gap-2 rounded-full bg-rose px-5 py-2.5 text-xs sm:text-sm font-semibold text-white shadow-[0_10px_24px_rgba(232,62,116,0.28)] transition hover:bg-rose-dark active:scale-95"
@@ -79,7 +79,7 @@ export default function ContactHero() {
 
               <Link
                 href="/ivf-consultation-online"
-                className="inline-flex items-center gap-2 rounded-full bg-navy px-5 py-2.5 text-xs sm:text-sm font-semibold text-white shadow-[0_10px_24px_rgba(6,21,50,0.25)] transition hover:bg-navy-mid active:scale-95"
+                className="inline-flex items-center gap-2 rounded-full bg-blue px-5 py-2.5 text-xs sm:text-sm font-semibold text-white shadow-[0_10px_24px_rgba(6,21,50,0.25)] transition hover:bg-blue-mid active:scale-95"
               >
                 <FaPhoneAlt />
                 <span>Schedule Online Consultation</span>

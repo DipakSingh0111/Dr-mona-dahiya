@@ -63,13 +63,13 @@ export default function OnlineConsultationHero() {
                 <div className="mt-4 flex flex-wrap items-center gap-2 sm:mt-5 sm:gap-2.5">
                   <a
                     href={data.primaryCta.href}
-                    className="inline-flex items-center justify-center rounded-full border border-rose/20 bg-white/75 px-4 py-2.5 text-[12.5px] font-semibold whitespace-nowrap text-ink shadow-[0_4px_14px_rgba(15,36,56,0.05)] backdrop-blur-sm transition-all hover:border-rose/50 hover:bg-white hover:text-rose active:scale-95 sm:px-5 sm:py-3 sm:text-[13.5px]"
+                    className="inline-flex items-center justify-center rounded-full bg-rose px-4 py-2.5 text-[12.5px] font-semibold whitespace-nowrap text-white shadow-[0_8px_20px_rgba(232,62,116,0.28)] transition-all hover:bg-rose-dark active:scale-95 sm:px-5 sm:py-3 sm:text-[13.5px]"
                   >
                     {data.primaryCta.label}
                   </a>
                   <a
                     href={data.secondaryCta.href}
-                    className="inline-flex items-center justify-center rounded-full bg-navy px-4 py-2.5 text-[12.5px] font-semibold whitespace-nowrap text-white shadow-md ring-1 ring-navy/20 transition-all hover:bg-navy-mid active:scale-95 sm:px-5 sm:py-3 sm:text-[13.5px]"
+                    className="inline-flex items-center justify-center rounded-full bg-blue px-4 py-2.5 text-[12.5px] font-semibold whitespace-nowrap text-white shadow-md ring-1 ring-blue/20 transition-all hover:bg-blue-mid active:scale-95 sm:px-5 sm:py-3 sm:text-[13.5px]"
                   >
                     {data.secondaryCta.label}
                   </a>
@@ -135,6 +135,7 @@ export default function OnlineConsultationHero() {
                         <input
                           type="text"
                           required
+                          placeholder="Enter your name"
                           value={formData.name}
                           onChange={(e) =>
                             setFormData({ ...formData, name: e.target.value })
@@ -205,6 +206,7 @@ export default function OnlineConsultationHero() {
                       </label>
                       <textarea
                         rows={2}
+                        placeholder="Share your query or preferred time (optional)"
                         value={formData.notes}
                         onChange={(e) =>
                           setFormData({ ...formData, notes: e.target.value })

@@ -1,16 +1,14 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { FaPhoneAlt, FaWhatsapp, FaEnvelope, FaCheckCircle } from "react-icons/fa";
+import { FaPhoneAlt, FaWhatsapp, FaEnvelope, FaCheckCircle, FaChevronDown } from "react-icons/fa";
 import { Reveal } from "@/components/ui/Reveal";
 
 export default function BookAppointmentForm() {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
-    email: "",
-    clinic: "Noida Sector 49",
-    preference: "In-Clinic Visit",
+    clinic: "Noida",
     notes: "",
   });
   const [submitted, setSubmitted] = useState(false);
@@ -99,97 +97,79 @@ export default function BookAppointmentForm() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
-                  <div>
-                    <label className="block text-[12.5px] font-semibold text-ink/80">
-                      Full Name *
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="Enter your name"
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="mt-1 w-full rounded-[14px] border border-ink/20 bg-white px-3.5 py-2.5 text-[13.5px] text-ink focus:border-rose focus:outline-hidden focus:ring-1 focus:ring-rose"
-                    />
-                  </div>
-
-                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                  <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-2">
                     <div>
-                      <label className="block text-[12.5px] font-semibold text-ink/80">
-                        Phone / WhatsApp Number *
+                      <label className="block text-[12.5px] font-semibold text-slate-700">
+                        Your name
                       </label>
                       <input
-                        type="tel"
+                        type="text"
                         required
-                        placeholder="+91 98765 43210"
-                        value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="mt-1 w-full rounded-[14px] border border-ink/20 bg-white px-3.5 py-2.5 text-[13.5px] text-ink focus:border-rose focus:outline-hidden focus:ring-1 focus:ring-rose"
+                        placeholder="Enter your name"
+                        value={formData.name}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        className="mt-1.5 w-full rounded-xl border border-slate-200 bg-[#f8fafc] px-3.5 py-2.5 text-[14px] text-ink outline-none transition-all placeholder:text-slate-400 focus:border-rose focus:bg-white focus:ring-1 focus:ring-rose/30"
                       />
                     </div>
+
                     <div>
-                      <label className="block text-[12.5px] font-semibold text-ink/80">
-                        Email Address (Optional)
+                      <label className="block text-[12.5px] font-semibold text-slate-700">
+                        Phone number
                       </label>
-                      <input
-                        type="email"
-                        placeholder="yourname@gmail.com"
-                        value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="mt-1 w-full rounded-[14px] border border-ink/20 bg-white px-3.5 py-2.5 text-[13.5px] text-ink focus:border-rose focus:outline-hidden focus:ring-1 focus:ring-rose"
-                      />
+                      <div className="mt-1.5 flex rounded-xl border border-slate-200 bg-[#f8fafc] focus-within:border-rose focus-within:bg-white focus-within:ring-1 focus-within:ring-rose/30 transition-all">
+                        <div className="flex items-center gap-1.5 border-r border-slate-200 px-3 text-[13px] text-slate-600">
+                          <span className="text-[15px] leading-none">🇮🇳</span>
+                          <span className="font-semibold text-ink">+91</span>
+                          <FaChevronDown className="size-2 text-slate-400" />
+                        </div>
+                        <input
+                          type="tel"
+                          required
+                          placeholder="Enter Phone"
+                          value={formData.phone}
+                          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                          className="w-full bg-transparent px-3 py-2.5 text-[14px] text-ink outline-none placeholder:text-slate-400"
+                        />
+                      </div>
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                    <div>
-                      <label className="block text-[12.5px] font-semibold text-ink/80">
-                        Consultation Preference
-                      </label>
-                      <select
-                        value={formData.preference}
-                        onChange={(e) => setFormData({ ...formData, preference: e.target.value })}
-                        className="mt-1 w-full rounded-[14px] border border-ink/20 bg-white px-3.5 py-2.5 text-[13.5px] text-ink focus:border-rose focus:outline-hidden focus:ring-1 focus:ring-rose"
-                      >
-                        <option value="In-Clinic Visit">Option 1: In-Clinic Visit</option>
-                        <option value="Online Consultation">Option 2: Online Consultation</option>
-                      </select>
-                    </div>
-
-                    <div>
-                      <label className="block text-[12.5px] font-semibold text-ink/80">
-                        Preferred Clinic Location
-                      </label>
+                  <div>
+                    <label className="block text-[12.5px] font-semibold text-slate-700">
+                      Preferred clinic
+                    </label>
+                    <div className="relative mt-1.5">
                       <select
                         value={formData.clinic}
                         onChange={(e) => setFormData({ ...formData, clinic: e.target.value })}
-                        className="mt-1 w-full rounded-[14px] border border-ink/20 bg-white px-3.5 py-2.5 text-[13.5px] text-ink focus:border-rose focus:outline-hidden focus:ring-1 focus:ring-rose"
+                        className="w-full appearance-none rounded-xl border border-slate-200 bg-[#f8fafc] px-3.5 py-2.5 text-[14px] text-ink outline-none transition-all focus:border-rose focus:bg-white focus:ring-1 focus:ring-rose/30 cursor-pointer"
                       >
-                        <option value="Noida Sector 49">Noida (Sector 49)</option>
-                        <option value="Ghaziabad Raj Nagar">Ghaziabad (Raj Nagar)</option>
-                        <option value="Delhi Lajpat Nagar">Delhi (Lajpat Nagar)</option>
+                        <option value="Noida" className="bg-white text-ink">Noida</option>
+                        <option value="Ghaziabad" className="bg-white text-ink">Ghaziabad</option>
+                        <option value="Delhi" className="bg-white text-ink">Delhi</option>
                       </select>
+                      <FaChevronDown className="pointer-events-none absolute top-1/2 right-3.5 size-3 -translate-y-1/2 text-slate-500" />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-[12.5px] font-semibold text-ink/80">
-                      Brief Medical Background / Message (Optional)
+                    <label className="block text-[12.5px] font-semibold text-slate-700">
+                      Anything you want us to know (optional)
                     </label>
                     <textarea
                       rows={3}
-                      placeholder="E.g., trying to conceive for 2 years, previous IVF reports available, etc."
+                      placeholder="Share your query or preferred time (optional)"
                       value={formData.notes}
                       onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                      className="mt-1 w-full rounded-[14px] border border-ink/20 bg-white px-3.5 py-2.5 text-[13.5px] text-ink focus:border-rose focus:outline-hidden focus:ring-1 focus:ring-rose resize-none"
+                      className="mt-1.5 w-full resize-none rounded-xl border border-slate-200 bg-[#f8fafc] px-3.5 py-2.5 text-[14px] text-ink outline-none transition-all placeholder:text-slate-400 focus:border-rose focus:bg-white focus:ring-1 focus:ring-rose/30"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full rounded-full bg-rose py-3 text-[14px] font-semibold text-white shadow-[0_4px_16px_rgba(232,62,116,0.35)] transition-all hover:bg-rose-dark active:scale-[0.99]"
+                    className="mt-2 w-full rounded-[18px] bg-rose py-3.5 text-[14.5px] font-semibold text-white shadow-md transition-all duration-200 hover:bg-rose-dark active:scale-[0.99] cursor-pointer"
                   >
-                    Confirm Appointment Request
+                    Request an appointment
                   </button>
                 </form>
               )}
