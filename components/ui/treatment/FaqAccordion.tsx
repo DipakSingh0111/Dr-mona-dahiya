@@ -27,6 +27,7 @@ function FaqCard({
     >
       <button
         type="button"
+        suppressHydrationWarning
         onClick={onToggle}
         aria-expanded={isOpen}
         className="flex w-full cursor-pointer items-center justify-between gap-4 p-5 text-left sm:p-5.5"
