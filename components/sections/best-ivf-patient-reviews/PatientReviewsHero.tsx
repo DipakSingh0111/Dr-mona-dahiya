@@ -63,7 +63,7 @@ export default function PatientReviewsHero() {
 
                     <div className="min-w-0 flex-1 border-l border-[#fde2ec] pl-5 sm:pl-7">
                       <div
-                        className="flex items-center gap-1.5 text-rose"
+                        className="flex items-center gap-1.5 text-ink"
                         aria-label="5 out of 5 stars"
                       >
                         {Array.from({ length: 5 }).map((_, i) => (

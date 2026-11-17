@@ -26,7 +26,7 @@ const counters: HeroCounterItem[] = [
     decimals: 1,
     suffixNode: (
       <FaStar
-        className="ml-0.5 inline size-5 -translate-y-0.5 fill-rose text-rose sm:size-6"
+        className="ml-0.5 inline size-5 -translate-y-0.5 fill-ink text-ink sm:size-6"
         aria-hidden
       />
     ),

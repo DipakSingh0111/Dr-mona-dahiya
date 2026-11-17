@@ -58,7 +58,7 @@ export default function ContactPatientReviews() {
             <StaggerItem key={idx}>
               <div className="flex h-full flex-col justify-between rounded-2xl border border-rose/15 bg-gradient-to-b from-[#fff8fb] to-white p-6 sm:p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
                 <div>
-                  <div className="flex items-center gap-1 text-amber-400 mb-3">
+                  <div className="flex items-center gap-1 text-ink mb-3">
                     {[...Array(5)].map((_, i) => (
                       <FaStar key={i} className="text-sm fill-current" />
                     ))}
