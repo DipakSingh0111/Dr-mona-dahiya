@@ -64,12 +64,6 @@ export default function ContactPatientReviews() {
                     ))}
                   </div>
 
-                  {rev.title && (
-                    <h3 className="font-display text-base sm:text-lg font-bold text-ink mb-2">
-                      {rev.title}
-                    </h3>
-                  )}
-
                   <p className="text-xs sm:text-sm leading-relaxed text-ink/80 italic">
                     &ldquo;{rev.text}&rdquo;
                   </p>

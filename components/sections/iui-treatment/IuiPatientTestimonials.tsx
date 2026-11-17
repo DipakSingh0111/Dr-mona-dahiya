@@ -50,10 +50,7 @@ export default function IuiPatientTestimonials() {
             <StaggerItem key={idx}>
               <div className="card-highlight flex h-full flex-col justify-between rounded-2xl border border-[#fde2ec] bg-white p-6 shadow-sm transition-all duration-300 hover:border-rose/30 hover:bg-[#fff0f5] hover:shadow-md">
                 <div>
-                  <h3 className="font-serif text-[1.1rem] font-bold text-ink sm:text-[1.2rem]">
-                    {t.title}
-                  </h3>
-                  <p className="mt-4 text-[12.5px] leading-relaxed text-slate-700 sm:text-[13px]">
+                  <p className="text-[12.5px] leading-relaxed text-slate-700 sm:text-[13px]">
                     {t.review}
                   </p>
                 </div>
