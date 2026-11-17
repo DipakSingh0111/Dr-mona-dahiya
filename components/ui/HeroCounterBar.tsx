@@ -77,7 +77,7 @@ function CounterValue({
     : (item.suffix ?? "");
 
   return (
-    <span className="font-serif text-[2.25rem] leading-none font-normal tracking-tight text-ink tabular-nums sm:text-[2.65rem] lg:text-[3rem]">
+    <span className="font-sans text-[1.9rem] leading-none font-bold tracking-tight text-white tabular-nums sm:text-[2.2rem] lg:text-[2.5rem]">
       {item.displayText ?? (
         <>
           {item.prefix ?? ""}
@@ -87,7 +87,7 @@ function CounterValue({
             (isGoogleRating ? (
               <FaStar
                 aria-hidden
-                className="ml-1.5 inline-block size-[0.72em] align-[-0.04em] text-ink"
+                className="ml-1.5 inline-block size-[0.72em] align-[-0.04em] text-white"
               />
             ) : null)}
         </>
@@ -120,12 +120,17 @@ export default function HeroCounterBar({ items }: { items: HeroCounterItem[] }) 
 
   return (
     <div ref={ref} className="w-full">
-      <div className="grid grid-cols-2 gap-x-6 gap-y-7 sm:gap-8 lg:grid-cols-4 lg:gap-10">
-        {items.map((item) => (
-          <div key={item.label} className="min-w-0">
+      <div className="grid grid-cols-2 gap-3.5 sm:gap-5 lg:grid-cols-4 lg:gap-6">
+        {items.map((item, idx) => (
+          <div
+            key={item.label}
+            className={`flex min-w-0 flex-col items-center justify-center rounded-[24px] px-4 py-5 text-center text-white shadow-md sm:rounded-[28px] sm:px-6 sm:py-6 ${
+              idx % 2 === 0 ? "bg-rose" : "bg-navy"
+            }`}
+          >
             <CounterValue item={item} active={active} />
-            <p className="mt-2 text-[12.5px] leading-snug font-medium text-ink/75 sm:text-[13.5px]">
-              {item.label}
+            <p className="mt-2 text-[13px] leading-snug font-medium text-white/95 sm:text-[14.5px]">
+              {item.label.replace(/(^|[\s/–-])([a-z])/g, (_, sep, ch) => sep + ch.toUpperCase())}
             </p>
           </div>
         ))}
