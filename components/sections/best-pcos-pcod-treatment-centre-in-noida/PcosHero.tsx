@@ -60,12 +60,12 @@ export default function PcosHero() {
               Comprehensive PCOS/PCOD Fertility Treatment
             </h1>
 
-            <p className="mt-5 sm:mt-6.5 max-w-none text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
+            <p className="mt-5 sm:mt-6.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
               PCOS &amp; PCOD is an endocrine metabolic disorder. Irregular
               ovulation, high levels of androgens and insulin resistance. Dr
               Mona Dahiya in Noida, Delhi &amp; Ghaziabad will help you achieve
               successful pregnancies upto 90% with customised ovulation
-              induction and antagonist ivf protocol to avoid OHSS.
+              induction and antagonist IVF protocol to avoid OHSS.
             </p>
           </Reveal>
 

@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import siteData from "@/data/site.json";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
+import { awardObjectPosition } from "@/components/sections/about-mona-dahiya/AboutCredentials";
 
 type TabId = "publications" | "member" | "speaker" | "awards";
 
@@ -32,19 +33,21 @@ function AwardCard({
   image,
   title,
   subtitle,
+  objectPosition = "object-top",
 }: {
   image: string;
   title: string;
   subtitle: string;
+  objectPosition?: string;
 }) {
   return (
     <article className="flex h-full flex-col gap-2.5">
-      <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-[#f5c9d6]/50 bg-white/60">
+      <div className="relative aspect-[5/4] overflow-hidden rounded-2xl border border-[#f5c9d6]/50 bg-white/60">
         <Image
           src={image}
           alt={title}
           fill
-          className="object-cover"
+          className={`object-cover ${objectPosition}`}
           sizes="(max-width: 768px) 50vw, 240px"
         />
       </div>
@@ -250,6 +253,7 @@ export default function Publications() {
                       image={item.image}
                       title={item.title}
                       subtitle={item.subtitle}
+                      objectPosition={awardObjectPosition[item.id] ?? "object-top"}
                     />
                   </StaggerItem>
                 ))}

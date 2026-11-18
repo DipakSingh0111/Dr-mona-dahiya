@@ -50,7 +50,7 @@ export default function FemaleInfertilityHero() {
               Female Infertility Treatment in Delhi, Noida &amp; Ghaziabad
             </h1>
 
-            <p className="mt-5 sm:mt-6.5 max-w-none text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
+            <p className="mt-5 sm:mt-6.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
               Common reasons for female infertility are Anovulation/PCOD, low
               ovarian reserve, Tubal blockage, Endometriosis and Uterine
               abnormalities. 50-60% of our patients get pregnant without needing

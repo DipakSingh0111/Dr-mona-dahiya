@@ -10,7 +10,7 @@ import {
 const whyPoints = [
   {
     title: "Philosophy Of Using Your Own Eggs And Embryo Banking",
-    desc: "We Always Encourage The Use Of Your Own Eggs. For Low Amh Patients We Can Achieve Pregnancy Potential of > 90% By Your Own Eggs By Giving Mild Protocol and Doing Embryo Banking.",
+    desc: "We Always Encourage The Use Of Your Own Eggs. For Low AMH Patients We Can Achieve Pregnancy Potential of > 90% By Your Own Eggs By Giving Mild Protocol and Doing Embryo Banking.",
   },
   {
     title: "Usage Of Duostim and hgh",
@@ -18,7 +18,7 @@ const whyPoints = [
   },
   {
     title: "Mini Incubator With Tri Gas Mix",
-    desc: "Low Amh patients have fragile oocytes. We take good care of them by incubating them on Benchtop incubator using 5% Oxygen (tri gas mix). This improves blastocyst yield by 10% to 15 % more from your limited eggs.",
+    desc: "Low AMH patients have fragile oocytes. We take good care of them by incubating them on Benchtop incubator using 5% Oxygen (tri gas mix). This improves blastocyst yield by 10% to 15 % more from your limited eggs.",
   },
 ];
 

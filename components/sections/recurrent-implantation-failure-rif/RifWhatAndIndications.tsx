@@ -40,10 +40,10 @@ const indications = [
 
 const checklistItems = [
   "Check all the previous data on stimulation, embryo grading and transfer technique",
-  "Cavity study with hysteroscopy and 3d usg",
+  "Cavity study with hysteroscopy and 3D USG",
   "Test for chronic endometritis, thyroid and other metabolic issues",
   "Only if required Coagulation and immune workup",
-  "Check sperm parameters and sperm dna fragmentation",
+  "Check sperm parameters and sperm DNA fragmentation",
 ];
 
 export default function RifWhatAndIndications() {

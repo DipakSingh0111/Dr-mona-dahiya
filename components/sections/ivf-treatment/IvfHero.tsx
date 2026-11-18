@@ -66,7 +66,7 @@ export default function IvfHero() {
               &amp; Ghaziabad
             </h1>
 
-            <p className="mt-5 sm:mt-6.5 max-w-none text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
+            <p className="mt-5 sm:mt-6.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
               In Vitro Fertilisation is a form of Assisted Reproductive
               Technology. Eggs are collected from the female and fertilised by
               treated Sperm in a lab called Embryology Lab. Embryos are grown to

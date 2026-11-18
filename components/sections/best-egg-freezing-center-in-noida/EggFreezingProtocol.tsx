@@ -28,7 +28,7 @@ const steps = [
     number: "3",
     title: "Give Trigger Shot (Day 11 or 12)",
     bullets: [
-      "Give the trigger injection (Dual Trigger – GnRH Agonist and a small dose of hCG) when the majority of follicles are between 17–19 mm in size",
+      "Give the trigger injection (Dual Trigger – GnRH Agonist and a small dose of HCG) when the majority of follicles are between 17–19 mm in size",
     ],
   },
   {

@@ -53,13 +53,13 @@ const rightFaqs: FaqItem[] = [
             embryos.
           </li>
           <li>
-            Check your uterus with 3d USG or hysteroscopy for any anomalies.
+            Check your uterus with 3D USG or hysteroscopy for any anomalies.
           </li>
           <li>
             Check for chronic endometritis by biopsy. Do ERA and EndomeTRIO.
           </li>
           <li>
-            Check male factor with sperm dna fragmentation index. And check for
+            Check male factor with sperm DNA fragmentation index. And check for
             clotting profile if indicated.
           </li>
         </ul>

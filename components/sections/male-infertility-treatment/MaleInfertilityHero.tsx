@@ -51,7 +51,7 @@ export default function MaleInfertilityHero() {
               Ghaziabad
             </h1>
 
-            <p className="mt-5 sm:mt-6.5 max-w-none text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
+            <p className="mt-5 sm:mt-6.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
               Infertility can be caused by many reasons. In 50% of the cases
               infertility can be attributed to males. Low sperm count, poor sperm
               quality and blockage are the most common causes. We offer you a

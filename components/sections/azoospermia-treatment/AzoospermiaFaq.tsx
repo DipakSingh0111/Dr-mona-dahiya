@@ -112,7 +112,7 @@ const leftFaqs: FaqItem[] = [
   {
     question: "Can azoospermia be cured or treated with medications?",
     answer:
-      "Yes if you have secondary causes of testicular failure (Hypogonadotrophic) which makes up 1-2% of all azoospermia cases. We can stimulate spermatogenesis in these patients with Hcg + Recombinant FSH or Clomid or Anastrozole. Once your sperms have reached your ejaculate they can be used for IVF procedure. If your azoospermia is due to blockage or damage in your testis you will not respond to medicines.",
+      "Yes if you have secondary causes of testicular failure (Hypogonadotrophic) which makes up 1-2% of all azoospermia cases. We can stimulate spermatogenesis in these patients with HCG + Recombinant FSH or Clomid or Anastrozole. Once your sperms have reached your ejaculate they can be used for IVF procedure. If your azoospermia is due to blockage or damage in your testis you will not respond to medicines.",
   },
 ];
 

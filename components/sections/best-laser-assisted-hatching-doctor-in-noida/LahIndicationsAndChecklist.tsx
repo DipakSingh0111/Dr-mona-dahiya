@@ -90,12 +90,8 @@ const checklist: { title?: string; text: ReactNode }[] = [
     ),
   },
   {
-    text: (
-      <span className="font-semibold text-ink">
-        Infection screening of both male and female partners, as mandated by the
-        Indian ART Act.
-      </span>
-    ),
+    title: "Infection screening",
+    text: "of both male and female partners, as mandated by the Indian ART Act.",
   },
 ];
 

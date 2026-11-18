@@ -64,7 +64,7 @@ export default function IcsiHero() {
               Noida &amp; Ghaziabad
             </h1>
 
-            <p className="mt-5 sm:mt-6.5 max-w-none text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
+            <p className="mt-5 sm:mt-6.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
               Intracytoplasmic sperm injection (ICSI) is a technique where we take a
               single sperm and inject it inside the egg. Our advanced magnification helps
               us achieve a fertilisation rate above 90% in male factor infertility

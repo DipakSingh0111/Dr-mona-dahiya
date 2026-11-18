@@ -13,9 +13,9 @@ import {
 
 const checklist = [
   "AMH High Sensitivity (ECLIA Method). Gives you idea about your reserve.",
-  "Usg scan Day 2/3 For AFC (Antral Follicle Count) of size 2-9 mm.",
+  "USG scan Day 2/3 For AFC (Antral Follicle Count) of size 2-9 mm.",
   "Day 2 Fsh And Estrogen To Find Out What You're Pushing Your Ovary With.",
-  "DHEA-S , Vit D3 And Free Testosterone Levels For Dhea Priming.",
+  "DHEA-S , Vit D3 And Free Testosterone Levels For DHEA Priming.",
 ];
 
 const linkClass =
@@ -28,14 +28,14 @@ const protocols: {
 }[] = [
   {
     number: "1",
-    title: "Dhea Priming",
+    title: "DHEA Priming",
     bullets: [
-      "For 6 - 8 Weeks Prior To Your First Treatment Plan Start Taking Micronised Dhea 25mg x3 Times A Day And Coq 600 mg x1. Top Up Vitamin D3 Level If Required.",
+      "For 6 - 8 Weeks Prior To Your First Treatment Plan Start Taking Micronised DHEA 25mg x3 Times A Day And Coq 600 mg x1. Top Up Vitamin D3 Level If Required.",
     ],
   },
   {
     number: "2",
-    title: "Stimulate With Low Dose Flare Or Mini Ivf.",
+    title: "Stimulate With Low Dose Flare Or Mini IVF.",
     bullets: [
       <>
         By Using Low Dose Flare Method You Can Give Your Body A Boost In Its Own
@@ -55,7 +55,7 @@ const protocols: {
   },
   {
     number: "4",
-    title: "In Vitro Fertilisation With Icsi.",
+    title: "In Vitro Fertilisation With ICSI.",
     bullets: [
       <>
         We Will Do{" "}
@@ -115,7 +115,7 @@ export default function LowAmhDiagnosticAndProtocol() {
       <TreatmentSection>
         <div>
         <TreatmentSectionHeader
-          eyebrow="Steps For Treatment For Low Amh Patient"
+          eyebrow="Steps For Treatment For Low AMH Patient"
           title="Step-by-Step Low AMH Protocol"
         />
 

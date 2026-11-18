@@ -5,6 +5,7 @@ import MedicalRegistration from "@/components/sections/MedicalRegistration";
 import LowSpermIndicationsAndChecklist from "@/components/sections/low-sperm-count-oligospermia/LowSpermIndicationsAndChecklist";
 import LowSpermProtocolAndWhy from "@/components/sections/low-sperm-count-oligospermia/LowSpermProtocolAndWhy";
 import LowSpermCaseAndCost from "@/components/sections/low-sperm-count-oligospermia/LowSpermCaseAndCost";
+import IvfSuccessClinics from "@/components/sections/ivf-stories/IvfSuccessClinics";
 import LowSpermFaq from "@/components/sections/low-sperm-count-oligospermia/LowSpermFaq";
 import LowSpermRelatedTreatments from "@/components/sections/low-sperm-count-oligospermia/LowSpermRelatedTreatments";
 import AboutConsultation from "@/components/sections/about-mona-dahiya/AboutConsultation";
@@ -39,7 +40,16 @@ export default function LowSpermTreatmentPage() {
       {/* 5. Clinical Case Insight & Cost Factors Breakdown */}
       <LowSpermCaseAndCost />
 
-      {/* 6. Top FAQs About Low Sperm Count & Motility */}
+      {/* 6. Book a Consultation at Our Clinics */}
+      <SectionReveal delay={0.04}>
+        <IvfSuccessClinics
+          eyebrow="Consultation for Low Sperm Count"
+          title="Book a Consultation at Our Clinics"
+          subtitle="We have clinics in Noida, Ghaziabad and Delhi. Can also consult you online."
+        />
+      </SectionReveal>
+
+      {/* 7. Top FAQs About Low Sperm Count & Motility */}
       <SectionReveal delay={0.04}>
         <LowSpermFaq />
       </SectionReveal>

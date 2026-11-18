@@ -46,7 +46,7 @@ export default function PcosStoriesHero() {
               PCOS/PCOD Pregnancy Stories
             </h1>
 
-            <p className="mt-5 sm:mt-6.5 max-w-none text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
+            <p className="mt-5 sm:mt-6.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
               Most women with PCOS have enough egg supply and only suffer from
               improper ovulation. Many of our patients have been able to get
               pregnant by correcting their metabolism, through ovulation

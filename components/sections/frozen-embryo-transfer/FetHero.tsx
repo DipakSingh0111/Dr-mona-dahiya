@@ -60,7 +60,7 @@ export default function FetHero() {
               Advanced Frozen Embryo Transfer (FET) in Delhi, Noida &amp; Ghaziabad
             </h1>
 
-            <p className="mt-5 sm:mt-6.5 max-w-none text-[13.5px] leading-relaxed text-ink/80 sm:text-[15px]">
+            <p className="mt-5 sm:mt-6.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/80 sm:text-[15px]">
               Dr. Mona Dahiya has more than 25 years of experience providing the
               frozen embryo transfer procedure using vitrified embryos. Your
               endometrium and menstrual cycle are tailored to you.

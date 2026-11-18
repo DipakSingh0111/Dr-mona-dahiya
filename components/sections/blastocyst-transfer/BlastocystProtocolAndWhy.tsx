@@ -55,7 +55,7 @@ const protocols = [
     title: "Progesterone Support and Pregnancy Test",
     bullets: [
       "Micronised progesterone",
-      "Beta hCG levels on Day 12–14 after transfer",
+      "Beta HCG levels on Day 12–14 after transfer",
     ],
   },
 ];

@@ -29,7 +29,7 @@ const indications: { number: string; title: string; description: ReactNode }[] =
       title: "IUI",
       description: (
         <>
-          IUI is done 36 hours after triggering the follicle with hcg injection.
+          IUI is done 36 hours after triggering the follicle with HCG injection.
           Read about{" "}
           <Link
             href="/best-iui-doctor-in-noida"

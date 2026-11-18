@@ -5,6 +5,7 @@ import MedicalRegistration from "@/components/sections/MedicalRegistration";
 import RifWhatAndIndications from "@/components/sections/recurrent-implantation-failure-rif/RifWhatAndIndications";
 import RifProtocolWhyAndCase from "@/components/sections/recurrent-implantation-failure-rif/RifProtocolWhyAndCase";
 import RifCost from "@/components/sections/recurrent-implantation-failure-rif/RifCost";
+import IvfSuccessClinics from "@/components/sections/ivf-stories/IvfSuccessClinics";
 import RifFaq from "@/components/sections/recurrent-implantation-failure-rif/RifFaq";
 import RifRelatedTreatments from "@/components/sections/recurrent-implantation-failure-rif/RifRelatedTreatments";
 import AboutConsultation from "@/components/sections/about-mona-dahiya/AboutConsultation";
@@ -34,6 +35,14 @@ export default function RifPage() {
 
       <SectionReveal delay={0.04}>
         <RifCost />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <IvfSuccessClinics
+          eyebrow="Consultation for Recurrent Implantation Failure"
+          title="Book a Consultation at Our Clinics"
+          subtitle="We have clinics in Noida, Ghaziabad and Delhi. Can also consult you online."
+        />
       </SectionReveal>
 
       <SectionReveal delay={0.04}>

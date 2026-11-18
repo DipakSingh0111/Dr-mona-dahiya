@@ -26,9 +26,7 @@ export default function EggFreezingChecklist() {
       <div className="mt-6 flex flex-col gap-3 sm:mt-7 sm:gap-3.5">
         {tests.map((text, idx) => (
           <Reveal key={text} variant="fadeUp" delay={idx * 0.04}>
-            <ChecklistRow>
-              <span className="font-semibold text-ink">{text}</span>
-            </ChecklistRow>
+            <ChecklistRow inline>{text}</ChecklistRow>
           </Reveal>
         ))}
       </div>

@@ -12,7 +12,7 @@ const costCards = [
   {
     icon: <FaCheck className="size-3.5 text-white" />,
     title: "Basic Workup",
-    description: "Hysteroscopy, usg and blood work",
+    description: "Hysteroscopy, USG and blood work",
   },
   {
     icon: <FaPills className="size-3.5 text-white" />,

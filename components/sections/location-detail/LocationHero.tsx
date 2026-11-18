@@ -47,7 +47,7 @@ export default function LocationHero({
               {hero.title}
             </h1>
 
-            <p className="mt-5 sm:mt-6 max-w-none text-[14px] leading-relaxed text-ink/85 sm:text-[15px]">
+            <p className="mt-5 sm:mt-6 max-w-2xl text-[14px] leading-relaxed text-ink/85 sm:text-[15px]">
               {hero.descriptionPrefix}
               <strong className="font-semibold text-ink">
                 {hero.highlightLocation}

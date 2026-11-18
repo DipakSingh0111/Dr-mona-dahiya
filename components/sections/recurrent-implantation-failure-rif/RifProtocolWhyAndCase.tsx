@@ -42,7 +42,7 @@ const protocols = [
   {
     number: "5",
     title: "Luteal Support",
-    bullets: ["Will provide proven luteal support", "Beta hcg and scanning"],
+    bullets: ["Will provide proven luteal support", "Beta HCG and scanning"],
   },
 ];
 

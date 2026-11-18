@@ -55,7 +55,7 @@ export default function BestIvfDoctorHero() {
                 Best IVF Doctor in Noida: Dr. Mona Dahiya
               </h1>
 
-              <p className="mt-5 sm:mt-6.5 max-w-none text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
+              <p className="mt-5 sm:mt-6.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
                 Best infertility doctor in Noida, Dr Mona Dahiya is a renowned IVF
                 specialist having done MBBS, MD &amp; DNB (Obstetrics &amp;
                 Gynaecology) from Delhi University. She did her fellowship in

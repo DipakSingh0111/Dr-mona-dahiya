@@ -55,7 +55,7 @@ export default function TermsHero() {
               Terms of Service &amp; Patient Clinical Engagement Agreement
             </h1>
 
-            <p className="mt-5 sm:mt-6.5 max-w-none text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
+            <p className="mt-5 sm:mt-6.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
               These terms set the legal, clinical and operational rules for all
               consultations, tests, evaluations and assisted reproduction (ART)
               treatment directed by Dr. Mona Dahiya in Delhi, Noida and

@@ -57,7 +57,7 @@ export default function FertilityAssessmentHero() {
                 Fertility Assessment: Your 10-Point Fertility Score in 2 Minutes
               </h1>
 
-              <p className="mt-5 sm:mt-6.5 max-w-none text-[13.5px] leading-relaxed text-ink/80 sm:text-[15px]">
+              <p className="mt-5 sm:mt-6.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/80 sm:text-[15px]">
                 Take our simple 5 question fertility test that takes only 2
                 minutes. This assessment was created by Dr. Mona Dahiya, using
                 aspects of FertiSTAT and Cardiff Fertility Tool. You will be

@@ -7,6 +7,7 @@ import AzoospermiaDiagnosticAndProtocol from "@/components/sections/azoospermia-
 import AzoospermiaWhyConsult from "@/components/sections/azoospermia-treatment/AzoospermiaWhyConsult";
 import AzoospermiaCaseInsight from "@/components/sections/azoospermia-treatment/AzoospermiaCaseInsight";
 import AzoospermiaCost from "@/components/sections/azoospermia-treatment/AzoospermiaCost";
+import IvfSuccessClinics from "@/components/sections/ivf-stories/IvfSuccessClinics";
 import AzoospermiaFaq from "@/components/sections/azoospermia-treatment/AzoospermiaFaq";
 import AzoospermiaRelated from "@/components/sections/azoospermia-treatment/AzoospermiaRelated";
 import AboutConsultation from "@/components/sections/about-mona-dahiya/AboutConsultation";
@@ -46,6 +47,14 @@ export default function AzoospermiaPage() {
 
       <SectionReveal delay={0.04}>
         <AzoospermiaCost />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <IvfSuccessClinics
+          eyebrow="Consultation for Azoospermia"
+          title="Book a Consultation at Our Clinics"
+          subtitle="We have clinics in Noida, Ghaziabad and Delhi. Can also consult you online."
+        />
       </SectionReveal>
 
       <SectionReveal delay={0.04}>

@@ -57,7 +57,7 @@ const rightQuestions: QuestionItem[] = [
   {
     id: "right-3",
     q: "When can I take a pregnancy test after IUI?",
-    a: "Usually we do beta hCG 14 days after IUI. You can test early but it may not show accurate results.",
+    a: "Usually we do beta HCG 14 days after IUI. You can test early but it may not show accurate results.",
   },
   {
     id: "right-4",

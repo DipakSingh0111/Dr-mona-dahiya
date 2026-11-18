@@ -47,7 +47,7 @@ const rightQuestions: QuestionItem[] = [
   {
     id: "right-1",
     q: "When can I take a pregnancy test after IUI?",
-    a: "You can take a pregnancy test 14 days after IUI. We recommend checking Beta hCG levels on Day 28. Doing it earlier may give you a false negative or positive result.",
+    a: "You can take a pregnancy test 14 days after IUI. We recommend checking Beta HCG levels on Day 28. Doing it earlier may give you a false negative or positive result.",
   },
   {
     id: "right-2",

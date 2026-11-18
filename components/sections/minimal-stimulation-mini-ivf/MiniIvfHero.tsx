@@ -62,7 +62,7 @@ export default function MiniIvfHero() {
                 Mini IVF Treatment in Delhi NCR
               </h1>
 
-              <p className="mt-5 sm:mt-6.5 max-w-none text-[13.5px] leading-relaxed text-ink/80 sm:text-[15px]">
+              <p className="mt-5 sm:mt-6.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/80 sm:text-[15px]">
                 Minimal stimulation IVF, also known as mini IVF, is a type of IVF
                 where you take mild oral medication with injection support to
                 produce 2-5 healthy quality eggs. Under the guidance of Dr. Mona

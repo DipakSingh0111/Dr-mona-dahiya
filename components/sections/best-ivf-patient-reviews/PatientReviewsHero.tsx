@@ -71,7 +71,7 @@ export default function PatientReviewsHero() {
                         ))}
                       </div>
                       <p className="mt-1.5 text-[12.5px] font-medium text-ink/80 sm:text-[13.5px]">
-                        4.9 out of 5 &middot; across Google and clinic reviews
+                        4.9 out of 5 &middot; Across Google and clinic reviews
                       </p>
                     </div>
                   </div>

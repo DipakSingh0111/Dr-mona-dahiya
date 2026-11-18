@@ -11,7 +11,7 @@ import {
 const tests = [
   "Ovarian reserve- Serum AMH and TVS day 2/3 to count Antral follicles",
   "Semen analysis with DNA fragmentation if required",
-  "Sonography (3d) / SIS for evaluation of uterine cavity. Hysteroscopy if needed",
+  "Sonography (3D) / SIS for evaluation of uterine cavity. Hysteroscopy if needed",
   "Hormonal and Metabolic workup – TSH, Prolactin, HbA1c and Serum FSH LH & E2 levels",
   "Blood tests for infectious disease screening - HIV I & II, HBsAg, Anti HCV and VDRL for both the partners",
 ];

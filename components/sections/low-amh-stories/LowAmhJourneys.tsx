@@ -13,43 +13,43 @@ const stories = [
     title:
       "Was Advised Donor Eggs but Got Pregnant With Own Egg with 0.35 AMH",
     description:
-      "Her doctor informed her that with such a low AMH level of 0.35 she has no chance to get pregnant with her own egg. So she contacted Dr. Mona Dahiya for a second opinion. Based on her current status, Dr. Mona created a custom protocol for ovarian stimulation. The woman got pregnant with her first try and is now the proud mother of her little baby girl.",
+      "Her doctor informed her that with such a low AMH level of 0.35 she has no chance to get pregnant with her own egg. So she contacted Dr. Mona Dahiya for a second opinion. Based on her current status, Dr. Mona created a custom protocol for ovarian stimulation. The woman got pregnant with her first try and is now the proud mother of her little baby.",
   },
   {
     number: "2",
-    title: "Got Pregnant With Baby Boy With Low AMH of 0.18",
+    title: "Got Pregnant With Baby With Low AMH of 0.18",
     description:
-      "Sharmila thought there were almost no chances of her getting pregnant with her own egg as her AMH levels were really low of 0.18. Dr. Mona Dahiya suggested an ovarian priming protocol of taking DHEA and right nutrition. This protocol was able to produce enough good quality eggs for embryo transfer which resulted in a healthy pregnancy and baby boy.",
+      "Sharmila thought there were almost no chances of her getting pregnant with her own egg as her AMH levels were really low of 0.18. Dr. Mona Dahiya suggested an ovarian priming protocol of taking DHEA and right nutrition. This protocol was able to produce enough good quality eggs for embryo transfer which resulted in a healthy pregnancy and baby.",
   },
   {
     number: "3",
     title: "Got Pregnant Through Mild Stimulation At the Age of 32 with 0.40 AMH",
     description:
-      "She had her AMH done and it was at 0.40 at the age of 32 which was very low. If you have low AMH levels you want to stimulate less because if you stimulate high you will get lower quality eggs. Dr. Mona stimulated mild for Archana and she had a beautiful baby girl.",
+      "She had her AMH done and it was at 0.40 at the age of 32 which was very low. If you have low AMH levels you want to stimulate less because if you stimulate high you will get lower quality eggs. Dr. Mona stimulated mild for Archana and she had a beautiful baby.",
   },
   {
     number: "4",
     title: "Got Pregnant on a Modified Natural Cycle With AMH of 0.12",
     description:
-      "After trying multiple IVF cycles Vandana sought help from Dr. Mona Dahiya. Dr. Mona decided to perform a modified natural cycle by lowering her medication dosages. She retrieved her one dominant best egg which matured into an embryo and gave birth to a baby boy.",
+      "After trying multiple IVF cycles Vandana sought help from Dr. Mona Dahiya. Dr. Mona decided to perform a modified natural cycle by lowering her medication dosages. She retrieved her one dominant best egg which matured into an embryo and gave birth to a baby.",
   },
   {
     number: "5",
     title: "Became Biological Mother With Low AMH of 0.28",
     description:
-      "She thought there was no way she could have her own child due to her low AMH levels and amount of antral follicles. Dr. Mona didn't jump right into egg retrieval. She worked to raise her AMH levels for a few weeks and allowed her follicles to grow to become a blastocyst. She became the mother of a baby girl.",
+      "She thought there was no way she could have her own child due to her low AMH levels and amount of antral follicles. Dr. Mona didn't jump right into egg retrieval. She worked to raise her AMH levels for a few weeks and allowed her follicles to grow to become a blastocyst. She became the mother of a baby.",
   },
   {
     number: "6",
-    title: "Gave Birth To A Baby Boy With AMH of 38 Weeks",
+    title: "Gave Birth To A Baby With AMH of 38 Weeks",
     description:
-      "Due to her age and low ovarian reserve she felt hopeless. Dr. Mona helped her along with her low AMH Protocol and allowed her to have healthy embryos. She successfully gave birth to a healthy baby boy.",
+      "Due to her age and low ovarian reserve she felt hopeless. Dr. Mona helped her along with her low AMH Protocol and allowed her to have healthy embryos. She successfully gave birth to a healthy baby.",
   },
   {
     number: "7",
     title: "Got Pregnant From 1 Good Egg With Low AMH",
     description:
-      "After seeing that she only had 2 follicles she panicked. Dr. Mona reassured her and said sometimes all you need is 1 good quality egg. She received one egg that grew to be an embryo and she is now the mom of a beautiful baby girl.",
+      "After seeing that she only had 2 follicles she panicked. Dr. Mona reassured her and said sometimes all you need is 1 good quality egg. She received one egg that grew to be an embryo and she is now the mom of a beautiful baby.",
   },
   {
     number: "8",
@@ -65,9 +65,9 @@ const stories = [
   },
   {
     number: "10",
-    title: "Conceived A Baby Boy With Low AMH Levels of 0.14",
+    title: "Conceived A Baby With Low AMH Levels of 0.14",
     description:
-      "Ritu and Sunil tried various doctors but were unsuccessful. They decided to try Dr. Mona Dahiya and with the help of her daily injections of hormones she was able to find the perfect day to give the trigger shot for when the eggs would mature. Later on, Ritu and Sunil gave birth to a baby boy.",
+      "Ritu and Sunil tried various doctors but were unsuccessful. They decided to try Dr. Mona Dahiya and with the help of her daily injections of hormones she was able to find the perfect day to give the trigger shot for when the eggs would mature. Later on, Ritu and Sunil gave birth to a baby.",
   },
 ];
 

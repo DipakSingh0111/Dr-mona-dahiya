@@ -11,7 +11,7 @@ import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 export default function FallopianTubesHero() {
   const badges = [
     "Fallopian tube blockage management Delhi",
-    "Blocked fallopian tubes ivf noida",
+    "Blocked fallopian tubes IVF noida",
     "Hydrosalpinx treatment Ghaziabad",
     "Will tell you whether to go for tubes or IVF",
   ];
@@ -50,7 +50,7 @@ export default function FallopianTubesHero() {
               Fallopian Tube Blockage Treatment in Delhi, Noida &amp; Ghaziabad
             </h1>
 
-            <p className="mt-5 sm:mt-6.5 max-w-none text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
+            <p className="mt-5 sm:mt-6.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
               When your fallopian tubes are blocked sperm cannot travel to meet
               the egg. Dr Mona Dahiya will test your tubes and tell you if you
               need IVF rather than treating your tubes.

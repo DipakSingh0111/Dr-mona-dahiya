@@ -729,7 +729,7 @@ export default function AllPatientReviewsSections() {
             avatarLetter: "S",
           },
           {
-            body: "My experience with Dr. Mona Dahiya was very pleasant. She is one of the best ivf specialist who genuinely cares for her patients. Thanks to her I was able to get pregnant with twins and now have two wonderful babies. Thank you.",
+            body: "My experience with Dr. Mona Dahiya was very pleasant. She is one of the best IVF specialist who genuinely cares for her patients. Thanks to her I was able to get pregnant with twins and now have two wonderful babies. Thank you.",
             author: "kamini garg",
             source: "Google patient review",
             avatarLetter: "K",

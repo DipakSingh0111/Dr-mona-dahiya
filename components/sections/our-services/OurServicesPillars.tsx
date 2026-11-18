@@ -23,7 +23,7 @@ const pillar1 = [
         <Link href="/follicular-ultrasound" className={linkClass}>
           scan to monitor follicles
         </Link>{" "}
-        during natural cycle or iui cycles.
+        during natural cycle or IUI cycles.
       </>
     ),
   },
@@ -42,16 +42,16 @@ const pillar1 = [
   {
     title: "Ovulation Induction",
     description:
-      "We will help you conceive by performing ovulation induction with letrozole in case of pcod.",
+      "We will help you conceive by performing ovulation induction with letrozole in case of PCOD.",
   },
   {
-    title: "Semen testing and sperm dna fragmentation",
+    title: "Semen testing and sperm DNA fragmentation",
     description: (
       <>
         CASA and halo test. We will evaluate your partners report and help him
         with{" "}
         <Link href="/sperm-dna-fragmentation-test" className={linkClass}>
-          sperm dna fragmentation
+          sperm DNA fragmentation
         </Link>{" "}
         if indicated.
       </>
@@ -60,7 +60,7 @@ const pillar1 = [
   {
     title: "Hormone Evaluation",
     description:
-      "This includes Amh, FSH, estradiol which will give us information about how many eggs you have left and their quality.",
+      "This includes AMH, FSH, estradiol which will give us information about how many eggs you have left and their quality.",
   },
 ];
 
@@ -71,7 +71,7 @@ const pillar2 = [
       <>
         If above mentioned treatments fail then we will help you with{" "}
         <Link href="/ivf-treatment" className={linkClass}>
-          ivf
+          IVF
         </Link>{" "}
         which includes stimulation of ovaries to produce more eggs.
       </>
@@ -81,7 +81,7 @@ const pillar2 = [
     title: "ICSI + Microfluidics",
     description: (
       <>
-        If there is high male factor or sperm dna fragmentation we will do{" "}
+        If there is high male factor or sperm DNA fragmentation we will do{" "}
         <Link
           href="/intracytoplasmic-sperm-injection-icsi-treatment"
           className={linkClass}
@@ -195,7 +195,7 @@ const detailedServices = [
   {
     title: "ICSI",
     href: "/intracytoplasmic-sperm-injection-icsi-treatment",
-    desc: "We inject sperm inside egg if there is high male factor or dna frag.",
+    desc: "We inject sperm inside egg if there is high male factor or DNA frag.",
   },
   {
     title: "IUI",
@@ -210,7 +210,7 @@ const detailedServices = [
   {
     title: "Mini IVF",
     href: "/minimal-stimulation-mini-ivf",
-    desc: "Helps those patients who have low amh and not able to bear higher dosage of drugs.",
+    desc: "Helps those patients who have low AMH and not able to bear higher dosage of drugs.",
   },
   {
     title: "Laser Assisted Hatching",
@@ -263,9 +263,9 @@ const detailedServices = [
     desc: "You can still have your biological child with our help.",
   },
   {
-    title: "Pcod/Pcos Treatment",
+    title: "PCOD/PCOS Treatment",
     href: "/best-pcos-pcod-treatment-centre-in-noida",
-    desc: "We help you manage pcod/pcos so you don't develop complications while doing ivf.",
+    desc: "We help you manage PCOD/PCOS so you don't develop complications while doing IVF.",
   },
   {
     title: "Recurrent Miscarriages",
@@ -280,7 +280,7 @@ const detailedServices = [
   {
     title: "Embryo Freezing",
     href: "/embryo-cryopreservation",
-    desc: "We help you to freeze your leftover embryos after doing ivf.",
+    desc: "We help you to freeze your leftover embryos after doing IVF.",
   },
   {
     title: "Sperm Freezing",
@@ -403,7 +403,7 @@ export default function OurServicesPillars() {
           <Reveal variant="fadeUp" delay={0.07}>
             <ChecklistRow>
               We have state of art lab with class 10000 filtered air. Incubators
-              which help you with mini ivf and vitrification.
+              which help you with mini IVF and vitrification.
             </ChecklistRow>
           </Reveal>
           <Reveal variant="fadeUp" delay={0.11}>

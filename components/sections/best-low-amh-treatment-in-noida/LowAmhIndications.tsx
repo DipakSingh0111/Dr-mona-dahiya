@@ -10,7 +10,7 @@ import {
 const indications = [
   {
     number: "1",
-    title: "Amh < 1.1 ng/ml",
+    title: "AMH < 1.1 ng/ml",
     description: "Antral Follicle Count of 5-6 or less.",
   },
   {
@@ -41,7 +41,7 @@ export default function LowAmhIndications() {
   return (
     <TreatmentSection>
       <TreatmentSectionHeader
-        eyebrow="Low Amh Causes"
+        eyebrow="Low AMH Causes"
         title="Indications: Who Needs Specialised Low AMH Care?"
         subtitle="Diminished Ovarian Reserve (DOR) is diagnosed with following signs"
       />

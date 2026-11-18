@@ -49,7 +49,7 @@ export default function AzoospermiaHero() {
               Azoospermia Treatment in Delhi, Noida &amp; Ghaziabad
             </h1>
 
-            <p className="mt-5 sm:mt-6.5 max-w-none text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
+            <p className="mt-5 sm:mt-6.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
               If there are no sperms found in the semen you are diagnosed with
               Azoospermia. Most patients who suffer from Azoospermia still have
               sperms present in their testis. Dr Mona Dahiya will identify the

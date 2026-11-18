@@ -58,7 +58,7 @@ export default function LowAmhHero() {
               Low AMH Success Stories
             </h1>
 
-            <p className="mt-5 sm:mt-6 max-w-none text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
+            <p className="mt-5 sm:mt-6 max-w-2xl text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
               Having a low AMH level below 1 ng/ml doesn&apos;t mean your egg
               quality is bad. Many of our patients have achieved pregnancies
               with their own eggs by following a protocol called DuoStim or

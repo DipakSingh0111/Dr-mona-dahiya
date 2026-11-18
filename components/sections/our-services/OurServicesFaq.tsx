@@ -11,12 +11,12 @@ const leftFaqs: FaqItem[] = [
   {
     question: "What fertility services does Dr. Mona Dahiya offer?",
     answer:
-      "More than 20 different services are available such as IUI, Ivf, Blastocyst Icsi, pgt-a, Mini ivf, Laser Assisted Hatching, Egg Freezing, Onco fertility, PRP, Era Test, Donor Program and surgeries like Hysteroscopy and laparoscopy.",
+      "More than 20 different services are available such as IUI, IVF, Blastocyst ICSI, pgt-a, Mini IVF, Laser Assisted Hatching, Egg Freezing, Onco fertility, PRP, Era Test, Donor Program and surgeries like Hysteroscopy and laparoscopy.",
   },
   {
     question: "How do I know which treatment is right for me?",
     answer:
-      "This will depend on many factors which we will diagnose with help of 5 tests. Semen analysis, Counting of Antral Follicles, Amh level, Testing tubes if they are blocked or open and evaluating cavity. We then suggest simple things like intercourse during ovulation or iui before moving to IVF.",
+      "This will depend on many factors which we will diagnose with help of 5 tests. Semen analysis, Counting of Antral Follicles, AMH level, Testing tubes if they are blocked or open and evaluating cavity. We then suggest simple things like intercourse during ovulation or IUI before moving to IVF.",
   },
   {
     question: "Where are Dr. Mona Dahiya's clinics?",

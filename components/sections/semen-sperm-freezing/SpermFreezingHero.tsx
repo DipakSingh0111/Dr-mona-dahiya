@@ -61,7 +61,7 @@ export default function SpermFreezingHero() {
               Semen &amp; Sperm Freezing in Delhi,{" "} Noida &amp; Ghaziabad
             </h1>
 
-            <p className="mt-5 sm:mt-6.5 max-w-none text-[13.5px] leading-relaxed text-ink/80 sm:text-[15px]">
+            <p className="mt-5 sm:mt-6.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/80 sm:text-[15px]">
               A semen sample can be frozen so you have a backup for any medical
               reason, work requirement or personal requirement. From collecting
               your sample to freezing, storing and later using it in an IUI or

@@ -40,7 +40,7 @@ const protocols: ProtocolStep[] = [
     number: "4",
     title: "Trigger shot given on Day 12/13",
     bullets: [
-      "Inject 5000–10000 IU of Recombinant hCG when follicles are mature",
+      "Inject 5000–10000 IU of Recombinant HCG when follicles are mature",
     ],
   },
   {
@@ -64,7 +64,7 @@ const protocols: ProtocolStep[] = [
     title: "Progesterone Support and Pregnancy Test",
     bullets: [
       "Micronized Progesterone will be prescribed for 14 days",
-      "Beta hCG levels checked on Day 28",
+      "Beta HCG levels checked on Day 28",
     ],
   },
 ];

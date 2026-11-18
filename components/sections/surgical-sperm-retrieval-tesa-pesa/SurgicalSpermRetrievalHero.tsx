@@ -81,7 +81,7 @@ export default function SurgicalSpermRetrievalHero() {
               Noida &amp; Ghaziabad
             </h1>
 
-            <p className="mt-5 sm:mt-6.5 max-w-none text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
+            <p className="mt-5 sm:mt-6.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
               In case your ejaculate does not have any sperm. We can help you
               get them from epididymis or testis. Dr Mona Dahiya will advise you
               which procedure would suit you best. PESA TESA or Micro TESE. We

@@ -62,7 +62,7 @@ export default function LahHero() {
               Laser Assisted Hatching in Noida, Delhi &amp; Ghaziabad
             </h1>
 
-            <p className="mt-5 sm:mt-6.5 max-w-none text-[13.5px] leading-relaxed text-ink/80 sm:text-[15px]">
+            <p className="mt-5 sm:mt-6.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/80 sm:text-[15px]">
               Laser assisted hatching is a technique where a thin beam of
               non-contact laser is used to make an opening in, or thin out, the
               shell (zona) of an embryo. Under the guidance of Dr. Mona Dahiya

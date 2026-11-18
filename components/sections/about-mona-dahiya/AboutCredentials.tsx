@@ -28,6 +28,17 @@ type LogoItem = {
   caption: string;
 };
 
+export const awardObjectPosition: Record<string, string> = {
+  "ivf-summit-speaker": "object-[50%_34%]",
+  "ivf-summit-certificate": "object-[50%_32%]",
+  "ivf-summit-panel": "object-[50%_12%]",
+  "times-health-stage": "object-[50%_20%]",
+  "times-health-award": "object-[50%_10%]",
+  "asia-food-influential": "object-top",
+  "asia-food-felicitation": "object-top",
+  "asia-food-group": "object-top",
+};
+
 const educationCards: QualCard[] = [
   {
     badge: "MBBS",
@@ -113,15 +124,40 @@ function FeatureStat({
   label: string;
   description: string;
 }) {
+  const isGoldMedalist = value === "2 Times Gold Medalist";
+  const isNumeric = !isGoldMedalist && /^\d/.test(value);
+  const hasPlus = isNumeric && value.endsWith("+");
+
+  const valueClass = isGoldMedalist
+    ? "font-serif text-[2.5rem] leading-[1.08] font-medium tracking-[-0.02em] text-rose sm:text-[2.95rem]"
+    : isNumeric
+      ? "font-serif text-[3.75rem] leading-none font-medium tracking-[-0.02em] text-rose sm:text-[4.5rem]"
+      : "font-serif text-[2.75rem] leading-[1.06] font-medium tracking-[-0.02em] text-rose sm:text-[3.25rem]";
+
   return (
-    <article className="card-highlight flex h-full flex-col justify-center rounded-[22px] border border-[#fde2ec] bg-gradient-to-br from-[#fff7fa] to-[#fff0f5] px-6 py-7 text-ink shadow-sm sm:px-7 sm:py-8">
-      <p className="font-serif text-[2.1rem] leading-[1.1] font-bold text-rose sm:text-[2.5rem]">
-        {value}
+    <article className="flex h-full flex-col justify-start rounded-[24px] border border-[#fde2ec] bg-pink px-7 py-7 text-ink sm:px-8 sm:py-9">
+      <p className={valueClass}>
+        {isGoldMedalist ? (
+          <>
+            2 Times
+            <br />
+            Gold
+            <br />
+            Medalist
+          </>
+        ) : hasPlus ? (
+          <>
+            {value.slice(0, -1)}
+            <span className="font-light">+</span>
+          </>
+        ) : (
+          value
+        )}
       </p>
-      <p className="mt-4 font-serif text-[1.2rem] leading-snug font-bold text-ink sm:text-[1.35rem]">
+      <p className="mt-3.5 font-serif text-[1.25rem] leading-[1.25] font-bold tracking-[-0.01em] text-ink sm:mt-4 sm:text-[1.45rem]">
         {label}
       </p>
-      <p className="mt-3 text-[13px] leading-relaxed text-slate-600 sm:text-[14px]">
+      <p className="mt-3 font-sans text-[14.5px] leading-[1.6] font-light text-ink/85 sm:mt-3.5 sm:text-[15.5px]">
         {description}
       </p>
     </article>
@@ -392,12 +428,12 @@ export default function AboutCredentials() {
               {pubData.awards.items.slice(0, 6).map((item) => (
                 <StaggerItem key={item.id} variant="scaleIn">
                   <article className="flex h-full flex-col gap-2.5">
-                    <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-white/5">
+                    <div className="relative aspect-[5/4] overflow-hidden rounded-2xl bg-white/5">
                       <Image
                         src={item.image}
                         alt={item.title}
                         fill
-                        className="object-cover"
+                        className={`object-cover ${awardObjectPosition[item.id] ?? "object-top"}`}
                         sizes="(max-width: 768px) 90vw, 280px"
                       />
                     </div>

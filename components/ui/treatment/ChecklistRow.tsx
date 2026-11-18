@@ -8,6 +8,7 @@ export interface ChecklistRowProps {
   title?: ReactNode;
   text?: ReactNode;
   children?: ReactNode;
+  inline?: boolean;
   className?: string;
 }
 
@@ -37,13 +38,14 @@ export function ChecklistRow({
   title,
   text,
   children,
+  inline = false,
   className = "",
 }: ChecklistRowProps) {
   let heading: ReactNode =
     typeof title === "string" ? title.replace(/:\s*$/, "") : title;
   let body: ReactNode = text;
 
-  if (!heading) {
+  if (!heading && !inline) {
     const split = extractSplitFromNode(children) ?? extractSplitFromNode(text);
     if (split) {
       heading = split.heading;

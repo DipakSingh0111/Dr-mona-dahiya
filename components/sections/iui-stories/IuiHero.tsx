@@ -49,7 +49,7 @@ export default function IuiHero() {
               Real IUI Success Stories
             </h1>
 
-            <p className="mt-5 sm:mt-6.5 max-w-none text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
+            <p className="mt-5 sm:mt-6.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
               IUI stands for intrauterine insemination: simply putting washed
               sperm into the uterus closer to the time of ovulation. It is the
               least invasive of all procedures. Dr Mona Dahiya has performed

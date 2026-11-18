@@ -71,7 +71,7 @@ export default function SecondOpinionHero() {
               Ghaziabad
             </h1>
 
-            <p className="mt-5 sm:mt-6.5 max-w-none text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
+            <p className="mt-5 sm:mt-6.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
               Why the embryos didn&apos;t take hold could be due to embryo
               quality, uterus and receptivity. We will give you a detailed
               assessment and diagnose where your issue lies. Dr Mona will help

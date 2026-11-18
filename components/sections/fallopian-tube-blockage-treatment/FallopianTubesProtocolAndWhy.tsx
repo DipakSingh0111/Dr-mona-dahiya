@@ -23,7 +23,7 @@ const protocols = [
     title: "Check if you have a hydrosalpinx",
     bullets: [
       "Having a hydrosalpinx decreases your chances of getting pregnant via IVF",
-      "If you have a hydrosalpinx we will explain how to manage it before going for ivf.",
+      "If you have a hydrosalpinx we will explain how to manage it before going for IVF.",
     ],
   },
   {

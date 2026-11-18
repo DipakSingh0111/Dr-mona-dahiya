@@ -64,7 +64,7 @@ export default function EmbryoFreezingHero() {
               in Delhi, Noida &amp; Ghaziabad
             </h1>
 
-            <p className="mt-5 sm:mt-6.5 max-w-none text-[13.5px] leading-relaxed text-ink/80 sm:text-[15px]">
+            <p className="mt-5 sm:mt-6.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/80 sm:text-[15px]">
               We can store the healthy embryos obtained from your IVF cycle to
               be transferred later on, used for preimplantation genetic testing,
               or for future siblings. We use the vitrification method and follow

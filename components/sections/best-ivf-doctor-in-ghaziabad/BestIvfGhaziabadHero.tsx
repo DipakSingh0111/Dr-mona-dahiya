@@ -48,7 +48,7 @@ export default function BestIvfGhaziabadHero() {
               Best IVF doctor in Ghaziabad - Dr Mona Dahiya
             </h1>
 
-            <p className="mt-5 sm:mt-6.5 max-w-none text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
+            <p className="mt-5 sm:mt-6.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
               Dr Mona Dahiya has done gold medal in MBBS and MD, DNB and IVF
               fellowship from Singapore General Hospital. She is one of the best
               IVF doctors in Ghaziabad with 25+ years experience. We provide IVF,

@@ -51,7 +51,7 @@ export default function LowSpermHero() {
               Ghaziabad
             </h1>
 
-            <p className="mt-5 sm:mt-6.5 max-w-none text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
+            <p className="mt-5 sm:mt-6.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
               Low number and poor mobility and morphology is called
               oligo-astheno-teratozoospermia. We identify treatable conditions.
               Based on the values we would decide if the patient can do IUI or

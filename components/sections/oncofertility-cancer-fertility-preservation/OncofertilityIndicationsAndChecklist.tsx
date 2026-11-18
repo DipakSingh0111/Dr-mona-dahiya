@@ -109,9 +109,7 @@ export default function OncofertilityIndicationsAndChecklist() {
         <div className="mt-6 flex flex-col gap-3.5 sm:mt-7 sm:gap-4">
           {checklist.map((text, idx) => (
             <Reveal key={text} variant="fadeUp" delay={idx * 0.04}>
-              <ChecklistRow>
-                <span>{text}</span>
-              </ChecklistRow>
+              <ChecklistRow inline>{text}</ChecklistRow>
             </Reveal>
           ))}
         </div>

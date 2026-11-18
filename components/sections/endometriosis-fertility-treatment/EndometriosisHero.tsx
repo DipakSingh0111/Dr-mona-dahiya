@@ -60,7 +60,7 @@ export default function EndometriosisHero() {
               Endometriosis &amp; Adenomyosis Fertility Treatment in Delhi, Noida &amp; Ghaziabad
             </h1>
 
-            <p className="mt-5 sm:mt-6.5 max-w-none text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px] lg:text-[15.5px]">
+            <p className="mt-5 sm:mt-6.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px] lg:text-[15.5px]">
               Suffering from painful periods and wanting to get pregnant. Dr. Mona Dahiya will help you understand what your options are by looking at your age, egg reserve and pain. We can opt for certain procedures, use medications and even IVF if needed!
             </p>
           </Reveal>

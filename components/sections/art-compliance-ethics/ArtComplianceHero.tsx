@@ -54,7 +54,7 @@ export default function ArtComplianceHero() {
               Ethics Policy
             </h1>
 
-            <p className="mt-5 sm:mt-6 max-w-none text-[13.5px] leading-relaxed text-ink/80 sm:text-[15px]">
+            <p className="mt-5 sm:mt-6 max-w-2xl text-[13.5px] leading-relaxed text-ink/80 sm:text-[15px]">
               India has stringent laws for assisted reproduction and
               reproductive genetics. We make sure that we and our embryologists
               abide by these acts while performing any kind of service at our

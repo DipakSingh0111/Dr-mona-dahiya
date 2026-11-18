@@ -74,7 +74,7 @@ export default function DonorGameteHero() {
               Sperm)
             </h1>
 
-            <p className="mt-5 sm:mt-6.5 max-w-none text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
+            <p className="mt-5 sm:mt-6.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
               If you do not have viable eggs or sperm for your family then donor
               egg / donor sperm can help you. Our team will guide you medically
               and legally as per ART act. Using vetted donors we are able to

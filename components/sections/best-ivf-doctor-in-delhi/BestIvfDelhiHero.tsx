@@ -66,7 +66,7 @@ export default function BestIvfDelhiHero() {
               Best IVF Doctor in Delhi: Dr. Mona Dahiya
             </h1>
 
-            <p className="mt-5 sm:mt-6.5 max-w-none text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
+            <p className="mt-5 sm:mt-6.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
               IVF specialist in Delhi with 25+ yrs experience. Gold Medalist MBBS &amp; MD. DNB and Fellowship from Singapore General Hospital in IVF. IVF, ICSI, IUI &amp; fertility preservation services available at our Delhi IVF clinic with customized plans. She has IVF success rates of 90%+.
             </p>
           </Reveal>

@@ -56,6 +56,7 @@ const indications: { number: string; title: string; description: ReactNode }[] =
 
 const checklist: { title?: string; text: ReactNode }[] = [
   {
+    title: "Karyotyping",
     text: (
       <>
         Both partners are sent for <strong>Karyotyping</strong> to see if there is a
@@ -93,6 +94,7 @@ const checklist: { title?: string; text: ReactNode }[] = [
     text: "TSH, Anti-TPO antibodies, HbA1c, Prolactin and Progesterone levels in luteal phase.",
   },
   {
+    title: "Sperm DNA Fragmentation Test",
     text: (
       <>
         Send partner for a{" "}

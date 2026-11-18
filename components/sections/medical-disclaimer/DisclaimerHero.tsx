@@ -56,7 +56,7 @@ export default function DisclaimerHero() {
               Medical &amp; Clinical Information Disclaimer
             </h1>
 
-            <p className="mt-5 sm:mt-6.5 max-w-none text-[13.5px] leading-relaxed text-ink/80 sm:text-[15px]">
+            <p className="mt-5 sm:mt-6.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/80 sm:text-[15px]">
               Information shared on this website about medical and fertility
               topics is for information purposes only. No diagnosis or medication
               can be concluded from the information we provide. We don&apos;t

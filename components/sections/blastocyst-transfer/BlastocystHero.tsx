@@ -60,7 +60,7 @@ export default function BlastocystHero() {
                 Advanced Day-5 Blastocyst Transfer in Delhi, Noida &amp; Ghaziabad
               </h1>
 
-              <p className="mt-5 sm:mt-6.5 max-w-none text-[13.5px] leading-relaxed text-ink/80 sm:text-[15px]">
+              <p className="mt-5 sm:mt-6.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/80 sm:text-[15px]">
                 When we grow the embryo in the incubator till Day 5/6 in the lab,
                 this is called blastocyst transfer. By this time, the embryo will
                 have an inner cell mass (baby) and the trophectoderm (placenta).

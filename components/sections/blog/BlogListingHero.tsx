@@ -32,7 +32,7 @@ export default function BlogListingHero() {
               Fertility &amp; IVF Blog by Dr. Mona Dahiya
             </h1>
 
-            <p className="mt-5 sm:mt-6.5 max-w-none text-[13.5px] leading-relaxed text-ink/80 sm:text-[15px]">
+            <p className="mt-5 sm:mt-6.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/80 sm:text-[15px]">
               Learn more about all things fertility from fertility testing, types
               of fertility treatments, IVF and what to expect. Read our posts on
               topics such as low AMH, PCOS, diet and how to find the best

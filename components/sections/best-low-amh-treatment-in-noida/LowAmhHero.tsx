@@ -52,14 +52,14 @@ export default function LowAmhHero() {
                 </h1>
               </div>
 
-              <p className="max-w-none text-[13px] leading-relaxed text-ink/75 sm:text-[14px]">
-                Low Amh means low number of follicles are left in your ovary. If
+              <p className="max-w-2xl text-[13px] leading-relaxed text-ink/75 sm:text-[14px]">
+                Low AMH means low number of follicles are left in your ovary. If
                 you have less than 1.1 ng/ml that does not mean that you cannot
                 conceive nor does it mean that you will have low quality eggs. We
                 offer protocols which can help you conceive with your own eggs
                 with Dr Mona Dahiya. We will help you maximise your chances of
                 getting pregnant. At Delhi NCR with our specialised protocols like
-                Duostim, Micro dose flare, dheas.
+                Duostim, Micro dose flare, DHEAS.
               </p>
 
               <div className="flex w-full max-w-[450px] flex-col gap-2.5 sm:max-w-[500px] sm:flex-row sm:gap-3">

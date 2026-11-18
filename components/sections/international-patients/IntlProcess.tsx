@@ -69,7 +69,7 @@ const stages = [
     number: "6",
     title: "Confirm Pregnancy (In Your Home Country)",
     bullets: [
-      "Take a beta hCG blood test 14 days after your transfer",
+      "Take a beta HCG blood test 14 days after your transfer",
       "Talk to your local doctor and let them know you are pregnant",
     ],
   },

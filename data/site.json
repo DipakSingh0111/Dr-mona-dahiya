@@ -580,7 +580,7 @@
       {
         "id": "mini-ivf",
         "title": "Mini IVF",
-        "description": "Mini ivf or Micro ivf is a modified form of IVF where less amount of fertility medication is used.",
+        "description": "Mini IVF or Micro IVF is a modified form of IVF where less amount of fertility medication is used.",
         "icon": "cells",
         "image": "/images/services/service-mini-ivf-soft.png",
         "videoHref": "https://www.youtube.com/@drmonadahiya"
@@ -2257,7 +2257,7 @@
         {
           "q": "How many IUI cycles are usually tried?",
           "a": "We generally recommend 3-4 attempts then go for IVF. Read",
-          "linkLabel": "Iui Articles.",
+          "linkLabel": "IUI Articles.",
           "linkHref": "/iui-stories"
         },
         {
@@ -5941,7 +5941,7 @@
               "type": "paragraph",
               "spacing": "sm",
               "content": [
-                "An hCG trigger injection is administered once the follicles reach the desired size to ensure ovulation occurs at the optimal time."
+                "An HCG trigger injection is administered once the follicles reach the desired size to ensure ovulation occurs at the optimal time."
               ]
             },
             {
@@ -6288,7 +6288,7 @@
               "topMargin": "md",
               "items": [
                 [
-                  "A blood pregnancy test (Beta hCG) is usually performed approximately two weeks after insemination."
+                  "A blood pregnancy test (Beta HCG) is usually performed approximately two weeks after insemination."
                 ],
                 [
                   "Blood testing provides more reliable results than early home pregnancy tests."

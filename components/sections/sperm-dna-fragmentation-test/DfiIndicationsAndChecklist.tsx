@@ -69,7 +69,7 @@ export default function DfiIndicationsAndChecklist() {
               <br className="hidden sm:inline" /> DNA Fragmentation Test?
             </>
           }
-          subtitle="Common reasons Dr. Mona Dahiya recommends sperm dna fragmentation care."
+          subtitle="Common reasons Dr. Mona Dahiya recommends sperm DNA fragmentation care."
         />
 
         {/* 5 Cards + 6th Image Grid */}

@@ -195,7 +195,7 @@ main:not(.home-main) .card-highlight h3+p:not(.font-serif),
 main:not(.home-main) .card-highlight h4+p:not(.font-serif),
 main:not(.home-main) .card-highlight>div>div+div:not(.border-t),
 main:not(.home-main) .card-highlight>div+div:not(.border-t),
-main:not(.home-main) .card-highlight>p:first-child,
+main:not(.home-main) .card-highlight>p:not(.font-serif),
 main:not(.home-main) .card-highlight>div>h3+p:not(.font-serif),
 main:not(.home-main) .card-highlight>div>div>h3+p:not(.font-serif),
 main:not(.home-main) .card-highlight>div>div+p:not(.font-serif),
@@ -219,7 +219,7 @@ main:not(.home-main) table tbody td {
   main:not(.home-main) .card-highlight h4+p:not(.font-serif),
   main:not(.home-main) .card-highlight>div>div+div:not(.border-t),
   main:not(.home-main) .card-highlight>div+div:not(.border-t),
-  main:not(.home-main) .card-highlight>p:first-child,
+  main:not(.home-main) .card-highlight>p:not(.font-serif),
   main:not(.home-main) .card-highlight>div>h3+p:not(.font-serif),
   main:not(.home-main) .card-highlight>div>div>h3+p:not(.font-serif),
   main:not(.home-main) .card-highlight>div>div+p:not(.font-serif),
@@ -278,6 +278,11 @@ section:has(.hero-fullwidth-banner) {
   background: #fff !important;
 }
 
+section:has(.hero-fullwidth-banner) h1 ~ p,
+section:has(.hero-banner-card) h1 ~ p {
+  text-align: justify !important;
+}
+
 @media (min-width: 1024px) {
   section:has(.hero-fullwidth-banner) {
     height: clamp(460px, calc(100svh - var(--site-header-h, 8.75rem)), 620px) !important;
@@ -312,6 +317,10 @@ section:has(.hero-fullwidth-banner) {
     margin-top: 0 !important;
     padding-top: 1.25rem !important;
     padding-bottom: 1rem !important;
+  }
+
+  section:has(.hero-fullwidth-banner) h1 ~ p {
+    max-width: 42rem !important;
   }
 
   section:has(.hero-fullwidth-banner) nav[aria-label="Breadcrumb"] {
