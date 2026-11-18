@@ -25,7 +25,11 @@ export default function OncofertilityHero() {
         background: "var(--pink)",
       }}
     >
-      <HeroFullWidthBanner src="/pageBanner/M0500456.jpg" alt="Dr. Mona Dahiya — Oncofertility in Delhi NCR" />
+      <HeroFullWidthBanner
+        src="/pageBanner/M0500456.jpg"
+        alt="Dr. Mona Dahiya — Oncofertility in Delhi NCR"
+        imageClassName="lg:translate-x-28"
+      />
       <div className="page-container relative z-10 w-full pt-4 sm:pt-5 lg:pt-0">
         <div className="lg:max-w-[46rem] xl:max-w-[50rem] 2xl:max-w-[52rem] lg:mt-0">
           <Breadcrumb

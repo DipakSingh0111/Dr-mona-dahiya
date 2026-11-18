@@ -8,6 +8,7 @@ interface HeroFullWidthBannerProps {
   priority?: boolean;
   objectPosition?: string;
   showDesktopGradient?: boolean;
+  imageClassName?: string;
 }
 
 const BANNER_SCALE_MAP: Record<string, number> = {
@@ -95,6 +96,7 @@ export function HeroFullWidthBanner({
   alt,
   priority = true,
   objectPosition = "",
+  imageClassName = "",
 }: HeroFullWidthBannerProps) {
   const scale = BANNER_SCALE_MAP[src] ?? 1;
 
@@ -114,7 +116,7 @@ export function HeroFullWidthBanner({
             objectPosition: "right bottom",
             ["--banner-scale" as string]: scale,
           }}
-          className={`object-contain lg:origin-bottom-right lg:scale-[var(--banner-scale)] ${objectPosition}`}
+          className={`object-contain lg:origin-bottom-right lg:scale-[var(--banner-scale)] ${objectPosition} ${imageClassName}`}
         />
       </div>
     </div>
