@@ -108,7 +108,7 @@ export default function Footer() {
         >
           <StaggerItem className="lg:col-span-3">
             <div>
-              <p className="font-serif text-[1.25rem] font-bold text-white">
+              <p className="font-display text-[1.35rem] leading-none font-bold tracking-tight text-white sm:text-[1.5rem] lg:text-[1.55rem] xl:text-[1.85rem]">
                 {data.brand.name}
               </p>
               <p className="mt-0.5 text-[12px] text-white/70">
@@ -156,12 +156,12 @@ export default function Footer() {
                     <a
                       key={item.id}
                       href={item.href}
-                      className="flex items-start gap-2.5 transition hover:opacity-90"
+                      className="flex items-center gap-2.5 transition hover:opacity-90"
                     >
-                      <span className="mt-0.5 flex size-7 shrink-0 items-center justify-center rounded-full bg-rose/15 text-rose">
+                      <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-rose/15 text-rose">
                         <Icon className="size-3" />
                       </span>
-                      <span className="min-w-0 text-[12px] leading-snug text-white/85">
+                      <span className="min-w-0 text-[12px] leading-none text-white/85">
                         {text}
                       </span>
                     </a>

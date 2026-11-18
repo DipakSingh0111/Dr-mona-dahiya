@@ -27,13 +27,12 @@ export default function AboutHero() {
 
       {/* Desktop full-width background banner */}
       <HeroFullWidthBanner
-        src="/pageBanner/M0500359.jpg"
+        src="/pageBanner/M0500483.jpg"
         alt="Dr. Mona Dahiya - Senior Reproductive Endocrinologist & Fertility Specialist"
-        objectPosition="object-[72%_22%] -translate-x-[18%] scale-[1.48] sm:-translate-x-[14%] sm:scale-[1.28] md:-translate-x-[10%] md:scale-[1.15] lg:translate-x-0"
       />
 
       <div className="page-container relative z-10 w-full pt-4 sm:pt-5 lg:pt-0">
-        <div className="lg:max-w-[44rem] xl:max-w-[48rem] 2xl:max-w-[50rem] lg:-mt-2">
+        <div className="lg:max-w-[46rem] xl:max-w-[50rem] 2xl:max-w-[52rem] lg:mt-0">
           <Breadcrumb
             items={[
               { label: "About Dr. Mona", href: "/about-mona-dahiya" },
@@ -46,11 +45,11 @@ export default function AboutHero() {
               About Dr. Mona Dahiya
             </p>
 
-            <h1 className="font-serif mx-auto mt-1.5 max-w-[22rem] text-balance text-[1.35rem] leading-[1.24] font-semibold tracking-tight text-ink min-[390px]:max-w-[24rem] min-[390px]:text-[1.45rem] sm:max-w-[36rem] sm:text-[1.95rem] lg:mx-0 lg:max-w-[48rem] lg:text-wrap lg:text-[2.35rem] lg:leading-[1.18] lg:font-normal xl:text-[2.55rem]">
+            <h1 className="font-serif mx-auto mt-2.5 max-w-[22rem] text-balance text-[1.35rem] leading-[1.24] font-semibold tracking-tight text-ink min-[390px]:max-w-[24rem] min-[390px]:text-[1.45rem] sm:max-w-[36rem] sm:text-[1.95rem] lg:mx-0 lg:max-w-[48rem] lg:text-wrap lg:text-[2.35rem] lg:leading-[1.18] lg:font-normal xl:text-[2.55rem]">
               Dr. Mona Dahiya - Senior Reproductive Endocrinologist &amp; Fertility Specialist
             </h1>
 
-            <p className="mx-auto mt-3.5 max-w-2xl text-[13px] leading-relaxed text-ink/80 sm:mt-4 sm:text-[14px] lg:mx-0">
+            <p className="mx-auto mt-5 sm:mt-6.5 max-w-2xl text-[13px] leading-relaxed text-ink/80 sm:text-[14px] lg:mx-0">
               Dr. Mona Dahiya is a senior reproductive endocrinologist &amp; infertility specialist with 25+ years of experience. She is the Founder Director of Little Angel IVF. She has successfully treated more than 25000 couples from India and abroad.
             </p>
 
@@ -69,7 +68,7 @@ export default function AboutHero() {
               </Link>
             </div>
 
-            <div className="mt-3 sm:mt-4">
+            <div className="mt-5 sm:mt-6">
               <Link
                 href="#reviews"
                 className="inline-flex items-center gap-1.5 text-[12.5px] font-semibold text-rose transition-colors hover:text-rose hover:underline sm:text-[13.5px]"
@@ -95,7 +94,7 @@ export default function AboutHero() {
 
         {/* Mobile / tablet full-width banner */}
         <HeroMobileBanner
-          src="/pageBanner/M0500359.jpg"
+          src="/pageBanner/M0500483.jpg"
           alt="Dr. Mona Dahiya - Senior Reproductive Endocrinologist & Fertility Specialist"
         />
       </div>

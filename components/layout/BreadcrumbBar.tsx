@@ -304,7 +304,7 @@ export default function BreadcrumbBar() {
   }
 
   return (
-    <div className="w-full border-b border-slate-300/80 bg-slate-200 py-2.5 sm:py-3">
+    <div className="w-full bg-slate-200 py-2.5 sm:py-3">
       <div className="page-container">
         <Breadcrumb items={items} inline />
       </div>

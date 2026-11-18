@@ -41,7 +41,7 @@ export default function SuccessStoriesHero() {
       />
 
       <div className="page-container relative z-10 w-full pt-4 sm:pt-5 lg:pt-0">
-        <div className="lg:max-w-[44rem] xl:max-w-[48rem] 2xl:max-w-[50rem] lg:-mt-1">
+        <div className="lg:max-w-[46rem] xl:max-w-[50rem] 2xl:max-w-[52rem] lg:mt-0">
           <Breadcrumb
           items={[
             { label: "Success Stories", href: "/success-stories" },
@@ -53,14 +53,14 @@ export default function SuccessStoriesHero() {
             <p className="text-[12.5px] font-semibold tracking-wide text-rose sm:text-[13.5px]">
               {data.eyebrow}
             </p>
-            <h1 className="font-serif mt-1.5 max-w-[48rem] text-[1.85rem] leading-[1.18] font-normal tracking-tight text-ink sm:text-[2.35rem] lg:text-[2.55rem] xl:text-[2.85rem]">
+            <h1 className="font-serif mt-2.5 max-w-[48rem] text-[1.85rem] leading-[1.18] font-normal tracking-tight text-ink sm:text-[2.35rem] lg:text-[2.55rem] xl:text-[2.85rem]">
               {data.title}
             </h1>
-            <p className="mt-3.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/80 sm:mt-4 sm:text-[14.5px]">
+            <p className="mt-5 sm:mt-6.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/80 sm:text-[14.5px]">
               {data.subtitle}
             </p>
 
-            <div className="mt-5 sm:mt-6 flex flex-wrap items-center gap-1.5 sm:mt-4 sm:gap-2">
+            <div className="mt-5 sm:mt-6 flex flex-wrap items-center gap-1.5 sm:gap-2">
               <a
                 href={data.primaryCta.href}
                 className="inline-flex items-center justify-center rounded-full bg-rose px-4 py-2.5 text-[12.5px] font-semibold whitespace-nowrap text-white shadow-[0_8px_20px_rgba(232,62,116,0.28)] transition-all hover:bg-rose-dark active:scale-95 sm:px-5 sm:py-3 sm:text-[13.5px]"
@@ -75,7 +75,7 @@ export default function SuccessStoriesHero() {
               </Link>
             </div>
 
-            <div className="mt-4">
+            <div className="mt-5 sm:mt-6">
               <Link
                 href={data.reviewsLink.href}
                 className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-ink/90 underline underline-offset-4 transition-colors hover:text-rose sm:text-[14px]"

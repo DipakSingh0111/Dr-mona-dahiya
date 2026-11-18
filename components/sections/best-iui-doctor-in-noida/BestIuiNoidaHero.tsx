@@ -45,7 +45,7 @@ export default function BestIuiNoidaHero() {
         />
 
         <div className="page-container relative z-10 w-full pt-4 sm:pt-5 lg:pt-0">
-          <div className="lg:max-w-[44rem] xl:max-w-[48rem] 2xl:max-w-[50rem] lg:-mt-2">
+          <div className="lg:max-w-[46rem] xl:max-w-[50rem] 2xl:max-w-[52rem] lg:mt-0">
             <Breadcrumb
               items={[
                 { label: "Our Services", href: "/our-services" },
@@ -57,11 +57,11 @@ export default function BestIuiNoidaHero() {
               Fertility Doctor in Noida | Best IUI Doctor in Noida
             </p>
 
-            <h1 className="font-serif mt-1.5 max-w-[48rem] text-[1.85rem] leading-[1.15] font-normal tracking-tight text-ink sm:text-[2.45rem] lg:text-[2.75rem] xl:text-[3rem]">
+            <h1 className="font-serif mt-2.5 max-w-[48rem] text-[1.85rem] leading-[1.15] font-normal tracking-tight text-ink sm:text-[2.45rem] lg:text-[2.75rem] xl:text-[3rem]">
               IUI Treatment in Noida
             </h1>
 
-            <p className="mt-4 max-w-2xl text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
+            <p className="mt-5 sm:mt-6 max-w-2xl text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
               Dr. Mona Dahiya has over 25 years&apos; experience in performing
               IUI in Noida. We will help you understand the IUI procedure and
               decide if it&apos;s the right option for you. Dr. Mona Dahiya
@@ -84,7 +84,7 @@ export default function BestIuiNoidaHero() {
               </Link>
             </div>
 
-            <div className="mt-4 sm:mt-5">
+            <div className="mt-5 sm:mt-6">
               <Link
                 href="/best-ivf-patient-reviews"
                 className="inline-flex items-center gap-1.5 text-[12.5px] font-semibold text-rose transition-colors hover:text-rose hover:underline sm:text-[13.5px]"

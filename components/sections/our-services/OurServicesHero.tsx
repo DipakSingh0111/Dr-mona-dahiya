@@ -43,7 +43,7 @@ export default function OurServicesHero() {
         />
 
         <div className="page-container relative z-10 w-full pt-4 sm:pt-5 lg:pt-0">
-          <div className="lg:max-w-[44rem] xl:max-w-[48rem] 2xl:max-w-[50rem] lg:-mt-1">
+          <div className="lg:max-w-[46rem] xl:max-w-[50rem] 2xl:max-w-[52rem] lg:mt-0">
             <Breadcrumb
               items={[
                 {
@@ -58,13 +58,13 @@ export default function OurServicesHero() {
                 Our services
               </p>
 
-              <h1 className="font-serif mt-1.5 max-w-[48rem] text-[1.65rem] leading-[1.18] font-normal tracking-tight text-ink sm:text-[2.1rem] lg:text-[2.35rem] xl:text-[2.55rem]">
+              <h1 className="font-serif mt-2.5 max-w-[48rem] text-[1.65rem] leading-[1.18] font-normal tracking-tight text-ink sm:text-[2.1rem] lg:text-[2.35rem] xl:text-[2.55rem]">
                 Comprehensive Reproductive Medicine &amp; Fertility Services in
                 Delhi, Noida &amp; Ghaziabad
               </h1>
             </Reveal>
 
-            <div className="mt-5 sm:mt-6 flex flex-wrap items-center gap-2.5 sm:mt-5 sm:gap-3.5">
+            <div className="mt-5 sm:mt-6 flex flex-wrap items-center gap-2.5 sm:gap-3.5">
               <a
                 href="#book-consultation"
                 className="inline-flex items-center justify-center rounded-full bg-rose px-6 py-2.5 text-[13.5px] font-semibold text-white shadow-[0_8px_20px_rgba(232,62,116,0.3)] transition-all hover:bg-rose-dark active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"
@@ -81,14 +81,14 @@ export default function OurServicesHero() {
 
             <Link
               href="/best-ivf-patient-reviews"
-              className="mt-2.5 inline-flex items-center gap-1.5 text-[13.5px] font-medium text-rose transition-colors hover:text-rose-dark sm:mt-3 sm:text-[14px]"
+              className="mt-5 sm:mt-6 inline-flex items-center gap-1.5 text-[13.5px] font-medium text-rose transition-colors hover:text-rose-dark sm:text-[14px]"
             >
               Read Dr Mona Dahiya&apos;s Reviews →
             </Link>
 
             <Stagger
               delay={0.05}
-              className="mt-5 sm:mt-6.5 flex flex-wrap items-center gap-1.5 sm:mt-4 sm:gap-2"
+              className="mt-5 sm:mt-6.5 flex flex-wrap items-center gap-1.5 sm:gap-2"
             >
               {badges.map((badge) => (
                 <StaggerItem key={badge}>

@@ -20,7 +20,7 @@ export default function BlogListingHero() {
       />
 
       <div className="page-container relative z-10 w-full pt-4 sm:pt-5 lg:pt-0">
-        <div className="lg:max-w-[44rem] xl:max-w-[48rem] 2xl:max-w-[50rem] lg:-mt-1">
+        <div className="lg:max-w-[46rem] xl:max-w-[50rem] 2xl:max-w-[52rem] lg:mt-0">
           <Breadcrumb items={[{ label: "Fertility & IVF Blog" }]} />
 
           <Reveal variant="slideLeft">
@@ -32,7 +32,7 @@ export default function BlogListingHero() {
               Fertility &amp; IVF Blog by Dr. Mona Dahiya
             </h1>
 
-            <p className="mt-3.5 max-w-none text-[13.5px] leading-relaxed text-ink/80 sm:text-[15px]">
+            <p className="mt-5 sm:mt-6.5 max-w-none text-[13.5px] leading-relaxed text-ink/80 sm:text-[15px]">
               Learn more about all things fertility from fertility testing, types
               of fertility treatments, IVF and what to expect. Read our posts on
               topics such as low AMH, PCOS, diet and how to find the best
@@ -40,7 +40,7 @@ export default function BlogListingHero() {
             </p>
           </Reveal>
 
-          <div className="mt-5 sm:mt-6 flex flex-wrap items-center gap-2.5 sm:mt-5 sm:gap-3.5">
+          <div className="mt-5 sm:mt-6 flex flex-wrap items-center gap-2.5 sm:gap-3.5">
             <a
               href="#book-consultation"
               className="inline-flex items-center justify-center rounded-full bg-rose px-6 py-2.5 text-[13.5px] font-bold text-white shadow-[0_8px_20px_rgba(232,62,116,0.28)] transition-all hover:bg-rose-dark active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"
@@ -55,7 +55,7 @@ export default function BlogListingHero() {
             </Link>
           </div>
 
-          <div className="mt-4">
+          <div className="mt-5 sm:mt-6">
             <Link
               href="/best-ivf-patient-reviews"
               className="inline-flex items-center gap-1.5 text-[13.5px] font-semibold text-rose transition-colors hover:text-rose-dark sm:text-[14px]"

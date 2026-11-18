@@ -45,7 +45,7 @@ export default function EmbryoFreezingHero() {
       />
 
       <div className="page-container relative z-10 w-full pt-4 sm:pt-5 lg:pt-0">
-        <div className="lg:max-w-[44rem] xl:max-w-[48rem] 2xl:max-w-[50rem] 2xl:max-w-[45rem]">
+        <div className="lg:max-w-[46rem] xl:max-w-[50rem] 2xl:max-w-[52rem] lg:mt-0 2xl:max-w-[45rem]">
           <Breadcrumb
             items={[
               { label: "Treatments", href: "/our-services" },
@@ -58,13 +58,13 @@ export default function EmbryoFreezingHero() {
               Bank Your Best Quality Embryos
             </p>
 
-            <h1 className="font-serif mt-1.5 max-w-[48rem] text-[1.85rem] leading-[1.15] font-normal tracking-tight text-ink sm:text-[2.45rem] lg:text-[2.8rem] xl:text-[3.05rem]">
+            <h1 className="font-serif mt-2.5 max-w-[48rem] text-[1.85rem] leading-[1.15] font-normal tracking-tight text-ink sm:text-[2.45rem] lg:text-[2.8rem] xl:text-[3.05rem]">
               Embryo Freezing (Cryopreservation){" "}
               <br className="hidden sm:inline" />
               in Delhi, Noida &amp; Ghaziabad
             </h1>
 
-            <p className="mt-3.5 max-w-none text-[13.5px] leading-relaxed text-ink/80 sm:text-[15px]">
+            <p className="mt-5 sm:mt-6.5 max-w-none text-[13.5px] leading-relaxed text-ink/80 sm:text-[15px]">
               We can store the healthy embryos obtained from your IVF cycle to
               be transferred later on, used for preimplantation genetic testing,
               or for future siblings. We use the vitrification method and follow
@@ -73,7 +73,7 @@ export default function EmbryoFreezingHero() {
             </p>
           </Reveal>
 
-          <div className="mt-5 sm:mt-6 flex flex-wrap items-center gap-2.5 sm:mt-5 sm:gap-3.5">
+          <div className="mt-5 sm:mt-6 flex flex-wrap items-center gap-2.5 sm:gap-3.5">
             <a
               href="#book-consultation"
               className="inline-flex items-center justify-center rounded-full bg-rose px-6 py-2.5 text-[13.5px] font-semibold text-white shadow-[0_8px_20px_rgba(232,62,116,0.28)] transition-all hover:bg-rose-dark active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"
@@ -90,7 +90,7 @@ export default function EmbryoFreezingHero() {
 
           <Stagger
             delay={0.05}
-            className="mt-5 sm:mt-6.5 flex flex-wrap items-center gap-1.5 sm:mt-4 sm:gap-2"
+            className="mt-5 sm:mt-6.5 flex flex-wrap items-center gap-1.5 sm:gap-2"
           >
             {badges.map((badge) => (
               <StaggerItem key={badge}>

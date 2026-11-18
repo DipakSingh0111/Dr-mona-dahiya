@@ -30,7 +30,7 @@ export default function PgtHero() {
         alt="Dr. Mona Dahiya - Preimplantation Genetic Testing (PGT) Specialist"
       />
       <div className="page-container relative z-10 w-full pt-4 sm:pt-5 lg:pt-0">
-        <div className="lg:max-w-[44rem] xl:max-w-[48rem] 2xl:max-w-[50rem] 2xl:max-w-[45rem]">
+        <div className="lg:max-w-[46rem] xl:max-w-[50rem] 2xl:max-w-[52rem] lg:mt-0 2xl:max-w-[45rem]">
           <Breadcrumb
           items={[
             { label: "Treatments", href: "/our-services" },
@@ -42,13 +42,13 @@ export default function PgtHero() {
             High Success Rates with Embryo Screening
           </p>
 
-          <h1 className="font-serif mt-1.5 max-w-[48rem] text-[1.65rem] leading-[1.16] font-normal tracking-tight text-ink sm:text-[2.15rem] lg:text-[2.45rem] xl:text-[2.65rem]">
+          <h1 className="font-serif mt-2.5 max-w-[48rem] text-[1.65rem] leading-[1.16] font-normal tracking-tight text-ink sm:text-[2.15rem] lg:text-[2.45rem] xl:text-[2.65rem]">
             Preimplantation Genetic Testing (PGT){" "}
             <br className="hidden sm:inline" />
             in Noida, Ghaziabad &amp; Delhi
           </h1>
 
-          <p className="mt-3.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
+          <p className="mt-5 sm:mt-6.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
             Preimplantation Genetic Testing or PGT helps check if blastocyst
             formed on day 5 or 6 is genetically and chromosomally healthy. It is
             usually done in cases of repeated failure of embryo implantation,
@@ -57,7 +57,7 @@ export default function PgtHero() {
             miscarriages drastically.
           </p>
 
-          <div className="mt-5 sm:mt-6 flex flex-wrap items-center gap-1.5 sm:mt-4 sm:gap-2">
+          <div className="mt-5 sm:mt-6 flex flex-wrap items-center gap-1.5 sm:gap-2">
             <a
               href="#book-consultation"
               className="inline-flex items-center justify-center rounded-full bg-rose px-5 py-2.5 text-[13px] font-semibold text-white shadow-[0_8px_20px_rgba(232,62,116,0.28)] transition-all hover:bg-rose-dark sm:px-6 sm:py-3 sm:text-[14px]"
@@ -72,7 +72,7 @@ export default function PgtHero() {
             </Link>
           </div>
 
-          <div className="mt-4 sm:mt-5">
+          <div className="mt-5 sm:mt-6">
             <Link
               href="/best-ivf-patient-reviews"
               className="inline-flex items-center gap-1.5 text-[12.5px] font-medium text-rose transition-colors hover:text-rose-dark sm:text-[13.5px]"
@@ -83,7 +83,7 @@ export default function PgtHero() {
           </div>
 
           <Stagger
-            className="mt-5 sm:mt-6 flex flex-wrap items-center gap-2 sm:mt-5 sm:gap-2.5"
+            className="mt-5 sm:mt-6 flex flex-wrap items-center gap-2 sm:gap-2.5"
             stagger={0.06}
           >
             {badges.map((badge) => (

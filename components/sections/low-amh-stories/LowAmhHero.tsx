@@ -41,7 +41,7 @@ export default function LowAmhHero() {
       />
 
       <div className="page-container relative z-10 w-full pt-4 sm:pt-5 lg:pt-0">
-        <div className="lg:max-w-[44rem] xl:max-w-[48rem] 2xl:max-w-[50rem] lg:-mt-1">
+        <div className="lg:max-w-[46rem] xl:max-w-[50rem] 2xl:max-w-[52rem] lg:mt-0">
           <Breadcrumb
           items={[
             { label: "Success Stories", href: "/success-stories" },
@@ -54,11 +54,11 @@ export default function LowAmhHero() {
               Low AMH Pregnancy Stories
             </p>
 
-            <h1 className="font-serif mt-1.5 max-w-[48rem] text-[1.65rem] leading-[1.18] font-normal tracking-tight text-ink sm:text-[2.1rem] lg:text-[2.35rem] xl:text-[2.55rem]">
+            <h1 className="font-serif mt-2.5 max-w-[48rem] text-[1.65rem] leading-[1.18] font-normal tracking-tight text-ink sm:text-[2.1rem] lg:text-[2.35rem] xl:text-[2.55rem]">
               Low AMH Success Stories
             </h1>
 
-            <p className="mt-4 max-w-none text-[13.5px] leading-relaxed text-ink/75 sm:mt-5 sm:text-[15px]">
+            <p className="mt-5 sm:mt-6 max-w-none text-[13.5px] leading-relaxed text-ink/75 sm:text-[15px]">
               Having a low AMH level below 1 ng/ml doesn&apos;t mean your egg
               quality is bad. Many of our patients have achieved pregnancies
               with their own eggs by following a protocol called DuoStim or
@@ -83,7 +83,7 @@ export default function LowAmhHero() {
 
           <Link
             href="/best-ivf-patient-reviews"
-            className="mt-4 inline-flex items-center gap-1.5 sm:mt-5 text-[13.5px] font-medium text-rose transition-colors hover:text-rose-dark sm:text-[14px]"
+            className="mt-5 sm:mt-6 inline-flex items-center gap-1.5 text-[13.5px] font-medium text-rose transition-colors hover:text-rose-dark sm:text-[14px]"
           >
             Read Dr Mona Dahiya&apos;s Reviews →
           </Link>

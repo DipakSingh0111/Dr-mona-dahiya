@@ -28,7 +28,7 @@ export default function EraHero() {
         alt="Dr. Mona Dahiya — Personalized Endometrial Receptivity Analysis (ERA Test) in Noida & Delhi NCR"
       />
       <div className="page-container relative z-10 w-full pt-4 sm:pt-5 lg:pt-0">
-        <div className="lg:max-w-[44rem] xl:max-w-[48rem] 2xl:max-w-[50rem] 2xl:max-w-[45rem]">
+        <div className="lg:max-w-[46rem] xl:max-w-[50rem] 2xl:max-w-[52rem] lg:mt-0 2xl:max-w-[45rem]">
           <Breadcrumb
             items={[
               { label: "Treatments", href: "/our-services" },
@@ -40,13 +40,13 @@ export default function EraHero() {
             Endometrial Receptivity Analysis (ERA) Test in Delhi NCR
           </p>
 
-          <h1 className="font-serif mt-1.5 max-w-[48rem] text-[1.65rem] leading-[1.16] font-normal tracking-tight text-ink sm:text-[2.15rem] lg:text-[2.45rem] xl:text-[2.65rem]">
+          <h1 className="font-serif mt-2.5 max-w-[48rem] text-[1.65rem] leading-[1.16] font-normal tracking-tight text-ink sm:text-[2.15rem] lg:text-[2.45rem] xl:text-[2.65rem]">
             Personalized Endometrial Receptivity Analysis (ERA Test){" "}
             <br className="hidden sm:inline" />
             in Noida &amp; Delhi NCR
           </h1>
 
-          <p className="mt-3.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/80 sm:text-[15px]">
+          <p className="mt-5 sm:mt-6.5 max-w-2xl text-[13.5px] leading-relaxed text-ink/80 sm:text-[15px]">
             A simple biopsy can tell you your window of implantation. We analyse
             248 genes from the sample of endometrium to identify your window of
             implantation. With Dr Mona&apos;s ERA guided personalised embryo
@@ -54,7 +54,7 @@ export default function EraHero() {
             recurrent implantation failure. Noida | Delhi | Ghaziabad
           </p>
 
-          <div className="mt-5 sm:mt-6 flex flex-wrap items-center gap-1.5 sm:mt-4 sm:gap-2">
+          <div className="mt-5 sm:mt-6 flex flex-wrap items-center gap-1.5 sm:gap-2">
             <a
               href="#book-consultation"
               className="inline-flex items-center justify-center rounded-full bg-rose px-5 py-2.5 text-[13px] font-semibold text-white shadow-[0_8px_20px_rgba(232,62,116,0.28)] transition-all hover:bg-rose-dark sm:px-6 sm:py-3 sm:text-[14px]"
@@ -69,7 +69,7 @@ export default function EraHero() {
             </Link>
           </div>
 
-          <div className="mt-4 sm:mt-5">
+          <div className="mt-5 sm:mt-6">
             <Link
               href="/best-ivf-patient-reviews"
               className="inline-flex items-center gap-1.5 text-[12.5px] font-semibold text-ink transition-colors hover:text-rose sm:text-[13.5px]"
@@ -80,7 +80,7 @@ export default function EraHero() {
           </div>
 
           <Stagger
-            className="mt-5 sm:mt-6 flex flex-wrap items-center gap-2 sm:mt-5 sm:gap-2.5"
+            className="mt-5 sm:mt-6 flex flex-wrap items-center gap-2 sm:gap-2.5"
             stagger={0.06}
           >
             {badges.map((badge) => (
