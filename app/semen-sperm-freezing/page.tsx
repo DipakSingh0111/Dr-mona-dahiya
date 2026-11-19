@@ -16,6 +16,7 @@ import {
   SpermFreezingCost,
 } from "@/components/sections/semen-sperm-freezing/SpermFreezingCaseAndCost";
 import SpermFreezingFaq from "@/components/sections/semen-sperm-freezing/SpermFreezingFaq";
+import IvfSuccessClinics from "@/components/sections/ivf-stories/IvfSuccessClinics";
 import SpermFreezingRelatedTreatments from "@/components/sections/semen-sperm-freezing/SpermFreezingRelatedTreatments";
 import AboutConsultation from "@/components/sections/about-mona-dahiya/AboutConsultation";
 import AboutParenthoodCta from "@/components/sections/about-mona-dahiya/AboutParenthoodCta";
@@ -83,6 +84,10 @@ export default function SpermFreezingPage() {
       {/* 8. How Much Does Semen/Sperm Freezing Cost? (White) */}
       <SectionReveal delay={0.04}>
         <SpermFreezingCost />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <IvfSuccessClinics />
       </SectionReveal>
 
       {/* 9. Frequently Asked Questions about Semen & Sperm Freezing (Pink) */}

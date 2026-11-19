@@ -7,6 +7,7 @@ import DfiIndicationsAndChecklist from "@/components/sections/sperm-dna-fragment
 import DfiProtocolAndWhy from "@/components/sections/sperm-dna-fragmentation-test/DfiProtocolAndWhy";
 import DfiCaseAndCost from "@/components/sections/sperm-dna-fragmentation-test/DfiCaseAndCost";
 import DfiFaq from "@/components/sections/sperm-dna-fragmentation-test/DfiFaq";
+import IvfSuccessClinics from "@/components/sections/ivf-stories/IvfSuccessClinics";
 import DfiRelatedTreatments from "@/components/sections/sperm-dna-fragmentation-test/DfiRelatedTreatments";
 import AboutConsultation from "@/components/sections/about-mona-dahiya/AboutConsultation";
 import AboutParenthoodCta from "@/components/sections/about-mona-dahiya/AboutParenthoodCta";
@@ -42,6 +43,10 @@ export default function SpermDfiPage() {
       <DfiProtocolAndWhy />
 
       <DfiCaseAndCost />
+
+      <SectionReveal delay={0.04}>
+        <IvfSuccessClinics />
+      </SectionReveal>
 
       <SectionReveal delay={0.04}>
         <DfiFaq />

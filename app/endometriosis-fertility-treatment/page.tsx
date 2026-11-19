@@ -17,6 +17,7 @@ import {
   EndometriosisCost,
 } from "@/components/sections/endometriosis-fertility-treatment/EndometriosisCaseAndCost";
 import EndometriosisFaq from "@/components/sections/endometriosis-fertility-treatment/EndometriosisFaq";
+import IvfSuccessClinics from "@/components/sections/ivf-stories/IvfSuccessClinics";
 import EndometriosisRelatedTreatments from "@/components/sections/endometriosis-fertility-treatment/EndometriosisRelatedTreatments";
 import AboutConsultation from "@/components/sections/about-mona-dahiya/AboutConsultation";
 import AboutParenthoodCta from "@/components/sections/about-mona-dahiya/AboutParenthoodCta";
@@ -82,6 +83,10 @@ export default function EndometriosisPage() {
       {/* 9. How much will it cost me?: Cost Factors Affecting Endometriosis Treatment (Pink) */}
       <SectionReveal delay={0.04}>
         <EndometriosisCost />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <IvfSuccessClinics />
       </SectionReveal>
 
       {/* 10. FAQ: Frequently Asked Questions about Endometriosis & Adenomyosis (White) */}

@@ -5,6 +5,7 @@ import MedicalRegistration from "@/components/sections/MedicalRegistration";
 import ArtLawsAndProhibited from "@/components/sections/art-compliance-ethics/ArtLawsAndProhibited";
 import ArtEligibilityAndEthics from "@/components/sections/art-compliance-ethics/ArtEligibilityAndEthics";
 import ArtComplianceFaq from "@/components/sections/art-compliance-ethics/ArtComplianceFaq";
+import IvfSuccessClinics from "@/components/sections/ivf-stories/IvfSuccessClinics";
 import AboutConsultation from "@/components/sections/about-mona-dahiya/AboutConsultation";
 import AboutParenthoodCta from "@/components/sections/about-mona-dahiya/AboutParenthoodCta";
 
@@ -38,6 +39,10 @@ export default function ArtComplianceEthicsPage() {
       <ArtLawsAndProhibited />
 
       <ArtEligibilityAndEthics />
+
+      <SectionReveal delay={0.04}>
+        <IvfSuccessClinics />
+      </SectionReveal>
 
       <SectionReveal delay={0.04}>
         <ArtComplianceFaq />

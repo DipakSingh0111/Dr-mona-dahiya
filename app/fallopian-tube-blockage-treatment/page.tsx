@@ -7,6 +7,7 @@ import FallopianTubesIndicationsAndChecklist from "@/components/sections/fallopi
 import FallopianTubesProtocolAndWhy from "@/components/sections/fallopian-tube-blockage-treatment/FallopianTubesProtocolAndWhy";
 import FallopianTubesCaseAndCost from "@/components/sections/fallopian-tube-blockage-treatment/FallopianTubesCaseAndCost";
 import FallopianTubesFaq from "@/components/sections/fallopian-tube-blockage-treatment/FallopianTubesFaq";
+import IvfSuccessClinics from "@/components/sections/ivf-stories/IvfSuccessClinics";
 import FallopianTubesRelatedTreatments from "@/components/sections/fallopian-tube-blockage-treatment/FallopianTubesRelatedTreatments";
 import AboutConsultation from "@/components/sections/about-mona-dahiya/AboutConsultation";
 import AboutParenthoodCta from "@/components/sections/about-mona-dahiya/AboutParenthoodCta";
@@ -42,6 +43,10 @@ export default function FallopianTubeBlockagePage() {
       <FallopianTubesProtocolAndWhy />
 
       <FallopianTubesCaseAndCost />
+
+      <SectionReveal delay={0.04}>
+        <IvfSuccessClinics />
+      </SectionReveal>
 
       <SectionReveal delay={0.04}>
         <FallopianTubesFaq />

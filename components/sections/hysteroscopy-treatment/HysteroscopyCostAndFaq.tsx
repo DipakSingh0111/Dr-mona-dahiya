@@ -2,6 +2,7 @@
 
 import { FaCheck, FaPills } from "react-icons/fa";
 import { Stagger, StaggerItem } from "@/components/ui/Reveal";
+import IvfSuccessClinics from "@/components/sections/ivf-stories/IvfSuccessClinics";
 import {
   TreatmentSection,
   TreatmentSectionHeader,
@@ -149,6 +150,8 @@ export default function HysteroscopyCostAndFaq() {
         </Stagger>
       </div>
       </TreatmentSection>
+
+      <IvfSuccessClinics />
 
       <TreatmentSection>
         <div>

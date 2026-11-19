@@ -11,7 +11,14 @@ interface GalleryItemData {
   src: string;
   alt: string;
   wide?: boolean;
+  ultraWide?: boolean;
 }
+
+const ultraWideImageFiles = new Set([
+  "IMG_20260813_133713 (1).jpg",
+  "IMG_20260813_134222.jpg",
+  "WhatsApp Image 2026-05-12 at 6.38.36 PM.jpeg",
+]);
 
 const wideImageFiles = new Set([
   "5.jpg",
@@ -20,11 +27,9 @@ const wideImageFiles = new Set([
   "ECS_2116.JPG",
   "ECS61533.JPG",
   "ECS61549.JPG",
-  "IMG_20260813_133713 (1).jpg",
-  "IMG_20260813_134222.jpg",
   "LHMC REUNION.JPG",
   "M0500478.jpg",
-  "WhatsApp Image 2026-05-12 at 6.38.36 PM.jpeg",
+  ...ultraWideImageFiles,
 ]);
 
 const galleryImageFiles = [
@@ -111,6 +116,7 @@ const galleryItems: GalleryItemData[] = galleryImageFiles.map((file, idx) => ({
   src: `/GalleryImages/${file}`,
   alt: `Dr. Mona Dahiya Gallery Moment ${idx + 1}`,
   wide: wideImageFiles.has(file),
+  ultraWide: ultraWideImageFiles.has(file),
 }));
 
 const SLOTS_PER_PAGE = 16;
@@ -215,16 +221,14 @@ export default function GalleryGrid() {
           </div>
         </Reveal>
 
-        <div className="grid grid-flow-dense grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
+        <div className="grid grid-flow-dense grid-cols-1 items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
           {paginatedItems.map((item, idx) => (
             <button
               key={item.id}
               type="button"
               onClick={() => setSelectedIndex(item.globalIndex)}
-              className={`group relative w-full cursor-pointer overflow-hidden rounded-2xl border border-[#fde2ec] bg-pink text-left shadow-[0_8px_22px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-rose/45 hover:shadow-[0_14px_32px_rgba(232,62,116,0.14)] focus:outline-none focus-visible:ring-2 focus-visible:ring-rose ${
-                item.wide
-                  ? "aspect-[16/9] sm:col-span-2 lg:h-[300px] lg:aspect-auto"
-                  : "aspect-[4/5] sm:h-[280px] sm:aspect-auto lg:h-[300px]"
+              className={`group relative h-full w-full cursor-pointer overflow-hidden rounded-2xl border border-[#fde2ec] bg-pink text-left shadow-[0_8px_22px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-rose/45 hover:shadow-[0_14px_32px_rgba(232,62,116,0.14)] focus:outline-none focus-visible:ring-2 focus-visible:ring-rose ${
+                item.wide ? "aspect-[3/2] sm:col-span-2" : "aspect-[5/7]"
               }`}
               aria-label={`View ${item.alt}`}
             >
@@ -239,7 +243,7 @@ export default function GalleryGrid() {
                     : "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 }
                 className={`object-cover transition-transform duration-500 group-hover:scale-105 ${
-                  item.wide ? "object-[50%_25%]" : "object-top"
+                  item.wide ? "object-[50%_22%]" : "object-top"
                 }`}
               />
               <span

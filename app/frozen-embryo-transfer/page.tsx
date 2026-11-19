@@ -17,6 +17,7 @@ import {
   FetFaq,
 } from "@/components/sections/frozen-embryo-transfer/FetCostAndFaq";
 import FetRelatedTreatments from "@/components/sections/frozen-embryo-transfer/FetRelatedTreatments";
+import IvfSuccessClinics from "@/components/sections/ivf-stories/IvfSuccessClinics";
 import AboutConsultation from "@/components/sections/about-mona-dahiya/AboutConsultation";
 import AboutParenthoodCta from "@/components/sections/about-mona-dahiya/AboutParenthoodCta";
 
@@ -82,6 +83,10 @@ export default function FrozenEmbryoTransferPage() {
       {/* 8. Factors Affecting Cost Of Frozen Embryo Transfer (White) */}
       <SectionReveal delay={0.04}>
         <FetCost />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <IvfSuccessClinics />
       </SectionReveal>
 
       {/* 9. Frequently Asked Questions about Frozen Embryo Transfer (Pink) */}

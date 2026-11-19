@@ -17,6 +17,7 @@ import {
   EmbryoFreezingFaq,
 } from "@/components/sections/embryo-cryopreservation/EmbryoFreezingCostAndFaq";
 import EmbryoFreezingRelatedTreatments from "@/components/sections/embryo-cryopreservation/EmbryoFreezingRelatedTreatments";
+import IvfSuccessClinics from "@/components/sections/ivf-stories/IvfSuccessClinics";
 import AboutConsultation from "@/components/sections/about-mona-dahiya/AboutConsultation";
 import AboutParenthoodCta from "@/components/sections/about-mona-dahiya/AboutParenthoodCta";
 
@@ -82,6 +83,10 @@ export default function EmbryoFreezingPage() {
       {/* 8. Embryo Freezing Cost Details (White) */}
       <SectionReveal delay={0.04}>
         <EmbryoFreezingCost />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <IvfSuccessClinics />
       </SectionReveal>
 
       {/* 9. Frequently Asked Questions about Embryo Freezing & Banking (Pink) */}
