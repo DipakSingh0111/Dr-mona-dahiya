@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import IuiGhaziabadHero from "@/components/sections/iui-ghaziabad/IuiGhaziabadHero";
 import MedicalRegistration from "@/components/sections/MedicalRegistration";
+import VideoInsightsSection from "@/components/sections/VideoInsightsSection";
 import IuiGhaziabadAbout from "@/components/sections/iui-ghaziabad/IuiGhaziabadAbout";
 import IuiGhaziabadDoctorGlance from "@/components/sections/iui-ghaziabad/IuiGhaziabadDoctorGlance";
 import IuiGhaziabadWhy from "@/components/sections/iui-ghaziabad/IuiGhaziabadWhy";
@@ -30,6 +31,14 @@ export default function BestIuiDoctorInGhaziabadPage() {
       {/* 2. Medical Council Registration Numbers */}
       <SectionReveal>
         <MedicalRegistration />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <VideoInsightsSection
+          title="Watch Dr. Mona Dahiya Explain IUI Treatment in Ghaziabad"
+          imageSrc="/Video-section-images/IUI-doctor-in-Ghaziabad.jpg"
+          imageAlt="Dr. Mona Dahiya explaining expert IUI care in Ghaziabad"
+        />
       </SectionReveal>
 
       {/* 3. IUI in simple words */}

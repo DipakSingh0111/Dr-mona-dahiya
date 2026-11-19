@@ -378,22 +378,20 @@ export default function FertilityAssessmentQuiz() {
         <button
           type="button"
           onClick={() => handleModeSwitch("women")}
-          className={`cursor-pointer rounded-full px-5 py-2 text-[13px] font-semibold transition-all sm:px-6 sm:text-[14px] ${
-            mode === "women"
+          className={`cursor-pointer rounded-full px-5 py-2 text-[13px] font-semibold transition-all sm:px-6 sm:text-[14px] ${mode === "women"
               ? "bg-rose text-white shadow-[0_4px_12px_rgba(232,62,116,0.35)]"
               : "text-ink hover:text-rose"
-          }`}
+            }`}
         >
           Assessment for Women
         </button>
         <button
           type="button"
           onClick={() => handleModeSwitch("men")}
-          className={`cursor-pointer rounded-full px-5 py-2 text-[13px] font-semibold transition-all sm:px-6 sm:text-[14px] ${
-            mode === "men"
+          className={`cursor-pointer rounded-full px-5 py-2 text-[13px] font-semibold transition-all sm:px-6 sm:text-[14px] ${mode === "men"
               ? "bg-rose text-white shadow-[0_4px_12px_rgba(232,62,116,0.35)]"
               : "text-ink hover:text-rose"
-          }`}
+            }`}
         >
           Assessment for Men
         </button>
@@ -424,19 +422,17 @@ export default function FertilityAssessmentQuiz() {
                     type="button"
                     onClick={() => handleSelect(qIdx, optIdx)}
                     aria-pressed={isSelected}
-                    className={`flex h-full cursor-pointer flex-col items-start rounded-xl border p-3.5 text-left transition-all duration-200 ${
-                      isSelected
+                    className={`flex h-full cursor-pointer flex-col items-start rounded-xl border p-3.5 text-left transition-all duration-200 ${isSelected
                         ? "border-rose bg-[#fff0f5] shadow-[0_6px_18px_rgba(232,62,116,0.12)] ring-1 ring-rose/30"
                         : "border-[#fde2ec] bg-[#fffbfc] hover:border-[#f8b4cb] hover:bg-[#fff5f8]"
-                    }`}
+                      }`}
                   >
                     <div className="flex items-start gap-2.5">
                       <span
-                        className={`mt-1 flex size-4 shrink-0 items-center justify-center rounded-full border ${
-                          isSelected
+                        className={`mt-1 flex size-4 shrink-0 items-center justify-center rounded-full border ${isSelected
                             ? "border-rose bg-rose"
                             : "border-ink/30 bg-white"
-                        }`}
+                          }`}
                       >
                         {isSelected ? (
                           <span className="size-1.5 rounded-full bg-white" />
@@ -517,7 +513,7 @@ export default function FertilityAssessmentQuiz() {
 
           <div className="mt-5 flex flex-wrap gap-3">
             <a
-              href="#book-consultation"
+              href="/book-consultation"
               className="inline-flex items-center justify-center rounded-full bg-rose px-6 py-2.5 text-[13.5px] font-semibold text-white shadow-sm transition-all hover:bg-rose-dark"
             >
               Book Consultation with Dr. Mona

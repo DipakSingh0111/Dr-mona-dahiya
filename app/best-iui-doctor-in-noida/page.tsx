@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import BestIuiNoidaHero from "@/components/sections/best-iui-doctor-in-noida/BestIuiNoidaHero";
 import MedicalRegistration from "@/components/sections/MedicalRegistration";
+import VideoInsightsSection from "@/components/sections/VideoInsightsSection";
 import IuiAbout from "@/components/sections/iui-treatment/IuiAbout";
 import IuiDoctorGlance from "@/components/sections/iui-treatment/IuiDoctorGlance";
 import IuiBenefits from "@/components/sections/iui-treatment/IuiBenefits";
@@ -34,6 +35,14 @@ export default function BestIuiDoctorInNoidaPage() {
       {/* 2. Medical Council Registration Numbers (Image 2 Top) */}
       <SectionReveal>
         <MedicalRegistration />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <VideoInsightsSection
+          title="Watch Dr. Mona Dahiya Explain IUI Treatment in Noida"
+          imageSrc="/Video-section-images/IUI-doctor-in-Noida.jpg"
+          imageAlt="Dr. Mona Dahiya explaining IUI treatment in Noida"
+        />
       </SectionReveal>
 
       {/* 3. More about IUI (Image 2 Bottom) */}

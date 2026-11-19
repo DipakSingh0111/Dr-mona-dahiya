@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import GalleryHero from "@/components/sections/gallery/GalleryHero";
-// import GalleryGrid from "@/components/sections/gallery/GalleryGrid";
+import GalleryGrid from "@/components/sections/gallery/GalleryGrid";
 import MedicalRegistration from "@/components/sections/MedicalRegistration";
 import AboutParenthoodCta from "@/components/sections/about-mona-dahiya/AboutParenthoodCta";
 
@@ -19,14 +19,16 @@ export default function GalleryPage() {
       {/* 1. Gallery Hero matching Screenshot */}
       <GalleryHero />
 
-      {/* 2. Photo Gallery Grid */}
-      {/* <SectionReveal>
-        <GalleryGrid />
-      </SectionReveal> */}
+
 
       {/* 3. Medical Registration Councils matching Screenshot */}
       <SectionReveal>
         <MedicalRegistration />
+      </SectionReveal>
+
+      {/* 2. Photo Gallery Grid */}
+      <SectionReveal>
+        <GalleryGrid />
       </SectionReveal>
 
       {/* 4. Take your first step towards parenthood CTA matching Screenshot */}

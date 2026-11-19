@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import DonorGameteHero from "@/components/sections/donor-gametes/DonorGameteHero";
 import MedicalRegistration from "@/components/sections/MedicalRegistration";
+import VideoInsightsSection from "@/components/sections/VideoInsightsSection";
 import DonorGameteIndicationsAndChecklist from "@/components/sections/donor-gametes/DonorGameteIndicationsAndChecklist";
 import DonorGameteProtocolAndWhy from "@/components/sections/donor-gametes/DonorGameteProtocolAndWhy";
 import DonorGameteReviews from "@/components/sections/donor-gametes/DonorGameteReviews";
@@ -32,6 +33,14 @@ export default function DonorGametePage() {
             MCI: "MCI registration number",
             UPMC: "UPMC registration number",
           }}
+        />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <VideoInsightsSection
+          title="IVF with Donor Eggs or Sperm: Process & Guidelines Explained"
+          imageSrc="/Video-section-images/Donor-Gamete-IVF-in-Delhi-NCR.jpg"
+          imageAlt="Dr. Mona Dahiya explaining Donor IVF process and guidelines"
         />
       </SectionReveal>
 

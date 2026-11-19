@@ -100,7 +100,7 @@ export default function IuiDelhiDoctor() {
             <div className="mt-6 flex flex-wrap items-center gap-3 sm:gap-4">
               <Link
                 href="/about-mona-dahiya"
-                className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/5 px-5 py-2.5 text-[13px] font-medium text-black transition-all duration-200 hover:border-white/40 hover:bg-white/10 active:scale-95 sm:text-[13.5px]"
+                className="inline-flex items-center gap-2 rounded-full border border-blue/35 bg-blue/10 px-5 py-2.5 text-[13px] font-semibold text-blue shadow-sm transition-all duration-200 hover:border-blue hover:bg-blue hover:text-white active:scale-95 sm:text-[13.5px]"
               >
                 <FaUserMd className="size-3.5" />
                 <span>Know more about her</span>
@@ -110,9 +110,9 @@ export default function IuiDelhiDoctor() {
                 href="https://www.youtube.com/@drmonadahiya"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/5 px-5 py-2.5 text-[13px] font-medium text-black transition-all duration-200 hover:border-white/40 hover:bg-white/10 active:scale-95 sm:text-[13.5px]"
+                className="inline-flex items-center gap-2 rounded-full border border-rose/35 bg-rose/10 px-5 py-2.5 text-[13px] font-semibold text-rose shadow-sm transition-all duration-200 hover:border-rose hover:bg-rose hover:text-white active:scale-95 sm:text-[13.5px]"
               >
-                <span className="flex size-4 items-center justify-center rounded-[3px] bg-[#e50914] text-white">
+                <span className="flex size-4 items-center justify-center rounded-[3px] bg-rose text-white">
                   <PlayIcon className="ml-0.5 size-2 fill-white" />
                 </span>
                 <span>Take a look at the video</span>

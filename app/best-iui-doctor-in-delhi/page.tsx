@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import IuiDelhiHero from "@/components/sections/best-iui-doctor-in-delhi/IuiDelhiHero";
 import MedicalRegistration from "@/components/sections/MedicalRegistration";
+import VideoInsightsSection from "@/components/sections/VideoInsightsSection";
 import IuiDelhiAbout from "@/components/sections/best-iui-doctor-in-delhi/IuiDelhiAbout";
 import IuiDelhiDoctor from "@/components/sections/best-iui-doctor-in-delhi/IuiDelhiDoctor";
 import IuiDelhiWhy from "@/components/sections/best-iui-doctor-in-delhi/IuiDelhiWhy";
@@ -30,6 +31,14 @@ export default function BestIuiDoctorInDelhiPage() {
 
       <SectionReveal>
         <MedicalRegistration />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <VideoInsightsSection
+          title="Watch Dr. Mona Dahiya Explain IUI Treatment in Delhi"
+          imageSrc="/Video-section-images/IUI-doctor-in-Delhi.jpg"
+          imageAlt="Dr. Mona Dahiya explaining IUI treatment guide in Delhi"
+        />
       </SectionReveal>
 
       <SectionReveal delay={0.04}>

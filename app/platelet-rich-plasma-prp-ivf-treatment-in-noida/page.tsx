@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import PrpHero from "@/components/sections/platelet-rich-plasma-prp-ivf-treatment-in-noida/PrpHero";
 import MedicalRegistration from "@/components/sections/MedicalRegistration";
+import VideoInsightsSection from "@/components/sections/VideoInsightsSection";
 import PrpIndicationsAndChecklist from "@/components/sections/platelet-rich-plasma-prp-ivf-treatment-in-noida/PrpIndicationsAndChecklist";
 import PrpProtocolAndWhy from "@/components/sections/platelet-rich-plasma-prp-ivf-treatment-in-noida/PrpProtocolAndWhy";
 import PrpReviews from "@/components/sections/platelet-rich-plasma-prp-ivf-treatment-in-noida/PrpReviews";
@@ -32,6 +33,14 @@ export default function PrpTherapyPage() {
             MCI: "MCI registration number",
             UPMC: "UPMC registration number",
           }}
+        />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <VideoInsightsSection
+          title="How PRP Therapy Boosts IVF Success: Dr. Mona Dahiya Explains"
+          imageSrc="/Video-section-images/PRP-IVF-Treatment-in-Noida.jpg"
+          imageAlt="Dr. Mona Dahiya explaining PRP for thin lining and low eggs"
         />
       </SectionReveal>
 

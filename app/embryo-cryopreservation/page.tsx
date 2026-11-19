@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import EmbryoFreezingHero from "@/components/sections/embryo-cryopreservation/EmbryoFreezingHero";
 import MedicalRegistration from "@/components/sections/MedicalRegistration";
+import VideoInsightsSection from "@/components/sections/VideoInsightsSection";
 import {
   EmbryoFreezingIndications,
   EmbryoFreezingChecklist,
@@ -42,6 +43,14 @@ export default function EmbryoFreezingPage() {
             MCI: "MCI Registration No.",
             UPMC: "UPMC Registration No.",
           }}
+        />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <VideoInsightsSection
+          title="Embryo Cryopreservation: How Embryo Freezing Works"
+          imageSrc="/Video-section-images/Embryo-Freezing-&-Banking.jpg"
+          imageAlt="Dr. Mona Dahiya safe embryo freezing guide"
         />
       </SectionReveal>
 

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import MiniIvfHero from "@/components/sections/minimal-stimulation-mini-ivf/MiniIvfHero";
 import MedicalRegistration from "@/components/sections/MedicalRegistration";
+import VideoInsightsSection from "@/components/sections/VideoInsightsSection";
 import {
   MiniIvfIndications,
   MiniIvfChecklist,
@@ -37,6 +38,14 @@ export default function MiniIvfPage() {
       {/* 2. Medical Registration Councils (White) */}
       <SectionReveal>
         <MedicalRegistration />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <VideoInsightsSection
+          title="Mini IVF (Minimal Stimulation) Explained by Dr. Mona Dahiya"
+          imageSrc="/Video-section-images/Mini-IVF-in-Delhi-NCR.jpg"
+          imageAlt="Dr. Mona Dahiya explaining gentle, low-dose Mini IVF"
+        />
       </SectionReveal>
 
       {/* 3. Who Needs Mini IVF? (Pink) */}

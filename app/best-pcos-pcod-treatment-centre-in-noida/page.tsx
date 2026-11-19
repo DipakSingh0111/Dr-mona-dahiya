@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import PcosHero from "@/components/sections/best-pcos-pcod-treatment-centre-in-noida/PcosHero";
 import MedicalRegistration from "@/components/sections/MedicalRegistration";
+import VideoInsightsSection from "@/components/sections/VideoInsightsSection";
 import PcosDifferenceAndCriteria from "@/components/sections/best-pcos-pcod-treatment-centre-in-noida/PcosDifferenceAndCriteria";
 import PcosChecklistAndProtocol from "@/components/sections/best-pcos-pcod-treatment-centre-in-noida/PcosChecklistAndProtocol";
 import PcosReviews from "@/components/sections/best-pcos-pcod-treatment-centre-in-noida/PcosReviews";
@@ -27,6 +28,14 @@ export default function PcosTreatmentPage() {
 
       <SectionReveal>
         <MedicalRegistration />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <VideoInsightsSection
+          title="PCOS & PCOD Pregnancy Treatment Explained by Dr. Mona Dahiya"
+          imageSrc="/Video-section-images/PCOS-PCOD-Treatment-in-Noida.jpg"
+          imageAlt="Dr. Mona Dahiya explaining getting pregnant with PCOS and PCOD"
+        />
       </SectionReveal>
 
       <PcosDifferenceAndCriteria />

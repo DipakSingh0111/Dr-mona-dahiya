@@ -2,125 +2,23 @@
 
 import type { ReactNode } from "react";
 import {
-  FaArrowRight,
+  FaFacebookF,
+  FaFlask,
+  FaInstagram,
+  FaPlus,
+  FaSyringe,
+  FaVideo,
   FaYoutube,
-  FaDna,
-  FaMars,
-  FaSnowflake,
-  FaTint,
-  FaClipboardList,
-  FaDesktop,
 } from "react-icons/fa";
-import { GiEmbryo } from "react-icons/gi";
-import { MdPregnantWoman } from "react-icons/md";
+import { MdMonitor } from "react-icons/md";
 import siteData from "@/data/site.json";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
-const ICONS: Record<string, ReactNode> = {
-  uterus: <MdPregnantWoman className="size-[32px] sm:size-[36px]" />,
-  monitor: <FaDesktop className="size-[28px] sm:size-[32px]" />,
-  clipboard: <FaClipboardList className="size-[28px] sm:size-[32px]" />,
-  male: <FaMars className="size-[30px] sm:size-[34px]" />,
-  cells: <GiEmbryo className="size-[32px] sm:size-[36px]" />,
-  drop: <FaTint className="size-[28px] sm:size-[32px]" />,
-  snowflake: <FaSnowflake className="size-[28px] sm:size-[32px]" />,
-  dna: <FaDna className="size-[28px] sm:size-[32px]" />,
-};
-
-type Theme = {
-  bg: string;
-  color: string;
-  glow: string;
-  border: string;
-  badgeBg: string;
-};
-
-const THEMES: Record<string, Theme> = {
-  ivf: {
-    bg: "#fff5f8",
-    color: "var(--rose)",
-    glow: "rgba(232,62,116,0.18)",
-    border: "#fcd5e2",
-    badgeBg: "#ffe4ee",
-  },
-  iui: {
-    bg: "#f4f8ff",
-    color: "var(--blue)",
-    glow: "rgba(37,99,235,0.16)",
-    border: "#d0e1fd",
-    badgeBg: "#e3efff",
-  },
-  "follicular-ultrasound": {
-    bg: "#f2fbf6",
-    color: "#059669",
-    glow: "rgba(5,150,105,0.16)",
-    border: "#c6f2dd",
-    badgeBg: "#dcfce7",
-  },
-  "infertility-tests": {
-    bg: "#fff7ed",
-    color: "#ea580c",
-    glow: "rgba(234,88,12,0.16)",
-    border: "#fed7aa",
-    badgeBg: "#ffedd5",
-  },
-  "male-infertility": {
-    bg: "#f0fdf4",
-    color: "var(--blue)",
-    glow: "rgba(13,148,136,0.16)",
-    border: "#bbf7d0",
-    badgeBg: "#ccfbf1",
-  },
-  "mini-ivf": {
-    bg: "#fff5f8",
-    color: "var(--rose)",
-    glow: "rgba(232,62,116,0.16)",
-    border: "#fcd5e2",
-    badgeBg: "#ffe4ee",
-  },
-  laparoscopy: {
-    bg: "#faf5ff",
-    color: "#7c3aed",
-    glow: "rgba(124,58,237,0.16)",
-    border: "#e9d5ff",
-    badgeBg: "#f3e8ff",
-  },
-  "low-amh": {
-    bg: "#f0f9ff",
-    color: "var(--blue)",
-    glow: "rgba(2,132,199,0.16)",
-    border: "#bae6fd",
-    badgeBg: "#e0f2fe",
-  },
-  cryopreservation: {
-    bg: "#fff5f8",
-    color: "var(--rose)",
-    glow: "rgba(232,62,116,0.16)",
-    border: "#fcd5e2",
-    badgeBg: "#ffe4ee",
-  },
-  era: {
-    bg: "#f0fdfa",
-    color: "var(--blue)",
-    glow: "rgba(13,148,136,0.16)",
-    border: "#99f6e4",
-    badgeBg: "#ccfbf1",
-  },
-  "donor-gametes": {
-    bg: "#fff7ed",
-    color: "#ea580c",
-    glow: "rgba(234,88,12,0.16)",
-    border: "#fed7aa",
-    badgeBg: "#ffedd5",
-  },
-  pgt: {
-    bg: "#faf5ff",
-    color: "#7c3aed",
-    glow: "rgba(124,58,237,0.16)",
-    border: "#e9d5ff",
-    badgeBg: "#f3e8ff",
-  },
+const SERVICE_ICONS: Record<string, ReactNode> = {
+  ivf: <FaFlask className="size-[17px]" />,
+  iui: <FaSyringe className="size-[17px]" />,
+  "follicular-ultrasound": <MdMonitor className="size-[19px]" />,
 };
 
 export default function OurServices({
@@ -134,7 +32,7 @@ export default function OurServices({
   return (
     <section
       id="our-services"
-      className="relative overflow-hidden bg-[#f5f6f8] py-6 sm:py-7 lg:py-8"
+      className="relative overflow-hidden bg-pink py-8 sm:py-10 lg:py-12"
     >
       <div className="page-container">
         {showBreadcrumb ? (
@@ -145,99 +43,112 @@ export default function OurServices({
             ]}
           />
         ) : null}
-        <Reveal>
-          <div className="mb-6 sm:mb-8">
-            <div className="mb-4 flex flex-wrap items-center gap-2.5 sm:flex-nowrap sm:gap-3">
-              <span className="text-[11.5px] font-bold tracking-[0.14em] text-rose uppercase sm:whitespace-nowrap sm:text-[13px] sm:tracking-[0.16em]">
-                {eyebrow}
-              </span>
-              <span className="h-[2px] w-8 shrink-0 rounded-full bg-rose sm:w-10" />
-            </div>
 
-            <h2 className="font-display text-[1.5rem] leading-[1.2] font-bold tracking-tight text-[#0f2038] sm:text-[1.85rem] lg:whitespace-nowrap lg:text-[2.1rem] xl:text-[2.6rem]">
+        <Reveal>
+          <div className="mb-7 sm:mb-9">
+            <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">
+              {eyebrow}
+            </p>
+
+            <h2 className="font-serif mt-2 text-[1.75rem] leading-[1.18] font-bold tracking-tight text-ink sm:text-[2.25rem] lg:text-[2.6rem]">
               {titlePrefix}{" "}
               <span className="text-rose">
                 {titleLocations.join(" | ")}
               </span>
             </h2>
 
-            <p className="mt-3 max-w-none text-[13px] leading-relaxed text-[#64748b] sm:text-[14px] lg:whitespace-nowrap xl:text-[15.5px]">
+            <p className="mt-3 max-w-xl text-[13.5px] leading-relaxed text-ink/75 sm:text-[14.5px]">
               {description}
             </p>
 
-            <a
-              href={cta.href}
-              className="mt-5 inline-flex items-center gap-2 rounded-full bg-rose px-4.5 py-2.5 text-[12.5px] font-semibold whitespace-nowrap text-white shadow-[0_10px_24px_rgba(232,62,116,0.28)] transition hover:bg-[#d12f63] xl:mt-6 xl:px-5 xl:py-3 xl:text-[13.5px]"
-            >
-              {cta.label}
-              <span className="inline-flex size-6 items-center justify-center rounded-full bg-white/20">
-                <FaArrowRight className="size-2.5" />
-              </span>
-            </a>
+            <div className="mt-5 flex flex-wrap items-center justify-between gap-4 sm:mt-6">
+              <a
+                href={cta.href}
+                className="inline-flex items-center rounded-full border-[1.5px] border-ink bg-white px-5 py-2.5 text-[12.5px] font-semibold whitespace-nowrap text-ink transition-colors hover:bg-ink hover:text-white sm:px-6 sm:text-[13px]"
+              >
+                {cta.label}
+              </a>
+
+              <a
+                href="https://www.youtube.com/@drmonadahiya"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex flex-wrap items-center gap-2.5 rounded-full border-[1.5px] border-ink bg-white px-3.5 py-1.5 shadow-xs transition-transform hover:-translate-y-0.5 sm:px-4 sm:py-2"
+              >
+                <FaVideo className="size-[18px] shrink-0 text-rose sm:size-[20px]" />
+                <span className="font-serif text-[14px] font-bold text-ink sm:text-[16px]">
+                  Video Insights by
+                </span>
+                <span className="rounded-full bg-rose px-3.5 py-1 font-serif text-[13.5px] font-bold text-white sm:text-[15px]">
+                  Dr. Mona Dahiya
+                </span>
+              </a>
+            </div>
           </div>
         </Reveal>
 
         <Stagger
           className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6"
-          stagger={0.07}
+          stagger={0.05}
         >
           {items.map((item) => {
-            const theme = THEMES[item.id] ?? THEMES.ivf;
+            const icon = SERVICE_ICONS[item.id] ?? (
+              <FaPlus className="size-[16px]" />
+            );
 
             return (
               <StaggerItem key={item.id} variant="fadeUp" className="h-full">
-                <article
-                  className="group relative flex h-full min-h-[250px] flex-col justify-between overflow-hidden rounded-[24px] border p-6 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl sm:p-7"
-                  style={{
-                    backgroundColor: theme.bg,
-                    borderColor: theme.border,
-                    boxShadow: `0 10px 30px ${theme.glow}`,
-                  }}
-                >
-                  {/* Top Accent Line — Solid & dark across, exactly like the left */}
-                  <span
-                    aria-hidden="true"
-                    className="pointer-events-none absolute inset-x-0 top-0 h-[2.5px] z-10"
-                    style={{
-                      background: theme.color,
-                    }}
-                  />
+                <article className="group flex h-full flex-col justify-between rounded-[18px] border-[1.5px] border-rose/80 bg-white p-5 shadow-[0_6px_20px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-rose hover:shadow-[0_14px_30px_rgba(232,62,116,0.14)] sm:p-6">
                   <div>
-                    <div className="mb-5 flex items-center">
-                      <div
-                        className="inline-flex size-[56px] items-center justify-center rounded-2xl shadow-sm transition-transform duration-300 group-hover:scale-105 sm:size-[62px]"
-                        style={{
-                          backgroundColor: theme.badgeBg,
-                          color: theme.color,
-                        }}
-                      >
-                        {ICONS[item.icon] ?? (
-                          <MdPregnantWoman className="size-[30px] sm:size-[34px]" />
-                        )}
-                      </div>
+                    <div className="flex items-center gap-3.5">
+                      <span className="flex size-10 shrink-0 items-center justify-center rounded-xl border border-[#fde2ec] bg-pink text-rose transition-transform duration-300 group-hover:scale-105">
+                        {icon}
+                      </span>
+
+                      <h3 className="font-serif text-[16px] leading-snug font-bold tracking-tight text-ink sm:text-[17.5px]">
+                        {item.title}
+                      </h3>
                     </div>
 
-                    <h3 className="font-display text-[18px] leading-snug font-bold tracking-tight text-[#0f2038] sm:text-[20px]">
-                      {item.title}
-                    </h3>
-
-                    <p className="mt-2.5 text-[13.5px] leading-relaxed text-[#516174] sm:text-[14px]">
+                    <p className="mt-3.5 text-[13px] leading-relaxed text-ink/75 sm:text-[13.5px]">
                       {item.description}
                     </p>
                   </div>
 
-                  <div className="mt-6 pt-2">
-                    <a
-                      href={item.videoHref}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2.5 text-[13.5px] font-semibold text-[#0f2038] transition-colors hover:text-[#ff0000]"
-                    >
-                      <span className="inline-flex size-6 items-center justify-center rounded-full bg-[#ff0000] text-white shadow-sm">
-                        <FaYoutube className="size-3.5" />
-                      </span>
-                      <span>Watch video</span>
-                    </a>
+                  <div className="mt-5">
+                    <div className="mb-4 h-px w-full bg-[#fde2ec]" />
+
+                    <div className="flex items-center justify-between px-1">
+                      <a
+                        href={item.videoHref}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Watch ${item.title} on YouTube`}
+                        className="flex size-11 items-center justify-center rounded-full border border-[#fde2ec] bg-white text-rose transition-colors hover:border-rose hover:bg-rose hover:text-white"
+                      >
+                        <FaYoutube className="size-[20px]" />
+                      </a>
+
+                      <a
+                        href="https://www.instagram.com/drmonadahiya/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Watch ${item.title} on Instagram`}
+                        className="flex size-11 items-center justify-center rounded-full border border-[#fde2ec] bg-white text-rose transition-colors hover:border-rose hover:bg-rose hover:text-white"
+                      >
+                        <FaInstagram className="size-[19px]" />
+                      </a>
+
+                      <a
+                        href={item.videoHref}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Watch ${item.title} on Facebook`}
+                        className="flex size-11 items-center justify-center rounded-full border border-[#fde2ec] bg-white text-blue transition-colors hover:border-blue hover:bg-blue hover:text-white"
+                      >
+                        <FaFacebookF className="size-[18px]" />
+                      </a>
+                    </div>
                   </div>
                 </article>
               </StaggerItem>
@@ -248,4 +159,3 @@ export default function OurServices({
     </section>
   );
 }
-

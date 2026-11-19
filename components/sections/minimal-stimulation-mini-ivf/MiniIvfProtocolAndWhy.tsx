@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 import {
   TreatmentSection,
@@ -135,12 +136,12 @@ export function MiniIvfWhy() {
           </div>
 
           <Reveal variant="fadeUp" delay={0.15} className="mt-6">
-            <a
-              href="#book-consultation"
+            <Link
+              href="/book-appointment"
               className="inline-flex items-center justify-center rounded-full bg-rose px-6 py-2.5 text-[13.5px] font-semibold text-white shadow-[0_8px_20px_rgba(232,62,116,0.3)] transition-all hover:bg-rose-dark active:scale-95 sm:px-7 sm:py-3 sm:text-[14px]"
             >
               Book Appointment
-            </a>
+            </Link>
           </Reveal>
         </div>
 

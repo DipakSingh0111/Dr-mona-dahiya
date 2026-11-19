@@ -66,7 +66,7 @@ export default function PcosStoriesProtocols() {
         {protocols.map((item) => (
           <StaggerItem
             key={item.number}
-            className="h-full min-h-[240px] sm:min-h-[260px]"
+            className="h-full"
           >
             <NumberedCard {...item} />
           </StaggerItem>

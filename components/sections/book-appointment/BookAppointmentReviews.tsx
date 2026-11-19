@@ -42,7 +42,7 @@ export default function BookAppointmentReviews() {
         </Stagger>
 
         {/* Read All Patient Reviews Button */}
-        <Reveal variant="fadeUp" delay={0.1} className="mt-8 text-center sm:mt-10">
+        <Reveal variant="fadeUp" delay={0.1} className="mt-8">
           <Link
             href={reviews.cta.href}
             className="inline-flex items-center justify-center rounded-full border border-rose/30 bg-white px-6 py-2.5 text-[13px] font-semibold text-rose shadow-sm transition-all hover:bg-rose hover:text-white hover:shadow-md active:scale-95 sm:text-[14px]"

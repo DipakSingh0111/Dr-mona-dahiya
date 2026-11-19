@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import LowAmhHero from "@/components/sections/best-low-amh-treatment-in-noida/LowAmhHero";
 import LowAmhMedicalRegistration from "@/components/sections/best-low-amh-treatment-in-noida/LowAmhMedicalRegistration";
+import VideoInsightsSection from "@/components/sections/VideoInsightsSection";
 import LowAmhIndications from "@/components/sections/best-low-amh-treatment-in-noida/LowAmhIndications";
 import LowAmhDiagnosticAndProtocol from "@/components/sections/best-low-amh-treatment-in-noida/LowAmhDiagnosticAndProtocol";
 import LowAmhWhyConsult from "@/components/sections/best-low-amh-treatment-in-noida/LowAmhWhyConsult";
@@ -29,6 +30,14 @@ export default function LowAmhPage() {
 
       <SectionReveal>
         <LowAmhMedicalRegistration />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <VideoInsightsSection
+          title="How to Get Pregnant with Low AMH: Expert Video Guide"
+          imageSrc="/Video-section-images/Low-AMH-Treatment-in-Noida.jpg"
+          imageAlt="Dr. Mona Dahiya explaining pregnancy possibilities with Low AMH"
+        />
       </SectionReveal>
 
       <SectionReveal delay={0.04}>

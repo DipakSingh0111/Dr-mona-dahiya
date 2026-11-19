@@ -131,10 +131,10 @@ export default function PatientReviewsHero() {
 
                   <div className="relative z-10 w-full max-w-[260px] sm:max-w-[290px]">
                     <Image
-                      src="/images/Best IVF Doctor Award 2026.png"
-                      alt="Best IVF Doctor Award 2026 - Dr. Mona Dahiya"
+                      src="/images/2027 Best IVF Doctor Award Badge.png"
+                      alt="Best IVF Doctor Award 2027 - Dr. Mona Dahiya"
                       width={600}
-                      height={740}
+                      height={790}
                       priority
                       quality={95}
                       className="h-auto w-full object-contain drop-shadow-[0_12px_28px_rgba(15,36,56,0.15)]"

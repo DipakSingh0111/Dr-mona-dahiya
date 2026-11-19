@@ -76,7 +76,7 @@ export default function IuiPatientTestimonials() {
         <Reveal variant="fadeUp" delay={0.2} className="mt-8">
           <Link
             href="/best-ivf-patient-reviews"
-            className="inline-flex items-center justify-center rounded-full border border-blue/40 bg-white px-6 py-2.5 text-[13px] font-semibold text-blue shadow-sm transition-all duration-200 hover:border-blue hover:bg-blue hover:text-white active:scale-95 sm:text-[13.5px]"
+            className="inline-flex items-center justify-center rounded-full border border-blue/35 bg-blue/10 px-5 py-2.5 text-[13px] font-semibold text-blue shadow-sm transition-all hover:border-blue hover:bg-blue hover:text-white sm:text-[13.5px]"
           >
             All Reviews
           </Link>

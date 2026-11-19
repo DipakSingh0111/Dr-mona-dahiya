@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import EggFreezingHero from "@/components/sections/best-egg-freezing-center-in-noida/EggFreezingHero";
 import MedicalRegistration from "@/components/sections/MedicalRegistration";
+import VideoInsightsSection from "@/components/sections/VideoInsightsSection";
 import EggFreezingWhoNeeds from "@/components/sections/best-egg-freezing-center-in-noida/EggFreezingWhoNeeds";
 import EggFreezingChecklist from "@/components/sections/best-egg-freezing-center-in-noida/EggFreezingChecklist";
 import EggFreezingProtocol from "@/components/sections/best-egg-freezing-center-in-noida/EggFreezingProtocol";
@@ -37,6 +38,14 @@ export default function EggFreezingPage() {
             MCI: "Registration No.",
             UPMC: "Registration No.",
           }}
+        />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <VideoInsightsSection
+          title="Egg Freezing Process & Best Age Explained"
+          imageSrc="/Video-section-images/Egg-Freezing-Center-in-Noida.jpg"
+          imageAlt="Dr. Mona Dahiya explaining egg freezing process and best age"
         />
       </SectionReveal>
 

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import SecondOpinionHero from "@/components/sections/second-opinion-failed-ivf/SecondOpinionHero";
 import MedicalRegistration from "@/components/sections/MedicalRegistration";
+import VideoInsightsSection from "@/components/sections/VideoInsightsSection";
 import SecondOpinionWhatAuditLooksAt from "@/components/sections/second-opinion-failed-ivf/SecondOpinionWhatAuditLooksAt";
 import SecondOpinionWhenAndRecords from "@/components/sections/second-opinion-failed-ivf/SecondOpinionWhenAndRecords";
 import SecondOpinionPathwayAndWhy from "@/components/sections/second-opinion-failed-ivf/SecondOpinionPathwayAndWhy";
@@ -34,6 +35,14 @@ export default function SecondOpinionFailedIvfPage() {
             MCI: "MCI registration number",
             UPMC: "UPMC registration number",
           }}
+        />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <VideoInsightsSection
+          title="What to Do After Failed IVF: Expert Advice from Dr. Mona Dahiya"
+          imageSrc="/Video-section-images/Second-Opinion-for-Failed-IVF-in-Delhi-NCR.jpg"
+          imageAlt="Dr. Mona Dahiya explaining next steps after failed IVF"
         />
       </SectionReveal>
 

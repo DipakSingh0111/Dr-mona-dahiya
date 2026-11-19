@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import BestIvfDelhiHero from "@/components/sections/best-ivf-doctor-in-delhi/BestIvfDelhiHero";
 import BestIvfDelhiMedicalRegistration from "@/components/sections/best-ivf-doctor-in-delhi/BestIvfDelhiMedicalRegistration";
+import VideoInsightsSection from "@/components/sections/VideoInsightsSection";
 import BestIvfDelhiIndications from "@/components/sections/best-ivf-doctor-in-delhi/BestIvfDelhiIndications";
 import BestIvfDelhiDiagnostic from "@/components/sections/best-ivf-doctor-in-delhi/BestIvfDelhiDiagnostic";
 import BestIvfDelhiProtocol from "@/components/sections/best-ivf-doctor-in-delhi/BestIvfDelhiProtocol";
@@ -30,6 +31,14 @@ export default function BestIvfDoctorInDelhiPage() {
 
       <SectionReveal>
         <BestIvfDelhiMedicalRegistration />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <VideoInsightsSection
+          title="Watch Dr. Mona Dahiya Explain IVF Treatment in Delhi"
+          imageSrc="/Video-section-images/best-ivf-doctor-in-delhi.jpg"
+          imageAlt="Dr. Mona Dahiya explaining IVF treatment in Delhi"
+        />
       </SectionReveal>
 
       <SectionReveal delay={0.04}>

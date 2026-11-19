@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import BlastocystHero from "@/components/sections/blastocyst-transfer/BlastocystHero";
 import MedicalRegistration from "@/components/sections/MedicalRegistration";
+import VideoInsightsSection from "@/components/sections/VideoInsightsSection";
 import {
   BlastocystIndications,
   BlastocystChecklist,
@@ -44,6 +45,14 @@ export default function BlastocystTransferPage() {
             MCI: "Registration No.",
             UPMC: "Registration No.",
           }}
+        />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <VideoInsightsSection
+          title="What Is Blastocyst Transfer? Benefits & Success Explained"
+          imageSrc="/Video-section-images/Blastocyst-Transfer-in-Delhi-NCR.jpg"
+          imageAlt="Dr. Mona Dahiya explaining Day-5 Blastocyst Transfer advantage"
         />
       </SectionReveal>
 

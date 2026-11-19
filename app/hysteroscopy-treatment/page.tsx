@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import HysteroscopyHero from "@/components/sections/hysteroscopy-treatment/HysteroscopyHero";
 import MedicalRegistration from "@/components/sections/MedicalRegistration";
+import VideoInsightsSection from "@/components/sections/VideoInsightsSection";
 import HysteroscopyIndicationsAndChecklist from "@/components/sections/hysteroscopy-treatment/HysteroscopyIndicationsAndChecklist";
 import HysteroscopyProtocolWhyAndCase from "@/components/sections/hysteroscopy-treatment/HysteroscopyProtocolWhyAndCase";
 import HysteroscopyCostAndFaq from "@/components/sections/hysteroscopy-treatment/HysteroscopyCostAndFaq";
@@ -30,6 +31,14 @@ export default function HysteroscopyPage() {
             MCI: "MCI registration number",
             UPMC: "UPMC registration number",
           }}
+        />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <VideoInsightsSection
+          title="Hysteroscopy Procedure Before IVF: When & Why It’s Needed"
+          imageSrc="/Video-section-images/Diagnostic-&-Operative-Hysteroscopy.jpg"
+          imageAlt="Dr. Mona Dahiya explaining preparing the uterus for IVF with hysteroscopy"
         />
       </SectionReveal>
 

@@ -125,9 +125,7 @@ export default function SecondOpinionWhenAndRecords() {
         <div className="mt-6 flex flex-col gap-3.5 sm:mt-7 sm:gap-4">
           {records.map((item, idx) => (
             <Reveal key={item} variant="fadeUp" delay={idx * 0.04}>
-              <ChecklistRow>
-                <span>{item}</span>
-              </ChecklistRow>
+              <ChecklistRow inline>{item}</ChecklistRow>
             </Reveal>
           ))}
         </div>

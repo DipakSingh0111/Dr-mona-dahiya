@@ -124,7 +124,7 @@ export default function IuiDelhiReviews() {
         <Reveal variant="fadeUp" delay={0.15} className="mt-8">
           <Link
             href="/best-ivf-patient-reviews"
-            className="inline-flex items-center justify-center rounded-full border border-white/30 bg-transparent px-6 py-2.5 text-[13px] font-medium text-black transition-all duration-200 hover:border-blue/60 hover:bg-blue/10 hover:text-blue active:scale-95 sm:text-[13.5px]"
+            className="inline-flex items-center justify-center rounded-full border border-blue/35 bg-blue/10 px-5 py-2.5 text-[13px] font-semibold text-blue shadow-sm transition-all hover:border-blue hover:bg-blue hover:text-white sm:text-[13.5px]"
           >
             Read more patient journeys and reviews
           </Link>

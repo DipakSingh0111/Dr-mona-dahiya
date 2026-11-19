@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import BestIvfDoctorHero from "@/components/sections/best-ivf-doctor-in-noida/BestIvfDoctorHero";
 import MedicalRegistration from "@/components/sections/MedicalRegistration";
+import VideoInsightsSection from "@/components/sections/VideoInsightsSection";
 import BestIvfDoctorIndications from "@/components/sections/best-ivf-doctor-in-noida/BestIvfDoctorIndications";
 import BestIvfDoctorDiagnostic from "@/components/sections/best-ivf-doctor-in-noida/BestIvfDoctorDiagnostic";
 import BestIvfDoctorProcedure from "@/components/sections/best-ivf-doctor-in-noida/BestIvfDoctorProcedure";
@@ -66,6 +67,14 @@ export default function BestIvfDoctorInNoidaPage() {
 
       <SectionReveal>
         <MedicalRegistration />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <VideoInsightsSection
+          title="Watch Dr. Mona Dahiya Explain IVF Treatment in Noida"
+          imageSrc="/Video-section-images/Best-IVF-Doctor-in-Noida.jpg"
+          imageAlt="Dr. Mona Dahiya explaining IVF treatment in Noida"
+        />
       </SectionReveal>
 
       <SectionReveal delay={0.04}>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import FemaleInfertilityHero from "@/components/sections/female-infertility-treatment/FemaleInfertilityHero";
 import MedicalRegistration from "@/components/sections/MedicalRegistration";
+import VideoInsightsSection from "@/components/sections/VideoInsightsSection";
 import FemaleFertilityIndications from "@/components/sections/female-infertility-treatment/FemaleFertilityIndications";
 import FemaleDiagnosticAndPathway from "@/components/sections/female-infertility-treatment/FemaleDiagnosticAndPathway";
 import FemaleWhyConsult from "@/components/sections/female-infertility-treatment/FemaleWhyConsult";
@@ -29,6 +30,14 @@ export default function FemaleInfertilityPage() {
 
       <SectionReveal>
         <MedicalRegistration />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <VideoInsightsSection
+          title="Female Infertility Causes & Treatment Options Explained"
+          imageSrc="/Video-section-images/Female-Infertility-Treatment-in-Delhi-NCR.jpg"
+          imageAlt="Dr. Mona Dahiya explaining top causes and treatment options for female infertility"
+        />
       </SectionReveal>
 
       <SectionReveal delay={0.04}>

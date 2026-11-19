@@ -2,8 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { FaUserMd } from "react-icons/fa";
-import { PlayIcon } from "@/components/ui/Icons";
+import { FaUserMd, FaYoutube } from "react-icons/fa";
 import { Reveal } from "@/components/ui/Reveal";
 
 export default function IuiDoctorGlance() {
@@ -109,9 +108,9 @@ export default function IuiDoctorGlance() {
                 href="https://www.youtube.com/@drmonadahiya"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-rose/30 bg-white px-5 py-2.5 text-[13px] font-semibold text-rose shadow-sm transition-all duration-200 hover:border-rose hover:bg-[#fff0f5] active:scale-95 sm:text-[13.5px]"
+                className="inline-flex items-center gap-2 rounded-full border border-rose/40 bg-white px-5 py-2.5 text-[13px] font-semibold text-rose shadow-sm transition-all duration-200 hover:border-rose hover:bg-rose hover:text-white active:scale-95 sm:text-[13.5px]"
               >
-                <PlayIcon className="size-3 text-rose" />
+                <FaYoutube className="size-4" />
                 <span>Watch YouTube Videos</span>
               </a>
             </div>

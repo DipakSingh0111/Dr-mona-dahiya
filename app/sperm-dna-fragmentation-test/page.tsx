@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import DfiHero from "@/components/sections/sperm-dna-fragmentation-test/DfiHero";
 import MedicalRegistration from "@/components/sections/MedicalRegistration";
+import VideoInsightsSection from "@/components/sections/VideoInsightsSection";
 import DfiIndicationsAndChecklist from "@/components/sections/sperm-dna-fragmentation-test/DfiIndicationsAndChecklist";
 import DfiProtocolAndWhy from "@/components/sections/sperm-dna-fragmentation-test/DfiProtocolAndWhy";
 import DfiCaseAndCost from "@/components/sections/sperm-dna-fragmentation-test/DfiCaseAndCost";
@@ -26,6 +27,14 @@ export default function SpermDfiPage() {
 
       <SectionReveal>
         <MedicalRegistration />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <VideoInsightsSection
+          title="Sperm DNA Fragmentation Test: Causes & Fertility Impact"
+          imageSrc="/Video-section-images/Sperm-DNA-Fragmentation-Index-(DFI).jpg"
+          imageAlt="Dr. Mona Dahiya explaining Sperm DNA Fragmentation Test and hidden causes of IVF failure"
+        />
       </SectionReveal>
 
       <DfiIndicationsAndChecklist />

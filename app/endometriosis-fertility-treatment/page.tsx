@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import EndometriosisHero from "@/components/sections/endometriosis-fertility-treatment/EndometriosisHero";
 import MedicalRegistration from "@/components/sections/MedicalRegistration";
+import VideoInsightsSection from "@/components/sections/VideoInsightsSection";
 import {
   EndometriosisAbout,
   EndometriosisIndications,
@@ -38,6 +39,14 @@ export default function EndometriosisPage() {
       {/* 2. Medical Registration Councils (White) */}
       <SectionReveal>
         <MedicalRegistration />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <VideoInsightsSection
+          title="Getting Pregnant with Endometriosis: Treatment Options Explained"
+          imageSrc="/Video-section-images/Endometriosis-&-Adenomyosis-Fertility-Treatment.jpg"
+          imageAlt="Dr. Mona Dahiya explaining endometriosis and pregnancy treatment options"
+        />
       </SectionReveal>
 
       {/* 3. About the Disease: What Are Endometriosis and Adenomyosis? (Pink) */}

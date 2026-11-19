@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import SurgicalSpermRetrievalHero from "@/components/sections/surgical-sperm-retrieval-tesa-pesa/SurgicalSpermRetrievalHero";
 import MedicalRegistration from "@/components/sections/MedicalRegistration";
+import VideoInsightsSection from "@/components/sections/VideoInsightsSection";
 import SurgicalSpermRetrievalTechniques from "@/components/sections/surgical-sperm-retrieval-tesa-pesa/SurgicalSpermRetrievalTechniques";
 import SurgicalSpermRetrievalIndicationsAndChecklist from "@/components/sections/surgical-sperm-retrieval-tesa-pesa/SurgicalSpermRetrievalIndicationsAndChecklist";
 import SurgicalSpermRetrievalProtocolWhyAndCase from "@/components/sections/surgical-sperm-retrieval-tesa-pesa/SurgicalSpermRetrievalProtocolWhyAndCase";
@@ -31,6 +32,14 @@ export default function SurgicalSpermRetrievalPage() {
             MCI: "MCI registration number",
             UPMC: "UPMC registration number",
           }}
+        />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <VideoInsightsSection
+          title="TESA & PESA Surgical Sperm Retrieval Explained"
+          imageSrc="/Video-section-images/Surgical-Sperm-Retrieval.jpg"
+          imageAlt="Dr. Mona Dahiya explaining TESA and PESA surgical sperm retrieval"
         />
       </SectionReveal>
 

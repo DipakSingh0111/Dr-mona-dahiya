@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import AboutConsultation from "@/components/sections/about-mona-dahiya/AboutConsultation";
 import AboutParenthoodCta from "@/components/sections/about-mona-dahiya/AboutParenthoodCta";
 import MedicalRegistration from "@/components/sections/MedicalRegistration";
+import VideoInsightsSection from "@/components/sections/VideoInsightsSection";
 import IvfSuccessClinics from "@/components/sections/ivf-stories/IvfSuccessClinics";
 import IvfCostAndFaq from "@/components/sections/ivf-treatment/IvfCostAndFaq";
 import IvfHero from "@/components/sections/ivf-treatment/IvfHero";
@@ -63,6 +64,14 @@ export default function IvfTreatmentPage() {
 
       <SectionReveal>
         <MedicalRegistration />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <VideoInsightsSection
+          title="IVF Treatment Process Explained Step-by-Step by Dr. Mona Dahiya"
+          imageSrc="/Video-section-images/ivf-treatment.jpg"
+          imageAlt="Dr. Mona Dahiya explaining IVF treatment step-by-step"
+        />
       </SectionReveal>
 
       <IvfIndicationsAndChecklist />

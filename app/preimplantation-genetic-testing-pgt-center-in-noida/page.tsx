@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import PgtHero from "@/components/sections/preimplantation-genetic-testing-pgt-center-in-noida/PgtHero";
 import MedicalRegistration from "@/components/sections/MedicalRegistration";
+import VideoInsightsSection from "@/components/sections/VideoInsightsSection";
 import PgtWhatAndModalities from "@/components/sections/preimplantation-genetic-testing-pgt-center-in-noida/PgtWhatAndModalities";
 import PgtIndicationsAndChecklist from "@/components/sections/preimplantation-genetic-testing-pgt-center-in-noida/PgtIndicationsAndChecklist";
 import PgtProtocolAndWhy from "@/components/sections/preimplantation-genetic-testing-pgt-center-in-noida/PgtProtocolAndWhy";
@@ -27,6 +28,14 @@ export default function PgtPage() {
 
       <SectionReveal>
         <MedicalRegistration />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <VideoInsightsSection
+          title="Preimplantation Genetic Testing (PGT) in IVF Explained"
+          imageSrc="/Video-section-images/PGT-Center-in-Noida.jpg"
+          imageAlt="Dr. Mona Dahiya explaining Preimplantation Genetic Testing (PGT) in IVF"
+        />
       </SectionReveal>
 
       <PgtWhatAndModalities />

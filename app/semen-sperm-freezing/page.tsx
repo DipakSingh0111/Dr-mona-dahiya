@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import SpermFreezingHero from "@/components/sections/semen-sperm-freezing/SpermFreezingHero";
 import MedicalRegistration from "@/components/sections/MedicalRegistration";
+import VideoInsightsSection from "@/components/sections/VideoInsightsSection";
 import {
   SpermFreezingIndications,
   SpermFreezingChecklist,
@@ -43,6 +44,14 @@ export default function SpermFreezingPage() {
             MCI: "Registration Number with MCI",
             UPMC: "Registration Number with UPMC",
           }}
+        />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <VideoInsightsSection
+          title="Sperm Freezing & Cryopreservation: Step-by-Step Video Guide"
+          imageSrc="/Video-section-images/Semen-&-Sperm-Freezing.jpg"
+          imageAlt="Dr. Mona Dahiya explaining sperm freezing and cryopreservation"
         />
       </SectionReveal>
 

@@ -10,7 +10,7 @@ const whyPoints = [
     desc: "Our clinic is located at Ring Road, Lajpat Nagar. Close to Violet/Pink Line metro station.",
   },
   {
-    title: "Qualifications",
+    title: "World Class Qualifications",
     desc: "Gold Medalist in MBBS & MD. Done DNB and Fellowship in Singapore General Hospital in IVF. More than 100 Publications to her name.",
   },
   {

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import EraHero from "@/components/sections/endometrial-receptivity-analysis-era-test-in-noida/EraHero";
 import MedicalRegistration from "@/components/sections/MedicalRegistration";
+import VideoInsightsSection from "@/components/sections/VideoInsightsSection";
 import EraIndicationsAndChecklist from "@/components/sections/endometrial-receptivity-analysis-era-test-in-noida/EraIndicationsAndChecklist";
 import EraProtocolAndWhy from "@/components/sections/endometrial-receptivity-analysis-era-test-in-noida/EraProtocolAndWhy";
 import EraReviews from "@/components/sections/endometrial-receptivity-analysis-era-test-in-noida/EraReviews";
@@ -32,6 +33,14 @@ export default function EraTestPage() {
             MCI: "MCI registration number",
             UPMC: "UPMC registration number",
           }}
+        />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <VideoInsightsSection
+          title="Understanding the ERA Test for IVF Implantation"
+          imageSrc="/Video-section-images/ERA-Test-in-Noida.jpg"
+          imageAlt="Dr. Mona Dahiya explaining best time for embryo transfer with ERA test"
         />
       </SectionReveal>
 

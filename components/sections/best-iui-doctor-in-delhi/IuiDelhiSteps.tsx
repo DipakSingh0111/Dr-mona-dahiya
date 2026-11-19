@@ -103,7 +103,7 @@ export default function IuiDelhiSteps() {
         <Reveal variant="fadeUp" delay={0.2} className="mt-8">
           <Link
             href="#iui-cost"
-            className="inline-flex items-center justify-center rounded-full border border-white/30 bg-transparent px-6 py-2.5 text-[13px] font-medium text-black shadow-sm transition-all duration-200 hover:border-blue/60 hover:bg-blue/10 hover:text-blue active:scale-95 sm:text-[13.5px]"
+            className="inline-flex items-center justify-center rounded-full border border-blue/35 bg-blue/10 px-6 py-2.5 text-[13px] font-semibold text-blue shadow-sm transition-all duration-200 hover:border-blue hover:bg-blue hover:text-white active:scale-95 sm:text-[13.5px]"
           >
             See the full IUI timetable and cost
           </Link>

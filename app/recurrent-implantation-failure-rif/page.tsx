@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import RifHero from "@/components/sections/recurrent-implantation-failure-rif/RifHero";
 import MedicalRegistration from "@/components/sections/MedicalRegistration";
+import VideoInsightsSection from "@/components/sections/VideoInsightsSection";
 import RifWhatAndIndications from "@/components/sections/recurrent-implantation-failure-rif/RifWhatAndIndications";
 import RifProtocolWhyAndCase from "@/components/sections/recurrent-implantation-failure-rif/RifProtocolWhyAndCase";
 import RifCost from "@/components/sections/recurrent-implantation-failure-rif/RifCost";
@@ -27,6 +28,14 @@ export default function RifPage() {
 
       <SectionReveal>
         <MedicalRegistration />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <VideoInsightsSection
+          title="Recurrent Implantation Failure: Causes & Solutions Explained"
+          imageSrc="/Video-section-images/Recurrent-Implantation-Failure.jpg"
+          imageAlt="Dr. Mona Dahiya explaining why embryos fail to implant and RIF solutions"
+        />
       </SectionReveal>
 
       <RifWhatAndIndications />

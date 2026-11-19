@@ -73,10 +73,10 @@ export default function BestIvfDelhiReviews() {
           ))}
         </Stagger>
 
-        <Reveal variant="fadeUp" delay={0.2} className="mt-8 flex justify-center">
+        <Reveal variant="fadeUp" delay={0.2} className="mt-8">
           <Link
             href="/best-ivf-patient-reviews"
-            className="inline-flex items-center justify-center rounded-full bg-blue px-6 py-2.5 text-[13px] font-semibold text-white shadow-[0_4px_16px_rgba(0,71,202,0.35)] transition-all hover:bg-blue-dark hover:shadow-[0_6px_20px_rgba(0,71,202,0.45)] sm:text-[14px]"
+            className="inline-flex items-center justify-center rounded-full border border-blue/35 bg-blue/10 px-5 py-2.5 text-[13px] font-semibold text-blue shadow-sm transition-all hover:border-blue hover:bg-blue hover:text-white sm:text-[13.5px]"
           >
             Read All Patient Reviews
           </Link>

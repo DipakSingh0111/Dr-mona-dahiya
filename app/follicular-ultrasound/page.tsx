@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import FollicularHero from "@/components/sections/follicular-ultrasound/FollicularHero";
 import MedicalRegistration from "@/components/sections/MedicalRegistration";
+import VideoInsightsSection from "@/components/sections/VideoInsightsSection";
 import FollicularIndicationsAndChecklist from "@/components/sections/follicular-ultrasound/FollicularIndicationsAndChecklist";
 import FollicularProtocolAndWhy from "@/components/sections/follicular-ultrasound/FollicularProtocolAndWhy";
 import FollicularReviews from "@/components/sections/follicular-ultrasound/FollicularReviews";
@@ -32,6 +33,14 @@ export default function FollicularMonitoringPage() {
             MCI: "MCI registration number",
             UPMC: "UPMC registration number",
           }}
+        />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <VideoInsightsSection
+          title="Follicular Monitoring Ultrasound: Tracking Ovulation Explained"
+          imageSrc="/Video-section-images/Follicular-Ultrasound-Monitoring-in-Delhi-NCR.jpg"
+          imageAlt="Dr. Mona Dahiya explaining follicular monitoring and tracking your fertile window"
         />
       </SectionReveal>
 

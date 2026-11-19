@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import LahHero from "@/components/sections/best-laser-assisted-hatching-doctor-in-noida/LahHero";
 import MedicalRegistration from "@/components/sections/MedicalRegistration";
+import VideoInsightsSection from "@/components/sections/VideoInsightsSection";
 import {
   LahIndications,
   LahChecklist,
@@ -43,6 +44,14 @@ export default function LaserAssistedHatchingPage() {
             MCI: "Registration number with Medical Council of India",
             UPMC: "Registration number with Uttar Pradesh Medical Council",
           }}
+        />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <VideoInsightsSection
+          title="How Laser-Assisted Hatching Improves IVF Implantation"
+          imageSrc="/Video-section-images/Laser-Assisted-Hatching-in-Noida.jpg"
+          imageAlt="Dr. Mona Dahiya explaining how laser-assisted hatching helps embryos implant better"
         />
       </SectionReveal>
 

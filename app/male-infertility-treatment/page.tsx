@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import MaleInfertilityHero from "@/components/sections/male-infertility-treatment/MaleInfertilityHero";
 import MedicalRegistration from "@/components/sections/MedicalRegistration";
+import VideoInsightsSection from "@/components/sections/VideoInsightsSection";
 import MaleFertilityWorkup from "@/components/sections/male-infertility-treatment/MaleFertilityWorkup";
 import MaleDiagnosticAndProtocol from "@/components/sections/male-infertility-treatment/MaleDiagnosticAndProtocol";
 import MaleCostAndReviews from "@/components/sections/male-infertility-treatment/MaleCostAndReviews";
@@ -28,6 +29,14 @@ export default function MaleInfertilityPage() {
       {/* 2. Medical Registration Councils */}
       <SectionReveal>
         <MedicalRegistration />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <VideoInsightsSection
+          title="Male Infertility Causes, Tests & Treatments Explained"
+          imageSrc="/Video-section-images/Male-Infertility-Treatment-in-Delhi-Noida-Ghaziabad.jpg"
+          imageAlt="Dr. Mona Dahiya explaining male fertility solutions, tests and treatments"
+        />
       </SectionReveal>
 
       {/* 3. Who Needs a Dedicated Male Fertility Workup? */}

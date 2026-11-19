@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import IcsiHero from "@/components/sections/intracytoplasmic-sperm-injection-icsi-treatment/IcsiHero";
 import MedicalRegistration from "@/components/sections/MedicalRegistration";
+import VideoInsightsSection from "@/components/sections/VideoInsightsSection";
 import IcsiIndicationsAndChecklist from "@/components/sections/intracytoplasmic-sperm-injection-icsi-treatment/IcsiIndicationsAndChecklist";
 import IcsiProtocolAndWhy from "@/components/sections/intracytoplasmic-sperm-injection-icsi-treatment/IcsiProtocolAndWhy";
 import IcsiReviews from "@/components/sections/intracytoplasmic-sperm-injection-icsi-treatment/IcsiReviews";
@@ -32,6 +33,14 @@ export default function IcsiTreatmentPage() {
             MCI: "MCI Reg No.",
             UPMC: "UPMC Reg No.",
           }}
+        />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <VideoInsightsSection
+          title="ICSI Treatment Procedure & Success Rates Explained"
+          imageSrc="/Video-section-images/ICSI-Treatment-in-Delhi-NCR.jpg"
+          imageAlt="Dr. Mona Dahiya explaining ICSI treatment procedure and success rates"
         />
       </SectionReveal>
 

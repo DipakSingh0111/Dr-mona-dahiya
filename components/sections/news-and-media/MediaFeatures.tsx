@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
 type BannerTone = "rose" | "blue" | "navy";
@@ -10,11 +11,70 @@ interface MediaArticle {
   tone: BannerTone;
 }
 
-const bannerToneClass: Record<BannerTone, string> = {
-  rose: "from-rose to-rose-dark",
-  blue: "from-blue to-blue-dark",
-  navy: "from-navy to-navy-mid",
+const PUBLISHER_LOGOS: Record<string, string> = {
+  "Mid-Day": "/news-media-images/mid-day.png",
+  "Asianet News": "/news-media-images/asianet-news.png",
+  "IPS News": "/news-media-images/ips-news.png",
+  "APN News": "/news-media-images/apn-news.png",
+  "DNA India": "/news-media-images/dna-news.png",
+  "Zee News": "/news-media-images/z-news.png",
+  ThePrint: "/news-media-images/thePrint.png",
+  "Republic World": "/news-media-images/republic-world.png",
+  "My Nation": "/news-media-images/my-nation.png",
+  "News Nation": "/news-media-images/news-nation.png",
+  "Free Press Journal": "/news-media-images/free-press-journal.png",
+  "Zee Business": "/news-media-images/zee-business.png",
+  "The Tribune": "/news-media-images/the-tribune.png",
+  "Indian Television": "/news-media-images/indian-television.png",
+  "PTI News": "/news-media-images/pti-news.png",
+  "Bhaskar Live": "/news-media-images/bhaskar-live.png",
+  "Daily Excelsior": "/news-media-images/daily-excelsior.png",
+  "The Pioneer": "/news-media-images/the-pioneer.png",
+  "The Assam Tribune": "/news-media-images/the-assam-tribune.png",
+  "The Sentinel": "/news-media-images/the-sentinel.png",
+  "Deccan Chronicle": "/news-media-images/deccan-chronicle.png",
+  "India Shorts": "/news-media-images/india-shorts.png",
+  "CEO Insights India": "/news-media-images/ceo-insights-india.png",
+  "Feminism in India": "/news-media-images/feminism-in-india.png",
+  "Business News This Week": "/news-media-images/business-news-this-week.png",
+  NewsX: "/news-media-images/newsX.png",
+  "The Daily Guardian": "/news-media-images/the-daily-guardian.png",
+  "The Second Angle": "/news-media-images/the-second-angle.png",
+  "The Sunday Guardian": "/news-media-images/the-sunday-guardian.png",
+  "Business Connect India": "/news-media-images/business-connect-india.png",
+  "India Pharma Outlook": "/news-media-images/india-pharma-outlook.png",
+  eMedicoDiary: "/news-media-images/emedicodiary.png",
 };
+
+const WORDMARK_ONLY_PUBLISHERS = new Set(["Zee News", "eMedicoDiary"]);
+
+function PublisherLogo({ publisher }: { publisher: string }) {
+  const logoSrc = PUBLISHER_LOGOS[publisher];
+  const isWordmarkOnly = WORDMARK_ONLY_PUBLISHERS.has(publisher);
+
+  return (
+    <div className="flex min-h-[64px] items-center justify-center gap-3 px-4 pt-5 pb-2 text-center">
+      {logoSrc ? (
+        <Image
+          src={logoSrc}
+          alt={publisher}
+          width={isWordmarkOnly ? 160 : 52}
+          height={52}
+          className={
+            isWordmarkOnly
+              ? "h-12 w-auto max-w-[165px] object-contain"
+              : "h-12 w-auto max-w-[68px] shrink-0 object-contain"
+          }
+        />
+      ) : null}
+      {!isWordmarkOnly ? (
+        <span className="font-sans text-[14px] font-bold tracking-tight text-ink sm:text-[15px]">
+          {publisher}
+        </span>
+      ) : null}
+    </div>
+  );
+}
 
 const mediaArticles: MediaArticle[] = [
   {
@@ -276,24 +336,18 @@ export default function MediaFeatures() {
         >
           {mediaArticles.map((article, idx) => (
             <StaggerItem key={idx} variant="scaleIn" className="h-full">
-              <article className="card-highlight group relative flex h-full flex-col justify-between overflow-hidden rounded-[20px] border border-rose/20 bg-white shadow-[0_4px_18px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-rose/45 hover:shadow-[0_12px_28px_rgba(232,62,116,0.14)]">
+              <article className="group relative flex h-full flex-col justify-between overflow-hidden rounded-[20px] border border-[#fde2ec] bg-white shadow-[0_4px_18px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-rose/45 hover:shadow-[0_12px_28px_rgba(232,62,116,0.14)]">
                 <div>
-                  <div
-                    className={`flex h-20 w-full items-center justify-center bg-gradient-to-r px-4 text-center ${bannerToneClass[article.tone]}`}
-                  >
-                    <span className="font-display text-[15px] font-bold tracking-tight text-white sm:text-[16px]">
-                      {article.publisher}
-                    </span>
-                  </div>
+                  <PublisherLogo publisher={article.publisher} />
 
-                  <div className="p-5 sm:p-5.5">
-                    <h3 className="font-display text-[13.5px] leading-snug font-bold text-ink transition-colors group-hover:text-blue sm:text-[14px]">
+                  <div className="px-5 pt-3 pb-4">
+                    <h3 className="font-sans text-[13.5px] leading-snug font-medium text-ink transition-colors group-hover:text-blue sm:text-[14px]">
                       {article.headline}
                     </h3>
                   </div>
                 </div>
 
-                <div className="px-5 pt-0 pb-5 sm:px-5.5 sm:pb-5.5">
+                <div className="px-5 pt-0 pb-5">
                   <span className="inline-flex items-center gap-1 text-[12px] font-semibold text-rose transition-colors group-hover:text-blue group-hover:underline">
                     <span>Read article</span>
                     <span

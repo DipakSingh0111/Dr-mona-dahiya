@@ -78,12 +78,8 @@ const checklist: { title?: string; text: ReactNode }[] = [
     text: "to exclude any pathology like hydrosalpinx or intracavitary fibroid, with a 2D/3D USG scan.",
   },
   {
-    text: (
-      <span className="font-semibold text-ink">
-        HIV I &amp; II, HBsAg, HCV and VDRL of both partners (as per the ART Act
-        of India).
-      </span>
-    ),
+    title: "Mandatory viral and STI screening",
+    text: "HIV I & II, HBsAg, HCV and VDRL of both partners (as per the ART Act of India).",
   },
 ];
 

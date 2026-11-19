@@ -279,7 +279,11 @@ section:has(.hero-fullwidth-banner) {
 }
 
 section:has(.hero-fullwidth-banner) h1 ~ p,
-section:has(.hero-banner-card) h1 ~ p {
+section:has(.hero-banner-card) h1 ~ p,
+main:not(.home-main) section:not(.parenthood-cta) h1 + p,
+main:not(.home-main) section:not(.parenthood-cta) h2 + p,
+main:not(.home-main) .card-highlight > p:not(.font-serif),
+main:not(.home-main) article p.leading-relaxed {
   text-align: justify !important;
 }
 
@@ -312,6 +316,8 @@ section:has(.hero-banner-card) h1 ~ p {
     flex: 1 1 auto !important;
     flex-direction: column !important;
     justify-content: flex-start !important;
+    width: 100% !important;
+    max-width: min(49%, 44rem) !important;
     height: 100% !important;
     min-height: 100% !important;
     margin-top: 0 !important;
@@ -319,8 +325,9 @@ section:has(.hero-banner-card) h1 ~ p {
     padding-bottom: 1rem !important;
   }
 
+  section:has(.hero-fullwidth-banner) h1,
   section:has(.hero-fullwidth-banner) h1 ~ p {
-    max-width: 42rem !important;
+    max-width: 100% !important;
   }
 
   section:has(.hero-fullwidth-banner) nav[aria-label="Breadcrumb"] {

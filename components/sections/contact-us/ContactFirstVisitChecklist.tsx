@@ -36,7 +36,7 @@ export default function ContactFirstVisitChecklist() {
           {items.map((text, idx) => (
             <StaggerItem key={idx}>
               <div className="flex items-start gap-4 rounded-xl border border-rose/15 bg-white p-4 sm:p-5 shadow-sm transition hover:border-rose/40 hover:shadow-md">
-                <FaCheckCircle className="mt-0.5 shrink-0 text-lg text-emerald-500" />
+                <FaCheckCircle className="mt-0.5 shrink-0 text-lg text-navy" />
                 <p className="text-sm sm:text-base font-medium text-ink/85 leading-relaxed">
                   {text}
                 </p>

@@ -63,7 +63,7 @@ export default function IuiDelhiAbout() {
             <Reveal variant="fadeUp" delay={0.2} className="mt-6">
               <Link
                 href="#iui-steps"
-                className="inline-flex items-center justify-center rounded-full border border-blue/50 bg-blue/10 px-6 py-2.5 text-[13px] font-medium text-blue shadow-sm backdrop-blur-md transition-all duration-200 hover:border-blue hover:bg-blue/20 hover:text-white active:scale-95 sm:text-[13.5px]"
+                className="inline-flex items-center justify-center rounded-full border border-blue/35 bg-blue/10 px-6 py-2.5 text-[13px] font-semibold text-blue shadow-sm transition-all duration-200 hover:border-blue hover:bg-blue hover:text-white active:scale-95 sm:text-[13.5px]"
               >
                 To know more about IUI
               </Link>

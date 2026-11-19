@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import BestIvfGhaziabadHero from "@/components/sections/best-ivf-doctor-in-ghaziabad/BestIvfGhaziabadHero";
 import BestIvfGhaziabadMedicalRegistration from "@/components/sections/best-ivf-doctor-in-ghaziabad/BestIvfGhaziabadMedicalRegistration";
+import VideoInsightsSection from "@/components/sections/VideoInsightsSection";
 import BestIvfGhaziabadIndications from "@/components/sections/best-ivf-doctor-in-ghaziabad/BestIvfGhaziabadIndications";
 import BestIvfGhaziabadDiagnostic from "@/components/sections/best-ivf-doctor-in-ghaziabad/BestIvfGhaziabadDiagnostic";
 import BestIvfGhaziabadProtocol from "@/components/sections/best-ivf-doctor-in-ghaziabad/BestIvfGhaziabadProtocol";
@@ -30,6 +31,14 @@ export default function BestIvfDoctorInGhaziabadPage() {
 
       <SectionReveal>
         <BestIvfGhaziabadMedicalRegistration />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <VideoInsightsSection
+          title="Watch Dr. Mona Dahiya Explain IVF Treatment in Ghaziabad"
+          imageSrc="/Video-section-images/Best-IVF-Doctor-in-ghaziabad.jpg"
+          imageAlt="Dr. Mona Dahiya explaining IVF treatment in Ghaziabad"
+        />
       </SectionReveal>
 
       <SectionReveal delay={0.04}>

@@ -89,10 +89,10 @@ export default function ContactPatientReviews() {
           ))}
         </Stagger>
 
-        <div className="mt-10 text-center">
+        <div className="mt-8">
           <Link
             href="/best-ivf-patient-reviews"
-            className="inline-flex items-center justify-center rounded-full border-2 border-rose px-6 py-2.5 text-sm font-bold text-rose transition hover:bg-rose hover:text-white shadow-sm"
+            className="inline-flex items-center justify-center rounded-full border border-blue/35 bg-blue/10 px-5 py-2.5 text-[13px] font-semibold text-blue shadow-sm transition-all hover:border-blue hover:bg-blue hover:text-white sm:text-[13.5px]"
           >
             Read All Patient Reviews
           </Link>

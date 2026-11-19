@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import FallopianTubesHero from "@/components/sections/fallopian-tube-blockage-treatment/FallopianTubesHero";
 import MedicalRegistration from "@/components/sections/MedicalRegistration";
+import VideoInsightsSection from "@/components/sections/VideoInsightsSection";
 import FallopianTubesIndicationsAndChecklist from "@/components/sections/fallopian-tube-blockage-treatment/FallopianTubesIndicationsAndChecklist";
 import FallopianTubesProtocolAndWhy from "@/components/sections/fallopian-tube-blockage-treatment/FallopianTubesProtocolAndWhy";
 import FallopianTubesCaseAndCost from "@/components/sections/fallopian-tube-blockage-treatment/FallopianTubesCaseAndCost";
@@ -26,6 +27,14 @@ export default function FallopianTubeBlockagePage() {
 
       <SectionReveal>
         <MedicalRegistration />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <VideoInsightsSection
+          title="Blocked Fallopian Tubes: Natural & IVF Pregnancy Options"
+          imageSrc="/Video-section-images/Fallopian-Tube-Blockage.jpg"
+          imageAlt="Dr. Mona Dahiya explaining blocked fallopian tubes and pregnancy options"
+        />
       </SectionReveal>
 
       <FallopianTubesIndicationsAndChecklist />

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import FetHero from "@/components/sections/frozen-embryo-transfer/FetHero";
 import MedicalRegistration from "@/components/sections/MedicalRegistration";
+import VideoInsightsSection from "@/components/sections/VideoInsightsSection";
 import {
   FetIndications,
   FetChecklist,
@@ -42,6 +43,14 @@ export default function FrozenEmbryoTransferPage() {
             MCI: "Registration Number",
             UPMC: "Registration Number",
           }}
+        />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <VideoInsightsSection
+          title="Frozen Embryo Transfer (FET) Process & Success Explained"
+          imageSrc="/Video-section-images/Frozen-Embryo-Transfer-(FET).jpg"
+          imageAlt="Dr. Mona Dahiya explaining why frozen embryo transfer works"
         />
       </SectionReveal>
 

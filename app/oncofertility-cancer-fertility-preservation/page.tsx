@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import OncofertilityHero from "@/components/sections/oncofertility-cancer-fertility-preservation/OncofertilityHero";
 import MedicalRegistration from "@/components/sections/MedicalRegistration";
+import VideoInsightsSection from "@/components/sections/VideoInsightsSection";
 import OncofertilityIndicationsAndChecklist from "@/components/sections/oncofertility-cancer-fertility-preservation/OncofertilityIndicationsAndChecklist";
 import OncofertilityProtocolAndWhy from "@/components/sections/oncofertility-cancer-fertility-preservation/OncofertilityProtocolAndWhy";
 import OncofertilityReviews from "@/components/sections/oncofertility-cancer-fertility-preservation/OncofertilityReviews";
@@ -35,6 +36,14 @@ export default function OncofertilityPage() {
             MCI: "This is her MCI number",
             UPMC: "This is her UPMC number",
           }}
+        />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <VideoInsightsSection
+          title="Fertility Preservation Before Cancer Treatment Explained"
+          imageSrc="/Video-section-images/Oncofertility-in-Delhi-NCR.jpg"
+          imageAlt="Dr. Mona Dahiya explaining fertility preservation before cancer treatment"
         />
       </SectionReveal>
 

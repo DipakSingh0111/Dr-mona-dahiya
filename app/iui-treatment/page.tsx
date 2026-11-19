@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import IuiTreatmentHero from "@/components/sections/iui-treatment/IuiTreatmentHero";
 import MedicalRegistration from "@/components/sections/MedicalRegistration";
+import VideoInsightsSection from "@/components/sections/VideoInsightsSection";
 import IuiIndicationsAndChecklist from "@/components/sections/iui-treatment/IuiIndicationsAndChecklist";
 import IuiProtocolAndWhy from "@/components/sections/iui-treatment/IuiProtocolAndWhy";
 import {
@@ -32,6 +33,14 @@ export default function IuiTreatmentPage() {
 
       <SectionReveal>
         <MedicalRegistration />
+      </SectionReveal>
+
+      <SectionReveal delay={0.04}>
+        <VideoInsightsSection
+          title="IUI Treatment Process & What to Expect: Video Guide"
+          imageSrc="/Video-section-images/IUI-Treatment-in-Delhi-NCR.jpg"
+          imageAlt="Dr. Mona Dahiya explaining IUI treatment process and success"
+        />
       </SectionReveal>
 
       <IuiIndicationsAndChecklist />
