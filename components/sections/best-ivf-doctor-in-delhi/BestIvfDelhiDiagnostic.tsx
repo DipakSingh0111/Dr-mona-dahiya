@@ -48,12 +48,12 @@ export default function BestIvfDelhiDiagnostic() {
           <Reveal variant="scaleIn" className="lg:col-span-5">
             <div className="relative mx-auto aspect-[10/9] w-full max-w-[440px] overflow-hidden rounded-[22px] border-4 border-white shadow-[0_18px_40px_rgba(232,62,116,0.12)]">
               <Image
-                src="/images/what-to-expect.jpg"
+                src="/images/ivf delhi.jpg"
                 alt="Dr. Mona Dahiya - Tests required before IVF"
                 fill
                 sizes="(max-width: 1024px) 90vw, 440px"
                 quality={95}
-                className="object-cover object-[62%_top]"
+                className="object-cover object-top"
               />
             </div>
           </Reveal>

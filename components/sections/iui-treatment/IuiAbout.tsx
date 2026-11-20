@@ -82,7 +82,7 @@ export default function IuiAbout() {
               />
               <div className="relative aspect-[4/4.5] overflow-hidden rounded-[24px] border-4 border-white bg-white shadow-[0_18px_40px_rgba(232,62,116,0.12)]">
                 <Image
-                  src="/images/best-iui-doctor.jpg"
+                  src="/images/iui-noida.jpeg"
                   alt="Dr. Mona Dahiya — More about IUI"
                   fill
                   quality={95}

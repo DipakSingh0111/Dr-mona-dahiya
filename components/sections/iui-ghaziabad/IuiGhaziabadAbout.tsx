@@ -85,7 +85,7 @@ export default function IuiGhaziabadAbout() {
               />
               <div className="relative aspect-[4/4.5] h-full min-h-[380px] w-full overflow-hidden rounded-[24px] border-4 border-white bg-white shadow-[0_18px_40px_rgba(232,62,116,0.12)] sm:min-h-[460px] sm:rounded-[28px] lg:aspect-auto lg:min-h-0">
                 <Image
-                  src="/images/best-iui-doctor.jpg"
+                  src="/images/iui ghaziabad.jpg"
                   alt="Dr. Mona Dahiya — IUI in simple words"
                   fill
                   quality={95}

@@ -37,12 +37,12 @@ export default function BestIvfDoctorDiagnostic() {
         </div>
 
         <Reveal variant="scaleIn" className="w-full lg:col-span-6">
-          <div className="relative mx-auto aspect-[1.03/1] w-full max-w-[520px] overflow-hidden rounded-[22px] border-4 border-white bg-white shadow-[0_18px_40px_rgba(232,62,116,0.12)] lg:ml-auto">
+          <div className="relative mx-auto aspect-[4/5] w-full max-w-[440px] overflow-hidden rounded-[22px] border-4 border-white bg-white shadow-[0_18px_40px_rgba(232,62,116,0.12)] lg:ml-auto">
             <Image
-              src="/images/ivf-noida-01.jpg"
+              src="/images/ivf noida.jpg"
               alt="Dr. Mona Dahiya - Diagnostic Test"
               fill
-              sizes="(max-width: 1024px) 90vw, 520px"
+              sizes="(max-width: 1024px) 90vw, 440px"
               quality={95}
               className="object-cover object-top"
             />

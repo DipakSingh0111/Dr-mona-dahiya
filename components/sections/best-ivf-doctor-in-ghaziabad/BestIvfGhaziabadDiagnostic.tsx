@@ -44,12 +44,12 @@ export default function BestIvfGhaziabadDiagnostic() {
         <Reveal variant="scaleIn" className="lg:col-span-5">
           <div className="relative mx-auto aspect-[4/5] w-full max-w-[420px] overflow-hidden rounded-[22px] border-4 border-white shadow-[0_18px_40px_rgba(232,62,116,0.12)]">
             <Image
-              src="/images/best-ivf-work-treatment.jpg"
+              src="/images/ivf ghaziabad.jpg"
               alt="Dr. Mona Dahiya - Diagnostic checklist"
               fill
               sizes="(max-width: 1024px) 90vw, 420px"
               quality={95}
-              className="object-cover object-[center_22%]"
+              className="object-cover object-top"
             />
           </div>
         </Reveal>
