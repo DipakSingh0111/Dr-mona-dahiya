@@ -2,8 +2,10 @@
 
 import { usePathname } from "next/navigation";
 import Breadcrumb, { type BreadcrumbItem } from "@/components/ui/Breadcrumb";
-import { getBlogPostBySlug } from "@/data/blogs";
-import { getLocationPageBySlug } from "@/data/locations";
+import {
+  BLOG_BREADCRUMB_MAP,
+  LOCATION_BREADCRUMB_MAP,
+} from "@/data/breadcrumbMap";
 
 const ROUTE_BREADCRUMBS: Record<string, BreadcrumbItem[]> = {
   "/404": [{ label: "Error" }, { label: "Page Not Found" }],
@@ -276,18 +278,22 @@ function getBreadcrumbItems(pathname: string): BreadcrumbItem[] | null {
 
   if (normalized.startsWith("/blog/")) {
     const slug = normalized.slice("/blog/".length);
-    const post = getBlogPostBySlug(slug);
-    if (post) {
-      return [post.hero.breadcrumbParent, { label: post.hero.breadcrumbLabel }];
-    }
-    return [{ label: "Blog", href: "/blog" }, ...formatSlugFallback(normalized)];
+    const entry = BLOG_BREADCRUMB_MAP[slug];
+    return [
+      { label: "Patient Resources", href: "/ivf-faqs" },
+      { label: "Fertility & IVF Blog", href: "/blog" },
+      { label: entry ? entry.label : formatSlugFallback(normalized)[0].label },
+    ];
   }
 
   if (normalized.startsWith("/location/")) {
     const slug = normalized.slice("/location/".length);
-    const loc = getLocationPageBySlug(slug);
-    if (loc) {
-      return [loc.hero.breadcrumbParent, { label: loc.hero.breadcrumbLabel }];
+    const entry = LOCATION_BREADCRUMB_MAP[slug];
+    if (entry) {
+      return [
+        { label: entry.parentLabel, href: entry.parentHref },
+        { label: entry.label },
+      ];
     }
     return [{ label: "Locations", href: "/location" }, ...formatSlugFallback(normalized)];
   }

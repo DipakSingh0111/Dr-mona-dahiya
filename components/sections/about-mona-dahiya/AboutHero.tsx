@@ -40,20 +40,20 @@ export default function AboutHero() {
             ]}
           />
 
-          <Reveal variant="slideLeft" className="text-center lg:text-left">
+          <Reveal variant="slideLeft" className="text-left">
             <p className="text-[12px] font-semibold tracking-wide text-rose sm:text-[13px]">
               About Dr. Mona Dahiya
             </p>
 
-            <h1 className="font-serif mx-auto mt-2.5 max-w-[22rem] text-balance text-[1.35rem] leading-[1.24] font-semibold tracking-tight text-ink min-[390px]:max-w-[24rem] min-[390px]:text-[1.45rem] sm:max-w-[36rem] sm:text-[1.95rem] lg:mx-0 lg:max-w-[48rem] lg:text-wrap lg:text-[2.35rem] lg:leading-[1.18] lg:font-normal xl:text-[2.55rem]">
+            <h1 className="font-serif mt-2.5 max-w-[22rem] text-balance text-[1.35rem] leading-[1.24] font-semibold tracking-tight text-ink min-[390px]:max-w-[24rem] min-[390px]:text-[1.45rem] sm:max-w-[36rem] sm:text-[1.95rem] lg:max-w-[48rem] lg:text-wrap lg:text-[2.35rem] lg:leading-[1.18] lg:font-normal xl:text-[2.55rem]">
               Dr. Mona Dahiya - Senior Reproductive Endocrinologist &amp; Fertility Specialist
             </h1>
 
-            <p className="mx-auto mt-5 sm:mt-6.5 max-w-2xl text-[13px] leading-relaxed text-ink/80 sm:text-[14px] lg:mx-0">
+            <p className="mt-5 sm:mt-6.5 max-w-2xl text-[13px] leading-relaxed text-ink/80 sm:text-[14px]">
               Dr. Mona Dahiya is a senior reproductive endocrinologist &amp; infertility specialist with 25+ years of experience. She is the Founder Director of Little Angel IVF. She has successfully treated more than 25000 couples from India and abroad.
             </p>
 
-            <div className="mt-5 flex flex-wrap items-center justify-center gap-2 sm:mt-6 sm:gap-2.5 lg:justify-start">
+            <div className="mt-5 flex flex-wrap items-center justify-start gap-2 sm:mt-6 sm:gap-2.5">
               <a
                 href="#book-consultation"
                 className="inline-flex items-center justify-center rounded-full bg-rose px-3.5 py-2 text-[12px] font-semibold whitespace-nowrap text-white shadow-[0_8px_20px_rgba(232,62,116,0.28)] transition-all hover:bg-rose-dark active:scale-95 sm:px-5 sm:py-2.5 sm:text-[13px]"
@@ -78,7 +78,7 @@ export default function AboutHero() {
             </div>
 
             <Stagger
-              className="mt-5 mb-2 flex flex-wrap items-center justify-center gap-2 sm:mt-6 sm:gap-2.5 lg:justify-start"
+              className="mt-5 mb-2 flex flex-wrap items-center justify-start gap-2 sm:mt-6 sm:gap-2.5"
               stagger={0.06}
             >
               {badges.map((badge) => (

@@ -3,15 +3,14 @@
 import Link from "next/link";
 import { FaPhoneAlt } from "react-icons/fa";
 import siteData from "@/data/site.json";
+import { AREA_DETAIL_HREF_MAP } from "@/data/locationAreaMap";
 import { Reveal } from "@/components/ui/Reveal";
 
 type Props = {
   query: string;
 };
 
-const areaDetailHrefMap: Record<string, string> = {
-  "Sector 18": "/location/best-ivf-doctor-in-sector-18-noida",
-};
+const areaDetailHrefMap: Record<string, string> = AREA_DETAIL_HREF_MAP;
 
 function matchesQuery(label: string, query: string) {
   if (!query.trim()) return true;

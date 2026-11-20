@@ -407,10 +407,9 @@ export default function OurServicesPillars() {
             </ChecklistRow>
           </Reveal>
           <Reveal variant="fadeUp" delay={0.11}>
-            <ChecklistRow
-              title="We have 3 locations for consultation."
-              text="Noida · Ghaziabad · Delhi"
-            />
+            <ChecklistRow>
+              We have 3 locations for consultation. Noida · Ghaziabad · Delhi
+            </ChecklistRow>
           </Reveal>
         </div>
       </TreatmentSection>

@@ -49,8 +49,7 @@ export default function HeroBannerImage({
           alt={alt}
           fill
           priority={priority}
-          quality={100}
-          unoptimized
+          quality={95}
           sizes="(max-width: 640px) 680px, (max-width: 1024px) 800px, 960px"
           className={`object-cover ${objectPosition}`}
         />

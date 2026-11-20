@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { Reveal } from "@/components/ui/Reveal";
-import { DEFAULT_BLOG_POST, type BlogPostData } from "@/data/blogs";
+import { DEFAULT_BLOG_POST, type BlogPostData } from "@/data/blogTypes";
 
 export default function BlogHero({
   hero = DEFAULT_BLOG_POST.hero,

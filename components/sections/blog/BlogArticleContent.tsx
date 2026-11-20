@@ -9,7 +9,7 @@ import {
   type ArticleBlock,
   type BlogPostData,
   type InlineTextSegment,
-} from "@/data/blogs";
+} from "@/data/blogTypes";
 
 const linkClass =
   "font-semibold text-blue underline decoration-blue/45 underline-offset-2 transition-colors hover:text-rose hover:decoration-rose";
@@ -231,15 +231,14 @@ function renderArticleBlock(block: ArticleBlock, idx: number): ReactNode {
           key={idx}
           className="mt-6 overflow-hidden rounded-2xl border-4 border-white bg-white shadow-[0_14px_36px_rgba(232,62,116,0.1)]"
         >
-          <div className="relative aspect-[16/9] w-full overflow-hidden">
-            <Image
-              src={block.src}
-              alt={block.alt}
-              fill
-              sizes="(max-width: 1024px) 100vw, 760px"
-              className="object-cover object-[50%_22%]"
-            />
-          </div>
+          <Image
+            src={block.src}
+            alt={block.alt}
+            width={1200}
+            height={800}
+            sizes="(max-width: 1024px) 100vw, 760px"
+            className="h-auto w-full"
+          />
         </div>
       );
 
@@ -249,9 +248,9 @@ function renderArticleBlock(block: ArticleBlock, idx: number): ReactNode {
           {block.items.map((faq, fIdx) => (
             <div
               key={fIdx}
-              className="rounded-xl border border-[#fde2ec] bg-white px-5 py-4 shadow-[0_6px_18px_rgba(232,62,116,0.05)]"
+              className="rounded-xl border border-[#fde2ec] border-l-4 border-l-navy bg-pink/45 px-5 py-4 shadow-[0_4px_14px_rgba(232,62,116,0.05)]"
             >
-              <h3 className="text-[15px] font-bold text-rose sm:text-[16px]">
+              <h3 className="text-[15px] font-bold text-navy sm:text-[16px]">
                 {renderInlineSegments(faq.question)}
               </h3>
               <p className="mt-1.5 text-[13.5px] leading-relaxed text-ink/85 sm:text-[14.5px]">
@@ -374,18 +373,19 @@ export default function BlogArticleContent({
             </div>
 
             {/* Featured Blog Image */}
-            <div className="mt-5 overflow-hidden rounded-2xl border-4 border-white bg-white shadow-[0_14px_36px_rgba(232,62,116,0.1)]">
-              <div className="relative aspect-[16/9] w-full overflow-hidden">
+            {post.meta.image && (
+              <div className="mt-5 overflow-hidden rounded-2xl border-4 border-white bg-white shadow-[0_14px_36px_rgba(232,62,116,0.1)]">
                 <Image
                   src={post.meta.image.src}
                   alt={post.meta.image.alt}
-                  fill
+                  width={1200}
+                  height={800}
                   priority
                   sizes="(max-width: 1024px) 100vw, 760px"
-                  className="object-cover object-[50%_22%]"
+                  className="h-auto w-full"
                 />
               </div>
-            </div>
+            )}
 
             {/* Article Prose Content */}
             <div className="mt-8 space-y-10 text-[14px] leading-relaxed text-ink/85 sm:text-[15px]">
