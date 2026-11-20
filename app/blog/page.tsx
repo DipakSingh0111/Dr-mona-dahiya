@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 
 import BlogListingHero from "@/components/sections/blog/BlogListingHero";
-import MedicalRegistration from "@/components/sections/MedicalRegistration";
 import BlogListingCatalog from "@/components/sections/blog/BlogListingCatalog";
 import BlogListingReviews from "@/components/sections/blog/BlogListingReviews";
 import AboutConsultation from "@/components/sections/about-mona-dahiya/AboutConsultation";
@@ -18,13 +17,6 @@ export default function BlogListingPage() {
   return (
     <main className="flex min-h-screen flex-col bg-pink">
       <BlogListingHero />
-
-      <SectionReveal>
-        <MedicalRegistration
-          title="Medical Registration"
-          subtitle="Dr. Mona Dahiya is registered with the following medical councils."
-        />
-      </SectionReveal>
 
       <BlogListingCatalog />
 
