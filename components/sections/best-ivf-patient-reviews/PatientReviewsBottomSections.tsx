@@ -78,11 +78,10 @@ export default function PatientReviewsBottomSections() {
     return (
       <div
         key={faq.idx}
-        className={`group flex flex-col justify-start rounded-2xl border transition-[border-color,background-color,box-shadow] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-          isOpen
+        className={`group flex flex-col justify-start rounded-2xl border transition-[border-color,background-color,box-shadow] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${isOpen
             ? "border-rose/40 bg-white shadow-[0_8px_24px_rgba(232,62,116,0.1)] ring-1 ring-rose/20"
             : "border-[#fde2ec] bg-white hover:border-[#fbcfe0] hover:bg-pink"
-        }`}
+          }`}
       >
         <button
           type="button"
@@ -91,27 +90,24 @@ export default function PatientReviewsBottomSections() {
           aria-expanded={isOpen}
         >
           <h3
-            className={`text-[14.5px] font-bold transition-colors duration-300 ${
-              isOpen ? "text-rose" : "text-black group-hover:text-rose"
-            }`}
+            className={`text-[14.5px] font-bold transition-colors duration-300 ${isOpen ? "text-rose" : "text-black group-hover:text-rose"
+              }`}
           >
             {faq.item.question}
           </h3>
           <span
-            className={`flex size-7 shrink-0 items-center justify-center rounded-full border transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-              isOpen
+            className={`flex size-7 shrink-0 items-center justify-center rounded-full border transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${isOpen
                 ? "rotate-180 border-rose bg-rose text-white shadow-sm"
                 : "border-[#fde2ec] bg-white/5 text-black group-hover:border-[#fbcfe0] group-hover:text-rose"
-            }`}
+              }`}
           >
             <FaChevronDown className="size-2.5 transition-transform" />
           </span>
         </button>
 
         <div
-          className={`grid transition-[grid-template-rows,opacity] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-            isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
-          }`}
+          className={`grid transition-[grid-template-rows,opacity] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+            }`}
         >
           <div className="overflow-hidden">
             <div className="border-t border-[#fde2ec] px-5 pt-3.5 pb-5 text-[13px] leading-relaxed text-black">
@@ -176,7 +172,7 @@ export default function PatientReviewsBottomSections() {
               FAQ
             </span>
             <h2 className="font-serif mt-1 text-[2.2rem] leading-[1.18] font-normal tracking-tight text-ink sm:text-[2.6rem] lg:text-[2.9rem]">
-              Review Info
+              Frequently Asked Questions
             </h2>
           </Reveal>
 
