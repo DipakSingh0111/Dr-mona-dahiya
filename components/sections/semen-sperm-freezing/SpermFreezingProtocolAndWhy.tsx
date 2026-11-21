@@ -91,7 +91,7 @@ export function SpermFreezingProtocol() {
           <div className="card-highlight relative h-full min-h-[240px] overflow-hidden rounded-2xl border border-[#fde2ec] bg-white shadow-[0_10px_30px_rgba(232,62,116,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-[#f8b4cb] hover:shadow-[0_18px_40px_rgba(232,62,116,0.12)] sm:min-h-[260px]">
             <Image
               src="/shared-gallery/sperm freezing.jpeg"
-              alt="Sperm Cryopreservation and Freezing Vial"
+              alt="Dr. Mona Dahiya in front of a bookshelf, sperm freezing services"
               fill
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               className="object-cover object-center"

@@ -154,7 +154,7 @@ export function MiniIvfWhy() {
             <div className="relative aspect-[3/4] w-full overflow-hidden rounded-[22px] border-4 border-white bg-pink shadow-[0_20px_50px_rgba(232,62,116,0.12)] ring-1 ring-rose/15 sm:rounded-[26px]">
               <Image
                 src="/images/about-mona-dahiya/book-a-appointment.jpg"
-                alt="Dr. Mona Dahiya at clinic for Mini IVF"
+                alt="Dr. Mona Dahiya, fertility specialist, Delhi"
                 fill
                 sizes="(max-width: 640px) 360px, (max-width: 1024px) 420px, 460px"
                 className="object-cover object-top"

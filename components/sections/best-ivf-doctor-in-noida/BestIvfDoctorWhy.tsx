@@ -46,7 +46,7 @@ export default function BestIvfDoctorWhy() {
           <div className="relative mx-auto aspect-[1/1.02] w-full max-w-[520px] overflow-hidden rounded-[22px] border-4 border-white bg-white shadow-[0_18px_40px_rgba(232,62,116,0.12)] lg:ml-auto">
             <Image
               src="/images/ivf-noida-02.jpg"
-              alt="Dr. Mona Dahiya speaking at India IVF event"
+              alt="Dr. Mona Dahiya speaking on a panel at the India IVF Summit"
               fill
               sizes="(max-width: 1024px) 90vw, 520px"
               quality={95}

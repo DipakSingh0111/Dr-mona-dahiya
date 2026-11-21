@@ -83,7 +83,7 @@ export default function IuiDelhiAbout() {
               <div className="relative aspect-[4/5] overflow-hidden rounded-[24px] border-4 border-white bg-white shadow-[0_18px_40px_rgba(232,62,116,0.12)]">
                 <Image
                   src="/images/iui delhi.jpg"
-                  alt="Dr. Mona Dahiya — IUI and Why it is done"
+                  alt="Dr. Mona Dahiya at her consulting desk, IUI treatment in Delhi"
                   fill
                   quality={95}
                   sizes="(max-width: 1024px) 400px, 520px"

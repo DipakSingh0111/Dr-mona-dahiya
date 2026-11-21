@@ -105,7 +105,7 @@ export default function IuiDoctorGlance() {
               </Link>
 
               <a
-                href="https://www.youtube.com/@drmonadahiya"
+                href="https://youtube.com/shorts/oTEn5KkzJuU?si=MHyxK0Qppl2PPbmI"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border border-rose/40 bg-white px-5 py-2.5 text-[13px] font-semibold text-rose shadow-sm transition-all duration-200 hover:border-rose hover:bg-rose hover:text-white active:scale-95 sm:text-[13.5px]"

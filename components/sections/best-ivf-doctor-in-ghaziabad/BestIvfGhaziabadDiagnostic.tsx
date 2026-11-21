@@ -45,7 +45,7 @@ export default function BestIvfGhaziabadDiagnostic() {
           <div className="relative mx-auto aspect-[4/5] w-full max-w-[420px] overflow-hidden rounded-[22px] border-4 border-white shadow-[0_18px_40px_rgba(232,62,116,0.12)]">
             <Image
               src="/images/ivf ghaziabad.jpg"
-              alt="Dr. Mona Dahiya - Diagnostic checklist"
+              alt="Dr. Mona Dahiya in front of her certificate shelf"
               fill
               sizes="(max-width: 1024px) 90vw, 420px"
               quality={95}

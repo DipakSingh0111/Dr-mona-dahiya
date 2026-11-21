@@ -412,6 +412,12 @@ const BLOG_FEATURED_IMAGE_MAP: Record<string, string> = {
   "10-ways-ai-impact-infertility-treatment": "https://drmonadahiya.com/wp-content/uploads/revslider/slider-demo-1/slider-01-b.jpg",
 };
 
+function withSeoYear2027(title: string): string {
+  if (/\b2027\b/.test(title)) return title;
+  if (/\b2026\b/.test(title)) return title.replace(/\b2026\b/g, "2027");
+  return `${title} (2027)`;
+}
+
 function mapRawBlogPage(raw: RawBlogPage, imageSrc?: string): BlogPostData {
   const slug = raw.path
     .replace(/^https?:\/\/[^/]+\/blog\//i, "")
@@ -524,7 +530,16 @@ const mappedBlogs: BlogPostData[] = rawBlogPages.map((raw) => {
 const jsonBlogSlugs = new Set(mappedBlogs.map((p) => p.slug));
 const extraSiteBlogs = siteBlogPosts.filter((p) => !jsonBlogSlugs.has(p.slug));
 
-export const BLOG_POSTS: BlogPostData[] = [...mappedBlogs, ...extraSiteBlogs];
+export const BLOG_POSTS: BlogPostData[] = [
+  ...mappedBlogs,
+  ...extraSiteBlogs,
+].map((post) => ({
+  ...post,
+  metadata: {
+    ...post.metadata,
+    title: withSeoYear2027(post.metadata.title),
+  },
+}));
 
 export function getBlogPostBySlug(slug: string): BlogPostData | undefined {
   return BLOG_POSTS.find((post) => post.slug === slug);

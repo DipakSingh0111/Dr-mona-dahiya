@@ -8,6 +8,13 @@ import { awardObjectPosition } from "@/components/sections/about-mona-dahiya/Abo
 
 type TabId = "publications" | "member" | "speaker" | "awards";
 
+function formatLogoAlt(caption: string) {
+  const withParens = caption.replace(/^([A-Z]+),\s*(.+)$/, "$1 ($2)");
+  return withParens.toLowerCase().endsWith("logo")
+    ? withParens
+    : `${withParens} logo`;
+}
+
 function LogoCard({ logo, caption }: { logo: string; caption: string }) {
   return (
     <article className="flex h-full flex-col gap-3">
@@ -15,7 +22,7 @@ function LogoCard({ logo, caption }: { logo: string; caption: string }) {
         <div className="relative h-14 w-full sm:h-16">
           <Image
             src={logo}
-            alt={caption}
+            alt={formatLogoAlt(caption)}
             fill
             className="object-contain"
             sizes="(max-width: 768px) 50vw, 220px"

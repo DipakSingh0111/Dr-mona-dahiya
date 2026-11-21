@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Hero from "@/components/sections/Home/Hero";
 import ServicesTicker from "@/components/sections/Home/ServicesTicker";
 import MedicalRegistration from "@/components/sections/MedicalRegistration";
@@ -18,6 +19,12 @@ import FAQ from "@/components/sections/Home/FAQ";
 import ParenthoodCta from "@/components/sections/Home/ParenthoodCta";
 
 import { SectionReveal } from "@/components/ui/Reveal";
+
+export const metadata: Metadata = {
+  title: "Dr. Mona Dahiya | Leading IVF & Fertility Doctor in India",
+  description:
+    "Consult Dr. Mona Dahiya, among India’s most trusted IVF and fertility specialists. Book an appointment for compassionate, evidence-based reproductive care across Delhi NCR.",
+};
 
 export default function Home() {
   return (

@@ -130,7 +130,7 @@ export default function OurServices({
                       </a>
 
                       <a
-                        href="https://www.instagram.com/drmonadahiya/"
+                        href={item.instagramHref}
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={`Watch ${item.title} on Instagram`}
@@ -140,7 +140,7 @@ export default function OurServices({
                       </a>
 
                       <a
-                        href={item.videoHref}
+                        href={item.facebookHref}
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={`Watch ${item.title} on Facebook`}

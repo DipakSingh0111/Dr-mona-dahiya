@@ -543,7 +543,9 @@
         "description": "A type of ART where egg and sperm are mixed together in a dish.",
         "icon": "uterus",
         "image": "/images/services/service-ivf-soft.png",
-        "videoHref": "https://www.youtube.com/@drmonadahiya"
+        "videoHref": "https://youtube.com/shorts/KY0u6zLEVzg?si=zJGGAKmhiaYYBnpv",
+        "facebookHref": "https://www.facebook.com/share/r/19uhUwyayV/",
+        "instagramHref": "https://www.instagram.com/reel/DJE2KsWssu_/?igsh=MTBlZHRqYnkweWNycQ=="
       },
       {
         "id": "iui",
@@ -551,7 +553,9 @@
         "description": "Type of fertility treatment where doctor places processed sperm in your uterus.",
         "icon": "uterus",
         "image": "/images/services/service-iui-soft.png",
-        "videoHref": "https://www.youtube.com/@drmonadahiya"
+        "videoHref": "https://youtube.com/shorts/oTEn5KkzJuU?si=ICX4GB5lZgdp7gw7",
+        "facebookHref": "https://www.facebook.com/share/1N1PqfCfTo/",
+        "instagramHref": "https://www.instagram.com/drmonadahiya?igsh=MXRqOHdxOHV3emx5ZQ=="
       },
       {
         "id": "follicular-ultrasound",
@@ -559,7 +563,9 @@
         "description": "Procedure to induce ovulation by growing the follicle using medication.",
         "icon": "monitor",
         "image": "/images/services/service-ultrasound-soft.png",
-        "videoHref": "https://www.youtube.com/@drmonadahiya"
+        "videoHref": "https://www.youtube.com/shorts/yDszHrS9Lyc",
+        "facebookHref": "https://www.facebook.com/share/1N1PqfCfTo/",
+        "instagramHref": "https://www.instagram.com/reel/DJmPs6nPpTm/?igsh=MWdlY2o0a24xbDhoMA=="
       },
       {
         "id": "infertility-tests",
@@ -567,7 +573,9 @@
         "description": "Helpful to diagnose if any problem exists in female. Includes various hormone tests to determine.",
         "icon": "clipboard",
         "image": "/images/services/service-infertility-tests-soft.png",
-        "videoHref": "https://www.youtube.com/@drmonadahiya"
+        "videoHref": "https://youtube.com/shorts/eSdpVB90yh8",
+        "facebookHref": "https://www.facebook.com/share/r/1A35vMAMZj/",
+        "instagramHref": "https://www.instagram.com/reel/DJacJ_yPAcY/?igsh=bWtxcGNnZWF1cTJp"
       },
       {
         "id": "male-infertility",
@@ -575,7 +583,9 @@
         "description": "Various tests can be performed to find out if any issue exists in males. Semen Analysis is one of them.",
         "icon": "male",
         "image": "/images/services/service-male-infertility-soft.png",
-        "videoHref": "https://www.youtube.com/@drmonadahiya"
+        "videoHref": "https://youtube.com/shorts/AYbD49ZVBZY?si=IJoU9ZlTSD-F016n",
+        "facebookHref": "https://www.facebook.com/share/r/1F1xvw9Ksp/",
+        "instagramHref": "https://www.instagram.com/reel/DJwcVeJPmNJ/?igsh=MWF1cTJsclIwNHNlYg=="
       },
       {
         "id": "mini-ivf",
@@ -583,7 +593,9 @@
         "description": "Mini IVF or Micro IVF is a modified form of IVF where less amount of fertility medication is used.",
         "icon": "cells",
         "image": "/images/services/service-mini-ivf-soft.png",
-        "videoHref": "https://www.youtube.com/@drmonadahiya"
+        "videoHref": "https://youtube.com/shorts/e4bbQ8PeOow?si=INfQBT6HsCAMSaIX",
+        "facebookHref": "https://www.facebook.com/share/1N1PqfCfTo/",
+        "instagramHref": "https://www.instagram.com/reel/DJjpJaqPbo7/?igsh=MTIyMDBkeG1oajZmcQ=="
       },
       {
         "id": "laparoscopy",
@@ -591,7 +603,9 @@
         "description": "Procedure to find and cure problems like Endometriosis, Blocked tubes etc.",
         "icon": "uterus",
         "image": "/images/services/service-laparoscopy-soft.png",
-        "videoHref": "https://www.youtube.com/@drmonadahiya"
+        "videoHref": "https://www.youtube.com/shorts/mDfURxqIXZU",
+        "facebookHref": "https://www.facebook.com/share/1N1PqfCfTo/",
+        "instagramHref": "https://www.instagram.com/reel/DJrXj4EvJbb/?igsh=MXZnZm0ydGVudWQ1dQ=="
       },
       {
         "id": "low-amh",
@@ -599,7 +613,9 @@
         "description": "Anti Mullerian Hormone (AMH) is the marker for ovarian reserve. Low AMH IVF for women with low egg reserve.",
         "icon": "drop",
         "image": "/images/services/service-low-amh-soft.png",
-        "videoHref": "https://www.youtube.com/@drmonadahiya"
+        "videoHref": "https://www.youtube.com/shorts/qQ_EowoSRiM",
+        "facebookHref": "https://www.facebook.com/share/v/1E6m3VAZu4/",
+        "instagramHref": "https://www.instagram.com/reel/DJUMv65PPl3/?igsh=MWxrYlNtZXhodDB1Nw=="
       },
       {
         "id": "cryopreservation",
@@ -607,7 +623,9 @@
         "description": "Freezing of your embryos (also known as embryo cryopreservation) for future use in IVF.",
         "icon": "snowflake",
         "image": "/images/services/service-cryopreservation-soft.png",
-        "videoHref": "https://www.youtube.com/@drmonadahiya"
+        "videoHref": "https://www.youtube.com/shorts/nc6iYhQ-aWw",
+        "facebookHref": "https://www.facebook.com/share/1N1PqfCfTo/",
+        "instagramHref": "https://www.instagram.com/reel/DJb8jhuwzTM/?igsh=NGY4MWo2Z3BtbGxa"
       },
       {
         "id": "era",
@@ -615,7 +633,9 @@
         "description": "Endometrial Receptivity Array is used to check whether the endometrium is receptive to accept an embryo.",
         "icon": "uterus",
         "image": "/images/services/service-era-soft.png",
-        "videoHref": "https://www.youtube.com/@drmonadahiya"
+        "videoHref": "https://www.youtube.com/shorts/-ZKoCH0oOBY",
+        "facebookHref": "https://www.facebook.com/share/1N1PqfCfTo/",
+        "instagramHref": "https://www.instagram.com/reel/DJZPLtcv3PA/?igsh=MXR5bDlIZigzd3UxOA=="
       },
       {
         "id": "donor-gametes",
@@ -623,7 +643,9 @@
         "description": "Donor gamete or reproductive cell donated by people who want to help couples have children.",
         "icon": "dna",
         "image": "/images/services/service-donor-gametes-soft.png",
-        "videoHref": "https://www.youtube.com/@drmonadahiya"
+        "videoHref": "https://www.youtube.com/@drmonadahiya",
+        "facebookHref": "https://www.facebook.com/share/1N1PqfCfTo/",
+        "instagramHref": "https://www.instagram.com/drmonadahiya?igsh=MXRqOHdxOHV3emx5ZQ=="
       },
       {
         "id": "pgt",
@@ -631,7 +653,9 @@
         "description": "Genetic screening of embryos created during IVF procedure.",
         "icon": "dna",
         "image": "/images/services/service-pgt-soft.png",
-        "videoHref": "https://www.youtube.com/@drmonadahiya"
+        "videoHref": "https://www.youtube.com/shorts/TRGjnXN0KJc",
+        "facebookHref": "https://www.facebook.com/share/1N1PqfCfTo/",
+        "instagramHref": "https://www.instagram.com/reel/DJuNU0vEkM/?igsh=MW9oZnRnbW20cGppaw=="
       }
     ]
   },

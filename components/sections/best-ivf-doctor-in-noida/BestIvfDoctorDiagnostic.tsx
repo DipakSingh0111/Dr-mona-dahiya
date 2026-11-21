@@ -40,7 +40,7 @@ export default function BestIvfDoctorDiagnostic() {
           <div className="relative mx-auto aspect-[4/5] w-full max-w-[440px] overflow-hidden rounded-[22px] border-4 border-white bg-white shadow-[0_18px_40px_rgba(232,62,116,0.12)] lg:ml-auto">
             <Image
               src="/images/ivf noida.jpg"
-              alt="Dr. Mona Dahiya - Diagnostic Test"
+              alt="Dr. Mona Dahiya at her clinic, awards board behind her"
               fill
               sizes="(max-width: 1024px) 90vw, 440px"
               quality={95}

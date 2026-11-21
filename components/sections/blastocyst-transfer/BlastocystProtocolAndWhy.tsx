@@ -142,7 +142,7 @@ export function BlastocystWhy() {
             <div className="relative aspect-[3/4] w-full overflow-hidden rounded-[22px] border-4 border-white bg-pink shadow-[0_20px_50px_rgba(232,62,116,0.12)] ring-1 ring-rose/15 sm:rounded-[26px]">
               <Image
                 src="/images/blastocyst.jpg"
-                alt="Dr. Mona Dahiya - Blastocyst Transfer Specialist"
+                alt="Dr. Mona Dahiya at her desk in front of her degrees and awards"
                 fill
                 sizes="(max-width: 640px) 360px, (max-width: 1024px) 420px, 460px"
                 className="object-cover object-top"

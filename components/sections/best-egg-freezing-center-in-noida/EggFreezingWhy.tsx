@@ -56,7 +56,7 @@ export default function EggFreezingWhy() {
             <div className="relative aspect-[10/11] w-full overflow-hidden rounded-[22px] border-4 border-white bg-pink shadow-[0_20px_50px_rgba(232,62,116,0.12)] ring-1 ring-rose/15 sm:rounded-[26px]">
               <Image
                 src="/images/about-us-egg-freezing.jpg"
-                alt="Dr. Mona Dahiya — Why Choose Dr. Mona Dahiya for Egg Freezing"
+                alt="Dr. Mona Dahiya beside her Times Network India Health award board"
                 fill
                 sizes="(max-width: 640px) 380px, (max-width: 1024px) 440px, 480px"
                 quality={95}

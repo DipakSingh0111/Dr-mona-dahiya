@@ -65,7 +65,7 @@ export default function IuiDelhiWhy() {
               <div className="relative aspect-[1.08/1] min-h-[340px] w-full overflow-hidden rounded-[24px] border-4 border-white bg-white shadow-[0_18px_40px_rgba(232,62,116,0.12)] sm:min-h-[400px] lg:aspect-auto lg:h-full lg:min-h-0">
                 <Image
                   src="/images/why-choose-IUI.jpg"
-                  alt="Dr. Mona Dahiya — Reasons To See Dr. Mona Dahiya For IUI"
+                  alt="Dr. Mona Dahiya explaining IUI treatment"
                   fill
                   quality={95}
                   sizes="(max-width: 1024px) 420px, (max-width: 1280px) 520px, 600px"

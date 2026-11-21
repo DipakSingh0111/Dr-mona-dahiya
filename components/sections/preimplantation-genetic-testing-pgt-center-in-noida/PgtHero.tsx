@@ -27,7 +27,7 @@ export default function PgtHero() {
     >
       <HeroFullWidthBanner
         src="/pageBanner/M0500462.jpg"
-        alt="Dr. Mona Dahiya - Preimplantation Genetic Testing (PGT) Specialist"
+        alt="Dr. Mona Dahiya, fertility specialist, in her white coat, PGT centre in Noida"
       />
       <div className="page-container relative z-10 w-full pt-4 sm:pt-5 lg:pt-0">
         <div className="lg:max-w-[46rem] xl:max-w-[50rem] 2xl:max-w-[52rem] lg:mt-0 2xl:max-w-[45rem]">
@@ -96,7 +96,7 @@ export default function PgtHero() {
           </Stagger>
         </div>
 
-        <HeroMobileBanner src="/pageBanner/M0500462.jpg" alt="Dr. Mona Dahiya - Preimplantation Genetic Testing (PGT) Specialist" />
+        <HeroMobileBanner src="/pageBanner/M0500462.jpg" alt="Dr. Mona Dahiya, fertility specialist, in her white coat, PGT centre in Noida" />
       </div>
     </section>
       <section className="relative overflow-hidden bg-white py-7 sm:py-9 border-y border-[#fde2ec]/70">

@@ -43,7 +43,7 @@ export default function IuiDelhiDoctor() {
               <div className="relative aspect-[3/2] overflow-hidden rounded-[24px] rounded-br-[88px] border-4 border-white bg-white shadow-[0_18px_40px_rgba(232,62,116,0.12)]">
                 <Image
                   src="/images/meet-iui-doctor.jpg"
-                  alt="Dr. Mona Dahiya — Meet Your IUI Doctor"
+                  alt="Dr. Mona Dahiya in front of a bookshelf, IUI treatment in Delhi"
                   fill
                   quality={95}
                   sizes="(max-width: 1024px) 440px, 560px"
@@ -107,7 +107,7 @@ export default function IuiDelhiDoctor() {
               </Link>
 
               <a
-                href="https://www.youtube.com/@drmonadahiya"
+                href="https://youtube.com/shorts/oTEn5KkzJuU?si=MHyxK0Qppl2PPbmI"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border border-rose/35 bg-rose/10 px-5 py-2.5 text-[13px] font-semibold text-rose shadow-sm transition-all duration-200 hover:border-rose hover:bg-rose hover:text-white active:scale-95 sm:text-[13.5px]"

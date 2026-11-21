@@ -100,7 +100,7 @@ export default function OncofertilityProtocolAndWhy() {
               <div className="relative aspect-[11/10] w-full overflow-hidden rounded-[22px] border-4 border-white bg-pink shadow-[0_20px_50px_rgba(232,62,116,0.12)] ring-1 ring-rose/15 sm:rounded-[26px]">
                 <Image
                   src="/images/about-mona-dahiya/oncofertility.jpg"
-                  alt="Dr. Mona Dahiya — India 7th IVF Summit & Awards"
+                  alt="Dr. Mona Dahiya receiving an award at the India IVF Summit"
                   fill
                   sizes="(max-width: 640px) 420px, (max-width: 1024px) 480px, 540px"
                   quality={95}

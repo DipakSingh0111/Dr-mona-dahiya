@@ -8,6 +8,12 @@ import { CalendarIcon, PlayIcon } from "@/components/ui/Icons";
 import { FaStar } from "react-icons/fa";
 import { HeroReveal } from "@/components/ui/Reveal";
 
+const slideAlts = [
+  "Dr. Mona Dahiya receiving an award at the Times Network India Health Summit & Awards",
+  "Dr. Mona Dahiya, IVF specialist, in her white coat at her clinic",
+  "Dr. Mona Dahiya receiving a speaker certificate at the India IVF Summit & Awards",
+];
+
 export default function Hero() {
   const {
     slides: heroSlides,
@@ -97,7 +103,7 @@ export default function Hero() {
             >
               <Image
                 src={src}
-                alt={`Dr. Mona Dahiya banner slide ${index + 1}`}
+                alt={slideAlts[index] ?? `Dr. Mona Dahiya banner slide ${index + 1}`}
                 fill
                 priority={index === 0}
                 quality={100}

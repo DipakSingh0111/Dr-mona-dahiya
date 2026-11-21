@@ -159,7 +159,7 @@ export default function IvfProtocolAndWhy() {
               <div className="relative h-full w-full min-h-[380px] sm:min-h-[440px] lg:min-h-full overflow-hidden rounded-[20px] border-4 border-white shadow-[0_16px_40px_rgba(232,62,116,0.12)] sm:rounded-[24px]">
                 <Image
                   src="/images/ivf-treatment.jpg"
-                  alt="Dr. Mona Dahiya - IVF Treatment Specialist"
+                  alt="Dr. Mona Dahiya, IVF specialist, in her consulting room in Delhi NCR"
                   fill
                   quality={100}
                   unoptimized
