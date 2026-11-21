@@ -396,6 +396,22 @@ const nextConfig: NextConfig = {
       }
     ];
   },
+  async rewrites() {
+    return [
+      {
+        source: "/sitemap.html",
+        destination: "/sitemap",
+      },
+      {
+        source: "/siteMap.html",
+        destination: "/sitemap",
+      },
+      {
+        source: "/siteMap.xml",
+        destination: "/sitemap.xml",
+      },
+    ];
+  },
   /* config options here */
   experimental: {
     agentFeedback: true,

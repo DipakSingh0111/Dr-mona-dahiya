@@ -241,6 +241,8 @@ const ROUTE_BREADCRUMBS: Record<string, BreadcrumbItem[]> = {
     { label: "Treatments", href: "/our-services" },
     { label: "Semen & Sperm Freezing" },
   ],
+  "/sitemap": [{ label: "Sitemap" }],
+  "/sitemap.html": [{ label: "Sitemap" }],
   "/sperm-dna-fragmentation-test": [
     { label: "Conditions Treated", href: "/male-infertility-treatment" },
     { label: "Sperm DNA Fragmentation Index (DFI)" },

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Open_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import ScrollToTop from "@/components/layout/ScrollToTop";
 import HeaderHeightSync from "@/components/layout/HeaderHeightSync";
 import TopBar from "@/components/layout/TopBar";
@@ -9,10 +9,10 @@ import Footer from "@/components/layout/Footer";
 import FloatingActions from "@/components/layout/FloatingActions";
 import "./globals.css";
 
-const openSans = Open_Sans({
+const openSans = localFont({
+  src: "./fonts/open-sans-latin.woff2",
   variable: "--font-open-sans",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
+  weight: "300 800",
   display: "swap",
 });
 
