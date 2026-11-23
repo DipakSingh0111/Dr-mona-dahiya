@@ -2,6 +2,7 @@
 
 import type { ComponentType, ReactNode } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   FaPhoneAlt,
   FaEnvelope,
@@ -24,13 +25,31 @@ function FooterLink({
   children: ReactNode;
   isNew?: boolean;
 }) {
+  const trimmedHref = href.trim();
+  const isExternal =
+    trimmedHref.startsWith("http") ||
+    trimmedHref.startsWith("tel:") ||
+    trimmedHref.startsWith("mailto:") ||
+    trimmedHref.startsWith("#");
+
+  if (isExternal) {
+    return (
+      <a
+        href={trimmedHref}
+        className="group flex items-start gap-1 text-[12.5px] leading-snug text-white/80 transition hover:text-[#f9a8c0]"
+      >
+        <span className="min-w-0 flex-1">{children}</span>
+      </a>
+    );
+  }
+
   return (
-    <a
-      href={href}
+    <Link
+      href={trimmedHref}
       className="group flex items-start gap-1 text-[12.5px] leading-snug text-white/80 transition hover:text-[#f9a8c0]"
     >
       <span className="min-w-0 flex-1">{children}</span>
-    </a>
+    </Link>
   );
 }
 
@@ -303,9 +322,9 @@ export default function Footer() {
                       |
                     </span>
                   ) : null}
-                  <a href={item.href} className="transition hover:text-[#f9a8c0]">
+                  <Link href={item.href} className="transition hover:text-[#f9a8c0]">
                     {item.label}
-                  </a>
+                  </Link>
                 </span>
               ))}
             </div>

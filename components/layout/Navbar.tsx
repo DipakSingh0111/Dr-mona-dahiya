@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, type MouseEvent } from "react";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import siteData from "@/data/site.json";
 import {
@@ -162,14 +163,14 @@ export default function Navbar() {
           }}
         />
         <div className="relative z-10 page-container flex items-center gap-3 py-1.5 sm:py-1.5 xl:py-2">
-          <a href={brand.href} className="min-w-0 shrink-0 text-left">
+          <Link href={brand.href} className="min-w-0 shrink-0 text-left">
             <span className="font-display block text-left text-[1.35rem] leading-none font-bold tracking-tight whitespace-nowrap text-white sm:text-[1.5rem] lg:text-[1.55rem] xl:text-[1.85rem]">
               {brand.name}
             </span>
             <span className="mt-0.5 block text-left text-[9.5px] font-medium tracking-wide whitespace-nowrap text-white/85 xl:text-[10.5px]">
               {brand.tagline}
             </span>
-          </a>
+          </Link>
 
           <div className="ml-auto hidden shrink-0 items-center gap-3.5 md:flex lg:gap-4 xl:gap-5">
             <a
