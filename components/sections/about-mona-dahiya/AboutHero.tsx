@@ -54,12 +54,12 @@ export default function AboutHero() {
             </p>
 
             <div className="mt-5 flex flex-wrap items-center justify-start gap-2 sm:mt-6 sm:gap-2.5">
-              <a
-                href="#book-consultation"
+              <Link
+                href="/book-appointment"
                 className="inline-flex items-center justify-center rounded-full bg-rose px-3.5 py-2 text-[12px] font-semibold whitespace-nowrap text-white shadow-[0_8px_20px_rgba(232,62,116,0.28)] transition-all hover:bg-rose-dark active:scale-95 sm:px-5 sm:py-2.5 sm:text-[13px]"
               >
                 Book In-Clinic Consultation
-              </a>
+              </Link>
               <Link
                 href="/ivf-consultation-online"
                 className="inline-flex items-center justify-center rounded-full bg-blue px-3.5 py-2 text-[12px] font-semibold whitespace-nowrap text-white shadow-md ring-1 ring-blue/20 transition-all hover:bg-blue-mid active:scale-95 sm:px-5 sm:py-2.5 sm:text-[13px]"

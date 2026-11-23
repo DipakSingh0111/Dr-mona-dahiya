@@ -66,12 +66,12 @@ export default function BestIvfDoctorHero() {
             </Reveal>
 
             <div className="mt-5 sm:mt-6 flex flex-wrap items-center gap-2.5 sm:gap-3.5">
-              <a
-                href="#book-consultation"
+              <Link
+                href="/book-appointment"
                 className="inline-flex items-center justify-center rounded-full bg-rose px-5 py-2 text-[13px] font-bold text-white shadow-[0_8px_20px_rgba(232,62,116,0.28)] transition-all hover:bg-rose-dark active:scale-95 sm:px-6 sm:py-2.5 sm:text-[13.5px]"
               >
                 Book In-Clinic Consultation
-              </a>
+              </Link>
               <a
                 href="#book-consultation"
                 className="inline-flex items-center justify-center rounded-full bg-blue px-5 py-2 text-[13px] font-semibold text-white shadow-[0_8px_20px_rgba(0,71,202,0.28)] transition-all hover:bg-blue-mid active:scale-95 sm:px-6 sm:py-2.5 sm:text-[13.5px]"

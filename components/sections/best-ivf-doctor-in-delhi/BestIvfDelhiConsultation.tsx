@@ -30,12 +30,12 @@ export default function BestIvfDelhiConsultation() {
               </p>
 
               <div className="mt-6 flex flex-wrap items-center gap-3 sm:gap-4">
-                <a
-                  href="#request-appointment-form"
+                <Link
+                  href="/book-appointment"
                   className="inline-flex items-center justify-center rounded-full bg-rose backdrop-blur-sm px-5 py-2.5 text-[13px] font-semibold text-white shadow-[0_8px_20px_rgba(232,62,116,0.28)] transition-all hover:bg-rose-dark sm:text-[14px]"
                 >
                   Book In-Clinic Consultation
-                </a>
+                </Link>
                 <Link
                   href="/ivf-consultation-online"
                   className="inline-flex items-center justify-center rounded-full bg-blue px-5 py-2.5 text-[13px] font-semibold text-white shadow-[0_4px_16px_rgba(0,71,202,0.35)] transition-all hover:bg-blue-dark hover:shadow-[0_6px_20px_rgba(0,71,202,0.45)] sm:text-[14px]"

@@ -307,7 +307,10 @@ function mapRawLocationPage(raw: RawLocationPage): LocationPageData {
       imageAlt: rawImg.alt || `${(hero.h1 as string) || slug} — Dr. Mona Dahiya`,
       primaryCta: {
         label: cta1.label || "Book In-Clinic Consultation",
-        href: cleanHref(cta1.href || "#book-consultation"),
+        href:
+          !cta1.label || cta1.label === "Book In-Clinic Consultation"
+            ? "/book-appointment"
+            : cleanHref(cta1.href || "#book-consultation"),
       },
       secondaryCta: {
         label: cta2.label || "Schedule Online Consultation",

@@ -456,7 +456,10 @@ function mapRawBlogPage(raw: RawBlogPage, imageSrc?: string): BlogPostData {
       title: hero.h1 || slug,
       primaryCta: {
         label: hero.cta1?.label || "Book Consultation",
-        href: cleanHref(hero.cta1?.href || "#book-consultation"),
+        href:
+          hero.cta1?.label === "Book In-Clinic Consultation"
+            ? "/book-appointment"
+            : cleanHref(hero.cta1?.href || "#book-consultation"),
       },
       secondaryCta: {
         label: hero.cta2?.label || "Schedule Online Consultation",

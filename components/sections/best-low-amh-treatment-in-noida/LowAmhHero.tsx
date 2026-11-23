@@ -63,12 +63,12 @@ export default function LowAmhHero() {
               </p>
 
               <div className="flex w-full max-w-[450px] flex-col gap-2.5 sm:max-w-[500px] sm:flex-row sm:gap-3">
-                <a
-                  href="#book-consultation"
+                <Link
+                  href="/book-appointment"
                   className="inline-flex h-11 w-full flex-1 items-center justify-center rounded-full bg-rose px-3 text-[12px] font-semibold whitespace-nowrap text-white shadow-[0_8px_20px_rgba(232,62,116,0.28)] transition-all hover:bg-rose-dark active:scale-[0.98] sm:h-12 sm:px-4 sm:text-[13px]"
                 >
                   Book In-Clinic Consultation
-                </a>
+                </Link>
                 <a
                   href="#book-consultation"
                   className="inline-flex h-11 w-full flex-1 items-center justify-center rounded-full bg-blue px-3 text-[12px] font-semibold whitespace-nowrap text-white shadow-md ring-1 ring-blue/20 transition-all hover:bg-blue-mid active:scale-[0.98] sm:h-12 sm:px-4 sm:text-[13px]"

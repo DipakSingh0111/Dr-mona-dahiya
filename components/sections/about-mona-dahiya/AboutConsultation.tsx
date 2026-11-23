@@ -79,12 +79,12 @@ export default function AboutConsultation({
               </p>
 
               <div className="mt-6 flex flex-wrap items-center gap-3.5 sm:mt-7">
-                <a
-                  href="#request-appointment-form"
+                <Link
+                  href="/book-appointment"
                   className="inline-flex items-center justify-center rounded-full bg-rose px-6 py-3 text-[14px] font-semibold text-white shadow-[0_8px_20px_rgba(232,62,116,0.28)] transition-all duration-200 hover:bg-rose-dark active:scale-95"
                 >
                   Book In-Clinic Consultation
-                </a>
+                </Link>
                 <Link
                   href="/ivf-consultation-online"
                   className="inline-flex items-center justify-center rounded-full bg-blue px-6 py-3 text-[14px] font-semibold text-white shadow-md ring-1 ring-blue/20 transition-all duration-200 hover:bg-blue-dark active:scale-95"

@@ -50,12 +50,12 @@ export default function FemaleInfertilityNoidaHero() {
           </p>
 
           <div className="mt-5 sm:mt-6 flex flex-wrap items-center gap-1.5 sm:gap-2">
-            <a
-              href="#book-consultation"
+            <Link
+              href="/book-appointment"
               className="inline-flex items-center justify-center rounded-full bg-rose px-5 py-2.5 text-[13px] font-semibold text-white shadow-[0_8px_20px_rgba(232,62,116,0.28)] transition-all hover:bg-rose-dark sm:px-6 sm:py-3 sm:text-[14px]"
             >
               Book In-Clinic Consultation
-            </a>
+            </Link>
             <Link
               href="/ivf-consultation-online"
               className="inline-flex items-center justify-center rounded-full bg-blue px-5 py-2.5 text-[13px] font-semibold text-white shadow-[0_4px_16px_rgba(6,21,50,0.35)] transition-all hover:bg-blue-mid sm:px-6 sm:py-3 sm:text-[14px]"

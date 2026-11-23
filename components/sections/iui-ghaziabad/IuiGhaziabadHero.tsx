@@ -75,12 +75,12 @@ export default function IuiGhaziabadHero() {
 
           {/* Action Buttons */}
           <div className="mt-5 sm:mt-6 flex flex-wrap items-center gap-1.5 sm:gap-2">
-            <a
-              href="#ghaziabad-clinic"
+            <Link
+              href="/book-appointment"
               className="inline-flex items-center justify-center rounded-full bg-rose px-5 py-2.5 text-[13px] font-semibold text-white shadow-[0_8px_20px_rgba(232,62,116,0.28)] transition-all hover:bg-rose-dark hover:shadow-[0_8px_22px_rgba(232,62,116,0.14)] sm:px-6 sm:py-3 sm:text-[14px] lg:text-[15px]"
             >
               Book In-Clinic Consultation
-            </a>
+            </Link>
 
             <Link
               href="/ivf-consultation-online"

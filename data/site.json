@@ -2330,7 +2330,7 @@
     "image": "/pageBanner/M0500485.jpg",
     "primaryCta": {
       "label": "Book In-Clinic Consultation",
-      "href": "#schedule-consultation"
+      "href": "/book-appointment"
     },
     "secondaryCta": {
       "label": "Schedule Online Consultation",
@@ -2526,7 +2526,7 @@
     "image": "/pageBanner/M0500487.jpg",
     "primaryCta": {
       "label": "Book In-Clinic Consultation",
-      "href": "/about-mona-dahiya#book-consultation"
+      "href": "/book-appointment"
     },
     "secondaryCta": {
       "label": "Schedule Online Consultation",
@@ -3055,7 +3055,7 @@
         "title": "Experienced IVF Doctor in Noida: Your Complete Guide to Choosing the Right Fertility Specialist",
         "primaryCta": {
           "label": "Book In-Clinic Consultation",
-          "href": "#book-consultation"
+          "href": "/book-appointment"
         },
         "secondaryCta": {
           "label": "Schedule Online Consultation",
@@ -4547,7 +4547,7 @@
         "title": "IUI Specialist in Noida – Complete Guide to Intrauterine Insemination (IUI)",
         "primaryCta": {
           "label": "Book In-Clinic Consultation",
-          "href": "#book-consultation"
+          "href": "/book-appointment"
         },
         "secondaryCta": {
           "label": "Schedule Online Consultation",
@@ -7825,7 +7825,7 @@
         "title": "Can You Work During IVF? A Practical Guide to Treatment-Day Planning",
         "primaryCta": {
           "label": "Book In-Clinic Consultation",
-          "href": "#book-consultation"
+          "href": "/book-appointment"
         },
         "secondaryCta": {
           "label": "Schedule Online Consultation",
@@ -8331,7 +8331,7 @@
         "title": "Know what secondary infertility is",
         "primaryCta": {
           "label": "Book In-Clinic Consultation",
-          "href": "#book-consultation"
+          "href": "/book-appointment"
         },
         "secondaryCta": {
           "label": "Schedule Online Consultation",
@@ -9843,7 +9843,7 @@
         "imageAlt": "Best IVF Doctor in Sector 18 Noida — Dr. Mona Dahiya",
         "primaryCta": {
           "label": "Book In-Clinic Consultation",
-          "href": "#book-consultation"
+          "href": "/book-appointment"
         },
         "secondaryCta": {
           "label": "Schedule Online Consultation",

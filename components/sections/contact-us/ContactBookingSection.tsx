@@ -59,13 +59,13 @@ export default function ContactBookingSection() {
 
             <Reveal variant="fadeUp" delay={0.18}>
               <div className="mt-6 flex flex-wrap items-center gap-3">
-                <a
-                  href="#request-appointment"
+                <Link
+                  href="/book-appointment"
                   className="inline-flex items-center gap-2 rounded-full bg-rose px-5 py-2.5 text-xs sm:text-sm font-semibold text-white shadow-sm transition hover:bg-rose-dark"
                 >
                   <FaCalendarCheck />
                   <span>Book In-Clinic Consultation</span>
-                </a>
+                </Link>
 
                 <Link
                   href="/ivf-consultation-online"

@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 import { useEffect, useRef, useState } from "react";
 import { FaPlay } from "react-icons/fa";
 import { Reveal } from "@/components/ui/Reveal";
@@ -125,12 +127,12 @@ export default function AboutDoctorGlance() {
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3.5 sm:flex-nowrap">
-              <a
-                href="#book-consultation"
+              <Link
+                href="/book-appointment"
                 className="inline-flex shrink-0 items-center justify-center rounded-full bg-rose px-6 py-3.5 text-[13.5px] font-semibold text-white shadow-md transition-all hover:bg-rose-dark active:scale-95"
               >
                 Book In-Clinic Consultation
-              </a>
+              </Link>
 
               <a
                 href="https://www.youtube.com/@drmonadahiya"

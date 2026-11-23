@@ -69,13 +69,13 @@ export default function ContactHero() {
 
           <Reveal variant="fadeUp" delay={0.24}>
             <div className="mt-5 sm:mt-6 flex flex-wrap items-center gap-2.5 sm:gap-3.5">
-              <a
-                href="#request-appointment"
+              <Link
+                href="/book-appointment"
                 className="inline-flex items-center gap-2 rounded-full bg-rose px-5 py-2.5 text-xs sm:text-sm font-semibold text-white shadow-[0_10px_24px_rgba(232,62,116,0.28)] transition hover:bg-rose-dark active:scale-95"
               >
                 <FaCalendarCheck />
                 <span>Book In-Clinic Consultation</span>
-              </a>
+              </Link>
 
               <Link
                 href="/ivf-consultation-online"
