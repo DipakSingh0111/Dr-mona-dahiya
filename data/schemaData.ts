@@ -3,6 +3,33 @@ import type { LocationPageData } from "./locations";
 import routeSchemaMeta from "./routeSchemaMeta.json";
 import { BASE_URL } from "./sitemapData";
 
+const TELEPHONE =
+  process.env.NEXT_PUBLIC_TELEPHONE ||
+  process.env.TELEPHONE ||
+  "+91-92679-82924";
+
+const EMAIL =
+  process.env.NEXT_PUBLIC_EMAIL ||
+  process.env.EMAIL ||
+  "info@drmonadahiya.com";
+
+const INSTAGRAM =
+  process.env.NEXT_PUBLIC_INSTAGRAM ||
+  process.env.INSTAGRAM ||
+  "https://www.instagram.com/drmonadahiya/";
+
+const YOUTUBE =
+  process.env.NEXT_PUBLIC_YOUTUBE ||
+  process.env.YOUTUBE ||
+  "https://www.youtube.com/@drmonadahiya";
+
+const LINKEDIN =
+  process.env.NEXT_PUBLIC_LINKEDIN ||
+  process.env.LINKEDIN ||
+  "https://www.linkedin.com/company/littleangelivf/";
+
+const SAME_AS = [INSTAGRAM, YOUTUBE, LINKEDIN].filter(Boolean);
+
 export function getGlobalSchema(): Record<string, unknown> {
   return {
     "@context": "https://schema.org",
@@ -26,13 +53,9 @@ export function getGlobalSchema(): Record<string, unknown> {
         description:
           "25+ years in reproductive medicine. Gold medalist MBBS & MD, IVF fellowship at Singapore General Hospital, founder of Little Angel IVF.",
         medicalSpecialty: "Reproductive Medicine",
-        telephone: "+91-92679-82924",
-        email: "info@drmonadahiya.com",
-        sameAs: [
-          "https://www.instagram.com/drmonadahiya/",
-          "https://www.youtube.com/@drmonadahiya",
-          "https://www.linkedin.com/company/littleangelivf/",
-        ],
+        telephone: TELEPHONE,
+        email: EMAIL,
+        sameAs: SAME_AS,
         worksFor: {
           "@id": `${BASE_URL}/#clinic`,
         },
@@ -42,8 +65,8 @@ export function getGlobalSchema(): Record<string, unknown> {
         "@id": `${BASE_URL}/#clinic`,
         name: "Little Angel IVF — Dr. Mona Dahiya",
         url: BASE_URL,
-        telephone: "+91-92679-82924",
-        email: "info@drmonadahiya.com",
+        telephone: TELEPHONE,
+        email: EMAIL,
         medicalSpecialty: "Reproductive Medicine",
         openingHours: "Mo-Sa 10:00-17:00",
         address: {
