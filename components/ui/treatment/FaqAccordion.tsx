@@ -1,12 +1,23 @@
 "use client";
 
-import { useState, type ReactNode } from "react";
+import { isValidElement, useState, type ReactNode } from "react";
 import { FaChevronDown } from "react-icons/fa";
+import JsonLd from "@/components/seo/JsonLd";
 
 export type FaqItem = {
   question: string;
   answer: ReactNode;
 };
+
+function extractText(node: ReactNode): string {
+  if (node == null || typeof node === "boolean") return "";
+  if (typeof node === "string" || typeof node === "number") return String(node);
+  if (Array.isArray(node)) return node.map(extractText).join("");
+  if (isValidElement<{ children?: ReactNode }>(node)) {
+    return extractText(node.props.children);
+  }
+  return "";
+}
 
 function FaqCard({
   item,
@@ -66,10 +77,12 @@ export function FaqAccordion({
   items,
   leftItems,
   rightItems,
+  includeSchema = true,
 }: {
   items?: FaqItem[];
   leftItems?: FaqItem[];
   rightItems?: FaqItem[];
+  includeSchema?: boolean;
 }) {
   const [openId, setOpenId] = useState<string | null>(null);
 
@@ -77,52 +90,87 @@ export function FaqAccordion({
     setOpenId((prev) => (prev === id ? null : id));
   };
 
+  const allFaqs = leftItems || rightItems
+    ? [...(leftItems ?? []), ...(rightItems ?? [])]
+    : items ?? [];
+
+  const schemaEntities = includeSchema
+    ? allFaqs
+        .map((faq) => ({
+          question: faq.question.trim(),
+          answer: extractText(faq.answer).replace(/\s+/g, " ").trim(),
+        }))
+        .filter((faq) => faq.question && faq.answer)
+    : [];
+
+  const faqSchema =
+    schemaEntities.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: schemaEntities.map((faq) => ({
+            "@type": "Question",
+            name: faq.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: faq.answer,
+            },
+          })),
+        }
+      : null;
+
   if (leftItems || rightItems) {
     return (
-      <div className="mt-8 grid grid-cols-1 items-start gap-3.5 lg:grid-cols-2 lg:gap-5">
-        <div className="flex flex-col gap-3 sm:gap-3.5">
-          {(leftItems ?? []).map((faq, idx) => {
-            const id = `left-${idx}`;
-            return (
-              <FaqCard
-                key={id}
-                item={faq}
-                isOpen={openId === id}
-                onToggle={() => toggle(id)}
-              />
-            );
-          })}
+      <>
+        {faqSchema ? <JsonLd data={faqSchema} /> : null}
+        <div className="mt-8 grid grid-cols-1 items-start gap-3.5 lg:grid-cols-2 lg:gap-5">
+          <div className="flex flex-col gap-3 sm:gap-3.5">
+            {(leftItems ?? []).map((faq, idx) => {
+              const id = `left-${idx}`;
+              return (
+                <FaqCard
+                  key={id}
+                  item={faq}
+                  isOpen={openId === id}
+                  onToggle={() => toggle(id)}
+                />
+              );
+            })}
+          </div>
+          <div className="flex flex-col gap-3 sm:gap-3.5">
+            {(rightItems ?? []).map((faq, idx) => {
+              const id = `right-${idx}`;
+              return (
+                <FaqCard
+                  key={id}
+                  item={faq}
+                  isOpen={openId === id}
+                  onToggle={() => toggle(id)}
+                />
+              );
+            })}
+          </div>
         </div>
-        <div className="flex flex-col gap-3 sm:gap-3.5">
-          {(rightItems ?? []).map((faq, idx) => {
-            const id = `right-${idx}`;
-            return (
-              <FaqCard
-                key={id}
-                item={faq}
-                isOpen={openId === id}
-                onToggle={() => toggle(id)}
-              />
-            );
-          })}
-        </div>
-      </div>
+      </>
     );
   }
 
   return (
-    <div className="mt-8 flex flex-col gap-3 sm:gap-3.5">
-      {(items ?? []).map((faq, idx) => {
-        const id = `faq-${idx}`;
-        return (
-          <FaqCard
-            key={id}
-            item={faq}
-            isOpen={openId === id}
-            onToggle={() => toggle(id)}
-          />
-        );
-      })}
-    </div>
+    <>
+      {faqSchema ? <JsonLd data={faqSchema} /> : null}
+      <div className="mt-8 flex flex-col gap-3 sm:gap-3.5">
+        {(items ?? []).map((faq, idx) => {
+          const id = `faq-${idx}`;
+          return (
+            <FaqCard
+              key={id}
+              item={faq}
+              isOpen={openId === id}
+              onToggle={() => toggle(id)}
+            />
+          );
+        })}
+      </div>
+    </>
   );
 }

@@ -126,7 +126,7 @@ export function IvfCostFaq() {
         title="Top FAQs About IVF Cost and EMI Financing"
       />
 
-      <FaqAccordion leftItems={leftFaqs} rightItems={rightFaqs} />
+      <FaqAccordion leftItems={leftFaqs} rightItems={rightFaqs} includeSchema={false} />
     </TreatmentSection>
   );
 }

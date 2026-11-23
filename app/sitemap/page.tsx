@@ -62,18 +62,6 @@ export default function HtmlSitemapPage() {
             >
               Book Consultation
             </Link>
-            <a
-              href="/sitemap.xml"
-              className="inline-flex items-center rounded-lg border border-blue px-5 py-2.5 text-sm font-semibold text-blue transition hover:bg-blue hover:text-white"
-            >
-              View XML Sitemap
-            </a>
-            <a
-              href="/robots.txt"
-              className="inline-flex items-center rounded-lg border border-navy/20 bg-pink px-4 py-2.5 text-sm font-semibold text-navy transition hover:border-navy/40"
-            >
-              robots.txt
-            </a>
           </div>
         </div>
 

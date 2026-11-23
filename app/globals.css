@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
+/* Global Brand Theme Colors & Fonts (All Pages) */
 :root {
-  /* Home theme — only active brand colors */
   --navy: #061532;
   --navy-mid: #0a1f45;
   --rose: #e83e74;
@@ -11,7 +11,6 @@
   --pink: #fff5f7;
   --ink: #0f2438;
 
-  /* aliases used by existing CSS / components */
   --color-navy: var(--navy);
   --color-navy-mid: var(--navy-mid);
   --color-rose: var(--rose);
@@ -21,7 +20,6 @@
   --color-pink: var(--pink);
   --color-ink: var(--ink);
 
-  /* Fonts: Globally defined — strictly Open Sans and Tahoma only */
   --font-sans: var(--font-open-sans), Tahoma, sans-serif;
   --font-serif: var(--font-open-sans), Tahoma, sans-serif;
   --font-display: var(--font-open-sans), Tahoma, sans-serif;
@@ -41,7 +39,6 @@
   --color-pink: var(--pink);
   --color-ink: var(--ink);
 
-  /* Tailwind font utilities strictly mapping to Open Sans and Tahoma */
   --font-sans: var(--font-open-sans), Tahoma, sans-serif;
   --font-serif: var(--font-open-sans), Tahoma, sans-serif;
   --font-display: var(--font-open-sans), Tahoma, sans-serif;
@@ -50,9 +47,9 @@
   --font-tahoma: var(--font-open-sans), Tahoma, sans-serif;
 }
 
+/* Global Base Styles & Typography (All Pages) */
 html {
   scroll-behavior: smooth;
-  /* clip (not hidden) — overflow-x:hidden breaks position:sticky */
   overflow-x: clip;
 }
 
@@ -124,33 +121,25 @@ h2 {
   }
 }
 
-/* ==========================================================================
-   Inner Pages: Global Uniform Typography Scale (Titles, Headings, Paragraphs)
-   ========================================================================== */
-
-/* Eyebrows above page / section headings */
+/* Inner Pages: Typography Scale (Eyebrows, Subtitles, Cards & Tables) */
 main:not(.home-main) section:not(.parenthood-cta) :is(p, span):has(+ h1),
 main:not(.home-main) section:not(.parenthood-cta) :is(p, span):has(+ h2) {
   font-size: 0.75rem !important;
-  /* 12px */
   line-height: 1.4 !important;
 }
 
 @media (min-width: 640px) {
 
-  main:not(.home-main) section:not(.parenthood-cta) :is(p, span):has(+ h1),
+main:not(.home-main) section:not(.parenthood-cta) :is(p, span):has(+ h1),
   main:not(.home-main) section:not(.parenthood-cta) :is(p, span):has(+ h2) {
     font-size: 0.8125rem !important;
-    /* 13px */
   }
 }
 
-/* Hero descriptions & section intro subtitles */
 main:not(.home-main) section:has(.hero-banner-card) h1~p,
 main:not(.home-main) section:not(.parenthood-cta) h1+p,
 main:not(.home-main) section:not(.parenthood-cta) h2+p {
   font-size: 0.875rem !important;
-  /* 14px */
   line-height: 1.62 !important;
 }
 
@@ -160,16 +149,13 @@ main:not(.home-main) section:not(.parenthood-cta) h2+p {
   main:not(.home-main) section:not(.parenthood-cta) h1+p,
   main:not(.home-main) section:not(.parenthood-cta) h2+p {
     font-size: 0.9375rem !important;
-    /* 15px */
   }
 }
 
-/* All inner-page card titles, subheadings & FAQ questions */
 main:not(.home-main) h3:not(:has(+ p.font-serif)):not(.uppercase),
 main:not(.home-main) h4,
 main:not(.home-main) button[aria-expanded]>span:first-child {
   font-size: 1rem !important;
-  /* 16px */
   line-height: 1.35 !important;
 }
 
@@ -179,18 +165,14 @@ main:not(.home-main) button[aria-expanded]>span:first-child {
   main:not(.home-main) h4,
   main:not(.home-main) button[aria-expanded]>span:first-child {
     font-size: 1.0625rem !important;
-    /* 17px */
   }
 }
 
-/* Medical council registration labels (above registration codes) */
 main:not(.home-main) h3:has(+ p.font-serif) {
   font-size: 0.8125rem !important;
-  /* 13px */
   line-height: 1.35 !important;
 }
 
-/* Card descriptions, protocol bullets, checklist text, FAQ answers, table body & review quotes */
 main:not(.home-main) .card-highlight h3+p:not(.font-serif),
 main:not(.home-main) .card-highlight h4+p:not(.font-serif),
 main:not(.home-main) .card-highlight>div>div+div:not(.border-t),
@@ -209,7 +191,6 @@ main:not(.home-main) .treatment-section button[aria-expanded]+div p,
 main:not(.home-main) .treatment-section button[aria-expanded]+div li,
 main:not(.home-main) table tbody td {
   font-size: 0.84375rem !important;
-  /* 13.5px */
   line-height: 1.6 !important;
 }
 
@@ -233,16 +214,14 @@ main:not(.home-main) table tbody td {
   main:not(.home-main) .treatment-section button[aria-expanded]+div li,
   main:not(.home-main) table tbody td {
     font-size: 0.875rem !important;
-    /* 14px */
   }
 }
 
-/* Inner-page banners — pale pink (same as Home light theme) */
+/* Inner Pages: Hero Banner Layout */
 .page-hero {
   background: var(--pink);
 }
 
-/* Fit all inner-page Hero banners cleanly to laptop/desktop screen height */
 @media (min-width: 1024px) {
   section:has(.hero-banner-card) {
     min-height: calc(100svh - var(--site-header-h, 8.75rem)) !important;
@@ -253,7 +232,7 @@ main:not(.home-main) table tbody td {
     padding-bottom: 2.5rem !important;
   }
 
-  section:has(.hero-banner-card)>.page-container {
+  section:has(.hero-banner-card) > .page-container {
     align-items: center !important;
   }
 
@@ -273,7 +252,6 @@ main:not(.home-main) table tbody td {
   }
 }
 
-/* Full-width page banner — left copy matches the portrait height */
 section:has(.hero-fullwidth-banner) {
   background: #fff !important;
 }
@@ -300,7 +278,8 @@ main:not(.home-main) article p.leading-relaxed {
     overflow: hidden !important;
   }
 
-  section:has(.hero-fullwidth-banner) > .page-container {
+  section:has(.hero-fullwidth-banner) > 
+.page-container {
     display: flex !important;
     flex: 1 1 auto !important;
     flex-direction: column !important;
@@ -369,7 +348,6 @@ main:not(.home-main) article p.leading-relaxed {
   }
 }
 
-/* Dark left for copy, clear center so Hero-banner people + Times Network show */
 .hero-overlay {
   background:
     linear-gradient(95deg,
@@ -386,6 +364,7 @@ main:not(.home-main) article p.leading-relaxed {
       rgba(4, 12, 28, 0.4) 100%);
 }
 
+/* Global Buttons (All Pages) */
 .btn-rose {
   background: var(--color-rose);
   color: #fff;
@@ -425,6 +404,7 @@ main:not(.home-main) article p.leading-relaxed {
   box-shadow: 0 10px 24px rgba(0, 71, 202, 0.35);
 }
 
+/* Global Form Inputs (Contact, Book Appointment & Consultation Forms) */
 .field {
   width: 100%;
   border: 1px solid #d7dee8;
@@ -439,7 +419,6 @@ main:not(.home-main) article p.leading-relaxed {
     box-shadow 0.15s ease;
 }
 
-/* Hide native browser date picker indicator so only our custom icon shows */
 input[type="date"]::-webkit-calendar-picker-indicator {
   display: none;
   -webkit-appearance: none;
@@ -473,6 +452,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   box-shadow: 0 0 0 3px rgba(232, 62, 116, 0.15);
 }
 
+/* Hero Stat Cards & Slide Animations (Home & Inner Pages) */
 .stat-card {
   display: flex;
   flex-direction: column;
@@ -553,34 +533,31 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   animation: storySlide 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
-/* Aligns with navbar brand/logo: padding lives INSIDE max-width */
+/* Global Page Container (Navbar, Footer & All Pages) */
 .page-container {
   width: 100%;
   max-width: 1440px;
   margin-inline: auto;
   padding-inline: 1rem;
-  /* px-4 */
 }
 
 @media (min-width: 640px) {
-  .page-container {
+.page-container {
     padding-inline: 1.5rem;
-    /* sm:px-6 */
   }
 }
 
 @media (min-width: 1024px) {
-  .page-container {
+.page-container {
     padding-inline: 2rem;
-    /* lg:px-8 */
   }
 }
 
-/* First screen: measured header height → works at 90/100/110/125% zoom */
 :root {
   --site-header-h: 8.75rem;
 }
 
+/* Home Page: Hero Slider & First Screen */
 .home-first-screen {
   display: flex;
   flex-direction: column;
@@ -715,6 +692,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 }
 
+/* Home Page: Credentials & Affiliations Ticker */
 @keyframes ticker {
   0% {
     transform: translateX(0);
@@ -740,36 +718,21 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   .hero-fade-up,
   .btn-rose,
   .btn-outline,
-  .stat-card {
+.stat-card {
     animation: none !important;
     transition: none !important;
   }
 }
 
-/* ==========================================================================
-   Inner Pages: Global Alternating White & Pink Section Rhythm
-   ========================================================================== */
-
-/* Fallback default background for treatment sections */
+/* Inner Pages: Alternating Pink / White Section Backgrounds */
 .treatment-section {
   background-color: var(--pink);
 }
 
-/* ==========================================================================
-   Inner Pages Section Alternation: Clean White (#ffffff) vs Soft Pink (var(--pink))
-   - Child 1: Hero Banner (Soft Pink var(--pink))
-   - Child 2 (Even): Hero Counter (Clean White #ffffff + crisp divider border)
-   - Child 3 (Odd): Medical Registration (Soft Pink var(--pink))
-   - Even-positioned children (4, 6, 8, 10...): Clean White (#ffffff) + crisp border
-   - Odd-positioned children (5, 7, 9, 11...): Soft Pink (var(--pink))
-   ========================================================================== */
-
-/* Fallback default background for treatment sections */
 .treatment-section {
   background-color: var(--pink);
 }
 
-/* Explicit compound section classes (for multi-section components) */
 main:not(.home-main) section.bg-white,
 main:not(.home-main) section.section-white,
 main:not(.home-main) section[data-bg="white"] {
@@ -786,7 +749,6 @@ main:not(.home-main) section[data-bg="pink"] {
   border-bottom: none !important;
 }
 
-/* Even-positioned section blocks on inner pages -> Clean White (#ffffff) with crisp hairline divider borders */
 main:not(.home-main)> :nth-child(even),
 main:not(.home-main)> :nth-child(even)>section,
 main:not(.home-main)>div:nth-child(even)>section,
@@ -796,7 +758,6 @@ main:not(.home-main)>section:nth-child(even) {
   border-bottom: 1px solid rgba(232, 62, 116, 0.18) !important;
 }
 
-/* Odd-positioned section blocks on inner pages (excluding Hero/first-child) -> Soft Pink */
 main:not(.home-main)> :nth-child(odd):not(:first-child),
 main:not(.home-main)> :nth-child(odd):not(:first-child)>section,
 main:not(.home-main)>div:nth-child(odd):not(:first-child)>section,
@@ -806,7 +767,7 @@ main:not(.home-main)>section:nth-child(odd):not(:first-child) {
   border-bottom: none !important;
 }
 
-/* Preserve Parenthood CTA styling */
+/* Shared CTA Section: Parenthood CTA Banner */
 main .parenthood-cta,
 main div:has(.parenthood-cta),
 main div:has(.parenthood-cta)>section {
@@ -815,19 +776,12 @@ main div:has(.parenthood-cta)>section {
   border-bottom: none !important;
 }
 
-/* ==========================================================================
-   Signature Tick Badges: Dynamic Blue (on Pink sections) vs Rose/Pink (on White sections)
-   Note: Never match bare `.bg-pink` because `<main>` carries `.bg-pink` wrapper.
-   ========================================================================== */
-
-/* Default fallback: Vibrant Rose/Pink */
 .signature-tick {
   background: linear-gradient(135deg, var(--rose) 0%, var(--rose-dark) 100%) !important;
   color: #ffffff !important;
   box-shadow: 0 4px 14px rgba(232, 62, 116, 0.35) !important;
 }
 
-/* 1a. Alternating Odd (Pink) sections -> Navy (Navbar color) */
 main:not(.home-main)> :nth-child(odd):not(:first-child) .signature-tick,
 main:not(.home-main)>div:nth-child(odd):not(:first-child) .signature-tick,
 main:not(.home-main)>div:nth-child(odd):not(:first-child) section .signature-tick,
@@ -837,7 +791,6 @@ main:not(.home-main)>section:nth-child(odd):not(:first-child) .signature-tick {
   box-shadow: 0 4px 14px rgba(6, 21, 50, 0.35) !important;
 }
 
-/* 1b. Alternating Even (White) sections -> Rose/Pink */
 main:not(.home-main)> :nth-child(even) .signature-tick,
 main:not(.home-main)>div:nth-child(even) .signature-tick,
 main:not(.home-main)>div:nth-child(even) section .signature-tick,
@@ -847,7 +800,6 @@ main:not(.home-main)>section:nth-child(even) .signature-tick {
   box-shadow: 0 4px 14px rgba(232, 62, 116, 0.35) !important;
 }
 
-/* 1c. Explicit Pink section override -> Navy */
 main:not(.home-main) section.bg-pink.bg-pink .signature-tick,
 main:not(.home-main)>div.bg-pink.bg-pink .signature-tick,
 main:not(.home-main) section[style*="var(--pink)"].relative .signature-tick {
@@ -856,7 +808,6 @@ main:not(.home-main) section[style*="var(--pink)"].relative .signature-tick {
   box-shadow: 0 4px 14px rgba(6, 21, 50, 0.35) !important;
 }
 
-/* 1d. Explicit White section override -> Rose/Pink */
 main:not(.home-main) section.bg-white.bg-white .signature-tick,
 main:not(.home-main)>div.bg-white.bg-white .signature-tick {
   background: linear-gradient(135deg, var(--rose) 0%, var(--rose-dark) 100%) !important;
@@ -864,19 +815,12 @@ main:not(.home-main)>div.bg-white.bg-white .signature-tick {
   box-shadow: 0 4px 14px rgba(232, 62, 116, 0.35) !important;
 }
 
-/* ==========================================================================
-   Card Badges (Number / Step / Avatar / Icon Badges inside Cards):
-   Dynamic Royal Blue on Pink Sections vs Rose/Pink on White Sections
-   ========================================================================== */
-
-/* Fallback default on white backgrounds: Vibrant Rose */
 .card-badge {
   background-color: var(--rose) !important;
   color: #ffffff !important;
   box-shadow: 0 4px 14px rgba(232, 62, 116, 0.4) !important;
 }
 
-/* 2a. Alternating Odd (Pink) sections -> Navy (Navbar color) */
 main:not(.home-main)> :nth-child(odd):not(:first-child) .card-badge,
 main:not(.home-main)>div:nth-child(odd):not(:first-child) .card-badge,
 main:not(.home-main)>section:nth-child(odd):not(:first-child) .card-badge,
@@ -891,7 +835,6 @@ main:not(.home-main)>section:nth-child(odd):not(:first-child) [class*="rounded-"
   box-shadow: 0 4px 14px rgba(6, 21, 50, 0.35) !important;
 }
 
-/* 2b. Alternating Even (White) sections -> Rose/Pink */
 main:not(.home-main)> :nth-child(even) .card-badge,
 main:not(.home-main)>div:nth-child(even) .card-badge,
 main:not(.home-main)>section:nth-child(even) .card-badge,
@@ -906,7 +849,6 @@ main:not(.home-main)>section:nth-child(even) [class*="rounded-"] :is(span, div):
   box-shadow: 0 4px 14px rgba(232, 62, 116, 0.4) !important;
 }
 
-/* 2c. Explicit Pink section override -> Navy (Navbar color) */
 main:not(.home-main) section.bg-pink.bg-pink .card-badge,
 main:not(.home-main)>div.bg-pink.bg-pink .card-badge,
 main:not(.home-main) section[style*="var(--pink)"].relative .card-badge,
@@ -919,7 +861,6 @@ main:not(.home-main)>div.bg-pink.bg-pink [class*="rounded-"] :is(span, div):is([
   box-shadow: 0 4px 14px rgba(6, 21, 50, 0.35) !important;
 }
 
-/* 2d. Explicit White section override -> Rose/Pink */
 main:not(.home-main) section.bg-white.bg-white .card-badge,
 main:not(.home-main)>div.bg-white.bg-white .card-badge,
 main:not(.home-main) section.bg-white.bg-white .card-highlight :is(span, div):is(.bg-rose, .bg-blue, .bg-navy),
@@ -931,12 +872,6 @@ main:not(.home-main)>div.bg-white.bg-white [class*="rounded-"] :is(span, div):is
   box-shadow: 0 4px 14px rgba(232, 62, 116, 0.4) !important;
 }
 
-/* ==========================================================================
-   Soft Checklist Checkmark Circles:
-   Dynamic Navy (on Pink sections) vs Pink/Rose (on White sections)
-   ========================================================================== */
-
-/* 3a. Alternating Odd (Pink) sections -> Navy checkmark badge */
 main:not(.home-main)> :nth-child(odd):not(:first-child) span:is([class*="size-5"], [class*="size-6"]):is(.bg-rose\/15, .bg-rose\/20, .bg-blue\/15, .bg-blue\/20, .bg-blue\/25, .text-blue),
 main:not(.home-main)>div:nth-child(odd):not(:first-child) span:is([class*="size-5"], [class*="size-6"]):is(.bg-rose\/15, .bg-rose\/20, .bg-blue\/15, .bg-blue\/20, .bg-blue\/25, .text-blue),
 main:not(.home-main)>section:nth-child(odd):not(:first-child) span:is([class*="size-5"], [class*="size-6"]):is(.bg-rose\/15, .bg-rose\/20, .bg-blue\/15, .bg-blue\/20, .bg-blue\/25, .text-blue) {
@@ -945,7 +880,6 @@ main:not(.home-main)>section:nth-child(odd):not(:first-child) span:is([class*="s
   box-shadow: 0 0 0 1px rgba(6, 21, 50, 0.22) !important;
 }
 
-/* 3b. Alternating Even (White) sections -> Pink/Rose checkmark badge */
 main:not(.home-main)> :nth-child(even) span:is([class*="size-5"], [class*="size-6"]):is(.bg-rose\/15, .bg-rose\/20, .bg-blue\/15, .bg-blue\/20, .bg-blue\/25, .text-blue),
 main:not(.home-main)>div:nth-child(even) span:is([class*="size-5"], [class*="size-6"]):is(.bg-rose\/15, .bg-rose\/20, .bg-blue\/15, .bg-blue\/20, .bg-blue\/25, .text-blue),
 main:not(.home-main)>section:nth-child(even) span:is([class*="size-5"], [class*="size-6"]):is(.bg-rose\/15, .bg-rose\/20, .bg-blue\/15, .bg-blue\/20, .bg-blue\/25, .text-blue) {
@@ -954,7 +888,6 @@ main:not(.home-main)>section:nth-child(even) span:is([class*="size-5"], [class*=
   box-shadow: 0 0 0 1px rgba(232, 62, 116, 0.35) !important;
 }
 
-/* 3c. Explicit Pink section override -> Navy checkmark badge */
 main:not(.home-main) section.bg-pink.bg-pink span:is([class*="size-5"], [class*="size-6"]):is(.bg-rose\/15, .bg-rose\/20, .bg-blue\/15, .bg-blue\/20, .bg-blue\/25, .text-blue),
 main:not(.home-main)>div.bg-pink.bg-pink span:is([class*="size-5"], [class*="size-6"]):is(.bg-rose\/15, .bg-rose\/20, .bg-blue\/15, .bg-blue\/20, .bg-blue\/25, .text-blue),
 main:not(.home-main) section[style*="var(--pink)"].relative span:is([class*="size-5"], [class*="size-6"]):is(.bg-rose\/15, .bg-rose\/20, .bg-blue\/15, .bg-blue\/20, .bg-blue\/25, .text-blue) {
@@ -963,7 +896,6 @@ main:not(.home-main) section[style*="var(--pink)"].relative span:is([class*="siz
   box-shadow: 0 0 0 1px rgba(6, 21, 50, 0.22) !important;
 }
 
-/* 3d. Explicit White section override -> Pink/Rose checkmark badge */
 main:not(.home-main) section.bg-white.bg-white span:is([class*="size-5"], [class*="size-6"]):is(.bg-rose\/15, .bg-rose\/20, .bg-blue\/15, .bg-blue\/20, .bg-blue\/25, .text-blue),
 main:not(.home-main)>div.bg-white.bg-white span:is([class*="size-5"], [class*="size-6"]):is(.bg-rose\/15, .bg-rose\/20, .bg-blue\/15, .bg-blue\/20, .bg-blue\/25, .text-blue) {
   background-color: rgba(232, 62, 116, 0.15) !important;
@@ -971,7 +903,6 @@ main:not(.home-main)>div.bg-white.bg-white span:is([class*="size-5"], [class*="s
   box-shadow: 0 0 0 1px rgba(232, 62, 116, 0.35) !important;
 }
 
-/* Standalone FaCheckCircle SVG icons inside Pink vs White sections */
 main:not(.home-main)> :nth-child(odd):not(:first-child) [class*="rounded-"]>svg.text-rose,
 main:not(.home-main)>div:nth-child(odd):not(:first-child) [class*="rounded-"]>svg.text-rose,
 main:not(.home-main)>section:nth-child(odd):not(:first-child) [class*="rounded-"]>svg.text-rose,
@@ -986,7 +917,6 @@ main:not(.home-main) section.bg-white.bg-white [class*="rounded-"]>svg:is(.text-
   color: var(--rose) !important;
 }
 
-/* Inline links inside cards / content hover to brand rose, never white */
 .card-highlight a.underline:hover,
 main a.text-blue.underline:hover,
 main a.font-medium.text-blue:hover,
@@ -995,7 +925,6 @@ main a.underline:hover {
   text-decoration-color: var(--rose) !important;
 }
 
-/* Dark Navy cards (matching Footer theme) */
 .bg-navy .card-badge,
 [style*="var(--navy)"] .card-badge,
 .bg-navy span.bg-rose,
@@ -1007,16 +936,12 @@ main a.underline:hover {
   box-shadow: 0 4px 14px rgba(232, 62, 116, 0.45) !important;
 }
 
-/* ==========================================================================
-   Global Card Aesthetic: Top Accent Line (Solid & Dark Across, Like Left Side)
-   ========================================================================== */
-
+/* Inner Pages: Card Highlight Top Accent & Ambient Glow */
 .card-highlight {
   position: relative !important;
   overflow: hidden !important;
 }
 
-/* Top accent line across all cards — Solid Rose brand color as in reference design */
 .card-highlight::before {
   content: "" !important;
   position: absolute !important;
@@ -1029,7 +954,6 @@ main a.underline:hover {
   z-index: 10 !important;
 }
 
-/* Top-right soft pink ambient blur (matching reference design in second image) */
 .card-highlight::after {
   content: "" !important;
   position: absolute !important;

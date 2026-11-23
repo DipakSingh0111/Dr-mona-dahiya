@@ -11,6 +11,8 @@ import AboutConsultation from "@/components/sections/about-mona-dahiya/AboutCons
 import AboutParenthoodCta from "@/components/sections/about-mona-dahiya/AboutParenthoodCta";
 
 import { SectionReveal } from "@/components/ui/Reveal";
+import JsonLd from "@/components/seo/JsonLd";
+import { getReviewsPageSchema } from "@/data/schemaData";
 
 export const metadata: Metadata = {
   title: "Google Verified Patient Reviews | Dr. Mona Dahiya",
@@ -21,6 +23,7 @@ export const metadata: Metadata = {
 export default function PatientReviewsPage() {
   return (
     <main className="flex min-h-screen flex-col bg-pink">
+      <JsonLd data={getReviewsPageSchema()} />
       <PatientReviewsHero />
 
       <SectionReveal>

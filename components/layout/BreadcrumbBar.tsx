@@ -2,6 +2,8 @@
 
 import { usePathname } from "next/navigation";
 import Breadcrumb, { type BreadcrumbItem } from "@/components/ui/Breadcrumb";
+import JsonLd from "@/components/seo/JsonLd";
+import { getBreadcrumbSchema } from "@/data/schemaData";
 import {
   BLOG_BREADCRUMB_MAP,
   LOCATION_BREADCRUMB_MAP,
@@ -313,6 +315,7 @@ export default function BreadcrumbBar() {
 
   return (
     <div className="w-full bg-slate-200 py-2.5 sm:py-3">
+      <JsonLd data={getBreadcrumbSchema(pathname, items)} />
       <div className="page-container">
         <Breadcrumb items={items} inline />
       </div>

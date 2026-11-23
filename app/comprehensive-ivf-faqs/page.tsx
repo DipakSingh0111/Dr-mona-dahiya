@@ -9,6 +9,8 @@ import AboutConsultation from "@/components/sections/about-mona-dahiya/AboutCons
 import AboutParenthoodCta from "@/components/sections/about-mona-dahiya/AboutParenthoodCta";
 
 import { SectionReveal } from "@/components/ui/Reveal";
+import JsonLd from "@/components/seo/JsonLd";
+import { getIvfFaqsPageSchema } from "@/data/schemaData";
 
 export const metadata: Metadata = {
   title: "Comprehensive IVF FAQs | Answered by Dr. Mona Dahiya",
@@ -19,6 +21,7 @@ export const metadata: Metadata = {
 export default function ComprehensiveIvfFaqsPage() {
   return (
     <main className="flex min-h-screen flex-col bg-pink">
+      <JsonLd data={getIvfFaqsPageSchema("/comprehensive-ivf-faqs")} />
       <IvfFaqsHero breadcrumbLabel="Comprehensive IVF FAQs" />
 
       <SectionReveal>

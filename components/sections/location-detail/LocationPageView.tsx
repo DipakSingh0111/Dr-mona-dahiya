@@ -176,7 +176,7 @@ export default function LocationPageView({
             subtitle={page.faq.subtitle}
           />
           <div className="mt-7">
-            <FaqAccordion items={page.faq.items} />
+            <FaqAccordion items={page.faq.items} includeSchema={false} />
           </div>
         </TreatmentSection>
       </SectionReveal>

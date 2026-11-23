@@ -7,6 +7,9 @@ import Navbar from "@/components/layout/Navbar";
 import BreadcrumbBar from "@/components/layout/BreadcrumbBar";
 import Footer from "@/components/layout/Footer";
 import FloatingActions from "@/components/layout/FloatingActions";
+import JsonLd from "@/components/seo/JsonLd";
+import RouteSchema from "@/components/seo/RouteSchema";
+import { getGlobalSchema } from "@/data/schemaData";
 import "./globals.css";
 
 const openSans = localFont({
@@ -17,9 +20,22 @@ const openSans = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://drmonadahiya.com"),
   title: "Dr. Mona Dahiya | Fertility & IVF Specialist",
   description:
     "Top rated fertility specialist in India. Pioneering IVF centre since 1993 with centres in New Delhi, Lajpat Nagar and Rohini.",
+  keywords: [
+    "Dr. Mona Dahiya",
+    "IVF Specialist Noida",
+    "Best IVF Doctor Delhi NCR",
+    "Fertility Clinic Noida",
+    "IUI Treatment",
+    "ICSI Treatment",
+    "Little Angel IVF",
+  ],
+  alternates: {
+    canonical: "./",
+  },
 };
 
 export default function RootLayout({
@@ -42,6 +58,8 @@ export default function RootLayout({
         />
       </head>
       <body suppressHydrationWarning className="flex min-h-screen flex-col font-sans">
+        <JsonLd data={getGlobalSchema()} />
+        <RouteSchema />
         <ScrollToTop />
         <HeaderHeightSync />
 

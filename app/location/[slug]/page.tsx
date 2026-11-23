@@ -2,10 +2,12 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import LocationPageView from "@/components/sections/location-detail/LocationPageView";
+import JsonLd from "@/components/seo/JsonLd";
 import {
   getAllLocationSlugs,
   getLocationPageBySlug,
 } from "@/data/locations";
+import { getLocationPageSchema } from "@/data/schemaData";
 
 export function generateStaticParams() {
   return getAllLocationSlugs().map((slug) => ({ slug }));
@@ -23,6 +25,9 @@ export async function generateMetadata({
   return {
     title: page.metadata.title,
     description: page.metadata.description,
+    alternates: {
+      canonical: `/location/${slug}`,
+    },
   };
 }
 
@@ -38,6 +43,11 @@ export default async function LocationSlugPage({
     notFound();
   }
 
-  return <LocationPageView page={page} />;
+  return (
+    <>
+      <JsonLd data={getLocationPageSchema(page)} />
+      <LocationPageView page={page} />
+    </>
+  );
 }
 

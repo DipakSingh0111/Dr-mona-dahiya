@@ -343,6 +343,7 @@ export default function IvfFaqsContent() {
               </Reveal>
 
               <FaqAccordion
+                includeSchema={false}
                 leftItems={section.left.map((item) => ({
                   question: item.q,
                   answer: item.a,

@@ -25,6 +25,8 @@ import IvfSuccessClinics from "@/components/sections/ivf-stories/IvfSuccessClini
 import AboutConsultation from "@/components/sections/about-mona-dahiya/AboutConsultation";
 import AboutParenthoodCta from "@/components/sections/about-mona-dahiya/AboutParenthoodCta";
 import { SectionReveal } from "@/components/ui/Reveal";
+import JsonLd from "@/components/seo/JsonLd";
+import { getPricingPageSchema } from "@/data/schemaData";
 
 export const metadata: Metadata = {
   title:
@@ -36,6 +38,7 @@ export const metadata: Metadata = {
 export default function IvfCostEmiPage() {
   return (
     <main className="flex min-h-screen flex-col bg-pink">
+      <JsonLd data={getPricingPageSchema()} />
       <IvfCostEmiHero />
 
       <SectionReveal>

@@ -13,6 +13,8 @@ import IvfRelatedTreatments from "@/components/sections/ivf-treatment/IvfRelated
 import IvfReviews from "@/components/sections/ivf-treatment/IvfReviews";
 import type { ClinicCardData } from "@/components/sections/ClinicsAppointmentCards";
 import { SectionReveal } from "@/components/ui/Reveal";
+import JsonLd from "@/components/seo/JsonLd";
+import { getMedicalProcedureSchema } from "@/data/schemaData";
 
 const ivfClinics: ClinicCardData[] = [
   {
@@ -60,6 +62,14 @@ export const metadata: Metadata = {
 export default function IvfTreatmentPage() {
   return (
     <main className="flex min-h-screen flex-col bg-pink">
+      <JsonLd
+        data={getMedicalProcedureSchema({
+          path: "/ivf-treatment",
+          name: "In Vitro Fertilization (IVF) Treatment",
+          description:
+            "In Vitro Fertilisation is a form of Assisted Reproductive Technology. Eggs are collected from the female and fertilised by treated Sperm in an Embryology Lab. Embryos are grown to Blastocyst stage and transferred in the uterus.",
+        })}
+      />
       <IvfHero />
 
       <SectionReveal>

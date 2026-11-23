@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import BlogPageView from "@/components/sections/blog/BlogPageView";
+import JsonLd from "@/components/seo/JsonLd";
 import { getAllBlogSlugs, getBlogPostBySlug } from "@/data/blogs";
+import { getBlogPostSchema } from "@/data/schemaData";
 
 export function generateStaticParams() {
   return getAllBlogSlugs().map((slug) => ({ slug }));
@@ -20,6 +22,9 @@ export async function generateMetadata({
   return {
     title: post.metadata.title,
     description: post.metadata.description,
+    alternates: {
+      canonical: `/blog/${slug}`,
+    },
   };
 }
 
@@ -35,6 +40,11 @@ export default async function BlogSlugPage({
     notFound();
   }
 
-  return <BlogPageView post={post} />;
+  return (
+    <>
+      <JsonLd data={getBlogPostSchema(post)} />
+      <BlogPageView post={post} />
+    </>
+  );
 }
 
